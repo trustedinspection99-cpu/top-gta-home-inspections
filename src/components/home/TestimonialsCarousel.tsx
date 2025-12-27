@@ -1,0 +1,112 @@
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+
+const testimonials = [
+  {
+    name: "Sarah M.",
+    location: "Toronto",
+    rating: 5,
+    text: "ASADS did an incredibly thorough inspection of our first home. They found issues we never would have noticed and saved us thousands in potential repairs. Highly recommend!",
+    date: "November 2024",
+  },
+  {
+    name: "Michael T.",
+    location: "Mississauga",
+    rating: 5,
+    text: "Professional, punctual, and extremely detailed. The report was comprehensive and easy to understand. Used them for both my home purchase and my parents' condo.",
+    date: "October 2024",
+  },
+  {
+    name: "Jennifer L.",
+    location: "Brampton",
+    rating: 5,
+    text: "The radon testing service was eye-opening. They explained everything clearly and helped us understand our options. Great customer service from start to finish.",
+    date: "September 2024",
+  },
+  {
+    name: "David K.",
+    location: "Vaughan",
+    rating: 5,
+    text: "As a real estate agent, I've worked with many inspectors. ASADS consistently provides the most thorough and professional service. My clients always appreciate their detailed reports.",
+    date: "December 2024",
+  },
+  {
+    name: "Amanda R.",
+    location: "Markham",
+    rating: 5,
+    text: "Excellent pre-listing inspection. Helped us address issues before putting our house on the market. Sold quickly with no surprises during buyer's inspection!",
+    date: "November 2024",
+  },
+];
+
+export function TestimonialsCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const next = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prev = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  return (
+    <section className="py-16 md:py-24 bg-background">
+      <div className="container">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+            What Our Clients Say
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            Join thousands of satisfied homeowners and real estate professionals who trust ASADS.
+          </p>
+        </div>
+
+        <div className="relative max-w-4xl mx-auto">
+          <Card className="border-border/50 trust-shadow">
+            <CardContent className="p-8 md:p-12">
+              <Quote className="h-10 w-10 text-primary/20 mb-6" />
+              <p className="text-lg md:text-xl mb-6 leading-relaxed">
+                "{testimonials[currentIndex].text}"
+              </p>
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-heading font-semibold">{testimonials[currentIndex].name}</p>
+                  <p className="text-sm text-muted-foreground">{testimonials[currentIndex].location} • {testimonials[currentIndex].date}</p>
+                </div>
+                <div className="flex gap-1">
+                  {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-warning text-warning" />
+                  ))}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Navigation */}
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <Button variant="outline" size="icon" onClick={prev} className="rounded-full">
+              <ChevronLeft className="h-5 w-5" />
+            </Button>
+            <div className="flex gap-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`h-2 rounded-full transition-all ${
+                    index === currentIndex ? "w-6 bg-primary" : "w-2 bg-muted-foreground/30"
+                  }`}
+                />
+              ))}
+            </div>
+            <Button variant="outline" size="icon" onClick={next} className="rounded-full">
+              <ChevronRight className="h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
