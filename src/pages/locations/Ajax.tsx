@@ -11,14 +11,14 @@ export default function Ajax() {
   return (
     <>
       <Helmet>
-        <title>Appliance Repair Ajax | Same-Day Service | ASADS</title>
-        <meta name="description" content="Fast appliance repair in Ajax. Same-day service, licensed technicians, 90-day warranty. Refrigerator, washer, dryer repairs. Call (905) 555-0132!" />
+        <title>Home Inspection Ajax | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in Ajax. Certified inspectors, same-day reports, 200+ point inspections. Call (905) 555-0132!" />
         <link rel="canonical" href="https://asads.ca/locations/ajax" />
       </Helmet>
       <LocationPageTemplate
         city="Ajax"
         region="Ontario"
-        description="Ajax's trusted appliance repair experts. We provide prompt, professional service throughout Ajax with same-day appointments and competitive pricing."
+        description="Ajax's trusted home inspection experts. We provide thorough inspections throughout Ajax with same-day reports and competitive pricing."
         neighborhoods={neighborhoods}
         phoneNumber="(905) 555-0132"
       />

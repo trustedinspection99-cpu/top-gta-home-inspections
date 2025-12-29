@@ -11,14 +11,14 @@ export default function Newmarket() {
   return (
     <>
       <Helmet>
-        <title>Appliance Repair Newmarket | Same-Day Service | ASADS</title>
-        <meta name="description" content="Expert appliance repair in Newmarket. Same-day service, licensed technicians, 90-day warranty. All major appliances serviced. Call (905) 555-0134!" />
+        <title>Home Inspection Newmarket | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in Newmarket. Certified inspectors, same-day reports, 200+ point inspections. Call (905) 555-0134!" />
         <link rel="canonical" href="https://asads.ca/locations/newmarket" />
       </Helmet>
       <LocationPageTemplate
         city="Newmarket"
         region="Ontario"
-        description="Newmarket's preferred appliance repair service. We provide fast, reliable repairs throughout Newmarket with same-day appointments and transparent pricing."
+        description="Newmarket's preferred home inspection service. We provide thorough inspections throughout Newmarket with same-day reports and transparent pricing."
         neighborhoods={neighborhoods}
         phoneNumber="(905) 555-0134"
       />

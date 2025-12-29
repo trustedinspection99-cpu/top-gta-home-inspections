@@ -11,14 +11,14 @@ export default function Oshawa() {
   return (
     <>
       <Helmet>
-        <title>Appliance Repair Oshawa | Same-Day Service | ASADS</title>
-        <meta name="description" content="Trusted appliance repair in Oshawa. Same-day service, certified technicians, 90-day warranty. Refrigerator, washer, dryer repairs. Call (905) 555-0135!" />
+        <title>Home Inspection Oshawa | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in Oshawa. Certified inspectors, same-day reports, 200+ point inspections. Call (905) 555-0135!" />
         <link rel="canonical" href="https://asads.ca/locations/oshawa" />
       </Helmet>
       <LocationPageTemplate
         city="Oshawa"
         region="Ontario"
-        description="Oshawa's dependable appliance repair experts. We serve all Oshawa neighborhoods with professional repairs and a commitment to customer satisfaction."
+        description="Oshawa's dependable home inspection experts. We serve all Oshawa neighborhoods with comprehensive inspections and a commitment to customer satisfaction."
         neighborhoods={neighborhoods}
         phoneNumber="(905) 555-0135"
       />
