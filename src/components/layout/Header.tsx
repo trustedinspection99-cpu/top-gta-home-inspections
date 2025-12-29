@@ -35,10 +35,13 @@ const locations = [
   { title: "Vaughan", href: "/locations/vaughan" },
   { title: "Markham", href: "/locations/markham" },
   { title: "Richmond Hill", href: "/locations/richmond-hill" },
-  { title: "Scarborough", href: "/locations/scarborough" },
-  { title: "North York", href: "/locations/north-york" },
-  { title: "Etobicoke", href: "/locations/etobicoke" },
   { title: "Oakville", href: "/locations/oakville" },
+  { title: "Burlington", href: "/locations/burlington" },
+  { title: "Milton", href: "/locations/milton" },
+  { title: "Ajax", href: "/locations/ajax" },
+  { title: "Pickering", href: "/locations/pickering" },
+  { title: "Newmarket", href: "/locations/newmarket" },
+  { title: "Oshawa", href: "/locations/oshawa" },
 ];
 
 export function Header() {
