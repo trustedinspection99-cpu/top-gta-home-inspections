@@ -11,14 +11,14 @@ export default function RichmondHill() {
   return (
     <>
       <Helmet>
-        <title>Appliance Repair Richmond Hill | Same-Day Service | ASADS</title>
-        <meta name="description" content="Trusted appliance repair in Richmond Hill. Same-day service, licensed technicians, 90-day warranty. All major appliances serviced. Call (905) 555-0128!" />
+        <title>Home Inspection Richmond Hill | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in Richmond Hill. Certified inspectors, same-day reports. Serving Oak Ridges, Bayview Hill & all areas. Call (905) 555-0128!" />
         <link rel="canonical" href="https://asads.ca/locations/richmond-hill" />
       </Helmet>
       <LocationPageTemplate
         city="Richmond Hill"
         region="Ontario"
-        description="Richmond Hill's reliable appliance repair service. We provide expert repairs throughout Oak Ridges, Bayview Hill, and all Richmond Hill neighborhoods."
+        description="Richmond Hill's reliable home inspection service. We provide thorough inspections throughout Oak Ridges, Bayview Hill, and all Richmond Hill neighborhoods."
         neighborhoods={neighborhoods}
         phoneNumber="(905) 555-0128"
       />

@@ -11,14 +11,14 @@ export default function Markham() {
   return (
     <>
       <Helmet>
-        <title>Appliance Repair Markham | Same-Day Service | ASADS</title>
-        <meta name="description" content="Professional appliance repair in Markham. Same-day service in Unionville, Thornhill & all areas. All brands serviced, 90-day warranty. Call (905) 555-0127!" />
+        <title>Home Inspection Markham | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in Markham. Certified inspectors, same-day reports. Serving Unionville, Thornhill & all areas. Call (905) 555-0127!" />
         <link rel="canonical" href="https://asads.ca/locations/markham" />
       </Helmet>
       <LocationPageTemplate
         city="Markham"
         region="Ontario"
-        description="Markham's preferred appliance repair experts. We serve Unionville, Cornell, Berczy, and all Markham communities with fast, reliable appliance repair services."
+        description="Markham's preferred home inspection experts. We serve Unionville, Cornell, Berczy, and all Markham communities with thorough, reliable inspection services."
         neighborhoods={neighborhoods}
         phoneNumber="(905) 555-0127"
       />

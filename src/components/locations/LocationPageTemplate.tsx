@@ -13,29 +13,29 @@ interface LocationPageProps {
 
 export function LocationPageTemplate({ city, region, description, neighborhoods, phoneNumber }: LocationPageProps) {
   const services = [
-    { name: "Residential Appliance Repair", description: "Fast, reliable repairs for all home appliances" },
-    { name: "Commercial Appliance Service", description: "Keep your business running with expert commercial repairs" },
-    { name: "Emergency Repairs", description: "24/7 emergency service when you need it most" },
-    { name: "Preventive Maintenance", description: "Regular maintenance to extend appliance life" },
+    { name: "Pre-Purchase Inspection", description: "Thorough evaluation before you buy your new home" },
+    { name: "Pre-Listing Inspection", description: "Sell faster with a professional pre-listing report" },
+    { name: "New Construction Inspection", description: "Verify builder quality before your final walkthrough" },
+    { name: "Specialty Testing", description: "Radon, mold, asbestos, and air quality testing" },
   ];
 
-  const appliances = [
-    "Refrigerators & Freezers",
-    "Washing Machines",
-    "Dryers",
-    "Dishwashers",
-    "Ovens & Stoves",
-    "Microwaves",
-    "Range Hoods",
-    "Wine Coolers",
+  const inspectionTypes = [
+    "Pre-Purchase Inspections",
+    "Pre-Listing Inspections",
+    "Condo Inspections",
+    "Commercial Inspections",
+    "New Construction",
+    "Tarion Warranty",
+    "Radon & Mold Testing",
+    "Thermal Imaging",
   ];
 
   const benefits = [
-    "Same-day service available",
-    "Licensed & insured technicians",
-    "90-day parts & labor warranty",
+    "Same-day reports available",
+    "Certified & insured inspectors",
+    "200+ point inspections",
     "Upfront, transparent pricing",
-    "All major brands serviced",
+    "15+ years experience",
     "Locally owned & operated",
   ];
 
@@ -51,7 +51,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
               Serving {city}, {region}
             </div>
             <h1 className="mb-6 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
-              Appliance Repair in {city}
+              Home Inspection in {city}
             </h1>
             <p className="mb-8 text-lg text-white/90 md:text-xl">
               {description}
@@ -99,7 +99,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
               Our Services in {city}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Comprehensive appliance repair services for homes and businesses throughout {city}.
+              Comprehensive home inspection services for buyers, sellers, and property owners throughout {city}.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -113,23 +113,23 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
         </div>
       </section>
 
-      {/* Appliances We Repair */}
+      {/* Inspection Services */}
       <section className="bg-muted/30 py-16 lg:py-24">
         <div className="container">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Appliances We Repair in {city}
+                Inspection Services in {city}
               </h2>
               <p className="mb-6 text-lg text-muted-foreground">
-                Our certified technicians are trained to repair all major appliance brands and types. 
-                No matter what's broken, we have the expertise to fix it.
+                Our certified inspectors provide comprehensive property assessments for all types of homes.
+                From condos to commercial properties, we have you covered.
               </p>
               <div className="grid gap-3 sm:grid-cols-2">
-                {appliances.map((appliance) => (
-                  <div key={appliance} className="flex items-center gap-2">
+                {inspectionTypes.map((type) => (
+                  <div key={type} className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>{appliance}</span>
+                    <span>{type}</span>
                   </div>
                 ))}
               </div>
@@ -157,7 +157,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
               Areas We Serve in {city}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Fast, reliable appliance repair service throughout {city} and surrounding neighborhoods.
+              Professional home inspection services throughout {city} and surrounding neighborhoods.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
@@ -178,11 +178,11 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
-              Need Appliance Repair in {city}?
+              Need a Home Inspection in {city}?
             </h2>
             <p className="mb-8 text-lg text-white/90">
-              Don't let a broken appliance disrupt your day. Our expert technicians are ready to help 
-              with fast, reliable service throughout {city}.
+              Protect your investment with a thorough home inspection. Our certified inspectors provide 
+              detailed reports throughout {city}.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button size="lg" variant="secondary" className="gap-2" asChild>

@@ -11,14 +11,14 @@ export default function Milton() {
   return (
     <>
       <Helmet>
-        <title>Appliance Repair Milton | Same-Day Service | ASADS</title>
-        <meta name="description" content="Reliable appliance repair in Milton. Same-day service, certified technicians, 90-day warranty. All major appliances. Call (905) 555-0131!" />
+        <title>Home Inspection Milton | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in Milton. Certified inspectors, same-day reports. Serving Timberlea to Campbellville. Call (905) 555-0131!" />
         <link rel="canonical" href="https://asads.ca/locations/milton" />
       </Helmet>
       <LocationPageTemplate
         city="Milton"
         region="Ontario"
-        description="Milton's dependable appliance repair service. From Timberlea to Campbellville, we provide fast, professional repairs for all your home and commercial appliances."
+        description="Milton's dependable home inspection service. From Timberlea to Campbellville, we provide comprehensive inspections for all property types."
         neighborhoods={neighborhoods}
         phoneNumber="(905) 555-0131"
       />

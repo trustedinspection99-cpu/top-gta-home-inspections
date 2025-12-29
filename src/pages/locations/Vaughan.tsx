@@ -11,14 +11,14 @@ export default function Vaughan() {
   return (
     <>
       <Helmet>
-        <title>Appliance Repair Vaughan | Same-Day Service | ASADS</title>
-        <meta name="description" content="Expert appliance repair in Vaughan. Same-day service in Woodbridge, Thornhill, Maple & more. Licensed technicians, 90-day warranty. Call (905) 555-0126!" />
+        <title>Home Inspection Vaughan | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in Vaughan. Certified inspectors serving Woodbridge, Thornhill, Maple & more. Same-day reports. Call (905) 555-0126!" />
         <link rel="canonical" href="https://asads.ca/locations/vaughan" />
       </Helmet>
       <LocationPageTemplate
         city="Vaughan"
         region="Ontario"
-        description="Vaughan's leading appliance repair company. From Woodbridge to Thornhill, we provide expert repairs with same-day service and a 90-day parts and labor warranty."
+        description="Vaughan's leading home inspection company. From Woodbridge to Thornhill, we provide thorough inspections with same-day reports and detailed findings."
         neighborhoods={neighborhoods}
         phoneNumber="(905) 555-0126"
       />

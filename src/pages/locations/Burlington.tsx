@@ -11,14 +11,14 @@ export default function Burlington() {
   return (
     <>
       <Helmet>
-        <title>Appliance Repair Burlington | Same-Day Service | ASADS</title>
-        <meta name="description" content="Expert appliance repair in Burlington. Same-day appointments, licensed technicians, all major brands. Serving Aldershot to Kilbride. Call (905) 555-0130!" />
+        <title>Home Inspection Burlington | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in Burlington. Certified inspectors, same-day reports. Serving Aldershot to Kilbride. Call (905) 555-0130!" />
         <link rel="canonical" href="https://asads.ca/locations/burlington" />
       </Helmet>
       <LocationPageTemplate
         city="Burlington"
         region="Ontario"
-        description="Burlington's trusted appliance repair professionals. We serve all Burlington neighborhoods with fast, reliable service and a commitment to quality workmanship."
+        description="Burlington's trusted home inspection professionals. We serve all Burlington neighborhoods with thorough inspections and a commitment to quality service."
         neighborhoods={neighborhoods}
         phoneNumber="(905) 555-0130"
       />

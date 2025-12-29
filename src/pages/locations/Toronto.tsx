@@ -12,14 +12,14 @@ export default function Toronto() {
   return (
     <>
       <Helmet>
-        <title>Appliance Repair Toronto | Same-Day Service | ASADS</title>
-        <meta name="description" content="Expert appliance repair in Toronto. Same-day service, licensed technicians, 90-day warranty. Refrigerator, washer, dryer, dishwasher repairs. Call (416) 555-0123!" />
+        <title>Home Inspection Toronto | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in Toronto. Certified inspectors, same-day reports, 200+ point inspections. Serving all Toronto neighborhoods. Call (416) 555-0123!" />
         <link rel="canonical" href="https://asads.ca/locations/toronto" />
       </Helmet>
       <LocationPageTemplate
         city="Toronto"
         region="Ontario"
-        description="Toronto's trusted appliance repair experts. We provide fast, reliable service for all major appliances with same-day appointments available across the GTA's largest city."
+        description="Toronto's trusted home inspection experts. We provide comprehensive inspections for buyers, sellers, and property owners across all Toronto neighborhoods."
         neighborhoods={neighborhoods}
         phoneNumber="(416) 555-0123"
       />

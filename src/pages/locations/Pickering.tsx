@@ -11,14 +11,14 @@ export default function Pickering() {
   return (
     <>
       <Helmet>
-        <title>Appliance Repair Pickering | Same-Day Service | ASADS</title>
-        <meta name="description" content="Professional appliance repair in Pickering. Same-day service, certified technicians, all brands. Serving Bay Ridges to Claremont. Call (905) 555-0133!" />
+        <title>Home Inspection Pickering | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in Pickering. Certified inspectors serving Bay Ridges to Claremont. Same-day reports. Call (905) 555-0133!" />
         <link rel="canonical" href="https://asads.ca/locations/pickering" />
       </Helmet>
       <LocationPageTemplate
         city="Pickering"
         region="Ontario"
-        description="Pickering's reliable appliance repair professionals. From Bay Ridges to Claremont, we deliver expert repairs with exceptional customer service."
+        description="Pickering's reliable home inspection professionals. From Bay Ridges to Claremont, we deliver thorough inspections with exceptional customer service."
         neighborhoods={neighborhoods}
         phoneNumber="(905) 555-0133"
       />

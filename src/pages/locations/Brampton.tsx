@@ -11,14 +11,14 @@ export default function Brampton() {
   return (
     <>
       <Helmet>
-        <title>Appliance Repair Brampton | Same-Day Service | ASADS</title>
-        <meta name="description" content="Fast appliance repair in Brampton. Same-day appointments, licensed technicians, all major brands. Refrigerator, washer, dryer repairs. Call (905) 555-0125!" />
+        <title>Home Inspection Brampton | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in Brampton. Certified inspectors, same-day reports, 200+ point inspections. Serving all Brampton areas. Call (905) 555-0125!" />
         <link rel="canonical" href="https://asads.ca/locations/brampton" />
       </Helmet>
       <LocationPageTemplate
         city="Brampton"
         region="Ontario"
-        description="Brampton's trusted appliance repair specialists. We serve all Brampton neighborhoods with fast, professional service for residential and commercial appliances."
+        description="Brampton's trusted home inspection specialists. We serve all Brampton neighborhoods with comprehensive inspections for residential and commercial properties."
         neighborhoods={neighborhoods}
         phoneNumber="(905) 555-0125"
       />

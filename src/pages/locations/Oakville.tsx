@@ -11,14 +11,14 @@ export default function Oakville() {
   return (
     <>
       <Helmet>
-        <title>Appliance Repair Oakville | Same-Day Service | ASADS</title>
-        <meta name="description" content="Premium appliance repair in Oakville. Same-day service, certified technicians, 90-day warranty. Serving Bronte, Glen Abbey & all Oakville. Call (905) 555-0129!" />
+        <title>Home Inspection Oakville | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Premium home inspection in Oakville. Certified inspectors, same-day reports. Serving Bronte, Glen Abbey & all Oakville areas. Call (905) 555-0129!" />
         <link rel="canonical" href="https://asads.ca/locations/oakville" />
       </Helmet>
       <LocationPageTemplate
         city="Oakville"
         region="Ontario"
-        description="Oakville's premium appliance repair service. From downtown to Glen Abbey, we provide expert repairs with attention to detail and superior customer service."
+        description="Oakville's premium home inspection service. From downtown to Glen Abbey, we provide thorough inspections with attention to detail and superior customer service."
         neighborhoods={neighborhoods}
         phoneNumber="(905) 555-0129"
       />

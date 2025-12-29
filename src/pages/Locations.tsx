@@ -24,8 +24,8 @@ export default function Locations() {
   return (
     <Layout>
       <Helmet>
-        <title>Service Areas | Appliance Repair Across the GTA | ASADS</title>
-        <meta name="description" content="ASADS provides professional appliance repair services across the Greater Toronto Area. Same-day service in Toronto, Mississauga, Brampton, Vaughan, Markham & more." />
+        <title>Service Areas | Home Inspection Across the GTA | ASADS</title>
+        <meta name="description" content="ASADS provides professional home inspection services across the Greater Toronto Area. Certified inspectors in Toronto, Mississauga, Brampton, Vaughan, Markham & more." />
         <link rel="canonical" href="https://asads.ca/locations" />
       </Helmet>
 
@@ -38,8 +38,8 @@ export default function Locations() {
               Our Service Areas
             </h1>
             <p className="mb-8 text-lg text-white/90 md:text-xl">
-              Professional appliance repair services throughout the Greater Toronto Area. 
-              Same-day service available in all locations.
+              Professional home inspection services throughout the Greater Toronto Area. 
+              Certified inspectors with same-day reports available.
             </p>
             <Button size="lg" variant="secondary" className="gap-2" asChild>
               <a href="tel:(416) 555-0123">
@@ -57,7 +57,7 @@ export default function Locations() {
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Shield className="h-5 w-5 text-primary" />
-              <span>Licensed & Insured</span>
+              <span>Certified & Insured</span>
             </div>
             <div className="flex items-center gap-2">
               <Star className="h-5 w-5 text-accent" />
@@ -65,7 +65,7 @@ export default function Locations() {
             </div>
             <div className="flex items-center gap-2">
               <Clock className="h-5 w-5 text-primary" />
-              <span>Same-Day Service</span>
+              <span>Same-Day Reports</span>
             </div>
           </div>
         </div>
@@ -114,29 +114,29 @@ export default function Locations() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Fast Response Times Across the GTA
+                Fast, Thorough Inspections Across the GTA
               </h2>
               <p className="mb-6 text-lg text-muted-foreground">
-                Our strategically located technicians ensure fast response times throughout the 
-                Greater Toronto Area. Most service calls are completed within 2-4 hours of booking.
+                Our certified inspectors are strategically located throughout the 
+                Greater Toronto Area. Most inspections include same-day reports.
               </p>
               <ul className="mb-8 space-y-3">
                 <li className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-primary" />
-                  <span>Average response time: Under 2 hours</span>
+                  <span>Same-day reports available</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span>Technicians stationed across the GTA</span>
+                  <span>Inspectors across the GTA</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Shield className="h-5 w-5 text-primary" />
-                  <span>Same-day service guaranteed</span>
+                  <span>200+ point inspections</span>
                 </li>
               </ul>
               <Button className="gap-2" asChild>
                 <Link to="/contact">
-                  Book Your Service
+                  Book Your Inspection
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
