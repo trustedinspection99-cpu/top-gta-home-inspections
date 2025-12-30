@@ -26,9 +26,9 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    primary: "(416) 555-0123",
+    primary: "(647) 801-9311",
     secondary: "Call or text anytime",
-    action: "tel:+14165550123",
+    action: "tel:+16478019311",
   },
   {
     icon: Mail,
@@ -145,7 +145,7 @@ export default function Contact() {
                     Call us now to check availability for same-day or next-day inspections.
                   </p>
                   <Button asChild variant="secondary" className="w-full">
-                    <a href="tel:+14165550123">
+                    <a href="tel:+1-6478019311">
                       <Phone className="mr-2 h-4 w-4" />
                       (416) 555-0123
                     </a>
@@ -213,7 +213,7 @@ export default function Contact() {
                             <Input 
                               id="phone" 
                               type="tel" 
-                              placeholder="(416) 555-0123" 
+                              placeholder="(647) 801-9311" 
                             />
                           </div>
                         </div>
