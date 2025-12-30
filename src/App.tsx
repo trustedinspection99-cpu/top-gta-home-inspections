@@ -12,6 +12,7 @@ import Blog from "./pages/Blog";
 import Testimonials from "./pages/Testimonials";
 import FAQ from "./pages/FAQ";
 import Locations from "./pages/Locations";
+import Booking from "./pages/Booking";
 import Toronto from "./pages/locations/Toronto";
 import Mississauga from "./pages/locations/Mississauga";
 import Brampton from "./pages/locations/Brampton";
@@ -25,6 +26,20 @@ import Ajax from "./pages/locations/Ajax";
 import Pickering from "./pages/locations/Pickering";
 import Newmarket from "./pages/locations/Newmarket";
 import Oshawa from "./pages/locations/Oshawa";
+import PrePurchase from "./pages/services/PrePurchase";
+import PreListing from "./pages/services/PreListing";
+import NewConstruction from "./pages/services/NewConstruction";
+import Condo from "./pages/services/Condo";
+import Commercial from "./pages/services/Commercial";
+import RadonTesting from "./pages/services/RadonTesting";
+import MoldInspection from "./pages/services/MoldInspection";
+import AsbestosTesting from "./pages/services/AsbestosTesting";
+import WETT from "./pages/services/WETT";
+import ThermalImaging from "./pages/services/ThermalImaging";
+import LeadPaintTesting from "./pages/services/LeadPaintTesting";
+import WellWaterTesting from "./pages/services/WellWaterTesting";
+import SewerScope from "./pages/services/SewerScope";
+import AirQuality from "./pages/services/AirQuality";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -45,6 +60,23 @@ const App = () => (
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/locations" element={<Locations />} />
+            <Route path="/booking" element={<Booking />} />
+            {/* Service Pages */}
+            <Route path="/services/pre-purchase" element={<PrePurchase />} />
+            <Route path="/services/pre-listing" element={<PreListing />} />
+            <Route path="/services/new-construction" element={<NewConstruction />} />
+            <Route path="/services/condo" element={<Condo />} />
+            <Route path="/services/commercial" element={<Commercial />} />
+            <Route path="/services/radon-testing" element={<RadonTesting />} />
+            <Route path="/services/mold-inspection" element={<MoldInspection />} />
+            <Route path="/services/asbestos-testing" element={<AsbestosTesting />} />
+            <Route path="/services/wett" element={<WETT />} />
+            <Route path="/services/thermal-imaging" element={<ThermalImaging />} />
+            <Route path="/services/lead-paint-testing" element={<LeadPaintTesting />} />
+            <Route path="/services/well-water-testing" element={<WellWaterTesting />} />
+            <Route path="/services/sewer-scope" element={<SewerScope />} />
+            <Route path="/services/air-quality" element={<AirQuality />} />
+            {/* Location Pages */}
             <Route path="/locations/toronto" element={<Toronto />} />
             <Route path="/locations/mississauga" element={<Mississauga />} />
             <Route path="/locations/brampton" element={<Brampton />} />
