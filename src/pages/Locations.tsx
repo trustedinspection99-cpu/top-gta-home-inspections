@@ -42,9 +42,9 @@ export default function Locations() {
               Certified inspectors with same-day reports available.
             </p>
             <Button size="lg" variant="secondary" className="gap-2" asChild>
-              <a href="tel:(416) 555-0123">
+              <a href="tel:(647) 801-9311">
                 <Phone className="h-5 w-5" />
-                Call Now: (416) 555-0123
+                Call Now: (647) 801-9311
               </a>
             </Button>
           </div>
@@ -170,9 +170,9 @@ export default function Locations() {
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button size="lg" variant="secondary" className="gap-2" asChild>
-                <a href="tel:(416) 555-0123">
+                <a href="tel:(416) 801-9311">
                   <Phone className="h-5 w-5" />
-                  (416) 555-0123
+                  (647) 801-9311
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary" asChild>
