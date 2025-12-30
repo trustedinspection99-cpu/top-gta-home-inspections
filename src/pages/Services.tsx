@@ -343,7 +343,7 @@ export default function Services() {
                 variant="outline"
                 className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
               >
-                <a href="tel:+14165550123">(416) 555-0123</a>
+                <a href="tel:+16478019311">(647) 801-9311</a>
               </Button>
             </div>
           </div>
