@@ -252,7 +252,7 @@ export default function Booking() {
                 <h2 className="font-heading text-2xl font-bold mb-4">Booking Request Received!</h2>
                 <p className="text-muted-foreground mb-8">We'll contact you within 2 hours to confirm your appointment.</p>
                 <div className="flex justify-center gap-4">
-                  <Button asChild><a href="tel:+14165550123"><Phone className="mr-2 h-4 w-4" />Call Now</a></Button>
+                  <Button asChild><a href="tel:+16478019311"><Phone className="mr-2 h-4 w-4" />Call Now</a></Button>
                   <Button variant="outline" onClick={() => { setStep(1); setFormData({ inspectionType: "", timeSlot: "", propertyType: "", squareFootage: "", propertyAge: "", address: "", city: "", postalCode: "", firstName: "", lastName: "", email: "", phone: "", notes: "" }); setDate(undefined); }}>Book Another</Button>
                 </div>
               </CardContent>
