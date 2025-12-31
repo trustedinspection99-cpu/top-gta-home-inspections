@@ -14,6 +14,9 @@ import { format } from "date-fns";
 import { Calendar as CalendarIcon, CheckCircle, Phone, Clock, Shield, FileText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+// TODO: Replace with your Formspree form ID from https://formspree.io
+const FORMSPREE_BOOKING_ID = "YOUR_FORMSPREE_ID";
+
 const inspectionTypes = [
   { value: "pre-purchase", label: "Pre-Purchase Home Inspection", price: "$399+" },
   { value: "pre-listing", label: "Pre-Listing Inspection", price: "$349+" },
@@ -40,6 +43,7 @@ export default function Booking() {
   const { toast } = useToast();
   const [date, setDate] = useState<Date>();
   const [step, setStep] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     inspectionType: "",
     timeSlot: "",
@@ -60,13 +64,54 @@ export default function Booking() {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Booking Request Submitted!",
-      description: "We'll contact you within 2 hours to confirm your appointment.",
-    });
-    setStep(4);
+    setIsSubmitting(true);
+
+    const inspectionLabel = inspectionTypes.find(t => t.value === formData.inspectionType)?.label || formData.inspectionType;
+
+    const submitData = new FormData();
+    submitData.append("Inspection Type", inspectionLabel);
+    submitData.append("Preferred Date", date ? format(date, "PPP") : "Not specified");
+    submitData.append("Preferred Time", formData.timeSlot);
+    submitData.append("Property Type", formData.propertyType);
+    submitData.append("Square Footage", formData.squareFootage || "Not specified");
+    submitData.append("Address", formData.address);
+    submitData.append("City", formData.city);
+    submitData.append("Postal Code", formData.postalCode || "Not specified");
+    submitData.append("First Name", formData.firstName);
+    submitData.append("Last Name", formData.lastName);
+    submitData.append("Email", formData.email);
+    submitData.append("Phone", formData.phone);
+    submitData.append("Notes", formData.notes || "None");
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_BOOKING_ID}`, {
+        method: "POST",
+        body: submitData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Booking Request Submitted!",
+          description: "We'll contact you within 2 hours to confirm your appointment.",
+        });
+        setStep(4);
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to submit booking. Please try again or call us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const canProceed = () => {
@@ -237,7 +282,9 @@ export default function Booking() {
                     {step < 3 ? (
                       <Button type="button" onClick={() => setStep(s => s + 1)} disabled={!canProceed()} className="ml-auto">Continue</Button>
                     ) : (
-                      <Button type="submit" disabled={!canProceed()} className="ml-auto">Submit Booking Request</Button>
+                      <Button type="submit" disabled={!canProceed() || isSubmitting} className="ml-auto">
+                        {isSubmitting ? "Submitting..." : "Submit Booking Request"}
+                      </Button>
                     )}
                   </div>
                 </form>
