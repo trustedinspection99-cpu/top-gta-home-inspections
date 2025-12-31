@@ -15,7 +15,7 @@ interface LocationPageProps {
 
 export function LocationPageTemplate({ city, region, description, neighborhoods, phoneNumber }: LocationPageProps) {
   const citySlug = city.toLowerCase().replace(/\s+/g, '-');
-  const locationUrl = `${SITE_URL}/locations/${citySlug}`;
+  const locationUrl = `${SITE_URL}/locations/${citySlug}/`;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -43,22 +43,12 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
   };
 
   const services = [
-    { name: "Pre-Purchase Inspection", description: "Thorough evaluation before you buy your new home" },
-    { name: "Pre-Listing Inspection", description: "Sell faster with a professional pre-listing report" },
-    { name: "New Construction Inspection", description: "Verify builder quality before your final walkthrough" },
-    { name: "Specialty Testing", description: "Radon, mold, asbestos, and air quality testing" },
+    { name: "Pre-Purchase Inspection", description: "Thorough evaluation before you buy your new home", href: "/services/pre-purchase" },
+    { name: "Pre-Listing Inspection", description: "Sell faster with a professional pre-listing report", href: "/services/pre-listing" },
+    { name: "New Construction Inspection", description: "Verify builder quality before your final walkthrough", href: "/services/new-construction" },
+    { name: "Specialty Testing", description: "Radon, mold, asbestos, and air quality testing", href: "/services/radon-testing" },
   ];
 
-  const inspectionTypes = [
-    "Pre-Purchase Inspections",
-    "Pre-Listing Inspections",
-    "Condo Inspections",
-    "Commercial Inspections",
-    "New Construction",
-    "Tarion Warranty",
-    "Radon & Mold Testing",
-    "Thermal Imaging",
-  ];
 
   const benefits = [
     "Same-day reports available",
@@ -141,11 +131,19 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
-              <div key={service.name} className="rounded-xl border bg-card p-6 shadow-sm transition-shadow hover:shadow-md">
+              <Link key={service.name} to={service.href} className="rounded-xl border bg-card p-6 shadow-sm transition-shadow hover:shadow-md hover:border-primary">
                 <h3 className="mb-2 text-lg font-semibold">{service.name}</h3>
                 <p className="text-sm text-muted-foreground">{service.description}</p>
-              </div>
+              </Link>
             ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Button variant="outline" className="gap-2" asChild>
+              <Link to="/services">
+                View All Services
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -163,12 +161,29 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
                 From condos to commercial properties, we have you covered.
               </p>
               <div className="grid gap-3 sm:grid-cols-2">
-                {inspectionTypes.map((type) => (
-                  <div key={type} className="flex items-center gap-2">
+                {[
+                  { name: "Pre-Purchase Inspections", href: "/services/pre-purchase" },
+                  { name: "Pre-Listing Inspections", href: "/services/pre-listing" },
+                  { name: "Condo Inspections", href: "/services/condo" },
+                  { name: "Commercial Inspections", href: "/services/commercial" },
+                  { name: "New Construction", href: "/services/new-construction" },
+                  { name: "WETT Inspections", href: "/services/wett" },
+                  { name: "Radon & Mold Testing", href: "/services/radon-testing" },
+                  { name: "Thermal Imaging", href: "/services/thermal-imaging" },
+                ].map((type) => (
+                  <Link key={type.name} to={type.href} className="flex items-center gap-2 hover:text-primary transition-colors">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>{type}</span>
-                  </div>
+                    <span>{type.name}</span>
+                  </Link>
                 ))}
+              </div>
+              <div className="mt-6">
+                <Button variant="outline" size="sm" className="gap-2" asChild>
+                  <Link to="/locations">
+                    <MapPin className="h-4 w-4" />
+                    View All Locations
+                  </Link>
+                </Button>
               </div>
             </div>
             <div className="rounded-2xl bg-primary/5 p-8">
