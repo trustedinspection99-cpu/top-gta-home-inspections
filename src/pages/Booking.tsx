@@ -15,7 +15,7 @@ import { Calendar as CalendarIcon, CheckCircle, Phone, Clock, Shield, FileText }
 import { useToast } from "@/hooks/use-toast";
 
 // TODO: Replace with your Formspree form ID from https://formspree.io
-const FORMSPREE_BOOKING_ID = "YOUR_FORMSPREE_ID";
+const FORMSPREE_BOOKING_ID = "xkgwqzpv";
 
 const inspectionTypes = [
   { value: "pre-purchase", label: "Pre-Purchase Home Inspection", price: "$399+" },
@@ -131,11 +131,19 @@ export default function Booking() {
       <section className="py-16 md:py-24 hero-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-primary-foreground/20 backdrop-blur px-4 py-2 rounded-full mb-6">
+              <Phone className="h-4 w-4" />
+              <span className="text-sm font-medium">100% Free Online Booking</span>
+            </div>
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">
-              Book Your Inspection
+              Book Your Inspection Online
             </h1>
-            <p className="text-xl text-primary-foreground/90">
+            <p className="text-xl text-primary-foreground/90 mb-4">
               Schedule your professional home inspection in minutes. Same-day appointments available.
+            </p>
+            <p className="text-lg text-primary-foreground/80 flex items-center justify-center gap-2">
+              <CheckCircle className="h-5 w-5" />
+              You'll receive a confirmation call shortly after booking
             </p>
           </div>
         </div>
@@ -297,7 +305,16 @@ export default function Booking() {
                   <CheckCircle className="h-10 w-10 text-accent" />
                 </div>
                 <h2 className="font-heading text-2xl font-bold mb-4">Booking Request Received!</h2>
-                <p className="text-muted-foreground mb-8">We'll contact you within 2 hours to confirm your appointment.</p>
+                <p className="text-muted-foreground mb-4">Thank you for choosing ASADS Home Inspection!</p>
+                <div className="bg-primary/10 rounded-lg p-4 mb-8 max-w-md mx-auto">
+                  <div className="flex items-center justify-center gap-2 text-primary font-medium">
+                    <Phone className="h-5 w-5" />
+                    <span>You'll receive a confirmation call shortly</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    We'll call you within the next 30 minutes to confirm your appointment details.
+                  </p>
+                </div>
                 <div className="flex justify-center gap-4">
                   <Button asChild><a href="tel:+16478019311"><Phone className="mr-2 h-4 w-4" />Call Now</a></Button>
                   <Button variant="outline" onClick={() => { setStep(1); setFormData({ inspectionType: "", timeSlot: "", propertyType: "", squareFootage: "", propertyAge: "", address: "", city: "", postalCode: "", firstName: "", lastName: "", email: "", phone: "", notes: "" }); setDate(undefined); }}>Book Another</Button>
@@ -306,8 +323,9 @@ export default function Booking() {
             </Card>
           )}
 
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
+          <div className="grid md:grid-cols-4 gap-6 mt-12">
             {[
+              { icon: Phone, title: "Quick Confirmation", desc: "You'll receive a call within 30 minutes" },
               { icon: Clock, title: "Same-Day Booking", desc: "Appointments often available same day" },
               { icon: FileText, title: "24-Hour Reports", desc: "Digital report within 24 hours" },
               { icon: Shield, title: "Certified Inspectors", desc: "InterNACHI certified professionals" },

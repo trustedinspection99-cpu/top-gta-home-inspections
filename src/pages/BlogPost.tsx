@@ -44,6 +44,63 @@ export default function BlogPost() {
     .filter((p) => p.category === post.category && p.slug !== slug)
     .slice(0, 3);
 
+  // Generate Article schema
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "image": post.image,
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "author": {
+      "@type": "Person",
+      "name": post.author,
+      "url": "https://asads.ca/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ASADS Home Inspection",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://asads.ca/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://asads.ca/blog/${post.slug}`
+    },
+    "articleSection": post.category,
+    "wordCount": post.content.split(/\s+/).length,
+    "timeRequired": post.readTime
+  };
+
+  // Generate Breadcrumb schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://asads.ca/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://asads.ca/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": post.title,
+        "item": `https://asads.ca/blog/${post.slug}`
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Helmet>
@@ -54,7 +111,16 @@ export default function BlogPost() {
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={post.image} />
         <meta property="og:type" content="article" />
+        <meta property="article:published_time" content={post.date} />
+        <meta property="article:author" content={post.author} />
+        <meta property="article:section" content={post.category} />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
