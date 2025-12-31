@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { SITE_URL } from "@/lib/seo";
+import { SITE_URL, getCanonicalUrl, normalizePath } from "@/lib/seo";
 import { 
   CheckCircle, 
   Phone, 
@@ -76,8 +76,8 @@ export function ServicePageTemplate({
   faqs,
   relatedServices = [],
 }: ServicePageTemplateProps) {
-  const serviceSlug = title.toLowerCase().replace(/\s+/g, '-');
-  const serviceUrl = `${SITE_URL}/services/${serviceSlug}`;
+  const location = useLocation();
+  const serviceUrl = getCanonicalUrl(location.pathname);
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -87,13 +87,13 @@ export function ServicePageTemplate({
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": `${SITE_URL}/`
+        "item": getCanonicalUrl("/")
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": `${SITE_URL}/services`
+        "item": getCanonicalUrl("/services")
       },
       {
         "@type": "ListItem",
@@ -135,7 +135,7 @@ export function ServicePageTemplate({
       "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
       "availability": "https://schema.org/InStock"
     },
-    "termsOfService": `${SITE_URL}/terms`,
+    "termsOfService": getCanonicalUrl("/terms"),
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": `${title} Checklist`,
@@ -217,7 +217,7 @@ export function ServicePageTemplate({
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" variant="secondary">
-                <Link to="/booking">
+                <Link to="/booking/">
                   <Calendar className="mr-2 h-5 w-5" />
                   Book This Inspection
                 </Link>
@@ -251,7 +251,7 @@ export function ServicePageTemplate({
               <span>No hidden fees • Detailed report included</span>
             </div>
             <Button asChild variant="secondary">
-              <Link to="/booking">Get Started</Link>
+              <Link to="/booking/">Get Started</Link>
             </Button>
           </div>
         </div>
@@ -341,7 +341,7 @@ export function ServicePageTemplate({
                   </ul>
                   <div className="mt-6 pt-6 border-t border-border">
                     <Button asChild className="w-full" size="lg">
-                      <Link to="/booking">Book Now</Link>
+                      <Link to="/booking/">Book Now</Link>
                     </Button>
                     <p className="text-center text-sm text-muted-foreground mt-3">
                       or call <a href="tel:+16478019311" className="text-primary hover:underline">(647) 801-9311</a>
@@ -361,7 +361,7 @@ export function ServicePageTemplate({
                       {relatedServices.map((service) => (
                         <li key={service.href}>
                           <Link 
-                            to={service.href}
+                            to={normalizePath(service.href)}
                             className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                           >
                             <ArrowRight className="h-4 w-4" />
@@ -425,7 +425,7 @@ export function ServicePageTemplate({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
-                <Link to="/booking">Book Online Now</Link>
+                <Link to="/booking/">Book Online Now</Link>
               </Button>
               <Button 
                 asChild 

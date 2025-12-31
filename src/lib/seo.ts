@@ -2,8 +2,26 @@
 export const SITE_URL = "https://www.asads.ca";
 export const SITE_NAME = "ASADS Home Inspection";
 
-export function getCanonicalUrl(path: string): string {
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  const pathWithSlash = cleanPath.endsWith('/') ? cleanPath : `${cleanPath}/`;
-  return `${SITE_URL}${pathWithSlash}`;
+/**
+ * Ensures internal paths consistently use a leading and trailing slash.
+ * Preserves query strings and hash fragments.
+ */
+export function normalizePath(path: string): string {
+  if (!path) return "/";
+
+  const match = path.match(/^[^?#]*/);
+  const base = match?.[0] ?? path;
+  const suffix = path.slice(base.length); // includes ?query and/or #hash
+
+  const withLeading = base.startsWith("/") ? base : `/${base}`;
+
+  // special-case root
+  const withTrailing = withLeading === "/" ? "/" : withLeading.endsWith("/") ? withLeading : `${withLeading}/`;
+
+  return `${withTrailing}${suffix}`;
 }
+
+export function getCanonicalUrl(path: string): string {
+  return `${SITE_URL}${normalizePath(path)}`;
+}
+
