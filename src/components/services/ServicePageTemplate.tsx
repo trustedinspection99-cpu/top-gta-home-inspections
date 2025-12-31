@@ -283,7 +283,7 @@ export function ServicePageTemplate({
                 variant="outline"
                 className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
               >
-                <a htext-center6478019311">(647) 801-9311</a>
+                <a href="tel:+16478019311">(647) 801-9311</a>
               </Button>
             </div>
           </div>

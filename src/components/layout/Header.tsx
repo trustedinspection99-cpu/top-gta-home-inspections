@@ -23,8 +23,12 @@ const services = [
 const specialtyServices = [
   { title: "Radon Testing", href: "/services/radon-testing", description: "Protect your family from radon" },
   { title: "Mold Inspection", href: "/services/mold-inspection", description: "Identify hidden mold issues" },
+  { title: "Asbestos Testing", href: "/services/asbestos-testing", description: "Safe asbestos identification" },
   { title: "Thermal Imaging", href: "/services/thermal-imaging", description: "See beyond the surface" },
   { title: "WETT Inspection", href: "/services/wett", description: "Wood-burning safety checks" },
+  { title: "Lead Paint Testing", href: "/services/lead-paint-testing", description: "Protect from lead hazards" },
+  { title: "Well Water Testing", href: "/services/well-water-testing", description: "Ensure safe drinking water" },
+  { title: "Sewer Scope", href: "/services/sewer-scope", description: "Video sewer line inspection" },
   { title: "Air Quality Testing", href: "/services/air-quality", description: "Ensure healthy indoor air" },
 ];
 

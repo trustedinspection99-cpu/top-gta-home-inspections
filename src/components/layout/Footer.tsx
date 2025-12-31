@@ -113,7 +113,7 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 mt-0.5 text-accent" />
                 <div>
-                  <a href="tel:+14165550123" className="text-sm hover:text-accent transition-colors">(647) 801-9311</a>
+                  <a href="tel:+16478019311" className="text-sm hover:text-accent transition-colors">(647) 801-9311</a>
                   <p className="text-primary-foreground/60 text-xs">Call or Text</p>
                 </div>
               </li>
@@ -147,7 +147,7 @@ export function Footer() {
             <Link to="/terms" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
               Terms of Service
             </Link>
-            <Link to="/privacy" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
+            <Link to="/privacy-policy" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
               Privacy Policy
             </Link>
           </div>

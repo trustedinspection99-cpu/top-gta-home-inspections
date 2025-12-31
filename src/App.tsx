@@ -13,6 +13,9 @@ import Testimonials from "./pages/Testimonials";
 import FAQ from "./pages/FAQ";
 import Locations from "./pages/Locations";
 import Booking from "./pages/Booking";
+import Pricing from "./pages/Pricing";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
 import Toronto from "./pages/locations/Toronto";
 import Mississauga from "./pages/locations/Mississauga";
 import Brampton from "./pages/locations/Brampton";
@@ -61,6 +64,9 @@ const App = () => (
             <Route path="/faq" element={<FAQ />} />
             <Route path="/locations" element={<Locations />} />
             <Route path="/booking" element={<Booking />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<Terms />} />
             {/* Service Pages */}
             <Route path="/services/pre-purchase" element={<PrePurchase />} />
             <Route path="/services/pre-listing" element={<PreListing />} />
