@@ -1,8 +1,10 @@
 import { ReactNode } from "react";
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import Breadcrumbs from "./Breadcrumbs";
+import { SITE_URL } from "@/lib/seo";
 
 interface LayoutProps {
   children: ReactNode;
@@ -11,20 +13,20 @@ interface LayoutProps {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://asads.ca/#website",
+  "@id": `${SITE_URL}/#website`,
   "name": "ASADS Home Inspection",
   "alternateName": "ASADS",
-  "url": "https://asads.ca/",
+  "url": `${SITE_URL}/`,
   "description": "Professional home inspection services in the Greater Toronto Area",
   "publisher": {
     "@type": "Organization",
-    "@id": "https://asads.ca/#organization"
+    "@id": `${SITE_URL}/#organization`
   },
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://asads.ca/locations?search={search_term_string}"
+      "urlTemplate": `${SITE_URL}/locations?search={search_term_string}`
     },
     "query-input": "required name=search_term_string"
   },
@@ -34,16 +36,16 @@ const websiteSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://asads.ca/#localbusiness",
+  "@id": `${SITE_URL}/#localbusiness`,
   "name": "ASADS Home Inspection",
   "alternateName": "ASADS",
   "description": "Professional home inspection services in the Greater Toronto Area. Certified inspectors providing pre-purchase, pre-listing, condo, commercial, and specialty inspections with same-day reports.",
   "image": [
-    "https://asads.ca/images/toronto-home-inspection-hero.webp",
-    "https://asads.ca/images/home-inspection-service.webp"
+    `${SITE_URL}/images/toronto-home-inspection-hero.webp`,
+    `${SITE_URL}/images/home-inspection-service.webp`
   ],
-  "logo": "https://asads.ca/logo.png",
-  "url": "https://asads.ca/",
+  "logo": `${SITE_URL}/logo.png`,
+  "url": `${SITE_URL}/`,
   "telephone": "+16478019311",
   "email": "info@asads.ca",
   "priceRange": "$350-$650",
@@ -131,7 +133,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Pre-Purchase Home Inspection",
-          "url": "https://asads.ca/services/pre-purchase"
+          "url": `${SITE_URL}/services/pre-purchase`
         }
       },
       {
@@ -139,7 +141,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Pre-Listing Inspection",
-          "url": "https://asads.ca/services/pre-listing"
+          "url": `${SITE_URL}/services/pre-listing`
         }
       },
       {
@@ -147,7 +149,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Condo Inspection",
-          "url": "https://asads.ca/services/condo"
+          "url": `${SITE_URL}/services/condo`
         }
       },
       {
@@ -155,7 +157,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Commercial Inspection",
-          "url": "https://asads.ca/services/commercial"
+          "url": `${SITE_URL}/services/commercial`
         }
       },
       {
@@ -163,7 +165,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Radon Testing",
-          "url": "https://asads.ca/services/radon-testing"
+          "url": `${SITE_URL}/services/radon-testing`
         }
       },
       {
@@ -171,7 +173,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Mold Inspection",
-          "url": "https://asads.ca/services/mold-inspection"
+          "url": `${SITE_URL}/services/mold-inspection`
         }
       }
     ]
@@ -191,9 +193,13 @@ const localBusinessSchema = {
 };
 
 export function Layout({ children }: LayoutProps) {
+  const location = useLocation();
+  const canonicalUrl = `${SITE_URL}${location.pathname === '/' ? '' : location.pathname}`;
+
   return (
     <>
       <Helmet>
+        <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">
           {JSON.stringify(websiteSchema)}
         </script>

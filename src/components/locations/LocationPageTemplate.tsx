@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Phone, MapPin, Clock, Shield, Star, CheckCircle, ArrowRight } from "lucide-react";
+import { SITE_URL } from "@/lib/seo";
 
 interface LocationPageProps {
   city: string;
@@ -14,7 +15,7 @@ interface LocationPageProps {
 
 export function LocationPageTemplate({ city, region, description, neighborhoods, phoneNumber }: LocationPageProps) {
   const citySlug = city.toLowerCase().replace(/\s+/g, '-');
-  const locationUrl = `https://asads.ca/locations/${citySlug}`;
+  const locationUrl = `${SITE_URL}/locations/${citySlug}`;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -24,13 +25,13 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://asads.ca/"
+        "item": `${SITE_URL}/`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Locations",
-        "item": "https://asads.ca/locations"
+        "item": `${SITE_URL}/locations`
       },
       {
         "@type": "ListItem",
@@ -71,6 +72,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
   return (
     <Layout>
       <Helmet>
+        <link rel="canonical" href={locationUrl} />
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}
         </script>
