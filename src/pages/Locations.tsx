@@ -4,21 +4,147 @@ import { Link } from "react-router-dom";
 import { MapPin, Phone, ArrowRight, Clock, Shield, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
-const locations = [
+// Major Cities - Popular
+const popularLocations = [
   { name: "Toronto", href: "/locations/toronto", popular: true },
   { name: "Mississauga", href: "/locations/mississauga", popular: true },
   { name: "Brampton", href: "/locations/brampton", popular: true },
   { name: "Vaughan", href: "/locations/vaughan", popular: true },
   { name: "Markham", href: "/locations/markham", popular: true },
-  { name: "Richmond Hill", href: "/locations/richmond-hill" },
-  { name: "Oakville", href: "/locations/oakville" },
-  { name: "Burlington", href: "/locations/burlington" },
+  { name: "Richmond Hill", href: "/locations/richmond-hill", popular: true },
+  { name: "Oakville", href: "/locations/oakville", popular: true },
+  { name: "Burlington", href: "/locations/burlington", popular: true },
+];
+
+// All locations within 150km radius of Toronto
+const allLocations = [
+  // Toronto & Surrounding
+  { name: "Toronto", href: "/locations/toronto", popular: true },
+  { name: "North York", href: "/locations/north-york" },
+  { name: "Scarborough", href: "/locations/scarborough" },
+  { name: "Etobicoke", href: "/locations/etobicoke" },
+  { name: "East York", href: "/locations/east-york" },
+  
+  // Peel Region
+  { name: "Mississauga", href: "/locations/mississauga", popular: true },
+  { name: "Brampton", href: "/locations/brampton", popular: true },
+  { name: "Caledon", href: "/locations/caledon" },
+  { name: "Bolton", href: "/locations/bolton" },
+  
+  // York Region
+  { name: "Vaughan", href: "/locations/vaughan", popular: true },
+  { name: "Markham", href: "/locations/markham", popular: true },
+  { name: "Richmond Hill", href: "/locations/richmond-hill", popular: true },
+  { name: "Newmarket", href: "/locations/newmarket" },
+  { name: "Aurora", href: "/locations/aurora" },
+  { name: "King City", href: "/locations/king-city" },
+  { name: "Stouffville", href: "/locations/stouffville" },
+  { name: "Georgina", href: "/locations/georgina" },
+  { name: "East Gwillimbury", href: "/locations/east-gwillimbury" },
+  { name: "Keswick", href: "/locations/keswick" },
+  { name: "Sutton", href: "/locations/sutton" },
+  { name: "Woodbridge", href: "/locations/woodbridge" },
+  { name: "Thornhill", href: "/locations/thornhill" },
+  { name: "Maple", href: "/locations/maple" },
+  { name: "Kleinburg", href: "/locations/kleinburg" },
+  { name: "Concord", href: "/locations/concord" },
+  { name: "Unionville", href: "/locations/unionville" },
+  
+  // Halton Region
+  { name: "Oakville", href: "/locations/oakville", popular: true },
+  { name: "Burlington", href: "/locations/burlington", popular: true },
   { name: "Milton", href: "/locations/milton" },
+  { name: "Halton Hills", href: "/locations/halton-hills" },
+  { name: "Georgetown", href: "/locations/georgetown" },
+  { name: "Acton", href: "/locations/acton" },
+  
+  // Durham Region
+  { name: "Oshawa", href: "/locations/oshawa" },
+  { name: "Whitby", href: "/locations/whitby" },
   { name: "Ajax", href: "/locations/ajax" },
   { name: "Pickering", href: "/locations/pickering" },
-  { name: "Newmarket", href: "/locations/newmarket" },
-  { name: "Oshawa", href: "/locations/oshawa" },
+  { name: "Clarington", href: "/locations/clarington" },
+  { name: "Bowmanville", href: "/locations/bowmanville" },
+  { name: "Uxbridge", href: "/locations/uxbridge" },
+  { name: "Scugog", href: "/locations/scugog" },
+  { name: "Port Perry", href: "/locations/port-perry" },
+  { name: "Brock", href: "/locations/brock" },
+  { name: "Beaverton", href: "/locations/beaverton" },
+  { name: "Cannington", href: "/locations/cannington" },
+  
+  // Simcoe County
+  { name: "Barrie", href: "/locations/barrie" },
+  { name: "Orillia", href: "/locations/orillia" },
+  { name: "Innisfil", href: "/locations/innisfil" },
+  { name: "Bradford", href: "/locations/bradford" },
+  { name: "Alliston", href: "/locations/alliston" },
+  { name: "Collingwood", href: "/locations/collingwood" },
+  { name: "Wasaga Beach", href: "/locations/wasaga-beach" },
+  { name: "Midland", href: "/locations/midland" },
+  { name: "Penetanguishene", href: "/locations/penetanguishene" },
+  { name: "New Tecumseth", href: "/locations/new-tecumseth" },
+  { name: "Essa", href: "/locations/essa" },
+  { name: "Springwater", href: "/locations/springwater" },
+  { name: "Clearview", href: "/locations/clearview" },
+  { name: "Stayner", href: "/locations/stayner" },
+  
+  // Hamilton & Niagara
+  { name: "Hamilton", href: "/locations/hamilton" },
+  { name: "Stoney Creek", href: "/locations/stoney-creek" },
+  { name: "Ancaster", href: "/locations/ancaster" },
+  { name: "Dundas", href: "/locations/dundas" },
+  { name: "Flamborough", href: "/locations/flamborough" },
+  { name: "Grimsby", href: "/locations/grimsby" },
+  { name: "Beamsville", href: "/locations/beamsville" },
+  { name: "Lincoln", href: "/locations/lincoln" },
+  { name: "St. Catharines", href: "/locations/st-catharines" },
+  { name: "Niagara Falls", href: "/locations/niagara-falls" },
+  { name: "Niagara-on-the-Lake", href: "/locations/niagara-on-the-lake" },
+  { name: "Welland", href: "/locations/welland" },
+  { name: "Fort Erie", href: "/locations/fort-erie" },
+  { name: "Port Colborne", href: "/locations/port-colborne" },
+  { name: "Thorold", href: "/locations/thorold" },
+  
+  // Wellington County
+  { name: "Guelph", href: "/locations/guelph" },
+  { name: "Fergus", href: "/locations/fergus" },
+  { name: "Elora", href: "/locations/elora" },
+  { name: "Erin", href: "/locations/erin" },
+  { name: "Centre Wellington", href: "/locations/centre-wellington" },
+  
+  // Waterloo Region
+  { name: "Kitchener", href: "/locations/kitchener" },
+  { name: "Waterloo", href: "/locations/waterloo" },
+  { name: "Cambridge", href: "/locations/cambridge" },
+  { name: "Woolwich", href: "/locations/woolwich" },
+  { name: "Elmira", href: "/locations/elmira" },
+  
+  // Dufferin County
+  { name: "Orangeville", href: "/locations/orangeville" },
+  { name: "Shelburne", href: "/locations/shelburne" },
+  { name: "Grand Valley", href: "/locations/grand-valley" },
+  { name: "Mono", href: "/locations/mono" },
+  
+  // Kawartha Lakes & Peterborough
+  { name: "Kawartha Lakes", href: "/locations/kawartha-lakes" },
+  { name: "Lindsay", href: "/locations/lindsay" },
+  { name: "Bobcaygeon", href: "/locations/bobcaygeon" },
+  { name: "Fenelon Falls", href: "/locations/fenelon-falls" },
+  { name: "Peterborough", href: "/locations/peterborough" },
+  { name: "Lakefield", href: "/locations/lakefield" },
+  
+  // Northumberland County
+  { name: "Cobourg", href: "/locations/cobourg" },
+  { name: "Port Hope", href: "/locations/port-hope" },
+  { name: "Brighton", href: "/locations/brighton" },
+  { name: "Colborne", href: "/locations/colborne" },
+  
+  // Brant County
+  { name: "Brantford", href: "/locations/brantford" },
+  { name: "Paris", href: "/locations/paris" },
 ];
+
+const locations = allLocations;
 
 export default function Locations() {
   return (
@@ -76,10 +202,10 @@ export default function Locations() {
         <div className="container">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-              Serving 30+ Communities Across the GTA
+              Serving 100+ Communities Within 150km of Toronto
             </h2>
             <p className="text-lg text-muted-foreground">
-              Click on any location below to learn more about our services in your area.
+              From the GTA to Barrie, Hamilton, Kitchener-Waterloo, and beyond. Click any location below.
             </p>
           </div>
 
@@ -144,8 +270,9 @@ export default function Locations() {
             <div className="relative aspect-square rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 p-8">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="mb-4 text-6xl font-bold text-primary">30+</div>
+                  <div className="mb-4 text-6xl font-bold text-primary">100+</div>
                   <div className="text-xl font-medium text-muted-foreground">Communities Served</div>
+                  <div className="text-sm text-muted-foreground mt-2">150km Radius from Toronto</div>
                 </div>
               </div>
               {/* Decorative elements */}

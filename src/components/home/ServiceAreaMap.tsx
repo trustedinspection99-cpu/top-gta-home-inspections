@@ -3,22 +3,32 @@ import { MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const locations = [
+  // Major Cities - Featured
   { name: "Toronto", href: "/locations/toronto", featured: true },
   { name: "Mississauga", href: "/locations/mississauga", featured: true },
   { name: "Brampton", href: "/locations/brampton", featured: true },
   { name: "Vaughan", href: "/locations/vaughan", featured: true },
-  { name: "Markham", href: "/locations/markham" },
-  { name: "Richmond Hill", href: "/locations/richmond-hill" },
+  { name: "Markham", href: "/locations/markham", featured: true },
+  { name: "Richmond Hill", href: "/locations/richmond-hill", featured: true },
+  { name: "Oakville", href: "/locations/oakville", featured: true },
+  { name: "Burlington", href: "/locations/burlington", featured: true },
+  // GTA & Surrounding
   { name: "Scarborough", href: "/locations/scarborough" },
   { name: "North York", href: "/locations/north-york" },
   { name: "Etobicoke", href: "/locations/etobicoke" },
-  { name: "Oakville", href: "/locations/oakville" },
-  { name: "Burlington", href: "/locations/burlington" },
   { name: "Milton", href: "/locations/milton" },
   { name: "Pickering", href: "/locations/pickering" },
   { name: "Ajax", href: "/locations/ajax" },
   { name: "Oshawa", href: "/locations/oshawa" },
   { name: "Whitby", href: "/locations/whitby" },
+  { name: "Newmarket", href: "/locations/newmarket" },
+  { name: "Aurora", href: "/locations/aurora" },
+  { name: "Hamilton", href: "/locations/hamilton" },
+  { name: "Barrie", href: "/locations/barrie" },
+  { name: "Guelph", href: "/locations/guelph" },
+  { name: "Kitchener", href: "/locations/kitchener" },
+  { name: "St. Catharines", href: "/locations/st-catharines" },
+  { name: "Niagara Falls", href: "/locations/niagara-falls" },
 ];
 
 export function ServiceAreaMap() {
