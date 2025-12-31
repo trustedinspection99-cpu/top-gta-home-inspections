@@ -145,9 +145,9 @@ export default function Contact() {
                     Call us now to check availability for same-day or next-day inspections.
                   </p>
                   <Button asChild variant="secondary" className="w-full">
-                    <a href="tel:+1-6478019311">
+                    <a href="tel:+16478019311">
                       <Phone className="mr-2 h-4 w-4" />
-                      (416) 555-0123
+                      (647) 801-9311
                     </a>
                   </Button>
                 </CardContent>

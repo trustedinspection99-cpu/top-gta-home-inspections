@@ -12,7 +12,7 @@ export default function RichmondHill() {
     <>
       <Helmet>
         <title>Home Inspection Richmond Hill | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Richmond Hill. Certified inspectors, same-day reports. Serving Oak Ridges, Bayview Hill & all areas. Call (905) 555-0128!" />
+        <meta name="description" content="Professional home inspection in Richmond Hill. Certified inspectors, same-day reports. Serving Oak Ridges, Bayview Hill & all areas. Call (647) 801-9311!" />
         <link rel="canonical" href="https://asads.ca/locations/richmond-hill" />
       </Helmet>
       <LocationPageTemplate
@@ -20,7 +20,7 @@ export default function RichmondHill() {
         region="Ontario"
         description="Richmond Hill's reliable home inspection service. We provide thorough inspections throughout Oak Ridges, Bayview Hill, and all Richmond Hill neighborhoods."
         neighborhoods={neighborhoods}
-        phoneNumber="(905) 555-0128"
+        phoneNumber="(647) 801-9311"
       />
     </>
   );

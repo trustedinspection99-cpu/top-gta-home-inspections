@@ -12,7 +12,7 @@ export default function Newmarket() {
     <>
       <Helmet>
         <title>Home Inspection Newmarket | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Newmarket. Certified inspectors, same-day reports, 200+ point inspections. Call (905) 555-0134!" />
+        <meta name="description" content="Professional home inspection in Newmarket. Certified inspectors, same-day reports, 200+ point inspections. Call (647) 801-9311!" />
         <link rel="canonical" href="https://asads.ca/locations/newmarket" />
       </Helmet>
       <LocationPageTemplate
@@ -20,7 +20,7 @@ export default function Newmarket() {
         region="Ontario"
         description="Newmarket's preferred home inspection service. We provide thorough inspections throughout Newmarket with same-day reports and transparent pricing."
         neighborhoods={neighborhoods}
-        phoneNumber="(905) 555-0134"
+        phoneNumber="(647) 801-9311"
       />
     </>
   );
