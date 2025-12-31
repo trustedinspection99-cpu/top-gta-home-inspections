@@ -26,12 +26,57 @@
       "permanent": true
     },
     {
+      "source": "/asbestos",
+      "destination": "/services/asbestos-testing",
+      "permanent": true
+    },
+    {
+      "source": "/thermal",
+      "destination": "/services/thermal-imaging",
+      "permanent": true
+    },
+    {
+      "source": "/wett-inspection",
+      "destination": "/services/wett",
+      "permanent": true
+    },
+    {
+      "source": "/fireplace-inspection",
+      "destination": "/services/wett",
+      "permanent": true
+    },
+    {
+      "source": "/lead-paint",
+      "destination": "/services/lead-paint-testing",
+      "permanent": true
+    },
+    {
+      "source": "/well-water",
+      "destination": "/services/well-water-testing",
+      "permanent": true
+    },
+    {
+      "source": "/sewer",
+      "destination": "/services/sewer-scope",
+      "permanent": true
+    },
+    {
+      "source": "/air-quality-testing",
+      "destination": "/services/air-quality",
+      "permanent": true
+    },
+    {
       "source": "/book",
       "destination": "/booking",
       "permanent": true
     },
     {
       "source": "/schedule",
+      "destination": "/booking",
+      "permanent": true
+    },
+    {
+      "source": "/appointment",
       "destination": "/booking",
       "permanent": true
     },
@@ -46,8 +91,113 @@
       "permanent": true
     },
     {
+      "source": "/coverage",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
       "source": "/reviews",
       "destination": "/testimonials",
+      "permanent": true
+    },
+    {
+      "source": "/customer-reviews",
+      "destination": "/testimonials",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/our-team",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/faqs",
+      "destination": "/faq",
+      "permanent": true
+    },
+    {
+      "source": "/questions",
+      "destination": "/faq",
+      "permanent": true
+    },
+    {
+      "source": "/prices",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/rates",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/cost",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/articles",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/news",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/home-inspection-guide",
+      "destination": "/blog/first-time-home-buyer-inspection-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/toronto-home-issues",
+      "destination": "/blog/common-issues-toronto-homes",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sellers-inspection",
+      "destination": "/blog/pre-listing-inspection-benefits",
+      "permanent": true
+    },
+    {
+      "source": "/blog/radon-guide",
+      "destination": "/blog/radon-testing-importance",
+      "permanent": true
+    },
+    {
+      "source": "/blog/winter-maintenance",
+      "destination": "/blog/winter-home-maintenance-checklist",
+      "permanent": true
+    },
+    {
+      "source": "/gta",
+      "destination": "/locations/toronto",
+      "permanent": true
+    },
+    {
+      "source": "/toronto-inspection",
+      "destination": "/locations/toronto",
+      "permanent": true
+    },
+    {
+      "source": "/mississauga-inspection",
+      "destination": "/locations/mississauga",
+      "permanent": true
+    },
+    {
+      "source": "/brampton-inspection",
+      "destination": "/locations/brampton",
       "permanent": true
     }
   ]
