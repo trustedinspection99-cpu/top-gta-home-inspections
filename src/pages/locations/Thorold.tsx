@@ -12,7 +12,6 @@ export default function Thorold() {
       <Helmet>
         <title>Home Inspection Thorold | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Thorold. Certified inspectors, same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/thorold" />
       </Helmet>
       <LocationPageTemplate
         city="Thorold"

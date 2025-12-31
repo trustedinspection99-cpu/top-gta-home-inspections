@@ -12,7 +12,6 @@ export default function Sutton() {
       <Helmet>
         <title>Home Inspection Sutton | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Sutton. Waterfront and cottage specialists. Same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/sutton" />
       </Helmet>
       <LocationPageTemplate
         city="Sutton"

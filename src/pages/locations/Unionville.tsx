@@ -12,7 +12,6 @@ export default function Unionville() {
       <Helmet>
         <title>Home Inspection Unionville | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Unionville, Markham. Historic and new homes. Same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/unionville" />
       </Helmet>
       <LocationPageTemplate
         city="Unionville"

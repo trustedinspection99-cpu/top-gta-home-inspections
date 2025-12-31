@@ -12,7 +12,6 @@ export default function WasagaBeach() {
       <Helmet>
         <title>Home Inspection Wasaga Beach | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Wasaga Beach. Waterfront & cottage specialists. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/wasaga-beach" />
       </Helmet>
       <LocationPageTemplate
         city="Wasaga Beach"

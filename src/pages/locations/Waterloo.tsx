@@ -12,7 +12,6 @@ export default function Waterloo() {
       <Helmet>
         <title>Home Inspection Waterloo | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Waterloo. Certified inspectors, same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/waterloo" />
       </Helmet>
       <LocationPageTemplate
         city="Waterloo"

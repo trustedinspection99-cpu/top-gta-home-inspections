@@ -13,7 +13,6 @@ export default function Vaughan() {
       <Helmet>
         <title>Home Inspection Vaughan | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Vaughan. Certified inspectors serving Woodbridge, Thornhill, Maple & more. Same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/vaughan" />
       </Helmet>
       <LocationPageTemplate
         city="Vaughan"

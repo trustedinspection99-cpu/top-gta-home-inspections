@@ -12,7 +12,6 @@ export default function Thornhill() {
       <Helmet>
         <title>Home Inspection Thornhill | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Thornhill. Serving Vaughan & Markham sides. Same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/thornhill" />
       </Helmet>
       <LocationPageTemplate
         city="Thornhill"

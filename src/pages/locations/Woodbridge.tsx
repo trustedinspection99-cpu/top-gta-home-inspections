@@ -12,7 +12,6 @@ export default function Woodbridge() {
       <Helmet>
         <title>Home Inspection Woodbridge | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Woodbridge, Vaughan. Certified inspectors, same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/woodbridge" />
       </Helmet>
       <LocationPageTemplate
         city="Woodbridge"
