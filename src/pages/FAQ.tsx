@@ -172,14 +172,14 @@ export default function FAQ() {
 
             <div className="grid md:grid-cols-3 gap-6">
               <a
-                href="tel:+19051234567"
+                href="tel:+16478019311"
                 className="flex flex-col items-center p-6 bg-background rounded-xl border hover:border-primary transition-colors text-center"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Call Us</h3>
-                <p className="text-muted-foreground">(905) 123-4567</p>
+                <p className="text-muted-foreground">(647) 801-9311</p>
                 <p className="text-sm text-muted-foreground mt-1">Mon-Sat 8am-6pm</p>
               </a>
 
