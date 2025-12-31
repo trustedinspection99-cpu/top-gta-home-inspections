@@ -3,22 +3,30 @@ import { MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const locations = [
+  // GTA Core
   { name: "Toronto", href: "/locations/toronto", popular: true },
   { name: "Mississauga", href: "/locations/mississauga", popular: true },
   { name: "Brampton", href: "/locations/brampton", popular: true },
   { name: "Vaughan", href: "/locations/vaughan", popular: true },
   { name: "Markham", href: "/locations/markham", popular: true },
-  { name: "Richmond Hill", href: "/locations/richmond-hill" },
+  { name: "Richmond Hill", href: "/locations/richmond-hill", popular: true },
+  { name: "Oakville", href: "/locations/oakville", popular: true },
+  { name: "Burlington", href: "/locations/burlington", popular: true },
+  // Extended GTA
   { name: "Scarborough", href: "/locations/scarborough" },
   { name: "North York", href: "/locations/north-york" },
   { name: "Etobicoke", href: "/locations/etobicoke" },
-  { name: "Oakville", href: "/locations/oakville" },
-  { name: "Burlington", href: "/locations/burlington" },
   { name: "Milton", href: "/locations/milton" },
   { name: "Pickering", href: "/locations/pickering" },
   { name: "Ajax", href: "/locations/ajax" },
   { name: "Oshawa", href: "/locations/oshawa" },
   { name: "Whitby", href: "/locations/whitby" },
+  { name: "Newmarket", href: "/locations/newmarket" },
+  { name: "Aurora", href: "/locations/aurora" },
+  { name: "Barrie", href: "/locations/barrie" },
+  { name: "Hamilton", href: "/locations/hamilton" },
+  { name: "Guelph", href: "/locations/guelph" },
+  { name: "Kitchener", href: "/locations/kitchener" },
 ];
 
 export function ServiceAreaSection() {
@@ -35,7 +43,7 @@ export function ServiceAreaSection() {
                   <div className="text-center">
                     <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
                     <p className="font-heading text-2xl font-bold text-foreground">Greater Toronto Area</p>
-                    <p className="text-muted-foreground">Serving 30+ Communities</p>
+                    <p className="text-muted-foreground">Serving 100+ Communities</p>
                   </div>
                 </div>
                 
