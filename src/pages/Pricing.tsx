@@ -349,6 +349,25 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* Related Links */}
+      <section className="py-12 bg-background border-t border-border/50">
+        <div className="container">
+          <div className="flex flex-wrap justify-center gap-4 text-sm">
+            <Link to="/services/" className="text-muted-foreground hover:text-primary transition-colors">All Services</Link>
+            <span className="text-border">•</span>
+            <Link to="/faq/" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
+            <span className="text-border">•</span>
+            <Link to="/locations/" className="text-muted-foreground hover:text-primary transition-colors">Service Areas</Link>
+            <span className="text-border">•</span>
+            <Link to="/testimonials/" className="text-muted-foreground hover:text-primary transition-colors">Testimonials</Link>
+            <span className="text-border">•</span>
+            <Link to="/about/" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link>
+            <span className="text-border">•</span>
+            <Link to="/contact/" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 md:py-24 hero-gradient">
         <div className="container">
@@ -362,7 +381,7 @@ export default function Pricing() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <Link to="/booking">
+                <Link to="/booking/">
                   Book Online Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>

@@ -6,8 +6,10 @@ const services = [
   { title: "Pre-Listing Inspection", href: "/services/pre-listing/" },
   { title: "New Construction", href: "/services/new-construction/" },
   { title: "Condo Inspection", href: "/services/condo/" },
+  { title: "Commercial Inspection", href: "/services/commercial/" },
   { title: "Radon Testing", href: "/services/radon-testing/" },
   { title: "Mold Inspection", href: "/services/mold-inspection/" },
+  { title: "Thermal Imaging", href: "/services/thermal-imaging/" },
 ];
 
 const locations = [
@@ -16,16 +18,20 @@ const locations = [
   { title: "Brampton", href: "/locations/brampton/" },
   { title: "Vaughan", href: "/locations/vaughan/" },
   { title: "Markham", href: "/locations/markham/" },
+  { title: "Richmond Hill", href: "/locations/richmond-hill/" },
   { title: "Oakville", href: "/locations/oakville/" },
+  { title: "Hamilton", href: "/locations/hamilton/" },
 ];
 
 const quickLinks = [
   { title: "About Us", href: "/about/" },
+  { title: "All Services", href: "/services/" },
+  { title: "Pricing", href: "/pricing/" },
   { title: "Blog", href: "/blog/" },
   { title: "FAQ", href: "/faq/" },
   { title: "Testimonials", href: "/testimonials/" },
-  { title: "Pricing Calculator", href: "/pricing/" },
   { title: "Book Online", href: "/booking/" },
+  { title: "Contact", href: "/contact/" },
 ];
 
 export function Footer() {

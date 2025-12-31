@@ -236,6 +236,40 @@ export default function FAQ() {
         </div>
       </section>
 
+      {/* Related Links */}
+      <section className="py-12 bg-background border-t border-border/50">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="font-heading text-xl font-semibold text-foreground mb-6 text-center">
+              Learn More About Our Services
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <Link to="/services/pre-purchase/" className="p-3 rounded-lg bg-muted/50 border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
+                Pre-Purchase Inspection
+              </Link>
+              <Link to="/services/radon-testing/" className="p-3 rounded-lg bg-muted/50 border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
+                Radon Testing
+              </Link>
+              <Link to="/services/mold-inspection/" className="p-3 rounded-lg bg-muted/50 border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
+                Mold Inspection
+              </Link>
+              <Link to="/services/thermal-imaging/" className="p-3 rounded-lg bg-muted/50 border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
+                Thermal Imaging
+              </Link>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4 mt-6 text-sm">
+              <Link to="/services/" className="text-primary hover:underline">All Services</Link>
+              <span className="text-border">•</span>
+              <Link to="/pricing/" className="text-primary hover:underline">Pricing</Link>
+              <span className="text-border">•</span>
+              <Link to="/locations/" className="text-primary hover:underline">Service Areas</Link>
+              <span className="text-border">•</span>
+              <Link to="/about/" className="text-primary hover:underline">About Us</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container">
@@ -248,10 +282,10 @@ export default function FAQ() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <Link to="/contact">Book Now</Link>
+                <Link to="/booking/">Book Now</Link>
               </Button>
               <Button size="lg" variant="outline" className="border-primary-foreground/20 hover:bg-primary-foreground/10" asChild>
-                <Link to="/services">View Services</Link>
+                <Link to="/services/">View Services</Link>
               </Button>
             </div>
           </div>

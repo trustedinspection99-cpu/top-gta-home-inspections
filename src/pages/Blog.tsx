@@ -351,6 +351,25 @@ export default function Blog() {
         </div>
       </section>
 
+      {/* Related Links */}
+      <section className="py-12 bg-background border-t border-border/50">
+        <div className="container">
+          <div className="flex flex-wrap justify-center gap-4 text-sm">
+            <Link to="/services/" className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link>
+            <span className="text-border">•</span>
+            <Link to="/pricing/" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link>
+            <span className="text-border">•</span>
+            <Link to="/faq/" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
+            <span className="text-border">•</span>
+            <Link to="/locations/" className="text-muted-foreground hover:text-primary transition-colors">Service Areas</Link>
+            <span className="text-border">•</span>
+            <Link to="/booking/" className="text-muted-foreground hover:text-primary transition-colors">Book Online</Link>
+            <span className="text-border">•</span>
+            <Link to="/contact/" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter CTA */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container">
