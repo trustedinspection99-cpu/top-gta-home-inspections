@@ -19,31 +19,31 @@ const mainServices = [
     icon: Home,
     title: "Pre-Purchase Inspection",
     description: "Complete evaluation before you buy. Identify issues and negotiate with confidence.",
-    href: "/services/pre-purchase",
+    href: "/services/pre-purchase/",
   },
   {
     icon: Building2,
     title: "Pre-Listing Inspection",
     description: "Sell your home faster with a pre-listing inspection that builds buyer trust.",
-    href: "/services/pre-listing",
+    href: "/services/pre-listing/",
   },
   {
     icon: Hammer,
     title: "New Construction",
     description: "Verify builder quality and catch defects before your final walkthrough.",
-    href: "/services/new-construction",
+    href: "/services/new-construction/",
   },
   {
     icon: Building,
     title: "Condo Inspection",
     description: "Specialized inspections for condos, townhomes, and stacked units.",
-    href: "/services/condo",
+    href: "/services/condo/",
   },
   {
     icon: Factory,
     title: "Commercial Inspection",
     description: "Comprehensive assessments for commercial and investment properties.",
-    href: "/services/commercial",
+    href: "/services/commercial/",
   },
 ];
 
@@ -52,31 +52,31 @@ const specialtyServices = [
     icon: Thermometer,
     title: "Radon Testing",
     description: "Protect your family from this invisible cancer-causing gas.",
-    href: "/services/radon-testing",
+    href: "/services/radon-testing/",
   },
   {
     icon: Search,
     title: "Mold Inspection",
     description: "Identify hidden mold growth and potential health hazards.",
-    href: "/services/mold-inspection",
+    href: "/services/mold-inspection/",
   },
   {
     icon: Flame,
     title: "Thermal Imaging",
     description: "See beyond walls to find hidden moisture and insulation issues.",
-    href: "/services/thermal-imaging",
+    href: "/services/thermal-imaging/",
   },
   {
     icon: Flame,
     title: "WETT Inspection",
     description: "Safety certification for wood stoves, fireplaces, and chimneys.",
-    href: "/services/wett",
+    href: "/services/wett/",
   },
   {
     icon: Wind,
     title: "Air Quality Testing",
     description: "Ensure healthy indoor air for your family or employees.",
-    href: "/services/air-quality",
+    href: "/services/air-quality/",
   },
 ];
 
@@ -148,7 +148,7 @@ export function ServicesOverview() {
         {/* CTA */}
         <div className="text-center mt-12">
           <Button asChild size="lg">
-            <Link to="/services">
+            <Link to="/services/">
               View All Services
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

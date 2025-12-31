@@ -2,30 +2,30 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
 
 const services = [
-  { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
-  { title: "Pre-Listing Inspection", href: "/services/pre-listing" },
-  { title: "New Construction", href: "/services/new-construction" },
-  { title: "Condo Inspection", href: "/services/condo" },
-  { title: "Radon Testing", href: "/services/radon-testing" },
-  { title: "Mold Inspection", href: "/services/mold-inspection" },
+  { title: "Pre-Purchase Inspection", href: "/services/pre-purchase/" },
+  { title: "Pre-Listing Inspection", href: "/services/pre-listing/" },
+  { title: "New Construction", href: "/services/new-construction/" },
+  { title: "Condo Inspection", href: "/services/condo/" },
+  { title: "Radon Testing", href: "/services/radon-testing/" },
+  { title: "Mold Inspection", href: "/services/mold-inspection/" },
 ];
 
 const locations = [
-  { title: "Toronto", href: "/locations/toronto" },
-  { title: "Mississauga", href: "/locations/mississauga" },
-  { title: "Brampton", href: "/locations/brampton" },
-  { title: "Vaughan", href: "/locations/vaughan" },
-  { title: "Markham", href: "/locations/markham" },
-  { title: "Oakville", href: "/locations/oakville" },
+  { title: "Toronto", href: "/locations/toronto/" },
+  { title: "Mississauga", href: "/locations/mississauga/" },
+  { title: "Brampton", href: "/locations/brampton/" },
+  { title: "Vaughan", href: "/locations/vaughan/" },
+  { title: "Markham", href: "/locations/markham/" },
+  { title: "Oakville", href: "/locations/oakville/" },
 ];
 
 const quickLinks = [
-  { title: "About Us", href: "/about" },
-  { title: "Blog", href: "/blog" },
-  { title: "FAQ", href: "/faq" },
-  { title: "Testimonials", href: "/testimonials" },
-  { title: "Pricing Calculator", href: "/pricing" },
-  { title: "Book Online", href: "/booking" },
+  { title: "About Us", href: "/about/" },
+  { title: "Blog", href: "/blog/" },
+  { title: "FAQ", href: "/faq/" },
+  { title: "Testimonials", href: "/testimonials/" },
+  { title: "Pricing Calculator", href: "/pricing/" },
+  { title: "Book Online", href: "/booking/" },
 ];
 
 export function Footer() {
@@ -97,7 +97,7 @@ export function Footer() {
               ))}
               <li>
                 <Link 
-                  to="/locations" 
+                  to="/locations/" 
                   className="text-accent hover:text-accent/80 text-sm transition-colors font-medium"
                 >
                   View All Areas →
@@ -144,11 +144,14 @@ export function Footer() {
             © {currentYear} ASADS Home Inspection. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="/terms" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
+            <Link to="/terms/" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
               Terms of Service
             </Link>
-            <Link to="/privacy-policy" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
+            <Link to="/privacy-policy/" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
               Privacy Policy
+            </Link>
+            <Link to="/sitemap/" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
+              Sitemap
             </Link>
           </div>
         </div>

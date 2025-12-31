@@ -4,29 +4,29 @@ import { Button } from "@/components/ui/button";
 
 const locations = [
   // GTA Core
-  { name: "Toronto", href: "/locations/toronto", popular: true },
-  { name: "Mississauga", href: "/locations/mississauga", popular: true },
-  { name: "Brampton", href: "/locations/brampton", popular: true },
-  { name: "Vaughan", href: "/locations/vaughan", popular: true },
-  { name: "Markham", href: "/locations/markham", popular: true },
-  { name: "Richmond Hill", href: "/locations/richmond-hill", popular: true },
-  { name: "Oakville", href: "/locations/oakville", popular: true },
-  { name: "Burlington", href: "/locations/burlington", popular: true },
+  { name: "Toronto", href: "/locations/toronto/", popular: true },
+  { name: "Mississauga", href: "/locations/mississauga/", popular: true },
+  { name: "Brampton", href: "/locations/brampton/", popular: true },
+  { name: "Vaughan", href: "/locations/vaughan/", popular: true },
+  { name: "Markham", href: "/locations/markham/", popular: true },
+  { name: "Richmond Hill", href: "/locations/richmond-hill/", popular: true },
+  { name: "Oakville", href: "/locations/oakville/", popular: true },
+  { name: "Burlington", href: "/locations/burlington/", popular: true },
   // Extended GTA
-  { name: "Scarborough", href: "/locations/scarborough" },
-  { name: "North York", href: "/locations/north-york" },
-  { name: "Etobicoke", href: "/locations/etobicoke" },
-  { name: "Milton", href: "/locations/milton" },
-  { name: "Pickering", href: "/locations/pickering" },
-  { name: "Ajax", href: "/locations/ajax" },
-  { name: "Oshawa", href: "/locations/oshawa" },
-  { name: "Whitby", href: "/locations/whitby" },
-  { name: "Newmarket", href: "/locations/newmarket" },
-  { name: "Aurora", href: "/locations/aurora" },
-  { name: "Barrie", href: "/locations/barrie" },
-  { name: "Hamilton", href: "/locations/hamilton" },
-  { name: "Guelph", href: "/locations/guelph" },
-  { name: "Kitchener", href: "/locations/kitchener" },
+  { name: "Scarborough", href: "/locations/scarborough/" },
+  { name: "North York", href: "/locations/north-york/" },
+  { name: "Etobicoke", href: "/locations/etobicoke/" },
+  { name: "Milton", href: "/locations/milton/" },
+  { name: "Pickering", href: "/locations/pickering/" },
+  { name: "Ajax", href: "/locations/ajax/" },
+  { name: "Oshawa", href: "/locations/oshawa/" },
+  { name: "Whitby", href: "/locations/whitby/" },
+  { name: "Newmarket", href: "/locations/newmarket/" },
+  { name: "Aurora", href: "/locations/aurora/" },
+  { name: "Barrie", href: "/locations/barrie/" },
+  { name: "Hamilton", href: "/locations/hamilton/" },
+  { name: "Guelph", href: "/locations/guelph/" },
+  { name: "Kitchener", href: "/locations/kitchener/" },
 ];
 
 export function ServiceAreaSection() {
@@ -90,7 +90,7 @@ export function ServiceAreaSection() {
             </div>
 
             <Button asChild>
-              <Link to="/locations">
+              <Link to="/locations/">
                 View All Service Areas
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

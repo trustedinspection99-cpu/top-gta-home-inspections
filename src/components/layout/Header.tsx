@@ -13,39 +13,39 @@ import {
 import { cn } from "@/lib/utils";
 
 const services = [
-  { title: "Pre-Purchase Inspection", href: "/services/pre-purchase", description: "Complete inspection before you buy" },
-  { title: "Pre-Listing Inspection", href: "/services/pre-listing", description: "Sell with confidence" },
-  { title: "New Construction", href: "/services/new-construction", description: "Verify builder quality" },
-  { title: "Condo Inspection", href: "/services/condo", description: "Specialized condo evaluations" },
-  { title: "Commercial Inspection", href: "/services/commercial", description: "Business property assessments" },
+  { title: "Pre-Purchase Inspection", href: "/services/pre-purchase/", description: "Complete inspection before you buy" },
+  { title: "Pre-Listing Inspection", href: "/services/pre-listing/", description: "Sell with confidence" },
+  { title: "New Construction", href: "/services/new-construction/", description: "Verify builder quality" },
+  { title: "Condo Inspection", href: "/services/condo/", description: "Specialized condo evaluations" },
+  { title: "Commercial Inspection", href: "/services/commercial/", description: "Business property assessments" },
 ];
 
 const specialtyServices = [
-  { title: "Radon Testing", href: "/services/radon-testing", description: "Protect your family from radon" },
-  { title: "Mold Inspection", href: "/services/mold-inspection", description: "Identify hidden mold issues" },
-  { title: "Asbestos Testing", href: "/services/asbestos-testing", description: "Safe asbestos identification" },
-  { title: "Thermal Imaging", href: "/services/thermal-imaging", description: "See beyond the surface" },
-  { title: "WETT Inspection", href: "/services/wett", description: "Wood-burning safety checks" },
-  { title: "Lead Paint Testing", href: "/services/lead-paint-testing", description: "Protect from lead hazards" },
-  { title: "Well Water Testing", href: "/services/well-water-testing", description: "Ensure safe drinking water" },
-  { title: "Sewer Scope", href: "/services/sewer-scope", description: "Video sewer line inspection" },
-  { title: "Air Quality Testing", href: "/services/air-quality", description: "Ensure healthy indoor air" },
+  { title: "Radon Testing", href: "/services/radon-testing/", description: "Protect your family from radon" },
+  { title: "Mold Inspection", href: "/services/mold-inspection/", description: "Identify hidden mold issues" },
+  { title: "Asbestos Testing", href: "/services/asbestos-testing/", description: "Safe asbestos identification" },
+  { title: "Thermal Imaging", href: "/services/thermal-imaging/", description: "See beyond the surface" },
+  { title: "WETT Inspection", href: "/services/wett/", description: "Wood-burning safety checks" },
+  { title: "Lead Paint Testing", href: "/services/lead-paint-testing/", description: "Protect from lead hazards" },
+  { title: "Well Water Testing", href: "/services/well-water-testing/", description: "Ensure safe drinking water" },
+  { title: "Sewer Scope", href: "/services/sewer-scope/", description: "Video sewer line inspection" },
+  { title: "Air Quality Testing", href: "/services/air-quality/", description: "Ensure healthy indoor air" },
 ];
 
 const locations = [
-  { title: "Toronto", href: "/locations/toronto" },
-  { title: "Mississauga", href: "/locations/mississauga" },
-  { title: "Brampton", href: "/locations/brampton" },
-  { title: "Vaughan", href: "/locations/vaughan" },
-  { title: "Markham", href: "/locations/markham" },
-  { title: "Richmond Hill", href: "/locations/richmond-hill" },
-  { title: "Oakville", href: "/locations/oakville" },
-  { title: "Burlington", href: "/locations/burlington" },
-  { title: "Milton", href: "/locations/milton" },
-  { title: "Ajax", href: "/locations/ajax" },
-  { title: "Pickering", href: "/locations/pickering" },
-  { title: "Newmarket", href: "/locations/newmarket" },
-  { title: "Oshawa", href: "/locations/oshawa" },
+  { title: "Toronto", href: "/locations/toronto/" },
+  { title: "Mississauga", href: "/locations/mississauga/" },
+  { title: "Brampton", href: "/locations/brampton/" },
+  { title: "Vaughan", href: "/locations/vaughan/" },
+  { title: "Markham", href: "/locations/markham/" },
+  { title: "Richmond Hill", href: "/locations/richmond-hill/" },
+  { title: "Oakville", href: "/locations/oakville/" },
+  { title: "Burlington", href: "/locations/burlington/" },
+  { title: "Milton", href: "/locations/milton/" },
+  { title: "Ajax", href: "/locations/ajax/" },
+  { title: "Pickering", href: "/locations/pickering/" },
+  { title: "Newmarket", href: "/locations/newmarket/" },
+  { title: "Oshawa", href: "/locations/oshawa/" },
 ];
 
 export function Header() {
@@ -130,7 +130,7 @@ export function Header() {
                   ))}
                   <NavigationMenuLink asChild>
                     <Link
-                      to="/locations"
+                      to="/locations/"
                       className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm font-medium text-primary"
                     >
                       View All Areas →
@@ -141,7 +141,7 @@ export function Header() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link to="/about" className={cn(
+              <Link to="/about/" className={cn(
                 "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none",
                 location.pathname === "/about" && "bg-accent/50"
               )}>
@@ -150,7 +150,7 @@ export function Header() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link to="/blog" className={cn(
+              <Link to="/blog/" className={cn(
                 "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none",
                 location.pathname.startsWith("/blog") && "bg-accent/50"
               )}>
@@ -159,7 +159,7 @@ export function Header() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link to="/testimonials" className={cn(
+              <Link to="/testimonials/" className={cn(
                 "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none",
                 location.pathname === "/testimonials" && "bg-accent/50"
               )}>
@@ -168,7 +168,7 @@ export function Header() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link to="/faq" className={cn(
+              <Link to="/faq/" className={cn(
                 "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none",
                 location.pathname === "/faq" && "bg-accent/50"
               )}>
@@ -177,7 +177,7 @@ export function Header() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link to="/contact" className={cn(
+              <Link to="/contact/" className={cn(
                 "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none",
                 location.pathname === "/contact" && "bg-accent/50"
               )}>
@@ -194,7 +194,7 @@ export function Header() {
             (647) 801-9311
           </a>
           <Button asChild className="hidden sm:inline-flex">
-            <Link to="/booking">Book Inspection</Link>
+            <Link to="/booking/">Book Inspection</Link>
           </Button>
           
           {/* Mobile Menu Button */}
@@ -214,16 +214,16 @@ export function Header() {
         <div className="lg:hidden border-t bg-background">
           <nav className="container py-4 space-y-2">
             <Link to="/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-            <Link to="/services" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-            <Link to="/locations" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Locations</Link>
-            <Link to="/about" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
-            <Link to="/blog" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-            <Link to="/testimonials" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Reviews</Link>
-            <Link to="/faq" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
-            <Link to="/contact" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            <Link to="/services/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+            <Link to="/locations/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Locations</Link>
+            <Link to="/about/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
+            <Link to="/blog/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+            <Link to="/testimonials/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Reviews</Link>
+            <Link to="/faq/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+            <Link to="/contact/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
             <div className="pt-4 border-t">
               <Button asChild className="w-full">
-                <Link to="/booking" onClick={() => setMobileMenuOpen(false)}>Book Inspection</Link>
+                <Link to="/booking/" onClick={() => setMobileMenuOpen(false)}>Book Inspection</Link>
               </Button>
             </div>
           </nav>
