@@ -3,30 +3,34 @@ import { MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const locations = [
-  // GTA Core
+  // GTA Core - All Popular
   { name: "Toronto", href: "/locations/toronto/", popular: true },
   { name: "Mississauga", href: "/locations/mississauga/", popular: true },
   { name: "Brampton", href: "/locations/brampton/", popular: true },
   { name: "Vaughan", href: "/locations/vaughan/", popular: true },
   { name: "Markham", href: "/locations/markham/", popular: true },
-  { name: "Richmond Hill", href: "/locations/richmond-hill/", popular: true },
-  { name: "Oakville", href: "/locations/oakville/", popular: true },
-  { name: "Burlington", href: "/locations/burlington/", popular: true },
-  // Extended GTA
-  { name: "Scarborough", href: "/locations/scarborough/" },
-  { name: "North York", href: "/locations/north-york/" },
-  { name: "Etobicoke", href: "/locations/etobicoke/" },
-  { name: "Milton", href: "/locations/milton/" },
-  { name: "Pickering", href: "/locations/pickering/" },
+  { name: "Scarborough", href: "/locations/scarborough/", popular: true },
+  { name: "North York", href: "/locations/north-york/", popular: true },
+  { name: "Etobicoke", href: "/locations/etobicoke/", popular: true },
+  // Durham Region
   { name: "Ajax", href: "/locations/ajax/" },
-  { name: "Oshawa", href: "/locations/oshawa/" },
+  { name: "Pickering", href: "/locations/pickering/" },
   { name: "Whitby", href: "/locations/whitby/" },
-  { name: "Newmarket", href: "/locations/newmarket/" },
-  { name: "Aurora", href: "/locations/aurora/" },
+  { name: "Oshawa", href: "/locations/oshawa/" },
+  // Simcoe & Hamilton
   { name: "Barrie", href: "/locations/barrie/" },
   { name: "Hamilton", href: "/locations/hamilton/" },
-  { name: "Guelph", href: "/locations/guelph/" },
+  // Halton
+  { name: "Oakville", href: "/locations/oakville/" },
+  { name: "Burlington", href: "/locations/burlington/" },
+  // Waterloo Region
+  { name: "Waterloo", href: "/locations/waterloo/" },
   { name: "Kitchener", href: "/locations/kitchener/" },
+  { name: "Guelph", href: "/locations/guelph/" },
+  { name: "Cambridge", href: "/locations/cambridge/" },
+  // Niagara
+  { name: "St. Catharines", href: "/locations/st-catharines/" },
+  { name: "Niagara Falls", href: "/locations/niagara-falls/" },
 ];
 
 export function ServiceAreaSection() {

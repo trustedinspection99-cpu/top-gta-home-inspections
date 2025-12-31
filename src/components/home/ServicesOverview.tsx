@@ -67,16 +67,40 @@ const specialtyServices = [
     href: "/services/thermal-imaging/",
   },
   {
+    icon: Wind,
+    title: "Air Quality Testing",
+    description: "Ensure healthy indoor air for your family or employees.",
+    href: "/services/air-quality/",
+  },
+  {
     icon: Flame,
     title: "WETT Inspection",
     description: "Safety certification for wood stoves, fireplaces, and chimneys.",
     href: "/services/wett/",
   },
   {
-    icon: Wind,
-    title: "Air Quality Testing",
-    description: "Ensure healthy indoor air for your family or employees.",
-    href: "/services/air-quality/",
+    icon: Search,
+    title: "Asbestos Testing",
+    description: "Safe identification and testing in older homes.",
+    href: "/services/asbestos-testing/",
+  },
+  {
+    icon: Search,
+    title: "Lead Paint Testing",
+    description: "Essential testing for pre-1978 homes.",
+    href: "/services/lead-paint-testing/",
+  },
+  {
+    icon: Search,
+    title: "Well Water Testing",
+    description: "Comprehensive water quality for rural properties.",
+    href: "/services/well-water-testing/",
+  },
+  {
+    icon: Search,
+    title: "Sewer Scope",
+    description: "Camera inspection of sewer lines.",
+    href: "/services/sewer-scope/",
   },
 ];
 
@@ -129,7 +153,7 @@ export function ServicesOverview() {
           <h3 className="font-heading text-2xl font-bold text-foreground mb-6 text-center">
             Specialty Services
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {specialtyServices.map((service) => (
               <Link
                 key={service.title}
