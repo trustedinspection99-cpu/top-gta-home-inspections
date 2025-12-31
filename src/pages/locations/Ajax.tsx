@@ -12,7 +12,7 @@ export default function Ajax() {
     <>
       <Helmet>
         <title>Home Inspection Ajax | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Ajax. Certified inspectors, same-day reports, 200+ point inspections. Call (905) 555-0132!" />
+        <meta name="description" content="Professional home inspection in Ajax. Certified inspectors, same-day reports, 200+ point inspections. Call (647) 801-9311!" />
         <link rel="canonical" href="https://asads.ca/locations/ajax" />
       </Helmet>
       <LocationPageTemplate
@@ -20,7 +20,7 @@ export default function Ajax() {
         region="Ontario"
         description="Ajax's trusted home inspection experts. We provide thorough inspections throughout Ajax with same-day reports and competitive pricing."
         neighborhoods={neighborhoods}
-        phoneNumber="(905) 555-0132"
+        phoneNumber="(647) 801-9311"
       />
     </>
   );

@@ -13,7 +13,7 @@ export default function Toronto() {
     <>
       <Helmet>
         <title>Home Inspection Toronto | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Toronto. Certified inspectors, same-day reports, 200+ point inspections. Serving all Toronto neighborhoods. Call (416) 555-0123!" />
+        <meta name="description" content="Professional home inspection in Toronto. Certified inspectors, same-day reports, 200+ point inspections. Serving all Toronto neighborhoods. Call (647) 801-9311!" />
         <link rel="canonical" href="https://asads.ca/locations/toronto" />
       </Helmet>
       <LocationPageTemplate
@@ -21,7 +21,7 @@ export default function Toronto() {
         region="Ontario"
         description="Toronto's trusted home inspection experts. We provide comprehensive inspections for buyers, sellers, and property owners across all Toronto neighborhoods."
         neighborhoods={neighborhoods}
-        phoneNumber="(416) 555-0123"
+        phoneNumber="(647) 801-9311"
       />
     </>
   );

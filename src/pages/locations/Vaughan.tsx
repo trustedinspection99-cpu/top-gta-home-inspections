@@ -12,7 +12,7 @@ export default function Vaughan() {
     <>
       <Helmet>
         <title>Home Inspection Vaughan | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Vaughan. Certified inspectors serving Woodbridge, Thornhill, Maple & more. Same-day reports. Call (905) 555-0126!" />
+        <meta name="description" content="Professional home inspection in Vaughan. Certified inspectors serving Woodbridge, Thornhill, Maple & more. Same-day reports. Call (647) 801-9311!" />
         <link rel="canonical" href="https://asads.ca/locations/vaughan" />
       </Helmet>
       <LocationPageTemplate
@@ -20,7 +20,7 @@ export default function Vaughan() {
         region="Ontario"
         description="Vaughan's leading home inspection company. From Woodbridge to Thornhill, we provide thorough inspections with same-day reports and detailed findings."
         neighborhoods={neighborhoods}
-        phoneNumber="(905) 555-0126"
+        phoneNumber="(647) 801-9311"
       />
     </>
   );

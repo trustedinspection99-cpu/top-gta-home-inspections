@@ -113,7 +113,7 @@ export function ServicePageTemplate({
                 variant="outline"
                 className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
               >
-                <a href="tel:+14165550123">
+                <a href="tel:+16478019311">
                   <Phone className="mr-2 h-5 w-5" />
                   (647) 801-9311
                 </a>
@@ -229,7 +229,7 @@ export function ServicePageTemplate({
                       <Link to="/booking">Book Now</Link>
                     </Button>
                     <p className="text-center text-sm text-muted-foreground mt-3">
-                      or call <a href="tel:+14165550123" className="text-primary hover:underline">(416) 555-0123</a>
+                      or call <a href="tel:+16478019311" className="text-primary hover:underline">(647) 801-9311</a>
                     </p>
                   </div>
                 </CardContent>

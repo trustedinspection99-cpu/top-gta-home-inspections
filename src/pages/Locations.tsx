@@ -170,7 +170,7 @@ export default function Locations() {
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button size="lg" variant="secondary" className="gap-2" asChild>
-                <a href="tel:(416) 801-9311">
+                <a href="tel:+16478019311">
                   <Phone className="h-5 w-5" />
                   (647) 801-9311
                 </a>
