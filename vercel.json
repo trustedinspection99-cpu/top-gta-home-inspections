@@ -1,0 +1,54 @@
+{
+  "redirects": [
+    {
+      "source": "/home-inspection",
+      "destination": "/services/pre-purchase",
+      "permanent": true
+    },
+    {
+      "source": "/home-inspections",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/inspection-services",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/radon",
+      "destination": "/services/radon-testing",
+      "permanent": true
+    },
+    {
+      "source": "/mold",
+      "destination": "/services/mold-inspection",
+      "permanent": true
+    },
+    {
+      "source": "/book",
+      "destination": "/booking",
+      "permanent": true
+    },
+    {
+      "source": "/schedule",
+      "destination": "/booking",
+      "permanent": true
+    },
+    {
+      "source": "/areas",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/reviews",
+      "destination": "/testimonials",
+      "permanent": true
+    }
+  ]
+}
