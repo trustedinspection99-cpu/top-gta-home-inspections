@@ -58,12 +58,81 @@ export function ServicePageTemplate({
   faqs,
   relatedServices = [],
 }: ServicePageTemplateProps) {
+  const serviceSlug = title.toLowerCase().replace(/\s+/g, '-');
+  const serviceUrl = `https://asads.ca/services/${serviceSlug}`;
+  
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${serviceUrl}#service`,
+    "name": title,
+    "description": metaDescription,
+    "url": serviceUrl,
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://asads.ca/#localbusiness",
+      "name": "ASADS Home Inspection",
+      "telephone": "+16478019311",
+      "email": "info@asads.ca"
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.653226,
+        "longitude": -79.383184
+      },
+      "geoRadius": "150000"
+    },
+    "serviceType": "Home Inspection",
+    "offers": {
+      "@type": "Offer",
+      "price": price.replace(/[^0-9]/g, ''),
+      "priceCurrency": "CAD",
+      "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+      "availability": "https://schema.org/InStock"
+    },
+    "termsOfService": "https://asads.ca/terms",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": `${title} Checklist`,
+      "itemListElement": whatWeInspect.slice(0, 10).map((item, index) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": item
+        }
+      }))
+    }
+  };
+
+  const serviceFaqSchema = faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  } : null;
+
   return (
     <Layout>
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
-        <link rel="canonical" href={`https://asads.ca/services/${title.toLowerCase().replace(/\s+/g, '-')}`} />
+        <link rel="canonical" href={serviceUrl} />
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        {serviceFaqSchema && (
+          <script type="application/ld+json">
+            {JSON.stringify(serviceFaqSchema)}
+          </script>
+        )}
       </Helmet>
 
       {/* Hero Section */}
