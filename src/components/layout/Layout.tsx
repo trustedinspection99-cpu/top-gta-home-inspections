@@ -7,6 +7,29 @@ interface LayoutProps {
   children: ReactNode;
 }
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://asads.ca/#website",
+  "name": "ASADS Home Inspection",
+  "alternateName": "ASADS",
+  "url": "https://asads.ca/",
+  "description": "Professional home inspection services in the Greater Toronto Area",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://asads.ca/#organization"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://asads.ca/locations?search={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "inLanguage": "en-CA"
+};
+
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -170,6 +193,9 @@ export function Layout({ children }: LayoutProps) {
   return (
     <>
       <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(websiteSchema)}
+        </script>
         <script type="application/ld+json">
           {JSON.stringify(localBusinessSchema)}
         </script>

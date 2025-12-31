@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -12,6 +13,101 @@ import {
   Building,
   GraduationCap
 } from "lucide-react";
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://asads.ca/#organization",
+  "name": "ASADS Home Inspection",
+  "alternateName": "ASADS",
+  "url": "https://asads.ca/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://asads.ca/logo.png",
+    "width": 512,
+    "height": 512
+  },
+  "image": "https://asads.ca/images/toronto-home-inspection-hero.webp",
+  "description": "Professional home inspection services in the Greater Toronto Area since 2009. Certified inspectors providing comprehensive property assessments with same-day reports.",
+  "foundingDate": "2009",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Toronto, Ontario, Canada"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Ahmad Siddiqui",
+    "jobTitle": "Founder & Lead Inspector"
+  },
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "value": 3
+  },
+  "slogan": "Protecting Your Investment, Giving You Peace of Mind",
+  "knowsAbout": [
+    "Home Inspection",
+    "Pre-Purchase Inspection",
+    "Pre-Listing Inspection",
+    "Condo Inspection",
+    "Commercial Property Inspection",
+    "Radon Testing",
+    "Mold Inspection",
+    "Thermal Imaging",
+    "WETT Inspection"
+  ],
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.653226,
+      "longitude": -79.383184
+    },
+    "geoRadius": "150000"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
+    "addressCountry": "CA"
+  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+1-647-801-9311",
+      "contactType": "customer service",
+      "availableLanguage": ["English"],
+      "areaServed": "CA"
+    },
+    {
+      "@type": "ContactPoint",
+      "email": "info@asads.ca",
+      "contactType": "customer service"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/ASADSHomeInspection",
+    "https://www.instagram.com/asads_home_inspection"
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://asads.ca/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About Us",
+      "item": "https://asads.ca/about"
+    }
+  ]
+};
 
 const values = [
   {
@@ -72,6 +168,18 @@ const team = [
 export default function About() {
   return (
     <Layout>
+      <Helmet>
+        <title>About ASADS Home Inspection | GTA's Trusted Inspectors Since 2009</title>
+        <meta name="description" content="Learn about ASADS Home Inspection - serving the Greater Toronto Area since 2009 with 5,000+ inspections completed. Meet our certified team and discover our commitment to excellence." />
+        <link rel="canonical" href="https://asads.ca/about" />
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      </Helmet>
+
       {/* Hero Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5">
         <div className="container">
