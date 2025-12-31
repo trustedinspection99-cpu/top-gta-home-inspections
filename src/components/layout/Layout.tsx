@@ -194,7 +194,9 @@ const localBusinessSchema = {
 
 export function Layout({ children }: LayoutProps) {
   const location = useLocation();
-  const canonicalUrl = `${SITE_URL}${location.pathname === '/' ? '' : location.pathname}`;
+  // Ensure trailing slash for all URLs except homepage
+  const path = location.pathname === '/' ? '/' : location.pathname.endsWith('/') ? location.pathname : `${location.pathname}/`;
+  const canonicalUrl = `${SITE_URL}${path}`;
 
   return (
     <>
