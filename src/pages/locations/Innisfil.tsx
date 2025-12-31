@@ -12,7 +12,6 @@ export default function Innisfil() {
       <Helmet>
         <title>Home Inspection Innisfil | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Innisfil. Serving Alcona, Lefroy & all Lake Simcoe communities. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/innisfil" />
       </Helmet>
       <LocationPageTemplate
         city="Innisfil"

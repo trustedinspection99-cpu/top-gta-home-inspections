@@ -12,7 +12,6 @@ export default function Kitchener() {
       <Helmet>
         <title>Home Inspection Kitchener | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Kitchener. Certified inspectors, same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/kitchener" />
       </Helmet>
       <LocationPageTemplate
         city="Kitchener"

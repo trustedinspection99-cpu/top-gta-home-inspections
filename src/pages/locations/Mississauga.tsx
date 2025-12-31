@@ -13,7 +13,6 @@ export default function Mississauga() {
       <Helmet>
         <title>Home Inspection Mississauga | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Mississauga. Certified inspectors, same-day reports. Serving Port Credit, Meadowvale & all areas. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/mississauga" />
       </Helmet>
       <LocationPageTemplate
         city="Mississauga"

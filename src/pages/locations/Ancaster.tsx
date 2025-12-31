@@ -12,7 +12,6 @@ export default function Ancaster() {
       <Helmet>
         <title>Home Inspection Ancaster | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Ancaster. Certified inspectors, same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/ancaster" />
       </Helmet>
       <LocationPageTemplate
         city="Ancaster"

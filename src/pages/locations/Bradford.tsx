@@ -12,7 +12,6 @@ export default function Bradford() {
       <Helmet>
         <title>Home Inspection Bradford | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Bradford West Gwillimbury. Same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/bradford" />
       </Helmet>
       <LocationPageTemplate
         city="Bradford"

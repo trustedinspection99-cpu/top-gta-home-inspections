@@ -12,7 +12,6 @@ export default function Concord() {
       <Helmet>
         <title>Home Inspection Concord | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Concord, Vaughan. Certified inspectors, same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/concord" />
       </Helmet>
       <LocationPageTemplate
         city="Concord"

@@ -12,7 +12,6 @@ export default function Dundas() {
       <Helmet>
         <title>Home Inspection Dundas | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Dundas, Hamilton. Same-day reports available. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/dundas" />
       </Helmet>
       <LocationPageTemplate
         city="Dundas"

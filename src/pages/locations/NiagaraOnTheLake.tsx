@@ -12,7 +12,6 @@ export default function NiagaraOnTheLake() {
       <Helmet>
         <title>Home Inspection Niagara-on-the-Lake | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Niagara-on-the-Lake. Heritage & wine country specialists. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/niagara-on-the-lake" />
       </Helmet>
       <LocationPageTemplate
         city="Niagara-on-the-Lake"

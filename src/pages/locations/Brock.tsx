@@ -12,7 +12,6 @@ export default function Brock() {
       <Helmet>
         <title>Home Inspection Brock | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Brock Township. Serving Beaverton, Cannington & Sunderland. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/brock" />
       </Helmet>
       <LocationPageTemplate
         city="Brock"

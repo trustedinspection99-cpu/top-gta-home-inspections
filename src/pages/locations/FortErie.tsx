@@ -12,7 +12,6 @@ export default function FortErie() {
       <Helmet>
         <title>Home Inspection Fort Erie | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Fort Erie. Waterfront specialists. Same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/fort-erie" />
       </Helmet>
       <LocationPageTemplate
         city="Fort Erie"

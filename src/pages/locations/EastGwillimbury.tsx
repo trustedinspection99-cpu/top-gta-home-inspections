@@ -12,7 +12,6 @@ export default function EastGwillimbury() {
       <Helmet>
         <title>Home Inspection East Gwillimbury | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in East Gwillimbury. Serving Holland Landing, Sharon & Mount Albert. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/east-gwillimbury" />
       </Helmet>
       <LocationPageTemplate
         city="East Gwillimbury"

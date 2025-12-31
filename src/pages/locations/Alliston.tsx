@@ -12,7 +12,6 @@ export default function Alliston() {
       <Helmet>
         <title>Home Inspection Alliston | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Alliston & New Tecumseth. Same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/alliston" />
       </Helmet>
       <LocationPageTemplate
         city="Alliston"

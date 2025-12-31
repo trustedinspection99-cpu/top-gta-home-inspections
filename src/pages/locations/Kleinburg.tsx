@@ -12,7 +12,6 @@ export default function Kleinburg() {
       <Helmet>
         <title>Home Inspection Kleinburg | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Kleinburg. Estate home specialists. Same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/kleinburg" />
       </Helmet>
       <LocationPageTemplate
         city="Kleinburg"

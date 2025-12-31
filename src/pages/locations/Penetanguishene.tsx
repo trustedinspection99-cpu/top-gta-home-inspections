@@ -12,7 +12,6 @@ export default function Penetanguishene() {
       <Helmet>
         <title>Home Inspection Penetanguishene | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Penetanguishene. Georgian Bay specialists. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/penetanguishene" />
       </Helmet>
       <LocationPageTemplate
         city="Penetanguishene"

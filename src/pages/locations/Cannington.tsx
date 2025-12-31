@@ -12,7 +12,6 @@ export default function Cannington() {
       <Helmet>
         <title>Home Inspection Cannington | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Cannington. Certified inspectors, same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/cannington" />
       </Helmet>
       <LocationPageTemplate
         city="Cannington"

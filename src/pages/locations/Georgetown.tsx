@@ -12,7 +12,6 @@ export default function Georgetown() {
       <Helmet>
         <title>Home Inspection Georgetown | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Georgetown. Certified inspectors, same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/georgetown" />
       </Helmet>
       <LocationPageTemplate
         city="Georgetown"

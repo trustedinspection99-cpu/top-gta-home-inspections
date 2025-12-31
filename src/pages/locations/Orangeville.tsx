@@ -12,7 +12,6 @@ export default function Orangeville() {
       <Helmet>
         <title>Home Inspection Orangeville | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Orangeville. Certified inspectors, same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/orangeville" />
       </Helmet>
       <LocationPageTemplate
         city="Orangeville"

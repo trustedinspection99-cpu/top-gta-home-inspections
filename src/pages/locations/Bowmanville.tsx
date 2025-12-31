@@ -12,7 +12,6 @@ export default function Bowmanville() {
       <Helmet>
         <title>Home Inspection Bowmanville | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Bowmanville. Certified inspectors, same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/bowmanville" />
       </Helmet>
       <LocationPageTemplate
         city="Bowmanville"

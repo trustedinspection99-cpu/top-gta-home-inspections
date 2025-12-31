@@ -12,7 +12,6 @@ export default function Georgina() {
       <Helmet>
         <title>Home Inspection Georgina | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Georgina. Serving Keswick, Sutton & Lake Simcoe communities. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/georgina" />
       </Helmet>
       <LocationPageTemplate
         city="Georgina"

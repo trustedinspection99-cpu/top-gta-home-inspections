@@ -12,7 +12,6 @@ export default function Flamborough() {
       <Helmet>
         <title>Home Inspection Flamborough | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Flamborough. Serving Waterdown, Carlisle & rural properties. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/flamborough" />
       </Helmet>
       <LocationPageTemplate
         city="Flamborough"

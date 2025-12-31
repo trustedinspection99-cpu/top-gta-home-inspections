@@ -12,7 +12,6 @@ export default function Aurora() {
       <Helmet>
         <title>Home Inspection Aurora | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Aurora. Certified inspectors, same-day reports, 200+ point inspections. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/aurora" />
       </Helmet>
       <LocationPageTemplate
         city="Aurora"

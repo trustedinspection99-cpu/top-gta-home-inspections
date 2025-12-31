@@ -12,7 +12,6 @@ export default function Cambridge() {
       <Helmet>
         <title>Home Inspection Cambridge | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Cambridge. Serving Galt, Preston & Hespeler. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/cambridge" />
       </Helmet>
       <LocationPageTemplate
         city="Cambridge"

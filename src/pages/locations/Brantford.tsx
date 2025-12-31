@@ -12,7 +12,6 @@ export default function Brantford() {
       <Helmet>
         <title>Home Inspection Brantford | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Brantford & Brant County. Same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/brantford" />
       </Helmet>
       <LocationPageTemplate
         city="Brantford"

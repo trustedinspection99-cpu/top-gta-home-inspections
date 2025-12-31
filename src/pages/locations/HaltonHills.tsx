@@ -12,7 +12,6 @@ export default function HaltonHills() {
       <Helmet>
         <title>Home Inspection Halton Hills | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Halton Hills. Serving Georgetown, Acton & Glen Williams. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/halton-hills" />
       </Helmet>
       <LocationPageTemplate
         city="Halton Hills"

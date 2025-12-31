@@ -13,7 +13,6 @@ export default function NorthYork() {
       <Helmet>
         <title>Home Inspection North York | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in North York. Certified inspectors serving Willowdale, Don Mills, Bayview Village & more. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/north-york" />
       </Helmet>
       <LocationPageTemplate
         city="North York"

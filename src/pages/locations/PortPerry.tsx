@@ -12,7 +12,6 @@ export default function PortPerry() {
       <Helmet>
         <title>Home Inspection Port Perry | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Port Perry. Waterfront and cottage specialists. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/port-perry" />
       </Helmet>
       <LocationPageTemplate
         city="Port Perry"
