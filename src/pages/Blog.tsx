@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
 
+// Blog posts with proper slugs matching route expectations
 const blogPosts = [
   {
     id: 1,
@@ -16,6 +17,7 @@ const blogPosts = [
     readTime: "8 min read",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
     featured: true,
+    relatedService: "/services/pre-purchase/",
   },
   {
     id: 2,
@@ -28,6 +30,7 @@ const blogPosts = [
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&h=500&fit=crop",
     featured: false,
+    relatedService: "/services/pre-purchase/",
   },
   {
     id: 3,
@@ -40,6 +43,7 @@ const blogPosts = [
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=800&h=500&fit=crop",
     featured: false,
+    relatedService: "/services/pre-listing/",
   },
   {
     id: 4,
@@ -52,6 +56,7 @@ const blogPosts = [
     readTime: "7 min read",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
     featured: false,
+    relatedService: "/services/radon-testing/",
   },
   {
     id: 5,
@@ -64,10 +69,11 @@ const blogPosts = [
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=800&h=500&fit=crop",
     featured: false,
+    relatedService: "/services/thermal-imaging/",
   },
   {
     id: 6,
-    slug: "thermal-imaging-inspection-benefits",
+    slug: "thermal-imaging-benefits",
     title: "How Thermal Imaging Reveals Hidden Home Problems",
     excerpt: "Discover how infrared technology can detect issues invisible to the naked eye, from water leaks to insulation gaps.",
     category: "Technology",
@@ -76,10 +82,11 @@ const blogPosts = [
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=500&fit=crop",
     featured: false,
+    relatedService: "/services/thermal-imaging/",
   },
   {
     id: 7,
-    slug: "understanding-your-home-inspection-report",
+    slug: "what-to-expect-home-inspection",
     title: "Understanding Your Home Inspection Report: A Complete Guide",
     excerpt: "Learn how to read and interpret your home inspection report. Understand the difference between major concerns and minor issues.",
     category: "Buying Tips",
@@ -88,6 +95,7 @@ const blogPosts = [
     readTime: "9 min read",
     image: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=800&h=500&fit=crop",
     featured: false,
+    relatedService: "/services/pre-purchase/",
   },
   {
     id: 8,
@@ -100,10 +108,11 @@ const blogPosts = [
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=500&fit=crop",
     featured: false,
+    relatedService: "/services/mold-inspection/",
   },
   {
     id: 9,
-    slug: "new-construction-inspection-guide",
+    slug: "new-construction-inspection-importance",
     title: "New Construction Inspections: Don't Skip This Crucial Step",
     excerpt: "Why you need a professional inspection even on brand new homes. Learn about builder deficiencies and Tarion warranty coverage.",
     category: "Buying Tips",
@@ -112,10 +121,11 @@ const blogPosts = [
     readTime: "7 min read",
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
     featured: false,
+    relatedService: "/services/new-construction/",
   },
   {
     id: 10,
-    slug: "condo-inspection-what-to-expect",
+    slug: "condo-inspection-checklist",
     title: "Condo Inspection: What's Included and What to Expect",
     excerpt: "Condo inspections differ from house inspections. Learn what's covered, the importance of status certificates, and common condo issues.",
     category: "Inspection Insights",
@@ -124,66 +134,7 @@ const blogPosts = [
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=500&fit=crop",
     featured: false,
-  },
-  {
-    id: 11,
-    slug: "asbestos-in-older-homes",
-    title: "Asbestos in Older Toronto Homes: What You Need to Know",
-    excerpt: "If your home was built before 1990, it may contain asbestos. Learn where it's commonly found and when testing is necessary.",
-    category: "Health & Safety",
-    author: "ASADS Team",
-    date: "2023-11-15",
-    readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop",
-    featured: false,
-  },
-  {
-    id: 12,
-    slug: "spring-home-maintenance-checklist",
-    title: "Spring Home Maintenance Checklist for GTA Homeowners",
-    excerpt: "Essential spring maintenance tasks to protect your home. From roof inspections to HVAC tune-ups, get your home ready for warmer weather.",
-    category: "Maintenance",
-    author: "ASADS Team",
-    date: "2023-11-10",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=500&fit=crop",
-    featured: false,
-  },
-  {
-    id: 13,
-    slug: "wett-inspection-wood-burning",
-    title: "WETT Inspections: Essential for Wood-Burning Appliances",
-    excerpt: "Planning to buy a home with a fireplace or wood stove? Learn why WETT inspections are crucial for safety and insurance compliance.",
-    category: "Inspection Insights",
-    author: "ASADS Team",
-    date: "2023-11-05",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=800&h=500&fit=crop",
-    featured: false,
-  },
-  {
-    id: 14,
-    slug: "negotiating-after-inspection",
-    title: "How to Negotiate After a Home Inspection: A Buyer's Guide",
-    excerpt: "Inspection found issues? Learn strategies for negotiating repairs, credits, or price reductions with sellers.",
-    category: "Buying Tips",
-    author: "ASADS Team",
-    date: "2023-10-28",
-    readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop",
-    featured: false,
-  },
-  {
-    id: 15,
-    slug: "sewer-scope-inspection-guide",
-    title: "Sewer Scope Inspections: Why Camera Inspections Save Thousands",
-    excerpt: "Sewer line repairs can cost $10,000+. Learn how a simple camera inspection can reveal hidden problems before you buy.",
-    category: "Inspection Insights",
-    author: "ASADS Team",
-    date: "2023-10-20",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&h=500&fit=crop",
-    featured: false,
+    relatedService: "/services/condo/",
   },
 ];
 

@@ -4,12 +4,18 @@ import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from "lucid
 const services = [
   { title: "Pre-Purchase Inspection", href: "/services/pre-purchase/" },
   { title: "Pre-Listing Inspection", href: "/services/pre-listing/" },
-  { title: "New Construction", href: "/services/new-construction/" },
   { title: "Condo Inspection", href: "/services/condo/" },
   { title: "Commercial Inspection", href: "/services/commercial/" },
+  { title: "New Construction", href: "/services/new-construction/" },
   { title: "Radon Testing", href: "/services/radon-testing/" },
   { title: "Mold Inspection", href: "/services/mold-inspection/" },
+  { title: "Asbestos Testing", href: "/services/asbestos-testing/" },
+  { title: "Lead Paint Testing", href: "/services/lead-paint-testing/" },
+  { title: "Well Water Testing", href: "/services/well-water-testing/" },
   { title: "Thermal Imaging", href: "/services/thermal-imaging/" },
+  { title: "Air Quality Testing", href: "/services/air-quality/" },
+  { title: "Sewer Scope", href: "/services/sewer-scope/" },
+  { title: "WETT Inspection", href: "/services/wett/" },
 ];
 
 const locations = [
@@ -18,9 +24,23 @@ const locations = [
   { title: "Brampton", href: "/locations/brampton/" },
   { title: "Vaughan", href: "/locations/vaughan/" },
   { title: "Markham", href: "/locations/markham/" },
-  { title: "Richmond Hill", href: "/locations/richmond-hill/" },
-  { title: "Oakville", href: "/locations/oakville/" },
+  { title: "Scarborough", href: "/locations/scarborough/" },
+  { title: "North York", href: "/locations/north-york/" },
+  { title: "Etobicoke", href: "/locations/etobicoke/" },
+  { title: "Ajax", href: "/locations/ajax/" },
+  { title: "Pickering", href: "/locations/pickering/" },
+  { title: "Whitby", href: "/locations/whitby/" },
+  { title: "Oshawa", href: "/locations/oshawa/" },
+  { title: "Barrie", href: "/locations/barrie/" },
   { title: "Hamilton", href: "/locations/hamilton/" },
+  { title: "Oakville", href: "/locations/oakville/" },
+  { title: "Burlington", href: "/locations/burlington/" },
+  { title: "Waterloo", href: "/locations/waterloo/" },
+  { title: "Kitchener", href: "/locations/kitchener/" },
+  { title: "Guelph", href: "/locations/guelph/" },
+  { title: "Cambridge", href: "/locations/cambridge/" },
+  { title: "St. Catharines", href: "/locations/st-catharines/" },
+  { title: "Niagara Falls", href: "/locations/niagara-falls/" },
 ];
 
 const quickLinks = [
