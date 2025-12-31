@@ -25,8 +25,8 @@ const routeLabels: Record<string, string> = {
   "pre-purchase": "Pre-Purchase Inspection",
   "pre-listing": "Pre-Listing Inspection",
   "new-construction": "New Construction",
-  "condo": "Condo Inspection",
-  "commercial": "Commercial Inspection",
+  condo: "Condo Inspection",
+  commercial: "Commercial Inspection",
   "mold-inspection": "Mold Inspection",
   "radon-testing": "Radon Testing",
   "asbestos-testing": "Asbestos Testing",
@@ -35,39 +35,34 @@ const routeLabels: Record<string, string> = {
   "thermal-imaging": "Thermal Imaging",
   "sewer-scope": "Sewer Scope",
   "well-water-testing": "Well & Water Testing",
-  "wett": "WETT Inspection",
-  // Major locations
-  toronto: "Toronto",
-  mississauga: "Mississauga",
-  brampton: "Brampton",
-  vaughan: "Vaughan",
-  markham: "Markham",
-  oakville: "Oakville",
-  burlington: "Burlington",
-  hamilton: "Hamilton",
-  oshawa: "Oshawa",
-  barrie: "Barrie",
-  guelph: "Guelph",
-  cambridge: "Cambridge",
-  kitchener: "Kitchener",
-  waterloo: "Waterloo",
-  "richmond-hill": "Richmond Hill",
-  newmarket: "Newmarket",
-  ajax: "Ajax",
-  pickering: "Pickering",
-  whitby: "Whitby",
-  milton: "Milton",
-  // Add more as needed
+  wett: "WETT Inspection",
+};
+
+const ACRONYMS = new Set(["gta", "faq", "wett"]);
+const LOWERCASE_WORDS = new Set(["and", "or", "the", "of", "in", "on", "at", "to", "for"]);
+
+const toTitleCase = (raw: string): string => {
+  const decoded = decodeURIComponent(raw);
+
+  return decoded
+    .replace(/[_-]+/g, " ")
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((word, idx, arr) => {
+      const w = word.toLowerCase();
+
+      if (ACRONYMS.has(w)) return w.toUpperCase();
+      if (w === "st" && idx === 0) return "St.";
+      if (LOWERCASE_WORDS.has(w) && idx > 0 && idx < arr.length - 1) return w;
+
+      return w.charAt(0).toUpperCase() + w.slice(1);
+    })
+    .join(" ");
 };
 
 const formatLabel = (segment: string): string => {
   if (routeLabels[segment]) return routeLabels[segment];
-  
-  // Convert kebab-case to Title Case
-  return segment
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
+  return toTitleCase(segment);
 };
 
 const Breadcrumbs = () => {
@@ -98,7 +93,7 @@ const Breadcrumbs = () => {
                 </Link>
               </BreadcrumbLink>
             </BreadcrumbItem>
-            {breadcrumbItems.map((item, index) => (
+            {breadcrumbItems.map((item) => (
               <span key={item.path} className="contents">
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
