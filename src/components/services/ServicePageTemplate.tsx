@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { SITE_URL } from "@/lib/seo";
 import { 
   CheckCircle, 
   Phone, 
@@ -59,7 +60,7 @@ export function ServicePageTemplate({
   relatedServices = [],
 }: ServicePageTemplateProps) {
   const serviceSlug = title.toLowerCase().replace(/\s+/g, '-');
-  const serviceUrl = `https://asads.ca/services/${serviceSlug}`;
+  const serviceUrl = `${SITE_URL}/services/${serviceSlug}`;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -69,13 +70,13 @@ export function ServicePageTemplate({
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://asads.ca/"
+        "item": `${SITE_URL}/`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://asads.ca/services"
+        "item": `${SITE_URL}/services`
       },
       {
         "@type": "ListItem",
@@ -95,7 +96,7 @@ export function ServicePageTemplate({
     "url": serviceUrl,
     "provider": {
       "@type": "LocalBusiness",
-      "@id": "https://asads.ca/#localbusiness",
+      "@id": `${SITE_URL}/#localbusiness`,
       "name": "ASADS Home Inspection",
       "telephone": "+16478019311",
       "email": "info@asads.ca"
@@ -117,7 +118,7 @@ export function ServicePageTemplate({
       "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
       "availability": "https://schema.org/InStock"
     },
-    "termsOfService": "https://asads.ca/terms",
+    "termsOfService": `${SITE_URL}/terms`,
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": `${title} Checklist`,

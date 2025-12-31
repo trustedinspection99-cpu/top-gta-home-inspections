@@ -2,73 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://asads.ca/</loc>
+    <loc>https://www.asads.ca/</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://asads.ca/about</loc>
+    <loc>https://www.asads.ca/about</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/services</loc>
+    <loc>https://www.asads.ca/services</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations</loc>
+    <loc>https://www.asads.ca/locations</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://asads.ca/contact</loc>
+    <loc>https://www.asads.ca/contact</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/booking</loc>
+    <loc>https://www.asads.ca/booking</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://asads.ca/pricing</loc>
+    <loc>https://www.asads.ca/pricing</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/testimonials</loc>
+    <loc>https://www.asads.ca/testimonials</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/faq</loc>
+    <loc>https://www.asads.ca/faq</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/blog</loc>
+    <loc>https://www.asads.ca/blog</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/privacy-policy</loc>
+    <loc>https://www.asads.ca/privacy-policy</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://asads.ca/terms</loc>
+    <loc>https://www.asads.ca/terms</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -76,85 +76,85 @@
 
   <!-- Service Pages -->
   <url>
-    <loc>https://asads.ca/services/pre-purchase</loc>
+    <loc>https://www.asads.ca/services/pre-purchase</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://asads.ca/services/pre-listing</loc>
+    <loc>https://www.asads.ca/services/pre-listing</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://asads.ca/services/new-construction</loc>
+    <loc>https://www.asads.ca/services/new-construction</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/services/condo</loc>
+    <loc>https://www.asads.ca/services/condo</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/services/commercial</loc>
+    <loc>https://www.asads.ca/services/commercial</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/services/radon-testing</loc>
+    <loc>https://www.asads.ca/services/radon-testing</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/services/mold-inspection</loc>
+    <loc>https://www.asads.ca/services/mold-inspection</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/services/asbestos-testing</loc>
+    <loc>https://www.asads.ca/services/asbestos-testing</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/services/wett</loc>
+    <loc>https://www.asads.ca/services/wett</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/services/thermal-imaging</loc>
+    <loc>https://www.asads.ca/services/thermal-imaging</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/services/lead-paint-testing</loc>
+    <loc>https://www.asads.ca/services/lead-paint-testing</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/services/well-water-testing</loc>
+    <loc>https://www.asads.ca/services/well-water-testing</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/services/sewer-scope</loc>
+    <loc>https://www.asads.ca/services/sewer-scope</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/services/air-quality</loc>
+    <loc>https://www.asads.ca/services/air-quality</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -162,31 +162,31 @@
 
   <!-- Location Pages - Toronto & Surrounding -->
   <url>
-    <loc>https://asads.ca/locations/toronto</loc>
+    <loc>https://www.asads.ca/locations/toronto</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/north-york</loc>
+    <loc>https://www.asads.ca/locations/north-york</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/scarborough</loc>
+    <loc>https://www.asads.ca/locations/scarborough</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/etobicoke</loc>
+    <loc>https://www.asads.ca/locations/etobicoke</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/east-york</loc>
+    <loc>https://www.asads.ca/locations/east-york</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -194,25 +194,25 @@
 
   <!-- Location Pages - Peel Region -->
   <url>
-    <loc>https://asads.ca/locations/mississauga</loc>
+    <loc>https://www.asads.ca/locations/mississauga</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/brampton</loc>
+    <loc>https://www.asads.ca/locations/brampton</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/caledon</loc>
+    <loc>https://www.asads.ca/locations/caledon</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/bolton</loc>
+    <loc>https://www.asads.ca/locations/bolton</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -220,103 +220,103 @@
 
   <!-- Location Pages - York Region -->
   <url>
-    <loc>https://asads.ca/locations/vaughan</loc>
+    <loc>https://www.asads.ca/locations/vaughan</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/markham</loc>
+    <loc>https://www.asads.ca/locations/markham</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/richmond-hill</loc>
+    <loc>https://www.asads.ca/locations/richmond-hill</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/newmarket</loc>
+    <loc>https://www.asads.ca/locations/newmarket</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/aurora</loc>
+    <loc>https://www.asads.ca/locations/aurora</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/king-city</loc>
+    <loc>https://www.asads.ca/locations/king-city</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/stouffville</loc>
+    <loc>https://www.asads.ca/locations/stouffville</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/georgina</loc>
+    <loc>https://www.asads.ca/locations/georgina</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/east-gwillimbury</loc>
+    <loc>https://www.asads.ca/locations/east-gwillimbury</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/keswick</loc>
+    <loc>https://www.asads.ca/locations/keswick</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/sutton</loc>
+    <loc>https://www.asads.ca/locations/sutton</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/woodbridge</loc>
+    <loc>https://www.asads.ca/locations/woodbridge</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/thornhill</loc>
+    <loc>https://www.asads.ca/locations/thornhill</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/maple</loc>
+    <loc>https://www.asads.ca/locations/maple</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/kleinburg</loc>
+    <loc>https://www.asads.ca/locations/kleinburg</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/concord</loc>
+    <loc>https://www.asads.ca/locations/concord</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/unionville</loc>
+    <loc>https://www.asads.ca/locations/unionville</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -324,37 +324,37 @@
 
   <!-- Location Pages - Halton Region -->
   <url>
-    <loc>https://asads.ca/locations/oakville</loc>
+    <loc>https://www.asads.ca/locations/oakville</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/burlington</loc>
+    <loc>https://www.asads.ca/locations/burlington</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/milton</loc>
+    <loc>https://www.asads.ca/locations/milton</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/halton-hills</loc>
+    <loc>https://www.asads.ca/locations/halton-hills</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/georgetown</loc>
+    <loc>https://www.asads.ca/locations/georgetown</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/acton</loc>
+    <loc>https://www.asads.ca/locations/acton</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -362,73 +362,73 @@
 
   <!-- Location Pages - Durham Region -->
   <url>
-    <loc>https://asads.ca/locations/oshawa</loc>
+    <loc>https://www.asads.ca/locations/oshawa</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/whitby</loc>
+    <loc>https://www.asads.ca/locations/whitby</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/ajax</loc>
+    <loc>https://www.asads.ca/locations/ajax</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/pickering</loc>
+    <loc>https://www.asads.ca/locations/pickering</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/clarington</loc>
+    <loc>https://www.asads.ca/locations/clarington</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/bowmanville</loc>
+    <loc>https://www.asads.ca/locations/bowmanville</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/uxbridge</loc>
+    <loc>https://www.asads.ca/locations/uxbridge</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/scugog</loc>
+    <loc>https://www.asads.ca/locations/scugog</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/port-perry</loc>
+    <loc>https://www.asads.ca/locations/port-perry</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/brock</loc>
+    <loc>https://www.asads.ca/locations/brock</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/beaverton</loc>
+    <loc>https://www.asads.ca/locations/beaverton</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/cannington</loc>
+    <loc>https://www.asads.ca/locations/cannington</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -436,85 +436,85 @@
 
   <!-- Location Pages - Simcoe County -->
   <url>
-    <loc>https://asads.ca/locations/barrie</loc>
+    <loc>https://www.asads.ca/locations/barrie</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/orillia</loc>
+    <loc>https://www.asads.ca/locations/orillia</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/innisfil</loc>
+    <loc>https://www.asads.ca/locations/innisfil</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/bradford</loc>
+    <loc>https://www.asads.ca/locations/bradford</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/alliston</loc>
+    <loc>https://www.asads.ca/locations/alliston</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/collingwood</loc>
+    <loc>https://www.asads.ca/locations/collingwood</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/wasaga-beach</loc>
+    <loc>https://www.asads.ca/locations/wasaga-beach</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/midland</loc>
+    <loc>https://www.asads.ca/locations/midland</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/penetanguishene</loc>
+    <loc>https://www.asads.ca/locations/penetanguishene</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/new-tecumseth</loc>
+    <loc>https://www.asads.ca/locations/new-tecumseth</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/essa</loc>
+    <loc>https://www.asads.ca/locations/essa</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/springwater</loc>
+    <loc>https://www.asads.ca/locations/springwater</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/clearview</loc>
+    <loc>https://www.asads.ca/locations/clearview</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/stayner</loc>
+    <loc>https://www.asads.ca/locations/stayner</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -522,91 +522,91 @@
 
   <!-- Location Pages - Hamilton-Niagara -->
   <url>
-    <loc>https://asads.ca/locations/hamilton</loc>
+    <loc>https://www.asads.ca/locations/hamilton</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/stoney-creek</loc>
+    <loc>https://www.asads.ca/locations/stoney-creek</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/ancaster</loc>
+    <loc>https://www.asads.ca/locations/ancaster</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/dundas</loc>
+    <loc>https://www.asads.ca/locations/dundas</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/flamborough</loc>
+    <loc>https://www.asads.ca/locations/flamborough</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/grimsby</loc>
+    <loc>https://www.asads.ca/locations/grimsby</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/beamsville</loc>
+    <loc>https://www.asads.ca/locations/beamsville</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/lincoln</loc>
+    <loc>https://www.asads.ca/locations/lincoln</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/st-catharines</loc>
+    <loc>https://www.asads.ca/locations/st-catharines</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/niagara-falls</loc>
+    <loc>https://www.asads.ca/locations/niagara-falls</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/niagara-on-the-lake</loc>
+    <loc>https://www.asads.ca/locations/niagara-on-the-lake</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/welland</loc>
+    <loc>https://www.asads.ca/locations/welland</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/fort-erie</loc>
+    <loc>https://www.asads.ca/locations/fort-erie</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/port-colborne</loc>
+    <loc>https://www.asads.ca/locations/port-colborne</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/thorold</loc>
+    <loc>https://www.asads.ca/locations/thorold</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -614,19 +614,19 @@
 
   <!-- Location Pages - Waterloo Region -->
   <url>
-    <loc>https://asads.ca/locations/kitchener</loc>
+    <loc>https://www.asads.ca/locations/kitchener</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/waterloo</loc>
+    <loc>https://www.asads.ca/locations/waterloo</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/cambridge</loc>
+    <loc>https://www.asads.ca/locations/cambridge</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -634,31 +634,31 @@
 
   <!-- Location Pages - Wellington, Dufferin & Others -->
   <url>
-    <loc>https://asads.ca/locations/guelph</loc>
+    <loc>https://www.asads.ca/locations/guelph</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/orangeville</loc>
+    <loc>https://www.asads.ca/locations/orangeville</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/peterborough</loc>
+    <loc>https://www.asads.ca/locations/peterborough</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/cobourg</loc>
+    <loc>https://www.asads.ca/locations/cobourg</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asads.ca/locations/brantford</loc>
+    <loc>https://www.asads.ca/locations/brantford</loc>
     <lastmod>2025-12-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
