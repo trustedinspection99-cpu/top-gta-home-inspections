@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Helmet } from "react-helmet-async";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import Breadcrumbs from "./Breadcrumbs";
 
 interface LayoutProps {
   children: ReactNode;
@@ -202,6 +203,7 @@ export function Layout({ children }: LayoutProps) {
       </Helmet>
       <div className="flex min-h-screen flex-col">
         <Header />
+        <Breadcrumbs />
         <main className="flex-1">{children}</main>
         <Footer />
       </div>
