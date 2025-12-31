@@ -1,9 +1,9 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Phone, MapPin, Clock, Shield, Star, CheckCircle, ArrowRight } from "lucide-react";
-import { SITE_URL } from "@/lib/seo";
+import { getCanonicalUrl, normalizePath } from "@/lib/seo";
 
 interface LocationPageProps {
   city: string;
@@ -129,8 +129,9 @@ function getNearbyLocations(currentCitySlug: string, count: number = 8) {
 }
 
 export function LocationPageTemplate({ city, region, description, neighborhoods, phoneNumber }: LocationPageProps) {
+  const location = useLocation();
   const citySlug = city.toLowerCase().replace(/\s+/g, '-');
-  const locationUrl = `${SITE_URL}/locations/${citySlug}/`;
+  const locationUrl = getCanonicalUrl(location.pathname);
   const nearbyLocations = getNearbyLocations(citySlug, 8);
 
   const breadcrumbSchema = {
@@ -141,13 +142,13 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": `${SITE_URL}/`
+        "item": getCanonicalUrl("/")
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Locations",
-        "item": `${SITE_URL}/locations/`
+        "item": getCanonicalUrl("/locations")
       },
       {
         "@type": "ListItem",
@@ -207,7 +208,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary" asChild>
-                <Link to="/contact">Book Online</Link>
+                <Link to={normalizePath("/contact")}>Book Online</Link>
               </Button>
             </div>
           </div>
@@ -247,7 +248,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
-              <Link key={service.name} to={service.href} className="rounded-xl border bg-card p-6 shadow-sm transition-shadow hover:shadow-md hover:border-primary">
+              <Link key={service.name} to={normalizePath(service.href)} className="rounded-xl border bg-card p-6 shadow-sm transition-shadow hover:shadow-md hover:border-primary">
                 <h3 className="mb-2 text-lg font-semibold">{service.name}</h3>
                 <p className="text-sm text-muted-foreground">{service.description}</p>
               </Link>
@@ -255,7 +256,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
           </div>
           <div className="mt-8 text-center">
             <Button variant="outline" className="gap-2" asChild>
-              <Link to="/services">
+              <Link to={normalizePath("/services")}>
                 View All Services
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -287,7 +288,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
                   { name: "Radon & Mold Testing", href: "/services/radon-testing" },
                   { name: "Thermal Imaging", href: "/services/thermal-imaging" },
                 ].map((type) => (
-                  <Link key={type.name} to={type.href} className="flex items-center gap-2 hover:text-primary transition-colors">
+                  <Link key={type.name} to={normalizePath(type.href)} className="flex items-center gap-2 hover:text-primary transition-colors">
                     <CheckCircle className="h-5 w-5 text-primary" />
                     <span>{type.name}</span>
                   </Link>
@@ -295,7 +296,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
               </div>
               <div className="mt-6">
                 <Button variant="outline" size="sm" className="gap-2" asChild>
-                  <Link to="/locations">
+                  <Link to={normalizePath("/locations")}>
                     <MapPin className="h-4 w-4" />
                     View All Locations
                   </Link>
@@ -356,7 +357,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
             {nearbyLocations.map((location) => (
               <Link
                 key={location.slug}
-                to={`/locations/${location.slug}`}
+                to={`/locations/${location.slug}/`}
                 className="flex items-center gap-2 rounded-lg border bg-card p-3 transition-colors hover:border-primary hover:bg-primary/5"
               >
                 <MapPin className="h-4 w-4 text-primary" />
@@ -366,7 +367,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
           </div>
           <div className="mt-8 text-center">
             <Button variant="outline" className="gap-2" asChild>
-              <Link to="/locations">
+              <Link to={normalizePath("/locations")}>
                 View All {allLocations.length} Locations
                 <ArrowRight className="h-4 w-4" />
               </Link>
