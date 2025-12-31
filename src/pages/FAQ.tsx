@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MessageCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const faqCategories = [
   {
@@ -110,8 +111,32 @@ const faqCategories = [
 ];
 
 export default function FAQ() {
+  // Generate FAQ schema from all categories
+  const allFaqs = faqCategories.flatMap(category => category.questions);
+  
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": allFaqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <Layout>
+      <Helmet>
+        <title>FAQ | Home Inspection Questions | ASADS Home Inspection</title>
+        <meta name="description" content="Find answers to frequently asked questions about home inspections in the Greater Toronto Area. Learn about costs, process, and what to expect." />
+        <link rel="canonical" href="https://asads.ca/faq" />
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16 md:py-24">
         <div className="container">
