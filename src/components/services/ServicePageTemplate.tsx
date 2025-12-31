@@ -13,8 +13,25 @@ import {
   FileText,
   Shield,
   ArrowRight,
+  MapPin,
   LucideIcon
 } from "lucide-react";
+
+// Featured locations for service pages internal linking
+const featuredLocations = [
+  { name: "Toronto", slug: "toronto" },
+  { name: "Mississauga", slug: "mississauga" },
+  { name: "Brampton", slug: "brampton" },
+  { name: "Vaughan", slug: "vaughan" },
+  { name: "Markham", slug: "markham" },
+  { name: "Oakville", slug: "oakville" },
+  { name: "Hamilton", slug: "hamilton" },
+  { name: "Burlington", slug: "burlington" },
+  { name: "Richmond Hill", slug: "richmond-hill" },
+  { name: "Oshawa", slug: "oshawa" },
+  { name: "Barrie", slug: "barrie" },
+  { name: "Newmarket", slug: "newmarket" },
+];
 
 interface ServiceFeature {
   title: string;
@@ -357,6 +374,41 @@ export function ServicePageTemplate({
                 </Card>
               )}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas Section - Internal Linking */}
+      <section className="py-12 bg-muted/30">
+        <div className="container">
+          <div className="text-center mb-8">
+            <h2 className="font-heading text-2xl font-bold text-foreground mb-2">
+              {title} Available Throughout the GTA
+            </h2>
+            <p className="text-muted-foreground">
+              We provide {title.toLowerCase()} services across Toronto and surrounding areas
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            {featuredLocations.map((location) => (
+              <Link
+                key={location.slug}
+                to={`/locations/${location.slug}/`}
+                className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
+              >
+                <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
+                {location.name}
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-6">
+            <Link 
+              to="/locations/" 
+              className="text-primary hover:underline text-sm font-medium inline-flex items-center gap-1"
+            >
+              View all service areas
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
