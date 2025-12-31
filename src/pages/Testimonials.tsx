@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { Helmet } from "react-helmet-async";
 import { Star, Quote, MapPin, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -134,8 +135,75 @@ const stats = [
 ];
 
 export default function Testimonials() {
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://asads.ca/#localbusiness",
+    "name": "ASADS Home Inspection",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": testimonials.length.toString(),
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": testimonials.map(t => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": t.name
+      },
+      "datePublished": new Date(Date.parse(t.date)).toISOString().split('T')[0],
+      "reviewBody": t.text,
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": t.rating.toString(),
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "itemReviewed": {
+        "@type": "Service",
+        "name": t.service,
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "ASADS Home Inspection"
+        }
+      }
+    }))
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://asads.ca/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Testimonials",
+        "item": "https://asads.ca/testimonials"
+      }
+    ]
+  };
+
   return (
     <Layout>
+      <Helmet>
+        <title>Customer Testimonials | ASADS Home Inspection Reviews</title>
+        <meta name="description" content="Read verified customer reviews and testimonials from homeowners across the GTA who trusted ASADS for their home inspection needs." />
+        <link rel="canonical" href="https://asads.ca/testimonials" />
+        <script type="application/ld+json">
+          {JSON.stringify(reviewSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16 md:py-24">
         <div className="container">
