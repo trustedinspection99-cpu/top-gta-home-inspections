@@ -14,7 +14,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://asads.ca/sitemap.xml
+Sitemap: https://www.asads.ca/sitemap.xml
 
 # Crawl-delay for all bots (optional, polite crawling)
 Crawl-delay: 1
