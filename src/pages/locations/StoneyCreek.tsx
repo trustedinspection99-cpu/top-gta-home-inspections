@@ -12,7 +12,6 @@ export default function StoneyCreek() {
       <Helmet>
         <title>Home Inspection Stoney Creek | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Stoney Creek. Serving all neighborhoods. Same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/stoney-creek" />
       </Helmet>
       <LocationPageTemplate
         city="Stoney Creek"

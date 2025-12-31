@@ -13,7 +13,6 @@ export default function RichmondHill() {
       <Helmet>
         <title>Home Inspection Richmond Hill | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Richmond Hill. Certified inspectors, same-day reports. Serving Oak Ridges, Bayview Hill & all areas. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/richmond-hill" />
       </Helmet>
       <LocationPageTemplate
         city="Richmond Hill"

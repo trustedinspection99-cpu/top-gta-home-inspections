@@ -12,7 +12,6 @@ export default function StCatharines() {
       <Helmet>
         <title>Home Inspection St. Catharines | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in St. Catharines. Serving all Niagara neighborhoods. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/st-catharines" />
       </Helmet>
       <LocationPageTemplate
         city="St. Catharines"

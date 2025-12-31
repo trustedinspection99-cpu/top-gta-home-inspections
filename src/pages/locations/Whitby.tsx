@@ -12,7 +12,6 @@ export default function Whitby() {
       <Helmet>
         <title>Home Inspection Whitby | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Whitby. Serving Brooklin to Port Whitby. Same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/whitby" />
       </Helmet>
       <LocationPageTemplate
         city="Whitby"

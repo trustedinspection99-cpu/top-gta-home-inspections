@@ -12,7 +12,6 @@ export default function Stayner() {
       <Helmet>
         <title>Home Inspection Stayner | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Stayner. Certified inspectors, same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/stayner" />
       </Helmet>
       <LocationPageTemplate
         city="Stayner"
