@@ -22,6 +22,9 @@ import {
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+// TODO: Replace with your Formspree form ID from https://formspree.io
+const FORMSPREE_CONTACT_ID = "YOUR_FORMSPREE_ID";
+
 const contactInfo = [
   {
     icon: Phone,
@@ -69,20 +72,43 @@ export default function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [selectedService, setSelectedService] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append("service", selectedService);
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_CONTACT_ID}`, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        toast({
+          title: "Message sent!",
+          description: "We'll get back to you within 24 hours.",
+        });
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or call us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -220,13 +246,13 @@ export default function Contact() {
 
                         <div className="space-y-2">
                           <Label htmlFor="service">Service Interested In</Label>
-                          <Select>
+                          <Select value={selectedService} onValueChange={setSelectedService}>
                             <SelectTrigger>
                               <SelectValue placeholder="Select a service" />
                             </SelectTrigger>
                             <SelectContent>
                               {serviceOptions.map((service) => (
-                                <SelectItem key={service} value={service.toLowerCase().replace(/\s+/g, '-')}>
+                                <SelectItem key={service} value={service}>
                                   {service}
                                 </SelectItem>
                               ))}
