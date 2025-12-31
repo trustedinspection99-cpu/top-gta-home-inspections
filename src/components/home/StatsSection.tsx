@@ -1,6 +1,6 @@
 const stats = [
-  { value: "5,000+", label: "Inspections Completed" },
-  { value: "15+", label: "Years Experience" },
+  { value: "2,000+", label: "Inspections Completed" },
+  { value: "10+", label: "Years Experience" },
   { value: "98%", label: "Client Satisfaction" },
   { value: "24hr", label: "Report Delivery" },
 ];
