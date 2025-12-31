@@ -12,7 +12,6 @@ export default function Beaverton() {
       <Helmet>
         <title>Home Inspection Beaverton | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Beaverton. Lake Simcoe waterfront specialists. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/beaverton" />
       </Helmet>
       <LocationPageTemplate
         city="Beaverton"

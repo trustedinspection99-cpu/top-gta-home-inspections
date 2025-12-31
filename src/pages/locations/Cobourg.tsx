@@ -12,7 +12,6 @@ export default function Cobourg() {
       <Helmet>
         <title>Home Inspection Cobourg | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Cobourg. Northumberland County specialists. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/cobourg" />
       </Helmet>
       <LocationPageTemplate
         city="Cobourg"

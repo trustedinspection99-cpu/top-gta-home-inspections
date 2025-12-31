@@ -13,7 +13,6 @@ export default function Ajax() {
       <Helmet>
         <title>Home Inspection Ajax | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Ajax. Certified inspectors, same-day reports, 200+ point inspections. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/ajax" />
       </Helmet>
       <LocationPageTemplate
         city="Ajax"

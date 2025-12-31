@@ -12,7 +12,6 @@ export default function Guelph() {
       <Helmet>
         <title>Home Inspection Guelph | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Guelph. Certified inspectors, same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/guelph" />
       </Helmet>
       <LocationPageTemplate
         city="Guelph"

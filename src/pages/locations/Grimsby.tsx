@@ -12,7 +12,6 @@ export default function Grimsby() {
       <Helmet>
         <title>Home Inspection Grimsby | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Grimsby. Lake Ontario waterfront specialists. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/grimsby" />
       </Helmet>
       <LocationPageTemplate
         city="Grimsby"

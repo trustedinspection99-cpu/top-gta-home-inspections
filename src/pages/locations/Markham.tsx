@@ -13,7 +13,6 @@ export default function Markham() {
       <Helmet>
         <title>Home Inspection Markham | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Markham. Certified inspectors, same-day reports. Serving Unionville, Thornhill & all areas. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/markham" />
       </Helmet>
       <LocationPageTemplate
         city="Markham"

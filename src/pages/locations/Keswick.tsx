@@ -12,7 +12,6 @@ export default function Keswick() {
       <Helmet>
         <title>Home Inspection Keswick | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Keswick. Lake Simcoe waterfront specialists. Same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/keswick" />
       </Helmet>
       <LocationPageTemplate
         city="Keswick"

@@ -13,7 +13,6 @@ export default function Hamilton() {
       <Helmet>
         <title>Home Inspection Hamilton | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Hamilton. Serving Ancaster, Dundas, Stoney Creek & all areas. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/hamilton" />
       </Helmet>
       <LocationPageTemplate
         city="Hamilton"

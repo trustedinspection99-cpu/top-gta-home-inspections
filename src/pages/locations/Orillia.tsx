@@ -12,7 +12,6 @@ export default function Orillia() {
       <Helmet>
         <title>Home Inspection Orillia | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Orillia. Lake country specialists. Same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/orillia" />
       </Helmet>
       <LocationPageTemplate
         city="Orillia"

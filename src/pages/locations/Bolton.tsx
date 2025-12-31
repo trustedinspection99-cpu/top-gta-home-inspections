@@ -12,7 +12,6 @@ export default function Bolton() {
       <Helmet>
         <title>Home Inspection Bolton | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Bolton, Caledon. Certified inspectors, same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/bolton" />
       </Helmet>
       <LocationPageTemplate
         city="Bolton"

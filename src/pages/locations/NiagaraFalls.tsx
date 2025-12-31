@@ -12,7 +12,6 @@ export default function NiagaraFalls() {
       <Helmet>
         <title>Home Inspection Niagara Falls | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Niagara Falls. Certified inspectors, same-day reports. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/niagara-falls" />
       </Helmet>
       <LocationPageTemplate
         city="Niagara Falls"

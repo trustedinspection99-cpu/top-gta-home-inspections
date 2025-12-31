@@ -13,7 +13,6 @@ export default function Burlington() {
       <Helmet>
         <title>Home Inspection Burlington | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Burlington. Certified inspectors, same-day reports. Serving Aldershot to Kilbride. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/burlington" />
       </Helmet>
       <LocationPageTemplate
         city="Burlington"

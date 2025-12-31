@@ -12,7 +12,6 @@ export default function KingCity() {
       <Helmet>
         <title>Home Inspection King City | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in King City. Specializing in estate homes and rural properties. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/king-city" />
       </Helmet>
       <LocationPageTemplate
         city="King City"

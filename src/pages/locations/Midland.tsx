@@ -12,7 +12,6 @@ export default function Midland() {
       <Helmet>
         <title>Home Inspection Midland | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Midland. Georgian Bay waterfront specialists. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/midland" />
       </Helmet>
       <LocationPageTemplate
         city="Midland"

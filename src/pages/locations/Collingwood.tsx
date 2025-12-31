@@ -12,7 +12,6 @@ export default function Collingwood() {
       <Helmet>
         <title>Home Inspection Collingwood | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Collingwood. Ski country & waterfront specialists. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/collingwood" />
       </Helmet>
       <LocationPageTemplate
         city="Collingwood"

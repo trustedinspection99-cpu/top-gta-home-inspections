@@ -12,7 +12,6 @@ export default function Clearview() {
       <Helmet>
         <title>Home Inspection Clearview | Certified Inspectors | ASADS</title>
         <meta name="description" content="Professional home inspection in Clearview Township. Serving Stayner, Creemore & area. Call (647) 801-9311!" />
-        <link rel="canonical" href="https://asads.ca/locations/clearview" />
       </Helmet>
       <LocationPageTemplate
         city="Clearview"
