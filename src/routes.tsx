@@ -43,6 +43,7 @@ const Booking = lazy(() => import('./pages/Booking'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const Terms = lazy(() => import('./pages/Terms'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Service Pages
@@ -169,6 +170,7 @@ export const routes: RouteRecord[] = [
       { path: 'pricing', element: <Pricing /> },
       { path: 'privacy-policy', element: <PrivacyPolicy /> },
       { path: 'terms', element: <Terms /> },
+      { path: 'sitemap', element: <Sitemap /> },
 
       // Service Pages
       { path: 'services/pre-purchase', element: <PrePurchase /> },

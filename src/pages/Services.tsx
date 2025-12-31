@@ -24,7 +24,7 @@ const mainServices = [
     icon: Home,
     title: "Pre-Purchase Home Inspection",
     description: "Comprehensive evaluation before you buy. Identify issues, understand the property condition, and negotiate with confidence.",
-    href: "/services/pre-purchase",
+    href: "/services/pre-purchase/",
     features: [
       "200+ point inspection",
       "Detailed photo report",
@@ -37,7 +37,7 @@ const mainServices = [
     icon: Building2,
     title: "Pre-Listing Inspection",
     description: "Sell your home faster and for more. Address issues before listing and build buyer confidence with a pre-inspection report.",
-    href: "/services/pre-listing",
+    href: "/services/pre-listing/",
     features: [
       "Identify issues before buyers do",
       "Reduce negotiation surprises",
@@ -50,7 +50,7 @@ const mainServices = [
     icon: Hammer,
     title: "New Construction Inspection",
     description: "Don't assume new means perfect. We catch builder defects and incomplete work before your final walkthrough.",
-    href: "/services/new-construction",
+    href: "/services/new-construction/",
     features: [
       "Pre-delivery inspection",
       "Tarion warranty support",
@@ -63,7 +63,7 @@ const mainServices = [
     icon: Building,
     title: "Condo Inspection",
     description: "Specialized inspections for condos, townhomes, and stacked townhouses. Know exactly what you're buying.",
-    href: "/services/condo",
+    href: "/services/condo/",
     features: [
       "Unit-specific inspection",
       "HVAC and plumbing review",
@@ -76,7 +76,7 @@ const mainServices = [
     icon: Factory,
     title: "Commercial Inspection",
     description: "Protect your business investment with comprehensive commercial property assessments for all property types.",
-    href: "/services/commercial",
+    href: "/services/commercial/",
     features: [
       "Multi-unit buildings",
       "Retail and office spaces",
@@ -92,7 +92,7 @@ const specialtyServices = [
     icon: Thermometer,
     title: "Radon Testing",
     description: "Radon is the #1 cause of lung cancer in non-smokers. We test for this invisible, odorless gas to protect your family.",
-    href: "/services/radon-testing",
+    href: "/services/radon-testing/",
     duration: "48-96 hours",
     price: "From $149",
   },
@@ -100,7 +100,7 @@ const specialtyServices = [
     icon: Search,
     title: "Mold Inspection",
     description: "Identify hidden mold growth and moisture issues. Air sampling and visual inspection for comprehensive assessment.",
-    href: "/services/mold-inspection",
+    href: "/services/mold-inspection/",
     duration: "2-3 hours",
     price: "From $299",
   },
@@ -108,7 +108,7 @@ const specialtyServices = [
     icon: Flame,
     title: "Thermal Imaging",
     description: "See beyond walls. Infrared technology reveals hidden moisture, insulation gaps, and electrical hot spots.",
-    href: "/services/thermal-imaging",
+    href: "/services/thermal-imaging/",
     duration: "Included with inspection",
     price: "From $99",
   },
@@ -116,7 +116,7 @@ const specialtyServices = [
     icon: Flame,
     title: "WETT Inspection",
     description: "Safety certification for wood stoves, fireplaces, and chimneys. Required for insurance and peace of mind.",
-    href: "/services/wett",
+    href: "/services/wett/",
     duration: "1-2 hours",
     price: "From $199",
   },
@@ -124,7 +124,7 @@ const specialtyServices = [
     icon: Wind,
     title: "Air Quality Testing",
     description: "Comprehensive indoor air quality assessment including VOCs, allergens, and particulate matter.",
-    href: "/services/air-quality",
+    href: "/services/air-quality/",
     duration: "2-4 hours",
     price: "From $249",
   },
@@ -169,10 +169,10 @@ export default function Services() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
-                <Link to="/booking">Book an Inspection</Link>
+                <Link to="/booking/">Book an Inspection</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link to="/pricing">View Pricing</Link>
+                <Link to="/pricing/">View Pricing</Link>
               </Button>
             </div>
           </div>
@@ -236,9 +236,9 @@ export default function Services() {
                     <p className="font-heading text-3xl font-bold text-primary mb-4">
                       {service.price}
                     </p>
-                    <Button asChild variant="outline" className="w-full">
-                      <Link to="/booking">Book Now</Link>
-                    </Button>
+                      <Button asChild variant="outline" className="w-full">
+                        <Link to="/booking/">Book Now</Link>
+                      </Button>
                   </div>
                 </div>
               </Card>
@@ -335,7 +335,7 @@ export default function Services() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
-                <Link to="/booking">Book Online Now</Link>
+                <Link to="/booking/">Book Online Now</Link>
               </Button>
               <Button 
                 asChild 
