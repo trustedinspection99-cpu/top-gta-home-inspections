@@ -4,5 +4,6 @@ export const SITE_NAME = "ASADS Home Inspection";
 
 export function getCanonicalUrl(path: string): string {
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  return `${SITE_URL}${cleanPath}`;
+  const pathWithSlash = cleanPath.endsWith('/') ? cleanPath : `${cleanPath}/`;
+  return `${SITE_URL}${pathWithSlash}`;
 }
