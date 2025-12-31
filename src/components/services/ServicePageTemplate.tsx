@@ -60,6 +60,31 @@ export function ServicePageTemplate({
 }: ServicePageTemplateProps) {
   const serviceSlug = title.toLowerCase().replace(/\s+/g, '-');
   const serviceUrl = `https://asads.ca/services/${serviceSlug}`;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://asads.ca/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://asads.ca/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": title,
+        "item": serviceUrl
+      }
+    ]
+  };
   
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -125,6 +150,9 @@ export function ServicePageTemplate({
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={serviceUrl} />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
         <script type="application/ld+json">
           {JSON.stringify(serviceSchema)}
         </script>

@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Phone, MapPin, Clock, Shield, Star, CheckCircle, ArrowRight } from "lucide-react";
 
 interface LocationPageProps {
@@ -12,6 +13,34 @@ interface LocationPageProps {
 }
 
 export function LocationPageTemplate({ city, region, description, neighborhoods, phoneNumber }: LocationPageProps) {
+  const citySlug = city.toLowerCase().replace(/\s+/g, '-');
+  const locationUrl = `https://asads.ca/locations/${citySlug}`;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://asads.ca/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Locations",
+        "item": "https://asads.ca/locations"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": `Home Inspection ${city}`,
+        "item": locationUrl
+      }
+    ]
+  };
+
   const services = [
     { name: "Pre-Purchase Inspection", description: "Thorough evaluation before you buy your new home" },
     { name: "Pre-Listing Inspection", description: "Sell faster with a professional pre-listing report" },
@@ -41,6 +70,12 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
 
   return (
     <Layout>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary to-primary/80 py-20 lg:py-28">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
