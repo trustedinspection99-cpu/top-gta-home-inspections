@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -324,18 +325,52 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="aspect-[16/9] md:aspect-[21/9] bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center">
-            <div className="text-center p-8">
-              <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
-              <p className="font-heading text-2xl font-bold text-foreground mb-2">
-                Greater Toronto Area
-              </p>
-              <p className="text-muted-foreground">
-                Toronto • Mississauga • Brampton • Vaughan • Markham • Richmond Hill
-                <br />
-                Scarborough • North York • Etobicoke • Oakville • Burlington • Milton
-              </p>
-            </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-8">
+            {[
+              { name: "Toronto", slug: "toronto" },
+              { name: "Mississauga", slug: "mississauga" },
+              { name: "Brampton", slug: "brampton" },
+              { name: "Vaughan", slug: "vaughan" },
+              { name: "Markham", slug: "markham" },
+              { name: "Richmond Hill", slug: "richmond-hill" },
+              { name: "Scarborough", slug: "scarborough" },
+              { name: "North York", slug: "north-york" },
+              { name: "Oakville", slug: "oakville" },
+              { name: "Burlington", slug: "burlington" },
+              { name: "Hamilton", slug: "hamilton" },
+              { name: "Barrie", slug: "barrie" },
+            ].map((location) => (
+              <Link
+                key={location.slug}
+                to={`/locations/${location.slug}/`}
+                className="flex items-center justify-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
+              >
+                <MapPin className="h-4 w-4 text-primary" />
+                {location.name}
+              </Link>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link to="/locations/" className="text-primary hover:underline text-sm font-medium">
+              View all 80+ service areas →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Links */}
+      <section className="py-8 bg-background border-t border-border/50">
+        <div className="container">
+          <div className="flex flex-wrap justify-center gap-4 text-sm">
+            <Link to="/services/" className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link>
+            <span className="text-border">•</span>
+            <Link to="/pricing/" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link>
+            <span className="text-border">•</span>
+            <Link to="/faq/" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
+            <span className="text-border">•</span>
+            <Link to="/about/" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link>
+            <span className="text-border">•</span>
+            <Link to="/booking/" className="text-muted-foreground hover:text-primary transition-colors">Book Online</Link>
           </div>
         </div>
       </section>

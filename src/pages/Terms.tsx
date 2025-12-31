@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 
 export default function Terms() {
@@ -225,6 +226,21 @@ export default function Terms() {
                 <p className="text-muted-foreground">Email: info@asads.ca</p>
               </div>
             </section>
+          </div>
+
+          {/* Related Links */}
+          <div className="mt-12 pt-8 border-t border-border">
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <Link to="/privacy-policy/" className="text-primary hover:underline">Privacy Policy</Link>
+              <span className="text-border">•</span>
+              <Link to="/contact/" className="text-primary hover:underline">Contact Us</Link>
+              <span className="text-border">•</span>
+              <Link to="/about/" className="text-primary hover:underline">About Us</Link>
+              <span className="text-border">•</span>
+              <Link to="/services/" className="text-primary hover:underline">Our Services</Link>
+              <span className="text-border">•</span>
+              <Link to="/" className="text-primary hover:underline">Home</Link>
+            </div>
           </div>
         </div>
       </section>

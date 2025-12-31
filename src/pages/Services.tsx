@@ -128,6 +128,38 @@ const specialtyServices = [
     duration: "2-4 hours",
     price: "From $249",
   },
+  {
+    icon: Search,
+    title: "Asbestos Testing",
+    description: "Safe identification and lab testing for asbestos in older homes. Protect your family from harmful fibers.",
+    href: "/services/asbestos-testing/",
+    duration: "Lab results 3-5 days",
+    price: "From $99/sample",
+  },
+  {
+    icon: Search,
+    title: "Lead Paint Testing",
+    description: "Essential for pre-1978 homes. Identify lead paint hazards to protect children and families.",
+    href: "/services/lead-paint-testing/",
+    duration: "Lab results 5-7 days",
+    price: "From $79/sample",
+  },
+  {
+    icon: Search,
+    title: "Well Water Testing",
+    description: "Comprehensive water quality analysis for rural properties. Ensure safe drinking water for your family.",
+    href: "/services/well-water-testing/",
+    duration: "Lab results 5-7 days",
+    price: "From $199",
+  },
+  {
+    icon: Search,
+    title: "Sewer Scope Inspection",
+    description: "Camera inspection of sewer lines to identify blockages, root intrusion, and damage before costly repairs.",
+    href: "/services/sewer-scope/",
+    duration: "30-60 minutes",
+    price: "From $199",
+  },
 ];
 
 const processSteps = [
@@ -319,6 +351,78 @@ export default function Services() {
                 <p className="text-sm text-muted-foreground">{step.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas Section */}
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Service Areas
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              We provide professional home inspection services throughout the Greater Toronto Area and beyond.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {[
+              { name: "Toronto", slug: "toronto" },
+              { name: "Mississauga", slug: "mississauga" },
+              { name: "Brampton", slug: "brampton" },
+              { name: "Vaughan", slug: "vaughan" },
+              { name: "Markham", slug: "markham" },
+              { name: "Richmond Hill", slug: "richmond-hill" },
+              { name: "Oakville", slug: "oakville" },
+              { name: "Burlington", slug: "burlington" },
+              { name: "Hamilton", slug: "hamilton" },
+              { name: "Oshawa", slug: "oshawa" },
+              { name: "Barrie", slug: "barrie" },
+              { name: "Newmarket", slug: "newmarket" },
+              { name: "Ajax", slug: "ajax" },
+              { name: "Whitby", slug: "whitby" },
+              { name: "Pickering", slug: "pickering" },
+              { name: "Milton", slug: "milton" },
+              { name: "Guelph", slug: "guelph" },
+              { name: "Kitchener", slug: "kitchener" },
+            ].map((location) => (
+              <Link
+                key={location.slug}
+                to={`/locations/${location.slug}/`}
+                className="flex items-center justify-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
+              >
+                {location.name}
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button asChild variant="outline">
+              <Link to="/locations/">
+                View All 80+ Locations
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Pages Section */}
+      <section className="py-12 bg-background border-t border-border/50">
+        <div className="container">
+          <div className="flex flex-wrap justify-center gap-4 text-sm">
+            <Link to="/about/" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link>
+            <span className="text-border">•</span>
+            <Link to="/pricing/" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link>
+            <span className="text-border">•</span>
+            <Link to="/faq/" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
+            <span className="text-border">•</span>
+            <Link to="/testimonials/" className="text-muted-foreground hover:text-primary transition-colors">Testimonials</Link>
+            <span className="text-border">•</span>
+            <Link to="/blog/" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link>
+            <span className="text-border">•</span>
+            <Link to="/contact/" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link>
           </div>
         </div>
       </section>

@@ -296,6 +296,23 @@ export default function Testimonials() {
         </div>
       </section>
 
+      {/* Related Links */}
+      <section className="py-12 bg-background border-t border-border/50">
+        <div className="container">
+          <div className="flex flex-wrap justify-center gap-4 text-sm">
+            <Link to="/services/" className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link>
+            <span className="text-border">•</span>
+            <Link to="/pricing/" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link>
+            <span className="text-border">•</span>
+            <Link to="/faq/" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
+            <span className="text-border">•</span>
+            <Link to="/locations/" className="text-muted-foreground hover:text-primary transition-colors">Service Areas</Link>
+            <span className="text-border">•</span>
+            <Link to="/about/" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-muted/30">
         <div className="container">
@@ -308,10 +325,10 @@ export default function Testimonials() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link to="/contact">Book Your Inspection</Link>
+                <Link to="/booking/">Book Your Inspection</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link to="/services">View Our Services</Link>
+                <Link to="/services/">View Our Services</Link>
               </Button>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -338,6 +339,21 @@ export default function Booking() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Related Links */}
+          <div className="mt-12 pt-8 border-t border-border">
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <Link to="/services/" className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link>
+              <span className="text-border">•</span>
+              <Link to="/pricing/" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link>
+              <span className="text-border">•</span>
+              <Link to="/faq/" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
+              <span className="text-border">•</span>
+              <Link to="/locations/" className="text-muted-foreground hover:text-primary transition-colors">Service Areas</Link>
+              <span className="text-border">•</span>
+              <Link to="/contact/" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link>
+            </div>
           </div>
         </div>
       </section>
