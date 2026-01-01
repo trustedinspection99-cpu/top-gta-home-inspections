@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { OrphanLocationLinks } from "@/components/seo/OrphanLocationLinks";
 
 const locations = [
   // GTA Core - All Popular
