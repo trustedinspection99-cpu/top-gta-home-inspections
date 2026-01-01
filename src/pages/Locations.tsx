@@ -10,6 +10,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import { OrphanLocationLinks } from "@/components/seo/OrphanLocationLinks";
 
 interface Location {
   name: string;
@@ -262,6 +263,15 @@ export default function Locations() {
             <p className="text-lg text-muted-foreground">
               From the GTA to Barrie, Hamilton, Kitchener-Waterloo, and beyond.
             </p>
+          </div>
+
+          {/* Static (non-JS) orphan location links for crawlers */}
+          <div className="mx-auto mb-10 max-w-5xl rounded-xl border bg-card p-6">
+            <h3 className="mb-3 text-lg font-semibold">Quick links to service areas</h3>
+            <p className="mb-4 text-sm text-muted-foreground">
+              Direct links to specific locations (static HTML anchors for crawler discovery).
+            </p>
+            <OrphanLocationLinks className="grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-3 lg:grid-cols-4" />
           </div>
 
           {/* Search Bar */}

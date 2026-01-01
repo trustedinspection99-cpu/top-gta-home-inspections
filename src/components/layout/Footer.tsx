@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
+import { OrphanLocationLinks } from "@/components/seo/OrphanLocationLinks";
 
 const services = [
   { title: "Pre-Purchase Inspection", href: "/services/pre-purchase/" },
@@ -16,31 +17,6 @@ const services = [
   { title: "Air Quality Testing", href: "/services/air-quality/" },
   { title: "Sewer Scope", href: "/services/sewer-scope/" },
   { title: "WETT Inspection", href: "/services/wett/" },
-];
-
-const locations = [
-  { title: "Toronto", href: "/locations/toronto/" },
-  { title: "Mississauga", href: "/locations/mississauga/" },
-  { title: "Brampton", href: "/locations/brampton/" },
-  { title: "Vaughan", href: "/locations/vaughan/" },
-  { title: "Markham", href: "/locations/markham/" },
-  { title: "Scarborough", href: "/locations/scarborough/" },
-  { title: "North York", href: "/locations/north-york/" },
-  { title: "Etobicoke", href: "/locations/etobicoke/" },
-  { title: "Ajax", href: "/locations/ajax/" },
-  { title: "Pickering", href: "/locations/pickering/" },
-  { title: "Whitby", href: "/locations/whitby/" },
-  { title: "Oshawa", href: "/locations/oshawa/" },
-  { title: "Barrie", href: "/locations/barrie/" },
-  { title: "Hamilton", href: "/locations/hamilton/" },
-  { title: "Oakville", href: "/locations/oakville/" },
-  { title: "Burlington", href: "/locations/burlington/" },
-  { title: "Waterloo", href: "/locations/waterloo/" },
-  { title: "Kitchener", href: "/locations/kitchener/" },
-  { title: "Guelph", href: "/locations/guelph/" },
-  { title: "Cambridge", href: "/locations/cambridge/" },
-  { title: "St. Catharines", href: "/locations/st-catharines/" },
-  { title: "Niagara Falls", href: "/locations/niagara-falls/" },
 ];
 
 const quickLinks = [
@@ -110,26 +86,18 @@ export function Footer() {
           {/* Service Areas */}
           <div>
             <h3 className="font-heading font-semibold text-lg mb-4">Service Areas</h3>
-            <ul className="space-y-2">
-              {locations.map((location) => (
-                <li key={location.href}>
-                  <Link 
-                    to={location.href} 
-                    className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors"
-                  >
-                    {location.title}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <Link 
-                  to="/locations/" 
-                  className="text-accent hover:text-accent/80 text-sm transition-colors font-medium"
-                >
-                  View All Areas →
-                </Link>
-              </li>
-            </ul>
+            <div className="space-y-4">
+              <OrphanLocationLinks
+                className="grid grid-cols-2 gap-x-6 gap-y-2"
+                linkClassName="text-primary-foreground/80 hover:text-primary-foreground"
+              />
+              <a
+                href="https://www.asads.ca/locations/"
+                className="inline-block text-accent hover:text-accent/80 text-sm transition-colors font-medium"
+              >
+                View All Areas →
+              </a>
+            </div>
           </div>
 
           {/* Contact Info */}
