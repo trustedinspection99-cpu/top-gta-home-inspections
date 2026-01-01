@@ -102,6 +102,9 @@ export function ServiceAreaSection() {
             </Button>
           </div>
         </div>
+
+        {/* Static HTML links for all orphan locations - visible in view-source */}
+        <OrphanLocationLinks />
       </div>
     </section>
   );
