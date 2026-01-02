@@ -5,8 +5,8 @@ export default function Commercial() {
   return (
     <ServicePageTemplate
       title="Commercial Inspection"
-      metaTitle="Commercial Property Inspection Toronto & GTA | ASADS Inspections"
-      metaDescription="Commercial property inspection in Toronto & GTA. Multi-unit, retail, office, and industrial buildings. Protect your business investment."
+      metaTitle="Commercial Property Inspection Ontario | Risk Audit"
+      metaDescription="Professional risk assessment for offices and retail. Detailed reports to help you understand property condition and manage risk."
       heroTitle="Commercial Property Inspection"
       heroSubtitle="Protect your business investment with comprehensive commercial property assessments. Multi-unit, retail, office, and industrial inspections."
       icon={Factory}

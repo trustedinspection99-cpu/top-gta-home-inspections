@@ -184,12 +184,12 @@ export default function Pricing() {
   return (
     <Layout>
       <Helmet>
-        <title>Home Inspection Pricing | ASADS Home Inspection Toronto GTA</title>
+        <title>Home Inspection Cost Ontario | Clear Rates & Packages</title>
         <meta 
           name="description" 
-          content="Transparent home inspection pricing for Toronto and GTA. Pre-purchase, pre-listing, condo, and commercial inspections. Specialty testing including radon, mold, and asbestos."
+          content="Transparent home inspection pricing in Ontario. No hidden fees. View our packages for houses, condos, and multi-unit properties."
         />
-        <link rel="canonical" href="https://asads.ca/pricing" />
+        <link rel="canonical" href="https://www.asads.ca/pricing/" />
       </Helmet>
 
       {/* Hero Section */}

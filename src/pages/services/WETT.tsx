@@ -5,8 +5,8 @@ export default function WETT() {
   return (
     <ServicePageTemplate
       title="WETT Inspection"
-      metaTitle="WETT Inspection Toronto & GTA | Wood Stove & Fireplace | ASADS"
-      metaDescription="WETT certified inspection in Toronto & GTA for wood stoves, fireplaces, and chimneys. Insurance compliant. Safety certification from $199."
+      metaTitle="WETT Certified Inspection | Fireplace & Chimney"
+      metaDescription="Ensure your wood stove or fireplace is insurance-compliant. WETT-certified inspections for Ontario homeowners and buyers."
       heroTitle="WETT Inspection"
       heroSubtitle="Safety certification for wood-burning appliances. Required for insurance and peace of mind. Certified inspections for fireplaces, wood stoves, and chimneys."
       icon={Flame}

@@ -5,8 +5,8 @@ export default function AirQuality() {
   return (
     <ServicePageTemplate
       title="Air Quality Testing"
-      metaTitle="Indoor Air Quality Testing Toronto | IAQ Assessment | ASADS"
-      metaDescription="Professional indoor air quality testing in Toronto & GTA. Test for VOCs, allergens, particulates, and more. Protect your family's health. From $249."
+      metaTitle="Indoor Air Quality Testing | Healthier Ontario Homes"
+      metaDescription="Professional air testing for allergens and pollutants. Improve your indoor air quality and protect your family's health."
       heroTitle="Indoor Air Quality Testing"
       heroSubtitle="Breathe easier with comprehensive indoor air quality assessment. Testing for VOCs, allergens, particulates, and other airborne contaminants."
       icon={Wind}

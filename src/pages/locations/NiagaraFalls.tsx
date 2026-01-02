@@ -10,8 +10,8 @@ export default function NiagaraFalls() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Niagara Falls | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Niagara Falls. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Niagara Falls Property Inspection | Income Properties</title>
+        <meta name="description" content="Expert property inspections in Niagara Falls for rental, short-term, and residential income properties." />
       </Helmet>
       <LocationPageTemplate
         city="Niagara Falls"

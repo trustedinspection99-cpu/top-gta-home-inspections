@@ -11,8 +11,8 @@ export default function Pickering() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Pickering | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Pickering. Certified inspectors serving Bay Ridges to Claremont. Same-day reports. Call (647) 801-9311!" />
+        <title>Pickering Home Inspection | Suburban Property Audit</title>
+        <meta name="description" content="Professional inspections in Pickering for suburban developments and newer residential properties. Same-day reporting." />
       </Helmet>
       <LocationPageTemplate
         city="Pickering"

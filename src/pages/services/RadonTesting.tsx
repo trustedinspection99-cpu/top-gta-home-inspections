@@ -5,8 +5,8 @@ export default function RadonTesting() {
   return (
     <ServicePageTemplate
       title="Radon Testing"
-      metaTitle="Radon Testing Toronto & GTA | Professional Radon Detection | ASADS"
-      metaDescription="Professional radon testing in Toronto & GTA. Radon is the #1 cause of lung cancer in non-smokers. 48-96 hour testing from $149."
+      metaTitle="Radon Testing for Homes in Ontario | ASADS"
+      metaDescription="Protect your family from radon gas. Accurate professional testing to assess indoor air safety and health risks in your home."
       heroTitle="Radon Gas Testing"
       heroSubtitle="Protect your family from radon, an invisible radioactive gas that's the #1 cause of lung cancer in non-smokers. Professional testing with certified equipment."
       icon={Thermometer}

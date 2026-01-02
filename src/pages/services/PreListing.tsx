@@ -5,8 +5,8 @@ export default function PreListing() {
   return (
     <ServicePageTemplate
       title="Pre-Listing Inspection"
-      metaTitle="Pre-Listing Home Inspection Toronto & GTA | Sell Faster | ASADS"
-      metaDescription="Pre-listing home inspection in Toronto & GTA. Sell your home faster with fewer surprises. Identify issues before listing. From $349."
+      metaTitle="Pre-Listing Home Inspection for Sellers | Ontario"
+      metaDescription="Avoid closing delays. Our pre-listing inspections identify repairs early so you can sell your home faster and without surprises."
       heroTitle="Pre-Listing Home Inspection"
       heroSubtitle="Sell your home faster and for more money. Address issues before listing and build buyer confidence with a professional inspection report."
       icon={Building2}

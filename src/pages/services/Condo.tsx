@@ -5,8 +5,8 @@ export default function Condo() {
   return (
     <ServicePageTemplate
       title="Condo Inspection"
-      metaTitle="Condo Inspection Toronto & GTA | Townhouse Inspection | ASADS"
-      metaDescription="Professional condo and townhouse inspection in Toronto & GTA. Unit-specific evaluation for condos, stacked towns, and lofts. From $299."
+      metaTitle="Condo Inspection Toronto & GTA | Expert Unit Audits"
+      metaDescription="Specialized condo inspections for GTA buyers. We audit HVAC, plumbing, and electrical systems to protect your investment."
       heroTitle="Condo & Townhouse Inspection"
       heroSubtitle="Specialized inspections for condos, townhomes, and stacked townhouses. Know exactly what you're buying inside your unit."
       icon={Building}

@@ -11,8 +11,8 @@ export default function Oakville() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Oakville | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Premium home inspection in Oakville. Certified inspectors, same-day reports. Serving Bronte, Glen Abbey & all Oakville areas. Call (647) 801-9311!" />
+        <title>Oakville Home Inspection | Premium Residential Audit</title>
+        <meta name="description" content="High-standard inspections in Oakville. We focus on quality construction and safety for discerning buyers and sellers." />
       </Helmet>
       <LocationPageTemplate
         city="Oakville"

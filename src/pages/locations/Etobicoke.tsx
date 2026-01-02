@@ -11,8 +11,8 @@ export default function Etobicoke() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Etobicoke | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Etobicoke. Certified inspectors serving Islington, Kingsway, Mimico & all areas. Call (647) 801-9311!" />
+        <title>Etobicoke Home Inspector | Electrical & Structural</title>
+        <meta name="description" content="Specialized inspections for Etobicoke's housing stock. We focus on electrical safety, structural integrity, and peace of mind." />
       </Helmet>
       <LocationPageTemplate
         city="Etobicoke"

@@ -10,8 +10,8 @@ export default function Barrie() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Barrie | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Barrie. Certified inspectors serving all Barrie neighborhoods. Same-day reports. Call (647) 801-9311!" />
+        <title>Barrie Home Inspection | Expert Local Property Audit</title>
+        <meta name="description" content="Certified inspections for Barrie homes and investments. Same-day reporting helps you close the deal faster." />
       </Helmet>
       <LocationPageTemplate
         city="Barrie"

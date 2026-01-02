@@ -10,8 +10,8 @@ export default function Aurora() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Aurora | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Aurora. Certified inspectors, same-day reports, 200+ point inspections. Call (647) 801-9311!" />
+        <title>Aurora Home Inspection | Certified Safety Standards</title>
+        <meta name="description" content="Certified home inspections in Aurora following the highest standards for safety, performance, and structural integrity." />
       </Helmet>
       <LocationPageTemplate
         city="Aurora"

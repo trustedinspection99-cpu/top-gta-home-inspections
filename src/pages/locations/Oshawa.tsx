@@ -11,8 +11,8 @@ export default function Oshawa() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Oshawa | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Oshawa. Certified inspectors, same-day reports, 200+ point inspections. Call (647) 801-9311!" />
+        <title>Oshawa Home Inspector | Older Home & System Audits</title>
+        <meta name="description" content="Specialized in Oshawa's heritage homes and new builds. Detailed structural, electrical, and safety reporting." />
       </Helmet>
       <LocationPageTemplate
         city="Oshawa"

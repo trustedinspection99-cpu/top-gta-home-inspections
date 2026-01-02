@@ -169,9 +169,9 @@ export default function About() {
   return (
     <Layout>
       <Helmet>
-        <title>About ASADS Home Inspection | GTA's Trusted Inspectors Since 2009</title>
-        <meta name="description" content="Learn about ASADS Home Inspection - serving the Greater Toronto Area since 2009 with 5,000+ inspections completed. Meet our certified team and discover our commitment to excellence." />
-        <link rel="canonical" href="https://asads.ca/about" />
+        <title>Expert Home Inspectors in Ontario | ASADS Certified</title>
+        <meta name="description" content="Trusted Ontario home inspectors since 2015. Learn about our rigorous standards, honest reporting, and commitment to your home safety." />
+        <link rel="canonical" href="https://www.asads.ca/about/" />
         <script type="application/ld+json">
           {JSON.stringify(organizationSchema)}
         </script>

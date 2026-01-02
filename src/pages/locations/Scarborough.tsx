@@ -11,8 +11,8 @@ export default function Scarborough() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Scarborough | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Scarborough. Certified inspectors serving Agincourt, Malvern, Highland Creek & all areas. Call (647) 801-9311!" />
+        <title>Scarborough Property Inspection | Multi-Unit Experts</title>
+        <meta name="description" content="Expert inspections for Scarborough homes, duplexes, and multi-unit properties. Get the facts on your investment with ASADS." />
       </Helmet>
       <LocationPageTemplate
         city="Scarborough"
