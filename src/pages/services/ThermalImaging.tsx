@@ -5,8 +5,8 @@ export default function ThermalImaging() {
   return (
     <ServicePageTemplate
       title="Thermal Imaging"
-      metaTitle="Thermal Imaging Inspection Toronto | Infrared Camera | ASADS"
-      metaDescription="Professional thermal imaging inspection in Toronto & GTA. See beyond walls with infrared technology. Detect hidden moisture, insulation gaps. From $99."
+      metaTitle="Thermal Imaging Home Inspection | Find Hidden Issues"
+      metaDescription="We use infrared technology to detect leaks and insulation gaps not visible to the eye. Included in every full home inspection."
       heroTitle="Thermal Imaging Inspection"
       heroSubtitle="See what's hidden behind walls. Infrared technology reveals moisture intrusion, missing insulation, electrical hot spots, and energy loss."
       icon={Eye}

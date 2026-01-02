@@ -5,8 +5,8 @@ export default function AsbestosTesting() {
   return (
     <ServicePageTemplate
       title="Asbestos Testing"
-      metaTitle="Asbestos Testing Toronto & GTA | Professional Sampling | ASADS"
-      metaDescription="Professional asbestos testing in Toronto & GTA. Lab-certified sampling for homes built before 1990. Protect your family. From $199."
+      metaTitle="Asbestos Testing & Identification | Ontario Services"
+      metaDescription="Certified asbestos testing to identify hazardous materials before renovations or property transactions. Stay safe and compliant."
       heroTitle="Asbestos Testing"
       heroSubtitle="Safe, professional asbestos sampling for homes and buildings. Lab-certified analysis identifies asbestos-containing materials before renovation or purchase."
       icon={AlertTriangle}

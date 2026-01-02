@@ -10,8 +10,8 @@ export default function StCatharines() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection St. Catharines | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in St. Catharines. Serving all Niagara neighborhoods. Call (647) 801-9311!" />
+        <title>St. Catharines Home Inspector | Older Home Specialist</title>
+        <meta name="description" content="Home inspections in St. Catharines focused on older housing stock, structural safety, and electrical systems." />
       </Helmet>
       <LocationPageTemplate
         city="St. Catharines"

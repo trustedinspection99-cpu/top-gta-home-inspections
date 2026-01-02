@@ -5,8 +5,8 @@ export default function MoldInspection() {
   return (
     <ServicePageTemplate
       title="Mold Inspection"
-      metaTitle="Mold Inspection & Testing Toronto | Air Sampling | ASADS"
-      metaDescription="Professional mold inspection and testing in Toronto & GTA. Air sampling, moisture detection, and comprehensive assessment. From $299."
+      metaTitle="Mold Inspection & Testing Ontario | Certified Experts"
+      metaDescription="Professional mold and moisture detection. We identify air quality risks and hidden growth to keep your Ontario home safe."
       heroTitle="Mold Inspection & Testing"
       heroSubtitle="Identify hidden mold growth and moisture issues. Comprehensive visual inspection combined with air sampling for accurate assessment."
       icon={Search}

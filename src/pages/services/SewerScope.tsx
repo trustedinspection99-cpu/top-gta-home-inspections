@@ -5,8 +5,8 @@ export default function SewerScope() {
   return (
     <ServicePageTemplate
       title="Sewer Scope Inspection"
-      metaTitle="Sewer Scope Inspection Toronto & GTA | Camera Inspection | ASADS"
-      metaDescription="Professional sewer scope camera inspection in Toronto & GTA. See inside your sewer lines before buying. Identify blockages, cracks, root intrusion. From $249."
+      metaTitle="Sewer Scope Inspection | Drain Camera Service"
+      metaDescription="Avoid plumbing disasters. Our camera inspections locate blockages and cracks before they become costly failures."
       heroTitle="Sewer Scope Inspection"
       heroSubtitle="See what's hidden underground. Video camera inspection of sewer lines reveals blockages, cracks, root intrusion, and pipe condition."
       icon={Video}

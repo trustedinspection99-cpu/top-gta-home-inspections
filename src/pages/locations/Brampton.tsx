@@ -11,8 +11,8 @@ export default function Brampton() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Brampton | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Brampton. Certified inspectors, same-day reports, 200+ point inspections. Serving all Brampton areas. Call (647) 801-9311!" />
+        <title>Brampton Home Inspection | New Build & Warranty Audit</title>
+        <meta name="description" content="Trusted Brampton home inspections. We specialize in newer developments and pre-delivery audits for confident home buying." />
       </Helmet>
       <LocationPageTemplate
         city="Brampton"

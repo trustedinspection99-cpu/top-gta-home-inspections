@@ -10,8 +10,8 @@ export default function Whitby() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Whitby | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Whitby. Serving Brooklin to Port Whitby. Same-day reports. Call (647) 801-9311!" />
+        <title>Whitby Home Inspector | Residential Family Homes</title>
+        <meta name="description" content="Detailed home inspections in Whitby covering modern subdivisions and established family homes. Thermal imaging included." />
       </Helmet>
       <LocationPageTemplate
         city="Whitby"

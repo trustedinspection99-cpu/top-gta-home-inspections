@@ -11,8 +11,8 @@ export default function Newmarket() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Newmarket | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Newmarket. Certified inspectors, same-day reports, 200+ point inspections. Call (647) 801-9311!" />
+        <title>Newmarket Home Inspection | Expert Buyer Services</title>
+        <meta name="description" content="Professional home inspections in Newmarket helping buyers understand property condition before finalizing their purchase." />
       </Helmet>
       <LocationPageTemplate
         city="Newmarket"

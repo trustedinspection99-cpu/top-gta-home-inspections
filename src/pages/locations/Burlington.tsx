@@ -11,8 +11,8 @@ export default function Burlington() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Burlington | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Burlington. Certified inspectors, same-day reports. Serving Aldershot to Kilbride. Call (647) 801-9311!" />
+        <title>Burlington Home Inspector | Trusted Local Specialist</title>
+        <meta name="description" content="Reliable home inspections in Burlington with thorough reporting, thermal imaging, and professional inspection standards." />
       </Helmet>
       <LocationPageTemplate
         city="Burlington"

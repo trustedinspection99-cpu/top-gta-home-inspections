@@ -125,8 +125,9 @@ export default function Booking() {
   return (
     <Layout>
       <Helmet>
-        <title>Book a Home Inspection | ASADS Inspections Toronto</title>
-        <meta name="description" content="Book your home inspection online. Same-day appointments available. Serving Toronto & GTA." />
+        <title>Schedule a Home Inspection Online | ASADS Booking</title>
+        <meta name="description" content="Book your Ontario home inspection in minutes. Fast confirmation, certified inspectors, and flexible scheduling for your real estate needs." />
+        <link rel="canonical" href="https://www.asads.ca/booking/" />
       </Helmet>
 
       <section className="py-16 md:py-24 hero-gradient text-primary-foreground">

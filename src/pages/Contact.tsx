@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -114,7 +115,11 @@ export default function Contact() {
 
   return (
     <Layout>
-      {/* Hero Section */}
+      <Helmet>
+        <title>Contact ASADS | Book a Certified Home Inspector</title>
+        <meta name="description" content="Ready to book? Contact ASADS for fast scheduling and expert home inspections across Ontario. Get the clarity you need before you buy." />
+        <link rel="canonical" href="https://www.asads.ca/contact/" />
+      </Helmet>
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">

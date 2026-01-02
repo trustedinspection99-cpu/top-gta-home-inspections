@@ -5,8 +5,8 @@ export default function PrePurchase() {
   return (
     <ServicePageTemplate
       title="Pre-Purchase Inspection"
-      metaTitle="Pre-Purchase Home Inspection Toronto & GTA | ASADS Inspections"
-      metaDescription="Comprehensive pre-purchase home inspection in Toronto & GTA. 200+ point inspection, same-day reports, certified inspectors. Book online from $399."
+      metaTitle="Pre-Purchase Home Inspection Ontario | Same-Day Report"
+      metaDescription="Buying a home? Our certified inspectors find hidden defects with thermal imaging. Get your detailed report delivered the same day."
       heroTitle="Pre-Purchase Home Inspection"
       heroSubtitle="Make informed buying decisions with a comprehensive property evaluation. Identify issues before you buy and negotiate with confidence."
       icon={Home}

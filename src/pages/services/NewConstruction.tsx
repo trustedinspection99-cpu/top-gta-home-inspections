@@ -5,8 +5,8 @@ export default function NewConstruction() {
   return (
     <ServicePageTemplate
       title="New Construction Inspection"
-      metaTitle="New Construction Home Inspection Toronto | Tarion PDI | ASADS"
-      metaDescription="New construction inspection in Toronto & GTA. Pre-delivery inspection for new homes. Catch builder defects before closing. From $449."
+      metaTitle="New Construction Inspection Ontario | Tarion Warranty"
+      metaDescription="Catch builder defects before your warranty expires. Professional inspections for new Ontario homes ensuring quality and safety."
       heroTitle="New Construction Inspection"
       heroSubtitle="Don't assume new means perfect. We catch builder defects and incomplete work before your final walkthrough and Tarion warranty registration."
       icon={Hammer}

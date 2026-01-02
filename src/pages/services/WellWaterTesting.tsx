@@ -5,8 +5,8 @@ export default function WellWaterTesting() {
   return (
     <ServicePageTemplate
       title="Well Water Testing"
-      metaTitle="Well Water Testing Toronto & GTA | Private Well Analysis | ASADS"
-      metaDescription="Professional well water testing in Toronto & GTA. Comprehensive analysis for bacteria, minerals, and contaminants. Protect your family. From $199."
+      metaTitle="Well Water Testing Services | Ontario Rural Homes"
+      metaDescription="Test private well water for bacteria and contaminants. Ensure safe drinking water for your rural Ontario property."
       heroTitle="Well Water Testing"
       heroSubtitle="Ensure your family's water is safe to drink. Comprehensive laboratory analysis of private wells for bacteria, minerals, and contaminants."
       icon={Droplets}
