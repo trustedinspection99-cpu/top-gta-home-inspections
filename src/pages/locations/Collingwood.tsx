@@ -10,8 +10,8 @@ export default function Collingwood() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Collingwood | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Collingwood. Ski country & waterfront specialists. Call (647) 801-9311!" />
+        <title>Collingwood Home Inspector | Cottage & Chalet Expert</title>
+        <meta name="description" content="Specialized inspections for seasonal homes, cottages, and chalets in Collingwood and the Blue Mountain area." />
       </Helmet>
       <LocationPageTemplate
         city="Collingwood"

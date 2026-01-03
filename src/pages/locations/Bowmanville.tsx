@@ -10,8 +10,8 @@ export default function Bowmanville() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Bowmanville | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Bowmanville. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Bowmanville Home Inspections | Certified Local Audit</title>
+        <meta name="description" content="Professional inspections in Bowmanville for newer housing and expanding neighbourhoods. Get the facts before you buy." />
       </Helmet>
       <LocationPageTemplate
         city="Bowmanville"

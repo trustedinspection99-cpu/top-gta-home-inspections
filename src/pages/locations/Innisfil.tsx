@@ -10,8 +10,8 @@ export default function Innisfil() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Innisfil | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Innisfil. Serving Alcona, Lefroy & all Lake Simcoe communities. Call (647) 801-9311!" />
+        <title>Innisfil Home Inspector | Rural & Waterfront Audit</title>
+        <meta name="description" content="Home inspections in Innisfil for detached homes, acreage properties, and waterfront seasonal residences." />
       </Helmet>
       <LocationPageTemplate
         city="Innisfil"

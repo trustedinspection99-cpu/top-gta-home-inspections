@@ -10,8 +10,8 @@ export default function Kleinburg() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Kleinburg | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Kleinburg. Estate home specialists. Same-day reports. Call (647) 801-9311!" />
+        <title>Kleinburg Home Inspector | Construction Quality Audit</title>
+        <meta name="description" content="Professional home inspections in Kleinburg with a focus on luxury construction quality and modern safety standards." />
       </Helmet>
       <LocationPageTemplate
         city="Kleinburg"

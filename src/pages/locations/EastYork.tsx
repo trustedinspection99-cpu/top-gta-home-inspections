@@ -10,8 +10,8 @@ export default function EastYork() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection East York | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in East York. Certified inspectors serving Leaside, Danforth & all neighborhoods. Call (647) 801-9311!" />
+        <title>East York Home Inspections | Residential Specialist</title>
+        <meta name="description" content="Detailed property inspections in East York. Ideal for buyers of semi-detached homes and multi-unit income properties." />
       </Helmet>
       <LocationPageTemplate
         city="East York"

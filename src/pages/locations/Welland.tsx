@@ -10,8 +10,8 @@ export default function Welland() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Welland | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Welland. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Welland Home Inspector | Certified System Audits</title>
+        <meta name="description" content="Home inspections in Welland emphasizing aging homes, building systems, and structural integrity." />
       </Helmet>
       <LocationPageTemplate
         city="Welland"

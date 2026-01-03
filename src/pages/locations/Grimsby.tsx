@@ -10,8 +10,8 @@ export default function Grimsby() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Grimsby | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Grimsby. Lake Ontario waterfront specialists. Call (647) 801-9311!" />
+        <title>Grimsby Home Inspection | Residential Property Audit</title>
+        <meta name="description" content="Professional inspections in Grimsby for newer and established residential neighbourhoods. Same-day reporting." />
       </Helmet>
       <LocationPageTemplate
         city="Grimsby"

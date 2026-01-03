@@ -10,8 +10,8 @@ export default function Bolton() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Bolton | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Bolton, Caledon. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Bolton Home Inspections | Rural Property Specialist</title>
+        <meta name="description" content="Professional inspections in Bolton focused on acreage homes, private systems, and detached residential properties." />
       </Helmet>
       <LocationPageTemplate
         city="Bolton"

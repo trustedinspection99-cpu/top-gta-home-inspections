@@ -10,8 +10,8 @@ export default function Thornhill() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Thornhill | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Thornhill. Serving Vaughan & Markham sides. Same-day reports. Call (647) 801-9311!" />
+        <title>Thornhill Home Inspection | Trusted Safety Reporting</title>
+        <meta name="description" content="Professional home inspections in Thornhill focused on accuracy, electrical safety, and reliable reporting." />
       </Helmet>
       <LocationPageTemplate
         city="Thornhill"
