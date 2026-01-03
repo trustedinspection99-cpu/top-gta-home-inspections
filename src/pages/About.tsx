@@ -29,7 +29,7 @@ const organizationSchema = {
   },
   "image": "https://asads.ca/images/toronto-home-inspection-hero.webp",
   "description": "Professional home inspection services in the Greater Toronto Area since 2009. Certified inspectors providing comprehensive property assessments with same-day reports.",
-  "foundingDate": "2009",
+  "foundingDate": "2015",
   "foundingLocation": {
     "@type": "Place",
     "name": "Toronto, Ontario, Canada"
@@ -194,7 +194,7 @@ export default function About() {
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <Building className="h-5 w-5 text-primary" />
-                <span className="text-foreground font-medium">5,000+ Inspections</span>
+                <span className="text-foreground font-medium">2,000+ Inspections</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="h-5 w-5 text-primary" />
@@ -202,7 +202,7 @@ export default function About() {
               </div>
               <div className="flex items-center gap-2">
                 <Award className="h-5 w-5 text-primary" />
-                <span className="text-foreground font-medium">15+ Years Experience</span>
+                <span className="text-foreground font-medium">10+ Years Experience</span>
               </div>
             </div>
           </div>
