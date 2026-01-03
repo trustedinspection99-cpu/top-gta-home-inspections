@@ -219,21 +219,16 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-muted-foreground">
               <p>
-                  ASADS Home Inspection was founded in 2009 by Haroon Choudhry, a former construction 
-                  professional who saw a need for more thorough, client-focused home inspections in 
-                  the Greater Toronto Area.
-                </p>
-                <p>
-                  After years of working in residential construction, Haroon noticed that many home 
-                  buyers were not getting the full picture of their potential purchases. He founded 
-                  ASADS with a commitment to change that—providing comprehensive, educational 
-                  inspections that empower homeowners to make informed decisions.
-                </p>
-                <p>
-                  Today, our team of certified inspectors has completed over 5,000 inspections 
-                  across the GTA. We've helped first-time buyers, seasoned investors, and everyone 
-                  in between understand their properties and protect their investments.
-                </p>
+              <p>
+  <strong>ASADS Home Inspection</strong> was founded in 2015 by Haroon Choudhry, a former construction professional who saw a need for more thorough, client-focused <strong>home inspections in the Greater Toronto Area</strong>.
+</p>
+<p>
+  Drawing on years of experience in <strong>residential construction</strong>, Haroon noticed that many GTA home buyers were not getting a complete picture of their potential investment. He established ASADS with a singular mission: providing <strong>comprehensive home inspection reports</strong> and educational walk-throughs that empower homeowners to make confident, informed decisions.
+</p>
+<p>
+  Today, our team of <strong>certified home inspectors</strong> has successfully completed over 2,000 inspections across <strong>Toronto, Mississauga, Brampton, and the surrounding GTA</strong>. We take pride in helping everyone from first-time buyers to seasoned investors protect their assets through professional property evaluations.
+</p>
+
               </div>
             </div>
             <div className="relative">
