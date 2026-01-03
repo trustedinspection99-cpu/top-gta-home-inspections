@@ -150,11 +150,11 @@ const team = [
     bio: "Haroon founded ASADS with a mission to provide GTA homeowners with honest, thorough inspections. With over 5,000 inspections completed, he brings unmatched expertise to every home.",
   },
   {
-    name: "Sarah Chen",
+    name: "Kapil Sharma",
     role: "Senior Inspector",
     experience: "10+ years experience",
     certifications: ["OAHI", "Thermal Imaging"],
-    bio: "Sarah specializes in thermal imaging and moisture detection. Her attention to detail has helped countless clients avoid costly repairs.",
+    bio: "Kapil specializes in thermal imaging and moisture detection. Her attention to detail has helped countless clients avoid costly repairs.",
   },
   {
     name: "Marcus Thompson",
@@ -188,7 +188,7 @@ export default function About() {
               About ASADS Home Inspection
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Since 2009, we've been the GTA's trusted partner for comprehensive home inspections. 
+              Since 2015, we've been the GTA's trusted partner for comprehensive home inspections. 
               Our mission is simple: protect your investment and give you peace of mind.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
