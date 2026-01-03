@@ -166,6 +166,39 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
     { name: "Specialty Testing", description: "Radon, mold, asbestos, and air quality testing", href: "/services/radon-testing" },
   ];
 
+  // Location-specific FAQs for schema markup
+  const locationFaqs = [
+    {
+      question: `How much does a home inspection cost in ${city}?`,
+      answer: `Home inspection costs in ${city} typically range from $400-$600 for a standard single-family home, depending on size and age. Condos are usually $350-$450. Contact us at ${phoneNumber} for a personalized quote.`
+    },
+    {
+      question: `How long does a home inspection take in ${city}?`,
+      answer: `A typical home inspection in ${city} takes 2-4 hours depending on the property size and age. Larger homes or those with additional features may take longer. We recommend buyers attend to ask questions.`
+    },
+    {
+      question: `Do you offer same-day inspection reports in ${city}?`,
+      answer: `Yes! We deliver detailed inspection reports within 24 hours of completing inspections in ${city}, often same-day. Reports include photos, descriptions of issues, and recommendations.`
+    },
+    {
+      question: `What areas do you serve near ${city}?`,
+      answer: `We serve ${city} and all surrounding ${region} communities. Our certified inspectors cover the entire Greater Toronto Area within a 150km radius.`
+    }
+  ];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": locationFaqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
 
   const benefits = [
     "Same-day reports available",
@@ -182,6 +215,9 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
         <link rel="canonical" href={locationUrl} />
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
         </script>
       </Helmet>
 
