@@ -10,8 +10,8 @@ export default function KingCity() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection King City | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in King City. Specializing in estate homes and rural properties. Call (647) 801-9311!" />
+        <title>King City Home Inspector | Luxury & Rural Specialist</title>
+        <meta name="description" content="Specialized inspections for King City's estates and rural homes, including private system checks and structural audits." />
       </Helmet>
       <LocationPageTemplate
         city="King City"

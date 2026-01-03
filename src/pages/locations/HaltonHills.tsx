@@ -10,8 +10,8 @@ export default function HaltonHills() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Halton Hills | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Halton Hills. Serving Georgetown, Acton & Glen Williams. Call (647) 801-9311!" />
+        <title>Halton Hills Home Inspector | Modern Home Experts</title>
+        <meta name="description" content="Professional inspections in Halton Hills for modern housing and growing communities. Same-day reports included." />
       </Helmet>
       <LocationPageTemplate
         city="Halton Hills"

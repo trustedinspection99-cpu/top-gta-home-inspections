@@ -10,8 +10,8 @@ export default function PortPerry() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Port Perry | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Port Perry. Waterfront and cottage specialists. Call (647) 801-9311!" />
+        <title>Port Perry Home Inspection | Rural Property Experts</title>
+        <meta name="description" content="Home inspections in Port Perry focused on detached and semi-rural residential properties and private systems." />
       </Helmet>
       <LocationPageTemplate
         city="Port Perry"

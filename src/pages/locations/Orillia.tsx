@@ -10,8 +10,8 @@ export default function Orillia() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Orillia | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Orillia. Lake country specialists. Same-day reports. Call (647) 801-9311!" />
+        <title>Orillia Home Inspector | Older Home & Safety Audit</title>
+        <meta name="description" content="Home inspections in Orillia with a focus on structural condition and safety for the area's unique housing stock." />
       </Helmet>
       <LocationPageTemplate
         city="Orillia"

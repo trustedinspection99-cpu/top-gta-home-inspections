@@ -10,8 +10,8 @@ export default function Midland() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Midland | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Midland. Georgian Bay waterfront specialists. Call (647) 801-9311!" />
+        <title>Midland Home Inspection | Detached Home Specialist</title>
+        <meta name="description" content="Professional inspections in Midland for detached and semi-rural residential properties. Detailed system audits." />
       </Helmet>
       <LocationPageTemplate
         city="Midland"

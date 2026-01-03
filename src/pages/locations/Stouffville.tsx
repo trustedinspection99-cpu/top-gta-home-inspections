@@ -10,8 +10,8 @@ export default function Stouffville() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Stouffville | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Stouffville. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Stouffville Home Inspections | Newer Home Specialist</title>
+        <meta name="description" content="Specialized inspections for Stouffville's newer developments and modern builds. Catch defects before they become costly." />
       </Helmet>
       <LocationPageTemplate
         city="Stouffville"

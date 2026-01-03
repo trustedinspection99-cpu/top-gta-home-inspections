@@ -11,8 +11,8 @@ export default function Caledon() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Caledon | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Caledon. Certified inspectors serving Bolton, Palgrave & rural properties. Call (647) 801-9311!" />
+        <title>Caledon Home Inspector | Rural, Well & Septic Audit</title>
+        <meta name="description" content="Specialist in Caledon rural properties. We inspect private wells, septic systems, and large detached homes for total security." />
       </Helmet>
       <LocationPageTemplate
         city="Caledon"

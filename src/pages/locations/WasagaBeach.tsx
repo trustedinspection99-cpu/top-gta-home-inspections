@@ -10,8 +10,8 @@ export default function WasagaBeach() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Wasaga Beach | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Wasaga Beach. Waterfront & cottage specialists. Call (647) 801-9311!" />
+        <title>Wasaga Beach Home Inspection | Cottage Specialists</title>
+        <meta name="description" content="Professional inspections for cottages, seasonal homes, and residential properties in Wasaga Beach." />
       </Helmet>
       <LocationPageTemplate
         city="Wasaga Beach"

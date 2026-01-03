@@ -10,8 +10,8 @@ export default function Georgetown() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Georgetown | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Georgetown. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Georgetown Home Inspections | Residential Specialists</title>
+        <meta name="description" content="Expert residential inspections in Georgetown with a focus on newer family builds and property safety." />
       </Helmet>
       <LocationPageTemplate
         city="Georgetown"

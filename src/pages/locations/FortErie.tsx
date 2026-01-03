@@ -10,8 +10,8 @@ export default function FortErie() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Fort Erie | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Fort Erie. Waterfront specialists. Same-day reports. Call (647) 801-9311!" />
+        <title>Fort Erie Home Inspector | Detached & Rural Homes</title>
+        <meta name="description" content="Home inspections in Fort Erie for detached properties and rural-style residences. Thorough system testing." />
       </Helmet>
       <LocationPageTemplate
         city="Fort Erie"

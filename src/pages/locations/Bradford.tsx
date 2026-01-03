@@ -10,8 +10,8 @@ export default function Bradford() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Bradford | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Bradford West Gwillimbury. Same-day reports. Call (647) 801-9311!" />
+        <title>Bradford Home Inspection | New Construction Experts</title>
+        <meta name="description" content="Inspections in Bradford focused on growing developments and modern residential construction. Catch builder issues early." />
       </Helmet>
       <LocationPageTemplate
         city="Bradford"

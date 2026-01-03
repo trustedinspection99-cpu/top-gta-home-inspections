@@ -10,8 +10,8 @@ export default function NiagaraOnTheLake() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Niagara-on-the-Lake | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Niagara-on-the-Lake. Heritage & wine country specialists. Call (647) 801-9311!" />
+        <title>NOTL Home Inspector | Heritage & Luxury Specialist</title>
+        <meta name="description" content="Expert inspections for Niagara-on-the-Lake's heritage and luxury properties. Specialized architectural audits." />
       </Helmet>
       <LocationPageTemplate
         city="Niagara-on-the-Lake"

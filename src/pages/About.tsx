@@ -36,8 +36,8 @@ const organizationSchema = {
   },
   "founder": {
     "@type": "Person",
-    "name": "Ahmad Siddiqui",
-    "jobTitle": "Founder & Lead Inspector"
+    "name": "Haroon Choudhry",
+    "jobTitle": "Founder & Master Inspector"
   },
   "numberOfEmployees": {
     "@type": "QuantitativeValue",
@@ -143,11 +143,11 @@ const certifications = [
 
 const team = [
   {
-    name: "Ahmad Siddiqui",
-    role: "Founder & Lead Inspector",
+    name: "Haroon Choudhry",
+    role: "Founder & Master Inspector",
     experience: "15+ years experience",
     certifications: ["OAHI", "InterNACHI", "WETT"],
-    bio: "Ahmad founded ASADS with a mission to provide GTA homeowners with honest, thorough inspections. With over 5,000 inspections completed, he brings unmatched expertise to every home.",
+    bio: "Haroon founded ASADS with a mission to provide GTA homeowners with honest, thorough inspections. With over 5,000 inspections completed, he brings unmatched expertise to every home.",
   },
   {
     name: "Sarah Chen",
@@ -218,13 +218,13 @@ export default function About() {
                 Our Story
               </h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>
-                  ASADS Home Inspection was founded in 2009 by Ahmad Siddiqui, a former construction 
+              <p>
+                  ASADS Home Inspection was founded in 2009 by Haroon Choudhry, a former construction 
                   professional who saw a need for more thorough, client-focused home inspections in 
                   the Greater Toronto Area.
                 </p>
                 <p>
-                  After years of working in residential construction, Ahmad noticed that many home 
+                  After years of working in residential construction, Haroon noticed that many home 
                   buyers were not getting the full picture of their potential purchases. He founded 
                   ASADS with a commitment to change that—providing comprehensive, educational 
                   inspections that empower homeowners to make informed decisions.
