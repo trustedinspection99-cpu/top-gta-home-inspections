@@ -30,7 +30,7 @@ export default function BlogPost() {
             The article you're looking for doesn't exist or has been moved.
           </p>
           <Button asChild>
-            <Link to="/blog">Back to Blog</Link>
+            <Link to="/blog/">Back to Blog</Link>
           </Button>
         </div>
       </Layout>
@@ -90,7 +90,7 @@ export default function BlogPost() {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://www.asads.ca/blog"
+        "item": "https://www.asads.ca/blog/"
       },
       {
         "@type": "ListItem",
