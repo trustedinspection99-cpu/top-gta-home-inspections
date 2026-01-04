@@ -41,7 +41,7 @@ const faqCategories = [
       },
       {
         question: "How do I book an inspection?",
-        answer: "You can book online through our website, call us at (905) 123-4567, or email info@asads.ca. We offer flexible scheduling including weekends. Once booked, you'll receive a confirmation email with all the details and what to expect on inspection day.",
+        answer: "You can book online through our website, call us at (647) 801-9311, or email info@asads.ca. We offer flexible scheduling including weekends. Once booked, you'll receive a confirmation email with all the details and what to expect on inspection day.",
       },
       {
         question: "What payment methods do you accept?",
@@ -132,7 +132,7 @@ export default function FAQ() {
       <Helmet>
         <title>FAQ | Home Inspection Questions | ASADS Home Inspection</title>
         <meta name="description" content="Find answers to frequently asked questions about home inspections in the Greater Toronto Area. Learn about costs, process, and what to expect." />
-        <link rel="canonical" href="https://asads.ca/faq" />
+        <link rel="canonical" href="https://www.asads.ca/faq" />
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
         </script>
