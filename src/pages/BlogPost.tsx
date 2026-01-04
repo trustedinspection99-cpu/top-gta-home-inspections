@@ -30,7 +30,7 @@ export default function BlogPost() {
             The article you're looking for doesn't exist or has been moved.
           </p>
           <Button asChild>
-            <Link to="/blog/">Back to Blog</Link>
+            <Link to="/blog">Back to Blog</Link>
           </Button>
         </div>
       </Layout>
