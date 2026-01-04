@@ -10,13 +10,13 @@ export default function Acton() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Acton | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Acton. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Acton Home Inspector | Halton Hills Specialist | ASADS</title>
+        <meta name="description" content="Acton home inspection specialists. We know Halton Hills' heritage homes, wells & septic systems. Book today: (647) 801-9311." />
       </Helmet>
       <LocationPageTemplate
         city="Acton"
-        region="Ontario"
-        description="Acton's reliable home inspection service. We serve all Acton neighborhoods with thorough inspections and detailed reports."
+        region="Halton Hills"
+        description="Acton's trusted home inspection experts. From charming downtown heritage properties to new developments near Blue Springs, we provide comprehensive inspections tailored to Halton Hills' unique housing stock, including private well and septic assessments."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

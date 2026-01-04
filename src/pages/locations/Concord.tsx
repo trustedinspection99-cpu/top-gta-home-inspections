@@ -10,13 +10,13 @@ export default function Concord() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Concord | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Concord, Vaughan. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Concord Home Inspector | Vaughan Specialist | ASADS</title>
+        <meta name="description" content="Concord & Vaughan home inspections. Industrial loft conversions to new builds—we cover it all. Call (647) 801-9311." />
       </Helmet>
       <LocationPageTemplate
         city="Concord"
-        region="Ontario"
-        description="Concord's reliable home inspection professionals. We serve Concord and the Vaughan Metropolitan Centre area with comprehensive inspections."
+        region="Vaughan"
+        description="Concord's trusted home inspection service. We specialize in Vaughan's diverse property types—from converted industrial lofts along Highway 7 to new construction near Vaughan Metropolitan Centre. Our inspectors understand the unique considerations of properties in this rapidly developing area."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

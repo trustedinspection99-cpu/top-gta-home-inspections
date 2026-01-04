@@ -10,13 +10,13 @@ export default function Stayner() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Stayner | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Stayner. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Stayner Home Inspector | Clearview Township | ASADS</title>
+        <meta name="description" content="Stayner & Clearview home inspections. Ski country property experts serving Collingwood area. Call (647) 801-9311." />
       </Helmet>
       <LocationPageTemplate
         city="Stayner"
-        region="Ontario"
-        description="Stayner's reliable home inspection professionals. We provide thorough inspections throughout Stayner and Clearview Township."
+        region="Clearview Township"
+        description="Stayner's local home inspection experts. Serving Clearview Township's diverse properties—from downtown Stayner heritage homes to rural acreages near Nottawa and recreational properties in ski country. We understand the unique challenges of Georgian Bay area construction."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

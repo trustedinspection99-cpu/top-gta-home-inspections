@@ -10,13 +10,13 @@ export default function Cannington() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Cannington | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Cannington. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Cannington Home Inspector | Brock Township | ASADS</title>
+        <meta name="description" content="Cannington & Brock Township home inspections. Rural property experts—wells, septics & century homes. Call (647) 801-9311." />
       </Helmet>
       <LocationPageTemplate
         city="Cannington"
-        region="Ontario"
-        description="Cannington's trusted home inspection service. We provide thorough property inspections throughout Cannington and Brock Township."
+        region="Brock Township"
+        description="Cannington's rural property inspection specialists. We understand Brock Township's unique housing landscape—from historic century homes along Laidlaw Street to modern rural properties. Our inspectors are experienced with well water systems, septic tanks, and agricultural property assessments."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

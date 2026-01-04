@@ -10,13 +10,13 @@ export default function Orangeville() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Orangeville | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Orangeville. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Orangeville Home Inspector | Dufferin County | ASADS</title>
+        <meta name="description" content="Orangeville & Dufferin County home inspections. Rural properties, heritage homes & new builds. Call (647) 801-9311." />
       </Helmet>
       <LocationPageTemplate
         city="Orangeville"
-        region="Ontario"
-        description="Orangeville's trusted home inspection service. We serve Orangeville and all Dufferin County communities."
+        region="Dufferin County"
+        description="Orangeville's comprehensive home inspection service. We serve all of Dufferin County—from historic downtown properties to rural estates in Mono Mills and Amaranth. Our inspectors are experienced with well systems, septic tanks, and the unique construction of Headwaters region homes."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

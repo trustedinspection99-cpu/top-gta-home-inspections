@@ -10,13 +10,13 @@ export default function Maple() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Maple | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Maple, Vaughan. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Maple Home Inspector | North Vaughan | ASADS</title>
+        <meta name="description" content="Maple & North Vaughan home inspections. New construction & resale specialists. Book today: (647) 801-9311." />
       </Helmet>
       <LocationPageTemplate
         city="Maple"
-        region="Ontario"
-        description="Maple's dependable home inspection experts. We provide thorough inspections throughout Maple and the Canada's Wonderland area."
+        region="Vaughan"
+        description="Maple's home inspection specialists. Serving North Vaughan's growing communities—from new construction along Teston Road to established neighborhoods in Carrville and Rutherford. We understand the builder standards and common issues in this rapidly developing area."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />
