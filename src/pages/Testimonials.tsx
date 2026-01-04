@@ -186,7 +186,7 @@ export default function Testimonials() {
         "@type": "ListItem",
         "position": 2,
         "name": "Testimonials",
-        "item": "https://asads.ca/testimonials"
+        "item": "https://www.asads.ca/testimonials"
       }
     ]
   };
@@ -196,7 +196,7 @@ export default function Testimonials() {
       <Helmet>
         <title>Customer Testimonials | ASADS Home Inspection Reviews</title>
         <meta name="description" content="Read verified customer reviews and testimonials from homeowners across the GTA who trusted ASADS for their home inspection needs." />
-        <link rel="canonical" href="https://asads.ca/testimonials" />
+        <link rel="canonical" href="https://www.asads.ca/testimonials" />
         <script type="application/ld+json">
           {JSON.stringify(reviewSchema)}
         </script>
