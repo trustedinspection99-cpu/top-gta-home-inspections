@@ -17,17 +17,17 @@ import {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://asads.ca/#organization",
+  "@id": "https://www.asads.ca/#organization",
   "name": "ASADS Home Inspection",
   "alternateName": "ASADS",
-  "url": "https://asads.ca/",
+  "url": "https://www.asads.ca/",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://asads.ca/logo.png",
+    "url": "https://www.asads.ca/logo.png",
     "width": 512,
     "height": 512
   },
-  "image": "https://asads.ca/images/toronto-home-inspection-hero.webp",
+  "image": "https://www.asads.ca/images/toronto-home-inspection-hero.webp",
   "description": "Professional home inspection services in the Greater Toronto Area since 2009. Certified inspectors providing comprehensive property assessments with same-day reports.",
   "foundingDate": "2015",
   "foundingLocation": {
@@ -85,8 +85,11 @@ const organizationSchema = {
     }
   ],
   "sameAs": [
-    "https://www.facebook.com/ASADSHomeInspection",
-    "https://www.instagram.com/asads_home_inspection"
+    "https://www.facebook.com/share/1ZhWQk97YY/",
+    "https://www.instagram.com/asads_home_inspection",
+    "https://youtube.com/@asadshomeinspection",
+    "https://x.com/AsadsInspection",
+    "https://tiktok.com/@asads_home_inspection"
   ]
 };
 
@@ -98,13 +101,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://asads.ca/"
+      "item": "https://www.asads.ca/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "About Us",
-      "item": "https://asads.ca/about"
+      "item": "https://www.asads.ca/about/"
     }
   ]
 };
@@ -218,17 +221,15 @@ export default function About() {
                 Our Story
               </h2>
               <div className="space-y-4 text-muted-foreground">
-              <p>
-              <p>
-  <strong>ASADS Home Inspection</strong> was founded in 2015 by Haroon Choudhry, a former construction professional who saw a need for more thorough, client-focused <strong>home inspections in the Greater Toronto Area</strong>.
-</p>
-<p>
-  Drawing on years of experience in <strong>residential construction</strong>, Haroon noticed that many GTA home buyers were not getting a complete picture of their potential investment. He established ASADS with a singular mission: providing <strong>comprehensive home inspection reports</strong> and educational walk-throughs that empower homeowners to make confident, informed decisions.
-</p>
-<p>
-  Today, our team of <strong>certified home inspectors</strong> has successfully completed over 2,000 inspections across <strong>Toronto, Mississauga, Brampton, and the surrounding GTA</strong>. We take pride in helping everyone from first-time buyers to seasoned investors protect their assets through professional property evaluations.
-</p>
-
+                <p>
+                  <strong>ASADS Home Inspection</strong> was founded in 2015 by Haroon Choudhry, a former construction professional who saw a need for more thorough, client-focused <strong>home inspections in the Greater Toronto Area</strong>.
+                </p>
+                <p>
+                  Drawing on years of experience in <strong>residential construction</strong>, Haroon noticed that many GTA home buyers were not getting a complete picture of their potential investment. He established ASADS with a singular mission: providing <strong>comprehensive home inspection reports</strong> and educational walk-throughs that empower homeowners to make confident, informed decisions.
+                </p>
+                <p>
+                  Today, our team of <strong>certified home inspectors</strong> has successfully completed over 2,000 inspections across <strong>Toronto, Mississauga, Brampton, and the surrounding GTA</strong>. We take pride in helping everyone from first-time buyers to seasoned investors protect their assets through professional property evaluations.
+                </p>
               </div>
             </div>
             <div className="relative">

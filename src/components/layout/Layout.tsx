@@ -70,42 +70,15 @@ const localBusinessSchema = {
       "name": "Toronto",
       "sameAs": "https://en.wikipedia.org/wiki/Toronto"
     },
-    {
-      "@type": "City",
-      "name": "Mississauga"
-    },
-    {
-      "@type": "City",
-      "name": "Brampton"
-    },
-    {
-      "@type": "City",
-      "name": "Markham"
-    },
-    {
-      "@type": "City",
-      "name": "Vaughan"
-    },
-    {
-      "@type": "City",
-      "name": "Richmond Hill"
-    },
-    {
-      "@type": "City",
-      "name": "Oakville"
-    },
-    {
-      "@type": "City",
-      "name": "Burlington"
-    },
-    {
-      "@type": "City",
-      "name": "Hamilton"
-    },
-    {
-      "@type": "City",
-      "name": "Oshawa"
-    },
+    { "@type": "City", "name": "Mississauga" },
+    { "@type": "City", "name": "Brampton" },
+    { "@type": "City", "name": "Markham" },
+    { "@type": "City", "name": "Vaughan" },
+    { "@type": "City", "name": "Richmond Hill" },
+    { "@type": "City", "name": "Oakville" },
+    { "@type": "City", "name": "Burlington" },
+    { "@type": "City", "name": "Hamilton" },
+    { "@type": "City", "name": "Oshawa" },
     {
       "@type": "GeoCircle",
       "geoMidpoint": {
@@ -133,7 +106,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Pre-Purchase Home Inspection",
-          "url": `${SITE_URL}/services/pre-purchase`
+          "url": `${SITE_URL}/services/pre-purchase/`
         }
       },
       {
@@ -141,7 +114,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Pre-Listing Inspection",
-          "url": `${SITE_URL}/services/pre-listing`
+          "url": `${SITE_URL}/services/pre-listing/`
         }
       },
       {
@@ -149,7 +122,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Condo Inspection",
-          "url": `${SITE_URL}/services/condo`
+          "url": `${SITE_URL}/services/condo/`
         }
       },
       {
@@ -157,7 +130,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Commercial Inspection",
-          "url": `${SITE_URL}/services/commercial`
+          "url": `${SITE_URL}/services/commercial/`
         }
       },
       {
@@ -165,7 +138,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Radon Testing",
-          "url": `${SITE_URL}/services/radon-testing`
+          "url": `${SITE_URL}/services/radon-testing/`
         }
       },
       {
@@ -173,7 +146,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Mold Inspection",
-          "url": `${SITE_URL}/services/mold-inspection`
+          "url": `${SITE_URL}/services/mold-inspection/`
         }
       }
     ]
@@ -186,9 +159,11 @@ const localBusinessSchema = {
     "worstRating": "1"
   },
   "sameAs": [
-    "https://www.facebook.com/ASADSHomeInspection",
+    "https://www.facebook.com/share/1ZhWQk97YY/",
     "https://www.instagram.com/asads_home_inspection",
-    "https://www.google.com/maps?cid=ASADS_GOOGLE_PLACE_ID"
+    "https://youtube.com/@asadshomeinspection",
+    "https://x.com/AsadsInspection",
+    "https://tiktok.com/@asads_home_inspection"
   ]
 };
 

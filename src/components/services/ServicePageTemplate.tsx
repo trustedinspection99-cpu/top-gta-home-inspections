@@ -168,6 +168,22 @@ export function ServicePageTemplate({
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={serviceUrl} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={serviceUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="ASADS Home Inspection" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:image" content={`${SITE_URL}/og-image.jpg`} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AsadsInspection" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}
         </script>

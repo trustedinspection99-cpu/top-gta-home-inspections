@@ -11,13 +11,13 @@ export default function Hamilton() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Hamilton | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Hamilton. Serving Ancaster, Dundas, Stoney Creek & all areas. Call (647) 801-9311!" />
+        <title>Hamilton Home Inspector | Older Home & Condo Audit</title>
+        <meta name="description" content="Expert inspections for Hamilton's century homes, mountain properties & modern condos. 15+ years experience. Call (647) 801-9311." />
       </Helmet>
       <LocationPageTemplate
         city="Hamilton"
-        region="Ontario"
-        description="Hamilton's trusted home inspection experts. From Ancaster to Stoney Creek, we provide comprehensive inspections throughout the entire city."
+        region="Hamilton Region"
+        description="Hamilton's most experienced home inspection team. From century homes in the North End to new construction in Binbrook, we understand the diverse housing stock across the mountain, waterfront, and suburban communities. Our inspectors are trained to identify issues common to Hamilton's older properties including knob-and-tube wiring, stone foundations, and heritage construction methods."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

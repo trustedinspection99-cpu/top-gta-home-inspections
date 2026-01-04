@@ -10,13 +10,13 @@ export default function Beaverton() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Beaverton | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Beaverton. Lake Simcoe waterfront specialists. Call (647) 801-9311!" />
+        <title>Beaverton Home Inspector | Lake Simcoe Specialist</title>
+        <meta name="description" content="Certified inspections for Beaverton waterfront and cottage properties. We understand Lake Simcoe homes. Call (647) 801-9311." />
       </Helmet>
       <LocationPageTemplate
         city="Beaverton"
-        region="Ontario"
-        description="Beaverton's reliable home inspection experts. We specialize in Lake Simcoe waterfront properties and serve all Brock Township areas."
+        region="Brock Township"
+        description="Beaverton's waterfront property inspection specialists. From seasonal cottages to year-round Lake Simcoe homes, our certified inspectors understand the unique challenges of lakeside properties including dock systems, moisture control, and seasonal home preparation."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />
