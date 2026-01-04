@@ -10,13 +10,13 @@ export default function Thorold() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Thorold | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Thorold. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Thorold Home Inspector | Niagara Region | ASADS</title>
+        <meta name="description" content="Thorold home inspections near Welland Canal. Niagara Escarpment property experts. Book now: (647) 801-9311." />
       </Helmet>
       <LocationPageTemplate
         city="Thorold"
-        region="Ontario"
-        description="Thorold's trusted home inspection professionals. We serve all Thorold neighborhoods with thorough property inspections."
+        region="Niagara Region"
+        description="Thorold's home inspection specialists. We serve the Welland Canal corridor from Port Robinson to Allanburg, with expertise in Niagara Escarpment properties. Our inspectors understand the unique foundation and drainage considerations of homes built along the canal and escarpment."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

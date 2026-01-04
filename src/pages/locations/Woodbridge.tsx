@@ -10,13 +10,13 @@ export default function Woodbridge() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Woodbridge | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Woodbridge, Vaughan. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Woodbridge Home Inspector | Vaughan Expert | ASADS</title>
+        <meta name="description" content="Woodbridge home inspections in Vaughan's established communities. Vellore to Weston Downs coverage. Call (647) 801-9311." />
       </Helmet>
       <LocationPageTemplate
         city="Woodbridge"
-        region="Ontario"
-        description="Woodbridge's trusted home inspection professionals. We serve all Woodbridge neighborhoods with thorough inspections and detailed reports."
+        region="Vaughan"
+        description="Woodbridge's trusted home inspection experts. From established Weston Downs and Islington Woods to new developments in Vellore, we provide thorough inspections across Vaughan's most sought-after communities. Our local knowledge ensures nothing is overlooked."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />
