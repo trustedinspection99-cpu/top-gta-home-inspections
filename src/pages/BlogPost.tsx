@@ -200,7 +200,7 @@ export default function BlogPost() {
                   <div className="flex gap-3">
                     <Button variant="outline" size="icon" asChild>
                       <a 
-                        href={`https://www.facebook.com/sharer/sharer.php?u=https://asads.ca/blog/${post.slug}`}
+                        href={`https://www.facebook.com/sharer/sharer.php?u=https://www.asads.ca/blog/${post.slug}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Share on Facebook"
@@ -210,7 +210,7 @@ export default function BlogPost() {
                     </Button>
                     <Button variant="outline" size="icon" asChild>
                       <a 
-                        href={`https://twitter.com/intent/tweet?url=https://asads.ca/blog/${post.slug}&text=${encodeURIComponent(post.title)}`}
+                        href={`https://twitter.com/intent/tweet?url=https://www.asads.ca/blog/${post.slug}&text=${encodeURIComponent(post.title)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Share on Twitter"
@@ -220,7 +220,7 @@ export default function BlogPost() {
                     </Button>
                     <Button variant="outline" size="icon" asChild>
                       <a 
-                        href={`https://www.linkedin.com/shareArticle?mini=true&url=https://asads.ca/blog/${post.slug}&title=${encodeURIComponent(post.title)}`}
+                        href={`https://www.linkedin.com/shareArticle?mini=true&url=https://www.asads.ca/blog/${post.slug}&title=${encodeURIComponent(post.title)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Share on LinkedIn"
