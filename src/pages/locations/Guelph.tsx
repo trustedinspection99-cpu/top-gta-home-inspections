@@ -10,13 +10,13 @@ export default function Guelph() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Guelph | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Guelph. Certified inspectors, same-day reports. Call (647) 801-9311!" />
+        <title>Guelph Home Inspector | Heritage & Modern Homes</title>
+        <meta name="description" content="Certified inspections for Guelph homes. Experts in stone heritage buildings and new construction. Same-day reports. Call (647) 801-9311." />
       </Helmet>
       <LocationPageTemplate
         city="Guelph"
-        region="Ontario"
-        description="Guelph's trusted home inspection experts. We serve all Guelph neighborhoods with comprehensive inspections and same-day reports."
+        region="Wellington County"
+        description="Guelph's trusted home inspection experts. Our inspectors have extensive experience with the city's unique limestone heritage buildings, university-area rentals, and growing new developments in south Guelph. We understand the specific challenges of Guelph's housing market, from century-home foundations to modern subdivision construction."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

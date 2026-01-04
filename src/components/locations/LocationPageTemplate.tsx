@@ -209,10 +209,29 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
     "Locally owned & operated",
   ];
 
+  // Generate unique location-specific intro paragraph
+  const locationIntro = `Looking for a certified home inspector in ${city}? ASADS provides comprehensive property inspections throughout ${city} and ${region}, helping buyers and sellers make informed decisions. Our local expertise means we understand the specific housing challenges in your area.`;
+
   return (
     <Layout>
       <Helmet>
         <link rel="canonical" href={locationUrl} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`Home Inspection ${city} | ASADS`} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={locationUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="ASADS Home Inspection" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:image" content={`${getCanonicalUrl("/")}/og-image.jpg`} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AsadsInspection" />
+        <meta name="twitter:title" content={`Home Inspection ${city} | ASADS`} />
+        <meta name="twitter:description" content={description} />
+        
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}
         </script>
@@ -279,7 +298,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
               Our Services in {city}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Comprehensive home inspection services for buyers, sellers, and property owners throughout {city}.
+              {locationIntro}
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">

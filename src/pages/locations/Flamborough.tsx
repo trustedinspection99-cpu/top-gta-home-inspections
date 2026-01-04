@@ -10,13 +10,13 @@ export default function Flamborough() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Flamborough | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Flamborough. Serving Waterdown, Carlisle & rural properties. Call (647) 801-9311!" />
+        <title>Flamborough Home Inspector | Rural Property Audit</title>
+        <meta name="description" content="Expert inspections for Flamborough's rural properties and Waterdown homes. We assess wells, septics & heritage structures. Call (647) 801-9311." />
       </Helmet>
       <LocationPageTemplate
         city="Flamborough"
-        region="Ontario"
-        description="Flamborough's trusted home inspection service. We serve Waterdown, Carlisle, and all Flamborough communities with expert inspections."
+        region="Hamilton Region"
+        description="Flamborough's rural property specialists. From historic farmhouses in Carlisle to modern Waterdown subdivisions, we provide thorough inspections that account for private well systems, septic tanks, and the unique construction found in Hamilton's countryside communities."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

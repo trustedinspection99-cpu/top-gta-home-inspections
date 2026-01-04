@@ -10,13 +10,13 @@ export default function Beamsville() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Beamsville | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Beamsville. Wine country specialists. Call (647) 801-9311!" />
+        <title>Beamsville Home Inspector | Wine Country Specialist</title>
+        <meta name="description" content="Expert home inspections in Beamsville's wine country. We understand Niagara Escarpment properties and rural estates. Call (647) 801-9311." />
       </Helmet>
       <LocationPageTemplate
         city="Beamsville"
-        region="Ontario"
-        description="Beamsville's trusted home inspection service. We serve Beamsville, Vineland, Jordan, and all Niagara wine country communities."
+        region="Lincoln, Niagara"
+        description="Beamsville and Niagara wine country specialists. Our inspectors have deep experience with the unique properties along the Niagara Escarpment—from vineyard estates and historic farmhouses to modern developments in Vineland and Jordan. We understand the region's soil, drainage, and construction patterns."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />
