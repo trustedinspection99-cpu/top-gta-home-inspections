@@ -148,7 +148,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
         "@type": "ListItem",
         "position": 2,
         "name": "Locations",
-        "item": getCanonicalUrl("/locations")
+        "item": getCanonicalUrl("/locations/")
       },
       {
         "@type": "ListItem",
@@ -263,7 +263,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary" asChild>
-                <Link to={normalizePath("/contact")}>Book Online</Link>
+                <Link to={normalizePath("/contact/")}>Book Online</Link>
               </Button>
             </div>
           </div>
@@ -311,7 +311,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
           </div>
           <div className="mt-8 text-center">
             <Button variant="outline" className="gap-2" asChild>
-              <Link to={normalizePath("/services")}>
+              <Link to={normalizePath("/services/")}>
                 View All Services
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -351,7 +351,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
               </div>
               <div className="mt-6">
                 <Button variant="outline" size="sm" className="gap-2" asChild>
-                  <Link to={normalizePath("/locations")}>
+                  <Link to={normalizePath("/locations/")}>
                     <MapPin className="h-4 w-4" />
                     View All Locations
                   </Link>
@@ -422,7 +422,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
           </div>
           <div className="mt-8 text-center">
             <Button variant="outline" className="gap-2" asChild>
-              <Link to={normalizePath("/locations")}>
+              <Link to={normalizePath("/locations/")}>
                 View All {allLocations.length} Locations
                 <ArrowRight className="h-4 w-4" />
               </Link>
