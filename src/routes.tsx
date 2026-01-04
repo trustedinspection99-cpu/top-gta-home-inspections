@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import type { RouteRecord } from 'vite-react-ssg';
 import { blogPostsData } from './data/blogPosts';
 import { Toaster } from "@/components/ui/toaster";
@@ -9,10 +9,10 @@ import { HelmetProvider } from "react-helmet-async";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Outlet } from 'react-router-dom';
 
-const queryClient = new QueryClient();
-
 // Root layout wrapper with all providers
 function RootLayout() {
+  const [queryClient] = React.useState(() => new QueryClient());
+  
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
