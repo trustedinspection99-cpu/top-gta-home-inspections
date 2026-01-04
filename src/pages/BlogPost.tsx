@@ -56,19 +56,19 @@ export default function BlogPost() {
     "author": {
       "@type": "Person",
       "name": post.author,
-      "url": "https://asads.ca/about"
+      "url": "https://www.asads.ca/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "ASADS Home Inspection",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://asads.ca/logo.png"
+        "url": "https://www.asads.ca/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://asads.ca/blog/${post.slug}`
+      "@id": `https://www.asads.ca/blog/${post.slug}`
     },
     "articleSection": post.category,
     "wordCount": post.content.split(/\s+/).length,
@@ -84,19 +84,19 @@ export default function BlogPost() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://asads.ca/"
+        "item": "https://www.asads.ca/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://asads.ca/blog"
+        "item": "https://www.asads.ca/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": post.title,
-        "item": `https://asads.ca/blog/${post.slug}`
+        "item": `https://www.asads.ca/blog/${post.slug}`
       }
     ]
   };
@@ -106,7 +106,7 @@ export default function BlogPost() {
       <Helmet>
         <title>{post.metaTitle}</title>
         <meta name="description" content={post.metaDescription} />
-        <link rel="canonical" href={`https://asads.ca/blog/${post.slug}`} />
+        <link rel="canonical" href={`https://www.asads.ca/blog/${post.slug}`} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={post.image} />
