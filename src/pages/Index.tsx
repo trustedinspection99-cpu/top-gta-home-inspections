@@ -1,8 +1,5 @@
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
-import { HeroSection } from "@/components/home/HeroSection";
-import { StatsSection } from "@/components/home/StatsSection";
-import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { TrustBadges } from "@/components/home/TrustBadges";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { CTASection } from "@/components/home/CTASection";
@@ -50,7 +47,14 @@ const Index = () => {
   return (
     <Layout>
       {/* Google Tag Manager (noscript) */}
-      <noscript>{`<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB43TTTB" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}</noscript>
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-NB43TTTB"
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+        />
+      </noscript>
 
       <Helmet>
         {/* Google Tag Manager */}
@@ -62,7 +66,6 @@ const Index = () => {
           })(window,document,'script','dataLayer','GTM-NB43TTTB');`}
         </script>
 
-        {/* Page Title & Meta */}
         <title>Home Inspection Toronto & GTA | Certified Inspectors | ASADS</title>
         <meta
           name="description"
@@ -70,7 +73,7 @@ const Index = () => {
         />
         <link rel="canonical" href={`${SITE_URL}/`} />
 
-        {/* Open Graph / Facebook */}
+        {/* Open Graph */}
         <meta property="og:title" content="Home Inspection Toronto & GTA | ASADS" />
         <meta
           property="og:description"
@@ -94,44 +97,46 @@ const Index = () => {
 
         {/* JSON-LD FAQ */}
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-
-        {/* Facebook Pixel */}
-        <script>
-          {`!function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', 'YOUR_PIXEL_ID');
-          fbq('track', 'PageView');`}
-        </script>
-        <noscript>{`<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" />`}</noscript>
       </Helmet>
 
       {/* Hero Section */}
-      <HeroSection
-        h1="Protect Your Investment with Expert Home Inspections"
-        subtitle="Comprehensive home inspection services throughout the Greater Toronto Area. Get detailed reports, expert insights, and peace of mind before you buy or sell."
-        highlights={[
-          "Certified & Insured Inspectors",
-          "Same-Day Reports Available",
-          "Serving All GTA Areas",
-          "Book Your Inspection: (647) 801-9311"
-        ]}
-      />
+      <section className="hero py-16 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          Protect Your Investment with Expert Home Inspections
+        </h1>
+        <p className="text-lg mb-6">
+          Comprehensive home inspection services throughout the Greater Toronto Area. Get detailed reports, expert insights, and peace of mind before you buy or sell.
+        </p>
+        <ul className="flex flex-wrap justify-center gap-4 text-sm md:text-base mb-6">
+          <li>✅ Certified & Insured Inspectors</li>
+          <li>✅ Same-Day Reports Available</li>
+          <li>✅ Serving All GTA Areas</li>
+          <li>✅ Book Your Inspection: (647) 801-9311</li>
+        </ul>
+      </section>
 
       {/* Stats Section */}
-      <StatsSection
-        stats={[
-          { h3: "2,000+", label: "Inspections Completed" },
-          { h3: "10+", label: "Years Experience" },
-          { h3: "98%", label: "Client Satisfaction" },
-          { h3: "24hr", label: "Report Delivery" }
-        ]}
-      />
+      <section className="stats py-12 text-center bg-gray-50">
+        <h2 className="text-3xl font-bold mb-6">Our Stats</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
+            <h3 className="text-2xl font-bold">2,000+</h3>
+            <p>Inspections Completed</p>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold">10+</h3>
+            <p>Years Experience</p>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold">98%</h3>
+            <p>Client Satisfaction</p>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold">24hr</h3>
+            <p>Report Delivery</p>
+          </div>
+        </div>
+      </section>
 
       {/* Trust Badges */}
       <TrustBadges
@@ -147,41 +152,51 @@ const Index = () => {
         ]}
       />
 
-      {/* Services Overview */}
-      <ServicesOverview
-        services={[
-          {
-            h2: "Pre-Purchase Inspection",
-            description: "Complete evaluation before you buy. Identify issues and negotiate with confidence.",
-          },
-          {
-            h2: "Pre-Listing Inspection",
-            description: "Sell your home faster with a pre-listing inspection that builds buyer trust.",
-          },
-          {
-            h2: "New Construction",
-            description: "Verify builder quality and catch defects before your final walkthrough.",
-          },
-          {
-            h2: "Condo Inspection",
-            description: "Specialized inspections for condos, townhomes, and stacked units.",
-          },
-          {
-            h2: "Commercial Inspection",
-            description: "Comprehensive assessments for commercial and investment properties.",
-          },
-          {
-            h2: "Specialty Services",
-            description: "Radon Testing, Mold Inspection, Thermal Imaging, Air Quality Testing, WETT Inspection, Asbestos Testing, Lead Paint Testing, Well Water Testing, Sewer Scope",
-          }
-        ]}
-      />
+      {/* Services Section */}
+      <section className="services py-16">
+        <h2 className="text-3xl font-bold mb-8 text-center">Comprehensive Inspection Services</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <article>
+            <h3 className="text-2xl font-semibold mb-2">Pre-Purchase Inspection</h3>
+            <p>Complete evaluation before you buy. Identify issues and negotiate with confidence.</p>
+          </article>
+          <article>
+            <h3 className="text-2xl font-semibold mb-2">Pre-Listing Inspection</h3>
+            <p>Sell your home faster with a pre-listing inspection that builds buyer trust.</p>
+          </article>
+          <article>
+            <h3 className="text-2xl font-semibold mb-2">New Construction</h3>
+            <p>Verify builder quality and catch defects before your final walkthrough.</p>
+          </article>
+          <article>
+            <h3 className="text-2xl font-semibold mb-2">Condo Inspection</h3>
+            <p>Specialized inspections for condos, townhomes, and stacked units.</p>
+          </article>
+          <article>
+            <h3 className="text-2xl font-semibold mb-2">Commercial Inspection</h3>
+            <p>Comprehensive assessments for commercial and investment properties.</p>
+          </article>
+          <article>
+            <h3 className="text-2xl font-semibold mb-2">Specialty Services</h3>
+            <p>Radon Testing, Mold Inspection, Thermal Imaging, Air Quality Testing, WETT Inspection, Asbestos Testing, Lead Paint Testing, Well Water Testing, Sewer Scope</p>
+          </article>
+        </div>
+      </section>
 
       {/* Testimonials */}
       <TestimonialsSection />
 
       {/* Call to Action */}
       <CTASection />
+
+      {/* Hidden Social Links */}
+      <section className="hidden">
+        <a href="https://youtube.com/@asadshomeinspection" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/asads_home_inspection" target="_blank">Instagram</a>
+        <a href="https://x.com/AsadsInspection" target="_blank">X / Twitter</a>
+        <a href="https://www.facebook.com/share/1ZhWQk97YY/" target="_blank">Facebook</a>
+        <a href="https://www.tiktok.com/@asads_home_inspection" target="_blank">TikTok</a>
+      </section>
     </Layout>
   );
 };
