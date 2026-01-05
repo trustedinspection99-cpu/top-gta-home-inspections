@@ -275,87 +275,184 @@ export default function About() {
 </section>
 
 
-      {/* Our Values */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Accuracy, Transparency & Experience
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              These principles guide everything we do, from our inspection process to how we interact with clients.
-            </p>
-          </div>
+{/* Our Values - Professionalized & Fixed for Haroon Choudhry */}
+<section className="py-16 md:py-24 bg-muted/30">
+  <div className="container">
+    <div className="text-center max-w-3xl mx-auto mb-12">
+      <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
+        Accuracy, Transparency & Experience
+      </h2>
+      <p className="text-lg text-muted-foreground">
+        Guided by over 15 years of hands-on structural expertise in the Greater Toronto Area.
+      </p>
+    </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <Card 
-                key={value.title} 
-                className="text-center border-border/50 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="pt-8 pb-6">
-                  <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="h-7 w-7 text-primary" />
-                  </div>
-                  <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
-                    Licensed & Insured Inspectors
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      {/* Box 1: Structural Expertise */}
+      <Card className="text-center border-border/50 hover:border-primary/50 transition-colors shadow-sm">
+        <CardContent className="pt-8 pb-6 px-4">
+          <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+            <ShieldCheck className="h-7 w-7 text-primary" />
+          </div>
+          <h3 className="font-heading font-bold text-lg text-foreground mb-3 leading-tight">
+            Structural & MEP Expertise
+          </h3>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Leveraging 15+ years of general contracting experience to identify critical structural, electrical, and plumbing issues.
+          </p>
+        </CardContent>
+      </Card>
+
+      {/* Box 2: Code Compliance */}
+      <Card className="text-center border-border/50 hover:border-primary/50 transition-colors shadow-sm">
+        <CardContent className="pt-8 pb-6 px-4">
+          <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+            <Search className="h-7 w-7 text-primary" />
+          </div>
+          <h3 className="font-heading font-bold text-lg text-foreground mb-3 leading-tight">
+            OBC Code Compliance
+          </h3>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Expert knowledge of the Ontario Building Code (OBC) ensures your property meets all legal and safety requirements.
+          </p>
+        </CardContent>
+      </Card>
+
+      {/* Box 3: Technical Reporting */}
+      <Card className="text-center border-border/50 hover:border-primary/50 transition-colors shadow-sm">
+        <CardContent className="pt-8 pb-6 px-4">
+          <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+            <FileText className="h-7 w-7 text-primary" />
+          </div>
+          <h3 className="font-heading font-bold text-lg text-foreground mb-3 leading-tight">
+            Photographic Reporting
+          </h3>
+          <p className="text-sm text-muted-relaxed">
+            Delivering high-quality, technical reports with actionable insights to empower your investment decisions.
+          </p>
+        </CardContent>
+      </Card>
+
+      {/* Box 4: Master Inspector Authority */}
+      <Card className="text-center border-border/50 hover:border-primary/50 transition-colors shadow-sm">
+        <CardContent className="pt-8 pb-6 px-4">
+          <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+            <UserCheck className="h-7 w-7 text-primary" />
+          </div>
+          <h3 className="font-heading font-bold text-lg text-foreground mb-3 leading-tight">
+            Master Inspector Lead
+          </h3>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            As a Master Inspector, my loyalty is to your safety. We move beyond surface-level observations to protect your asset.
+          </p>
+        </CardContent>
+      </Card>
+
+    </div>
+  </div>
+</section>
+
+
+      {/* Team Section - SEO Optimized & Founder Focused */}
+<section className="py-16 md:py-24 bg-background" aria-labelledby="team-heading">
+  <div className="container">
+    <div className="text-center max-w-3xl mx-auto mb-12">
+      <h2 id="team-heading" className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
+        Serving Ontario Buyers, Sellers & Investors
+      </h2>
+      <p className="text-lg text-muted-foreground">
+        Our certified Master Inspectors bring decades of structural and technical experience to every property assessment.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      
+      {/* Member 1: Haroon Choudhry */}
+      <Card className="overflow-hidden border-border/50 shadow-sm hover:shadow-md transition-shadow">
+        <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-blue-600/10 flex items-center justify-center relative">
+          <div className="h-24 w-24 rounded-full bg-white shadow-inner flex items-center justify-center border-4 border-primary/20">
+            <Users className="h-12 w-12 text-primary" />
+          </div>
+          <div className="absolute bottom-4 right-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest">
+            Founder
           </div>
         </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Serving Ontario Buyers, Sellers & Investors
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Our certified inspectors bring decades of combined experience to every inspection.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <Card 
-                key={member.name}
-                className="overflow-hidden border-border/50 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                  <div className="h-24 w-24 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Users className="h-12 w-12 text-primary" />
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="font-heading font-semibold text-xl text-foreground mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-primary font-medium text-sm mb-2">{member.role}</p>
-                  <p className="text-muted-foreground text-sm mb-4">{member.experience}</p>
-                  <p className="text-muted-foreground text-sm mb-4">{member.bio}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {member.certifications.map((cert) => (
-                      <span 
-                        key={cert}
-                        className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium"
-                      >
-                        {cert}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+        <CardContent className="p-6">
+          <h3 className="font-heading font-bold text-xl text-foreground mb-1">
+            Haroon Choudhry
+          </h3>
+          <p className="text-primary font-bold text-sm mb-2 uppercase tracking-wide">Master Inspector & Founder</p>
+          <p className="text-foreground font-semibold text-sm mb-2 italic">15+ Years Experience</p>
+          <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+            Haroon founded ASADS with a mission to provide GTA homeowners with unmatched expertise. Having completed over 2,000 inspections, he leverages his background in structural restoration to identify issues others miss.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {["OAHI", "InterNACHI", "WETT", "OBC Expert"].map((cert) => (
+              <span key={cert} className="text-[10px] px-2 py-1 rounded-full bg-primary/10 text-primary font-bold uppercase">
+                {cert}
+              </span>
             ))}
           </div>
+        </CardContent>
+      </Card>
+
+      {/* Member 2: Kapil Sharma */}
+      <Card className="overflow-hidden border-border/50 shadow-sm hover:shadow-md transition-shadow">
+        <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
+          <div className="h-24 w-24 rounded-full bg-white shadow-inner flex items-center justify-center border-4 border-slate-300">
+            <Users className="h-12 w-12 text-slate-400" />
+          </div>
         </div>
-      </section>
+        <CardContent className="p-6">
+          <h3 className="font-heading font-bold text-xl text-foreground mb-1">
+            Kapil Sharma
+          </h3>
+          <p className="text-primary font-bold text-sm mb-2 uppercase tracking-wide">Senior Inspector</p>
+          <p className="text-foreground font-semibold text-sm mb-2 italic">10+ Years Experience</p>
+          <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+            Kapil specializes in thermal imaging and advanced moisture detection. His meticulous attention to detail has helped countless clients avoid costly structural repairs through proactive identification.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {["OAHI", "Thermal Imaging", "Mold Certified"].map((cert) => (
+              <span key={cert} className="text-[10px] px-2 py-1 rounded-full bg-slate-100 text-slate-600 font-bold uppercase border">
+                {cert}
+              </span>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Member 3: Rashid Hussain */}
+      <Card className="overflow-hidden border-border/50 shadow-sm hover:shadow-md transition-shadow">
+        <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
+          <div className="h-24 w-24 rounded-full bg-white shadow-inner flex items-center justify-center border-4 border-slate-300">
+            <Users className="h-12 w-12 text-slate-400" />
+          </div>
+        </div>
+        <CardContent className="p-6">
+          <h3 className="font-heading font-bold text-xl text-foreground mb-1">
+            Rashid Hussain
+          </h3>
+          <p className="text-primary font-bold text-sm mb-2 uppercase tracking-wide">Commercial Inspector</p>
+          <p className="text-foreground font-semibold text-sm mb-2 italic">12+ Years Experience</p>
+          <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+            Rashid leads our commercial division, specializing in multi-unit residential complexes and commercial facility assessments, ensuring large-scale investments meet strict municipal standards.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {["InterNACHI", "Commercial Facility Expert"].map((cert) => (
+              <span key={cert} className="text-[10px] px-2 py-1 rounded-full bg-slate-100 text-slate-600 font-bold uppercase border">
+                {cert}
+              </span>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+
+    </div>
+  </div>
+</section>
+
 
       {/* Certifications */}
       <section className="py-16 md:py-24 bg-primary text-primary-foreground">
