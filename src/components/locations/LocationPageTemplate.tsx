@@ -230,6 +230,101 @@ export function LocationPageTemplate({
             ))}
           </ul>
         </section>
+        {/* In-Depth Home Inspection Articles (SEO Content Layer) */}
+<section className="inspection-articles my-16 px-6 max-w-5xl mx-auto">
+  <h2 className="text-3xl font-bold mb-8">
+    Home Inspection Insights in {city}
+  </h2>
+
+  {/* Article 1 */}
+  <article className="mb-12">
+    <h3 className="text-2xl font-semibold mb-3">
+      Top Tips for Pre-Purchase Inspections in {city}
+    </h3>
+    <p className="text-gray-700 mb-4">
+      Buying a home in {city} is a major investment. A professional pre-purchase
+      home inspection helps uncover hidden issues that may not be visible during
+      a showing. Our certified inspectors evaluate roofing, structure, plumbing,
+      electrical systems, HVAC, insulation, and more to ensure you make an informed
+      decision.
+    </p>
+
+    <h4 className="text-xl font-semibold mb-2">
+      Why a Pre-Purchase Inspection Matters
+    </h4>
+    <p className="text-gray-700 mb-3">
+      Homes in {city} can experience issues related to moisture, aging building
+      materials, foundation settlement, and ventilation. Identifying problems
+      early can help buyers negotiate repairs, avoid costly surprises, and plan
+      future maintenance with confidence.
+    </p>
+
+    <Link
+      to="/services/pre-purchase/"
+      className="text-primary underline font-medium"
+    >
+      Learn more about Pre-Purchase Inspections
+    </Link>
+  </article>
+
+  {/* Article 2 */}
+  <article className="mb-12">
+    <h3 className="text-2xl font-semibold mb-3">
+      How to Prepare Your Home for a Pre-Listing Inspection in {city}
+    </h3>
+    <p className="text-gray-700 mb-4">
+      A pre-listing inspection allows sellers in {city} to identify and address
+      potential concerns before putting their home on the market. This proactive
+      approach can increase buyer confidence and reduce last-minute negotiations.
+    </p>
+
+    <h4 className="text-xl font-semibold mb-2">
+      Steps to Get Ready for a Pre-Listing Inspection
+    </h4>
+    <ul className="list-disc pl-6 text-gray-700 mb-4">
+      <li>Ensure utilities (water, gas, electricity) are turned on</li>
+      <li>Clear access to attic hatches, electrical panels, and crawlspaces</li>
+      <li>Repair minor visible issues such as leaks or damaged fixtures</li>
+      <li>Replace burnt-out light bulbs and HVAC filters</li>
+    </ul>
+
+    <Link
+      to="/services/pre-listing/"
+      className="text-primary underline font-medium"
+    >
+      Learn more about Pre-Listing Inspections
+    </Link>
+  </article>
+
+  {/* Article 3 */}
+  <article>
+    <h3 className="text-2xl font-semibold mb-3">
+      Understanding Mold Risks in {city} Homes
+    </h3>
+    <p className="text-gray-700 mb-4">
+      Mold is a common concern in homes throughout {city}, especially in basements,
+      bathrooms, and areas with poor ventilation. Undetected moisture problems can
+      lead to mold growth that affects indoor air quality and occupant health.
+    </p>
+
+    <h4 className="text-xl font-semibold mb-2">
+      Common Mold Issues Found During Inspections
+    </h4>
+    <ul className="list-disc pl-6 text-gray-700 mb-4">
+      <li>Hidden plumbing leaks behind walls</li>
+      <li>High humidity and condensation in basements</li>
+      <li>Poor attic ventilation causing moisture buildup</li>
+      <li>Improper grading leading to water intrusion</li>
+    </ul>
+
+    <Link
+      to="/services/mold-inspection/"
+      className="text-primary underline font-medium"
+    >
+      Learn more about Mold Assessments
+    </Link>
+  </article>
+</section>
 
         {/* ================= SPECIALTY SERVICES ================= */}
         <section className="specialty-services py-12 px-6 bg-gray-50 mb-16">
