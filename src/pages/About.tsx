@@ -213,61 +213,67 @@ export default function About() {
       </section>
 
       
-      {/* Professional SEO-Optimized Story Section */}
-<section className="py-16 md:py-24 bg-background" aria-labelledby="story-heading">
+      {/* Professional & SEO-Optimized 'Our Story' Section */}
+<section className="py-16 md:py-24 bg-background" aria-labelledby="about-haroon">
   <div className="container">
     <div className="grid lg:grid-cols-2 gap-12 items-center">
-      <div className="space-y-6">
-        <h2 id="story-heading" className="font-heading text-3xl md:text-4xl font-bold text-foreground leading-tight">
+      <div className="order-2 lg:order-1">
+        <h2 id="about-haroon" className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
           Master Home Inspection & Structural Expertise in the GTA
         </h2>
         
-        <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+        <div className="space-y-5 text-muted-foreground text-lg">
           <p>
-            <strong>ASADS Home Inspection</strong> is led by Haroon Choudhry, a <strong>Master Home Inspector</strong> with over 15 years of hands-on experience in the Greater Toronto Area. 
-            As the former Owner and Principal Contractor of <strong>Aro Construction Inc.</strong>, Haroon brings a unique "inside-out" perspective to property safety and structural health.
+            <strong>ASADS Home Inspection</strong> is led by Haroon Choudhry, a <strong>Master Home Inspector</strong> with over 15 years of deep-rooted experience in the Greater Toronto Area’s construction and inspection sectors.
           </p>
 
           <p>
-            Specializing in both <strong>residential and commercial inspections</strong>, we provide technical clarity on building envelopes, structural integrity, and MEP (Mechanical, Electrical, and Plumbing) systems. 
-            Our assessments are rigorously aligned with the <strong>Ontario Building Code (OBC)</strong> and municipal standards to ensure complete legal and safety compliance.
+            With a professional foundation as the former Owner and Principal Contractor of <strong>Aro Construction Inc.</strong>, Haroon provides a rare "inside-out" perspective. His background in <strong>structural restorations</strong> and general contracting allows him to identify critical mechanical and structural issues that standard inspections often overlook.
           </p>
 
           <p>
-            With a track record of over <strong>1,000 comprehensive property assessments</strong>, we deliver high-detail, photographic reporting designed to empower homeowners and investors with actionable insights. 
-            Whether you are navigating a small-scale home purchase or a large commercial facility acquisition, our expertise ensures your investment is protected.
+            We specialize in high-detail <strong>residential and commercial inspections</strong>, ensuring every property remains in strict alignment with the <strong>Ontario Building Code (OBC)</strong> and municipal safety standards.
+          </p>
+
+          <p>
+            With a proven track record of over <strong>1,000 comprehensive property assessments</strong>, Haroon delivers technical clarity and actionable insights through professional, photographic reporting.
           </p>
         </div>
-        
-        {/* SEO Keywords Tag Cloud (Optional / Visual) */}
-        <div className="flex flex-wrap gap-2 pt-4">
-          {['Structural Integrity', 'OBC Compliance', 'MEP Systems', 'GTA Property Inspections', 'Technical Reporting'].map((tag) => (
-            <span key={tag} className="px-3 py-1 bg-secondary/10 text-secondary-foreground text-xs font-semibold rounded-md border border-secondary/20 uppercase tracking-wider">
-              {tag}
+
+        {/* SEO Keywords for Search Crawlers */}
+        <div className="flex flex-wrap gap-3 mt-8">
+          {["OBC Compliance", "Structural Integrity", "MEP Systems", "Building Envelopes", "Technical Reporting"].map((skill) => (
+            <span key={skill} className="bg-primary/5 text-primary border border-primary/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+              {skill}
             </span>
           ))}
         </div>
       </div>
 
-      <div className="relative group">
-        <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-        <div className="relative aspect-[4/3] bg-card border border-border rounded-2xl flex items-center justify-center shadow-2xl overflow-hidden">
-          <div className="text-center p-10">
-            <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <GraduationCap className="h-10 w-10 text-primary" />
+      <div className="order-1 lg:order-2 relative">
+        <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl blur-2xl"></div>
+        <div className="relative bg-card border border-border p-8 md:p-12 rounded-2xl shadow-xl text-center">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 text-primary mb-6">
+            <GraduationCap className="h-10 w-10" />
+          </div>
+          <h3 className="text-4xl font-bold text-foreground mb-2">15+ Years</h3>
+          <p className="text-muted-foreground font-semibold uppercase tracking-widest text-sm mb-6">Construction Advisory Experience</p>
+          
+          <div className="space-y-4 pt-6 border-t border-border">
+            <div className="flex items-center justify-center gap-2 text-primary font-bold">
+              <span className="h-2 w-2 bg-primary rounded-full"></span>
+              Ontario Building Code (OBC) Expert
             </div>
-            <p className="text-3xl font-heading font-bold text-foreground">15+ Years</p>
-            <p className="text-muted-foreground font-medium uppercase tracking-widest text-sm mb-4">Construction Advisory Experience</p>
-            <div className="pt-6 border-t border-border">
-              <p className="text-primary font-bold text-xl">Ontario Building Code (OBC) Expert</p>
-              <p className="text-sm text-muted-foreground mt-1">Serving Toronto, Mississauga & Brampton</p>
-            </div>
+            <p className="text-sm text-muted-foreground italic">
+              Serving Toronto, Mississauga, Brampton & the Greater Toronto Area
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
       {/* Our Values */}
       <section className="py-16 md:py-24 bg-muted/30">
