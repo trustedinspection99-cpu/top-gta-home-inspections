@@ -50,14 +50,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Google Tag Manager (noscript) */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-NB43TTTB"
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        />
-      </noscript>
+      <noscript>{`<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB43TTTB" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}</noscript>
 
       <Helmet>
         {/* Google Tag Manager */}
@@ -69,6 +62,7 @@ const Index = () => {
           })(window,document,'script','dataLayer','GTM-NB43TTTB');`}
         </script>
 
+        {/* Page Title & Meta */}
         <title>Home Inspection Toronto & GTA | Certified Inspectors | ASADS</title>
         <meta
           name="description"
@@ -114,15 +108,7 @@ const Index = () => {
           fbq('init', 'YOUR_PIXEL_ID');
           fbq('track', 'PageView');`}
         </script>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
+        <noscript>{`<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" />`}</noscript>
       </Helmet>
 
       {/* Hero Section */}
@@ -196,15 +182,6 @@ const Index = () => {
 
       {/* Call to Action */}
       <CTASection />
-
-      {/* Social Links Section (optional display somewhere in footer or hero) */}
-      <section className="hidden">
-        <a href="https://youtube.com/@asadshomeinspection" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/asads_home_inspection" target="_blank">Instagram</a>
-        <a href="https://x.com/AsadsInspection" target="_blank">X / Twitter</a>
-        <a href="https://www.facebook.com/share/1ZhWQk97YY/" target="_blank">Facebook</a>
-        <a href="https://www.tiktok.com/@asads_home_inspection" target="_blank">TikTok</a>
-      </section>
     </Layout>
   );
 };
