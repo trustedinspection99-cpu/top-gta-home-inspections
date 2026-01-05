@@ -16,7 +16,7 @@ export default function Collingwood() {
       <LocationPageTemplate
         city="Collingwood"
         region="Ontario"
-        description="Collingwood's premier home inspection service. We specialize in ski chalets, waterfront properties, and new construction in the Blue Mountain area."
+        description="Specialized inspections for seasonal homes, cottages, and chalets in Collingwood and the Blue Mountain area."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

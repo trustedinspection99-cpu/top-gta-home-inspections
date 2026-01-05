@@ -18,7 +18,7 @@ export default function Toronto() {
       <LocationPageTemplate
         city="Toronto"
         region="Ontario"
-        description="Toronto's trusted home inspection experts. We provide comprehensive inspections for buyers, sellers, and property owners across all Toronto neighborhoods."
+        description="Certified inspections for Toronto's older homes and modern condos. Same-day reports and thermal imaging included with every audit."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

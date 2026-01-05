@@ -10,13 +10,13 @@ export default function Clarington() {
   return (
     <>
       <Helmet>
-        <title>Home Inspection Clarington | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Clarington. Serving Bowmanville, Courtice & Newcastle. Call (647) 801-9311!" />
+        <title>Clarington Home Inspector | Rural & Well Specialist</title>
+        <meta name="description" content="Inspections in Clarington for rural homes, wells, and septic systems. Comprehensive reporting for detached properties." />
       </Helmet>
       <LocationPageTemplate
         city="Clarington"
         region="Ontario"
-        description="Clarington's dependable home inspection service. We serve Bowmanville, Courtice, Newcastle, and all Clarington communities."
+        description="Inspections in Clarington for rural homes, wells, and septic systems. Comprehensive reporting for detached properties."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

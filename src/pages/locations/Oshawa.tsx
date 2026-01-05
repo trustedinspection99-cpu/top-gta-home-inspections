@@ -17,7 +17,7 @@ export default function Oshawa() {
       <LocationPageTemplate
         city="Oshawa"
         region="Ontario"
-        description="Oshawa's dependable home inspection experts. We serve all Oshawa neighborhoods with comprehensive inspections and a commitment to customer satisfaction."
+        description="Specialized in Oshawa's heritage homes and new builds. Detailed structural, electrical, and safety reporting."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

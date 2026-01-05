@@ -16,7 +16,7 @@ export default function Welland() {
       <LocationPageTemplate
         city="Welland"
         region="Ontario"
-        description="Welland's trusted home inspection professionals. We serve all Welland neighborhoods with thorough property inspections."
+        description="Home inspections in Welland emphasizing aging homes, building systems, and structural integrity."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

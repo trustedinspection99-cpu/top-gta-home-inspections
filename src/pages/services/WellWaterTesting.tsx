@@ -7,7 +7,7 @@ export default function WellWaterTesting() {
       title="Well Water Testing"
       metaTitle="Well Water Testing Services | Ontario Rural Homes"
       metaDescription="Test private well water for bacteria and contaminants. Ensure safe drinking water for your rural Ontario property."
-      heroTitle="Well Water Testing"
+      heroTitle="Well Water Testing in Ontario"
       heroSubtitle="Ensure your family's water is safe to drink. Comprehensive laboratory analysis of private wells for bacteria, minerals, and contaminants."
       icon={Droplets}
       price="From $199"

@@ -17,7 +17,7 @@ export default function NorthYork() {
       <LocationPageTemplate
         city="North York"
         region="Ontario"
-        description="North York's trusted home inspection experts. We provide comprehensive inspections throughout all North York neighborhoods with same-day reports."
+        description="Detailed home inspections in North York. Expert analysis of residential systems and condo units with professional reporting."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

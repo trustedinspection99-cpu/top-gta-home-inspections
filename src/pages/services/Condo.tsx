@@ -7,7 +7,7 @@ export default function Condo() {
       title="Condo Inspection"
       metaTitle="Condo Inspection Toronto & GTA | Expert Unit Audits"
       metaDescription="Specialized condo inspections for GTA buyers. We audit HVAC, plumbing, and electrical systems to protect your investment."
-      heroTitle="Condo & Townhouse Inspection"
+      heroTitle="Condo Inspection in Toronto & GTA"
       heroSubtitle="Specialized inspections for condos, townhomes, and stacked townhouses. Know exactly what you're buying inside your unit."
       icon={Building}
       price="From $299"

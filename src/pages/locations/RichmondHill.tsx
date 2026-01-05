@@ -17,7 +17,7 @@ export default function RichmondHill() {
       <LocationPageTemplate
         city="Richmond Hill"
         region="Ontario"
-        description="Richmond Hill's reliable home inspection service. We provide thorough inspections throughout Oak Ridges, Bayview Hill, and all Richmond Hill neighborhoods."
+        description="Thorough home inspections in Richmond Hill for detached homes and condos. Detailed reporting and thermal imaging included."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

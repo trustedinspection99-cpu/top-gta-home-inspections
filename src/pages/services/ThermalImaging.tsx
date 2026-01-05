@@ -7,7 +7,7 @@ export default function ThermalImaging() {
       title="Thermal Imaging"
       metaTitle="Thermal Imaging Home Inspection | Find Hidden Issues"
       metaDescription="We use infrared technology to detect leaks and insulation gaps not visible to the eye. Included in every full home inspection."
-      heroTitle="Thermal Imaging Inspection"
+      heroTitle="Thermal Imaging Home Inspection in Ontario"
       heroSubtitle="See what's hidden behind walls. Infrared technology reveals moisture intrusion, missing insulation, electrical hot spots, and energy loss."
       icon={Eye}
       price="From $99"

@@ -7,7 +7,7 @@ export default function Commercial() {
       title="Commercial Inspection"
       metaTitle="Commercial Property Inspection Ontario | Risk Audit"
       metaDescription="Professional risk assessment for offices and retail. Detailed reports to help you understand property condition and manage risk."
-      heroTitle="Commercial Property Inspection"
+      heroTitle="Commercial Property Inspection in Ontario"
       heroSubtitle="Protect your business investment with comprehensive commercial property assessments. Multi-unit, retail, office, and industrial inspections."
       icon={Factory}
       price="Custom Quote"

@@ -16,7 +16,7 @@ export default function EastYork() {
       <LocationPageTemplate
         city="East York"
         region="Ontario"
-        description="East York's dependable home inspection experts. We provide thorough inspections throughout the Danforth, Leaside, and all East York communities."
+        description="Detailed property inspections in East York. Ideal for buyers of semi-detached homes and multi-unit income properties."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

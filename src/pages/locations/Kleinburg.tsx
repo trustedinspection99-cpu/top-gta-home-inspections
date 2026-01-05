@@ -16,7 +16,7 @@ export default function Kleinburg() {
       <LocationPageTemplate
         city="Kleinburg"
         region="Ontario"
-        description="Kleinburg's premier home inspection service. We specialize in estate homes and luxury properties throughout the Kleinburg village area."
+        description="Professional home inspections in Kleinburg with a focus on luxury construction quality and modern safety standards."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

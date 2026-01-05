@@ -17,7 +17,7 @@ export default function Etobicoke() {
       <LocationPageTemplate
         city="Etobicoke"
         region="Ontario"
-        description="Etobicoke's trusted home inspection professionals. We serve all Etobicoke neighborhoods with comprehensive inspections and same-day reports."
+        description="Specialized inspections for Etobicoke's housing stock. We focus on electrical safety, structural integrity, and peace of mind."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

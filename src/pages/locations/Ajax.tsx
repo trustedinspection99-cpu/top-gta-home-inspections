@@ -17,7 +17,7 @@ export default function Ajax() {
       <LocationPageTemplate
         city="Ajax"
         region="Ontario"
-        description="Ajax's trusted home inspection experts. We provide thorough inspections throughout Ajax with same-day reports and competitive pricing."
+        description="Comprehensive home inspections in Ajax. Understand the true condition of your future home with our expert certified reports."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

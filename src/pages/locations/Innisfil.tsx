@@ -16,7 +16,7 @@ export default function Innisfil() {
       <LocationPageTemplate
         city="Innisfil"
         region="Ontario"
-        description="Innisfil's trusted home inspection professionals. We serve Alcona, Lefroy, and all Innisfil communities along Lake Simcoe."
+        description="Home inspections in Innisfil for detached homes, acreage properties, and waterfront seasonal residences."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

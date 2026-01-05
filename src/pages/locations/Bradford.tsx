@@ -16,7 +16,7 @@ export default function Bradford() {
       <LocationPageTemplate
         city="Bradford"
         region="Ontario"
-        description="Bradford's reliable home inspection experts. We serve Bradford West Gwillimbury and Bond Head with comprehensive property inspections."
+        description="Inspections in Bradford focused on growing developments and modern residential construction. Catch builder issues early."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

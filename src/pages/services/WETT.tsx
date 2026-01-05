@@ -7,7 +7,7 @@ export default function WETT() {
       title="WETT Inspection"
       metaTitle="WETT Certified Inspection | Fireplace & Chimney"
       metaDescription="Ensure your wood stove or fireplace is insurance-compliant. WETT-certified inspections for Ontario homeowners and buyers."
-      heroTitle="WETT Inspection"
+      heroTitle="WETT Certified Inspection in Ontario"
       heroSubtitle="Safety certification for wood-burning appliances. Required for insurance and peace of mind. Certified inspections for fireplaces, wood stoves, and chimneys."
       icon={Flame}
       price="From $199"

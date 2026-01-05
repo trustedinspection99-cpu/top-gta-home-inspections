@@ -16,7 +16,7 @@ export default function Aurora() {
       <LocationPageTemplate
         city="Aurora"
         region="Ontario"
-        description="Aurora's trusted home inspection professionals. We serve all Aurora neighborhoods with thorough inspections and exceptional customer service."
+        description="Certified home inspections in Aurora following the highest standards for safety, performance, and structural integrity."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

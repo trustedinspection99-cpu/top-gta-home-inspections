@@ -17,7 +17,7 @@ export default function Milton() {
       <LocationPageTemplate
         city="Milton"
         region="Ontario"
-        description="Milton's dependable home inspection service. From Timberlea to Campbellville, we provide comprehensive inspections for all property types."
+        description="Expert inspections for Milton's newer subdivisions. Catch builder defects and warranty issues before they cost you."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

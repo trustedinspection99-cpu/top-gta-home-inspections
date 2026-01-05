@@ -7,7 +7,7 @@ export default function RadonTesting() {
       title="Radon Testing"
       metaTitle="Radon Testing for Homes in Ontario | ASADS"
       metaDescription="Protect your family from radon gas. Accurate professional testing to assess indoor air safety and health risks in your home."
-      heroTitle="Radon Gas Testing"
+      heroTitle="Radon Testing for Homes in Ontario"
       heroSubtitle="Protect your family from radon, an invisible radioactive gas that's the #1 cause of lung cancer in non-smokers. Professional testing with certified equipment."
       icon={Thermometer}
       price="From $149"

@@ -197,7 +197,7 @@ export default function Pricing() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center text-primary-foreground">
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">
-              Transparent Inspection Pricing
+              Home Inspection Cost in Ontario
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
               No hidden fees. Get a detailed quote instantly based on your property size. 
@@ -231,7 +231,7 @@ export default function Pricing() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-              Home Inspection Packages
+              Clear Rates & Packages
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Comprehensive inspections for every type of property. Prices vary by property size and complexity.
@@ -287,7 +287,7 @@ export default function Pricing() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-              Specialty Testing Services
+              Specialty Testing & Add-Ons
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Add-on services or standalone testing for specific concerns. Protect your family's health and safety.

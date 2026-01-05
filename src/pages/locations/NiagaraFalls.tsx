@@ -16,7 +16,7 @@ export default function NiagaraFalls() {
       <LocationPageTemplate
         city="Niagara Falls"
         region="Ontario"
-        description="Niagara Falls' dependable home inspection service. We serve all Niagara Falls neighborhoods with comprehensive property inspections."
+        description="Expert property inspections in Niagara Falls for rental, short-term, and residential income properties."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />
