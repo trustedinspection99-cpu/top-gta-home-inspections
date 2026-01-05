@@ -150,7 +150,7 @@ const team = [
     role: "Founder & Master Inspector",
     experience: "15+ years experience",
     certifications: ["OAHI", "InterNACHI", "WETT"],
-    bio: "Haroon founded ASADS with a mission to provide GTA homeowners with honest, thorough inspections. With over 5,000 inspections completed, he brings unmatched expertise to every home.",
+    bio: "Haroon founded ASADS with a mission to provide GTA homeowners with honest, thorough inspections. With over 2,000 inspections completed, he brings unmatched expertise to every home.",
   },
   {
     name: "Kapil Sharma",
