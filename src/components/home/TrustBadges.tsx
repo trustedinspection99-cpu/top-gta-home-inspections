@@ -19,7 +19,7 @@ const badges = [
   },
   { 
     icon: Users, 
-    label: "5,000+ Inspections", // Matches your red-circled screenshot
+    label: "2,000+ Inspections", // Matches your red-circled screenshot
     sublabel: "Satisfied Clients" 
   },
 ];
