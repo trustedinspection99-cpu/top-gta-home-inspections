@@ -4,6 +4,15 @@ import { TrustBadges } from "@/components/home/TrustBadges";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { CTASection } from "@/components/home/CTASection";
 import { SITE_URL } from "@/lib/seo";
+import Link from "next/link";
+import {
+  HomeIcon,
+  DocumentTextIcon,
+  BuildingOfficeIcon,
+  OfficeBuildingIcon,
+  BeakerIcon,
+  CheckCircleIcon,
+} from "@heroicons/react/24/outline";
 
 // Homepage FAQ schema
 const homepageFaqs = [
@@ -76,6 +85,16 @@ const servicesSchema = [
     url: `${SITE_URL}/services/specialty-services`,
   },
 ];
+
+// Map icons to services
+const serviceIcons: Record<string, JSX.Element> = {
+  "Pre-Purchase Inspection": <HomeIcon className="w-10 h-10 text-blue-600 mb-4" />,
+  "Pre-Listing Inspection": <DocumentTextIcon className="w-10 h-10 text-blue-600 mb-4" />,
+  "New Construction": <BuildingOfficeIcon className="w-10 h-10 text-blue-600 mb-4" />,
+  "Condo Inspection": <OfficeBuildingIcon className="w-10 h-10 text-blue-600 mb-4" />,
+  "Commercial Inspection": <BeakerIcon className="w-10 h-10 text-blue-600 mb-4" />,
+  "Specialty Services": <CheckCircleIcon className="w-10 h-10 text-blue-600 mb-4" />,
+};
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -244,17 +263,29 @@ const Index = () => {
         ]}
       />
 
-      {/* Services Section */}
-      <section className="services py-16">
-        <h2 className="text-3xl font-bold mb-8 text-center">Comprehensive Inspection Services</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+      {/* Services Section with Hover & Cards */}
+      <section className="services py-16 bg-gray-50">
+        <h2 className="text-3xl font-bold mb-12 text-center">
+          Comprehensive Inspection Services
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {servicesSchema.map((service) => (
-            <article key={service.name} className="border p-4 rounded hover:shadow-lg transition">
-              <h3 className="text-2xl font-semibold mb-2">
-                <a href={service.url} className="hover:text-blue-600">{service.name}</a>
+            <Link
+              href={service.url}
+              key={service.name}
+              className="group block border rounded-lg p-6 bg-white hover:bg-blue-50 hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out"
+            >
+              <div className="flex justify-center">
+                {serviceIcons[service.name]}
+              </div>
+              <h3 className="text-2xl font-semibold mb-2 text-center group-hover:text-blue-600">
+                {service.name}
               </h3>
-              <p>{service.description}</p>
-            </article>
+              <p className="text-gray-700 text-center">{service.description}</p>
+              <span className="inline-block mt-4 text-blue-600 font-medium text-center group-hover:underline">
+                Learn More →
+              </span>
+            </Link>
           ))}
         </div>
       </section>
