@@ -1,12 +1,19 @@
 import React, { useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { MapPin, CheckCircle, Phone, Thermometer, Leaf, Shield } from "lucide-react";
+import { Thermometer, Leaf, Shield } from "lucide-react";
 
 interface SpecialtyService {
   name: string;
   description: string;
   icon?: React.ReactNode;
+}
+
+interface Article {
+  title: string;
+  slug: string;
+  datePublished?: string;
+  image?: string;
 }
 
 interface LocationPageTemplateProps {
@@ -23,6 +30,7 @@ interface LocationPageTemplateProps {
   services?: string[];
   specialtyServices?: SpecialtyService[];
   allCities?: string[];
+  articles?: Article[];
 }
 
 export function LocationPageTemplate({
@@ -50,17 +58,23 @@ export function LocationPageTemplate({
     { name: "WETT Inspection", description: "Certified wood-burning appliance inspections.", icon: <Shield className="w-6 h-6 text-primary" /> },
   ],
   allCities = [],
+  articles = [
+    { title: "Mold Prevention Tips", slug: "mold-prevention-tips", datePublished: "2025-12-01", image: "/blog/mold-prevention.jpg" },
+    { title: "New Construction Inspection Importance", slug: "new-construction-inspection-importance", datePublished: "2025-11-15", image: "/blog/new-construction.jpg" },
+    { title: "First Time Home Buyer Inspection Guide", slug: "first-time-home-buyer-inspection-guide", datePublished: "2025-10-20", image: "/blog/home-buyer-guide.jpg" },
+  ],
 }: LocationPageTemplateProps) {
+
   const slugifiedCity = city.toLowerCase().replace(/\s+/g, "-");
   const url = `https://www.asads.ca/locations/${slugifiedCity}/`;
 
-  // JSON-LD Schema
+  // --- JSON-LD SCHEMAS ---
   const schemaOrgJSONLD = useMemo(() => ({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: siteName,
-    description: description,
-    url: url,
+    description,
+    url,
     telephone: phoneNumber,
     priceRange: "$$",
     image: "https://www.asads.ca/logo.png",
@@ -73,7 +87,7 @@ export function LocationPageTemplate({
       addressCountry: "Canada",
     },
     geo: latitude && longitude ? { "@type": "GeoCoordinates", latitude, longitude } : undefined,
-    areaServed: city,
+    areaServed: allCities.map(c => ({ "@type": "City", name: c })),
     sameAs: [
       "https://www.facebook.com/share/1ZhWQk97YY/",
       "https://www.instagram.com/asads_home_inspection",
@@ -81,8 +95,11 @@ export function LocationPageTemplate({
       "https://tiktok.com/@asads_home_inspection",
       "https://x.com/AsadsInspection",
     ],
-    services: services.map((s) => ({ "@type": "Service", name: s })),
-  }), [city, region, description, phoneNumber, address, postalCode, services, latitude, longitude]);
+    services: [
+      ...services.map(s => ({ "@type": "Service", name: s })),
+      ...specialtyServices.map(s => ({ "@type": "Service", name: s.name, description: s.description }))
+    ]
+  }), [city, region, description, phoneNumber, address, postalCode, services, specialtyServices, allCities, latitude, longitude]);
 
   const breadcrumbJSONLD = useMemo(() => ({
     "@context": "https://schema.org",
@@ -121,32 +138,15 @@ export function LocationPageTemplate({
     ],
   }), [city, region, phoneNumber]);
 
-  const articlesJSONLD = useMemo(() => ({
+  const articleJSONLD = useMemo(() => articles.map((a) => ({
     "@context": "https://schema.org",
-    "@type": "Blog",
-    name: `${siteName} Articles in ${city}`,
-    url: url,
-    blogPost: [
-      {
-        "@type": "BlogPosting",
-        headline: `Top Tips for Pre-Purchase Inspections in ${city}`,
-        articleBody: `Buying a home in ${city}? Our certified inspectors provide comprehensive pre-purchase inspections...`,
-        url: `${url}#article1`,
-      },
-      {
-        "@type": "BlogPosting",
-        headline: `How to Prepare Your Home for a Pre-Listing Inspection in ${city}`,
-        articleBody: `Selling your home? A pre-listing inspection highlights repairs needed to attract buyers...`,
-        url: `${url}#article2`,
-      },
-      {
-        "@type": "BlogPosting",
-        headline: `Understanding Mold Risks in ${city} Homes`,
-        articleBody: `Mold can affect your health and damage your property. Our mold assessments in ${city} identify risks...`,
-        url: `${url}#article3`,
-      },
-    ],
-  }), [city, siteName, url]);
+    "@type": "Article",
+    headline: a.title,
+    author: { "@type": "Organization", name: siteName },
+    datePublished: a.datePublished,
+    url: `https://www.asads.ca/blog/${a.slug}/`,
+    image: a.image ? `https://www.asads.ca${a.image}` : "https://www.asads.ca/logo.png"
+  })), [articles]);
 
   const nearbyLocations = allCities.filter((c) => c !== city).slice(0, 8);
 
@@ -161,8 +161,7 @@ export function LocationPageTemplate({
 
   return (
     <div className="location-page">
-
-      {/* Helmet SEO + Scripts */}
+      {/* SEO + JSON-LD */}
       <Helmet>
         <link rel="canonical" href={url} />
         <title>{`${city} Home Inspector | ${description.split(".")[0]}`}</title>
@@ -176,33 +175,13 @@ export function LocationPageTemplate({
         <meta name="twitter:title" content={`${city} Home Inspection | ${siteName}`} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content="https://www.asads.ca/logo.png" />
-
-        {/* GTM */}
-        <script>
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-NB43TTTB');`}
-        </script>
-
-        {/* Microsoft Clarity */}
-        <script>
-          {`(function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "CLARITY_PROJECT_ID");`}
-        </script>
-
-        {/* JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJSONLD)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJSONLD)}</script>
-        <script type="application/ld+json">{JSON.stringify(articlesJSONLD)}</script>
+        {articleJSONLD.map((a, i) => <script key={i} type="application/ld+json">{JSON.stringify(a)}</script>)}
       </Helmet>
 
-      {/* Header */}
+      {/* HEADER */}
       <header className="bg-white shadow">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
           <Link to="/"><img src="/logo.png" alt={siteName} className="h-12" /></Link>
@@ -226,75 +205,171 @@ export function LocationPageTemplate({
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="container mx-auto py-12 px-6">
-        <h1 className="text-4xl font-bold text-center mb-8">Home Inspection Insights in {city}</h1>
+      {/* HERO */}
+      <section className="hero py-12 px-6 text-center bg-gray-50">
+        <h1 className="text-4xl font-bold mb-4">{city} Home Inspections | Trusted Certified Inspectors</h1>
+        <p className="text-gray-700 max-w-2xl mx-auto">{description}</p>
+      </section>
 
-        {/* Article 1 */}
-        <article id="article1" className="mb-12">
-          <h2 className="text-3xl font-semibold mb-4">Top Tips for Pre-Purchase Inspections in {city}</h2>
-          <p>Buying a home in {city}? Our certified inspectors provide comprehensive pre-purchase inspections to ensure your investment is safe. From roofing to plumbing, every detail is checked.</p>
-          <h3 className="text-2xl font-semibold mb-2">Why a Pre-Purchase Inspection Matters</h3>
-          <p>Identifying hidden issues early prevents costly repairs. Learn about structural, electrical, and HVAC risks before you buy.</p>
-          <Link to="/services/pre-purchase/" className="text-primary underline mt-2 inline-block">Learn more about Pre-Purchase Inspections</Link>
-        </article>
+      {/* SERVICES */}
+      <section className="services py-12 px-6">
+        <h2 className="text-3xl font-bold mb-6">Services Offered in {city}</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          {services.map((service) => (
+            <div key={service} className="p-4 border rounded shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">{service}</h3>
+              <p className="text-gray-700">{`Professional ${service.toLowerCase()} in ${city} to ensure your home is safe and secure.`}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-        {/* Article 2 */}
-        <article id="article2" className="mb-12">
-          <h2 className="text-3xl font-semibold mb-4">How to Prepare Your Home for a Pre-Listing Inspection in {city}</h2>
-          <p>Selling your home? A pre-listing inspection highlights repairs needed to attract buyers and increase your sale price.</p>
-          <h3 className="text-2xl font-semibold mb-2">Steps to Get Ready</h3>
-          <ul className="list-disc pl-6">
-            <li>Ensure all utilities are working</li>
-            <li>Clean and declutter areas for inspection</li>
-            <li>Fix visible issues before the inspection</li>
-          </ul>
-          <Link to="/services/pre-listing/" className="text-primary underline mt-2 inline-block">Learn more about Pre-Listing Inspections</Link>
-        </article>
+      {/* SPECIALTY SERVICES */}
+      <section className="specialty-services py-12 px-6 bg-gray-50">
+        <h2 className="text-3xl font-bold mb-6">Specialty Services</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {specialtyServices.map((s) => (
+            <div key={s.name} className="p-4 border rounded shadow-sm flex items-start gap-4">
+              {s.icon}
+              <div>
+                <h3 className="text-xl font-semibold mb-2">{s.name}</h3>
+                <p className="text-gray-700">{s.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-        {/* Article 3 */}
-        <article id="article3" className="mb-12">
-          <h2 className="text-3xl font-semibold mb-4">Understanding Mold Risks in {city} Homes</h2>
-          <p>Mold can affect your health and damage your property. Our mold assessments in {city} identify risks and provide remediation guidance.</p>
-          <h3 className="text-2xl font-semibold mb-2">Common Mold Issues</h3>
-          <ul className="list-disc pl-6">
-            <li>Hidden leaks behind walls</li>
-            <li>Poor ventilation in basements and attics</li>
-            <li>High humidity areas like bathrooms</li>
-          </ul>
-          <Link to="/services/mold-inspection/" className="text-primary underline mt-2 inline-block">Learn more about Mold Assessment</Link>
-        </article>
-      </main>
+      {/* ARTICLES */}
+      <section className="articles my-12 px-6">
+        <h2 className="text-3xl font-bold mb-6">Articles & Guides for Homeowners</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          {articles.map((article) => (
+            <div key={article.slug} className="article-card p-4 border rounded shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
+              <p className="text-gray-700 mb-2">{`Learn how ${article.title.toLowerCase()} can help protect your home in ${city}.`}</p>
+              <Link to={`/blog/${article.slug}/`} className="text-primary underline">Read More</Link>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-100 py-8 mt-16">
-        <div className="container mx-auto text-center text-gray-600">
-          &copy; {new Date().getFullYear()} ASADS Home Inspection. All rights reserved.
+      {/* BENEFITS */}
+      <section className="benefits py-12 px-6 bg-gray-50">
+        <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
+        <ul className="list-disc list-inside space-y-2">
+          {benefits.map((b) => <li key={b}>{b}</li>)}
+        </ul>
+      </section>
+
+      {/* NEARBY LOCATIONS */}
+      <section className="nearby-locations py-12 px-6">
+        <h2 className="text-3xl font-bold mb-6">Other Service Areas</h2>
+        <ul className="flex flex-wrap gap-4">
+          {nearbyLocations.map((c) => (
+            <li key={c}><Link to={`/locations/${c.toLowerCase().replace(/\s+/g,'-')}/`} className="underline">{c}</Link></li>
+          ))}
+        </ul>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-6 grid md:grid-cols-4 gap-8">
+          <div>
+            <h2 className="font-bold mb-2">Main Pages</h2>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about/">About Us</Link></li>
+              <li><Link to="/services/">Services</Link></li>
+              <li><Link to="/locations/">Service Areas</Link></li>
+              <li><Link to="/pricing/">Pricing</Link></li>
+              <li><Link to="/blog/">Blog</Link></li>
+              <li><Link to="/contact/">Contact</Link></li>
+              <li><Link to="/booking/">Book Inspection</Link></li>
+              <li><Link to="/faq/">FAQ</Link></li>
+              <li><Link to="/testimonials/">Testimonials</Link></li>
+              <li><Link to="/sitemap/">Sitemap</Link></li>
+              <li><Link to="/terms/">Terms of Service</Link></li>
+              <li><Link to="/privacy-policy/">Privacy Policy</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="font-bold mb-2">Inspection Services</h2>
+            <ul>
+              {[
+                "Pre-Purchase Inspection",
+                "Pre-Listing Inspection",
+                "Condo Inspection",
+                "Commercial Inspection",
+                "New Construction Inspection",
+                "Radon Testing",
+                "Mold Inspection",
+                "Asbestos Testing",
+                "Lead Paint Testing",
+                "Well Water Testing",
+                "Thermal Imaging",
+                "Air Quality Testing",
+                "Sewer Scope Inspection",
+                "WETT Inspection"
+              ].map(service => (
+                <li key={service}><Link to={`/services/${service.toLowerCase().replace(/\s+/g,"-")}/`}>{service}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="font-bold mb-2">Service Areas</h2>
+            <ul>
+              {allCities.map(cityItem => (
+                <li key={cityItem}><Link to={`/locations/${cityItem.toLowerCase().replace(/\s+/g,'-')}/`}>{cityItem}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="font-bold mb-2">Blog Articles</h2>
+            <ul>
+              {articles.map(article => (
+                <li key={article.slug}><Link to={`/blog/${article.slug}/`}>{article.title}</Link></li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="text-center mt-8">
+          <p>Phone: <a href={`tel:${phoneNumber}`} className="underline">{phoneNumber}</a></p>
+          <div className="flex justify-center gap-4 mt-2">
+            <a href="https://www.facebook.com/share/1ZhWQk97YY/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/asads_home_inspection" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://youtube.com/@asadshomeinspection" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://tiktok.com/@asads_home_inspection" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a href="https://x.com/AsadsInspection" target="_blank" rel="noopener noreferrer">X</a>
+          </div>
         </div>
       </footer>
 
-      {/* Noscript fallback navigation for crawlers */}
-      <noscript>
-        <nav aria-label="Site Navigation">
-          <h2>Main Pages</h2>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About Us</a></li>
-            <li><a href="/services/">Services</a></li>
-            <li><a href="/locations/">Service Areas</a></li>
-            <li><a href="/pricing/">Pricing</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/contact/">Contact</a></li>
-            <li><a href="/booking/">Book Inspection</a></li>
-            <li><a href="/faq/">FAQ</a></li>
-            <li><a href="/testimonials/">Testimonials</a></li>
-            <li><a href="/sitemap/">Sitemap</a></li>
-            <li><a href="/terms/">Terms of Service</a></li>
-            <li><a href="/privacy-policy/">Privacy Policy</a></li>
-          </ul>
-          {/* ...additional noscript links for services, cities, blog articles if needed */}
-        </nav>
-      </noscript>
+      {/* FLOATING CALL BUTTON */}
+      <a
+        href={`tel:${phoneNumber}`}
+        className="floating-call-button"
+        aria-label={`Call ${siteName} now`}
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          backgroundColor: "#ff5a5f",
+          color: "#fff",
+          padding: "15px 20px",
+          borderRadius: "50px",
+          fontWeight: "bold",
+          textDecoration: "none",
+          zIndex: 1000,
+          boxShadow: "0 4px 6px rgba(0,0,0,0.2)",
+        }}
+      >
+        Call Now
+      </a>
     </div>
   );
-        }
+                                        }
