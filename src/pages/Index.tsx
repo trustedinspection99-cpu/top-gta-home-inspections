@@ -241,7 +241,7 @@ const Index = () => {
           "Ontario Association",
           "InterNACHI Member",
           "International Standards",
-          "5,000+ Inspections",
+          "2,000+ Inspections",
           "Satisfied Clients",
         ]}
       />
