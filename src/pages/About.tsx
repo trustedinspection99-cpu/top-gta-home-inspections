@@ -1,3 +1,5 @@
+import { ShieldCheck, Search, FileText, UserCheck, Users, GraduationCap } from 'lucide-react';
+
 import { Layout } from "@/components/layout/Layout";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
