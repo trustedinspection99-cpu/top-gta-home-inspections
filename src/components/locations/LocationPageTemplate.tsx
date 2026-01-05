@@ -22,7 +22,7 @@ interface LocationPageTemplateProps {
   siteName?: string;
   services?: string[];
   specialtyServices?: SpecialtyService[];
-  allCities?: string[]; // all other cities for internal linking
+  allCities?: string[];
 }
 
 export function LocationPageTemplate({
@@ -51,6 +51,7 @@ export function LocationPageTemplate({
   ],
   allCities = [],
 }: LocationPageTemplateProps) {
+
   const slugifiedCity = city.toLowerCase().replace(/\s+/g, "-");
   const url = `https://www.asads.ca/locations/${slugifiedCity}/`;
 
@@ -59,8 +60,8 @@ export function LocationPageTemplate({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: siteName,
-    description: description,
-    url: url,
+    description,
+    url,
     telephone: phoneNumber,
     priceRange: "$$",
     image: "https://www.asads.ca/logo.png",
@@ -69,7 +70,7 @@ export function LocationPageTemplate({
       streetAddress: address,
       addressLocality: city,
       addressRegion: region,
-      postalCode: postalCode,
+      postalCode,
       addressCountry: "Canada",
     },
     geo: latitude && longitude ? { "@type": "GeoCoordinates", latitude, longitude } : undefined,
@@ -100,39 +101,15 @@ export function LocationPageTemplate({
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      {
-        "@type": "Question",
-        name: `How much does a home inspection cost in ${city}?`,
-        acceptedAnswer: { "@type": "Answer", text: `Home inspection costs in ${city} typically range from $400-$600. Contact us at ${phoneNumber} for a quote.` },
-      },
-      {
-        "@type": "Question",
-        name: `How long does a home inspection take in ${city}?`,
-        acceptedAnswer: { "@type": "Answer", text: `A typical home inspection in ${city} takes 2-4 hours depending on the property size.` },
-      },
-      {
-        "@type": "Question",
-        name: `Do you offer same-day inspection reports in ${city}?`,
-        acceptedAnswer: { "@type": "Answer", text: `Yes! We deliver detailed inspection reports within 24 hours of completing inspections in ${city}.` },
-      },
-      {
-        "@type": "Question",
-        name: `What areas do you serve near ${city}?`,
-        acceptedAnswer: { "@type": "Answer", text: `We serve ${city} and all surrounding ${region} communities.` },
-      },
+      { "@type": "Question", name: `How much does a home inspection cost in ${city}?`, acceptedAnswer: { "@type": "Answer", text: `Home inspection costs in ${city} typically range from $400-$600. Contact us at ${phoneNumber} for a quote.` } },
+      { "@type": "Question", name: `How long does a home inspection take in ${city}?`, acceptedAnswer: { "@type": "Answer", text: `A typical home inspection in ${city} takes 2-4 hours depending on the property size.` } },
+      { "@type": "Question", name: `Do you offer same-day inspection reports in ${city}?`, acceptedAnswer: { "@type": "Answer", text: `Yes! We deliver detailed inspection reports within 24 hours of completing inspections in ${city}.` } },
+      { "@type": "Question", name: `What areas do you serve near ${city}?`, acceptedAnswer: { "@type": "Answer", text: `We serve ${city} and all surrounding ${region} communities.` } },
     ],
   }), [city, region, phoneNumber]);
 
   const nearbyLocations = allCities.filter((c) => c !== city).slice(0, 8);
-
-  const benefits = [
-    "Same-day reports available",
-    "Certified & insured inspectors",
-    "200+ point inspections",
-    "Upfront, transparent pricing",
-    "15+ years experience",
-    "Locally owned & operated",
-  ];
+  const benefits = ["Same-day reports available","Certified & insured inspectors","200+ point inspections","Upfront, transparent pricing","15+ years experience","Locally owned & operated"];
 
   return (
     <div className="location-page">
@@ -142,22 +119,30 @@ export function LocationPageTemplate({
         <link rel="canonical" href={url} />
         <title>{`${city} Home Inspector | ${description.split(".")[0]}`}</title>
         <meta name="description" content={description} />
-
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`${city} Home Inspection | ${siteName}`} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
         <meta property="og:image" content="https://www.asads.ca/logo.png" />
-
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${city} Home Inspection | ${siteName}`} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content="https://www.asads.ca/logo.png" />
-
         <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJSONLD)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJSONLD)}</script>
       </Helmet>
+
+      {/* HEADER with Logo + Navigation */}
+      <header className="bg-white shadow py-4 px-6 flex items-center justify-between">
+        <Link to="/"><img src="/logo.png" alt={siteName} className="h-12" /></Link>
+        <nav className="flex gap-6">
+          <Link to="/">Home</Link>
+          <Link to="/locations/">Locations</Link>
+          <Link to="/services/">Services</Link>
+          <Link to="/contact/">Contact</Link>
+        </nav>
+      </header>
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary to-primary/80 text-white py-20 text-center">
@@ -258,16 +243,29 @@ export function LocationPageTemplate({
       )}
 
       {/* Footer */}
-      <footer className="py-12 bg-gray-900 text-white text-center">
-        <h2 className="text-xl font-bold mb-4">Contact {siteName}</h2>
-        <p className="mb-4">Phone: <a href={`tel:${phoneNumber}`} className="underline">{phoneNumber}</a></p>
-        <ul className="flex justify-center gap-4">
-          <li><a href="https://www.facebook.com/share/1ZhWQk97YY/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-          <li><a href="https://www.instagram.com/asads_home_inspection" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-          <li><a href="https://youtube.com/@asadshomeinspection" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-          <li><a href="https://tiktok.com/@asads_home_inspection" target="_blank" rel="noopener noreferrer">TikTok</a></li>
-          <li><a href="https://x.com/AsadsInspection" target="_blank" rel="noopener noreferrer">X</a></li>
-        </ul>
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between">
+          <div>
+            <h3 className="text-lg font-bold mb-2">{siteName}</h3>
+            <p>Professional home inspections in Ontario since 2015. Trusted, certified, and insured.</p>
+          </div>
+          <ul className="flex flex-col md:flex-row gap-4 mt-4 md:mt-0">
+            <li><Link to="/about/">About</Link></li>
+            <li><Link to="/services/">Services</Link></li>
+            <li><Link to="/locations/">Locations</Link></li>
+            <li><Link to="/contact/">Contact</Link></li>
+          </ul>
+          <div className="mt-4 md:mt-0">
+            <p>Phone: <a href={`tel:${phoneNumber}`} className="underline">{phoneNumber}</a></p>
+            <ul className="flex gap-4 mt-2">
+              <li><a href="https://www.facebook.com/share/1ZhWQk97YY/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+              <li><a href="https://www.instagram.com/asads_home_inspection" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a href="https://youtube.com/@asadshomeinspection" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+              <li><a href="https://tiktok.com/@asads_home_inspection" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+              <li><a href="https://x.com/AsadsInspection" target="_blank" rel="noopener noreferrer">X</a></li>
+            </ul>
+          </div>
+        </div>
       </footer>
 
       {/* Floating Call Button */}
@@ -293,4 +291,4 @@ export function LocationPageTemplate({
       </a>
     </div>
   );
-                }
+      }
