@@ -9,38 +9,128 @@ import { SITE_URL } from "@/lib/seo";
 const homepageFaqs = [
   {
     question: "How much does a home inspection cost in Toronto?",
-    answer: "Home inspection costs in Toronto typically range from $400-$600 for a standard single-family home, depending on size and age. Condos usually cost $350-$450. Contact ASADS at (647) 801-9311 for a personalized quote."
+    answer:
+      "Home inspection costs in Toronto typically range from $400-$600 for a standard single-family home, depending on size and age. Condos usually cost $350-$450. Contact ASADS at (647) 801-9311 for a personalized quote.",
   },
   {
     question: "Who pays for a home inspection in Ontario?",
-    answer: "In Ontario, the home buyer typically pays for the home inspection. Sellers may also pay for pre-listing inspections to identify issues before listing."
+    answer:
+      "In Ontario, the home buyer typically pays for the home inspection. Sellers may also pay for pre-listing inspections to identify issues before listing.",
   },
   {
     question: "What does a home inspection include in Ontario?",
-    answer: "Covers structural components, roofing, electrical, plumbing, HVAC, insulation, windows, doors, and foundation. ASADS performs 200+ point inspections with same-day reports."
+    answer:
+      "Covers structural components, roofing, electrical, plumbing, HVAC, insulation, windows, doors, and foundation. ASADS performs 200+ point inspections with same-day reports.",
   },
   {
     question: "Biggest red flags in a home inspection?",
-    answer: "Foundation cracks, water damage/mold, faulty electrical, roof damage, structural issues."
+    answer:
+      "Foundation cracks, water damage/mold, faulty electrical, roof damage, structural issues.",
   },
   {
     question: "How long does a home inspection take?",
-    answer: "Typically 2-4 hours depending on property size and age."
+    answer: "Typically 2-4 hours depending on property size and age.",
   },
   {
     question: "How to schedule an inspection?",
-    answer: "Book online at asads.ca/booking or call (647) 801-9311."
-  }
+    answer: "Book online at asads.ca/booking or call (647) 801-9311.",
+  },
+];
+
+// Services structured data
+const servicesSchema = [
+  {
+    name: "Pre-Purchase Inspection",
+    description:
+      "Complete evaluation before you buy. Identify issues and negotiate with confidence.",
+    url: `${SITE_URL}/services/pre-purchase-inspection`,
+  },
+  {
+    name: "Pre-Listing Inspection",
+    description:
+      "Sell your home faster with a pre-listing inspection that builds buyer trust.",
+    url: `${SITE_URL}/services/pre-listing-inspection`,
+  },
+  {
+    name: "New Construction",
+    description:
+      "Verify builder quality and catch defects before your final walkthrough.",
+    url: `${SITE_URL}/services/new-construction-inspection`,
+  },
+  {
+    name: "Condo Inspection",
+    description:
+      "Specialized inspections for condos, townhomes, and stacked units.",
+    url: `${SITE_URL}/services/condo-inspection`,
+  },
+  {
+    name: "Commercial Inspection",
+    description:
+      "Comprehensive assessments for commercial and investment properties.",
+    url: `${SITE_URL}/services/commercial-inspection`,
+  },
+  {
+    name: "Specialty Services",
+    description:
+      "Radon Testing, Mold Inspection, Thermal Imaging, Air Quality Testing, WETT Inspection, Asbestos Testing, Lead Paint Testing, Well Water Testing, Sewer Scope",
+    url: `${SITE_URL}/services/specialty-services`,
+  },
 ];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": homepageFaqs.map(faq => ({
+  mainEntity: homepageFaqs.map((faq) => ({
     "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-  }))
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
+const servicesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: servicesSchema.map((service, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: service.name,
+    description: service.description,
+    url: service.url,
+  })),
+};
+
+// LocalBusiness / Hero structured data
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "ASADS Home Inspection",
+  image: `${SITE_URL}/og-image.jpg`,
+  url: `${SITE_URL}/`,
+  telephone: "(647) 801-9311",
+  description:
+    "Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections. Protect your investment before you buy or sell.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Toronto",
+    addressRegion: "ON",
+    addressCountry: "Canada",
+  },
+  areaServed: {
+    "@type": "GeoCircle",
+    geoMidpoint: {
+      "@type": "GeoCoordinates",
+      latitude: 43.7,
+      longitude: -79.42,
+    },
+    geoRadius: 50,
+  },
+  sameAs: [
+    "https://youtube.com/@asadshomeinspection",
+    "https://www.instagram.com/asads_home_inspection",
+    "https://x.com/AsadsInspection",
+    "https://www.facebook.com/share/1ZhWQk97YY/",
+    "https://www.tiktok.com/@asads_home_inspection",
+  ],
 };
 
 const Index = () => {
@@ -95,16 +185,18 @@ const Index = () => {
         />
         <meta name="twitter:image" content={`${SITE_URL}/og-image.jpg`} />
 
-        {/* JSON-LD FAQ */}
+        {/* JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(servicesJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="hero py-16 text-center">
+      <section className="hero bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-20 text-center text-white">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Protect Your Investment with Expert Home Inspections
         </h1>
-        <p className="text-lg mb-6">
+        <p className="text-lg md:text-xl mb-6">
           Comprehensive home inspection services throughout the Greater Toronto Area. Get detailed reports, expert insights, and peace of mind before you buy or sell.
         </p>
         <ul className="flex flex-wrap justify-center gap-4 text-sm md:text-base mb-6">
@@ -148,7 +240,7 @@ const Index = () => {
           "InterNACHI Member",
           "International Standards",
           "5,000+ Inspections",
-          "Satisfied Clients"
+          "Satisfied Clients",
         ]}
       />
 
@@ -156,30 +248,14 @@ const Index = () => {
       <section className="services py-16">
         <h2 className="text-3xl font-bold mb-8 text-center">Comprehensive Inspection Services</h2>
         <div className="grid md:grid-cols-2 gap-8">
-          <article>
-            <h3 className="text-2xl font-semibold mb-2">Pre-Purchase Inspection</h3>
-            <p>Complete evaluation before you buy. Identify issues and negotiate with confidence.</p>
-          </article>
-          <article>
-            <h3 className="text-2xl font-semibold mb-2">Pre-Listing Inspection</h3>
-            <p>Sell your home faster with a pre-listing inspection that builds buyer trust.</p>
-          </article>
-          <article>
-            <h3 className="text-2xl font-semibold mb-2">New Construction</h3>
-            <p>Verify builder quality and catch defects before your final walkthrough.</p>
-          </article>
-          <article>
-            <h3 className="text-2xl font-semibold mb-2">Condo Inspection</h3>
-            <p>Specialized inspections for condos, townhomes, and stacked units.</p>
-          </article>
-          <article>
-            <h3 className="text-2xl font-semibold mb-2">Commercial Inspection</h3>
-            <p>Comprehensive assessments for commercial and investment properties.</p>
-          </article>
-          <article>
-            <h3 className="text-2xl font-semibold mb-2">Specialty Services</h3>
-            <p>Radon Testing, Mold Inspection, Thermal Imaging, Air Quality Testing, WETT Inspection, Asbestos Testing, Lead Paint Testing, Well Water Testing, Sewer Scope</p>
-          </article>
+          {servicesSchema.map((service) => (
+            <article key={service.name} className="border p-4 rounded hover:shadow-lg transition">
+              <h3 className="text-2xl font-semibold mb-2">
+                <a href={service.url} className="hover:text-blue-600">{service.name}</a>
+              </h3>
+              <p>{service.description}</p>
+            </article>
+          ))}
         </div>
       </section>
 
