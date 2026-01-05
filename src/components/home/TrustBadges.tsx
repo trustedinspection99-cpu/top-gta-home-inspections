@@ -19,7 +19,7 @@ const badges = [
   },
   { 
     icon: Users, 
-    label: "5,000+ Inspections", 
+    label: "2,000+ Inspections", 
     sublabel: "Satisfied Clients" 
   },
 ];
