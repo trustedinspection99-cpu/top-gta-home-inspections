@@ -29,7 +29,7 @@ const homepageFaqs = [
   },
   {
     question: "How long does a home inspection take?",
-    answer: "Typically 2-4 hours depending on property size and age.",
+    answer: "Typically 2 hours depending on property size and age.",
   },
   {
     question: "How to schedule an inspection?",
