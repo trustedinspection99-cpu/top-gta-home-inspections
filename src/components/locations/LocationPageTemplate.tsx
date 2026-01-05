@@ -1,7 +1,7 @@
-import React, { useMemo } from "react";
-import { Helmet } from "react-helmet-async";
-import { MapPin, CheckCircle, Phone, Thermometer, Leaf, Shield } from "lucide-react";
+import { Home, Thermometer, Leaf, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { useMemo } from "react";
 
 interface SpecialtyService {
   name: string;
@@ -13,7 +13,6 @@ interface LocationPageTemplateProps {
   city: string;
   region: string;
   description: string;
-  neighborhoods?: string[];
   phoneNumber: string;
   address?: string;
   postalCode?: string;
@@ -29,7 +28,6 @@ export function LocationPageTemplate({
   city,
   region,
   description,
-  neighborhoods = [],
   phoneNumber,
   address = "Ontario, Canada",
   postalCode = "",
@@ -55,13 +53,13 @@ export function LocationPageTemplate({
   const slugifiedCity = city.toLowerCase().replace(/\s+/g, "-");
   const url = `https://www.asads.ca/locations/${slugifiedCity}/`;
 
-  // JSON-LD Schema
+  // JSON-LD Schemas
   const schemaOrgJSONLD = useMemo(() => ({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: siteName,
-    description: description,
-    url: url,
+    description,
+    url,
     telephone: phoneNumber,
     priceRange: "$$",
     image: "https://www.asads.ca/logo.png",
@@ -70,7 +68,7 @@ export function LocationPageTemplate({
       streetAddress: address,
       addressLocality: city,
       addressRegion: region,
-      postalCode: postalCode,
+      postalCode,
       addressCountry: "Canada",
     },
     geo: latitude && longitude ? { "@type": "GeoCoordinates", latitude, longitude } : undefined,
@@ -82,7 +80,7 @@ export function LocationPageTemplate({
       "https://tiktok.com/@asads_home_inspection",
       "https://x.com/AsadsInspection",
     ],
-    services: services.map((s) => ({ "@type": "Service", name: s })),
+    services: services.map(s => ({ "@type": "Service", name: s })),
   }), [city, region, description, phoneNumber, address, postalCode, services, latitude, longitude]);
 
   const breadcrumbJSONLD = useMemo(() => ({
@@ -99,26 +97,10 @@ export function LocationPageTemplate({
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      {
-        "@type": "Question",
-        name: `How much does a home inspection cost in ${city}?`,
-        acceptedAnswer: { "@type": "Answer", text: `Home inspection costs in ${city} typically range from $400-$600. Contact us at ${phoneNumber} for a quote.` },
-      },
-      {
-        "@type": "Question",
-        name: `How long does a home inspection take in ${city}?`,
-        acceptedAnswer: { "@type": "Answer", text: `A typical home inspection in ${city} takes 2-4 hours depending on the property size.` },
-      },
-      {
-        "@type": "Question",
-        name: `Do you offer same-day inspection reports in ${city}?`,
-        acceptedAnswer: { "@type": "Answer", text: `Yes! We deliver detailed inspection reports within 24 hours of completing inspections in ${city}.` },
-      },
-      {
-        "@type": "Question",
-        name: `What areas do you serve near ${city}?`,
-        acceptedAnswer: { "@type": "Answer", text: `We serve ${city} and all surrounding ${region} communities.` },
-      },
+      { "@type": "Question", name: `How much does a home inspection cost in ${city}?`, acceptedAnswer: { "@type": "Answer", text: `Home inspections in ${city} typically range $400-$600. Call ${phoneNumber} for a quote.` } },
+      { "@type": "Question", name: `How long does a home inspection take in ${city}?`, acceptedAnswer: { "@type": "Answer", text: "A typical inspection takes 2-4 hours depending on property size." } },
+      { "@type": "Question", name: `Do you provide same-day inspection reports in ${city}?`, acceptedAnswer: { "@type": "Answer", text: "Yes, detailed reports are delivered within 24 hours of inspection." } },
+      { "@type": "Question", name: `Which areas do you serve near ${city}?`, acceptedAnswer: { "@type": "Answer", text: `We serve ${city} and surrounding ${region} communities.` } },
     ],
   }), [city, region, phoneNumber]);
 
@@ -126,57 +108,22 @@ export function LocationPageTemplate({
     "@context": "https://schema.org",
     "@type": "Blog",
     name: `${siteName} Articles in ${city}`,
-    url: url,
+    url,
     blogPost: [
-      {
-        "@type": "BlogPosting",
-        headline: `Top Tips for Pre-Purchase Inspections in ${city}`,
-        articleBody: `Buying a home in ${city}? Our certified inspectors provide comprehensive pre-purchase inspections...`,
-        url: `${url}#article1`,
-      },
-      {
-        "@type": "BlogPosting",
-        headline: `How to Prepare Your Home for a Pre-Listing Inspection in ${city}`,
-        articleBody: `Selling your home? A pre-listing inspection highlights repairs needed to attract buyers...`,
-        url: `${url}#article2`,
-      },
-      {
-        "@type": "BlogPosting",
-        headline: `Understanding Mold Risks in ${city} Homes`,
-        articleBody: `Mold can affect your health and damage your property. Our mold assessments in ${city} identify risks...`,
-        url: `${url}#article3`,
-      },
+      { "@type": "BlogPosting", headline: `Top Tips for Pre-Purchase Inspections in ${city}`, articleBody: `Buying a home in ${city}? Our certified inspectors provide comprehensive pre-purchase inspections.`, url: `${url}#article1` },
+      { "@type": "BlogPosting", headline: `How to Prepare Your Home for a Pre-Listing Inspection in ${city}`, articleBody: `Selling your home? Pre-listing inspections highlight repairs needed to attract buyers.`, url: `${url}#article2` },
+      { "@type": "BlogPosting", headline: `Understanding Mold Risks in ${city} Homes`, articleBody: `Mold can affect health and property. Our assessments identify risks and provide guidance.`, url: `${url}#article3` },
     ],
   }), [city, siteName, url]);
-
-  const nearbyLocations = allCities.filter((c) => c !== city).slice(0, 8);
-
-  const benefits = [
-    "Same-day reports available",
-    "Certified & insured inspectors",
-    "200+ point inspections",
-    "Upfront, transparent pricing",
-    "15+ years experience",
-    "Locally owned & operated",
-  ];
 
   return (
     <div className="location-page">
 
-      {/* Helmet SEO */}
+      {/* SEO */}
       <Helmet>
-        <link rel="canonical" href={url} />
-        <title>{`${city} Home Inspector | ${description.split(".")[0]}`}</title>
+        <title>{`${city} Home Inspection | ${siteName}`}</title>
         <meta name="description" content={description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={`${city} Home Inspection | ${siteName}`} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={url} />
-        <meta property="og:image" content="https://www.asads.ca/logo.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${city} Home Inspection | ${siteName}`} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="https://www.asads.ca/logo.png" />
+        <link rel="canonical" href={url} />
         <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJSONLD)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJSONLD)}</script>
@@ -207,50 +154,36 @@ export function LocationPageTemplate({
         </div>
       </header>
 
-      {/* Services & Specialty Services */}
-      {/* ... your existing sections ... */}
+      {/* Hero */}
+      <section className="bg-gray-50 py-12 text-center">
+        <h1 className="text-4xl font-bold mb-4">Home Inspection Services in {city}</h1>
+        <p className="text-lg max-w-2xl mx-auto">{description}</p>
+      </section>
 
-      {/* Articles Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Articles */}
+      <section className="py-16 bg-white">
         <h2 className="text-3xl font-bold text-center mb-8">Home Inspection Insights in {city}</h2>
         <div className="max-w-5xl mx-auto space-y-12">
-          
-          {/* Article 1 */}
           <article id="article1">
             <h3 className="text-2xl font-semibold mb-4">Top Tips for Pre-Purchase Inspections in {city}</h3>
-            <p className="mb-2">
-              Buying a home in {city}? Our certified inspectors provide comprehensive pre-purchase inspections 
-              to ensure your investment is safe. From roofing to plumbing, every detail is checked.
-            </p>
+            <p>Buying a home in {city}? Our certified inspectors provide thorough pre-purchase inspections to ensure your investment is safe.</p>
             <h4 className="text-xl font-semibold mb-2">Why a Pre-Purchase Inspection Matters</h4>
-            <p>
-              Identifying hidden issues early prevents costly repairs. Learn about structural, electrical, and HVAC risks before you buy.
-            </p>
+            <p>Identify hidden issues early to avoid costly repairs. Learn about structural, electrical, and HVAC risks before you buy.</p>
             <Link to="/services/pre-purchase/" className="text-primary underline mt-2 inline-block">Learn more about Pre-Purchase Inspections</Link>
           </article>
-
-          {/* Article 2 */}
           <article id="article2">
             <h3 className="text-2xl font-semibold mb-4">How to Prepare Your Home for a Pre-Listing Inspection in {city}</h3>
-            <p className="mb-2">
-              Selling your home? A pre-listing inspection highlights repairs needed to attract buyers and increase your sale price.
-            </p>
-            <h4 className="text-xl font-semibold mb-2">Steps to Get Ready</h4>
+            <p>Selling your home? Pre-listing inspections highlight repairs needed to attract buyers and increase sale value.</p>
             <ul className="list-disc pl-6">
-              <li>Ensure all utilities are working</li>
-              <li>Clean and declutter areas for inspection</li>
+              <li>Ensure utilities are working</li>
+              <li>Clean and declutter for inspection</li>
               <li>Fix visible issues before the inspection</li>
             </ul>
             <Link to="/services/pre-listing/" className="text-primary underline mt-2 inline-block">Learn more about Pre-Listing Inspections</Link>
           </article>
-
-          {/* Article 3 */}
           <article id="article3">
             <h3 className="text-2xl font-semibold mb-4">Understanding Mold Risks in {city} Homes</h3>
-            <p className="mb-2">
-              Mold can affect your health and damage your property. Our mold assessments in {city} identify risks and provide remediation guidance.
-            </p>
-            <h4 className="text-xl font-semibold mb-2">Common Mold Issues</h4>
+            <p>Mold can affect health and property. Our assessments identify risks and provide guidance for remediation.</p>
             <ul className="list-disc pl-6">
               <li>Hidden leaks behind walls</li>
               <li>Poor ventilation in basements and attics</li>
@@ -258,13 +191,21 @@ export function LocationPageTemplate({
             </ul>
             <Link to="/services/mold-inspection/" className="text-primary underline mt-2 inline-block">Learn more about Mold Assessment</Link>
           </article>
-
         </div>
       </section>
 
       {/* Footer */}
-      {/* ... your existing footer ... */}
-
+      <footer className="bg-gray-800 text-white py-12">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+          <p>© {new Date().getFullYear()} {siteName}. All rights reserved.</p>
+          <ul className="flex flex-wrap gap-4 mt-4 md:mt-0">
+            <li><Link to="/" className="hover:underline">Home</Link></li>
+            <li><Link to="/about/" className="hover:underline">About</Link></li>
+            <li><Link to="/services/" className="hover:underline">Services</Link></li>
+            <li><Link to="/contact/" className="hover:underline">Contact</Link></li>
+          </ul>
+        </div>
+      </footer>
     </div>
   );
 }
