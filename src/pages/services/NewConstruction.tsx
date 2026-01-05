@@ -7,7 +7,7 @@ export default function NewConstruction() {
       title="New Construction Inspection"
       metaTitle="New Construction Inspection Ontario | Tarion Warranty"
       metaDescription="Catch builder defects before your warranty expires. Professional inspections for new Ontario homes ensuring quality and safety."
-      heroTitle="New Construction Inspection"
+      heroTitle="New Construction Home Inspection in Ontario"
       heroSubtitle="Don't assume new means perfect. We catch builder defects and incomplete work before your final walkthrough and Tarion warranty registration."
       icon={Hammer}
       price="From $449"

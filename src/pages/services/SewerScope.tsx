@@ -7,7 +7,7 @@ export default function SewerScope() {
       title="Sewer Scope Inspection"
       metaTitle="Sewer Scope Inspection | Drain Camera Service"
       metaDescription="Avoid plumbing disasters. Our camera inspections locate blockages and cracks before they become costly failures."
-      heroTitle="Sewer Scope Inspection"
+      heroTitle="Sewer Scope Inspection in Ontario"
       heroSubtitle="See what's hidden underground. Video camera inspection of sewer lines reveals blockages, cracks, root intrusion, and pipe condition."
       icon={Video}
       price="From $249"

@@ -7,7 +7,7 @@ export default function AirQuality() {
       title="Air Quality Testing"
       metaTitle="Indoor Air Quality Testing | Healthier Ontario Homes"
       metaDescription="Professional air testing for allergens and pollutants. Improve your indoor air quality and protect your family's health."
-      heroTitle="Indoor Air Quality Testing"
+      heroTitle="Indoor Air Quality Testing in Ontario"
       heroSubtitle="Breathe easier with comprehensive indoor air quality assessment. Testing for VOCs, allergens, particulates, and other airborne contaminants."
       icon={Wind}
       price="From $249"

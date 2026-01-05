@@ -16,7 +16,7 @@ export default function Uxbridge() {
       <LocationPageTemplate
         city="Uxbridge"
         region="Ontario"
-        description="Uxbridge's premier home inspection service. We specialize in rural properties, hobby farms, and estate homes throughout Uxbridge Township."
+        description="Specialized inspections in Uxbridge for rural homes, acreage properties, and private septic/well systems."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

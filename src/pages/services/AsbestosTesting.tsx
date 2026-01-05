@@ -7,7 +7,7 @@ export default function AsbestosTesting() {
       title="Asbestos Testing"
       metaTitle="Asbestos Testing & Identification | Ontario Services"
       metaDescription="Certified asbestos testing to identify hazardous materials before renovations or property transactions. Stay safe and compliant."
-      heroTitle="Asbestos Testing"
+      heroTitle="Asbestos Testing & Identification in Ontario"
       heroSubtitle="Safe, professional asbestos sampling for homes and buildings. Lab-certified analysis identifies asbestos-containing materials before renovation or purchase."
       icon={AlertTriangle}
       price="From $199"

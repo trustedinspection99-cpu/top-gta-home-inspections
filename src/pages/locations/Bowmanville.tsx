@@ -16,7 +16,7 @@ export default function Bowmanville() {
       <LocationPageTemplate
         city="Bowmanville"
         region="Ontario"
-        description="Bowmanville's trusted home inspection professionals. We provide thorough inspections throughout Bowmanville and surrounding Clarington areas."
+        description="Professional inspections in Bowmanville for newer housing and expanding neighbourhoods. Get the facts before you buy."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

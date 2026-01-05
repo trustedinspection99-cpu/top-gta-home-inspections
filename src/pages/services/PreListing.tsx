@@ -7,7 +7,7 @@ export default function PreListing() {
       title="Pre-Listing Inspection"
       metaTitle="Pre-Listing Home Inspection for Sellers | Ontario"
       metaDescription="Avoid closing delays. Our pre-listing inspections identify repairs early so you can sell your home faster and without surprises."
-      heroTitle="Pre-Listing Home Inspection"
+      heroTitle="Pre-Listing Home Inspection in Ontario"
       heroSubtitle="Sell your home faster and for more money. Address issues before listing and build buyer confidence with a professional inspection report."
       icon={Building2}
       price="From $349"

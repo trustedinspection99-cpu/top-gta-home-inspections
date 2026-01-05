@@ -16,7 +16,7 @@ export default function StCatharines() {
       <LocationPageTemplate
         city="St. Catharines"
         region="Ontario"
-        description="St. Catharines' trusted home inspection experts. From Port Dalhousie to Martindale, we provide thorough inspections throughout the city."
+        description="Home inspections in St. Catharines focused on older housing stock, structural safety, and electrical systems."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

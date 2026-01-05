@@ -138,7 +138,7 @@ export default function Booking() {
               <span className="text-sm font-medium">100% Free Online Booking</span>
             </div>
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">
-              Book Your Inspection Online
+              Schedule a Home Inspection in Ontario
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-4">
               Schedule your professional home inspection in minutes. Same-day appointments available.

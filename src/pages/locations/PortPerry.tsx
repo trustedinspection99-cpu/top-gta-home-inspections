@@ -16,7 +16,7 @@ export default function PortPerry() {
       <LocationPageTemplate
         city="Port Perry"
         region="Ontario"
-        description="Port Perry's dependable home inspection service. We specialize in waterfront homes, cottages, and heritage properties throughout the Lake Scugog area."
+        description="Home inspections in Port Perry focused on detached and semi-rural residential properties and private systems."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

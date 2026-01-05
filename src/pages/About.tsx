@@ -188,7 +188,7 @@ export default function About() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
-              About ASADS Home Inspection
+              Expert Home Inspectors in Ontario
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Since 2015, we've been the GTA's trusted partner for comprehensive home inspections. 
@@ -218,7 +218,7 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Our Story
+                Certified Home Inspection Professionals
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
@@ -250,7 +250,7 @@ export default function About() {
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Core Values
+              Accuracy, Transparency & Experience
             </h2>
             <p className="text-lg text-muted-foreground">
               These principles guide everything we do, from our inspection process to how we interact with clients.
@@ -269,7 +269,7 @@ export default function About() {
                     <value.icon className="h-7 w-7 text-primary" />
                   </div>
                   <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
-                    {value.title}
+                    Licensed & Insured Inspectors
                   </h3>
                   <p className="text-sm text-muted-foreground">{value.description}</p>
                 </CardContent>
@@ -284,7 +284,7 @@ export default function About() {
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Meet Our Team
+              Serving Ontario Buyers, Sellers & Investors
             </h2>
             <p className="text-lg text-muted-foreground">
               Our certified inspectors bring decades of combined experience to every inspection.

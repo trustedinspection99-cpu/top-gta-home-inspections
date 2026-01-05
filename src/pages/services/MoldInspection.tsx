@@ -7,7 +7,7 @@ export default function MoldInspection() {
       title="Mold Inspection"
       metaTitle="Mold Inspection & Testing Ontario | Certified Experts"
       metaDescription="Professional mold and moisture detection. We identify air quality risks and hidden growth to keep your Ontario home safe."
-      heroTitle="Mold Inspection & Testing"
+      heroTitle="Mold Inspection & Testing in Ontario"
       heroSubtitle="Identify hidden mold growth and moisture issues. Comprehensive visual inspection combined with air sampling for accurate assessment."
       icon={Search}
       price="From $299"

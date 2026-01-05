@@ -16,7 +16,7 @@ export default function Georgetown() {
       <LocationPageTemplate
         city="Georgetown"
         region="Ontario"
-        description="Georgetown's trusted home inspection professionals. We provide comprehensive inspections throughout Georgetown and surrounding Halton Hills areas."
+        description="Expert residential inspections in Georgetown with a focus on newer family builds and property safety."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

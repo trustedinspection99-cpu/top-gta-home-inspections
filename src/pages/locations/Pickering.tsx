@@ -17,7 +17,7 @@ export default function Pickering() {
       <LocationPageTemplate
         city="Pickering"
         region="Ontario"
-        description="Pickering's reliable home inspection professionals. From Bay Ridges to Claremont, we deliver thorough inspections with exceptional customer service."
+        description="Professional inspections in Pickering for suburban developments and newer residential properties. Same-day reporting."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

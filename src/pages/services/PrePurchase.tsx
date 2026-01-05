@@ -7,7 +7,7 @@ export default function PrePurchase() {
       title="Pre-Purchase Inspection"
       metaTitle="Pre-Purchase Home Inspection Ontario | Same-Day Report"
       metaDescription="Buying a home? Our certified inspectors find hidden defects with thermal imaging. Get your detailed report delivered the same day."
-      heroTitle="Pre-Purchase Home Inspection"
+      heroTitle="Pre-Purchase Home Inspection in Ontario"
       heroSubtitle="Make informed buying decisions with a comprehensive property evaluation. Identify issues before you buy and negotiate with confidence."
       icon={Home}
       price="From $399"

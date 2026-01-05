@@ -16,7 +16,7 @@ export default function Orillia() {
       <LocationPageTemplate
         city="Orillia"
         region="Ontario"
-        description="Orillia's dependable home inspection service. We specialize in lakefront properties and serve all Orillia neighborhoods with thorough inspections."
+        description="Home inspections in Orillia with a focus on structural condition and safety for the area's unique housing stock."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

@@ -16,7 +16,7 @@ export default function WasagaBeach() {
       <LocationPageTemplate
         city="Wasaga Beach"
         region="Ontario"
-        description="Wasaga Beach's trusted home inspection experts. We specialize in waterfront cottages, vacation properties, and year-round homes."
+        description="Professional inspections for cottages, seasonal homes, and residential properties in Wasaga Beach."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

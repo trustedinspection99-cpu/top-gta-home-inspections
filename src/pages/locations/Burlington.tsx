@@ -17,7 +17,7 @@ export default function Burlington() {
       <LocationPageTemplate
         city="Burlington"
         region="Ontario"
-        description="Burlington's trusted home inspection professionals. We serve all Burlington neighborhoods with thorough inspections and a commitment to quality service."
+        description="Reliable home inspections in Burlington with thorough reporting, thermal imaging, and professional inspection standards."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

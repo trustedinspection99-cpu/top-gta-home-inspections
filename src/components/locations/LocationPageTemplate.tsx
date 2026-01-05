@@ -175,7 +175,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm">
               <MapPin className="h-4 w-4" /> Serving {city}, {region}
             </div>
-            <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">Home Inspection in {city}</h1>
+            <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">{city} Home Inspector</h1>
             <p className="mb-8 text-lg opacity-90">{description}</p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button size="lg" variant="secondary" className="gap-2" asChild>
@@ -193,7 +193,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
       <section className="py-16 lg:py-24">
         <div className="container">
           <div className="mx-auto mb-12 max-w-2xl text-center">
-            <h2 className="mb-4 text-3xl font-bold">Our Services in {city}</h2>
+            <h2 className="mb-4 text-3xl font-bold">Certified Inspectors in {city}</h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
@@ -211,7 +211,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
         <div className="container">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
-              <h2 className="mb-4 text-3xl font-bold">Inspection Services in {city}</h2>
+              <h2 className="mb-4 text-3xl font-bold">Same-Day Reports in {city}</h2>
               <div className="grid gap-3 sm:grid-cols-2">
                 {[
                   { name: "Pre-Purchase Inspections", href: "/services/pre-purchase/" },
@@ -260,7 +260,7 @@ export function LocationPageTemplate({ city, region, description, neighborhoods,
       {/* CTA */}
       <section className="bg-primary py-16 text-center text-white lg:py-20">
         <div className="container">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl">Need a Home Inspection in {city}?</h2>
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">Need a Trusted Inspector in {city}?</h2>
           <p className="mb-8 text-lg opacity-90">Protect your investment with a thorough home inspection from local experts.</p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Button size="lg" variant="secondary" className="gap-2" asChild>

@@ -16,7 +16,7 @@ export default function Bolton() {
       <LocationPageTemplate
         city="Bolton"
         region="Ontario"
-        description="Bolton's reliable home inspection experts. We provide comprehensive property inspections throughout Bolton and surrounding Caledon areas."
+        description="Professional inspections in Bolton focused on acreage homes, private systems, and detached residential properties."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

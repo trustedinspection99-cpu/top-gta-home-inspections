@@ -17,7 +17,7 @@ export default function Scarborough() {
       <LocationPageTemplate
         city="Scarborough"
         region="Ontario"
-        description="Scarborough's reliable home inspection service. From Agincourt to Highland Creek, we provide thorough inspections with detailed reports."
+        description="Expert inspections for Scarborough homes, duplexes, and multi-unit properties. Get the facts on your investment with ASADS."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

@@ -16,7 +16,7 @@ export default function Stouffville() {
       <LocationPageTemplate
         city="Stouffville"
         region="Ontario"
-        description="Stouffville's dependable home inspection experts. We provide thorough inspections throughout Whitchurch-Stouffville and surrounding areas."
+        description="Specialized inspections for Stouffville's newer developments and modern builds. Catch defects before they become costly."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

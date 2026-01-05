@@ -16,7 +16,7 @@ export default function Grimsby() {
       <LocationPageTemplate
         city="Grimsby"
         region="Ontario"
-        description="Grimsby's dependable home inspection experts. We specialize in waterfront and escarpment properties throughout Grimsby."
+        description="Professional inspections in Grimsby for newer and established residential neighbourhoods. Same-day reporting."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

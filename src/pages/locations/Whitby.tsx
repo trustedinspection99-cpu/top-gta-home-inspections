@@ -16,7 +16,7 @@ export default function Whitby() {
       <LocationPageTemplate
         city="Whitby"
         region="Ontario"
-        description="Whitby's trusted home inspection experts. From Brooklin to Port Whitby, we provide comprehensive inspections with same-day reports."
+        description="Detailed home inspections in Whitby covering modern subdivisions and established family homes. Thermal imaging included."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

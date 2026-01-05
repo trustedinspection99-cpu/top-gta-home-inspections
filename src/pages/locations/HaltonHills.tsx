@@ -16,7 +16,7 @@ export default function HaltonHills() {
       <LocationPageTemplate
         city="Halton Hills"
         region="Ontario"
-        description="Halton Hills' dependable home inspection experts. We serve Georgetown, Acton, and all Halton Hills communities with thorough property inspections."
+        description="Professional inspections in Halton Hills for modern housing and growing communities. Same-day reports included."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

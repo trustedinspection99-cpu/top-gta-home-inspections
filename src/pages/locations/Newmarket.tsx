@@ -17,7 +17,7 @@ export default function Newmarket() {
       <LocationPageTemplate
         city="Newmarket"
         region="Ontario"
-        description="Newmarket's preferred home inspection service. We provide thorough inspections throughout Newmarket with same-day reports and transparent pricing."
+        description="Professional home inspections in Newmarket helping buyers understand property condition before finalizing their purchase."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

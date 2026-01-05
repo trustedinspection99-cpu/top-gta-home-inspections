@@ -17,7 +17,7 @@ export default function Caledon() {
       <LocationPageTemplate
         city="Caledon"
         region="Ontario"
-        description="Caledon's trusted home inspection service. From Bolton to Palgrave, we specialize in rural properties, estate homes, and new construction."
+        description="Specialist in Caledon rural properties. We inspect private wells, septic systems, and large detached homes for total security."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

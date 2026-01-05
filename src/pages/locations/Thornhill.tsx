@@ -16,7 +16,7 @@ export default function Thornhill() {
       <LocationPageTemplate
         city="Thornhill"
         region="Ontario"
-        description="Thornhill's premier home inspection service. We serve both Vaughan and Markham portions of Thornhill with comprehensive inspections."
+        description="Professional home inspections in Thornhill focused on accuracy, electrical safety, and reliable reporting."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

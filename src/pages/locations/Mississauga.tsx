@@ -17,7 +17,7 @@ export default function Mississauga() {
       <LocationPageTemplate
         city="Mississauga"
         region="Ontario"
-        description="Mississauga's premier home inspection service. From Port Credit to Meadowvale, we provide thorough inspections for all property types with same-day availability."
+        description="Top-rated home inspections in Mississauga. Detailed reports for houses and townhomes with expert system testing."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

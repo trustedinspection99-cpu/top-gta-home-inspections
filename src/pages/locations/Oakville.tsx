@@ -17,7 +17,7 @@ export default function Oakville() {
       <LocationPageTemplate
         city="Oakville"
         region="Ontario"
-        description="Oakville's premium home inspection service. From downtown to Glen Abbey, we provide thorough inspections with attention to detail and superior customer service."
+        description="High-standard inspections in Oakville. We focus on quality construction and safety for discerning buyers and sellers."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

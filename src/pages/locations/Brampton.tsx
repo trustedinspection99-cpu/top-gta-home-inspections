@@ -17,7 +17,7 @@ export default function Brampton() {
       <LocationPageTemplate
         city="Brampton"
         region="Ontario"
-        description="Brampton's trusted home inspection specialists. We serve all Brampton neighborhoods with comprehensive inspections for residential and commercial properties."
+        description="Trusted Brampton home inspections. We specialize in newer developments and pre-delivery audits for confident home buying."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

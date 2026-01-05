@@ -16,7 +16,7 @@ export default function Barrie() {
       <LocationPageTemplate
         city="Barrie"
         region="Ontario"
-        description="Barrie's trusted home inspection experts. From downtown to the waterfront, we provide comprehensive inspections throughout the entire city."
+        description="Certified inspections for Barrie homes and investments. Same-day reporting helps you close the deal faster."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

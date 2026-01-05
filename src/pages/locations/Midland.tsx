@@ -16,7 +16,7 @@ export default function Midland() {
       <LocationPageTemplate
         city="Midland"
         region="Ontario"
-        description="Midland's dependable home inspection service. We serve Midland, Penetanguishene, and all Georgian Bay communities with expert inspections."
+        description="Professional inspections in Midland for detached and semi-rural residential properties. Detailed system audits."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

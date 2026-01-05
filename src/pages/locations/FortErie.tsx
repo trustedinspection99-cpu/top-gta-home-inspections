@@ -16,7 +16,7 @@ export default function FortErie() {
       <LocationPageTemplate
         city="Fort Erie"
         region="Ontario"
-        description="Fort Erie's reliable home inspection experts. We specialize in waterfront properties and serve Crystal Beach to Ridgeway."
+        description="Home inspections in Fort Erie for detached properties and rural-style residences. Thorough system testing."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

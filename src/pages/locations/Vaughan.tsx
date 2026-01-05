@@ -17,7 +17,7 @@ export default function Vaughan() {
       <LocationPageTemplate
         city="Vaughan"
         region="Ontario"
-        description="Vaughan's leading home inspection company. From Woodbridge to Thornhill, we provide thorough inspections with same-day reports and detailed findings."
+        description="Leading home inspections in Vaughan. Get the edge with detailed same-day reports and expert advice for all property types."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

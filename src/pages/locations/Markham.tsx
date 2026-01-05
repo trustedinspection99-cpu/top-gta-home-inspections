@@ -17,7 +17,7 @@ export default function Markham() {
       <LocationPageTemplate
         city="Markham"
         region="Ontario"
-        description="Markham's preferred home inspection experts. We serve Unionville, Cornell, Berczy, and all Markham communities with thorough, reliable inspection services."
+        description="In-depth inspections in Markham for investors and families. We check every system from roof to foundation for total protection."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

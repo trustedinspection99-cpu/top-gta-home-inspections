@@ -16,7 +16,7 @@ export default function NiagaraOnTheLake() {
       <LocationPageTemplate
         city="Niagara-on-the-Lake"
         region="Ontario"
-        description="Niagara-on-the-Lake's premier home inspection service. We specialize in heritage homes, wine country properties, and luxury estates."
+        description="Expert inspections for Niagara-on-the-Lake's heritage and luxury properties. Specialized architectural audits."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />

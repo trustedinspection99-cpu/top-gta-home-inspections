@@ -16,7 +16,7 @@ export default function KingCity() {
       <LocationPageTemplate
         city="King City"
         region="Ontario"
-        description="King City's premier home inspection service. We specialize in estate homes, equestrian properties, and luxury residences throughout King Township."
+        description="Specialized inspections for King City's estates and rural homes, including private system checks and structural audits."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
       />
