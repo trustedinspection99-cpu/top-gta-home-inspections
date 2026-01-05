@@ -63,19 +63,19 @@ const servicesSchema = [
     name: "Condo Inspection",
     description:
       "Specialized inspections for condos, townhomes, and stacked units.",
-    url: `${SITE_URL}/services/condo-inspection/`,
+    url: `${SITE_URL}/services/condo`,
   },
   {
     name: "Commercial Inspection",
     description:
       "Comprehensive assessments for commercial and investment properties.",
-    url: `${SITE_URL}/services/commercial-inspection/`,
+    url: `${SITE_URL}/services/commercial`,
   },
   {
     name: "Specialty Services",
     description:
       "Radon Testing, Mold Inspection, Thermal Imaging, Air Quality Testing, WETT Inspection, Asbestos Testing, Lead Paint Testing, Well Water Testing, Sewer Scope",
-    url: `${SITE_URL}/services/specialty-services/`,
+    url: `${SITE_URL}/services/`,
   },
 ];
 
