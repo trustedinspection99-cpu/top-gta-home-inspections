@@ -230,6 +230,59 @@ export function LocationPageTemplate({
             ))}
           </ul>
         </section>
+
+
+        {/* ================= SPECIALTY SERVICES ================= */}
+        <section className="specialty-services py-12 px-6 bg-gray-50 mb-16">
+          <h2 className="text-3xl font-bold mb-6">
+            Specialty Home Inspection Services
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {specialtyServices.map((s) => (
+              <div
+                key={s.name}
+                className="p-4 border rounded shadow-sm flex gap-4"
+              >
+                {s.icon}
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{s.name}</h3>
+                  <p className="text-gray-700">{s.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ================= ARTICLES ================= */}
+        <section className="articles my-16 px-6">
+          <h2 className="text-3xl font-bold mb-6">
+            Articles & Guides for Homeowners in {city}
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {articles.map((article) => (
+              <div
+                key={article.slug}
+                className="article-card p-4 border rounded shadow-sm"
+              >
+                <h3 className="text-xl font-semibold mb-2">
+                  {article.title} – {city}
+                </h3>
+                <p className="text-gray-700 mb-2">
+                  Learn how {article.title.toLowerCase()} can help protect your
+                  home in {city}.
+                </p>
+                <Link
+                  to={`/blog/${article.slug}/`}
+                  className="text-primary underline"
+                >
+                  Read More
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
         {/* In-Depth Home Inspection Articles (SEO Content Layer) */}
 <section className="inspection-articles my-16 px-6 max-w-5xl mx-auto">
   <h2 className="text-3xl font-bold mb-8">
@@ -325,59 +378,6 @@ export function LocationPageTemplate({
     </Link>
   </article>
 </section>
-
-        {/* ================= SPECIALTY SERVICES ================= */}
-        <section className="specialty-services py-12 px-6 bg-gray-50 mb-16">
-          <h2 className="text-3xl font-bold mb-6">
-            Specialty Home Inspection Services
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {specialtyServices.map((s) => (
-              <div
-                key={s.name}
-                className="p-4 border rounded shadow-sm flex gap-4"
-              >
-                {s.icon}
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">{s.name}</h3>
-                  <p className="text-gray-700">{s.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ================= ARTICLES ================= */}
-        <section className="articles my-16 px-6">
-          <h2 className="text-3xl font-bold mb-6">
-            Articles & Guides for Homeowners in {city}
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {articles.map((article) => (
-              <div
-                key={article.slug}
-                className="article-card p-4 border rounded shadow-sm"
-              >
-                <h3 className="text-xl font-semibold mb-2">
-                  {article.title} – {city}
-                </h3>
-                <p className="text-gray-700 mb-2">
-                  Learn how {article.title.toLowerCase()} can help protect your
-                  home in {city}.
-                </p>
-                <Link
-                  to={`/blog/${article.slug}/`}
-                  className="text-primary underline"
-                >
-                  Read More
-                </Link>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* ================= CTA ================= */}
         <section className="text-center mt-20">
           <h2 className="text-3xl font-bold mb-4">
