@@ -1,18 +1,11 @@
 import { Helmet } from "react-helmet-async";
+import Link from "next/link";
 import { Layout } from "@/components/layout/Layout";
 import { TrustBadges } from "@/components/home/TrustBadges";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { CTASection } from "@/components/home/CTASection";
 import { SITE_URL } from "@/lib/seo";
-import Link from "next/link";
-import {
-  HomeIcon,
-  DocumentTextIcon,
-  BuildingOfficeIcon,
-  OfficeBuildingIcon,
-  BeakerIcon,
-  CheckCircleIcon,
-} from "@heroicons/react/24/outline";
+import { FaHome, FaBuilding, FaTools, FaWarehouse, FaClipboardCheck, FaMicroscope } from "react-icons/fa";
 
 // Homepage FAQ schema
 const homepageFaqs = [
@@ -52,49 +45,45 @@ const servicesSchema = [
     name: "Pre-Purchase Inspection",
     description:
       "Complete evaluation before you buy. Identify issues and negotiate with confidence.",
-    url: `${SITE_URL}/services/pre-purchase-inspection`,
+    url: `${SITE_URL}/services/pre-purchase-inspection/`,
+    icon: <FaHome size={40} className="text-blue-600" />,
   },
   {
     name: "Pre-Listing Inspection",
     description:
       "Sell your home faster with a pre-listing inspection that builds buyer trust.",
-    url: `${SITE_URL}/services/pre-listing-inspection`,
+    url: `${SITE_URL}/services/pre-listing-inspection/`,
+    icon: <FaClipboardCheck size={40} className="text-blue-600" />,
   },
   {
     name: "New Construction",
     description:
       "Verify builder quality and catch defects before your final walkthrough.",
-    url: `${SITE_URL}/services/new-construction-inspection`,
+    url: `${SITE_URL}/services/new-construction-inspection/`,
+    icon: <FaBuilding size={40} className="text-blue-600" />,
   },
   {
     name: "Condo Inspection",
     description:
       "Specialized inspections for condos, townhomes, and stacked units.",
-    url: `${SITE_URL}/services/condo-inspection`,
+    url: `${SITE_URL}/services/condo-inspection/`,
+    icon: <FaTools size={40} className="text-blue-600" />,
   },
   {
     name: "Commercial Inspection",
     description:
       "Comprehensive assessments for commercial and investment properties.",
-    url: `${SITE_URL}/services/commercial-inspection`,
+    url: `${SITE_URL}/services/commercial-inspection/`,
+    icon: <FaWarehouse size={40} className="text-blue-600" />,
   },
   {
     name: "Specialty Services",
     description:
       "Radon Testing, Mold Inspection, Thermal Imaging, Air Quality Testing, WETT Inspection, Asbestos Testing, Lead Paint Testing, Well Water Testing, Sewer Scope",
-    url: `${SITE_URL}/services/specialty-services`,
+    url: `${SITE_URL}/services/specialty-services/`,
+    icon: <FaMicroscope size={40} className="text-blue-600" />,
   },
 ];
-
-// Map icons to services
-const serviceIcons: Record<string, JSX.Element> = {
-  "Pre-Purchase Inspection": <HomeIcon className="w-10 h-10 text-blue-600 mb-4" />,
-  "Pre-Listing Inspection": <DocumentTextIcon className="w-10 h-10 text-blue-600 mb-4" />,
-  "New Construction": <BuildingOfficeIcon className="w-10 h-10 text-blue-600 mb-4" />,
-  "Condo Inspection": <OfficeBuildingIcon className="w-10 h-10 text-blue-600 mb-4" />,
-  "Commercial Inspection": <BeakerIcon className="w-10 h-10 text-blue-600 mb-4" />,
-  "Specialty Services": <CheckCircleIcon className="w-10 h-10 text-blue-600 mb-4" />,
-};
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -118,7 +107,6 @@ const servicesJsonLd = {
   })),
 };
 
-// LocalBusiness / Hero structured data
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -166,7 +154,6 @@ const Index = () => {
       </noscript>
 
       <Helmet>
-        {/* Google Tag Manager */}
         <script>
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -182,29 +169,6 @@ const Index = () => {
         />
         <link rel="canonical" href={`${SITE_URL}/`} />
 
-        {/* Open Graph */}
-        <meta property="og:title" content="Home Inspection Toronto & GTA | ASADS" />
-        <meta
-          property="og:description"
-          content="Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections. Book online or call (647) 801-9311."
-        />
-        <meta property="og:url" content={`${SITE_URL}/`} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="ASADS Home Inspection" />
-        <meta property="og:locale" content="en_CA" />
-        <meta property="og:image" content={`${SITE_URL}/og-image.jpg`} />
-
-        {/* Twitter/X Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@AsadsInspection" />
-        <meta name="twitter:title" content="Home Inspection Toronto & GTA | ASADS" />
-        <meta
-          name="twitter:description"
-          content="Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections."
-        />
-        <meta name="twitter:image" content={`${SITE_URL}/og-image.jpg`} />
-
-        {/* JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(servicesJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
@@ -263,26 +227,20 @@ const Index = () => {
         ]}
       />
 
-      {/* Services Section with Hover & Cards */}
-      <section className="services py-16 bg-gray-50">
-        <h2 className="text-3xl font-bold mb-12 text-center">
-          Comprehensive Inspection Services
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {/* Services Section */}
+      <section className="services py-16">
+        <h2 className="text-3xl font-bold mb-8 text-center">Comprehensive Inspection Services</h2>
+        <div className="grid md:grid-cols-2 gap-8">
           {servicesSchema.map((service) => (
             <Link
               href={service.url}
               key={service.name}
-              className="group block border rounded-lg p-6 bg-white hover:bg-blue-50 hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out"
+              className="group block border rounded-lg p-6 bg-white hover:bg-blue-50 hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out text-center"
             >
-              <div className="flex justify-center">
-                {serviceIcons[service.name]}
-              </div>
-              <h3 className="text-2xl font-semibold mb-2 text-center group-hover:text-blue-600">
-                {service.name}
-              </h3>
-              <p className="text-gray-700 text-center">{service.description}</p>
-              <span className="inline-block mt-4 text-blue-600 font-medium text-center group-hover:underline">
+              <div className="mb-4 flex justify-center">{service.icon}</div>
+              <h3 className="text-2xl font-semibold mb-2 group-hover:text-blue-600">{service.name}</h3>
+              <p className="text-gray-700">{service.description}</p>
+              <span className="inline-block mt-4 text-blue-600 font-medium group-hover:underline">
                 Learn More →
               </span>
             </Link>
@@ -295,15 +253,6 @@ const Index = () => {
 
       {/* Call to Action */}
       <CTASection />
-
-      {/* Hidden Social Links */}
-      <section className="hidden">
-        <a href="https://youtube.com/@asadshomeinspection" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/asads_home_inspection" target="_blank">Instagram</a>
-        <a href="https://x.com/AsadsInspection" target="_blank">X / Twitter</a>
-        <a href="https://www.facebook.com/share/1ZhWQk97YY/" target="_blank">Facebook</a>
-        <a href="https://www.tiktok.com/@asads_home_inspection" target="_blank">TikTok</a>
-      </section>
     </Layout>
   );
 };
