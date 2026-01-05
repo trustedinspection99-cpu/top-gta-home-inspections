@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Thermometer, Leaf, Shield } from "lucide-react";
+import { MapPin, CheckCircle, Phone, Thermometer, Leaf, Shield } from "lucide-react";
 
 interface SpecialtyService {
   name: string;
@@ -68,7 +68,7 @@ export function LocationPageTemplate({
   const slugifiedCity = city.toLowerCase().replace(/\s+/g, "-");
   const url = `https://www.asads.ca/locations/${slugifiedCity}/`;
 
-  // --- JSON-LD SCHEMAS ---
+  // JSON-LD Schemas
   const schemaOrgJSONLD = useMemo(() => ({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -83,11 +83,11 @@ export function LocationPageTemplate({
       streetAddress: address,
       addressLocality: city,
       addressRegion: region,
-      postalCode: postalCode,
+      postalCode,
       addressCountry: "Canada",
     },
     geo: latitude && longitude ? { "@type": "GeoCoordinates", latitude, longitude } : undefined,
-    areaServed: allCities.map(c => ({ "@type": "City", name: c })),
+    areaServed: city,
     sameAs: [
       "https://www.facebook.com/share/1ZhWQk97YY/",
       "https://www.instagram.com/asads_home_inspection",
@@ -95,11 +95,8 @@ export function LocationPageTemplate({
       "https://tiktok.com/@asads_home_inspection",
       "https://x.com/AsadsInspection",
     ],
-    services: [
-      ...services.map(s => ({ "@type": "Service", name: s })),
-      ...specialtyServices.map(s => ({ "@type": "Service", name: s.name, description: s.description }))
-    ]
-  }), [city, region, description, phoneNumber, address, postalCode, services, specialtyServices, allCities, latitude, longitude]);
+    services: services.map((s) => ({ "@type": "Service", name: s })),
+  }), [city, region, description, phoneNumber, address, postalCode, services, latitude, longitude]);
 
   const breadcrumbJSONLD = useMemo(() => ({
     "@context": "https://schema.org",
@@ -159,9 +156,20 @@ export function LocationPageTemplate({
     "Locally owned & operated",
   ];
 
+  // Dynamic headings
+  const heroH1 = `${city} Home Inspections | Trusted Certified Inspectors`;
+  const servicesH2 = `Services Offered in ${city}`;
+  const specialtyH2 = `Specialty Services in ${city}`;
+  const articlesH2 = `Articles & Guides for Homeowners in ${city}`;
+  const benefitsH2 = `Why Choose ${siteName} in ${city}?`;
+  const nearbyH2 = `Other Service Areas Near ${city}`;
+  const serviceH3 = (service: string) => `${service} in ${city}`;
+  const specialtyH3 = (specialty: SpecialtyService) => `${specialty.name} in ${city}`;
+  const articleH3 = (article: Article) => article.title;
+
   return (
     <div className="location-page">
-      {/* SEO + JSON-LD */}
+      {/* Helmet SEO */}
       <Helmet>
         <link rel="canonical" href={url} />
         <title>{`${city} Home Inspector | ${description.split(".")[0]}`}</title>
@@ -178,10 +186,12 @@ export function LocationPageTemplate({
         <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJSONLD)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJSONLD)}</script>
-        {articleJSONLD.map((a, i) => <script key={i} type="application/ld+json">{JSON.stringify(a)}</script>)}
+        {articleJSONLD.map((a, i) => (
+          <script key={i} type="application/ld+json">{JSON.stringify(a)}</script>
+        ))}
       </Helmet>
 
-      {/* HEADER */}
+      {/* Header */}
       <header className="bg-white shadow">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
           <Link to="/"><img src="/logo.png" alt={siteName} className="h-12" /></Link>
@@ -205,34 +215,34 @@ export function LocationPageTemplate({
         </div>
       </header>
 
-      {/* HERO */}
+      {/* Hero */}
       <section className="hero py-12 px-6 text-center bg-gray-50">
-        <h1 className="text-4xl font-bold mb-4">{city} Home Inspections | Trusted Certified Inspectors</h1>
+        <h1 className="text-4xl font-bold mb-4">{heroH1}</h1>
         <p className="text-gray-700 max-w-2xl mx-auto">{description}</p>
       </section>
 
-      {/* SERVICES */}
+      {/* Services */}
       <section className="services py-12 px-6">
-        <h2 className="text-3xl font-bold mb-6">Services Offered in {city}</h2>
+        <h2 className="text-3xl font-bold mb-6">{servicesH2}</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service) => (
             <div key={service} className="p-4 border rounded shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">{service}</h3>
+              <h3 className="text-xl font-semibold mb-2">{serviceH3(service)}</h3>
               <p className="text-gray-700">{`Professional ${service.toLowerCase()} in ${city} to ensure your home is safe and secure.`}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* SPECIALTY SERVICES */}
+      {/* Specialty Services */}
       <section className="specialty-services py-12 px-6 bg-gray-50">
-        <h2 className="text-3xl font-bold mb-6">Specialty Services</h2>
+        <h2 className="text-3xl font-bold mb-6">{specialtyH2}</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {specialtyServices.map((s) => (
             <div key={s.name} className="p-4 border rounded shadow-sm flex items-start gap-4">
-              {s.icon}
+              {s.icon ? <div className="text-primary">{s.icon}</div> : null}
               <div>
-                <h3 className="text-xl font-semibold mb-2">{s.name}</h3>
+                <h3 className="text-xl font-semibold mb-2">{specialtyH3(s)}</h3>
                 <p className="text-gray-700">{s.description}</p>
               </div>
             </div>
@@ -240,13 +250,13 @@ export function LocationPageTemplate({
         </div>
       </section>
 
-      {/* ARTICLES */}
+      {/* Articles & Guides */}
       <section className="articles my-12 px-6">
-        <h2 className="text-3xl font-bold mb-6">Articles & Guides for Homeowners</h2>
+        <h2 className="text-3xl font-bold mb-6">{articlesH2}</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {articles.map((article) => (
             <div key={article.slug} className="article-card p-4 border rounded shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
+              <h3 className="text-xl font-semibold mb-2">{articleH3(article)}</h3>
               <p className="text-gray-700 mb-2">{`Learn how ${article.title.toLowerCase()} can help protect your home in ${city}.`}</p>
               <Link to={`/blog/${article.slug}/`} className="text-primary underline">Read More</Link>
             </div>
@@ -254,17 +264,17 @@ export function LocationPageTemplate({
         </div>
       </section>
 
-      {/* BENEFITS */}
+      {/* Benefits */}
       <section className="benefits py-12 px-6 bg-gray-50">
-        <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
+        <h2 className="text-3xl font-bold mb-6">{benefitsH2}</h2>
         <ul className="list-disc list-inside space-y-2">
           {benefits.map((b) => <li key={b}>{b}</li>)}
         </ul>
       </section>
 
-      {/* NEARBY LOCATIONS */}
+      {/* Nearby Locations */}
       <section className="nearby-locations py-12 px-6">
-        <h2 className="text-3xl font-bold mb-6">Other Service Areas</h2>
+        <h2 className="text-3xl font-bold mb-6">{nearbyH2}</h2>
         <ul className="flex flex-wrap gap-4">
           {nearbyLocations.map((c) => (
             <li key={c}><Link to={`/locations/${c.toLowerCase().replace(/\s+/g,'-')}/`} className="underline">{c}</Link></li>
@@ -272,7 +282,7 @@ export function LocationPageTemplate({
         </ul>
       </section>
 
-      {/* FOOTER */}
+      {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-6 grid md:grid-cols-4 gap-8">
           <div>
@@ -297,22 +307,7 @@ export function LocationPageTemplate({
           <div>
             <h2 className="font-bold mb-2">Inspection Services</h2>
             <ul>
-              {[
-                "Pre-Purchase Inspection",
-                "Pre-Listing Inspection",
-                "Condo Inspection",
-                "Commercial Inspection",
-                "New Construction Inspection",
-                "Radon Testing",
-                "Mold Inspection",
-                "Asbestos Testing",
-                "Lead Paint Testing",
-                "Well Water Testing",
-                "Thermal Imaging",
-                "Air Quality Testing",
-                "Sewer Scope Inspection",
-                "WETT Inspection"
-              ].map(service => (
+              {services.map(service => (
                 <li key={service}><Link to={`/services/${service.toLowerCase().replace(/\s+/g,"-")}/`}>{service}</Link></li>
               ))}
             </ul>
@@ -349,7 +344,7 @@ export function LocationPageTemplate({
         </div>
       </footer>
 
-      {/* FLOATING CALL BUTTON */}
+      {/* Floating Call Button */}
       <a
         href={`tel:${phoneNumber}`}
         className="floating-call-button"
@@ -372,4 +367,4 @@ export function LocationPageTemplate({
       </a>
     </div>
   );
-                                        }
+                }
