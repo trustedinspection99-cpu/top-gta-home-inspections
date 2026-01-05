@@ -1,277 +1,296 @@
-import { Layout } from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import React, { useMemo } from "react";
 import { Helmet } from "react-helmet-async";
-import { Phone, MapPin, Clock, Shield, Star, CheckCircle, ArrowRight } from "lucide-react";
-import { getCanonicalUrl, normalizePath } from "@/lib/seo";
+import { MapPin, CheckCircle, Phone, Thermometer, Leaf, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
-interface LocationPageProps {
+interface SpecialtyService {
+  name: string;
+  description: string;
+  icon?: React.ReactNode;
+}
+
+interface LocationPageTemplateProps {
   city: string;
   region: string;
   description: string;
-  neighborhoods: string[];
+  neighborhoods?: string[];
   phoneNumber: string;
+  address?: string;
+  postalCode?: string;
+  latitude?: number;
+  longitude?: number;
+  siteName?: string;
+  services?: string[];
+  specialtyServices?: SpecialtyService[];
+  allCities?: string[]; // all other cities for internal linking
 }
 
-// All locations for cross-linking
-const allLocations = [
-  // Toronto & Surrounding
-  { name: "Toronto", slug: "toronto", region: "Toronto" },
-  { name: "North York", slug: "north-york", region: "Toronto" },
-  { name: "Scarborough", slug: "scarborough", region: "Toronto" },
-  { name: "Etobicoke", slug: "etobicoke", region: "Toronto" },
-  { name: "East York", slug: "east-york", region: "Toronto" },
-  // Peel Region
-  { name: "Mississauga", slug: "mississauga", region: "Peel" },
-  { name: "Brampton", slug: "brampton", region: "Peel" },
-  { name: "Caledon", slug: "caledon", region: "Peel" },
-  { name: "Bolton", slug: "bolton", region: "Peel" },
-  // York Region
-  { name: "Vaughan", slug: "vaughan", region: "York" },
-  { name: "Markham", slug: "markham", region: "York" },
-  { name: "Richmond Hill", slug: "richmond-hill", region: "York" },
-  { name: "Newmarket", slug: "newmarket", region: "York" },
-  { name: "Aurora", slug: "aurora", region: "York" },
-  { name: "King City", slug: "king-city", region: "York" },
-  { name: "Stouffville", slug: "stouffville", region: "York" },
-  { name: "Georgina", slug: "georgina", region: "York" },
-  { name: "East Gwillimbury", slug: "east-gwillimbury", region: "York" },
-  { name: "Keswick", slug: "keswick", region: "York" },
-  { name: "Sutton", slug: "sutton", region: "York" },
-  { name: "Woodbridge", slug: "woodbridge", region: "York" },
-  { name: "Thornhill", slug: "thornhill", region: "York" },
-  { name: "Maple", slug: "maple", region: "York" },
-  { name: "Kleinburg", slug: "kleinburg", region: "York" },
-  { name: "Concord", slug: "concord", region: "York" },
-  { name: "Unionville", slug: "unionville", region: "York" },
-  // Halton Region
-  { name: "Oakville", slug: "oakville", region: "Halton" },
-  { name: "Burlington", slug: "burlington", region: "Halton" },
-  { name: "Milton", slug: "milton", region: "Halton" },
-  { name: "Halton Hills", slug: "halton-hills", region: "Halton" },
-  { name: "Georgetown", slug: "georgetown", region: "Halton" },
-  { name: "Acton", slug: "acton", region: "Halton" },
-  // Durham Region
-  { name: "Oshawa", slug: "oshawa", region: "Durham" },
-  { name: "Whitby", slug: "whitby", region: "Durham" },
-  { name: "Ajax", slug: "ajax", region: "Durham" },
-  { name: "Pickering", slug: "pickering", region: "Durham" },
-  { name: "Clarington", slug: "clarington", region: "Durham" },
-  { name: "Bowmanville", slug: "bowmanville", region: "Durham" },
-  { name: "Uxbridge", slug: "uxbridge", region: "Durham" },
-  { name: "Scugog", slug: "scugog", region: "Durham" },
-  { name: "Port Perry", slug: "port-perry", region: "Durham" },
-  { name: "Brock", slug: "brock", region: "Durham" },
-  { name: "Beaverton", slug: "beaverton", region: "Durham" },
-  { name: "Cannington", slug: "cannington", region: "Durham" },
-  // Simcoe County
-  { name: "Barrie", slug: "barrie", region: "Simcoe" },
-  { name: "Orillia", slug: "orillia", region: "Simcoe" },
-  { name: "Innisfil", slug: "innisfil", region: "Simcoe" },
-  { name: "Bradford", slug: "bradford", region: "Simcoe" },
-  { name: "Alliston", slug: "alliston", region: "Simcoe" },
-  { name: "Collingwood", slug: "collingwood", region: "Simcoe" },
-  { name: "Wasaga Beach", slug: "wasaga-beach", region: "Simcoe" },
-  { name: "Midland", slug: "midland", region: "Simcoe" },
-  { name: "Penetanguishene", slug: "penetanguishene", region: "Simcoe" },
-  { name: "New Tecumseth", slug: "new-tecumseth", region: "Simcoe" },
-  { name: "Essa", slug: "essa", region: "Simcoe" },
-  { name: "Springwater", slug: "springwater", region: "Simcoe" },
-  { name: "Clearview", slug: "clearview", region: "Simcoe" },
-  { name: "Stayner", slug: "stayner", region: "Simcoe" },
-  // Hamilton-Niagara
-  { name: "Hamilton", slug: "hamilton", region: "Hamilton-Niagara" },
-  { name: "Stoney Creek", slug: "stoney-creek", region: "Hamilton-Niagara" },
-  { name: "Ancaster", slug: "ancaster", region: "Hamilton-Niagara" },
-  { name: "Dundas", slug: "dundas", region: "Hamilton-Niagara" },
-  { name: "Flamborough", slug: "flamborough", region: "Hamilton-Niagara" },
-  { name: "Grimsby", slug: "grimsby", region: "Hamilton-Niagara" },
-  { name: "Beamsville", slug: "beamsville", region: "Hamilton-Niagara" },
-  { name: "Lincoln", slug: "lincoln", region: "Hamilton-Niagara" },
-  { name: "St. Catharines", slug: "st-catharines", region: "Hamilton-Niagara" },
-  { name: "Niagara Falls", slug: "niagara-falls", region: "Hamilton-Niagara" },
-  { name: "Niagara-on-the-Lake", slug: "niagara-on-the-lake", region: "Hamilton-Niagara" },
-  { name: "Welland", slug: "welland", region: "Hamilton-Niagara" },
-  { name: "Fort Erie", slug: "fort-erie", region: "Hamilton-Niagara" },
-  { name: "Port Colborne", slug: "port-colborne", region: "Hamilton-Niagara" },
-  { name: "Thorold", slug: "thorold", region: "Hamilton-Niagara" },
-  // Waterloo Region
-  { name: "Kitchener", slug: "kitchener", region: "Waterloo" },
-  { name: "Waterloo", slug: "waterloo", region: "Waterloo" },
-  { name: "Cambridge", slug: "cambridge", region: "Waterloo" },
-  // Wellington & Dufferin
-  { name: "Guelph", slug: "guelph", region: "Wellington" },
-  { name: "Orangeville", slug: "orangeville", region: "Dufferin" },
-  // Kawartha & Peterborough
-  { name: "Peterborough", slug: "peterborough", region: "Peterborough" },
-  // Northumberland & Brant
-  { name: "Cobourg", slug: "cobourg", region: "Northumberland" },
-  { name: "Brantford", slug: "brantford", region: "Brant" },
-];
+export function LocationPageTemplate({
+  city,
+  region,
+  description,
+  neighborhoods = [],
+  phoneNumber,
+  address = "Ontario, Canada",
+  postalCode = "",
+  latitude,
+  longitude,
+  siteName = "ASADS Home Inspections",
+  services = [
+    "Pre-Purchase Inspection",
+    "Pre-Listing Inspection",
+    "Condo Inspection",
+    "Mold Assessment",
+    "Thermal Imaging",
+    "Warranty Inspection",
+  ],
+  specialtyServices = [
+    { name: "Thermal Imaging", description: "Detect hidden moisture, leaks, and insulation gaps.", icon: <Thermometer className="w-6 h-6 text-primary" /> },
+    { name: "Mold Assessment", description: "Identify mold risks and ensure a safe environment.", icon: <Leaf className="w-6 h-6 text-primary" /> },
+    { name: "WETT Inspection", description: "Certified wood-burning appliance inspections.", icon: <Shield className="w-6 h-6 text-primary" /> },
+  ],
+  allCities = [],
+}: LocationPageTemplateProps) {
+  const slugifiedCity = city.toLowerCase().replace(/\s+/g, "-");
+  const url = `https://www.asads.ca/locations/${slugifiedCity}/`;
 
-function getNearbyLocations(currentCitySlug: string, count: number = 8) {
-  const currentLocation = allLocations.find(loc => loc.slug === currentCitySlug);
-  if (!currentLocation) return allLocations.slice(0, count);
-  const sameRegion = allLocations.filter(loc => loc.region === currentLocation.region && loc.slug !== currentCitySlug);
-  const otherRegions = allLocations.filter(loc => loc.region !== currentLocation.region && loc.slug !== currentCitySlug);
-  return [...sameRegion, ...otherRegions].slice(0, count);
-}
+  // JSON-LD Schema
+  const schemaOrgJSONLD = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: siteName,
+    description: description,
+    url: url,
+    telephone: phoneNumber,
+    priceRange: "$$",
+    image: "https://www.asads.ca/logo.png",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: address,
+      addressLocality: city,
+      addressRegion: region,
+      postalCode: postalCode,
+      addressCountry: "Canada",
+    },
+    geo: latitude && longitude ? { "@type": "GeoCoordinates", latitude, longitude } : undefined,
+    areaServed: city,
+    sameAs: [
+      "https://www.facebook.com/share/1ZhWQk97YY/",
+      "https://www.instagram.com/asads_home_inspection",
+      "https://youtube.com/@asadshomeinspection",
+      "https://tiktok.com/@asads_home_inspection",
+      "https://x.com/AsadsInspection",
+    ],
+    services: services.map((s) => ({ "@type": "Service", name: s })),
+  }), [city, region, description, phoneNumber, address, postalCode, services, latitude, longitude]);
 
-export function LocationPageTemplate({ city, region, description, neighborhoods, phoneNumber }: LocationPageProps) {
-  const location = useLocation();
-  const citySlug = city.toLowerCase().replace(/\s+/g, '-');
-  const locationUrl = getCanonicalUrl(location.pathname);
-  const nearbyLocations = getNearbyLocations(citySlug, 8);
-
-  const breadcrumbSchema = {
+  // Breadcrumb JSON-LD
+  const breadcrumbJSONLD = useMemo(() => ({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": getCanonicalUrl("/") },
-      { "@type": "ListItem", "position": 2, "name": "Locations", "item": getCanonicalUrl("/locations/") },
-      { "@type": "ListItem", "position": 3, "name": `Home Inspection ${city}`, "item": locationUrl }
-    ]
-  };
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.asads.ca/" },
+      { "@type": "ListItem", position: 2, name: "Locations", item: "https://www.asads.ca/locations/" },
+      { "@type": "ListItem", position: 3, name: city, item: url },
+    ],
+  }), [city, url]);
 
-  const services = [
-    { name: "Pre-Purchase Inspection", description: "Thorough evaluation before you buy your new home", href: "/services/pre-purchase/" },
-    { name: "Pre-Listing Inspection", description: "Sell faster with a professional pre-listing report", href: "/services/pre-listing/" },
-    { name: "New Construction Inspection", description: "Verify builder quality before your final walkthrough", href: "/services/new-construction/" },
-    { name: "Specialty Testing", description: "Radon, mold, asbestos, and air quality testing", href: "/services/radon-testing/" },
-  ];
-
-  const locationFaqs = [
-    { question: `How much does a home inspection cost in ${city}?`, answer: `Home inspection costs in ${city} typically range from $400-$600. Contact us at ${phoneNumber} for a quote.` },
-    { question: `How long does a home inspection take in ${city}?`, answer: `A typical home inspection in ${city} takes 2-4 hours depending on the property size.` },
-    { question: `Do you offer same-day inspection reports in ${city}?`, answer: `Yes! We deliver detailed inspection reports within 24 hours of completing inspections in ${city}.` },
-    { question: `What areas do you serve near ${city}?`, answer: `We serve ${city} and all surrounding ${region} communities.` }
-  ];
-
-  const faqSchema = {
+  // FAQ JSON-LD
+  const faqJSONLD = useMemo(() => ({
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": locationFaqs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
-  };
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `How much does a home inspection cost in ${city}?`,
+        acceptedAnswer: { "@type": "Answer", text: `Home inspection costs in ${city} typically range from $400-$600. Contact us at ${phoneNumber} for a quote.` },
+      },
+      {
+        "@type": "Question",
+        name: `How long does a home inspection take in ${city}?`,
+        acceptedAnswer: { "@type": "Answer", text: `A typical home inspection in ${city} takes 2-4 hours depending on the property size.` },
+      },
+      {
+        "@type": "Question",
+        name: `Do you offer same-day inspection reports in ${city}?`,
+        acceptedAnswer: { "@type": "Answer", text: `Yes! We deliver detailed inspection reports within 24 hours of completing inspections in ${city}.` },
+      },
+      {
+        "@type": "Question",
+        name: `What areas do you serve near ${city}?`,
+        acceptedAnswer: { "@type": "Answer", text: `We serve ${city} and all surrounding ${region} communities.` },
+      },
+    ],
+  }), [city, region, phoneNumber]);
 
-  const benefits = ["Same-day reports available", "Certified & insured inspectors", "200+ point inspections", "Upfront, transparent pricing", "15+ years experience", "Locally owned & operated"];
+  const nearbyLocations = allCities.filter((c) => c !== city).slice(0, 8);
+
+  const benefits = [
+    "Same-day reports available",
+    "Certified & insured inspectors",
+    "200+ point inspections",
+    "Upfront, transparent pricing",
+    "15+ years experience",
+    "Locally owned & operated",
+  ];
 
   return (
-    <Layout>
+    <div className="location-page">
+
+      {/* Helmet SEO */}
       <Helmet>
-        <link rel="canonical" href={locationUrl} />
-        <meta property="og:title" content={`Home Inspection ${city} | ASADS`} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={locationUrl} />
+        <link rel="canonical" href={url} />
+        <title>{`${city} Home Inspector | ${description.split(".")[0]}`}</title>
+        <meta name="description" content={description} />
+
         <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${city} Home Inspection | ${siteName}`} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content="https://www.asads.ca/logo.png" />
+
         <meta name="twitter:card" content="summary_large_image" />
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <meta name="twitter:title" content={`${city} Home Inspection | ${siteName}`} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="https://www.asads.ca/logo.png" />
+
+        <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJSONLD)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqJSONLD)}</script>
       </Helmet>
 
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-primary to-primary/80 py-20 lg:py-28">
-        <div className="container relative">
-          <div className="mx-auto max-w-3xl text-center text-white">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm">
-              <MapPin className="h-4 w-4" /> Serving {city}, {region}
-            </div>
-            <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">{city} Home Inspector</h1>
-            <p className="mb-8 text-lg opacity-90">{description}</p>
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Button size="lg" variant="secondary" className="gap-2" asChild>
-                <a href={`tel:${phoneNumber}`}><Phone className="h-5 w-5" /> {phoneNumber}</a>
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary" asChild>
-                <Link to="/contact/">Book Online</Link>
-              </Button>
-            </div>
-          </div>
+      <section className="bg-gradient-to-br from-primary to-primary/80 text-white py-20 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">{city} Home Inspector</h1>
+        <p className="mb-6">{description}</p>
+        <div className="flex justify-center gap-4">
+          <a href={`tel:${phoneNumber}`} className="bg-white text-primary px-6 py-3 rounded-lg font-semibold flex items-center gap-2">
+            <Phone className="w-5 h-5" /> {phoneNumber}
+          </a>
+          <Link to="/contact/" className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition">Book Online</Link>
         </div>
       </section>
 
       {/* Services */}
-      <section className="py-16 lg:py-24">
-        <div className="container">
-          <div className="mx-auto mb-12 max-w-2xl text-center">
-            <h2 className="mb-4 text-3xl font-bold">Certified Inspectors in {city}</h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {services.map((service) => (
-              <Link key={service.name} to={service.href} className="rounded-xl border bg-card p-6 shadow-sm transition-all hover:border-primary hover:shadow-md">
-                <h3 className="mb-2 text-lg font-semibold">{service.name}</h3>
-                <p className="text-sm text-muted-foreground">{service.description}</p>
-              </Link>
-            ))}
-          </div>
+      <section className="py-16">
+        <h2 className="text-3xl font-bold text-center mb-8">Our Services in {city}</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((s) => (
+            <div key={s} className="border p-4 rounded-lg shadow hover:shadow-md transition">
+              <h3 className="font-semibold mb-2">{s}</h3>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Specialty Services */}
-      <section className="bg-muted/30 py-16 lg:py-24">
-        <div className="container">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div>
-              <h2 className="mb-4 text-3xl font-bold">Same-Day Reports in {city}</h2>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {[
-                  { name: "Pre-Purchase Inspections", href: "/services/pre-purchase/" },
-                  { name: "Pre-Listing Inspections", href: "/services/pre-listing/" },
-                  { name: "Condo Inspections", href: "/services/condo/" },
-                  { name: "Commercial Inspections", href: "/services/commercial/" },
-                  { name: "New Construction", href: "/services/new-construction/" },
-                  { name: "WETT Inspections", href: "/services/wett/" },
-                  { name: "Radon & Mold Testing", href: "/services/radon-testing/" },
-                  { name: "Thermal Imaging", href: "/services/thermal-imaging/" },
-                ].map((type) => (
-                  <Link key={type.name} to={type.href} className="flex items-center gap-2 hover:text-primary transition-colors">
-                    <CheckCircle className="h-5 w-5 text-primary" /> <span>{type.name}</span>
-                  </Link>
-                ))}
+      {specialtyServices.length > 0 && (
+        <section className="py-16 bg-gray-50">
+          <h2 className="text-3xl font-bold text-center mb-8">Specialty Services</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {specialtyServices.map((s) => (
+              <div key={s.name} className="flex flex-col items-center text-center p-4 border rounded hover:shadow-md transition">
+                {s.icon}
+                <h3 className="font-semibold mt-4">{s.name}</h3>
+                <p className="mt-2">{s.description}</p>
               </div>
-            </div>
-            <div className="rounded-2xl bg-primary/5 p-8">
-              <h3 className="mb-4 text-xl font-semibold">Why Choose ASADS in {city}?</h3>
-              <ul className="space-y-3">
-                {benefits.map((benefit) => (
-                  <li key={benefit} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" /> <span>{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            ))}
           </div>
-        </div>
+        </section>
+      )}
+
+      {/* Neighborhoods */}
+      {neighborhoods.length > 0 && (
+        <section className="py-16">
+          <h2 className="text-2xl font-bold mb-4 text-center">Neighborhoods We Serve in {city}</h2>
+          <ul className="flex flex-wrap justify-center gap-4">
+            {neighborhoods.map((n) => (
+              <li key={n} className="px-4 py-2 bg-white border rounded">{n}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {/* Benefits */}
+      <section className="py-16">
+        <h2 className="text-3xl font-bold text-center mb-8">Why Choose {siteName} in {city}</h2>
+        <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          {benefits.map((b) => (
+            <li key={b} className="flex items-center gap-2 p-4 border rounded shadow-sm hover:shadow-md">
+              <CheckCircle className="text-primary w-5 h-5" /> {b}
+            </li>
+          ))}
+        </ul>
       </section>
 
       {/* Nearby Locations */}
-      <section className="py-16 lg:py-20">
-        <div className="container">
-          <h2 className="mb-10 text-center text-2xl font-bold">Also Serving Nearby Areas</h2>
-          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-4">
-            {nearbyLocations.map((loc) => (
-              <Link key={loc.slug} to={`/locations/${loc.slug}/`} className="flex items-center gap-2 rounded-lg border bg-card p-3 transition-all hover:border-primary hover:bg-primary/5">
-                <MapPin className="h-4 w-4 text-primary" /> <span className="font-medium">{loc.name}</span>
-              </Link>
-            ))}
+      {nearbyLocations.length > 0 && (
+        <section className="py-16 bg-gray-50">
+          <h2 className="text-2xl font-bold text-center mb-6">Also Serving Nearby Areas</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            {nearbyLocations.map((loc) => {
+              const slug = loc.toLowerCase().replace(/\s+/g, "-");
+              return (
+                <Link key={loc} to={`/locations/${slug}/`} className="flex items-center gap-2 border p-3 rounded hover:border-primary hover:bg-primary/5 transition">
+                  <MapPin className="text-primary w-4 h-4" /> {loc}
+                </Link>
+              );
+            })}
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      {/* CTA */}
-      <section className="bg-primary py-16 text-center text-white lg:py-20">
-        <div className="container">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl">Need a Trusted Inspector in {city}?</h2>
-          <p className="mb-8 text-lg opacity-90">Protect your investment with a thorough home inspection from local experts.</p>
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <Button size="lg" variant="secondary" className="gap-2" asChild>
-              <a href={`tel:${phoneNumber}`}><Phone className="h-5 w-5" /> {phoneNumber}</a>
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary gap-2" asChild>
-              <Link to="/contact/">Schedule Service <ArrowRight className="h-5 w-5" /></Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-    </Layout>
+      {/* Other Cities */}
+      {allCities.length > 0 && (
+        <section className="py-16">
+          <h2 className="text-2xl font-bold text-center mb-6">Other Locations</h2>
+          <ul className="flex flex-wrap justify-center gap-4">
+            {allCities.filter(c => c !== city).map((c) => {
+              const slug = c.toLowerCase().replace(/\s+/g, "-");
+              return (
+                <li key={c} className="px-4 py-2 border rounded hover:bg-primary/5 transition">
+                  <Link to={`/locations/${slug}/`}>{c} Home Inspection</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
+
+      {/* Footer */}
+      <footer className="py-12 bg-gray-900 text-white text-center">
+        <h2 className="text-xl font-bold mb-4">Contact {siteName}</h2>
+        <p className="mb-4">Phone: <a href={`tel:${phoneNumber}`} className="underline">{phoneNumber}</a></p>
+        <ul className="flex justify-center gap-4">
+          <li><a href="https://www.facebook.com/share/1ZhWQk97YY/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://www.instagram.com/asads_home_inspection" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://youtube.com/@asadshomeinspection" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://tiktok.com/@asads_home_inspection" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+          <li><a href="https://x.com/AsadsInspection" target="_blank" rel="noopener noreferrer">X</a></li>
+        </ul>
+      </footer>
+
+      {/* Floating Call Button */}
+      <a
+        href={`tel:${phoneNumber}`}
+        className="floating-call-button"
+        aria-label={`Call ${siteName} now`}
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          backgroundColor: "#ff5a5f",
+          color: "#fff",
+          padding: "15px 20px",
+          borderRadius: "50px",
+          fontWeight: "bold",
+          textDecoration: "none",
+          zIndex: 1000,
+          boxShadow: "0 4px 6px rgba(0,0,0,0.2)",
+        }}
+      >
+        Call Now
+      </a>
+    </div>
   );
-}
+                }
