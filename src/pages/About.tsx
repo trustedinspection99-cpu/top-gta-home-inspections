@@ -212,38 +212,62 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Story */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Certified Home Inspection Professionals
-              </h2>
-              <div className="space-y-4 text-muted-foreground">
-                <p>
-                  <strong>ASADS Home Inspection</strong> was founded in 2015 by Haroon Choudhry, a former construction professional who saw a need for more thorough, client-focused <strong>home inspections in the Greater Toronto Area</strong>.
-                </p>
-                <p>
-                  Drawing on years of experience in <strong>residential construction</strong>, Haroon noticed that many GTA home buyers were not getting a complete picture of their potential investment. He established ASADS with a singular mission: providing <strong>comprehensive home inspection reports</strong> and educational walk-throughs that empower homeowners to make confident, informed decisions.
-                </p>
-                <p>
-                  Today, our team of <strong>certified home inspectors</strong> has successfully completed over 2,000 inspections across <strong>Toronto, Mississauga, Brampton, and the surrounding GTA</strong>. We take pride in helping everyone from first-time buyers to seasoned investors protect their assets through professional property evaluations.
-                </p>
-              </div>
+      
+      {/* Professional SEO-Optimized Story Section */}
+<section className="py-16 md:py-24 bg-background" aria-labelledby="story-heading">
+  <div className="container">
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="space-y-6">
+        <h2 id="story-heading" className="font-heading text-3xl md:text-4xl font-bold text-foreground leading-tight">
+          Master Home Inspection & Structural Expertise in the GTA
+        </h2>
+        
+        <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+          <p>
+            <strong>ASADS Home Inspection</strong> is led by Haroon Choudhry, a <strong>Master Home Inspector</strong> with over 15 years of hands-on experience in the Greater Toronto Area. 
+            As the former Owner and Principal Contractor of <strong>Aro Construction Inc.</strong>, Haroon brings a unique "inside-out" perspective to property safety and structural health.
+          </p>
+
+          <p>
+            Specializing in both <strong>residential and commercial inspections</strong>, we provide technical clarity on building envelopes, structural integrity, and MEP (Mechanical, Electrical, and Plumbing) systems. 
+            Our assessments are rigorously aligned with the <strong>Ontario Building Code (OBC)</strong> and municipal standards to ensure complete legal and safety compliance.
+          </p>
+
+          <p>
+            With a track record of over <strong>1,000 comprehensive property assessments</strong>, we deliver high-detail, photographic reporting designed to empower homeowners and investors with actionable insights. 
+            Whether you are navigating a small-scale home purchase or a large commercial facility acquisition, our expertise ensures your investment is protected.
+          </p>
+        </div>
+        
+        {/* SEO Keywords Tag Cloud (Optional / Visual) */}
+        <div className="flex flex-wrap gap-2 pt-4">
+          {['Structural Integrity', 'OBC Compliance', 'MEP Systems', 'GTA Property Inspections', 'Technical Reporting'].map((tag) => (
+            <span key={tag} className="px-3 py-1 bg-secondary/10 text-secondary-foreground text-xs font-semibold rounded-md border border-secondary/20 uppercase tracking-wider">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="relative group">
+        <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+        <div className="relative aspect-[4/3] bg-card border border-border rounded-2xl flex items-center justify-center shadow-2xl overflow-hidden">
+          <div className="text-center p-10">
+            <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <GraduationCap className="h-10 w-10 text-primary" />
             </div>
-            <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center">
-                <div className="text-center text-primary-foreground p-8">
-                  <GraduationCap className="h-16 w-16 mx-auto mb-4" />
-                  <p className="text-2xl font-heading font-bold">Founded 2009</p>
-                  <p className="text-primary-foreground/80">Serving the GTA with pride</p>
-                </div>
-              </div>
+            <p className="text-3xl font-heading font-bold text-foreground">15+ Years</p>
+            <p className="text-muted-foreground font-medium uppercase tracking-widest text-sm mb-4">Construction Advisory Experience</p>
+            <div className="pt-6 border-t border-border">
+              <p className="text-primary font-bold text-xl">Ontario Building Code (OBC) Expert</p>
+              <p className="text-sm text-muted-foreground mt-1">Serving Toronto, Mississauga & Brampton</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Our Values */}
       <section className="py-16 md:py-24 bg-muted/30">
