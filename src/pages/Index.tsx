@@ -57,7 +57,7 @@ const servicesSchema = [
     name: "New Construction",
     description:
       "Verify builder quality and catch defects before your final walkthrough.",
-    url: `${SITE_URL}/services/new-construction-inspection/`,
+    url: `${SITE_URL}/services/new-construction/`,
   },
   {
     name: "Condo Inspection",
