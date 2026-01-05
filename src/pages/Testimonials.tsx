@@ -128,7 +128,7 @@ const testimonials = [
 ];
 
 const stats = [
-  { value: "5,000+", label: "Inspections Completed" },
+  { value: "2,000+", label: "Inspections Completed" },
   { value: "4.9", label: "Average Rating" },
   { value: "98%", label: "Would Recommend" },
   { value: "24hr", label: "Report Delivery" },
