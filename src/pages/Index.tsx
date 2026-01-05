@@ -8,7 +8,7 @@ import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { CTASection } from "@/components/home/CTASection";
 import { SITE_URL } from "@/lib/seo";
 
-// Homepage FAQ schema for rich snippets
+// Homepage FAQ schema
 const homepageFaqs = [
   {
     question: "How much does a home inspection cost in Toronto?",
@@ -16,31 +16,23 @@ const homepageFaqs = [
   },
   {
     question: "Who pays for a home inspection in Ontario?",
-    answer: "In Ontario, the home buyer typically pays for the home inspection. It's an investment that protects you from costly surprises after purchase. Sellers may also pay for pre-listing inspections to identify issues before listing."
+    answer: "In Ontario, the home buyer typically pays for the home inspection. Sellers may also pay for pre-listing inspections to identify issues before listing."
   },
   {
     question: "What does a home inspection include in Ontario?",
-    answer: "A comprehensive Ontario home inspection covers structural components, roofing, electrical systems, plumbing, HVAC, insulation, windows, doors, and visible areas of the foundation. ASADS performs 200+ point inspections with same-day reports."
+    answer: "Covers structural components, roofing, electrical, plumbing, HVAC, insulation, windows, doors, and foundation. ASADS performs 200+ point inspections with same-day reports."
   },
   {
-    question: "What is the biggest red flag in a home inspection?",
-    answer: "Major red flags include foundation cracks, water damage/mold, faulty electrical (knob-and-tube wiring), roof damage, and structural issues. These can indicate expensive repairs and safety hazards that should be addressed before purchase."
+    question: "Biggest red flags in a home inspection?",
+    answer: "Foundation cracks, water damage/mold, faulty electrical, roof damage, structural issues."
   },
   {
-    question: "What are the most common home inspection fails?",
-    answer: "Common issues include improper grading/drainage, faulty wiring, plumbing leaks, roof damage, HVAC problems, and inadequate ventilation. In Toronto's older homes, knob-and-tube wiring and moisture issues are frequently found."
+    question: "How long does a home inspection take?",
+    answer: "Typically 2-4 hours depending on property size and age."
   },
   {
-    question: "How long does a house inspection take in Ontario?",
-    answer: "A typical home inspection takes 2-4 hours depending on property size and age. Larger homes or those with additional features may take longer. We recommend buyers attend to ask questions and learn about their potential home."
-  },
-  {
-    question: "How do I schedule an inspection in Toronto?",
-    answer: "You can schedule an ASADS home inspection online at asads.ca/booking or by calling (647) 801-9311. We offer flexible scheduling including weekends, with same-day reports available for most inspections."
-  },
-  {
-    question: "What is the most important thing to look for in a home inspection?",
-    answer: "Focus on major systems: structural integrity, roof condition, electrical safety, plumbing, and HVAC. These represent the largest potential repair costs. A qualified inspector will identify both immediate concerns and future maintenance needs."
+    question: "How to schedule an inspection?",
+    answer: "Book online at asads.ca/booking or call (647) 801-9311."
   }
 ];
 
@@ -50,50 +42,169 @@ const faqSchema = {
   "mainEntity": homepageFaqs.map(faq => ({
     "@type": "Question",
     "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer
-    }
+    "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
   }))
 };
 
 const Index = () => {
   return (
     <Layout>
+      {/* Google Tag Manager (noscript) */}
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-NB43TTTB"
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+        />
+      </noscript>
+
       <Helmet>
+        {/* Google Tag Manager */}
+        <script>
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-NB43TTTB');`}
+        </script>
+
         <title>Home Inspection Toronto & GTA | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections, and 15+ years experience. Book online or call (647) 801-9311." />
+        <meta
+          name="description"
+          content="Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections, 15+ years experience. Book online or call (647) 801-9311."
+        />
         <link rel="canonical" href={`${SITE_URL}/`} />
-        
-        {/* Open Graph */}
+
+        {/* Open Graph / Facebook */}
         <meta property="og:title" content="Home Inspection Toronto & GTA | ASADS" />
-        <meta property="og:description" content="Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections. Book online or call (647) 801-9311." />
+        <meta
+          property="og:description"
+          content="Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections. Book online or call (647) 801-9311."
+        />
         <meta property="og:url" content={`${SITE_URL}/`} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="ASADS Home Inspection" />
         <meta property="og:locale" content="en_CA" />
         <meta property="og:image" content={`${SITE_URL}/og-image.jpg`} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        
-        {/* Twitter Card */}
+
+        {/* Twitter/X Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@AsadsInspection" />
         <meta name="twitter:title" content="Home Inspection Toronto & GTA | ASADS" />
-        <meta name="twitter:description" content="Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections." />
+        <meta
+          name="twitter:description"
+          content="Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections."
+        />
         <meta name="twitter:image" content={`${SITE_URL}/og-image.jpg`} />
-        
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
+
+        {/* JSON-LD FAQ */}
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+
+        {/* Facebook Pixel */}
+        <script>
+          {`!function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', 'YOUR_PIXEL_ID');
+          fbq('track', 'PageView');`}
         </script>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
       </Helmet>
-      <HeroSection />
-      <StatsSection />
-      <ServicesOverview />
-      <TrustBadges />
+
+      {/* Hero Section */}
+      <HeroSection
+        h1="Protect Your Investment with Expert Home Inspections"
+        subtitle="Comprehensive home inspection services throughout the Greater Toronto Area. Get detailed reports, expert insights, and peace of mind before you buy or sell."
+        highlights={[
+          "Certified & Insured Inspectors",
+          "Same-Day Reports Available",
+          "Serving All GTA Areas",
+          "Book Your Inspection: (647) 801-9311"
+        ]}
+      />
+
+      {/* Stats Section */}
+      <StatsSection
+        stats={[
+          { h3: "2,000+", label: "Inspections Completed" },
+          { h3: "10+", label: "Years Experience" },
+          { h3: "98%", label: "Client Satisfaction" },
+          { h3: "24hr", label: "Report Delivery" }
+        ]}
+      />
+
+      {/* Trust Badges */}
+      <TrustBadges
+        badges={[
+          "Licensed & Insured",
+          "Full Coverage",
+          "OAHI Certified",
+          "Ontario Association",
+          "InterNACHI Member",
+          "International Standards",
+          "5,000+ Inspections",
+          "Satisfied Clients"
+        ]}
+      />
+
+      {/* Services Overview */}
+      <ServicesOverview
+        services={[
+          {
+            h2: "Pre-Purchase Inspection",
+            description: "Complete evaluation before you buy. Identify issues and negotiate with confidence.",
+          },
+          {
+            h2: "Pre-Listing Inspection",
+            description: "Sell your home faster with a pre-listing inspection that builds buyer trust.",
+          },
+          {
+            h2: "New Construction",
+            description: "Verify builder quality and catch defects before your final walkthrough.",
+          },
+          {
+            h2: "Condo Inspection",
+            description: "Specialized inspections for condos, townhomes, and stacked units.",
+          },
+          {
+            h2: "Commercial Inspection",
+            description: "Comprehensive assessments for commercial and investment properties.",
+          },
+          {
+            h2: "Specialty Services",
+            description: "Radon Testing, Mold Inspection, Thermal Imaging, Air Quality Testing, WETT Inspection, Asbestos Testing, Lead Paint Testing, Well Water Testing, Sewer Scope",
+          }
+        ]}
+      />
+
+      {/* Testimonials */}
       <TestimonialsSection />
-      
+
+      {/* Call to Action */}
       <CTASection />
+
+      {/* Social Links Section (optional display somewhere in footer or hero) */}
+      <section className="hidden">
+        <a href="https://youtube.com/@asadshomeinspection" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/asads_home_inspection" target="_blank">Instagram</a>
+        <a href="https://x.com/AsadsInspection" target="_blank">X / Twitter</a>
+        <a href="https://www.facebook.com/share/1ZhWQk97YY/" target="_blank">Facebook</a>
+        <a href="https://www.tiktok.com/@asads_home_inspection" target="_blank">TikTok</a>
+      </section>
     </Layout>
   );
 };
