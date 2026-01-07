@@ -1,103 +1,117 @@
-import { Flame } from "lucide-react";
+import { Flame, ShieldCheck, Thermometer, FileText, CheckCircle2, AlertTriangle } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function WETT() {
+  const pageTitle = "WETT Inspection Toronto | Insurance Certified | ASADS";
+  const metaDescription = "Certified WETT inspections in Toronto & GTA. Insurance-approved reports for fireplaces and wood stoves. Same-day reports with thermal imaging included.";
+
   return (
     <ServicePageTemplate
       title="WETT Inspection"
-      metaTitle="WETT Certified Inspection | Fireplace & Chimney"
-      metaDescription="Ensure your wood stove or fireplace is insurance-compliant. WETT-certified inspections for Ontario homeowners and buyers."
-      heroTitle="WETT Certified Inspection in Ontario"
-      heroSubtitle="Safety certification for wood-burning appliances. Required for insurance and peace of mind. Certified inspections for fireplaces, wood stoves, and chimneys."
+      metaTitle={pageTitle}
+      metaDescription={metaDescription}
+      heroTitle="Certified WETT Inspection Toronto & GTA"
+      heroSubtitle="Insurance-Approved Safety Certification for Wood-Burning Appliances. Same-Day Reports and Thermal Imaging included with every inspection."
       icon={Flame}
-      price="From $199"
-      duration="1-2 hours"
+      price="From $249"
+      duration="1-2 Hours"
       description={
-        <div className="space-y-4">
-          <p>
-            WETT (Wood Energy Technology Transfer) inspections are the Canadian standard 
-            for evaluating the safety of wood-burning appliances. Many insurance companies 
-            require a WETT inspection before providing coverage for homes with fireplaces, 
-            wood stoves, or pellet stoves.
+        <div className="space-y-6">
+          <p className="text-lg leading-relaxed text-slate-700">
+            A WETT (Wood Energy Technology Transfer) inspection is more than a safety check—it is a 
+            mandatory requirement for most Ontario home insurance policies. Whether you have a 
+            wood stove, pellet stove, or traditional masonry fireplace, insurers require 
+            professional certification to verify that your installation meets <strong>CSA B365 
+            standards</strong>.
           </p>
+
+          <div className="bg-blue-50 border-l-4 border-blue-600 p-5 rounded-r-xl">
+            <h4 className="text-blue-900 font-bold flex items-center gap-2">
+              <Thermometer className="text-blue-600" size={20} />
+              Enhanced Thermal Imaging Analysis
+            </h4>
+            <p className="text-blue-800 text-sm mt-1">
+              Standard WETT inspections are visual only. ASADS includes <strong>Infrared Thermal 
+              Imaging</strong> to detect hidden heat signatures and compromised flue liners that 
+              the naked eye cannot see, providing a superior level of fire safety.
+            </p>
+          </div>
+
+          
+
           <p>
-            Our WETT-certified inspectors examine the complete wood-burning system from 
-            appliance to chimney top. We verify proper installation, clearances to 
-            combustibles, chimney condition, and overall system safety. You'll receive 
-            a detailed report suitable for insurance purposes.
-          </p>
-          <p>
-            Whether you're buying a home with a fireplace, installing a new wood stove, 
-            or need insurance documentation, our WETT inspection provides the certification 
-            you need.
+            Our certified inspectors perform a comprehensive 50-point assessment. We verify 
+            critical safety clearances to combustible walls, floor protection (hearth) 
+            dimensions, and chimney structural integrity. Our reports are accepted by all 
+            major Canadian insurance providers, including Intact, TD, and Aviva.
           </p>
         </div>
       }
       whatWeInspect={[
-        "Fireplace or wood stove condition",
-        "Chimney liner integrity",
-        "Clearances to combustibles",
-        "Hearth extension size",
-        "Floor protection adequacy",
-        "Chimney cap and spark arrestor",
-        "Flashing and weather seal",
-        "Damper operation",
-        "Creosote accumulation",
-        "Masonry condition",
-        "Chimney height compliance",
-        "Smoke and CO detectors",
+        "Clearance to combustible walls",
+        "Hearth and floor protection",
+        "Chimney liner & flue integrity",
+        "Damper and air control operation",
+        "Creosote & soot accumulation",
+        "Masonry & mortar condition",
+        "Chimney cap & spark arrestor",
+        "Firebox refractory panels",
+        "Installation mounting & security",
+        "Chimney termination height",
+        "Smoke & CO detector proximity",
+        "Thermal heat-leak detection",
       ]}
       features={[
         {
-          title: "Insurance Compliant",
-          description: "Our WETT reports meet insurance company requirements for wood-burning appliance coverage documentation."
+          title: "Insurance Compliance",
+          description: "Our WETT certificates are specifically formatted to meet the strict documentation requirements of GTA insurance brokers."
         },
         {
-          title: "Three Levels Available",
-          description: "We offer Level 1 (basic), Level 2 (real estate/insurance), and Level 3 (invasive) inspections based on your needs."
+          title: "Thermal Scan Included",
+          description: "We use FLIR® thermal technology to inspect for overheating behind walls and around chimney thimbles."
         },
         {
-          title: "Certified Inspectors",
-          description: "All inspections performed by WETT-certified technicians with current credentials and ongoing training."
+          title: "Same-Day Digital Reports",
+          description: "Receive your PDF certification the same day as the inspection, complete with high-resolution photo documentation."
         },
         {
-          title: "Detailed Documentation",
-          description: "Comprehensive report with photos documenting the system condition and any deficiencies found."
+          title: "Real Estate Liaison",
+          description: "We help buyers and sellers navigate inspection findings to ensure real estate closings proceed without delays."
         },
       ]}
       benefits={[
-        "WETT certified inspectors",
-        "Insurance accepted reports",
-        "Multiple inspection levels",
-        "Same-day appointments",
-        "Detailed photo documentation",
-        "Clear safety recommendations",
-        "Chimney sweep referrals",
-        "Peace of mind",
+        "WETT Certified Technicians",
+        "All Insurance Providers Accepted",
+        "Thermal Imaging Included",
+        "50-Point Safety Checklist",
+        "Same-Day PDF Reporting",
+        "Emergency 24/7 Booking",
+        "Clear Remediation Steps",
+        "Master Inspector Oversight",
       ]}
       faqs={[
         {
-          question: "Why do I need a WETT inspection?",
-          answer: "Most insurance companies require WETT certification for homes with wood-burning appliances. It's also recommended when buying a home or after chimney fires."
+          question: "Why do insurance companies require WETT inspections?",
+          answer: "Insurance providers view wood-burning appliances as high-risk. A WETT inspection proves the system was installed according to the Ontario Building Code and CSA B365, reducing fire risk."
         },
         {
-          question: "What's the difference between inspection levels?",
-          answer: "Level 1 is for regularly used systems. Level 2 adds video inspection for sales or after events. Level 3 involves opening walls when problems are suspected."
+          question: "How long is a WETT certificate valid for?",
+          answer: "Most insurance companies require a new inspection every 3 to 5 years, or whenever a property changes ownership. Check your specific policy for 'Wood-Burning Heat' riders."
         },
         {
-          question: "How often should I get a WETT inspection?",
-          answer: "Insurance typically requires inspection every 5 years. Annual chimney cleaning and visual checks are also recommended."
+          question: "Do you inspect the roof/top of the chimney?",
+          answer: "Yes. Our inspections include a visual check of the chimney termination, flashing, and cap from the roof level (weather and safety permitting)."
         },
         {
-          question: "What if problems are found?",
-          answer: "We provide clear documentation of deficiencies and recommendations. Many issues can be repaired by qualified contractors to bring the system into compliance."
+          question: "What happens if the fireplace fails?",
+          answer: "If we find deficiencies (e.g., inadequate clearance), we provide a detailed list of required corrections. We can often suggest simple heat-shielding solutions to bring an appliance into compliance."
         },
       ]}
       relatedServices={[
-        { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
-        { title: "Thermal Imaging", href: "/services/thermal-imaging" },
-        { title: "Air Quality Testing", href: "/services/air-quality" },
-        { title: "Pre-Listing Inspection", href: "/services/pre-listing" },
+        { title: "Pre-Purchase Inspection", href: "/services/pre-purchase-inspection.html" },
+        { title: "Infrared Thermal Imaging", href: "/services/infrared-thermal-imaging.html" },
+        { title: "Sewer Scope Inspection", href: "/services/sewer-scope-inspection.html" },
+        { title: "Mold Testing", href: "/services/mold-testing-toronto.html" },
       ]}
     />
   );
