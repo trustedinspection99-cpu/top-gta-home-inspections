@@ -1,102 +1,116 @@
-import { Eye } from "lucide-react";
+import { Thermometer, Zap, Droplets, Home, ShieldCheck, Search } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function ThermalImaging() {
+  const pageTitle = "Infrared Thermal Imaging Toronto | Advanced Leak Detection | ASADS";
+  const schemaDescription = "Professional infrared thermal imaging inspections in Toronto & GTA. Pinpoint hidden leaks, insulation gaps, and electrical hotspots using FLIR military-grade technology.";
+
   return (
     <ServicePageTemplate
-      title="Thermal Imaging"
-      metaTitle="Thermal Imaging Home Inspection | Find Hidden Issues"
-      metaDescription="We use infrared technology to detect leaks and insulation gaps not visible to the eye. Included in every full home inspection."
-      heroTitle="Thermal Imaging Home Inspection in Ontario"
-      heroSubtitle="See what's hidden behind walls. Infrared technology reveals moisture intrusion, missing insulation, electrical hot spots, and energy loss."
-      icon={Eye}
-      price="From $99"
-      duration="Included with inspection"
+      title="Infrared Thermal Imaging"
+      metaTitle={pageTitle}
+      metaDescription={schemaDescription}
+      heroTitle="See the Invisible: Advanced Thermal Leak Detection"
+      heroSubtitle="We use military-grade FLIR® high-resolution cameras to visualize hidden moisture, heat loss, and electrical hazards without damaging your walls."
+      icon={Search}
+      price="Add-on or Standalone"
+      duration="1-2 Hours"
       description={
-        <div className="space-y-4">
-          <p>
-            Thermal imaging, also known as infrared inspection, allows us to see temperature 
-            differences that are invisible to the naked eye. This powerful technology reveals 
-            hidden problems like moisture intrusion, missing insulation, air leaks, and 
-            overheating electrical components.
+        <div className="space-y-6">
+          <p className="text-lg leading-relaxed text-slate-700">
+            Infrared Thermography (IRT) allows our <strong>Certified Thermographers</strong> to visualize temperature variations that are invisible to the naked eye. By capturing heat signatures, we can detect deep-seated building defects before they lead to catastrophic failures.
           </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+            <div className="flex flex-col items-center text-center p-5 bg-blue-50 rounded-xl border border-blue-100 shadow-sm">
+              <Droplets className="text-blue-600 mb-2" size={32} />
+              <h4 className="font-bold text-blue-900">Moisture Intrusion</h4>
+              <p className="text-xs text-blue-800">Detecting 'cold spots' that indicate active leaks, even behind finished basement walls and tiling.</p>
+            </div>
+            <div className="flex flex-col items-center text-center p-5 bg-orange-50 rounded-xl border border-orange-100 shadow-sm">
+              <Zap className="text-orange-600 mb-2" size={32} />
+              <h4 className="font-bold text-orange-900">Electrical Risks</h4>
+              <p className="text-xs text-orange-800">Identifying overloaded circuits and loose wire nuts that 'glow' on thermal scans before causing fires.</p>
+            </div>
+            <div className="flex flex-col items-center text-center p-5 bg-slate-50 rounded-xl border border-slate-200 shadow-sm">
+              <Home className="text-slate-600 mb-2" size={32} />
+              <h4 className="font-bold text-slate-900">Energy Loss</h4>
+              <p className="text-xs text-slate-800">Locating insulation voids and air leakage around building envelopes to reduce GTA utility bills.</p>
+            </div>
+          </div>
+
+          
+
           <p>
-            Our inspectors use professional-grade FLIR thermal cameras to scan walls, 
-            ceilings, floors, and building systems. Temperature anomalies often indicate 
-            problems that would otherwise go undetected until they cause visible damage.
-          </p>
-          <p>
-            Thermal imaging is included with many of our home inspections and can also 
-            be booked as a standalone service for energy audits, moisture investigations, 
-            or electrical system evaluations.
+            Every ASADS inspection integrates thermal scanning as a standard of care. This non-invasive building science ensures your investment is protected from the construction challenges specific to Ontario—from <strong>high-rise glass curtain walls</strong> to <strong>century-home masonry</strong>.
           </p>
         </div>
       }
       whatWeInspect={[
-        "Exterior wall insulation",
-        "Ceiling and attic insulation",
-        "Air leaks around windows/doors",
-        "Moisture behind walls",
-        "Roof leak detection",
-        "Plumbing leak sources",
-        "Radiant floor heating",
-        "HVAC duct leakage",
-        "Electrical panel hot spots",
-        "Overheating circuits",
-        "Foundation moisture",
-        "Pest activity patterns",
+        "Moisture Intrusion in Finished Walls",
+        "Active Roof & Ceiling Leak Tracking",
+        "Electrical Panel Hotspot Analysis",
+        "Insulation Voids & Settlement Areas",
+        "Thermal Bridging in Building Envelopes",
+        "Radiant Floor Heating Uniformity",
+        "HVAC Ductwork Leakage & Air Flow",
+        "Window & Door Seal Integrity",
+        "Plumbing Drips & Slow Seepage",
+        "Attic Ventilation & Heat Loss",
+        "Foundation Wall Crack Infiltration",
+        "Firewall Continuity & Breaches",
       ]}
       features={[
         {
-          title: "Professional FLIR Equipment",
-          description: "We use commercial-grade FLIR thermal cameras with high resolution and sensitivity for accurate detection."
+          title: "FLIR® High-Resolution Scans",
+          description: "We utilize industry-leading FLIR® cameras with MSX® technology to provide clear, diagnostic thermal images for your report."
         },
         {
-          title: "Non-Invasive Detection",
-          description: "Find hidden problems without cutting into walls or causing damage. Thermal imaging is completely non-destructive."
+          title: "Non-Destructive Testing",
+          description: "Identify leaks and hazards without cutting into drywall or peeling back flooring, preserving the integrity of the property."
         },
         {
-          title: "Comprehensive Coverage",
-          description: "We scan the entire home systematically, covering all accessible walls, ceilings, and building systems."
+          title: "Certified Interpretation",
+          description: "Our inspectors are trained in thermodynamics and emissivity, ensuring cold spots aren't misidentified as leaks."
         },
         {
-          title: "Visual Documentation",
-          description: "Thermal images are included in your report alongside regular photos, clearly showing temperature anomalies."
+          title: "Insurance Documentation",
+          description: "Thermal images provide visual proof of damage and source-identification required by many insurance adjusters for claims."
         },
       ]}
       benefits={[
-        "Reveals hidden moisture",
-        "Identifies insulation gaps",
-        "Detects electrical hot spots",
-        "Finds air leakage points",
-        "Non-invasive testing",
-        "Included in home inspections",
-        "Energy efficiency insights",
-        "Preventive maintenance tool",
+        "Prevent mold growth through moisture mapping",
+        "Identify fire risks in aluminum wiring",
+        "Lower winter heating & summer cooling bills",
+        "Verify radiant floor heating systems",
+        "Pinpoint the exact source of mystery leaks",
+        "Non-invasive diagnostic technology",
+        "Visual evidence for price negotiations",
+        "Peace of mind for building envelope integrity",
       ]}
       faqs={[
         {
-          question: "What can thermal imaging detect?",
-          answer: "Thermal imaging detects temperature differences that indicate moisture, missing insulation, air leaks, electrical hot spots, radiant heating problems, and pest activity."
+          question: "Can thermal imaging see 'through' walls?",
+          answer: "Not exactly. It sees the surface temperature of the wall. Because water or missing insulation changes that surface temperature through thermal transfer, it allows us to 'visualize' what is happening inside the cavity."
         },
         {
-          question: "Is thermal imaging included in home inspections?",
-          answer: "Yes, we include basic thermal scanning in our comprehensive home inspections. Enhanced thermal scanning is available as an add-on for detailed analysis."
+          question: "Is thermal imaging included in a standard inspection?",
+          answer: "Yes, at ASADS, we believe thermal scanning is a vital part of a professional technical audit and we integrate it into our comprehensive inspection process."
         },
         {
-          question: "Can thermal imaging see through walls?",
-          answer: "Not exactly – it detects temperature differences on surfaces. But those differences often reveal what's happening behind walls, like moisture or missing insulation."
+          question: "Can it detect mold?",
+          answer: "Thermal imaging detects the moisture that causes mold. While it cannot identify mold spores, it is the best tool for finding the root cause of a mold problem so it doesn't return after cleaning."
         },
         {
-          question: "When is thermal imaging most effective?",
-          answer: "Best results occur when there's at least 10°C difference between indoor and outdoor temperatures. This creates the thermal contrast needed for detection."
+          question: "Why do I need a certified thermographer?",
+          answer: "Reading a thermal camera is like reading an X-ray. Reflections, sunlight, and material density (emissivity) can create false readings. Only a trained pro can accurately diagnose the signature."
         },
       ]}
       relatedServices={[
-        { title: "Mold Inspection", href: "/services/mold-inspection" },
-        { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
-        { title: "Air Quality Testing", href: "/services/air-quality" },
-        { title: "WETT Inspection", href: "/services/wett" },
+        { title: "Mold Testing", href: "/services/mold-testing" },
+        { title: "Home Inspection", href: "/services/home-inspection" },
+        { title: "Condo Inspection", href: "/services/condo-inspection" },
+        { title: "Commercial Inspection", href: "/services/commercial-inspection" },
       ]}
     />
   );
