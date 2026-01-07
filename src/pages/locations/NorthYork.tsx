@@ -11,7 +11,6 @@ export default function NorthYork() {
   const pageTitle = "North York Home Inspector | High-Rise & Ravine Home Specialist";
   const schemaDescription = "Certified home inspection services in North York, Toronto. Specializing in high-rise condos, ravine property slope stability, and mid-century home assessments. Same-day reports & thermal imaging.";
 
-  // FAQ Schema for Search Engine Rich Snippets
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -61,7 +60,7 @@ export default function NorthYork() {
         <meta name="geo.position" content="43.7615;-79.4111" />
         <meta name="ICBM" content="43.7615, -79.4111" />
 
-        {/* JSON-LD Structured Data */}
+        {/* FIXED JSON-LD Structured Data - Using template literal to prevent white screen */}
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
         </script>
@@ -71,14 +70,14 @@ export default function NorthYork() {
         city="North York"
         region="Ontario"
         kicker="North York Urban Property Experts"
-        description="Expert home inspections for North York's diverse real estate. From Yonge-Sheppard high-rise condos to York Mills ravine estates, we provide the technical depth required for Toronto's most complex properties."
+        description="Providing specialized home inspections for North York's complex urban landscape. From Yonge-Sheppard high-rise condos with fan-coil systems to York Mills estates requiring ravine slope stability assessments, we deliver the technical expertise national brands miss."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
         ctaText="Book North York Expert"
         highlights={[
           "Condo Fan-Coil & HVAC Specialists",
           "Ravine Slope & Retaining Wall Audits",
-          "Mid-Century Electrical & Aluminum Wiring Experts",
+          "Mid-Century Aluminum Wiring Experts",
           "Same-Day Digital Reporting with Thermal Imaging"
         ]}
       />
