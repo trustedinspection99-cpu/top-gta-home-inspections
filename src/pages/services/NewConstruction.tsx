@@ -1,107 +1,131 @@
-import { Hammer } from "lucide-react";
+import { Hammer, ShieldAlert, FileCheck, HardHat, Ruler, Search } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
+import { Helmet } from "react-helmet-async";
 
 export default function NewConstruction() {
-  return (
-    <ServicePageTemplate
-      title="New Construction Inspection"
-      metaTitle="New Construction Inspection Ontario | Tarion Warranty"
-      metaDescription="Catch builder defects before your warranty expires. Professional inspections for new Ontario homes ensuring quality and safety."
-      heroTitle="New Construction Home Inspection in Ontario"
-      heroSubtitle="Don't assume new means perfect. We catch builder defects and incomplete work before your final walkthrough and Tarion warranty registration."
-      icon={Hammer}
-      price="From $449"
-      duration="2-4 hours"
-      description={
-        <div className="space-y-4">
-          <p>
-            Just because a home is brand new doesn't mean it's free from defects. In fact, 
-            construction defects are common in new builds, from minor cosmetic issues to 
-            serious structural problems. Our new construction inspection identifies these 
-            issues before you take possession, while the builder is still responsible for repairs.
-          </p>
-          <p>
-            We specialize in pre-delivery inspections (PDI) for new homes in Ontario. Our 
-            inspectors understand Tarion warranty requirements and know what builders are 
-            obligated to fix. We'll create a comprehensive punch list that you can present 
-            to your builder before closing.
-          </p>
-          <p>
-            Our inspection goes far beyond the cursory walkthrough that builders provide. 
-            We examine workmanship, building code compliance, and proper installation of 
-            all systems. Many defects, like improper grading or missing insulation, aren't 
-            visible without professional inspection tools.
-          </p>
-        </div>
+  const pageTitle = "Tarion Warranty & New Construction Inspection Toronto | ASADS";
+  const schemaDescription = "Don't trust the builder alone. Professional PDI, 30-Day, and 1-Year Tarion Warranty inspections for new GTA homes. We catch what the city misses.";
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why do I need an inspection if the City already inspected it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Municipal inspectors only check for minimum Ontario Building Code (OBC) life-safety compliance. They do not check for quality of workmanship, attic insulation levels, thermal bypasses, or mechanical performance. We do."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is the best time for a Tarion inspection?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There are three critical windows: 1. The Pre-Delivery Inspection (PDI) before you move in. 2. The 30-Day Form deadline. 3. The 1-Year Year-End Form. Missing these deadlines can cost you thousands in uncovered repairs."
+        }
       }
-      whatWeInspect={[
-        "Foundation and concrete work",
-        "Framing quality and alignment",
-        "Roof installation and flashing",
-        "Siding and exterior finishes",
-        "Window and door installation",
-        "Electrical system and fixtures",
-        "Plumbing and drainage",
-        "HVAC installation and ductwork",
-        "Insulation and vapor barriers",
-        "Drywall and paint finish",
-        "Flooring installation",
-        "Kitchen and bathroom fixtures",
-        "Grading and drainage slopes",
-        "Garage and driveway",
-      ]}
-      features={[
-        {
-          title: "Detailed Punch List",
-          description: "Receive a comprehensive list of defects formatted for builder submission, ensuring all issues are documented and addressed before closing."
-        },
-        {
-          title: "Tarion Warranty Knowledge",
-          description: "Our inspectors understand Ontario's Tarion warranty program and can identify issues covered under your 1-year, 2-year, and 7-year warranties."
-        },
-        {
-          title: "Code Compliance Check",
-          description: "We verify that construction meets Ontario Building Code requirements, catching violations that municipal inspectors may have missed."
-        },
-        {
-          title: "Photo Documentation",
-          description: "Every defect is photographed and documented, providing clear evidence for discussions with your builder."
-        },
-      ]}
-      benefits={[
-        "Independent third-party evaluation",
-        "Comprehensive punch list for builder",
-        "Tarion warranty documentation",
-        "Identifies hidden defects",
-        "Protects your investment",
-        "Leverage for negotiations",
-        "Peace of mind at closing",
-        "30-day warranty inspection available",
-      ]}
-      faqs={[
-        {
-          question: "When should I schedule a new construction inspection?",
-          answer: "Schedule the inspection during your pre-delivery inspection (PDI) period, typically 1-2 weeks before closing. This gives the builder time to address issues."
-        },
-        {
-          question: "Doesn't the city inspect new homes?",
-          answer: "Municipal inspections are limited in scope and focus on code minimums. Our inspection is much more comprehensive and focuses on quality and completeness."
-        },
-        {
-          question: "What if the builder won't fix something?",
-          answer: "We document all defects thoroughly. If the builder refuses legitimate repairs, you can file a claim with Tarion using our inspection report as evidence."
-        },
-        {
-          question: "Do you offer warranty inspections?",
-          answer: "Yes! We recommend inspections before your 30-day, 1-year, and 2-year Tarion warranty deadlines to identify issues while they're still covered."
-        },
-      ]}
-      relatedServices={[
-        { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
-        { title: "Condo Inspection", href: "/services/condo" },
-        { title: "Thermal Imaging", href: "/services/thermal-imaging" },
-        { title: "WETT Inspection", href: "/services/wett" },
-      ]}
-    />
+    ]
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={schemaDescription} />
+        <script type="application/ld+json">
+          {` ${JSON.stringify(faqSchema)} `}
+        </script>
+      </Helmet>
+
+      <ServicePageTemplate
+        title="New Construction & Tarion Warranty"
+        metaTitle={pageTitle}
+        metaDescription={schemaDescription}
+        heroTitle="New Doesn't Mean Perfect."
+        heroSubtitle="From PDI walkthroughs to 1-Year Tarion deadlines, we identify builder shortcuts and structural defects before they become your financial burden."
+        icon={Hammer}
+        price="Warranty-Grade Protection"
+        duration="3 - 5 Hours"
+        description={
+          <div className="space-y-6">
+            <p className="text-lg leading-relaxed text-slate-700">
+              In the rush to meet closing deadlines, builders often overlook critical details. Our **New Construction Audit** acts as your independent quality control, ensuring your new GTA home meets professional standards—not just the bare minimum code.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+              <div className="flex flex-col items-center text-center p-5 bg-blue-50 rounded-xl border border-blue-100 shadow-sm">
+                <ShieldAlert className="text-blue-600 mb-2" size={32} />
+                <h4 className="font-bold text-blue-900">Tarion Experts</h4>
+                <p className="text-xs text-blue-800">We speak the builder's language, documenting defects to fit Tarion's strict claim requirements.</p>
+              </div>
+              <div className="flex flex-col items-center text-center p-5 bg-amber-50 rounded-xl border border-amber-100 shadow-sm">
+                <Search className="text-amber-600 mb-2" size={32} />
+                <h4 className="font-bold text-amber-900">Hidden Defects</h4>
+                <p className="text-xs text-amber-800">Using Thermal Imaging, we find missing insulation and HVAC leaks that a visual walk-through misses.</p>
+              </div>
+              <div className="flex flex-col items-center text-center p-5 bg-slate-50 rounded-xl border border-slate-200 shadow-sm">
+                <FileCheck className="text-slate-600 mb-2" size={32} />
+                <h4 className="font-bold text-slate-900">Priority Punch List</h4>
+                <p className="text-xs text-slate-800">Receive a professional report ready to be attached directly to your PDI or Warranty forms.</p>
+              </div>
+            </div>
+
+            <p>
+              Whether it is a detached home in Oakville or a stacked townhouse in Vaughan, our inspectors deep-dive into the attic, mechanical room, and building envelope to protect your 7-year structural warranty.
+            </p>
+          </div>
+        }
+        whatWeInspect={[
+          "Truss & Framing Integrity (Structural Audit)",
+          "Attic Insulation Depth & Vapour Barrier Continuity",
+          "Proper HRV/ERV Installation & Air Exchange Balance",
+          "Exterior Grading & Sump Pump Discharge Performance",
+          "Electrical Panel Labelling & GFCI/AFCI Safety",
+          "Roofing Flashing & Ice/Water Shield Verification",
+          "Windows, Doors & Weather-Stripping Seals",
+          "Basement Foundation Walls (Thermal Moisture Scan)",
+        ]}
+        features={[
+          {
+            title: "Thermal Bypass Imaging",
+            description: "We use infrared cameras to detect cold spots and missing insulation—the #1 cause of high energy bills and mold in new Ontario homes."
+          },
+          {
+            title: "Tarion Form Preparation",
+            description: "Our reports use the specific terminology required by Tarion, making it much harder for builders to deny your warranty claims."
+          },
+          {
+            title: "HVAC & Ductwork Audit",
+            description: "We check for unsealed ducts, restricted airflows, and improper furnace venting that can lead to premature system failure."
+          },
+          {
+            title: "Grading & Drainage Analysis",
+            description: "Builder grading often settles after the first year. We identify negative slopes early to prevent basement flooding."
+          },
+        ]}
+        benefits={[
+          "Independent, non-biased technical evaluation",
+          "Ensure builder accountability before the final payment",
+          "Comprehensive documentation for Tarion claims",
+          "Identify missing insulation and thermal leaks",
+          "Verify mechanical systems (HVAC, HRVs) are balanced",
+          "Detailed photo evidence of all workmanship issues",
+          "Peace of mind during the stressful PDI process",
+          "Discounted 1-Year Warranty follow-ups",
+        ]}
+        faqs={faqSchema.mainEntity.map(f => ({
+          question: f.name,
+          answer: f.acceptedAnswer.text
+        }))}
+        relatedServices={[
+          { title: "Tarion 1-Year Inspection", href: "/services/tarion-warranty" },
+          { title: "Condo Inspection", href: "/services/condo-inspection" },
+          { title: "Infrared Thermal Imaging", href: "/services/thermal-imaging" },
+          { title: "Sewer Scope Inspection", href: "/services/sewer-scope" },
+        ]}
+      />
+    </>
   );
 }
