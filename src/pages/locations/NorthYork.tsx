@@ -8,9 +8,40 @@ export default function NorthYork() {
     "Hoggs Hollow", "The Bridle Path", "Armour Heights", "Parkwoods", "Henry Farm"
   ];
 
-  // North York Specific SEO Content
   const pageTitle = "North York Home Inspector | High-Rise & Ravine Home Specialist";
   const schemaDescription = "Certified home inspection services in North York, Toronto. Specializing in high-rise condos, ravine property slope stability, and mid-century home assessments. Same-day reports & thermal imaging.";
+
+  // FAQ Schema for Search Engine Rich Snippets
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What do you look for in North York condo inspections?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We specialize in high-rise systems, specifically fan-coil units (HVAC), window seal integrity in wind-exposed units, and sound transmission issues common in North York's concrete towers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you inspect ravine properties in York Mills and Don Mills?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Ravine inspections include specialized assessments for slope stability, retaining wall integrity, and erosion risks specific to North York's ravine lot bylaws."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are mid-century homes in North York safe from aluminum wiring?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many homes in neighborhoods like Willowdale and Bathurst Manor (1960s-70s) contain aluminum wiring. We provide full electrical audits and infrared scanning to ensure connections are safe."
+        }
+      }
+    ]
+  };
 
   return (
     <>
@@ -29,23 +60,26 @@ export default function NorthYork() {
         <meta name="geo.placename" content="North York, Toronto" />
         <meta name="geo.position" content="43.7615;-79.4111" />
         <meta name="ICBM" content="43.7615, -79.4111" />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
       </Helmet>
 
       <LocationPageTemplate
         city="North York"
         region="Ontario"
-        kicker="High-Rise & Ravine Property Experts"
-        description="Toronto's urban property specialists serving North York—from Yonge-Sheppard high-rise condos to York Mills ravine estates. We provide the technical expertise that national brands lack, focusing on fan-coil units, slope stability, and mid-century electrical systems."
+        kicker="North York Urban Property Experts"
+        description="Expert home inspections for North York's diverse real estate. From Yonge-Sheppard high-rise condos to York Mills ravine estates, we provide the technical depth required for Toronto's most complex properties."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
         ctaText="Book North York Expert"
-        
-        // If your template supports specific 'focus areas' or 'highlights'
         highlights={[
           "Condo Fan-Coil & HVAC Specialists",
-          "Ravine Slope & Erosion Assessment",
-          "Mid-Century Aluminum Wiring Audits",
-          "Thermal Imaging Included with Every Inspection"
+          "Ravine Slope & Retaining Wall Audits",
+          "Mid-Century Electrical & Aluminum Wiring Experts",
+          "Same-Day Digital Reporting with Thermal Imaging"
         ]}
       />
     </>
