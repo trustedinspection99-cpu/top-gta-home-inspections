@@ -1,102 +1,117 @@
-import { Video } from "lucide-react";
+
+import { Video, Search, Map, AlertCircle, ShieldCheck, Clock } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function SewerScope() {
+  const pageTitle = "Sewer Camera Inspection Toronto | HD Drain Scope | ASADS";
+  const metaDescription = "Professional CCTV sewer camera inspections in Toronto. Detect root intrusion, bellied pipes, and hidden cracks with same-day HD video reports.";
+
   return (
     <ServicePageTemplate
-      title="Sewer Scope Inspection"
-      metaTitle="Sewer Scope Inspection | Drain Camera Service"
-      metaDescription="Avoid plumbing disasters. Our camera inspections locate blockages and cracks before they become costly failures."
-      heroTitle="Sewer Scope Inspection in Ontario"
-      heroSubtitle="See what's hidden underground. Video camera inspection of sewer lines reveals blockages, cracks, root intrusion, and pipe condition."
+      title="Sewer Camera Inspection"
+      metaTitle={pageTitle}
+      metaDescription={metaDescription}
+      heroTitle="HD Sewer Scope & Drain Line Inspection"
+      heroSubtitle="Don't inherit a $20,000 plumbing disaster. Our 1080p HD camera systems reveal the true condition of your underground lateral lines before you close."
       icon={Video}
-      price="From $249"
-      duration="30-60 minutes"
+      price="From $299"
+      duration="1-2 Hours"
       description={
-        <div className="space-y-4">
-          <p>
-            Sewer line replacement can cost $10,000 to $30,000 or more. A sewer scope 
-            inspection gives you a clear view of the condition of underground pipes 
-            before you buy a property, potentially saving you from a major unexpected expense.
+        <div className="space-y-6">
+          <p className="text-lg leading-relaxed text-slate-700">
+            In the Greater Toronto Area, sewer line replacements are one of the most expensive 
+            "hidden" costs of homeownership, often ranging from <strong>$5,000 to over $25,000</strong>. 
+            While a standard home inspection covers interior plumbing, it cannot "see" 
+            underground where roots, soil shifting, and age do the most damage.
           </p>
+
+          <div className="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r-xl">
+            <h4 className="text-blue-900 font-bold flex items-center gap-2">
+              <Search className="text-blue-600" size={20} />
+              Advanced CCTV Technology
+            </h4>
+            <p className="text-blue-800 text-sm mt-1">
+              We utilize 200ft industrial push-rod cameras with <strong>self-leveling heads</strong>. 
+              This ensures we reach the municipal main connection and provide a clear, 
+              upright view of defects that standard 720p consumer-grade cameras miss.
+            </p>
+          </div>
+
+          
+
           <p>
-            Our technicians insert a waterproof camera into the sewer line, recording 
-            video of the entire pipe from house to street. We identify cracks, blockages, 
-            root intrusion, bellies (low spots), and deterioration that could lead to 
-            backups or failure.
-          </p>
-          <p>
-            Sewer scope inspections are especially important for older homes with clay 
-            or cast iron pipes, properties with large trees near the sewer line, or 
-            any home with a history of drain problems.
+            Our inspection is critical for Toronto’s older neighborhoods where 
+            <strong> clay tiles, cast iron, or "Orangeburg" bituminized fiber pipes</strong> are common. 
+            We provide a narrated video file the same day, giving you the immediate 
+            leverage needed for real estate negotiations.
           </p>
         </div>
       }
       whatWeInspect={[
-        "Pipe material and condition",
-        "Cracks and fractures",
-        "Root intrusion",
-        "Blockages and debris",
-        "Bellies and low spots",
-        "Joint separations",
-        "Pipe alignment",
-        "Connection condition",
-        "Corrosion and deterioration",
-        "Previous repairs",
-        "Pipe diameter changes",
-        "Distance to main connection",
+        "Structural integrity of pipe walls",
+        "Tree root intrusion points",
+        "Bellies (low spots causing sediment)",
+        "Offset or separated joints",
+        "Cracks, fractures, and holes",
+        "Corrosion in cast iron lines",
+        "Presence of 'Orangeburg' piping",
+        "Debris or grease build-up",
+        "Proximity to municipal main",
+        "Condition of the cleanout",
+        "Pipe material transitions",
+        "Previous patch or liner repairs",
       ]}
       features={[
         {
-          title: "HD Camera System",
-          description: "Our high-definition sewer cameras provide clear images of pipe condition, with self-leveling heads for optimal viewing."
+          title: "1080p HD Video",
+          description: "Crystal clear imaging with high-intensity LED lighting to identify even hairline fractures in clay or PVC."
         },
         {
-          title: "Complete Video Recording",
-          description: "You receive a complete video recording of the inspection that can be shared with contractors or used for insurance claims."
+          title: "Sonde & GPS Mapping",
+          description: "If a defect is found, we use a radio frequency transmitter to pinpoint the exact location and depth above ground."
         },
         {
-          title: "Distance Tracking",
-          description: "Our equipment tracks the camera's distance, allowing us to precisely locate any problems found in the line."
+          title: "Same-Day Cloud Delivery",
+          description: "Receive a private link to your narrated inspection video and report within hours of the site visit."
         },
         {
-          title: "Clear Reporting",
-          description: "Receive a detailed report with screenshots and descriptions of any issues, plus recommendations for repair or maintenance."
+          title: "Impartial 3rd Party",
+          description: "We don't perform repairs. This ensures our assessment is 100% unbiased, unlike plumbing companies looking for work."
         },
       ]}
       benefits={[
-        "Avoid surprise repairs",
-        "HD video documentation",
-        "Precise problem location",
-        "Negotiation leverage",
-        "Same-day scheduling",
-        "Quick turnaround",
-        "Contractor referrals",
-        "Peace of mind",
+        "Negotiate repair credits",
+        "Avoid excavation surprises",
+        "Map exact pipe locations",
+        "Identify root-prone areas",
+        "Same-day video evidence",
+        "Verify previous repairs",
+        "Commercial-grade reach (200ft)",
+        "Peace of mind for older homes",
       ]}
       faqs={[
         {
-          question: "Why should I get a sewer scope inspection?",
-          answer: "Sewer line problems are invisible but expensive. Replacement costs $10,000-$30,000+. A $249 inspection can save you from a major unexpected expense."
+          question: "Why isn't this included in a standard home inspection?",
+          answer: "Sewer scoping requires specialized, expensive CCTV equipment and additional training. Most home inspectors only check if drains are currently flowing; we check if they are about to fail."
         },
         {
-          question: "What causes sewer line problems?",
-          answer: "Tree roots seeking water, ground shifting, corrosion of older pipes, and improper installation are common causes of sewer line failure."
+          question: "What is a 'belly' in a sewer line?",
+          answer: "A belly is a sagging section of pipe caused by ground settling. It creates a pool of standing water that catches debris, eventually leading to chronic backups."
         },
         {
-          question: "How do I know if the sewer line needs replacement?",
-          answer: "Collapsed sections, severe root intrusion, multiple cracks, or bellied pipes often require replacement. Minor issues may be repairable with lining or spot repairs."
+          question: "Can you inspect if there is no cleanout?",
+          answer: "Yes. While a dedicated cleanout is ideal, we can often access the line by removing a basement toilet or via a roof vent, though additional fees may apply."
         },
         {
-          question: "Is sewer scope included in home inspections?",
-          answer: "No, it's a separate service that requires specialized equipment. We recommend it for homes over 25 years old or with trees near the sewer line."
+          question: "How far can your camera go?",
+          answer: "Our professional systems carry 200 feet of cable, which is more than enough to reach the city's main connection for almost any residential property in the GTA."
         },
       ]}
       relatedServices={[
         { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
-        { title: "Well Water Testing", href: "/services/well-water-testing" },
+        { title: "WETT Inspection", href: "/services/wett-inspection-toronto" },
         { title: "Thermal Imaging", href: "/services/thermal-imaging" },
-        { title: "Commercial Inspection", href: "/services/commercial" },
+        { title: "Mold Testing", href: "/services/mold-testing-toronto" },
       ]}
     />
   );
