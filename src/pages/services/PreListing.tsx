@@ -1,107 +1,131 @@
-import { Building2 } from "lucide-react";
+import { Building2, TrendingUp, ShieldCheck, ClipboardCheck, Clock, Zap } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
+import { Helmet } from "react-helmet-async";
 
 export default function PreListing() {
-  return (
-    <ServicePageTemplate
-      title="Pre-Listing Inspection"
-      metaTitle="Pre-Listing Home Inspection for Sellers | Ontario"
-      metaDescription="Avoid closing delays. Our pre-listing inspections identify repairs early so you can sell your home faster and without surprises."
-      heroTitle="Pre-Listing Home Inspection in Ontario"
-      heroSubtitle="Sell your home faster and for more money. Address issues before listing and build buyer confidence with a professional inspection report."
-      icon={Building2}
-      price="From $349"
-      duration="2-3 hours"
-      description={
-        <div className="space-y-4">
-          <p>
-            A pre-listing inspection gives sellers a significant advantage in today's competitive 
-            real estate market. By identifying and addressing issues before you list, you can 
-            avoid surprises during buyer inspections that often derail sales or lead to 
-            last-minute price negotiations.
-          </p>
-          <p>
-            When you provide buyers with a professional inspection report upfront, it builds 
-            trust and demonstrates transparency. Buyers feel more confident making offers, 
-            often resulting in faster sales and better prices. Some sellers even use the 
-            inspection report as a marketing tool.
-          </p>
-          <p>
-            Our pre-listing inspection includes the same comprehensive evaluation as our 
-            pre-purchase inspections. We'll identify issues ranging from minor maintenance 
-            items to major concerns, giving you the opportunity to make repairs or disclose 
-            known conditions to potential buyers.
-          </p>
-        </div>
+  const pageTitle = "Pre-Listing Home Inspection Toronto | Sell Faster & For More";
+  const schemaDescription = "Maximize your sale price with a GTA Pre-Listing Inspection. We identify deal-breakers early, build buyer confidence, and help with SPIS disclosure prep.";
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why should Toronto sellers get a pre-listing inspection?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It eliminates 11th-hour surprises. By identifying issues like knob-and-tube wiring or foundation cracks early, you can fix them on your own terms or disclose them to prevent buyers from 'chipping' away at your price."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this help with my Seller Property Information Statement (SPIS)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Our report provides the technical documentation you need to accurately fill out your disclosure forms, protecting you from future legal liability."
+        }
       }
-      whatWeInspect={[
-        "Foundation and structural integrity",
-        "Roof condition and remaining life",
-        "Exterior cladding and trim",
-        "Windows, doors, and weatherstripping",
-        "Electrical panel and wiring",
-        "Plumbing system and water heater",
-        "HVAC efficiency and condition",
-        "Attic insulation and ventilation",
-        "Basement moisture and drainage",
-        "Kitchen and bathroom fixtures",
-        "Safety devices and smoke detectors",
-        "Deck and patio structures",
-        "Grading and water drainage",
-        "Garage door and opener",
-      ]}
-      features={[
-        {
-          title: "Seller-Focused Report",
-          description: "Our reports are formatted to be shared with potential buyers, highlighting the home's condition in a professional, factual manner."
-        },
-        {
-          title: "Repair Priority List",
-          description: "We provide a prioritized list of repairs categorized by urgency and impact on sale, helping you focus your pre-sale improvements."
-        },
-        {
-          title: "Cost-Effective Upgrades",
-          description: "Get recommendations for cost-effective repairs and upgrades that can improve your home's appeal and marketability."
-        },
-        {
-          title: "Confidence Building",
-          description: "Provide buyers with a professional inspection report to reduce their concerns and speed up the closing process."
-        },
-      ]}
-      benefits={[
-        "Sell faster with fewer surprises",
-        "Justify your asking price",
-        "Avoid last-minute negotiations",
-        "Build buyer confidence",
-        "Control the repair process",
-        "Reduce legal liability",
-        "Shareable digital report",
-        "Optional re-inspection after repairs",
-      ]}
-      faqs={[
-        {
-          question: "Why should sellers get an inspection?",
-          answer: "A pre-listing inspection helps you identify and fix issues before buyers discover them. This prevents deals from falling through and gives you more control over the selling process."
-        },
-        {
-          question: "Should I fix everything the inspection finds?",
-          answer: "Not necessarily. Focus on safety issues and major defects. Minor items can be disclosed or offered as credits. We'll help you prioritize what's worth fixing."
-        },
-        {
-          question: "Can buyers still request their own inspection?",
-          answer: "Yes, and they likely will. However, having your own inspection report shows transparency and often results in smoother negotiations since there are fewer surprises."
-        },
-        {
-          question: "How soon before listing should I get inspected?",
-          answer: "Ideally 2-4 weeks before listing. This gives you time to make repairs if needed and have documentation ready when you go to market."
-        },
-      ]}
-      relatedServices={[
-        { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
-        { title: "Thermal Imaging", href: "/services/thermal-imaging" },
-        { title: "Radon Testing", href: "/services/radon-testing" },
-        { title: "WETT Inspection", href: "/services/wett" },
-      ]}
-    />
+    ]
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={schemaDescription} />
+        <script type="application/ld+json">
+          {` ${JSON.stringify(faqSchema)} `}
+        </script>
+      </Helmet>
+
+      <ServicePageTemplate
+        title="Pre-Listing Inspection"
+        metaTitle={pageTitle}
+        metaDescription={schemaDescription}
+        heroTitle="The Seller's Edge: Pre-Listing Technical Audits"
+        heroSubtitle="Don't let a buyer's inspector control the deal. Find the issues first, justify your asking price, and build unconditional buyer confidence."
+        icon={Building2}
+        price="ROI-Driven Packages"
+        duration="2.5 - 4 Hours"
+        description={
+          <div className="space-y-6">
+            <p className="text-lg leading-relaxed text-slate-700">
+              In a volatile market, **transparency is your greatest marketing tool.** A Pre-Listing (Seller's) Inspection identifies "deal-breaker" defects before they hit the MLS, allowing you to control the narrative and the repair costs.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+              <div className="flex flex-col items-center text-center p-5 bg-orange-50 rounded-xl border border-orange-100 shadow-sm">
+                <TrendingUp className="text-orange-600 mb-2" size={32} />
+                <h4 className="font-bold text-orange-900">Maximize Equity</h4>
+                <p className="text-xs text-orange-800">Pre-inspected homes often sell for 3-5% more by preventing last-minute price drops.</p>
+              </div>
+              <div className="flex flex-col items-center text-center p-5 bg-blue-50 rounded-xl border border-blue-100 shadow-sm">
+                <ShieldCheck className="text-blue-600 mb-2" size={32} />
+                <h4 className="font-bold text-blue-900">Legal Protection</h4>
+                <p className="text-xs text-blue-800">Accurate technical data for your SPIS disclosure reduces post-sale liability.</p>
+              </div>
+              <div className="flex flex-col items-center text-center p-5 bg-green-50 rounded-xl border border-green-100 shadow-sm">
+                <Clock className="text-green-600 mb-2" size={32} />
+                <h4 className="font-bold text-green-900">Faster Closing</h4>
+                <p className="text-xs text-green-800">Reduce time-on-market by 30% by encouraging clean, unconditional offers.</p>
+              </div>
+            </div>
+
+            <p>
+              Our <strong>Buyer-Ready Reports</strong> include high-resolution photos and repair cost estimates, designed to be left on the counter during showings to prove the integrity of your home.
+            </p>
+          </div>
+        }
+        whatWeInspect={[
+          "Roofing System Integrity & Life Expectancy",
+          "Foundation & Structural Load-Bearing Analysis",
+          "Electrical Audit (Knob & Tube / Aluminum Scan)",
+          "HVAC Efficiency & Mechanical Reliability",
+          "Plumbing, Drainage & Recalled Pipe Identification",
+          "Attic Insulation, Ventilation & Mold Scan",
+          "Building Envelope & Grading Performance",
+          "Thermal Imaging for Hidden Moisture Detection",
+        ]}
+        features={[
+          {
+            title: "Repair Priority Roadmap",
+            description: "We categorize findings by 'Urgency,' showing you what needs to be fixed to sell and what can simply be disclosed."
+          },
+          {
+            title: "SPIS Disclosure Support",
+            description: "We provide the specific data required to accurately complete your Seller's Property Information Statement."
+          },
+          {
+            title: "Marketing-Ready PDF",
+            description: "A professional summary report designed for realtors to include in the listing package and share with serious buyers."
+          },
+          {
+            title: "Thermal Imaging Included",
+            description: "We use infrared cameras to prove to buyers that the basement is dry and the insulation is performing correctly."
+          },
+        ]}
+        benefits={[
+          "Eliminate 11th-hour price renegotiations",
+          "Justify a higher listing price",
+          "Control the cost of repairs using your contractors",
+          "Minimize stress during the conditional period",
+          "Increase the likelihood of unconditional offers",
+          "Detailed repair cost guides for transparency",
+          "InterNACHI Master Certified expertise",
+          "Same-day digital report delivery",
+        ]}
+        faqs={faqSchema.mainEntity.map(f => ({
+          question: f.name,
+          answer: f.acceptedAnswer.text
+        }))}
+        relatedServices={[
+          { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
+          { title: "Infrared Thermal Imaging", href: "/services/thermal-imaging" },
+          { title: "Sewer Scope Inspection", href: "/services/sewer-scope" },
+          { title: "Mold Testing", href: "/services/mold-testing" },
+        ]}
+      />
+    </>
   );
 }
