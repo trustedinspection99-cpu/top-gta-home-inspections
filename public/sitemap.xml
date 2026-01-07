@@ -1,224 +1,119 @@
-import { Layout } from "@/components/layout/Layout";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { MapPin, Wrench, FileText, Info } from "lucide-react";
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.asads.ca/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.asads.ca/about/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.asads.ca/services/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.asads.ca/locations/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.asads.ca/blog/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/testimonials/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/faq/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/pricing/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.asads.ca/booking/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.asads.ca/contact/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.asads.ca/privacy-policy/</loc><priority>0.3</priority></url>
+  <url><loc>https://www.asads.ca/terms/</loc><priority>0.3</priority></url>
 
-const mainPages = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about/" },
-  { name: "Services", href: "/services/" },
-  { name: "Locations", href: "/locations/" },
-  { name: "Blog", href: "/blog/" },
-  { name: "Testimonials", href: "/testimonials/" },
-  { name: "FAQ", href: "/faq/" },
-  { name: "Pricing", href: "/pricing/" },
-  { name: "Book Online", href: "/booking/" },
-  { name: "Contact", href: "/contact/" },
-  { name: "Privacy Policy", href: "/privacy-policy/" },
-  { name: "Terms of Service", href: "/terms/" },
-];
+  <url><loc>https://www.asads.ca/services/pre-purchase/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.asads.ca/services/pre-listing/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.asads.ca/services/new-construction/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.asads.ca/services/condo/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.asads.ca/services/commercial/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.asads.ca/services/radon-testing/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.asads.ca/services/mold-inspection/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.asads.ca/services/asbestos-testing/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.asads.ca/services/thermal-imaging/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.asads.ca/services/wett/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.asads.ca/services/lead-paint-testing/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.asads.ca/services/well-water-testing/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.asads.ca/services/sewer-scope/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.asads.ca/services/air-quality/</loc><priority>0.8</priority></url>
 
-const services = [
-  { name: "Pre-Purchase Inspection", href: "/services/pre-purchase/" },
-  { name: "Pre-Listing Inspection", href: "/services/pre-listing/" },
-  { name: "New Construction Inspection", href: "/services/new-construction/" },
-  { name: "Condo Inspection", href: "/services/condo/" },
-  { name: "Commercial Inspection", href: "/services/commercial/" },
-  { name: "Radon Testing", href: "/services/radon-testing/" },
-  { name: "Mold Inspection", href: "/services/mold-inspection/" },
-  { name: "Asbestos Testing", href: "/services/asbestos-testing/" },
-  { name: "Thermal Imaging", href: "/services/thermal-imaging/" },
-  { name: "WETT Inspection", href: "/services/wett/" },
-  { name: "Lead Paint Testing", href: "/services/lead-paint-testing/" },
-  { name: "Well Water Testing", href: "/services/well-water-testing/" },
-  { name: "Sewer Scope", href: "/services/sewer-scope/" },
-  { name: "Air Quality Testing", href: "/services/air-quality/" },
-];
+  <url><loc>https://www.asads.ca/locations/toronto/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/north-york/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/scarborough/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/etobicoke/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/east-york/</loc><priority>0.7</priority></url>
 
-const locations = [
-  // Toronto & Surrounding
-  { name: "Toronto", href: "/locations/toronto/" },
-  { name: "North York", href: "/locations/north-york/" },
-  { name: "Scarborough", href: "/locations/scarborough/" },
-  { name: "Etobicoke", href: "/locations/etobicoke/" },
-  { name: "East York", href: "/locations/east-york/" },
-  // Peel Region
-  { name: "Mississauga", href: "/locations/mississauga/" },
-  { name: "Brampton", href: "/locations/brampton/" },
-  { name: "Caledon", href: "/locations/caledon/" },
-  { name: "Bolton", href: "/locations/bolton/" },
-  // York Region
-  { name: "Vaughan", href: "/locations/vaughan/" },
-  { name: "Markham", href: "/locations/markham/" },
-  { name: "Richmond Hill", href: "/locations/richmond-hill/" },
-  { name: "Newmarket", href: "/locations/newmarket/" },
-  { name: "Aurora", href: "/locations/aurora/" },
-  { name: "King City", href: "/locations/king-city/" },
-  { name: "Stouffville", href: "/locations/stouffville/" },
-  { name: "Georgina", href: "/locations/georgina/" },
-  { name: "East Gwillimbury", href: "/locations/east-gwillimbury/" },
-  { name: "Keswick", href: "/locations/keswick/" },
-  { name: "Sutton", href: "/locations/sutton/" },
-  { name: "Woodbridge", href: "/locations/woodbridge/" },
-  { name: "Thornhill", href: "/locations/thornhill/" },
-  { name: "Maple", href: "/locations/maple/" },
-  { name: "Kleinburg", href: "/locations/kleinburg/" },
-  { name: "Concord", href: "/locations/concord/" },
-  { name: "Unionville", href: "/locations/unionville/" },
-  // Halton Region
-  { name: "Oakville", href: "/locations/oakville/" },
-  { name: "Burlington", href: "/locations/burlington/" },
-  { name: "Milton", href: "/locations/milton/" },
-  { name: "Halton Hills", href: "/locations/halton-hills/" },
-  { name: "Georgetown", href: "/locations/georgetown/" },
-  { name: "Acton", href: "/locations/acton/" },
-  // Durham Region
-  { name: "Oshawa", href: "/locations/oshawa/" },
-  { name: "Whitby", href: "/locations/whitby/" },
-  { name: "Ajax", href: "/locations/ajax/" },
-  { name: "Pickering", href: "/locations/pickering/" },
-  { name: "Clarington", href: "/locations/clarington/" },
-  { name: "Bowmanville", href: "/locations/bowmanville/" },
-  { name: "Uxbridge", href: "/locations/uxbridge/" },
-  { name: "Scugog", href: "/locations/scugog/" },
-  { name: "Port Perry", href: "/locations/port-perry/" },
-  { name: "Brock", href: "/locations/brock/" },
-  { name: "Beaverton", href: "/locations/beaverton/" },
-  { name: "Cannington", href: "/locations/cannington/" },
-  // Simcoe County
-  { name: "Barrie", href: "/locations/barrie/" },
-  { name: "Orillia", href: "/locations/orillia/" },
-  { name: "Innisfil", href: "/locations/innisfil/" },
-  { name: "Bradford", href: "/locations/bradford/" },
-  { name: "Alliston", href: "/locations/alliston/" },
-  { name: "Collingwood", href: "/locations/collingwood/" },
-  { name: "Wasaga Beach", href: "/locations/wasaga-beach/" },
-  { name: "Midland", href: "/locations/midland/" },
-  { name: "Penetanguishene", href: "/locations/penetanguishene/" },
-  { name: "New Tecumseth", href: "/locations/new-tecumseth/" },
-  { name: "Essa", href: "/locations/essa/" },
-  { name: "Springwater", href: "/locations/springwater/" },
-  { name: "Clearview", href: "/locations/clearview/" },
-  { name: "Stayner", href: "/locations/stayner/" },
-  // Hamilton-Niagara
-  { name: "Hamilton", href: "/locations/hamilton/" },
-  { name: "Stoney Creek", href: "/locations/stoney-creek/" },
-  { name: "Ancaster", href: "/locations/ancaster/" },
-  { name: "Dundas", href: "/locations/dundas/" },
-  { name: "Flamborough", href: "/locations/flamborough/" },
-  { name: "Grimsby", href: "/locations/grimsby/" },
-  { name: "Beamsville", href: "/locations/beamsville/" },
-  { name: "Lincoln", href: "/locations/lincoln/" },
-  { name: "St. Catharines", href: "/locations/st-catharines/" },
-  { name: "Niagara Falls", href: "/locations/niagara-falls/" },
-  { name: "Niagara-on-the-Lake", href: "/locations/niagara-on-the-lake/" },
-  { name: "Welland", href: "/locations/welland/" },
-  { name: "Fort Erie", href: "/locations/fort-erie/" },
-  { name: "Port Colborne", href: "/locations/port-colborne/" },
-  { name: "Thorold", href: "/locations/thorold/" },
-  // Waterloo Region
-  { name: "Kitchener", href: "/locations/kitchener/" },
-  { name: "Waterloo", href: "/locations/waterloo/" },
-  { name: "Cambridge", href: "/locations/cambridge/" },
-  // Wellington & Dufferin
-  { name: "Guelph", href: "/locations/guelph/" },
-  { name: "Orangeville", href: "/locations/orangeville/" },
-  // Kawartha & Peterborough
-  { name: "Peterborough", href: "/locations/peterborough/" },
-  // Northumberland & Brant
-  { name: "Cobourg", href: "/locations/cobourg/" },
-  { name: "Brantford", href: "/locations/brantford/" },
-];
+  <url><loc>https://www.asads.ca/locations/mississauga/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/brampton/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/caledon/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/bolton/</loc><priority>0.7</priority></url>
 
-export default function Sitemap() {
-  return (
-    <Layout>
-      <Helmet>
-        <title>Sitemap | ASADS Home Inspection</title>
-        <meta name="description" content="Complete sitemap for ASADS Home Inspection. Find all our services, locations, and pages." />
-        <link rel="canonical" href="https://www.asads.ca/sitemap/" />
-      </Helmet>
+  <url><loc>https://www.asads.ca/locations/vaughan/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/markham/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/richmond-hill/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/newmarket/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/aurora/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/king-city/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/stouffville/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/georgina/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/east-gwillimbury/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/keswick/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/sutton/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/woodbridge/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/thornhill/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/maple/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/kleinburg/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/concord/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/unionville/</loc><priority>0.7</priority></url>
 
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Sitemap
-            </h1>
-            <p className="text-lg text-muted-foreground mb-12">
-              Browse all pages on our website to find the information you need.
-            </p>
+  <url><loc>https://www.asads.ca/locations/oakville/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/burlington/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/milton/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/halton-hills/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/georgetown/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/acton/</loc><priority>0.7</priority></url>
 
-            <div className="grid gap-12">
-              {/* Main Pages */}
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Info className="h-5 w-5 text-primary" />
-                  </div>
-                  <h2 className="font-heading text-2xl font-bold text-foreground">Main Pages</h2>
-                </div>
-                <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                  {mainPages.map((page) => (
-                    <li key={page.href}>
-                      <Link
-                        to={page.href}
-                        className="block p-3 rounded-lg border bg-background hover:border-primary hover:bg-primary/5 transition-colors text-foreground"
-                      >
-                        {page.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+  <url><loc>https://www.asads.ca/locations/oshawa/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/whitby/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/ajax/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/pickering/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/clarington/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/bowmanville/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/uxbridge/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/scugog/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/port-perry/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/brock/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/beaverton/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/cannington/</loc><priority>0.7</priority></url>
 
-              {/* Services */}
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-10 w-10 rounded-lg bg-secondary/10 flex items-center justify-center">
-                    <Wrench className="h-5 w-5 text-secondary" />
-                  </div>
-                  <h2 className="font-heading text-2xl font-bold text-foreground">Services ({services.length})</h2>
-                </div>
-                <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                  {services.map((service) => (
-                    <li key={service.href}>
-                      <Link
-                        to={service.href}
-                        className="block p-3 rounded-lg border bg-background hover:border-secondary hover:bg-secondary/5 transition-colors text-foreground"
-                      >
-                        {service.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+  <url><loc>https://www.asads.ca/locations/barrie/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/orillia/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/innisfil/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/bradford/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/alliston/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/collingwood/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/wasaga-beach/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/midland/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/penetanguishene/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/new-tecumseth/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/essa/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/springwater/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/clearview/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/stayner/</loc><priority>0.7</priority></url>
 
-              {/* Locations */}
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-10 w-10 rounded-lg bg-accent/10 flex items-center justify-center">
-                    <MapPin className="h-5 w-5 text-accent" />
-                  </div>
-                  <h2 className="font-heading text-2xl font-bold text-foreground">Service Areas ({locations.length})</h2>
-                </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
-                  {locations.map((location) => (
-                    <li key={location.href}>
-                      <Link
-                        to={location.href}
-                        className="block p-2 rounded-lg border bg-background hover:border-accent hover:bg-accent/5 transition-colors text-sm text-foreground"
-                      >
-                        {location.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-  );
-}
+  <url><loc>https://www.asads.ca/locations/hamilton/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/stoney-creek/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/ancaster/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/dundas/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/flamborough/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/grimsby/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/beamsville/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/lincoln/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/st-catharines/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/niagara-falls/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/niagara-on-the-lake/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/welland/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/fort-erie/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/port-colborne/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.asads.ca/locations/thorold/</loc><priority>0.7</priority></url>
+
+  <url><loc>https://www.asads.ca/locations/kitchener/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/waterloo/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/cambridge/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/guelph/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/orangeville/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/peterborough/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/cobourg/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/brantford/</loc><priority>0.6</priority></url>
+</urlset>
