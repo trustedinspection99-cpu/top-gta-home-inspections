@@ -51,8 +51,16 @@ const featuredServices = [
   { name: "Pre-Listing Inspection", slug: "pre-listing" },
   { name: "Condo Inspection", slug: "condo" },
   { name: "New Construction", slug: "new-construction" },
+  { name: "Commercial Inspection", slug: "commercial" },
   { name: "Mold Inspection", slug: "mold-inspection" },
+  { name: "Radon Testing", slug: "radon-testing" },
+  { name: "Air Quality Testing", slug: "air-quality" },
+  { name: "Asbestos Testing", slug: "asbestos-testing" },
   { name: "Thermal Imaging", slug: "thermal-imaging" },
+  { name: "Sewer Scope", slug: "sewer-scope" },
+  { name: "Well Water Testing", slug: "well-water-testing" },
+  { name: "WETT Inspection", slug: "wett" },
+  { name: "Lead Paint Testing", slug: "lead-paint-testing" },
 ];
 
 export function LocationPageTemplate({
@@ -509,6 +517,41 @@ export function LocationPageTemplate({
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Available Section - Internal Linking */}
+      <section className="py-12 bg-muted/30">
+        <div className="container">
+          <div className="text-center mb-8">
+            <h2 className="font-heading text-2xl font-bold text-foreground mb-2">
+              Home Inspection Services Available in {city}
+            </h2>
+            <p className="text-muted-foreground">
+              Complete range of professional inspection and testing services for {city} properties
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
+            {featuredServices.map((service) => (
+              <Link
+                key={service.slug}
+                to={`/services/${service.slug}/`}
+                className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
+              >
+                <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                {service.name}
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-6">
+            <Link 
+              to="/services/" 
+              className="text-primary hover:underline text-sm font-medium inline-flex items-center gap-1"
+            >
+              View all inspection services
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
