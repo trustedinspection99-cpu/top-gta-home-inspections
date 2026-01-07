@@ -1,102 +1,116 @@
-import { Droplets } from "lucide-react";
+import { Droplets, TestTube, Beaker, ShieldCheck, Microscope, AlertTriangle } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function WellWaterTesting() {
+  const pageTitle = "Well Water Testing Toronto | Certified Lab Analysis | ASADS";
+  const metaDescription = "Certified well water testing in Toronto and GTA. MOH accredited laboratory analysis for E.coli, nitrates, and chemicals. Same-day lab courier service.";
+
   return (
     <ServicePageTemplate
       title="Well Water Testing"
-      metaTitle="Well Water Testing Services | Ontario Rural Homes"
-      metaDescription="Test private well water for bacteria and contaminants. Ensure safe drinking water for your rural Ontario property."
-      heroTitle="Well Water Testing in Ontario"
-      heroSubtitle="Ensure your family's water is safe to drink. Comprehensive laboratory analysis of private wells for bacteria, minerals, and contaminants."
+      metaTitle={pageTitle}
+      metaDescription={metaDescription}
+      heroTitle="MOH Accredited Well Water Analysis"
+      heroSubtitle="Protect your family from hidden contaminants. We provide clinical-grade sampling and accredited laboratory testing for rural properties across the GTA."
       icon={Droplets}
-      price="From $199"
-      duration="Sample collection + lab"
+      price="From $149"
+      duration="Sample Collection + Lab Time"
       description={
-        <div className="space-y-4">
-          <p>
-            If your home relies on a private well, regular water testing is essential. 
-            Unlike municipal water, private wells are not monitored by public health 
-            authorities. Well water quality can change seasonally and be affected by 
-            agricultural runoff, septic systems, or natural mineral deposits.
+        <div className="space-y-6">
+          <p className="text-lg leading-relaxed text-slate-700">
+            Private well water is not regulated in Ontario, meaning homeowners are 100% 
+            responsible for their own water safety. According to Public Health Ontario, 
+            <strong> 1 in 4 private wells</strong> test positive for bacterial contamination 
+            that can lead to serious gastrointestinal illness.
           </p>
+
+          <div className="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-xl">
+            <h4 className="text-amber-900 font-bold flex items-center gap-2">
+              <AlertTriangle className="text-amber-600" size={20} />
+              Real Estate & Mortgage Requirements
+            </h4>
+            <p className="text-amber-800 text-sm mt-1">
+              Most Canadian mortgage lenders require a <strong>Certificate of Potability</strong> 
+              issued within 30 days of closing. Our "Real Estate Full Analysis" package meets 
+              all lender requirements for bacteria and chemical concentrations.
+            </p>
+          </div>
+
+          
+
           <p>
-            Our comprehensive well water testing analyzes for bacteria (including E. coli 
-            and coliform), nitrates, minerals, pH levels, and other potential contaminants. 
-            We follow proper sample collection protocols to ensure accurate laboratory results.
-          </p>
-          <p>
-            Testing is recommended at least annually for existing wells, and essential 
-            when buying a property with a private well. We can also test for specific 
-            contaminants based on your area's known water quality issues.
+            Our technicians use sterile sampling protocols to prevent cross-contamination. 
+            We handle the chain of custody and utilize <strong>same-day lab courier services</strong> 
+            to ensure samples reach the laboratory within the strict 6-24 hour holding 
+            window required for accurate results.
           </p>
         </div>
       }
       whatWeInspect={[
-        "Total coliform bacteria",
-        "E. coli bacteria",
-        "Nitrate and nitrite levels",
-        "pH and alkalinity",
-        "Hardness (calcium/magnesium)",
-        "Iron and manganese",
-        "Chloride levels",
-        "Sulfate content",
-        "Total dissolved solids",
-        "Arsenic (if requested)",
-        "Lead (if requested)",
-        "Fluoride levels",
+        "E.coli & Total Coliforms",
+        "Nitrate-Nitrogen (MAC 10mg/L)",
+        "Nitrites & Ammonia",
+        "Lead & Arsenic concentrations",
+        "Uranium & Fluoride",
+        "Sodium & Chloride (Road Salt)",
+        "Iron & Manganese (Staining)",
+        "Hardness & Alkalinity",
+        "pH Levels & Turbidity",
+        "Total Dissolved Solids (TDS)",
+        "Sulphate & Hydrogen Sulphide",
+        "Treatment system performance",
       ]}
       features={[
         {
-          title: "Proper Sample Collection",
-          description: "We follow strict protocols for sample collection, handling, and transport to ensure accurate laboratory results."
+          title: "MOH Accredited Labs",
+          description: "All samples are processed by Ontario Ministry of Health licensed laboratories following O.Reg. 170/03 standards."
         },
         {
-          title: "Accredited Lab Analysis",
-          description: "Samples are analyzed by certified laboratories meeting provincial standards for drinking water testing."
+          title: "Same-Day Courier",
+          description: "We provide rapid transport for samples to ensure biological integrity, vital for time-sensitive real estate closings."
         },
         {
-          title: "Comprehensive Panels",
-          description: "Choose from basic bacteria testing to full mineral and contaminant analysis based on your needs and concerns."
+          title: "Potability Certification",
+          description: "Receive a formal laboratory report formatted specifically for mortgage lenders and municipal health records."
         },
         {
-          title: "Treatment Recommendations",
-          description: "If problems are found, we provide recommendations for water treatment systems appropriate to your specific issues."
+          title: "Treatment Consultation",
+          description: "If contaminants exceed MAC limits, we provide unbiased advice on UV sterilization, RO systems, or chlorination."
         },
       ]}
       benefits={[
-        "Certified lab analysis",
-        "Proper collection protocol",
-        "Multiple test panels",
-        "Health protection",
-        "Real estate compliant",
-        "Treatment guidance",
+        "Lender-approved reports",
+        "Clinical sampling protocols",
+        "Same-day kit delivery",
+        "Identify hidden E.coli",
         "Annual testing reminders",
-        "Fast turnaround",
+        "Unbiased 3rd party analysis",
+        "Emergency priority testing",
+        "Peace of mind for families",
       ]}
       faqs={[
         {
-          question: "How often should I test my well water?",
-          answer: "At minimum, test annually for bacteria and nitrates. More comprehensive testing every 3-5 years, or whenever you notice changes in taste, odor, or appearance."
+          question: "How often should I test my well in Ontario?",
+          answer: "Public Health Ontario recommends testing for bacteria (E.coli/Coliform) every 6 months and a full chemical/mineral analysis every 2 years."
         },
         {
-          question: "What are signs of contaminated well water?",
-          answer: "Changes in taste, odor, or color can indicate problems. However, many dangerous contaminants like bacteria and nitrates are undetectable without testing."
+          question: "Can I just use the free provincial test?",
+          answer: "The free public health test only covers basic bacteria. It does not test for Nitrates, Lead, Arsenic, or chemicals—parameters required by most mortgage lenders and essential for health safety."
         },
         {
-          question: "Is well water testing required when selling?",
-          answer: "While not legally required in all areas, most buyers and lenders request well water testing as a condition of sale. We provide reports suitable for real estate transactions."
+          question: "What if my water fails the test?",
+          answer: "We provide a clear remediation roadmap. This may include 'shocking' the well with chlorine, installing a UV light system, or repairing a damaged well cap or casing."
         },
         {
-          question: "What if my water fails testing?",
-          answer: "Many issues can be addressed with treatment systems (filtration, UV sterilization, water softeners). We can recommend solutions based on your specific results."
+          question: "What is the MAC for Nitrates in Ontario?",
+          answer: "The Maximum Acceptable Concentration (MAC) for Nitrate-Nitrogen is 10 mg/L. Levels above this pose a risk of 'Blue Baby Syndrome' (methemoglobinemia) in infants."
         },
       ]}
       relatedServices={[
         { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
         { title: "Sewer Scope Inspection", href: "/services/sewer-scope" },
-        { title: "Radon Testing", href: "/services/radon-testing" },
-        { title: "Mold Inspection", href: "/services/mold-inspection" },
+        { title: "Septic System Inspection", href: "/services/septic-inspection" },
+        { title: "Mold Testing", href: "/services/mold-testing-toronto" },
       ]}
     />
   );
