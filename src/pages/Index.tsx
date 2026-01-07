@@ -203,6 +203,117 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <section className="py-24 bg-gray-50 border-t">
+  <div className="container mx-auto px-4 max-w-5xl">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+      Pre-Purchase Home Inspections for Toronto Buyers
+    </h2>
+
+    <div className="prose prose-blue max-w-none text-gray-700 leading-relaxed">
+      <p className="text-lg">
+        A <strong>pre-purchase home inspection in Toronto</strong> protects buyers from unexpected repair costs,
+        safety hazards, and failed financing conditions. In competitive GTA markets, many buyers waive conditions —
+        making a <strong>professional inspection before purchase</strong> even more critical.
+      </p>
+
+      <p>
+        ASADS inspectors evaluate over <strong>200 inspection points</strong>, focusing on structural integrity,
+        moisture intrusion, electrical safety, plumbing performance, and HVAC functionality.
+        Our findings help buyers determine whether a property is a smart investment or a financial liability.
+      </p>
+
+      <h3 className="text-2xl font-bold text-blue-800 mt-10 mb-4">
+        What Buyers Risk Without a Pre-Purchase Inspection
+      </h3>
+
+      <ul>
+        <li>Hidden foundation movement or structural framing defects</li>
+        <li>Roof failures not visible from ground level</li>
+        <li>Outdated electrical systems rejected by insurers</li>
+        <li>Plumbing leaks behind walls causing mold growth</li>
+        <li>HVAC systems near end-of-life requiring immediate replacement</li>
+      </ul>
+
+      <p>
+        A certified <strong>Toronto home inspector</strong> provides leverage during negotiations
+        and peace of mind before finalizing one of life’s largest purchases.
+      </p>
+    </div>
+  </div>
+</section>
+      <section className="py-24 bg-white border-t">
+  <div className="container mx-auto px-4 max-w-5xl">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+      Pre-Listing Inspections for Home Sellers in Toronto & GTA
+    </h2>
+
+    <div className="prose prose-blue max-w-none text-gray-700 leading-relaxed">
+      <p className="text-lg">
+        A <strong>pre-listing home inspection</strong> allows sellers to control the narrative,
+        avoid last-minute deal collapses, and justify asking price with documented condition transparency.
+      </p>
+
+      <p>
+        In Toronto’s fast-moving real estate market, buyers expect disclosure.
+        Sellers who complete a <strong>pre-listing inspection</strong> often experience smoother closings,
+        fewer price reductions, and increased buyer confidence.
+      </p>
+
+      <h3 className="text-2xl font-bold text-blue-800 mt-10 mb-4">
+        Benefits of Pre-Listing Inspections
+      </h3>
+
+      <ul>
+        <li>Identify repair issues before buyers do</li>
+        <li>Reduce renegotiation after accepted offers</li>
+        <li>Support higher listing prices with inspection data</li>
+        <li>Increase buyer trust and shorten days on market</li>
+      </ul>
+
+      <p>
+        ASADS provides sellers with clear, professional reports that can be shared with agents,
+        lawyers, and prospective buyers to accelerate transactions.
+      </p>
+    </div>
+  </div>
+</section>
+      <section className="py-24 bg-gray-50 border-t">
+  <div className="container mx-auto px-4 max-w-5xl">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+      Ontario Home Inspection Standards, Insurance & Liability
+    </h2>
+
+    <div className="prose prose-blue max-w-none text-gray-700 leading-relaxed">
+      <p className="text-lg">
+        Ontario homes are subject to unique risks including freeze-thaw foundation movement,
+        aging infrastructure, and evolving insurance underwriting requirements.
+        A <strong>certified home inspection</strong> helps buyers and sellers comply with lender and insurer expectations.
+      </p>
+
+      <p>
+        Many insurance providers in Ontario require verification of electrical systems,
+        roofing age, plumbing materials, and heating sources before issuing coverage.
+        Inspections performed by ASADS help reduce claim denials and underwriting delays.
+      </p>
+
+      <h3 className="text-2xl font-bold text-blue-800 mt-10 mb-4">
+        When Inspections Impact Financing & Insurance
+      </h3>
+
+      <ul>
+        <li>Knob-and-tube or aluminum wiring disclosures</li>
+        <li>Oil tanks and fuel-burning appliance verification</li>
+        <li>Roof age confirmation for underwriting approval</li>
+        <li>Moisture and mold risk documentation</li>
+      </ul>
+
+      <p>
+        Our inspections align with modern lender expectations while remaining unbiased,
+        third-party evaluations focused on risk mitigation.
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* 5. SOCIAL CONNECT */}
       <section className="py-16 bg-blue-50 border-y">
