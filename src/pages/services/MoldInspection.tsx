@@ -1,102 +1,116 @@
-import { Search } from "lucide-react";
+import { Microscope, ShieldAlert, Droplets, FlaskConical, ClipboardList, ThermometerSnowflake } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function MoldInspection() {
+  const pageTitle = "Mold Testing Toronto | AIHA-Certified Lab Analysis | ASADS";
+  const schemaDescription = "Professional mold testing and air quality analysis in Toronto. PCR DNA testing for 36+ species including toxic black mold. Same-day results available.";
+
   return (
     <ServicePageTemplate
-      title="Mold Inspection"
-      metaTitle="Mold Inspection & Testing Ontario | Certified Experts"
-      metaDescription="Professional mold and moisture detection. We identify air quality risks and hidden growth to keep your Ontario home safe."
-      heroTitle="Mold Inspection & Testing in Ontario"
-      heroSubtitle="Identify hidden mold growth and moisture issues. Comprehensive visual inspection combined with air sampling for accurate assessment."
-      icon={Search}
-      price="From $299"
-      duration="2-3 hours"
+      title="Mold Testing & Air Quality Analysis"
+      metaTitle={pageTitle}
+      metaDescription={schemaDescription}
+      heroTitle="Scientific Mold Detection & Lab-Certified Results"
+      heroSubtitle="Protect your health with AIHA-certified laboratory analysis. We detect toxic black mold, hidden moisture, and airborne spore concentrations with 99.9% accuracy."
+      icon={Microscope}
+      price="From $349"
+      duration="2-3 Hours + Lab Time"
       description={
-        <div className="space-y-4">
-          <p>
-            Mold can cause serious health problems and significant property damage if left 
-            untreated. Our professional mold inspections identify visible mold growth, 
-            hidden mold behind walls, and the moisture conditions that allow mold to thrive.
+        <div className="space-y-6">
+          <p className="text-lg leading-relaxed text-slate-700">
+            Mold isn't just a property issue—it's a significant health risk. Our Toronto-based specialists go beyond visual checks, utilizing <strong>AIHA-accredited laboratory analysis</strong> and DNA-based <strong>PCR testing</strong> to identify 36+ mold species, including toxigenic <em>Stachybotrys</em> (Black Mold).
           </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+            <div className="flex flex-col items-center text-center p-5 bg-purple-50 rounded-xl border border-purple-100 shadow-sm">
+              <FlaskConical className="text-purple-600 mb-2" size={32} />
+              <h4 className="font-bold text-purple-900">Lab Certified</h4>
+              <p className="text-xs text-purple-800">Samples analyzed by AIHA-accredited labs following strict ISO standards for legal and insurance validity.</p>
+            </div>
+            <div className="flex flex-col items-center text-center p-5 bg-blue-50 rounded-xl border border-blue-100 shadow-sm">
+              <ThermometerSnowflake className="text-blue-600 mb-2" size={32} />
+              <h4 className="font-bold text-blue-900">Thermal Imaging</h4>
+              <p className="text-xs text-blue-800">Infrared technology identifies hidden moisture patterns inside walls before mold becomes visible.</p>
+            </div>
+            <div className="flex flex-col items-center text-center p-5 bg-red-50 rounded-xl border border-red-100 shadow-sm">
+              <ShieldAlert className="text-red-600 mb-2" size={32} />
+              <h4 className="font-bold text-red-900">Health First</h4>
+              <p className="text-xs text-red-800">Specialized protocols for clients experiencing respiratory issues, allergies, or chronic fatigue.</p>
+            </div>
+          </div>
+
+          
+
           <p>
-            We use a combination of visual inspection, moisture meters, thermal imaging, 
-            and air sampling to provide a complete picture of your home's mold situation. 
-            Air samples are analyzed by an accredited laboratory to identify mold species 
-            and concentration levels.
-          </p>
-          <p>
-            Whether you're dealing with a known mold problem, buying a home, or concerned 
-            about indoor air quality, our mold inspection provides the answers you need 
-            to protect your health and property.
+            Whether you are legalizing a basement apartment, dealing with an insurance claim, or protecting a sensitive family member, our detailed reports provide the <strong>spore count quantification</strong> and <strong>species identification</strong> necessary for a professional remediation roadmap.
           </p>
         </div>
       }
       whatWeInspect={[
-        "Visible mold growth areas",
-        "Hidden mold behind surfaces",
-        "Moisture levels in materials",
-        "Water damage history",
-        "HVAC system and ductwork",
-        "Basement and crawl spaces",
-        "Bathroom ventilation",
-        "Window condensation areas",
-        "Attic ventilation",
-        "Plumbing leak sources",
-        "Foundation moisture intrusion",
-        "Humidity levels throughout",
+        "Airborne Spore Count (Indoor vs. Outdoor)",
+        "Toxic Species Identification (Stachybotrys/Aspergillus)",
+        "Wall Cavity Moisture Profiling",
+        "HVAC Ductwork & Filter Contamination",
+        "Sump Pit & Floor Drain Bacteria/Mold",
+        "Attic Sheathing & Insulation Moisture",
+        "Basement Foundation Efflorescence",
+        "Window Seal & Condensation Analysis",
+        "Hidden Growth via Infrared Scanning",
+        "Relative Humidity & Dew Point Mapping",
+        "Surface Swab & Tape-Lift Sampling",
+        "Post-Remediation Clearance Testing",
       ]}
       features={[
         {
-          title: "Air Quality Sampling",
-          description: "We collect air samples from multiple locations including outdoor baseline samples. Samples are analyzed by an accredited lab for mold species identification."
+          title: "PCR DNA Analysis",
+          description: "Our high-sensitivity DNA testing identifies exactly which species are present, critical for medical professionals treating mold-related illnesses."
         },
         {
-          title: "Moisture Detection",
-          description: "Using moisture meters and thermal imaging, we identify hidden moisture that could lead to mold growth, even behind walls and ceilings."
+          title: "Infrared Moisture Mapping",
+          description: "We use FLIR thermal cameras to track 'cold spots' that indicate active leaks or condensation issues hidden behind drywall."
         },
         {
-          title: "Lab Analysis Report",
-          description: "Receive detailed laboratory results identifying mold species, spore counts, and comparison to outdoor levels to assess significance."
+          title: "Court-Admissible Reports",
+          description: "Our documentation meets the standards required for Toronto real estate litigation, insurance claims, and landlord-tenant disputes."
         },
         {
-          title: "Remediation Guidance",
-          description: "If mold is found, we provide remediation scope recommendations and can refer you to qualified mold remediation professionals."
+          title: "Clearance Certificates",
+          description: "After cleaning, we perform 'Clearance Testing' to provide a certificate of air quality, ensuring the remediation was 100% successful."
         },
       ]}
       benefits={[
-        "Accredited lab analysis",
-        "Thermal imaging included",
-        "Moisture source identification",
-        "Species identification",
-        "Remediation scope guidance",
-        "Health protection focus",
-        "Insurance documentation",
-        "Re-testing after remediation",
+        "AIHA-Accredited Lab Partners",
+        "Same-Day Preliminary Results",
+        "36+ Mold Species Profiled",
+        "ERMI & HERTSMI-2 Scoring Available",
+        "Detailed Remediation Protocols",
+        "Insurance-Ready Documentation",
+        "Advanced FLIR Thermal Scanning",
+        "PCR DNA Technology",
       ]}
       faqs={[
         {
-          question: "How do I know if I have mold?",
-          answer: "Signs include musty odors, visible growth, water stains, or health symptoms like allergies or respiratory issues that improve when away from home. Testing provides definitive answers."
+          question: "Can I just use a hardware store mold kit?",
+          answer: "Hardware store 'settle plate' kits are notoriously unreliable. They only show that spores exist (which they do in every home). Our calibrated air pumps measure the exact concentration of spores per cubic meter, which is the only way to determine if a health risk exists."
         },
         {
-          question: "Is all mold dangerous?",
-          answer: "Not all mold is equally harmful, but any indoor mold growth indicates excess moisture and should be addressed. Some species like Stachybotrys (black mold) are particularly concerning."
+          question: "How long until I get the results?",
+          answer: "On-site sampling takes about 2 hours. Standard lab turnaround is 3-5 business days, but we offer a 24-hour 'Rush' service for urgent health or real estate deadlines."
         },
         {
-          question: "Should I test before buying a home?",
-          answer: "If you see water stains, smell mustiness, or the home has a history of water damage, mold testing is highly recommended as part of your due diligence."
+          question: "What is 'Black Mold' and is it in my home?",
+          answer: "Stachybotrys chartarum (Black Mold) is a toxigenic species that thrives on high-cellulose materials like drywall. It requires professional identification because it is often hidden and doesn't always show up on simple air tests without aggressive sampling."
         },
         {
-          question: "How long does lab analysis take?",
-          answer: "Standard lab results are typically available within 3-5 business days. Rush analysis is available for an additional fee if needed."
+          question: "Does insurance cover mold testing?",
+          answer: "If the mold is a result of a sudden pipe burst or flood, insurance often covers the testing and remediation. We provide the certified lab reports required to open a claim."
         },
       ]}
       relatedServices={[
-        { title: "Radon Testing", href: "/services/radon-testing" },
         { title: "Air Quality Testing", href: "/services/air-quality" },
+        { title: "Asbestos Testing", href: "/services/asbestos-testing" },
         { title: "Thermal Imaging", href: "/services/thermal-imaging" },
-        { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
+        { title: "Radon Testing", href: "/services/radon-testing" },
       ]}
     />
   );
