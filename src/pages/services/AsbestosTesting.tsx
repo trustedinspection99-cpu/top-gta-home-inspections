@@ -3,7 +3,7 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function AsbestosTesting() {
   const pageTitle = "Asbestos Testing Toronto | WSIB Certified & O.Reg 278/05 | ASADS";
-  const schemaDescription = "Certified asbestos testing in Toronto. Fully compliant with Ontario Regulation 278/05. Safe sampling for vermiculite, popcorn ceilings, and pipe wrap in pre-1990 homes.";
+  const schemaDescription = "Certified asbestos testing in Toronto & GTA. Fully compliant with Ontario Regulation 278/05. Safe sampling and lab analysis for pre-1990 homes, popcorn ceilings, insulation, and pipe wrap. Book same-day asbestos inspection now.";
 
   return (
     <ServicePageTemplate
@@ -11,7 +11,7 @@ export default function AsbestosTesting() {
       metaTitle={pageTitle}
       metaDescription={schemaDescription}
       heroTitle="WSIB Certified Asbestos Inspection"
-      heroSubtitle="Ontario's #1 workplace killer is hidden in pre-1990 buildings. Protect your family and contractors with O.Reg 278/05 compliant sampling and lab analysis."
+      heroSubtitle="Protect your family and contractors. Safe, O.Reg 278/05 compliant sampling for pre-1990 homes, renovations, and commercial sites. Book your certified asbestos inspector in Toronto or GTA today."
       icon={AlertTriangle}
       price="From $299"
       duration="1-2 Hours + Lab Time"
@@ -23,36 +23,34 @@ export default function AsbestosTesting() {
               Legal Compliance Alert
             </h4>
             <p className="text-red-800 text-sm mt-1">
-              Under <strong>Ontario Regulation 278/05</strong>, owners of buildings constructed before 1990 must test for asbestos before any renovation or demolition. Failure to comply can lead to significant WSIB fines and health liability.
+              Under <strong>Ontario Regulation 278/05</strong>, testing for asbestos is mandatory before any renovation, demolition, or repair of buildings constructed before 1990. Failure to comply can lead to WSIB fines and health liability.
             </p>
           </div>
 
           <p className="text-lg leading-relaxed text-slate-700">
-            Asbestos exposure is responsible for roughly <strong>33% of all workplace fatalities in Ontario</strong>. While safe when undisturbed, these microscopic fibers become lethal when friable materials—like popcorn ceilings or pipe wrap—are disturbed during renovations.
+            Asbestos exposure is responsible for significant health risks, including mesothelioma. Friable materials such as <strong>popcorn ceilings</strong>, <strong>vinyl floor tiles</strong>, or <strong>pipe insulation</strong> release fibers when disturbed. Our certified inspectors safely sample and document asbestos for pre-purchase inspections, renovations, and compliance audits.
           </p>
-
-          
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
             <div className="p-5 bg-slate-50 rounded-xl border border-slate-200 shadow-sm text-center">
               <Microscope className="mx-auto text-primary mb-2" size={32} />
-              <h4 className="font-bold text-slate-900">Lab Analysis</h4>
-              <p className="text-xs text-slate-600">Accredited PLM and TEM analysis to identify chrysotile, amosite, and tremolite fibers.</p>
+              <h4 className="font-bold text-slate-900">Accredited Lab Analysis</h4>
+              <p className="text-xs text-slate-600">PLM and TEM testing to identify chrysotile, amosite, tremolite, and other fibers for accurate risk assessment.</p>
             </div>
             <div className="p-5 bg-slate-50 rounded-xl border border-slate-200 shadow-sm text-center">
               <Factory className="mx-auto text-primary mb-2" size={32} />
-              <h4 className="font-bold text-slate-900">Pre-1990 Focus</h4>
-              <p className="text-xs text-slate-600">Specialized protocols for Toronto’s century homes and mid-century bungalows.</p>
+              <h4 className="font-bold text-slate-900">Pre-1990 & Renovation Focus</h4>
+              <p className="text-xs text-slate-600">Specialized protocols for Toronto’s century homes, mid-century bungalows, and renovation sites across GTA cities like Mississauga, Brampton, and Etobicoke.</p>
             </div>
             <div className="p-5 bg-slate-50 rounded-xl border border-slate-200 shadow-sm text-center">
               <HardHat className="mx-auto text-primary mb-2" size={32} />
-              <h4 className="font-bold text-slate-900">WSIB Approved</h4>
-              <p className="text-xs text-slate-600">Fully insured and certified professionals meeting all OHSA safety standards.</p>
+              <h4 className="font-bold text-slate-900">WSIB & O.Reg 278/05 Compliant</h4>
+              <p className="text-xs text-slate-600">Fully insured and certified inspectors using safe wet-sampling and HEPA equipment to prevent fiber release.</p>
             </div>
           </div>
 
           <p>
-            Our inspectors identify "suspect materials" based on building age and use wet-sampling techniques to ensure zero fiber release during collection. Whether you are dealing with <strong>Zonolite vermiculite</strong> or old <strong>vinyl floor tiles</strong>, we provide the documentation required for building permits and insurance.
+            Our inspectors identify suspect materials and perform <strong>wet-sampling</strong> techniques to ensure zero fiber release. From <strong>Zonolite vermiculite</strong> in attics to <strongvinyl floor tiles</strong>, we provide comprehensive documentation for pre-purchase buyers, renovations, or commercial compliance. Same-day reporting is available for urgent inspections across Toronto, Mississauga, Brampton, Markham, Oshawa, and North York.
           </p>
         </div>
       }
@@ -73,47 +71,47 @@ export default function AsbestosTesting() {
       features={[
         {
           title: "O.Reg 278/05 Inventory",
-          description: "We provide the mandatory asbestos inventory report required by the City of Toronto for demolition and renovation permits."
+          description: "Mandatory asbestos inventory reports required for demolition, renovation permits, and pre-purchase documentation."
         },
         {
           title: "Safe Wet-Sampling",
-          description: "We utilize HEPA-filtered equipment and specialized wetting agents to prevent any fiber release during the sampling process."
+          description: "HEPA-filtered equipment and specialized wetting agents prevent any fiber release during collection."
         },
         {
           title: "Priority Lab Results",
-          description: "Standard lab turnaround is 48-72 hours, with 24-hour 'Rush' service available for emergency renovation shutdowns."
+          description: "48-72 hour standard turnaround, with 24-hour 'Rush' services for emergency pre-renovation or pre-closing inspections."
         },
         {
-          title: "Abatement Strategy",
-          description: "If asbestos is present, we provide a detailed risk assessment and removal roadmap to help you get competitive abatement quotes."
+          title: "Abatement & Risk Assessment",
+          description: "If asbestos is detected, we provide a detailed removal roadmap and competitive abatement guidance."
         },
       ]}
       benefits={[
         "WSIB Certified Inspectors",
         "NVLAP & AIHA Accredited Labs",
-        "Detailed Inventory Reports",
+        "Detailed Asbestos Inventory Reports",
         "OHSA Compliance Support",
         "Mesothelioma Risk Mitigation",
         "Permit Documentation Ready",
         "Unbiased 3rd Party Analysis",
-        "Same-Day Emergency Service",
+        "Same-Day Emergency Service Across GTA",
       ]}
       faqs={[
         {
           question: "When is asbestos testing legally required in Ontario?",
-          answer: "Under Regulation 278/05, testing is mandatory before any renovation, demolition, or repair of a building constructed before 1990. This applies to both residential and commercial properties."
+          answer: "Testing is mandatory under O.Reg 278/05 before any renovation, demolition, or repair of pre-1990 buildings. Applies to residential and commercial properties."
         },
         {
           question: "How do I identify 'Zonolite' vermiculite?",
-          answer: "Zonolite is a brand of vermiculite insulation that often contains toxic tremolite asbestos. It looks like small, shiny pebbles. Because it is highly friable, it must be sampled by a professional using a respirator."
+          answer: "Zonolite is a type of attic insulation often containing asbestos fibers. It is highly friable and must be sampled by certified inspectors using safe wet techniques."
         },
         {
           question: "What is the difference between PLM and TEM testing?",
-          answer: "PLM (Polarized Light Microscopy) is the standard for bulk materials. TEM (Transmission Electron Microscopy) is a higher-resolution test used for air samples or complex materials where fibers are too small for standard microscopes."
+          answer: "PLM (Polarized Light Microscopy) tests bulk materials. TEM (Transmission Electron Microscopy) provides higher-resolution results for air samples or fine materials."
         },
         {
-          question: "Can I take the samples myself?",
-          answer: "We strongly advise against it. Disturbing asbestos materials without containment can contaminate your entire home. Certified inspectors use specific wetting and sealing methods to keep your air safe."
+          question: "Can I sample asbestos myself?",
+          answer: "No. Disturbing asbestos without containment can contaminate your home. Certified inspectors use wet-sampling and HEPA protocols to keep the environment safe."
         },
       ]}
       relatedServices={[
