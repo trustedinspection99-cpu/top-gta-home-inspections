@@ -1,6 +1,7 @@
 import { Building2, TrendingUp, ShieldCheck, ClipboardCheck, Clock, Zap } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 export default function PreListing() {
   const pageTitle = "Pre-Listing Home Inspection Toronto | Sell Faster & For More";
@@ -25,6 +26,14 @@ export default function PreListing() {
           "@type": "Answer",
           "text": "Absolutely. Our report provides the technical documentation you need to accurately fill out your disclosure forms, protecting you from future legal liability."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "How does this differ from a buyer's pre-purchase inspection?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While buyers typically book a Pre-Purchase Home Inspection, sellers can proactively use a pre-listing inspection to reduce negotiations and speed up the sale. Learn more at /services/pre-purchase."
+        }
       }
     ]
   };
@@ -35,7 +44,7 @@ export default function PreListing() {
         <title>{pageTitle}</title>
         <meta name="description" content={schemaDescription} />
         <script type="application/ld+json">
-          {` ${JSON.stringify(faqSchema)} `}
+          {`${JSON.stringify(faqSchema)}`}
         </script>
       </Helmet>
 
@@ -44,14 +53,23 @@ export default function PreListing() {
         metaTitle={pageTitle}
         metaDescription={schemaDescription}
         heroTitle="The Seller's Edge: Pre-Listing Technical Audits"
-        heroSubtitle="Don't let a buyer's inspector control the deal. Find the issues first, justify your asking price, and build unconditional buyer confidence."
+        heroSubtitle={
+          <>
+            Don't let a buyer's inspector control the deal. Find the issues first, justify your asking price, and build unconditional buyer confidence.
+            <br />
+            <Link to="/services/pre-purchase" className="text-blue-600 underline">
+              Learn how a Pre-Purchase Inspection compares for buyers
+            </Link>
+            .
+          </>
+        }
         icon={Building2}
         price="ROI-Driven Packages"
         duration="2.5 - 4 Hours"
         description={
           <div className="space-y-6">
             <p className="text-lg leading-relaxed text-slate-700">
-              In a volatile market, **transparency is your greatest marketing tool.** A Pre-Listing (Seller's) Inspection identifies "deal-breaker" defects before they hit the MLS, allowing you to control the narrative and the repair costs.
+              In a volatile market, <strong>transparency is your greatest marketing tool.</strong> A Pre-Listing (Seller's) Inspection identifies "deal-breaker" defects before they hit the MLS, allowing you to control the narrative and the repair costs.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
