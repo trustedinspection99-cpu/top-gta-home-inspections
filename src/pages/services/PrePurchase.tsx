@@ -1,10 +1,11 @@
 import { Home, ShieldCheck, Zap, Droplets, Thermometer, Clock, PhoneCall } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom"; // <-- for internal links
 
 export default function PrePurchase() {
-  const pageTitle = "Pre-Purchase Home Inspection Toronto & GTA | Certified Inspectors | ASADS";
-  const schemaDescription = "Avoid costly surprises. Our pre-purchase home inspection in Toronto & GTA includes thermal imaging, detailed reports, and expert analysis for houses, condos, and townhouses.";
+  const pageTitle = "Expert Pre-Purchase Home Inspections Toronto & GTA | ASADS";
+  const schemaDescription = "Don't buy a money pit. GTA's most technical pre-purchase home inspection. Includes Thermal Imaging as standard, 24-hour reporting, and lifetime technical support.";
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -12,34 +13,26 @@ export default function PrePurchase() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How does ASADS detect issues that a standard home inspection misses?",
+        "name": "How does ASADS find defects that a standard visual inspection misses?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We include Infrared Thermal Imaging and moisture analysis as standard. This helps identify hidden roof leaks, insulation gaps, electrical hotspots, and other defects that are often missed in standard visual inspections."
+          "text": "While others charge extra for 'Extended' packages, we include Infrared Thermal Imaging and moisture analysis as standard. This allows us to detect hidden roof leaks, insulation gaps, and overheating electrical circuits that are invisible to the naked eye."
         }
       },
       {
         "@type": "Question",
-        "name": "Can you perform a pre-purchase inspection before my offer deadline?",
+        "name": "Can you inspect a home before my offer deadline?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Our Rapid-Response scheduling ensures same-day or next-day inspections so buyers in Toronto and the GTA can submit confident offers on time."
+          "text": "Yes. We specialize in 'Pre-Offer' inspections. With our Rapid-Response scheduling, we provide same-day or next-day appointments to ensure you can submit a confident, clean offer in the GTA's competitive market."
         }
       },
       {
         "@type": "Question",
-        "name": "What common GTA home issues are covered?",
+        "name": "Should sellers consider a pre-listing inspection?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We focus on high-liability items in Ontario, including Knob-and-Tube or Aluminum wiring, Kitec plumbing, foundation settlement on ravine lots, attic mold from poor ventilation, and condo fan coil risks."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you inspect condos, townhouses, and heritage homes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely. Our pre-purchase inspections cover single-family homes, townhouses, condos, and historic/heritage properties throughout Toronto and the GTA."
+          "text": "Sellers can also benefit from a Pre-Listing Home Inspection, which identifies issues before listing and helps set realistic expectations. Learn more at /services/pre-listing."
         }
       }
     ]
@@ -50,86 +43,98 @@ export default function PrePurchase() {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={schemaDescription} />
-        <link rel="canonical" href="https://asads.ca/services/pre-purchase-home-inspection" />
         <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
+          {`${JSON.stringify(faqSchema)}`}
         </script>
       </Helmet>
 
       <ServicePageTemplate
-        title="Pre-Purchase Home Inspection"
+        title="Pre-Purchase Inspection"
         metaTitle={pageTitle}
         metaDescription={schemaDescription}
-        heroTitle="Technical Pre-Purchase Inspections for Toronto & GTA"
-        heroSubtitle="Comprehensive audits for houses, condos, and townhouses. Detect hidden risks, negotiate confidently, and avoid costly surprises."
+        heroTitle="The GTA's Most Technical Pre-Purchase Audit"
+        heroSubtitle={
+          <>
+            Beyond a visual walk-through. We provide the technical evidence you need to negotiate price, reduce risk, and avoid the 'Money Pit'. 
+            <br />
+            <Link to="/services/pre-listing" className="text-blue-600 underline">
+              Sellers can also prepare their homes with a Pre-Listing Inspection
+            </Link>
+            .
+          </>
+        }
         icon={Home}
         price="All-Inclusive Technical Audit"
         duration="2.5 - 4 Hours"
         description={
           <div className="space-y-6">
             <p className="text-lg leading-relaxed text-slate-700">
-              In Toronto’s competitive real estate market, a standard home inspection can miss critical defects. Our <strong>pre-purchase inspection in Toronto & GTA</strong> identifies high-risk issues including Knob-and-Tube wiring, Kitec plumbing, foundation settlement, HVAC life-cycle problems, roof leaks, and attic mold before you commit.
+              In Toronto’s aggressive real estate market, a "standard" home inspection is a liability. 
+              You need a <strong>Technical Audit</strong> that identifies high-cost issues like 
+              Knob-and-Tube wiring, foundation scouring, and HVAC life-cycles before you commit.
             </p>
-
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
               <div className="flex flex-col items-center text-center p-4 bg-blue-50 rounded-xl border border-blue-100 shadow-sm">
                 <Thermometer className="text-blue-600 mb-2" size={32} />
-                <h4 className="font-bold text-blue-900">Thermal Imaging</h4>
-                <p className="text-xs text-blue-800">Included on every inspection to detect hidden moisture, insulation gaps, and leaks.</p>
+                <h4 className="font-bold text-blue-900">Thermal Scan</h4>
+                <p className="text-xs text-blue-800">Standard on every audit to find hidden moisture.</p>
               </div>
               <div className="flex flex-col items-center text-center p-4 bg-amber-50 rounded-xl border border-amber-100 shadow-sm">
                 <Clock className="text-amber-600 mb-2" size={32} />
-                <h4 className="font-bold text-amber-900">Same-Day PDF Reports</h4>
-                <p className="text-xs text-amber-800">Rapid delivery so you can submit offers confidently.</p>
+                <h4 className="font-bold text-amber-900">Same-Day PDF</h4>
+                <p className="text-xs text-amber-800">Digital reports delivered within hours of inspection.</p>
               </div>
               <div className="flex flex-col items-center text-center p-4 bg-green-50 rounded-xl border border-green-100 shadow-sm">
                 <PhoneCall className="text-green-600 mb-2" size={32} />
                 <h4 className="font-bold text-green-900">Lifetime Support</h4>
-                <p className="text-xs text-green-800">Phone & email assistance for as long as you own the home.</p>
+                <p className="text-xs text-green-800">Phone & email support for as long as you own the home.</p>
               </div>
             </div>
 
             <p>
-              Our certified Master Inspectors use <strong>FLIR High-Resolution Thermal Imaging</strong> and advanced moisture detection to uncover hidden defects in roofs, attics, basements, and electrical systems—empowering you with negotiation-ready knowledge.
+              Our Master Inspectors utilize <strong>FLIR High-Resolution Imaging</strong> to verify 
+              the "unseen" components of the home—detecting active leaks behind finished 
+              basements and insulation bypasses in attics.
             </p>
           </div>
         }
         whatWeInspect={[
-          "Full Structural & Foundation Review",
-          "Advanced Electrical Audit (Knob/Tube & Aluminum Wiring)",
-          "HVAC Performance & Life Expectancy Analysis",
-          "Roof, Flashings & Attic Moisture Detection",
+          "Full Structural Integrity & Foundation Review",
+          "Advanced Electrical Audit (Aluminum & Knob/Tube focus)",
+          "HVAC Performance & Estimated Life Expectancy",
+          "Roofing, Flashings & Attic Moisture Detection",
           "Plumbing, Drainage & Recalled Pipe Identification",
-          "Building Envelope & Grading Assessment",
-          "Thermal Imaging & Moisture Scanning",
-          "Basement Leak & Mold Spore Risk Analysis",
+          "Building Envelope & Grading Analysis",
+          "Thermal Imaging & Moisture Analysis (Included)",
+          "Basement Leak & Mold Spore Risk Assessment",
         ]}
         features={[
           {
             title: "InterNACHI Master Certified",
-            description: "Highest standards in North American home inspections."
+            description: "Operating at the highest tier of North American inspection standards."
           },
           {
             title: "Thermal Imaging Included",
-            description: "Detects hidden leaks, insulation gaps, and moisture issues without extra cost."
+            description: "Unlike 'Essential' packages elsewhere, we include full thermography as standard to ensure no hidden leaks go unnoticed."
           },
           {
             title: "Negotiation-Ready Reports",
-            description: "Detailed repair cost guidance for price negotiations and offer confidence."
+            description: "Our reports prioritize major defects with repair cost guides, giving you the leverage to ask for price reductions."
           },
           {
             title: "Appliance & HVAC Recall Checks",
-            description: "We verify all major appliances and mechanical systems for recalls and safety issues."
+            description: "We verify every major appliance and mechanical unit for manufacturer safety recalls."
           },
         ]}
         benefits={[
-          "Rapid 24-Hour Scheduling for Pre-Offers",
-          "Same-Day Digital Reports",
-          "Thermal Imaging & Moisture Analysis Included",
-          "Lifetime Technical Support",
-          "Comprehensive Repair & Maintenance Cost Guide",
-          "Unbiased 3rd Party Inspection",
-          "E&O & General Liability Insured",
+          "Priority 24-Hour Scheduling for Pre-Offers",
+          "Same-Day High-Resolution PDF Reports",
+          "Thermal Imaging & Moisture Scanning Included",
+          "Lifetime Technical Support via Phone/Email",
+          "Detailed Repair & Maintenance Cost Guide",
+          "Unbiased 3rd Party Independent Evaluation",
+          "E&O and General Liability Insured",
           "Seasonal Maintenance Checklist Included",
         ]}
         faqs={faqSchema.mainEntity.map(f => ({
@@ -140,7 +145,7 @@ export default function PrePurchase() {
           { title: "Sewer Scope Inspection", href: "/services/sewer-scope" },
           { title: "Condo Inspection", href: "/services/condo" },
           { title: "Mold Testing", href: "/services/mold-testing" },
-          { title: "Tarion Warranty", href: "/services/tarion-warranty" },
+          { title: "Pre-Listing Inspection", href: "/services/pre-listing" },
         ]}
       />
     </>
