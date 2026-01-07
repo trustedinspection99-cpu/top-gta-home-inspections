@@ -1,105 +1,146 @@
-import { Home } from "lucide-react";
+import { Home, ShieldCheck, Zap, Droplets, Thermometer, Clock, PhoneCall } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
+import { Helmet } from "react-helmet-async";
 
 export default function PrePurchase() {
-  return (
-    <ServicePageTemplate
-      title="Pre-Purchase Inspection"
-      metaTitle="Pre-Purchase Home Inspection Ontario | Same-Day Report"
-      metaDescription="Buying a home? Our certified inspectors find hidden defects with thermal imaging. Get your detailed report delivered the same day."
-      heroTitle="Pre-Purchase Home Inspection in Ontario"
-      heroSubtitle="Make informed buying decisions with a comprehensive property evaluation. Identify issues before you buy and negotiate with confidence."
-      icon={Home}
-      price="From $399"
-      duration="2-4 hours"
-      description={
-        <div className="space-y-4">
-          <p>
-            A pre-purchase home inspection is the most important step in the home buying process. 
-            Our certified inspectors conduct a thorough evaluation of the property's condition, 
-            identifying existing issues and potential problems that could cost you thousands of dollars.
-          </p>
-          <p>
-            We examine over 200 components of the home, from the foundation to the roof, 
-            providing you with a detailed report that includes photos, descriptions, and 
-            recommendations. This information empowers you to make an informed decision about 
-            your purchase and negotiate repairs or price adjustments with the seller.
-          </p>
-          <p>
-            Our inspectors are InterNACHI certified and have years of experience in residential 
-            construction. We use the latest technology including thermal imaging cameras to 
-            detect hidden issues that aren't visible to the naked eye.
-          </p>
-        </div>
+  const pageTitle = "Expert Pre-Purchase Home Inspections Toronto & GTA | ASADS";
+  const schemaDescription = "Don't buy a money pit. GTA's most technical pre-purchase home inspection. Includes Thermal Imaging as standard, 24-hour reporting, and lifetime technical support.";
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does ASADS find defects that a standard visual inspection misses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While others charge extra for 'Extended' packages, we include Infrared Thermal Imaging and moisture analysis as standard. This allows us to detect hidden roof leaks, insulation gaps, and overheating electrical circuits that are invisible to the naked eye."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you inspect a home before my offer deadline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We specialize in 'Pre-Offer' inspections. With our Rapid-Response scheduling, we provide same-day or next-day appointments to ensure you can submit a confident, clean offer in the GTA's competitive market."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What specific GTA issues do you look for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We focus on high-liability items common in Ontario, including Knob-and-Tube or Aluminum wiring, Kitec plumbing, foundation settlement on ravine lots, and attic mold caused by poor ventilation."
+        }
       }
-      whatWeInspect={[
-        "Foundation and structural components",
-        "Roof, gutters, and downspouts",
-        "Exterior siding and trim",
-        "Windows and doors",
-        "Electrical system and panel",
-        "Plumbing system and fixtures",
-        "HVAC systems",
-        "Attic insulation and ventilation",
-        "Basement and crawl spaces",
-        "Kitchen appliances",
-        "Bathroom fixtures and ventilation",
-        "Garage and attached structures",
-        "Grading and drainage",
-        "Decks, patios, and walkways",
-      ]}
-      features={[
-        {
-          title: "200+ Point Inspection",
-          description: "Our comprehensive checklist covers every major system and component of the home, ensuring nothing is overlooked during the evaluation."
-        },
-        {
-          title: "Same-Day Digital Report",
-          description: "Receive your detailed inspection report within 24 hours, complete with photos, descriptions, and prioritized recommendations."
-        },
-        {
-          title: "Thermal Imaging Included",
-          description: "We use infrared cameras to detect hidden moisture, insulation gaps, and electrical hot spots that aren't visible to the naked eye."
-        },
-        {
-          title: "On-Site Consultation",
-          description: "Walk through the property with our inspector as they explain findings in real-time. Ask questions and understand the home's condition."
-        },
-      ]}
-      benefits={[
-        "InterNACHI certified inspectors",
-        "Same-day report delivery",
-        "Thermal imaging included",
-        "100% satisfaction guarantee",
-        "Weekend and evening availability",
-        "Detailed repair cost estimates",
-        "Phone support after inspection",
-        "Client attends inspection",
-      ]}
-      faqs={[
-        {
-          question: "How long does a pre-purchase inspection take?",
-          answer: "A typical home inspection takes 2-4 hours depending on the size and age of the property. Larger homes or homes with more issues may take longer."
-        },
-        {
-          question: "Should I attend the inspection?",
-          answer: "Yes! We encourage all buyers to attend the last hour of the inspection. This allows you to see any issues firsthand and ask questions about the property."
-        },
-        {
-          question: "What if the inspection reveals problems?",
-          answer: "Finding problems is exactly why you get an inspection. You can use the report to negotiate repairs with the seller, ask for a price reduction, or in some cases, walk away from the deal."
-        },
-        {
-          question: "How soon can you inspect my property?",
-          answer: "We offer same-day and next-day appointments when available. During busy periods, we recommend booking 2-3 days in advance."
-        },
-      ]}
-      relatedServices={[
-        { title: "Pre-Listing Inspection", href: "/services/pre-listing" },
-        { title: "Condo Inspection", href: "/services/condo" },
-        { title: "Radon Testing", href: "/services/radon-testing" },
-        { title: "Mold Inspection", href: "/services/mold-inspection" },
-      ]}
-    />
+    ]
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={schemaDescription} />
+        {/* Fixed JSON-LD injection to prevent white screen */}
+        <script type="application/ld+json">
+          {`
+            ${JSON.stringify(faqSchema)}
+          `}
+        </script>
+      </Helmet>
+
+      <ServicePageTemplate
+        title="Pre-Purchase Inspection"
+        metaTitle={pageTitle}
+        metaDescription={schemaDescription}
+        heroTitle="The GTA's Most Technical Pre-Purchase Audit"
+        heroSubtitle="Beyond a visual walk-through. We provide the technical evidence you need to negotiate price, reduce risk, and avoid the 'Money Pit'."
+        icon={Home}
+        price="All-Inclusive Technical Audit"
+        duration="2.5 - 4 Hours"
+        description={
+          <div className="space-y-6">
+            <p className="text-lg leading-relaxed text-slate-700">
+              In Toronto’s aggressive real estate market, a "standard" home inspection is a liability. 
+              You need a <strong>Technical Audit</strong> that identifies high-cost issues like 
+              Knob-and-Tube wiring, foundation scouring, and HVAC life-cycles before you commit.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+              <div className="flex flex-col items-center text-center p-4 bg-blue-50 rounded-xl border border-blue-100 shadow-sm">
+                <Thermometer className="text-blue-600 mb-2" size={32} />
+                <h4 className="font-bold text-blue-900">Thermal Scan</h4>
+                <p className="text-xs text-blue-800">Standard on every audit to find hidden moisture.</p>
+              </div>
+              <div className="flex flex-col items-center text-center p-4 bg-amber-50 rounded-xl border border-amber-100 shadow-sm">
+                <Clock className="text-amber-600 mb-2" size={32} />
+                <h4 className="font-bold text-amber-900">Same-Day PDF</h4>
+                <p className="text-xs text-amber-800">Digital reports delivered within hours of inspection.</p>
+              </div>
+              <div className="flex flex-col items-center text-center p-4 bg-green-50 rounded-xl border border-green-100 shadow-sm">
+                <PhoneCall className="text-green-600 mb-2" size={32} />
+                <h4 className="font-bold text-green-900">Lifetime Support</h4>
+                <p className="text-xs text-green-800">Phone & email support for as long as you own the home.</p>
+              </div>
+            </div>
+
+            <p>
+              Our Master Inspectors utilize <strong>FLIR High-Resolution Imaging</strong> to verify 
+              the "unseen" components of the home—detecting active leaks behind finished 
+              basements and insulation bypasses in attics.
+            </p>
+          </div>
+        }
+        whatWeInspect={[
+          "Full Structural Integrity & Foundation Review",
+          "Advanced Electrical Audit (Aluminum & Knob/Tube focus)",
+          "HVAC Performance & Estimated Life Expectancy",
+          "Roofing, Flashings & Attic Moisture Detection",
+          "Plumbing, Drainage & Recalled Pipe Identification",
+          "Building Envelope & Grading Analysis",
+          "Thermal Imaging & Moisture Analysis (Included)",
+          "Basement Leak & Mold Spore Risk Assessment",
+        ]}
+        features={[
+          {
+            title: "InterNACHI Master Certified",
+            description: "Operating at the highest tier of North American inspection standards."
+          },
+          {
+            title: "Thermal Imaging Included",
+            description: "Unlike 'Essential' packages elsewhere, we include full thermography as standard to ensure no hidden leaks go unnoticed."
+          },
+          {
+            title: "Negotiation-Ready Reports",
+            description: "Our reports prioritize major defects with repair cost guides, giving you the leverage to ask for price reductions."
+          },
+          {
+            title: "Appliance & HVAC Recall Checks",
+            description: "We verify every major appliance and mechanical unit for manufacturer safety recalls."
+          },
+        ]}
+        benefits={[
+          "Priority 24-Hour Scheduling for Pre-Offers",
+          "Same-Day High-Resolution PDF Reports",
+          "Thermal Imaging & Moisture Scanning Included",
+          "Lifetime Technical Support via Phone/Email",
+          "Detailed Repair & Maintenance Cost Guide",
+          "Unbiased 3rd Party Independent Evaluation",
+          "E&O and General Liability Insured",
+          "Seasonal Maintenance Checklist Included",
+        ]}
+        faqs={faqSchema.mainEntity.map(f => ({
+          question: f.name,
+          answer: f.acceptedAnswer.text
+        }))}
+        relatedServices={[
+          { title: "Sewer Scope Inspection", href: "/services/sewer-scope" },
+          { title: "Condo Inspection", href: "/services/condo" },
+          { title: "Mold Testing", href: "/services/mold-testing" },
+          { title: "Tarion Warranty", href: "/services/tarion-warranty" },
+        ]}
+      />
+    </>
   );
 }
