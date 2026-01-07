@@ -189,6 +189,21 @@ export function Layout({ children }: LayoutProps) {
         <Breadcrumbs />
         <main className="flex-1">{children}</main>
         <Footer />
+        <div className="flex min-h-screen flex-col">
+  <Header />
+  <Breadcrumbs />
+  <main className="flex-1">{children}</main>
+  <Footer />
+
+  {/* Floating Call Button */}
+  <a
+    href="tel:6478019311"
+    className="fixed bottom-5 right-5 z-50 flex items-center justify-center rounded-full bg-blue-600 p-4 shadow-lg transition hover:bg-blue-700"
+    aria-label="Call ASADS Home Inspection"
+  >
+    📞
+  </a>
+</div>
       </div>
     </>
   );
