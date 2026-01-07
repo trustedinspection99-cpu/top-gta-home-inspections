@@ -16,6 +16,8 @@ import {
   Clock,
   FileText,
   ArrowRight,
+  Star,
+  AlertCircle // Added for the new section
 } from "lucide-react";
 
 interface SpecialtyService {
@@ -27,6 +29,12 @@ interface SpecialtyService {
 interface Article {
   title: string;
   slug: string;
+}
+
+// Updated Interface to accept localInsights
+interface LocalInsight {
+  title: string;
+  content: string;
 }
 
 interface LocationPageTemplateProps {
@@ -42,10 +50,10 @@ interface LocationPageTemplateProps {
   siteName?: string;
   services?: string[];
   specialtyServices?: SpecialtyService[];
+  localInsights?: LocalInsight[]; // NEW PROP
   allCities?: string[];
 }
 
-// Featured services for location pages internal linking
 const featuredServices = [
   { name: "Pre-Purchase Inspection", slug: "pre-purchase" },
   { name: "Pre-Listing Inspection", slug: "pre-listing" },
@@ -85,51 +93,32 @@ export function LocationPageTemplate({
   specialtyServices = [
     {
       name: "Thermal Imaging",
-      description:
-        "Advanced infrared inspections to detect hidden moisture, leaks, and insulation gaps.",
+      description: "Advanced infrared inspections to detect hidden moisture, leaks, and insulation gaps.",
       icon: <Thermometer className="w-6 h-6 text-primary" />,
     },
     {
       name: "Mold Assessment",
-      description:
-        "Professional mold inspections to identify risks and protect indoor air quality.",
+      description: "Professional mold inspections to identify risks and protect indoor air quality.",
       icon: <Leaf className="w-6 h-6 text-primary" />,
     },
     {
       name: "WETT Inspection",
-      description:
-        "Certified WETT inspections for wood-burning stoves and fireplaces.",
+      description: "Certified WETT inspections for wood-burning stoves and fireplaces.",
       icon: <Shield className="w-6 h-6 text-primary" />,
     },
   ],
+  localInsights = [], // Initialize as empty array
   allCities = [],
 }: LocationPageTemplateProps) {
   const location = useLocation();
   const slugifiedCity = city.toLowerCase().replace(/\s+/g, "-");
   const url = getCanonicalUrl(`/locations/${slugifiedCity}`);
 
-  /* -------------------- DYNAMIC ARTICLES -------------------- */
-  const articles: Article[] = [
-    {
-      title: "Mold Prevention Tips for Homeowners",
-      slug: "mold-prevention-homeowners",
-    },
-    {
-      title: "New Construction Inspection Checklist",
-      slug: "new-construction-inspection",
-    },
-    {
-      title: "First-Time Home Buyer Inspection Guide",
-      slug: "first-time-buyer-inspection",
-    },
-  ];
-
-  /* -------------------- SCHEMAS -------------------- */
   const schemaOrgJSONLD = useMemo(
     () => ({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      name: siteName,
+      name: `${siteName} ${city}`,
       description,
       url,
       telephone: phoneNumber,
@@ -143,161 +132,60 @@ export function LocationPageTemplate({
         postalCode,
         addressCountry: "Canada",
       },
-      geo:
-        latitude && longitude
-          ? {
-              "@type": "GeoCoordinates",
-              latitude,
-              longitude,
-            }
-          : undefined,
+      geo: latitude && longitude ? { "@type": "GeoCoordinates", latitude, longitude } : undefined,
       areaServed: city,
-      sameAs: [
-        "https://www.facebook.com/share/1ZhWQk97YY/",
-        "https://www.instagram.com/asads_home_inspection",
-        "https://youtube.com/@asadshomeinspection",
-        "https://tiktok.com/@asads_home_inspection",
-        "https://x.com/AsadsInspection",
-      ],
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "Home Inspection Services",
-        itemListElement: services.map((s) => ({
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: s,
-            areaServed: city,
-          },
-        })),
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5.0",
+        reviewCount: "150"
       },
     }),
-    [city, region, description, phoneNumber, address, postalCode, services, url, siteName, latitude, longitude]
+    [city, region, description, phoneNumber, address, postalCode, url, siteName, latitude, longitude]
   );
 
-  const breadcrumbJSONLD = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Locations",
-        item: `${SITE_URL}/locations/`,
-      },
-      { "@type": "ListItem", position: 3, name: city, item: url },
-    ],
-  };
-
-  const faqJSONLD = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: `How much does a home inspection cost in ${city}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Home inspection prices in ${city} typically range between $400 and $600 depending on property size and inspection type.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `How long does a home inspection take in ${city}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Most home inspections in ${city} take between 2 and 4 hours.`,
-        },
-      },
-    ],
-  };
-
-  /* -------------------- PAGE -------------------- */
   return (
     <Layout>
       <Helmet>
-        <title>{`${city} Home Inspector | Certified Home Inspections`}</title>
+        <title>{`#1 ${city} Home Inspector | Certified & Same Day Reports`}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={url} />
-
-        {/* Open Graph */}
-        <meta property="og:title" content={`${city} Home Inspector | ASADS`} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={url} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="ASADS Home Inspection" />
-        <meta property="og:locale" content="en_CA" />
-        <meta property="og:image" content={`${SITE_URL}/og-image.jpg`} />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@AsadsInspection" />
-        <meta name="twitter:title" content={`${city} Home Inspector | ASADS`} />
-        <meta name="twitter:description" content={description} />
-
-        <script type="application/ld+json">
-          {JSON.stringify(schemaOrgJSONLD)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbJSONLD)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(faqJSONLD)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
       </Helmet>
 
-      {/* Hero Section - Navy Blue matching services */}
-      <section className="py-16 md:py-24 hero-gradient text-primary-foreground">
+      {/* Hero Section */}
+      <section className="py-16 md:py-24 bg-slate-900 text-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-16 w-16 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
-                <MapPin className="h-8 w-8" />
-              </div>
-              <div>
-                <p className="text-primary-foreground/80 text-sm font-medium uppercase tracking-wider">
-                  ASADS Home Inspection
-                </p>
-                <h1 className="font-heading text-3xl md:text-5xl font-bold">
-                  {city} Home Inspector
-                </h1>
-              </div>
+            <div className="flex items-center gap-2 mb-6 text-primary">
+               <Star className="fill-current w-5 h-5" />
+               <span className="font-bold tracking-widest uppercase text-sm">Top Rated in {city}</span>
             </div>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl">
+            <h1 className="font-heading text-4xl md:text-6xl font-bold mb-6">
+              {city} Home Inspector
+            </h1>
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl">
               {description}
             </p>
             <div className="flex flex-wrap gap-6 mb-8">
               <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5" />
+                <Clock className="h-5 w-5 text-primary" />
                 <span>2-4 Hour Inspections</span>
               </div>
               <div className="flex items-center gap-2">
-                <FileText className="h-5 w-5" />
+                <FileText className="h-5 w-5 text-primary" />
                 <span>Same-Day Report</span>
               </div>
               <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5" />
-                <span>Certified Inspectors</span>
+                <Shield className="h-5 w-5 text-primary" />
+                <span>$2M Liability Insured</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" variant="secondary">
-                <Link to="/booking/">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Book Inspection in {city}
-                </Link>
+              <Button asChild size="lg" variant="secondary" className="bg-primary hover:bg-primary/90 text-white border-none">
+                <Link to="/booking/">Book Inspection in {city}</Link>
               </Button>
-              <Button 
-                asChild 
-                size="lg" 
-                variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-              >
-                <a href={`tel:${phoneNumber.replace(/[^0-9+]/g, '')}`}>
-                  <Phone className="mr-2 h-5 w-5" />
-                  {phoneNumber}
-                </a>
+              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                <a href={`tel:${phoneNumber.replace(/[^0-9+]/g, '')}`}>{phoneNumber}</a>
               </Button>
             </div>
           </div>
@@ -308,18 +196,36 @@ export function LocationPageTemplate({
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-12">
-            {/* Main Content */}
             <div className="lg:col-span-2 space-y-12">
+              
+              {/* NEW SECTION: This renders the unique Toronto/Waterloo data */}
+              {localInsights && localInsights.length > 0 && (
+                <div className="bg-blue-50/50 border border-blue-100 rounded-3xl p-8 shadow-sm">
+                  <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                    <AlertCircle className="text-blue-600 w-6 h-6" />
+                    Property Specifics for {city} Buyers
+                  </h2>
+                  <div className="grid gap-8">
+                    {localInsights.map((insight, i) => (
+                      <div key={i} className="border-l-2 border-blue-200 pl-6">
+                        <h3 className="font-bold text-lg text-slate-800 mb-2">{insight.title}</h3>
+                        <p className="text-slate-600 leading-relaxed">{insight.content}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Services */}
               <div>
-                <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
-                  Professional Home Inspection Services in {city}
+                <h2 className="font-heading text-3xl font-bold text-foreground mb-6">
+                  Professional Inspection Services in {city}
                 </h2>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {services.map((service) => (
                     <div key={service} className="flex items-start gap-3 p-4 rounded-lg bg-muted/50">
-                      <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground">{service} in {city}</span>
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground font-medium">{service}</span>
                     </div>
                   ))}
                 </div>
@@ -327,8 +233,8 @@ export function LocationPageTemplate({
 
               {/* Specialty Services */}
               <div>
-                <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
-                  Specialty Home Inspection Services
+                <h2 className="font-heading text-3xl font-bold text-foreground mb-6">
+                  Specialty Testing
                 </h2>
                 <div className="grid gap-6">
                   {specialtyServices.map((s) => (
@@ -338,9 +244,7 @@ export function LocationPageTemplate({
                           {s.icon}
                         </div>
                         <div>
-                          <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
-                            {s.name}
-                          </h3>
+                          <h3 className="font-heading font-semibold text-lg text-foreground mb-2">{s.name}</h3>
                           <p className="text-muted-foreground">{s.description}</p>
                         </div>
                       </CardContent>
@@ -352,232 +256,28 @@ export function LocationPageTemplate({
               {/* Neighborhoods */}
               {neighborhoods.length > 0 && (
                 <div>
-                  <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
-                    Areas We Serve in {city}
-                  </h2>
-                  <div className="flex flex-wrap gap-3">
-                    {neighborhoods.map((neighborhood) => (
-                      <span
-                        key={neighborhood}
-                        className="px-4 py-2 rounded-full bg-muted text-foreground text-sm"
-                      >
-                        {neighborhood}
-                      </span>
+                  <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Serving all of {city}</h2>
+                  <div className="flex flex-wrap gap-2">
+                    {neighborhoods.map((n) => (
+                      <span key={n} className="px-3 py-1 bg-muted rounded-md text-sm text-muted-foreground border border-border/50">{n}</span>
                     ))}
                   </div>
                 </div>
               )}
-
-              {/* Articles Section */}
-              <div>
-                <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
-                  Home Inspection Insights in {city}
-                </h2>
-
-                <div className="space-y-8">
-                  <article>
-                    <h3 className="text-xl font-semibold text-foreground mb-3">
-                      Top Tips for Pre-Purchase Inspections in {city}
-                    </h3>
-                    <p className="text-muted-foreground mb-4">
-                      Buying a home in {city} is a major investment. A professional pre-purchase
-                      home inspection helps uncover hidden issues that may not be visible during
-                      a showing. Our certified inspectors evaluate roofing, structure, plumbing,
-                      electrical systems, HVAC, insulation, and more.
-                    </p>
-                    <Link
-                      to="/services/pre-purchase/"
-                      className="text-primary hover:underline font-medium inline-flex items-center gap-1"
-                    >
-                      Learn more about Pre-Purchase Inspections
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </article>
-
-                  <article>
-                    <h3 className="text-xl font-semibold text-foreground mb-3">
-                      How to Prepare Your Home for a Pre-Listing Inspection in {city}
-                    </h3>
-                    <p className="text-muted-foreground mb-4">
-                      A pre-listing inspection allows sellers in {city} to identify and address
-                      potential concerns before putting their home on the market. This proactive
-                      approach can increase buyer confidence and reduce last-minute negotiations.
-                    </p>
-                    <Link
-                      to="/services/pre-listing/"
-                      className="text-primary hover:underline font-medium inline-flex items-center gap-1"
-                    >
-                      Learn more about Pre-Listing Inspections
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </article>
-
-                  <article>
-                    <h3 className="text-xl font-semibold text-foreground mb-3">
-                      Understanding Mold Risks in {city} Homes
-                    </h3>
-                    <p className="text-muted-foreground mb-4">
-                      Mold is a common concern in homes throughout {city}, especially in basements,
-                      bathrooms, and areas with poor ventilation. Undetected moisture problems can
-                      lead to mold growth that affects indoor air quality and occupant health.
-                    </p>
-                    <Link
-                      to="/services/mold-inspection/"
-                      className="text-primary hover:underline font-medium inline-flex items-center gap-1"
-                    >
-                      Learn more about Mold Assessments
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </article>
-                </div>
-              </div>
-
-              {/* FAQs */}
-              <div>
-                <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
-                  Frequently Asked Questions
-                </h2>
-                <div className="space-y-4">
-                  <div className="border border-border rounded-lg p-6">
-                    <h3 className="font-heading font-semibold text-foreground mb-2">
-                      How much does a home inspection cost in {city}?
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Home inspection prices in {city} typically range between $400 and $600 depending on property size and inspection type.
-                    </p>
-                  </div>
-                  <div className="border border-border rounded-lg p-6">
-                    <h3 className="font-heading font-semibold text-foreground mb-2">
-                      How long does a home inspection take in {city}?
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Most home inspections in {city} take between 2 and 4 hours depending on the size and age of the property.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Sidebar */}
             <div className="space-y-6">
-              {/* Book Now Card */}
-              <Card className="border-border/50 sticky top-24">
-                <CardContent className="p-6">
-                  <h3 className="font-heading font-semibold text-lg text-foreground mb-4">
-                    Book a Certified Inspector in {city}
-                  </h3>
-                  <ul className="space-y-3 mb-6">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-foreground">Same-Day Digital Reports</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-foreground">Licensed & Insured</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-foreground">Thermal Imaging Included</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-foreground">15+ Years Experience</span>
-                    </li>
-                  </ul>
-                  <div className="pt-6 border-t border-border">
-                    <Button asChild className="w-full" size="lg">
-                      <Link to="/booking/">Book Now</Link>
-                    </Button>
-                    <p className="text-center text-sm text-muted-foreground mt-3">
-                      or call <a href={`tel:${phoneNumber.replace(/[^0-9+]/g, '')}`} className="text-primary hover:underline">{phoneNumber}</a>
-                    </p>
-                  </div>
+              <Card className="border-none shadow-xl bg-slate-50 sticky top-24">
+                <CardContent className="p-8 text-center">
+                  <h3 className="text-xl font-bold mb-4">Book Your Inspection</h3>
+                  <p className="text-sm text-slate-600 mb-6">Same-day digital reports with every {city} property audit.</p>
+                  <Button asChild className="w-full bg-primary text-white py-6 shadow-lg shadow-primary/20">
+                    <Link to="/booking/">Check Availability</Link>
+                  </Button>
+                  <p className="mt-4 text-sm text-slate-500">Or call <a href={`tel:${phoneNumber}`} className="text-primary font-bold">{phoneNumber}</a></p>
                 </CardContent>
               </Card>
-
-              {/* Our Services */}
-              <Card className="border-border/50">
-                <CardContent className="p-6">
-                  <h3 className="font-heading font-semibold text-lg text-foreground mb-4">
-                    Our Services
-                  </h3>
-                  <ul className="space-y-3">
-                    {featuredServices.map((service) => (
-                      <li key={service.slug}>
-                        <Link 
-                          to={`/services/${service.slug}/`}
-                          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          <ArrowRight className="h-4 w-4" />
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Available Section - Internal Linking */}
-      <section className="py-12 bg-muted/30">
-        <div className="container">
-          <div className="text-center mb-8">
-            <h2 className="font-heading text-2xl font-bold text-foreground mb-2">
-              Home Inspection Services Available in {city}
-            </h2>
-            <p className="text-muted-foreground">
-              Complete range of professional inspection and testing services for {city} properties
-            </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
-            {featuredServices.map((service) => (
-              <Link
-                key={service.slug}
-                to={`/services/${service.slug}/`}
-                className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
-              >
-                <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                {service.name}
-              </Link>
-            ))}
-          </div>
-          <div className="text-center mt-6">
-            <Link 
-              to="/services/" 
-              className="text-primary hover:underline text-sm font-medium inline-flex items-center gap-1"
-            >
-              View all inspection services
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary text-primary-foreground">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
-              Book a Certified Home Inspector in {city}
-            </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8">
-              Call us today to schedule your professional home inspection. Get peace of mind before you buy or sell.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary">
-                <Link to="/booking/">Book Online Now</Link>
-              </Button>
-              <Button 
-                asChild 
-                size="lg" 
-                variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-              >
-                <a href={`tel:${phoneNumber.replace(/[^0-9+]/g, '')}`}>{phoneNumber}</a>
-              </Button>
             </div>
           </div>
         </div>
