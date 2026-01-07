@@ -5,7 +5,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import Breadcrumbs from "./Breadcrumbs";
 import { SITE_URL } from "@/lib/seo";
-
+import FloatingCallButton from "@/components/FloatingCallButton";
 interface LayoutProps {
   children: ReactNode;
 }
