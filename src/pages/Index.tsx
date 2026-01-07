@@ -4,6 +4,7 @@ import { TrustBadges } from "@/components/home/TrustBadges";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { CTASection } from "@/components/home/CTASection";
 import { SITE_URL } from "@/lib/seo";
+import { CheckCircle2, Shield, Clock, MapPin } from "lucide-react";
 
 // Homepage FAQ schema
 const homepageFaqs = [
@@ -29,11 +30,11 @@ const homepageFaqs = [
   },
   {
     question: "How long does a home inspection take?",
-    answer: "Typically 2 hours depending on property size and age.",
+    answer: "Typically 2 to 3 hours depending on property size and age.",
   },
   {
     question: "How to schedule an inspection?",
-    answer: "Book online at asads.ca/booking or call (647) 801-9311.",
+    answer: "Book online at asads.ca/booking/ or call (647) 801-9311.",
   },
 ];
 
@@ -41,40 +42,32 @@ const homepageFaqs = [
 const servicesSchema = [
   {
     name: "Pre-Purchase Inspection",
-    description:
-      "Complete evaluation before you buy. Identify issues and negotiate with confidence.",
-    url: `${SITE_URL}/services/pre-purchase`,
-    canonicalUrl: `${SITE_URL}/services/pre-purchase-inspection/`,
+    description: "Complete evaluation before you buy. Identify issues and negotiate with confidence.",
+    url: `${SITE_URL}/services/pre-purchase/`,
   },
   {
     name: "Pre-Listing Inspection",
-    description:
-      "Sell your home faster with a pre-listing inspection that builds buyer trust.",
-    url: `${SITE_URL}/services/pre-listing`,
-    canonicalUrl: `${SITE_URL}/services/pre-listing-inspection/`,
+    description: "Sell your home faster with a pre-listing inspection that builds buyer trust.",
+    url: `${SITE_URL}/services/pre-listing/`,
   },
   {
     name: "New Construction",
-    description:
-      "Verify builder quality and catch defects before your final walkthrough.",
+    description: "Verify builder quality and catch defects before your final walkthrough.",
     url: `${SITE_URL}/services/new-construction/`,
   },
   {
     name: "Condo Inspection",
-    description:
-      "Specialized inspections for condos, townhomes, and stacked units.",
-    url: `${SITE_URL}/services/condo`,
+    description: "Specialized inspections for condos, townhomes, and stacked units.",
+    url: `${SITE_URL}/services/condo/`,
   },
   {
     name: "Commercial Inspection",
-    description:
-      "Comprehensive assessments for commercial and investment properties.",
-    url: `${SITE_URL}/services/commercial`,
+    description: "Comprehensive assessments for commercial and investment properties.",
+    url: `${SITE_URL}/services/commercial/`,
   },
   {
     name: "Specialty Services",
-    description:
-      "Radon Testing, Mold Inspection, Thermal Imaging, Air Quality Testing, WETT Inspection, Asbestos Testing, Lead Paint Testing, Well Water Testing, Sewer Scope",
+    description: "Radon Testing, Mold Inspection, Thermal Imaging, WETT Inspection, and more.",
     url: `${SITE_URL}/services/`,
   },
 ];
@@ -101,31 +94,26 @@ const servicesJsonLd = {
   })),
 };
 
-// LocalBusiness / Hero structured data
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "HomeInspector"],
   name: "ASADS Home Inspection",
   image: `${SITE_URL}/og-image.jpg`,
   url: `${SITE_URL}/`,
   telephone: "(647) 801-9311",
-  description:
-    "Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections. Protect your investment before you buy or sell.",
+  priceRange: "$$",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Toronto",
     addressRegion: "ON",
-    addressCountry: "Canada",
+    addressCountry: "CA",
   },
-  areaServed: {
-    "@type": "GeoCircle",
-    geoMidpoint: {
-      "@type": "GeoCoordinates",
-      latitude: 43.7,
-      longitude: -79.42,
-    },
-    geoRadius: 50,
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 43.7,
+    longitude: -79.42,
   },
+  areaServed: ["Toronto", "Mississauga", "Brampton", "Vaughan", "Markham", "Oakville", "Richmond Hill"],
   sameAs: [
     "https://youtube.com/@asadshomeinspection",
     "https://www.instagram.com/asads_home_inspection",
@@ -138,133 +126,159 @@ const localBusinessSchema = {
 const Index = () => {
   return (
     <Layout>
-      {/* Google Tag Manager (noscript) */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-NB43TTTB"
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        />
-      </noscript>
-
       <Helmet>
-        {/* Google Tag Manager */}
-        <script>
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-NB43TTTB');`}
-        </script>
-
-        <title>Home Inspection Toronto & GTA | Certified Inspectors | ASADS</title>
+        <title>Home Inspection Toronto & GTA | Certified Same-Day Reports | ASADS</title>
         <meta
           name="description"
-          content="Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections, 15+ years experience. Book online or call (647) 801-9311."
+          content="Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections, 15+ years experience. Specialized in Pre-purchase, Mold & WETT. Call (647) 801-9311."
         />
         <link rel="canonical" href={`${SITE_URL}/`} />
 
-        {/* Open Graph */}
+        {/* Social Meta */}
         <meta property="og:title" content="Home Inspection Toronto & GTA | ASADS" />
-        <meta
-          property="og:description"
-          content="Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections. Book online or call (647) 801-9311."
-        />
+        <meta property="og:description" content="Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections. Call (647) 801-9311." />
         <meta property="og:url" content={`${SITE_URL}/`} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="ASADS Home Inspection" />
-        <meta property="og:locale" content="en_CA" />
         <meta property="og:image" content={`${SITE_URL}/og-image.jpg`} />
 
-        {/* Twitter/X Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@AsadsInspection" />
-        <meta name="twitter:title" content="Home Inspection Toronto & GTA | ASADS" />
-        <meta
-          name="twitter:description"
-          content="Certified home inspections in Toronto & the GTA. Same-day reports, 200+ point inspections."
-        />
-        <meta name="twitter:image" content={`${SITE_URL}/og-image.jpg`} />
-
-        {/* JSON-LD */}
+        {/* JSON-LD Schema */}
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(servicesJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="hero bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-20 text-center text-white">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Protect Your Investment with Expert Home Inspections
-        </h1>
-        <p className="text-lg md:text-xl mb-6">
-          Comprehensive home inspection services throughout the Greater Toronto Area. Get detailed reports, expert insights, and peace of mind before you buy or sell.
-        </p>
-        <ul className="flex flex-wrap justify-center gap-4 text-sm md:text-base mb-6">
-          <li>✅ Certified & Insured Inspectors</li>
-          <li>✅ Same-Day Reports Available</li>
-          <li>✅ Serving All GTA Areas</li>
-          <li>✅ Book Your Inspection: (647) 801-9311</li>
-        </ul>
+      <section className="relative bg-blue-700 py-24 text-white overflow-hidden">
+        <div className="container relative z-10 mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+            Trusted Home Inspections <br /> in Toronto & The GTA
+          </h1>
+          <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90">
+            Get a 200+ point inspection with a digital same-day report. Protect your family and your investment with certified expertise.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="/booking/" className="bg-white text-blue-700 px-8 py-4 rounded-md font-bold text-lg hover:bg-gray-100 transition-all">
+              Book Your Inspection
+            </a>
+            <a href="tel:6478019311" className="bg-transparent border-2 border-white px-8 py-4 rounded-md font-bold text-lg hover:bg-white/10 transition-all">
+              Call (647) 801-9311
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* Stats Section */}
-      <section className="stats py-12 text-center bg-gray-50">
-        <h2 className="text-3xl font-bold mb-6">Our Stats</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div>
-            <h3 className="text-2xl font-bold">2,000+</h3>
-            <p>Inspections Completed</p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold">10+</h3>
-            <p>Years Experience</p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold">98%</h3>
-            <p>Client Satisfaction</p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold">24hr</h3>
-            <p>Report Delivery</p>
+      <section className="py-12 bg-white border-b">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <p className="text-4xl font-extrabold text-blue-600">2,000+</p>
+              <p className="text-gray-600 font-medium">Inspections Done</p>
+            </div>
+            <div>
+              <p className="text-4xl font-extrabold text-blue-600">15+</p>
+              <p className="text-gray-600 font-medium">Years Experience</p>
+            </div>
+            <div>
+              <p className="text-4xl font-extrabold text-blue-600">98%</p>
+              <p className="text-gray-600 font-medium">5-Star Reviews</p>
+            </div>
+            <div>
+              <p className="text-4xl font-extrabold text-blue-600">24hr</p>
+              <p className="text-gray-600 font-medium">Report Delivery</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Trust Badges */}
       <TrustBadges />
 
-      {/* Services Section */}
-      <section className="services py-16">
-        <h2 className="text-3xl font-bold mb-8 text-center">Comprehensive Inspection Services</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {servicesSchema.map((service) => (
-            <a
-              key={service.name}
-              href={service.url}
-              className="block border rounded-lg p-6 hover:bg-blue-50 hover:shadow-lg transition-colors"
-            >
-              <h3 className="text-2xl font-semibold mb-2">{service.name}</h3>
-              <p>{service.description}</p>
-            </a>
-          ))}
+      {/* Why Choose Us */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900">Why Toronto Homeowners Trust ASADS</h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm">
+              <Shield className="h-12 w-12 text-blue-600 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Certified & Insured</h3>
+              <p className="text-gray-600">InterNACHI certified inspectors carrying full errors and omissions insurance for your protection.</p>
+            </div>
+            <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm">
+              <Clock className="h-12 w-12 text-blue-600 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Same-Day Reports</h3>
+              <p className="text-gray-600">Our digital reports are delivered within 24 hours, featuring high-res photos and repair priorities.</p>
+            </div>
+            <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm">
+              <CheckCircle2 className="h-12 w-12 text-blue-600 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Advanced Tech</h3>
+              <p className="text-gray-600">We use thermal imaging and moisture meters to find hidden issues that others might miss.</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Services Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Professional Inspection Services</h2>
+              <p className="text-gray-600 mt-2">Comprehensive solutions for every property type in the GTA.</p>
+            </div>
+            <a href="/services/" className="text-blue-600 font-bold hover:underline mt-4 md:mt-0">View All Services →</a>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {servicesSchema.map((service) => (
+              <a
+                key={service.name}
+                href={service.url}
+                className="group p-8 border border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all bg-white"
+              >
+                <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600">{service.name}</h3>
+                <p className="text-gray-600 leading-relaxed">{service.description}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <TestimonialsSection />
 
-      {/* Call to Action */}
+      {/* Service Areas - SEO Boost */}
+      <section className="py-20 bg-blue-50">
+        <div className="container mx-auto px-4 text-center">
+          <MapPin className="h-10 w-10 text-blue-600 mx-auto mb-4" />
+          <h2 className="text-3xl font-bold mb-6">Proudly Serving the Greater Toronto Area</h2>
+          <p className="text-gray-700 max-w-2xl mx-auto mb-10 text-lg">
+            We provide residential and commercial inspections in <strong>Toronto, Mississauga, Brampton, Vaughan, Markham, Oakville, Burlington, Pickering, Oshawa, and beyond.</strong>
+          </p>
+          <a href="/locations/" className="inline-block border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-md font-bold hover:bg-blue-600 hover:text-white transition-all">
+            Find Your City
+          </a>
+        </div>
+      </section>
+
       <CTASection />
 
-      {/* Hidden Social Links */}
+      {/* Structured FAQ for Visual Display */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {homepageFaqs.map((faq, idx) => (
+              <div key={idx} className="border-b pb-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{faq.question}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="hidden">
-        <a href="https://youtube.com/@asadshomeinspection" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/asads_home_inspection" target="_blank">Instagram</a>
-        <a href="https://x.com/AsadsInspection" target="_blank">X / Twitter</a>
-        <a href="https://www.facebook.com/share/1ZhWQk97YY/" target="_blank">Facebook</a>
-        <a href="https://www.tiktok.com/@asads_home_inspection" target="_blank">TikTok</a>
+        {localBusinessSchema.sameAs.map((link) => (
+          <a key={link} href={link} rel="me">{link}</a>
+        ))}
       </section>
     </Layout>
   );
