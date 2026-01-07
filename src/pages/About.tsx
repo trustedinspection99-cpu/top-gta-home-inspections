@@ -1,20 +1,9 @@
-import { ShieldCheck, Search, FileText, UserCheck, Users, GraduationCap } from 'lucide-react';
-
+import { ShieldCheck, Search, FileText, UserCheck, Users, GraduationCap, Award, Shield, Target, CheckCircle, ArrowRight, Building } from 'lucide-react';
 import { Layout } from "@/components/layout/Layout";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { 
-  Award, 
-  Shield, 
-  Users, 
-  Target, 
-  CheckCircle, 
-  ArrowRight,
-  Building,
-  GraduationCap
-} from "lucide-react";
 
 const organizationSchema = {
   "@context": "https://schema.org",

@@ -233,18 +233,7 @@ const Index = () => {
       </section>
 
       {/* Trust Badges */}
-      <TrustBadges
-        badges={[
-          "Licensed & Insured",
-          "Full Coverage",
-          "OAHI Certified",
-          "Ontario Association",
-          "InterNACHI Member",
-          "International Standards",
-          "2,000+ Inspections",
-          "Satisfied Clients",
-        ]}
-      />
+      <TrustBadges />
 
       {/* Services Section */}
       <section className="services py-16">
