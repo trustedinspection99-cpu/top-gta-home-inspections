@@ -8,55 +8,47 @@ export default function Mississauga() {
     "Square One", "Hurontario", "Lisgar", "Churchill Meadows", "Creditview"
   ];
 
-  const pageSpecificContent = {
-    heroTitle: "Expert Home Inspection for All of Mississauga",
-    heroSubtitle: "Peel Region specialists for waterfront condos, heritage homes, and suburban estates. Get same-day digital reports with every inspection.",
-    trustStats: {
-      rating: "4.9/5",
-      reviewCount: "250+",
-      specialty: "Waterfront & Condo Specialist"
+  // Mississauga-specific inspection insights (Information Gain)
+  const localInsights = [
+    {
+      title: "Condo & High-Rise Inspections in Mississauga",
+      content:
+        "Condos around Square One, City Centre, and Hurontario commonly experience fan coil leaks, HVAC drainage issues, and moisture buildup. We inspect in-suite systems and visible common elements for defects that impact safety and comfort."
     },
-    // Adding Mississauga-specific regional risks for better local SEO
-    localExpertise: [
-      {
-        title: "Condo & High-Rise Expertise",
-        description: "Specialized assessments for Square One and City Centre units, focusing on HVAC fan coils and common element interfaces."
-      },
-      {
-        title: "Credit River & Lakeview Flood Risks",
-        description: "Advanced moisture detection for properties in Port Credit and near the Credit River floodplain."
-      },
-      {
-        title: "Heritage Home Systems",
-        description: "Expert evaluation of older electrical and plumbing systems common in Streetsville and Clarkson."
-      }
-    ]
-  };
+    {
+      title: "Flood & Moisture Risks Near the Credit River",
+      content:
+        "Homes in Port Credit, Creditview, and areas near the Credit River may be vulnerable to basement moisture and past flooding. Our inspections focus on drainage, foundation conditions, and signs of previous water intrusion."
+    },
+    {
+      title: "Older Electrical & Plumbing Systems",
+      content:
+        "Established neighborhoods like Streetsville and Clarkson often contain aging electrical panels, aluminum wiring, or outdated plumbing. We identify safety risks and components that may affect insurance or future renovations."
+    },
+    {
+      title: "Suburban Homes & Newer Developments",
+      content:
+        "In growing areas like Erin Mills, Meadowvale, and Churchill Meadows, we inspect newer homes for grading issues, builder deficiencies, and early wear concerns common in modern construction."
+    }
+  ];
 
   return (
     <>
       <Helmet>
-        <title>🏆 #1 Mississauga Home Inspector | ASADS | 4.9★ Rated Specialist</title>
-        <meta name="description" content="Expert home inspections in Mississauga, Port Credit, & Streetsville. Thermal imaging included. Same-day reports for houses & condos. Call (647) 801-9311." />
-        <link rel="canonical" href="https://asads.ca/services/home-inspection-mississauga" />
-        
-        {/* Open Graph / Social Meta */}
-        <meta property="og:title" content="Home Inspection Mississauga | Certified Master Inspectors" />
-        <meta property="og:description" content="Professional Mississauga home assessments. We specialize in waterfront properties and Square One condos." />
-        <meta property="og:type" content="website" />
+        <title>Home Inspection Mississauga | Certified Condo & House Inspectors</title>
+        <meta
+          name="description"
+          content="Certified home inspection services in Mississauga. We inspect condos, houses, and suburban properties for electrical, plumbing, HVAC, and moisture issues. Same-day reports."
+        />
       </Helmet>
 
       <LocationPageTemplate
         city="Mississauga"
-        region="Ontario"
-        description={pageSpecificContent.heroSubtitle}
+        region="Peel Region"
+        description="Certified home inspection services in Mississauga for buyers, sellers, and homeowners. We inspect condos, waterfront homes, and suburban properties with clear reporting and same-day turnaround."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
-        // Assuming your template accepts these enhanced props:
-        customHeroTitle={pageSpecificContent.heroTitle}
-        stats={pageSpecificContent.trustStats}
-        localHighlights={pageSpecificContent.localExpertise}
-        year={2026} 
+        localInsights={localInsights}
       />
     </>
   );
