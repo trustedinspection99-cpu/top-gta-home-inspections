@@ -1,103 +1,126 @@
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangle, Microscope, ShieldCheck, Factory, HardHat, ClipboardList } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function AsbestosTesting() {
+  const pageTitle = "Asbestos Testing Toronto | WSIB Certified & O.Reg 278/05 | ASADS";
+  const schemaDescription = "Certified asbestos testing in Toronto. Fully compliant with Ontario Regulation 278/05. Safe sampling for vermiculite, popcorn ceilings, and pipe wrap in pre-1990 homes.";
+
   return (
     <ServicePageTemplate
-      title="Asbestos Testing"
-      metaTitle="Asbestos Testing & Identification | Ontario Services"
-      metaDescription="Certified asbestos testing to identify hazardous materials before renovations or property transactions. Stay safe and compliant."
-      heroTitle="Asbestos Testing & Identification in Ontario"
-      heroSubtitle="Safe, professional asbestos sampling for homes and buildings. Lab-certified analysis identifies asbestos-containing materials before renovation or purchase."
+      title="Asbestos Testing & Analysis"
+      metaTitle={pageTitle}
+      metaDescription={schemaDescription}
+      heroTitle="WSIB Certified Asbestos Inspection"
+      heroSubtitle="Ontario's #1 workplace killer is hidden in pre-1990 buildings. Protect your family and contractors with O.Reg 278/05 compliant sampling and lab analysis."
       icon={AlertTriangle}
-      price="From $199"
-      duration="1-2 hours"
+      price="From $299"
+      duration="1-2 Hours + Lab Time"
       description={
-        <div className="space-y-4">
-          <p>
-            Asbestos was commonly used in Canadian homes built before 1990. While asbestos 
-            is safe when undisturbed, it becomes hazardous when materials are damaged, 
-            disturbed during renovation, or deteriorate over time. Inhaling asbestos fibers 
-            can cause serious diseases including lung cancer and mesothelioma.
+        <div className="space-y-6">
+          <div className="bg-red-50 border-l-4 border-red-500 p-5 rounded-r-xl">
+            <h4 className="text-red-900 font-bold flex items-center gap-2">
+              <ShieldCheck className="text-red-600" size={20} />
+              Legal Compliance Alert
+            </h4>
+            <p className="text-red-800 text-sm mt-1">
+              Under <strong>Ontario Regulation 278/05</strong>, owners of buildings constructed before 1990 must test for asbestos before any renovation or demolition. Failure to comply can lead to significant WSIB fines and health liability.
+            </p>
+          </div>
+
+          <p className="text-lg leading-relaxed text-slate-700">
+            Asbestos exposure is responsible for roughly <strong>33% of all workplace fatalities in Ontario</strong>. While safe when undisturbed, these microscopic fibers become lethal when friable materials—like popcorn ceilings or pipe wrap—are disturbed during renovations.
           </p>
+
+          
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+            <div className="p-5 bg-slate-50 rounded-xl border border-slate-200 shadow-sm text-center">
+              <Microscope className="mx-auto text-primary mb-2" size={32} />
+              <h4 className="font-bold text-slate-900">Lab Analysis</h4>
+              <p className="text-xs text-slate-600">Accredited PLM and TEM analysis to identify chrysotile, amosite, and tremolite fibers.</p>
+            </div>
+            <div className="p-5 bg-slate-50 rounded-xl border border-slate-200 shadow-sm text-center">
+              <Factory className="mx-auto text-primary mb-2" size={32} />
+              <h4 className="font-bold text-slate-900">Pre-1990 Focus</h4>
+              <p className="text-xs text-slate-600">Specialized protocols for Toronto’s century homes and mid-century bungalows.</p>
+            </div>
+            <div className="p-5 bg-slate-50 rounded-xl border border-slate-200 shadow-sm text-center">
+              <HardHat className="mx-auto text-primary mb-2" size={32} />
+              <h4 className="font-bold text-slate-900">WSIB Approved</h4>
+              <p className="text-xs text-slate-600">Fully insured and certified professionals meeting all OHSA safety standards.</p>
+            </div>
+          </div>
+
           <p>
-            Our asbestos testing service safely collects samples from suspected materials 
-            and sends them to an accredited laboratory for analysis. We test common 
-            asbestos-containing materials including insulation, floor tiles, ceiling tiles, 
-            pipe wrap, and vermiculite.
-          </p>
-          <p>
-            Testing is essential before any renovation work in older homes. If asbestos 
-            is confirmed, professional abatement may be required. We can help you understand 
-            your options and connect you with certified removal contractors.
+            Our inspectors identify "suspect materials" based on building age and use wet-sampling techniques to ensure zero fiber release during collection. Whether you are dealing with <strong>Zonolite vermiculite</strong> or old <strong>vinyl floor tiles</strong>, we provide the documentation required for building permits and insurance.
           </p>
         </div>
       }
       whatWeInspect={[
-        "Vermiculite insulation (attic)",
-        "Pipe and duct insulation",
-        "Floor tiles and adhesive",
-        "Ceiling tiles and textures",
-        "Drywall joint compound",
-        "Plaster and stucco",
-        "Roofing materials",
-        "Siding materials",
-        "Boiler and furnace insulation",
-        "Electrical panel backing",
-        "Window caulking and glazing",
-        "Fireproofing materials",
+        "Vermiculite Attic Insulation (Zonolite)",
+        "Popcorn & Stipple Ceilings",
+        "Basement Pipe Wrap & Duct Tape",
+        "Vinyl Floor Tiles (9x9 & 12x12)",
+        "Drywall Joint Compound (Mud)",
+        "Plaster & Lathe Systems",
+        "Exterior Stucco & Siding",
+        "Roofing Shingles & Felt",
+        "Electrical Wiring Insulation",
+        "Furnace & Boiler Gaskets",
+        "Transite Board & Pipe",
+        "Fireproofing Sprays",
       ]}
       features={[
         {
-          title: "Safe Sampling Protocol",
-          description: "Our technicians follow strict safety protocols to minimize fiber release during sample collection, protecting you and your family."
+          title: "O.Reg 278/05 Inventory",
+          description: "We provide the mandatory asbestos inventory report required by the City of Toronto for demolition and renovation permits."
         },
         {
-          title: "Accredited Lab Analysis",
-          description: "Samples are analyzed by an NVLAP-accredited laboratory using PLM or TEM methods for definitive identification."
+          title: "Safe Wet-Sampling",
+          description: "We utilize HEPA-filtered equipment and specialized wetting agents to prevent any fiber release during the sampling process."
         },
         {
-          title: "Multiple Material Testing",
-          description: "We can test multiple materials in a single visit, providing comprehensive results for renovation planning."
+          title: "Priority Lab Results",
+          description: "Standard lab turnaround is 48-72 hours, with 24-hour 'Rush' service available for emergency renovation shutdowns."
         },
         {
-          title: "Expert Recommendations",
-          description: "If asbestos is found, we provide guidance on management options: encapsulation, enclosure, or professional removal."
+          title: "Abatement Strategy",
+          description: "If asbestos is present, we provide a detailed risk assessment and removal roadmap to help you get competitive abatement quotes."
         },
       ]}
       benefits={[
-        "NVLAP accredited lab",
-        "Safe sampling methods",
-        "Fast turnaround times",
-        "Renovation planning support",
-        "Abatement contractor referrals",
-        "Pre-purchase due diligence",
-        "Insurance documentation",
-        "Peace of mind",
+        "WSIB Certified Inspectors",
+        "NVLAP & AIHA Accredited Labs",
+        "Detailed Inventory Reports",
+        "OHSA Compliance Support",
+        "Mesothelioma Risk Mitigation",
+        "Permit Documentation Ready",
+        "Unbiased 3rd Party Analysis",
+        "Same-Day Emergency Service",
       ]}
       faqs={[
         {
-          question: "How do I know if my home has asbestos?",
-          answer: "Homes built before 1990 may contain asbestos. You cannot identify asbestos by looking at it – laboratory testing is the only way to confirm its presence."
+          question: "When is asbestos testing legally required in Ontario?",
+          answer: "Under Regulation 278/05, testing is mandatory before any renovation, demolition, or repair of a building constructed before 1990. This applies to both residential and commercial properties."
         },
         {
-          question: "Is asbestos dangerous if I don't disturb it?",
-          answer: "Intact, undisturbed asbestos materials generally pose low risk. Danger increases when materials are damaged, deteriorating, or disturbed during renovation."
+          question: "How do I identify 'Zonolite' vermiculite?",
+          answer: "Zonolite is a brand of vermiculite insulation that often contains toxic tremolite asbestos. It looks like small, shiny pebbles. Because it is highly friable, it must be sampled by a professional using a respirator."
         },
         {
-          question: "Do I need to remove asbestos?",
-          answer: "Not always. Intact materials can often be safely managed in place or encapsulated. Removal is recommended when materials are damaged or will be disturbed by renovation."
+          question: "What is the difference between PLM and TEM testing?",
+          answer: "PLM (Polarized Light Microscopy) is the standard for bulk materials. TEM (Transmission Electron Microscopy) is a higher-resolution test used for air samples or complex materials where fibers are too small for standard microscopes."
         },
         {
-          question: "How long does lab analysis take?",
-          answer: "Standard results are available within 3-5 business days. Rush 24-hour service is available for urgent situations."
+          question: "Can I take the samples myself?",
+          answer: "We strongly advise against it. Disturbing asbestos materials without containment can contaminate your entire home. Certified inspectors use specific wetting and sealing methods to keep your air safe."
         },
       ]}
       relatedServices={[
         { title: "Lead Paint Testing", href: "/services/lead-paint-testing" },
         { title: "Mold Inspection", href: "/services/mold-inspection" },
+        { title: "Radon Testing", href: "/services/radon-testing" },
         { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
-        { title: "Air Quality Testing", href: "/services/air-quality" },
       ]}
     />
   );
