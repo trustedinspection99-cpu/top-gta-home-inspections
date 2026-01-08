@@ -9,8 +9,8 @@ import {
   Clock,
   Shield,
   Star,
-  Search,
   ChevronDown,
+  Search as SearchIcon, // Corrected import
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useState, useMemo } from "react";
@@ -35,8 +35,8 @@ type LocationItem = {
 /* ---------------------------------------------------
    HELPER: generate slug from city name
 --------------------------------------------------- */
-const generateSlug = (city: string) =>
-  city
+const generateSlug = (city?: string) =>
+  (city || "unknown-city")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
@@ -44,29 +44,29 @@ const generateSlug = (city: string) =>
 /* ---------------------------------------------------
    NORMALIZE locationData SAFELY
 --------------------------------------------------- */
-const regionList = Object.entries(locationData).map(
+const regionList = Object.entries(locationData || {}).map(
   ([regionName, rawLocations]) => {
     let locationsArray: LocationItem[] = [];
 
     // Already array
     if (Array.isArray(rawLocations)) {
       locationsArray = rawLocations;
-    } 
+    }
     // Object → convert values to array
     else if (typeof rawLocations === "object" && rawLocations !== null) {
       locationsArray = Object.values(rawLocations).flat();
     }
 
     return {
-      name: regionName,
+      name: regionName || "Unknown Region",
       locations: locationsArray.map((loc) => {
-        const cityName = loc.city || "unknown-city";
-        const slug = loc.slug || generateSlug(cityName);
+        const cityName = loc?.city || "Unknown City";
+        const slug = loc?.slug || generateSlug(cityName);
         return {
           city: cityName,
           slug,
           href: `/locations/${slug}/`,
-          popular: loc.popular,
+          popular: loc?.popular || false,
           region: regionName,
         };
       }),
@@ -93,16 +93,16 @@ export default function Locations() {
     return regionList
       .map((region) => ({
         ...region,
-        locations: region.locations.filter(
-          (loc) => loc.city && loc.city.toLowerCase().includes(query)
+        locations: (region.locations || []).filter(
+          (loc) => loc?.city?.toLowerCase().includes(query)
         ),
       }))
-      .filter((region) => region.locations.length > 0);
+      .filter((region) => region.locations && region.locations.length > 0);
   }, [searchQuery]);
 
   const totalLocations = allLocations.length;
   const matchedLocations = filteredRegions.reduce(
-    (sum, region) => sum + region.locations.length,
+    (sum, region) => sum + (region.locations?.length || 0),
     0
   );
 
@@ -159,7 +159,7 @@ export default function Locations() {
       {/* SEARCH */}
       <section className="container py-12">
         <div className="max-w-xl mx-auto relative">
-          <Search className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
+          <SearchIcon className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
           <Input
             placeholder="Search city or town..."
             className="pl-10"
@@ -203,14 +203,14 @@ export default function Locations() {
 
               <CollapsibleContent>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 px-2">
-                  {region.locations.map((loc) => (
+                  {(region.locations || []).map((loc) => (
                     <Link
-                      key={loc.slug}
-                      to={loc.href}
+                      key={loc.slug || generateSlug(loc.city)}
+                      to={loc.href || "#"}
                       className="flex items-center gap-2 p-3 rounded-lg border hover:bg-muted transition"
                     >
                       <MapPin className="h-4 w-4 text-primary" />
-                      <span className="flex-1">{loc.city}</span>
+                      <span className="flex-1">{loc.city || "Unknown City"}</span>
                       {loc.popular && (
                         <span className="text-xs bg-primary text-white px-2 py-0.5 rounded">
                           Popular
