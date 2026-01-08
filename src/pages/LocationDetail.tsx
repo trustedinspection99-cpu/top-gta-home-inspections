@@ -5,24 +5,24 @@ import { LocationPageTemplate } from "@/components/templates/LocationPageTemplat
 export default function LocationDetail() {
   const { slug } = useParams<{ slug: string }>();
 
-  // Find the specific city data based on the URL slug
-  // We use lowercase to ensure the match works even if the URL is typed with caps
+  // Find the city in your array
   const data = locationData.find((loc) => loc.slug === slug?.toLowerCase());
 
-  // If the slug doesn't exist, redirect back to the main locations list
+  // If no match, go back to main list
   if (!data) return <Navigate to="/locations" replace />;
 
   return (
     <LocationPageTemplate
       city={data.city}
       region={data.region}
-      description={data.description}
-      neighborhoods={data.neighborhoods}
+      // This ensures 'description' in the template gets your data
+      description={data.description || (data as any).metaDescription} 
       phoneNumber={data.phoneNumber}
+      neighborhoods={data.neighborhoods}
+      // This ensures 'localInsights' in the template gets your unique data
       localInsights={data.localInsights}
       latitude={data.latitude}
       longitude={data.longitude}
-      // The template handles the Helmet/SEO internally using these props
     />
   );
 }
