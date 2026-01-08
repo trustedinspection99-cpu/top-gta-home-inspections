@@ -23,8 +23,7 @@ import { OrphanLocationLinks } from "@/components/seo/OrphanLocationLinks";
 import { locationData } from "@/data/locationData";
 
 /* ---------------------------------------------------
-   BUILD REGIONS + LOCATIONS FROM locationData.ts
-   (GROUPED BY REGION)
+   TYPES
 --------------------------------------------------- */
 
 type LocationItem = {
@@ -33,15 +32,33 @@ type LocationItem = {
   popular?: boolean;
 };
 
+/* ---------------------------------------------------
+   NORMALIZE locationData SAFELY
+--------------------------------------------------- */
+
 const regionList = Object.entries(locationData).map(
-  ([regionName, locations]) => ({
-    name: regionName,
-    locations: (locations as LocationItem[]).map((loc) => ({
-      name: loc.city,
-      href: `/locations/${loc.slug}/`,
-      popular: loc.popular,
-    })),
-  })
+  ([regionName, rawLocations]) => {
+    let locationsArray: LocationItem[] = [];
+
+    // ✅ Case 1: Already an array
+    if (Array.isArray(rawLocations)) {
+      locationsArray = rawLocations;
+    }
+
+    // ✅ Case 2: Object → convert values to array
+    else if (typeof rawLocations === "object" && rawLocations !== null) {
+      locationsArray = Object.values(rawLocations).flat();
+    }
+
+    return {
+      name: regionName,
+      locations: locationsArray.map((loc) => ({
+        name: loc.city,
+        href: `/locations/${loc.slug}/`,
+        popular: loc.popular,
+      })),
+    };
+  }
 );
 
 const allLocations = regionList.flatMap((r) => r.locations);
@@ -99,7 +116,7 @@ export default function Locations() {
         <link rel="canonical" href="https://www.asads.ca/locations/" />
       </Helmet>
 
-      {/* ---------------- HERO ---------------- */}
+      {/* HERO */}
       <section className="bg-muted py-16">
         <div className="container text-center">
           <h1 className="text-4xl font-bold mb-4">
@@ -127,7 +144,7 @@ export default function Locations() {
         </div>
       </section>
 
-      {/* ---------------- SEARCH ---------------- */}
+      {/* SEARCH */}
       <section className="container py-12">
         <div className="max-w-xl mx-auto relative">
           <Search className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
@@ -142,7 +159,6 @@ export default function Locations() {
           </p>
         </div>
 
-        {/* ---------------- CONTROLS ---------------- */}
         <div className="flex justify-center gap-4 mt-6">
           <Button variant="outline" size="sm" onClick={expandAll}>
             Expand All
@@ -152,7 +168,7 @@ export default function Locations() {
           </Button>
         </div>
 
-        {/* ---------------- REGIONS ---------------- */}
+        {/* REGIONS */}
         <div className="mt-10 space-y-6">
           {filteredRegions.map((region) => (
             <Collapsible
@@ -198,7 +214,7 @@ export default function Locations() {
         </div>
       </section>
 
-      {/* ---------------- CTA ---------------- */}
+      {/* CTA */}
       <section className="bg-primary text-white py-16">
         <div className="container text-center">
           <h2 className="text-3xl font-bold mb-4">
@@ -221,8 +237,7 @@ export default function Locations() {
         </div>
       </section>
 
-      {/* ---------------- SEO ORPHAN LINKS ---------------- */}
       <OrphanLocationLinks />
     </Layout>
   );
-}
+                  }
