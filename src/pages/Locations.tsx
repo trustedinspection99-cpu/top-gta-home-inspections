@@ -24,29 +24,25 @@ import { locationData } from "@/data/locationData";
 
 /* ---------------------------------------------------
    BUILD REGIONS + LOCATIONS FROM locationData.ts
+   (GROUPED BY REGION)
 --------------------------------------------------- */
 
-const regionList = Object.values(locationData).reduce<
-  {
-    name: string;
-    locations: { name: string; href: string; popular?: boolean }[];
-  }[]
->((acc, loc) => {
-  let region = acc.find((r) => r.name === loc.region);
+type LocationItem = {
+  city: string;
+  slug: string;
+  popular?: boolean;
+};
 
-  if (!region) {
-    region = { name: loc.region, locations: [] };
-    acc.push(region);
-  }
-
-  region.locations.push({
-    name: loc.city,
-    href: `/locations/${loc.slug}/`,
-    popular: loc.popular,
-  });
-
-  return acc;
-}, []);
+const regionList = Object.entries(locationData).map(
+  ([regionName, locations]) => ({
+    name: regionName,
+    locations: (locations as LocationItem[]).map((loc) => ({
+      name: loc.city,
+      href: `/locations/${loc.slug}/`,
+      popular: loc.popular,
+    })),
+  })
+);
 
 const allLocations = regionList.flatMap((r) => r.locations);
 
