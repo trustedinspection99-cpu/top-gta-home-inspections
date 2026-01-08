@@ -28,7 +28,7 @@ import { locationData } from "@/data/locationData";
 
 type LocationItem = {
   city: string;
-  slug: string;
+  slug?: string;
   popular?: boolean;
 };
 
@@ -40,28 +40,30 @@ const regionList = Object.entries(locationData).map(
   ([regionName, rawLocations]) => {
     let locationsArray: LocationItem[] = [];
 
-    // ✅ Case 1: Already an array
-    if (Array.isArray(rawLocations)) {
-      locationsArray = rawLocations;
-    }
-
-    // ✅ Case 2: Object → convert values to array
-    else if (typeof rawLocations === "object" && rawLocations !== null) {
+    if (Array.isArray(rawLocations)) locationsArray = rawLocations;
+    else if (typeof rawLocations === "object" && rawLocations !== null)
       locationsArray = Object.values(rawLocations).flat();
-    }
 
     return {
       name: regionName,
-      locations: locationsArray.map((loc) => ({
-        name: loc.city,
-        href: `/locations/${loc.slug}/`,
-        popular: loc.popular,
-      })),
+      locations: locationsArray.map((loc) => {
+        if (!loc.slug) {
+          console.warn(`Location "${loc.city}" in region "${regionName}" is missing a slug.`);
+        }
+        return {
+          name: loc.city,
+          href: loc.slug ? `/locations/${loc.slug}/` : "#",
+          popular: loc.popular,
+        };
+      }),
     };
   }
 );
 
-const allLocations = regionList.flatMap((r) => r.locations);
+// ✅ Only count locations with a slug for total
+const allLocations = regionList.flatMap((r) =>
+  r.locations.filter((loc) => loc.href !== "#")
+);
 
 /* ---------------------------------------------------
    COMPONENT
@@ -74,15 +76,14 @@ export default function Locations() {
   );
 
   const filteredRegions = useMemo(() => {
-    if (!searchQuery.trim()) return regionList;
-
-    const query = searchQuery.toLowerCase();
+    const query = searchQuery.trim().toLowerCase();
 
     return regionList
       .map((region) => ({
         ...region,
-        locations: region.locations.filter((loc) =>
-          loc.name.toLowerCase().includes(query)
+        locations: region.locations.filter(
+          (loc) =>
+            loc.href !== "#" && loc.name.toLowerCase().includes(query)
         ),
       }))
       .filter((region) => region.locations.length > 0);
@@ -193,9 +194,11 @@ export default function Locations() {
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 px-2">
                   {region.locations.map((loc) => (
                     <Link
-                      key={loc.href}
+                      key={loc.href + loc.name}
                       to={loc.href}
-                      className="flex items-center gap-2 p-3 rounded-lg border hover:bg-muted transition"
+                      className={`flex items-center gap-2 p-3 rounded-lg border hover:bg-muted transition ${
+                        loc.href === "#" ? "cursor-not-allowed opacity-50" : ""
+                      }`}
                     >
                       <MapPin className="h-4 w-4 text-primary" />
                       <span className="flex-1">{loc.name}</span>
@@ -240,4 +243,4 @@ export default function Locations() {
       <OrphanLocationLinks />
     </Layout>
   );
-                  }
+}
