@@ -25,40 +25,51 @@ import { locationData } from "@/data/locationData";
 /* ---------------------------------------------------
    TYPES
 --------------------------------------------------- */
-
 type LocationItem = {
-  city?: string;
-  slug?: string;
+  city: string;
+  slug: string;
   popular?: boolean;
+  region?: string;
 };
+
+/* ---------------------------------------------------
+   HELPER: generate slug from city name
+--------------------------------------------------- */
+const generateSlug = (city: string) =>
+  city
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 
 /* ---------------------------------------------------
    NORMALIZE locationData SAFELY
 --------------------------------------------------- */
-
 const regionList = Object.entries(locationData).map(
   ([regionName, rawLocations]) => {
     let locationsArray: LocationItem[] = [];
 
-    // Case 1: Already an array
+    // Already array
     if (Array.isArray(rawLocations)) {
       locationsArray = rawLocations;
-    }
-
-    // Case 2: Object → convert values to array
+    } 
+    // Object → convert values to array
     else if (typeof rawLocations === "object" && rawLocations !== null) {
       locationsArray = Object.values(rawLocations).flat();
     }
 
     return {
       name: regionName,
-      locations: locationsArray
-        .filter((loc) => loc.city && loc.slug) // Only include valid entries
-        .map((loc) => ({
-          name: loc.city!,
-          href: `/locations/${loc.slug!}/`,
+      locations: locationsArray.map((loc) => {
+        const cityName = loc.city || "unknown-city";
+        const slug = loc.slug || generateSlug(cityName);
+        return {
+          city: cityName,
+          slug,
+          href: `/locations/${slug}/`,
           popular: loc.popular,
-        })),
+          region: regionName,
+        };
+      }),
     };
   }
 );
@@ -68,7 +79,6 @@ const allLocations = regionList.flatMap((r) => r.locations);
 /* ---------------------------------------------------
    COMPONENT
 --------------------------------------------------- */
-
 export default function Locations() {
   const [searchQuery, setSearchQuery] = useState("");
   const [openRegions, setOpenRegions] = useState<string[]>(
@@ -83,8 +93,8 @@ export default function Locations() {
     return regionList
       .map((region) => ({
         ...region,
-        locations: region.locations.filter((loc) =>
-          loc.name?.toLowerCase().includes(query)
+        locations: region.locations.filter(
+          (loc) => loc.city && loc.city.toLowerCase().includes(query)
         ),
       }))
       .filter((region) => region.locations.length > 0);
@@ -195,12 +205,12 @@ export default function Locations() {
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 px-2">
                   {region.locations.map((loc) => (
                     <Link
-                      key={loc.href}
+                      key={loc.slug}
                       to={loc.href}
                       className="flex items-center gap-2 p-3 rounded-lg border hover:bg-muted transition"
                     >
                       <MapPin className="h-4 w-4 text-primary" />
-                      <span className="flex-1">{loc.name}</span>
+                      <span className="flex-1">{loc.city}</span>
                       {loc.popular && (
                         <span className="text-xs bg-primary text-white px-2 py-0.5 rounded">
                           Popular
@@ -239,6 +249,7 @@ export default function Locations() {
         </div>
       </section>
 
+      {/* SEO ORPHAN LINKS */}
       <OrphanLocationLinks />
     </Layout>
   );
