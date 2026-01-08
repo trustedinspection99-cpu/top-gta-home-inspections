@@ -42,6 +42,21 @@ export default function NorthYork() {
     ]
   };
 
+  const localInsights = [
+    {
+      title: "High-Rise Condo Fan-Coil Systems",
+      content: "North York's Yonge-Sheppard corridor features high-rise condos with fan-coil HVAC units. We inspect actuators, valves, and condensation pans that are commonly overlooked in standard condo inspections."
+    },
+    {
+      title: "Ravine Property Slope Stability",
+      content: "York Mills and Don Mills estates often sit on ravine lots with unique erosion and retaining wall concerns. Our inspections assess slope stability and drainage to protect your investment."
+    },
+    {
+      title: "Mid-Century Aluminum Wiring",
+      content: "Homes built in the 1960s-70s in Willowdale and Bathurst Manor frequently contain aluminum wiring. We perform thermal imaging to identify overheating connections."
+    }
+  ];
+
   return (
     <>
       <Helmet>
@@ -52,7 +67,7 @@ export default function NorthYork() {
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={schemaDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://asads.ca/services/home-inspection-north-york" />
+        <meta property="og:url" content="https://www.asads.ca/locations/north-york/" />
         
         {/* Local SEO Geo Tags */}
         <meta name="geo.region" content="CA-ON" />
@@ -60,7 +75,6 @@ export default function NorthYork() {
         <meta name="geo.position" content="43.7615;-79.4111" />
         <meta name="ICBM" content="43.7615, -79.4111" />
 
-        {/* FIXED JSON-LD Structured Data - Using template literal to prevent white screen */}
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
         </script>
@@ -69,17 +83,10 @@ export default function NorthYork() {
       <LocationPageTemplate
         city="North York"
         region="Ontario"
-        kicker="North York Urban Property Experts"
         description="Providing specialized home inspections for North York's complex urban landscape. From Yonge-Sheppard high-rise condos with fan-coil systems to York Mills estates requiring ravine slope stability assessments, we deliver the technical expertise national brands miss."
         neighborhoods={neighborhoods}
         phoneNumber="(647) 801-9311"
-        ctaText="Book North York Expert"
-        highlights={[
-          "Condo Fan-Coil & HVAC Specialists",
-          "Ravine Slope & Retaining Wall Audits",
-          "Mid-Century Aluminum Wiring Experts",
-          "Same-Day Digital Reporting with Thermal Imaging"
-        ]}
+        localInsights={localInsights}
       />
     </>
   );

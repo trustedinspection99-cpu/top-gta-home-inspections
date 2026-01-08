@@ -48,7 +48,7 @@ interface ServicePageTemplateProps {
   metaTitle: string;
   metaDescription: string;
   heroTitle: string;
-  heroSubtitle: string;
+  heroSubtitle: ReactNode;
   icon: LucideIcon;
   price: string;
   duration: string;
