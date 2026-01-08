@@ -27,21 +27,10 @@ import { locationData } from "@/data/locationData";
 --------------------------------------------------- */
 
 type LocationItem = {
-  city: string;
+  city?: string;
   slug?: string;
   popular?: boolean;
 };
-
-/* ---------------------------------------------------
-   SLUG HELPER
---------------------------------------------------- */
-
-const slugify = (str: string) =>
-  str
-    .toLowerCase()
-    .trim()
-    .replace(/[\s&/]+/g, "-") // spaces, & and / → dash
-    .replace(/[^\w-]/g, ""); // remove other invalid chars
 
 /* ---------------------------------------------------
    NORMALIZE locationData SAFELY
@@ -51,20 +40,25 @@ const regionList = Object.entries(locationData).map(
   ([regionName, rawLocations]) => {
     let locationsArray: LocationItem[] = [];
 
-    if (Array.isArray(rawLocations)) locationsArray = rawLocations;
-    else if (typeof rawLocations === "object" && rawLocations !== null)
+    // Case 1: Already an array
+    if (Array.isArray(rawLocations)) {
+      locationsArray = rawLocations;
+    }
+
+    // Case 2: Object → convert values to array
+    else if (typeof rawLocations === "object" && rawLocations !== null) {
       locationsArray = Object.values(rawLocations).flat();
+    }
 
     return {
       name: regionName,
-      locations: locationsArray.map((loc) => {
-        const slug = loc.slug || slugify(loc.city);
-        return {
-          name: loc.city,
-          href: `/locations/${slug}/`,
+      locations: locationsArray
+        .filter((loc) => loc.city && loc.slug) // Only include valid entries
+        .map((loc) => ({
+          name: loc.city!,
+          href: `/locations/${loc.slug!}/`,
           popular: loc.popular,
-        };
-      }),
+        })),
     };
   }
 );
@@ -90,7 +84,7 @@ export default function Locations() {
       .map((region) => ({
         ...region,
         locations: region.locations.filter((loc) =>
-          loc.name.toLowerCase().includes(query)
+          loc.name?.toLowerCase().includes(query)
         ),
       }))
       .filter((region) => region.locations.length > 0);
