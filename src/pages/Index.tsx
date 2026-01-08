@@ -368,12 +368,7 @@ const Index = () => {
 
       <TestimonialsSection />
 
-      <CTASection
-        title="Schedule Your Inspection Today"
-        description="Book online in minutes or call our certified team to secure your home inspection date."
-        buttonText="Book Online Now"
-        buttonUrl="/booking/"
-      />
+      <CTASection />
     </Layout>
   );
 };
