@@ -116,17 +116,12 @@ export function Layout({ children }: LayoutProps) {
         </script>
       </Helmet>
 
-      JSON.stringify(localBusinessSchema)}
-        </script>
-      </Helmet>
-
       <div className="flex min-h-screen flex-col">
         <Header />
         <Breadcrumbs />
 
         <main className="flex-1">{children}</main>
 
-        {/* ✅ Floating Call Button – site-wide */}
         <FloatingCallButton />
 
         <Footer />
