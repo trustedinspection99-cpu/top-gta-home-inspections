@@ -10,7 +10,7 @@ import {
   Shield,
   Star,
   ChevronDown,
-  Search as SearchIcon, // Corrected import
+  Search as SearchIcon,
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useState, useMemo } from "react";
@@ -23,64 +23,40 @@ import { OrphanLocationLinks } from "@/components/seo/OrphanLocationLinks";
 import { locationData } from "@/data/locationData";
 
 /* ---------------------------------------------------
-   TYPES
+   HELPER: Group flat data by Region
 --------------------------------------------------- */
-type LocationItem = {
-  city: string;
-  slug: string;
-  popular?: boolean;
-  region?: string;
+const getRegionList = () => {
+  if (!Array.isArray(locationData)) return [];
+
+  const groups = locationData.reduce((acc, loc) => {
+    const regionName = loc.region || "Other Areas";
+    if (!acc[regionName]) acc[regionName] = [];
+    acc[regionName].push({
+      city: loc.city,
+      slug: loc.slug,
+      href: `/locations/${loc.slug}/`,
+      popular: (loc as any).popular || false,
+      region: regionName,
+    });
+    return acc;
+  }, {} as Record<string, any[]>);
+
+  return Object.entries(groups).map(([name, locations]) => ({
+    name,
+    locations,
+  }));
 };
 
-/* ---------------------------------------------------
-   HELPER: generate slug from city name
---------------------------------------------------- */
-const generateSlug = (city?: string) =>
-  (city || "unknown-city")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-
-/* ---------------------------------------------------
-   NORMALIZE locationData SAFELY
---------------------------------------------------- */
-const regionList = Object.entries(locationData || {}).map(
-  ([regionName, rawLocations]) => {
-    let locationsArray: LocationItem[] = [];
-
-    // Already array
-    if (Array.isArray(rawLocations)) {
-      locationsArray = rawLocations;
-    }
-    // Object → convert values to array
-    else if (typeof rawLocations === "object" && rawLocations !== null) {
-      locationsArray = Object.values(rawLocations).flat();
-    }
-
-    return {
-      name: regionName || "Unknown Region",
-      locations: locationsArray.map((loc) => {
-        const cityName = loc?.city || "Unknown City";
-        const slug = loc?.slug || generateSlug(cityName);
-        return {
-          city: cityName,
-          slug,
-          href: `/locations/${slug}/`,
-          popular: loc?.popular || false,
-          region: regionName,
-        };
-      }),
-    };
-  }
-);
-
-const allLocations = regionList.flatMap((r) => r.locations);
+const regionList = getRegionList();
+const allLocations = locationData || [];
 
 /* ---------------------------------------------------
    COMPONENT
 --------------------------------------------------- */
 export default function Locations() {
   const [searchQuery, setSearchQuery] = useState("");
+  
+  // Default all regions to open
   const [openRegions, setOpenRegions] = useState<string[]>(
     regionList.map((r) => r.name)
   );
@@ -93,16 +69,16 @@ export default function Locations() {
     return regionList
       .map((region) => ({
         ...region,
-        locations: (region.locations || []).filter(
-          (loc) => loc?.city?.toLowerCase().includes(query)
+        locations: region.locations.filter((loc) =>
+          loc.city.toLowerCase().includes(query)
         ),
       }))
-      .filter((region) => region.locations && region.locations.length > 0);
+      .filter((region) => region.locations.length > 0);
   }, [searchQuery]);
 
   const totalLocations = allLocations.length;
   const matchedLocations = filteredRegions.reduce(
-    (sum, region) => sum + (region.locations?.length || 0),
+    (sum, region) => sum + region.locations.length,
     0
   );
 
@@ -186,15 +162,15 @@ export default function Locations() {
             <Collapsible
               key={region.name}
               open={openRegions.includes(region.name)}
+              onOpenChange={() => toggleRegion(region.name)}
             >
               <CollapsibleTrigger asChild>
                 <button
-                  onClick={() => toggleRegion(region.name)}
-                  className="w-full flex justify-between items-center bg-muted px-6 py-4 rounded-lg"
+                  className="w-full flex justify-between items-center bg-muted px-6 py-4 rounded-lg hover:bg-muted/80 transition-colors"
                 >
                   <h2 className="text-xl font-semibold">{region.name}</h2>
                   <ChevronDown
-                    className={`h-5 w-5 transition-transform ${
+                    className={`h-5 w-5 transition-transform duration-200 ${
                       openRegions.includes(region.name) ? "rotate-180" : ""
                     }`}
                   />
@@ -202,21 +178,21 @@ export default function Locations() {
               </CollapsibleTrigger>
 
               <CollapsibleContent>
-                <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 px-2">
-                  {(region.locations || []).map((loc) => (
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 px-2">
+                  {region.locations.map((loc) => (
                     <Link
-                      key={loc.slug || generateSlug(loc.city)}
-                      to={loc.href || "#"}
-                      className="flex items-center gap-2 p-3 rounded-lg border hover:bg-muted transition"
+                      key={loc.slug}
+                      to={loc.href}
+                      className="flex items-center gap-2 p-3 rounded-lg border hover:bg-muted transition group"
                     >
-                      <MapPin className="h-4 w-4 text-primary" />
-                      <span className="flex-1">{loc.city || "Unknown City"}</span>
+                      <MapPin className="h-4 w-4 text-primary shrink-0" />
+                      <span className="flex-1 truncate">{loc.city}</span>
                       {loc.popular && (
-                        <span className="text-xs bg-primary text-white px-2 py-0.5 rounded">
+                        <span className="text-[10px] uppercase tracking-wider bg-primary text-white px-1.5 py-0.5 rounded font-bold">
                           Popular
                         </span>
                       )}
-                      <ArrowRight className="h-4 w-4" />
+                      <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </Link>
                   ))}
                 </div>
@@ -242,14 +218,13 @@ export default function Locations() {
                 Call Now
               </a>
             </Button>
-            <Button asChild variant="outline">
+            <Button asChild variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
               <Link to="/contact/">Request Inspection</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* SEO ORPHAN LINKS */}
       <OrphanLocationLinks />
     </Layout>
   );
