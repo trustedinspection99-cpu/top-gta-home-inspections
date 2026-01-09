@@ -1,24 +1,28 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Cambridge() {
-  const neighborhoods = [
-    "Downtown Galt", "Preston", "Hespeler", "Blair", "Ayr",
-    "Southwood", "Coronation", "Shades Mills", "Pinebush", "Lang's Farm"
-  ];
+  const data = getLocationBySlug("cambridge");
+
+  if (!data) return null;
 
   return (
     <>
       <Helmet>
-        <title>Home Inspection Cambridge | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Cambridge. Serving Galt, Preston & Hespeler. Call (647) 801-9311!" />
+        <title>{data.metaTitle}</title>
+        <meta name="description" content={data.metaDescription} />
       </Helmet>
+
       <LocationPageTemplate
-        city="Cambridge"
-        region="Ontario"
-        description="Cambridge's reliable home inspection experts. We serve Galt, Preston, Hespeler, and all Cambridge communities."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
+        city={data.city}
+        region={data.region}
+        description={data.description}
+        neighborhoods={data.neighborhoods}
+        phoneNumber={data.phoneNumber}
+        localInsights={data.localInsights}
+        latitude={data.latitude}
+        longitude={data.longitude}
       />
     </>
   );

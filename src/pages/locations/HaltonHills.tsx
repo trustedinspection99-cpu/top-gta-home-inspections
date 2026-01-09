@@ -1,24 +1,28 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function HaltonHills() {
-  const neighborhoods = [
-    "Georgetown", "Acton", "Glen Williams", "Limehouse", "Norval",
-    "Stewarttown", "Hornby", "Ballinafad", "Silver Creek", "Speyside"
-  ];
+  const data = getLocationBySlug("halton-hills");
+
+  if (!data) return null;
 
   return (
     <>
       <Helmet>
-        <title>Halton Hills Home Inspector | Modern Home Experts</title>
-        <meta name="description" content="Professional inspections in Halton Hills for modern housing and growing communities. Same-day reports included." />
+        <title>{data.metaTitle}</title>
+        <meta name="description" content={data.metaDescription} />
       </Helmet>
+
       <LocationPageTemplate
-        city="Halton Hills"
-        region="Ontario"
-        description="Professional inspections in Halton Hills for modern housing and growing communities. Same-day reports included."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
+        city={data.city}
+        region={data.region}
+        description={data.description}
+        neighborhoods={data.neighborhoods}
+        phoneNumber={data.phoneNumber}
+        localInsights={data.localInsights}
+        latitude={data.latitude}
+        longitude={data.longitude}
       />
     </>
   );

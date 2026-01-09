@@ -1,24 +1,28 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Innisfil() {
-  const neighborhoods = [
-    "Alcona", "Lefroy", "Gilford", "Stroud", "Big Bay Point",
-    "Belle Ewart", "Churchill", "Cookstown", "Sandy Cove", "Innisfil Beach"
-  ];
+  const data = getLocationBySlug("innisfil");
+
+  if (!data) return null;
 
   return (
     <>
       <Helmet>
-        <title>Innisfil Home Inspector | Rural & Waterfront Audit</title>
-        <meta name="description" content="Home inspections in Innisfil for detached homes, acreage properties, and waterfront seasonal residences." />
+        <title>{data.metaTitle}</title>
+        <meta name="description" content={data.metaDescription} />
       </Helmet>
+
       <LocationPageTemplate
-        city="Innisfil"
-        region="Ontario"
-        description="Home inspections in Innisfil for detached homes, acreage properties, and waterfront seasonal residences."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
+        city={data.city}
+        region={data.region}
+        description={data.description}
+        neighborhoods={data.neighborhoods}
+        phoneNumber={data.phoneNumber}
+        localInsights={data.localInsights}
+        latitude={data.latitude}
+        longitude={data.longitude}
       />
     </>
   );
