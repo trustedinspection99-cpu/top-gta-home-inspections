@@ -1,24 +1,28 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Clarington() {
-  const neighborhoods = [
-    "Bowmanville", "Courtice", "Newcastle", "Orono", "Enniskillen",
-    "Tyrone", "Hampton", "Kirby", "Kendal", "Newtonville"
-  ];
+  const data = getLocationBySlug("clarington");
+
+  if (!data) return null;
 
   return (
     <>
       <Helmet>
-        <title>Clarington Home Inspector | Rural & Well Specialist</title>
-        <meta name="description" content="Inspections in Clarington for rural homes, wells, and septic systems. Comprehensive reporting for detached properties." />
+        <title>{data.metaTitle}</title>
+        <meta name="description" content={data.metaDescription} />
       </Helmet>
+
       <LocationPageTemplate
-        city="Clarington"
-        region="Ontario"
-        description="Inspections in Clarington for rural homes, wells, and septic systems. Comprehensive reporting for detached properties."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
+        city={data.city}
+        region={data.region}
+        description={data.description}
+        neighborhoods={data.neighborhoods}
+        phoneNumber={data.phoneNumber}
+        localInsights={data.localInsights}
+        latitude={data.latitude}
+        longitude={data.longitude}
       />
     </>
   );

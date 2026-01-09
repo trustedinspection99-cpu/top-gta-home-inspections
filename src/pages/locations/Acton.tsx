@@ -1,24 +1,28 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Acton() {
-  const neighborhoods = [
-    "Downtown Acton", "Beardmore", "Prospect Park", "McKenzie-Jackson", "Blue Springs",
-    "Fairy Lake", "Churchill Road", "Mill Street", "Eastern Avenue", "Queen Street"
-  ];
+  const data = getLocationBySlug("acton");
+
+  if (!data) return null;
 
   return (
     <>
       <Helmet>
-        <title>Acton Home Inspector | Halton Hills Specialist | ASADS</title>
-        <meta name="description" content="Acton home inspection specialists. We know Halton Hills' heritage homes, wells & septic systems. Book today: (647) 801-9311." />
+        <title>{data.metaTitle}</title>
+        <meta name="description" content={data.metaDescription} />
       </Helmet>
+
       <LocationPageTemplate
-        city="Acton"
-        region="Halton Hills"
-        description="Acton's trusted home inspection experts. From charming downtown heritage properties to new developments near Blue Springs, we provide comprehensive inspections tailored to Halton Hills' unique housing stock, including private well and septic assessments."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
+        city={data.city}
+        region={data.region}
+        description={data.description}
+        neighborhoods={data.neighborhoods}
+        phoneNumber={data.phoneNumber}
+        localInsights={data.localInsights}
+        latitude={data.latitude}
+        longitude={data.longitude}
       />
     </>
   );

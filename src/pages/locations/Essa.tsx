@@ -1,24 +1,28 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Essa() {
-  const neighborhoods = [
-    "Angus", "Thornton", "Utopia", "Baxter", "Egbert",
-    "Ivy", "Colwell", "Glen Huron", "Sinclair Point", "New Lowell"
-  ];
+  const data = getLocationBySlug("essa");
+
+  if (!data) return null;
 
   return (
     <>
       <Helmet>
-        <title>Home Inspection Essa Township | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Essa Township. Serving Angus, Thornton & rural properties. Call (647) 801-9311!" />
+        <title>{data.metaTitle}</title>
+        <meta name="description" content={data.metaDescription} />
       </Helmet>
+
       <LocationPageTemplate
-        city="Essa"
-        region="Ontario"
-        description="Essa Township's trusted home inspection service. We serve Angus, Thornton, and all Essa communities with comprehensive inspections."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
+        city={data.city}
+        region={data.region}
+        description={data.description}
+        neighborhoods={data.neighborhoods}
+        phoneNumber={data.phoneNumber}
+        localInsights={data.localInsights}
+        latitude={data.latitude}
+        longitude={data.longitude}
       />
     </>
   );

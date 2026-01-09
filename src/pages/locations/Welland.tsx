@@ -1,24 +1,28 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Welland() {
-  const neighborhoods = [
-    "Downtown Welland", "Dain City", "Crowland", "Cooks Mills", "Humberstone",
-    "River Road", "Quaker Road", "Niagara Street", "Division Street", "Prince Charles"
-  ];
+  const data = getLocationBySlug("welland");
+
+  if (!data) return null;
 
   return (
     <>
       <Helmet>
-        <title>Welland Home Inspector | Certified System Audits</title>
-        <meta name="description" content="Home inspections in Welland emphasizing aging homes, building systems, and structural integrity." />
+        <title>{data.metaTitle}</title>
+        <meta name="description" content={data.metaDescription} />
       </Helmet>
+
       <LocationPageTemplate
-        city="Welland"
-        region="Ontario"
-        description="Home inspections in Welland emphasizing aging homes, building systems, and structural integrity."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
+        city={data.city}
+        region={data.region}
+        description={data.description}
+        neighborhoods={data.neighborhoods}
+        phoneNumber={data.phoneNumber}
+        localInsights={data.localInsights}
+        latitude={data.latitude}
+        longitude={data.longitude}
       />
     </>
   );

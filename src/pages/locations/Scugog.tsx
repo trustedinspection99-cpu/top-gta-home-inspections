@@ -1,24 +1,28 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Scugog() {
-  const neighborhoods = [
-    "Port Perry", "Seagrave", "Greenbank", "Caesarea", "Blackstock",
-    "Prince Albert", "Utica", "Manchester", "Epsom", "Nestleton"
-  ];
+  const data = getLocationBySlug("scugog");
+
+  if (!data) return null;
 
   return (
     <>
       <Helmet>
-        <title>Home Inspection Scugog | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Scugog. Serving Port Perry & Lake Scugog communities. Call (647) 801-9311!" />
+        <title>{data.metaTitle}</title>
+        <meta name="description" content={data.metaDescription} />
       </Helmet>
+
       <LocationPageTemplate
-        city="Scugog"
-        region="Ontario"
-        description="Scugog's trusted home inspection experts. We serve Port Perry, Lake Scugog waterfront properties, and all Scugog Township communities."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
+        city={data.city}
+        region={data.region}
+        description={data.description}
+        neighborhoods={data.neighborhoods}
+        phoneNumber={data.phoneNumber}
+        localInsights={data.localInsights}
+        latitude={data.latitude}
+        longitude={data.longitude}
       />
     </>
   );

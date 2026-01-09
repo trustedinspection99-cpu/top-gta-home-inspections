@@ -1,7 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
+import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { locationData } from "@/data/locationData";
-import { LocationPageTemplate } from "@/components/templates/LocationPageTemplate";
-
 export default function LocationDetail() {
   const { slug } = useParams<{ slug: string }>();
 

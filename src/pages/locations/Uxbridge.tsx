@@ -1,24 +1,28 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Uxbridge() {
-  const neighborhoods = [
-    "Downtown Uxbridge", "Quaker Village", "Zephyr", "Udora", "Leaskdale",
-    "Siloam", "Goodwood", "Sandford", "Altona", "Coppins Corners"
-  ];
+  const data = getLocationBySlug("uxbridge");
+
+  if (!data) return null;
 
   return (
     <>
       <Helmet>
-        <title>Uxbridge Home Inspector | Rural & Private Systems</title>
-        <meta name="description" content="Specialized inspections in Uxbridge for rural homes, acreage properties, and private septic/well systems." />
+        <title>{data.metaTitle}</title>
+        <meta name="description" content={data.metaDescription} />
       </Helmet>
+
       <LocationPageTemplate
-        city="Uxbridge"
-        region="Ontario"
-        description="Specialized inspections in Uxbridge for rural homes, acreage properties, and private septic/well systems."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
+        city={data.city}
+        region={data.region}
+        description={data.description}
+        neighborhoods={data.neighborhoods}
+        phoneNumber={data.phoneNumber}
+        localInsights={data.localInsights}
+        latitude={data.latitude}
+        longitude={data.longitude}
       />
     </>
   );
