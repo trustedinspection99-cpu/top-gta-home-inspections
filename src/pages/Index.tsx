@@ -99,7 +99,7 @@ const Index = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Home Inspection Toronto & GTA | Certified Same-Day Reports | ASADS</title>
+        <title>Home Inspection Toronto & GTA | Same-Day Reports | ASADS</title>
         <meta name="description" content="Certified home inspections in Toronto & GTA. Pre-Purchase, Pre-Listing, Condo, and Commercial inspections with same-day digital reports. Call (647) 801-9311." />
         <link rel="canonical" href={`${SITE_URL}/`} />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
