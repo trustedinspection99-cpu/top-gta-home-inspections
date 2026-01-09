@@ -107,7 +107,15 @@ export function Layout({ children }: LayoutProps) {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:type" content="website" />
+<meta property="og:site_name" content="ASADS Home Inspection" />
+<meta property="og:image" content={`${SITE_URL}/images/og-default.jpg`} />
+<meta property="og:url" content={canonicalUrl} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@AsadsInspection" />
+    
+       <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">
           {JSON.stringify(websiteSchema)}
         </script>
