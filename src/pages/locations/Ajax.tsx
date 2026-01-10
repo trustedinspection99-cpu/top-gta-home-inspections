@@ -1,26 +1,23 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Ajax() {
-  const neighborhoods = [
-    "Downtown Ajax", "Pickering Beach", "South Ajax", "Westney Heights", "Village Green",
-    "Audley", "Carruthers Creek", "Riverside", "Greenwood", "Salem",
-    "Liverpool", "Nottingham", "Woodlands", "Hermitage", "Applecroft"
-  ];
+  const data = getLocationBySlug("ajax");
+
+  if (!data) return null;
 
   return (
-    <>
-      <Helmet>
-        <title>Ajax Home Inspection | Top-Rated Buyer's Services</title>
-        <meta name="description" content="Comprehensive home inspections in Ajax. Understand the true condition of your future home with our expert certified reports." />
-      </Helmet>
-      <LocationPageTemplate
-        city="Ajax"
-        region="Ontario"
-        description="Comprehensive home inspections in Ajax. Understand the true condition of your future home with our expert certified reports."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
-      />
-    </>
+    <LocationPageTemplate
+      city={data.city}
+      region={data.region}
+      description={data.description}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
+      neighborhoods={data.neighborhoods}
+      phoneNumber={data.phoneNumber}
+      localInsights={data.localInsights}
+      latitude={data.latitude}
+      longitude={data.longitude}
+    />
   );
 }

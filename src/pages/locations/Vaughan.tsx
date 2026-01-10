@@ -1,26 +1,23 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Vaughan() {
-  const neighborhoods = [
-    "Woodbridge", "Thornhill", "Maple", "Kleinburg", "Concord",
-    "Vaughan Metropolitan Centre", "Vellore Village", "Sonoma Heights", "Carrville",
-    "Patterson", "Brownridge", "Crestwood", "Islington Woods", "Pine Valley"
-  ];
+  const data = getLocationBySlug("vaughan");
+
+  if (!data) return null;
 
   return (
-    <>
-      <Helmet>
-        <title>Vaughan Home Inspections | Certified Buyer Audits</title>
-        <meta name="description" content="Leading home inspections in Vaughan. Get the edge with detailed same-day reports and expert advice for all property types." />
-      </Helmet>
-      <LocationPageTemplate
-        city="Vaughan"
-        region="Ontario"
-        description="Leading home inspections in Vaughan. Get the edge with detailed same-day reports and expert advice for all property types."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
-      />
-    </>
+    <LocationPageTemplate
+      city={data.city}
+      region={data.region}
+      description={data.description}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
+      neighborhoods={data.neighborhoods}
+      phoneNumber={data.phoneNumber}
+      localInsights={data.localInsights}
+      latitude={data.latitude}
+      longitude={data.longitude}
+    />
   );
 }
