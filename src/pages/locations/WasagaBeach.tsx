@@ -1,24 +1,28 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function WasagaBeach() {
-  const neighborhoods = [
-    "Beach Area 1", "Beach Area 2", "Beach Area 3", "Beach Area 4", "Beach Area 5",
-    "Beach Area 6", "Oxbow Park", "Sunnidale Corners", "Riverdale", "Wasaga Sands"
-  ];
+  const data = getLocationBySlug("wasaga-beach");
+
+  if (!data) return null;
 
   return (
     <>
       <Helmet>
-        <title>Wasaga Beach Home Inspection | Cottage Specialists</title>
-        <meta name="description" content="Professional inspections for cottages, seasonal homes, and residential properties in Wasaga Beach." />
+        <title>{data.metaTitle}</title>
+        <meta name="description" content={data.metaDescription} />
       </Helmet>
+
       <LocationPageTemplate
-        city="Wasaga Beach"
-        region="Ontario"
-        description="Professional inspections for cottages, seasonal homes, and residential properties in Wasaga Beach."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
+        city={data.city}
+        region={data.region}
+        description={data.description}
+        neighborhoods={data.neighborhoods}
+        phoneNumber={data.phoneNumber}
+        localInsights={data.localInsights}
+        latitude={data.latitude}
+        longitude={data.longitude}
       />
     </>
   );

@@ -1,24 +1,28 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function FortErie() {
-  const neighborhoods = [
-    "Downtown Fort Erie", "Ridgeway", "Crystal Beach", "Stevensville", "Bridgeburg",
-    "Point Abino", "Bay Beach", "Waverly Beach", "Erie Road", "Jarvis Street"
-  ];
+  const data = getLocationBySlug("fort-erie");
+
+  if (!data) return null;
 
   return (
     <>
       <Helmet>
-        <title>Fort Erie Home Inspector | Detached & Rural Homes</title>
-        <meta name="description" content="Home inspections in Fort Erie for detached properties and rural-style residences. Thorough system testing." />
+        <title>{data.metaTitle}</title>
+        <meta name="description" content={data.metaDescription} />
       </Helmet>
+
       <LocationPageTemplate
-        city="Fort Erie"
-        region="Ontario"
-        description="Home inspections in Fort Erie for detached properties and rural-style residences. Thorough system testing."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
+        city={data.city}
+        region={data.region}
+        description={data.description}
+        neighborhoods={data.neighborhoods}
+        phoneNumber={data.phoneNumber}
+        localInsights={data.localInsights}
+        latitude={data.latitude}
+        longitude={data.longitude}
       />
     </>
   );

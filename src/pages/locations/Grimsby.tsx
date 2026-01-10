@@ -1,24 +1,28 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Grimsby() {
-  const neighborhoods = [
-    "Downtown Grimsby", "Grimsby Beach", "Casablanca", "Kelson", "Nelles",
-    "Mountain Street", "Main Street West", "Livingston Avenue", "South Service Road"
-  ];
+  const data = getLocationBySlug("grimsby");
+
+  if (!data) return null;
 
   return (
     <>
       <Helmet>
-        <title>Grimsby Home Inspection | Residential Property Audit</title>
-        <meta name="description" content="Professional inspections in Grimsby for newer and established residential neighbourhoods. Same-day reporting." />
+        <title>{data.metaTitle}</title>
+        <meta name="description" content={data.metaDescription} />
       </Helmet>
+
       <LocationPageTemplate
-        city="Grimsby"
-        region="Ontario"
-        description="Professional inspections in Grimsby for newer and established residential neighbourhoods. Same-day reporting."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
+        city={data.city}
+        region={data.region}
+        description={data.description}
+        neighborhoods={data.neighborhoods}
+        phoneNumber={data.phoneNumber}
+        localInsights={data.localInsights}
+        latitude={data.latitude}
+        longitude={data.longitude}
       />
     </>
   );
