@@ -1,26 +1,23 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Brampton() {
-  const neighborhoods = [
-    "Downtown Brampton", "Bramalea", "Heart Lake", "Springdale", "Castlemore",
-    "Gore Meadows", "Sandalwood", "Mount Pleasant", "Bram West", "Fletcher's Creek",
-    "Credit Valley", "Madoc", "Snelgrove", "Caledon East", "Churchville"
-  ];
+  const data = getLocationBySlug("brampton");
+
+  if (!data) return null;
 
   return (
-    <>
-      <Helmet>
-        <title>Brampton Home Inspection | New Build & Warranty Audit</title>
-        <meta name="description" content="Trusted Brampton home inspections. We specialize in newer developments and pre-delivery audits for confident home buying." />
-      </Helmet>
-      <LocationPageTemplate
-        city="Brampton"
-        region="Ontario"
-        description="Trusted Brampton home inspections. We specialize in newer developments and pre-delivery audits for confident home buying."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
-      />
-    </>
+    <LocationPageTemplate
+      city={data.city}
+      region={data.region}
+      description={data.description}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
+      neighborhoods={data.neighborhoods}
+      phoneNumber={data.phoneNumber}
+      localInsights={data.localInsights}
+      latitude={data.latitude}
+      longitude={data.longitude}
+    />
   );
 }

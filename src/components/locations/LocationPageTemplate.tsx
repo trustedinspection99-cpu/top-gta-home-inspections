@@ -41,6 +41,8 @@ interface LocationPageTemplateProps {
   city: string;
   region: string;
   description: string;
+  metaTitle?: string;
+  metaDescription?: string;
   neighborhoods?: string[];
   phoneNumber: string;
   address?: string;
@@ -50,7 +52,7 @@ interface LocationPageTemplateProps {
   siteName?: string;
   services?: string[];
   specialtyServices?: SpecialtyService[];
-  localInsights?: LocalInsight[]; // NEW PROP
+  localInsights?: LocalInsight[];
   allCities?: string[];
 }
 
@@ -75,6 +77,8 @@ export function LocationPageTemplate({
   city,
   region,
   description,
+  metaTitle,
+  metaDescription,
   neighborhoods = [],
   phoneNumber,
   address = "Ontario, Canada",
@@ -107,7 +111,7 @@ export function LocationPageTemplate({
       icon: <Shield className="w-6 h-6 text-primary" />,
     },
   ],
-  localInsights = [], // Initialize as empty array
+  localInsights = [],
   allCities = [],
 }: LocationPageTemplateProps) {
   const location = useLocation();
@@ -146,8 +150,8 @@ export function LocationPageTemplate({
   return (
     <Layout>
       <Helmet>
-        <title>{`#1 ${city} Home Inspector | Certified & Same Day Reports`}</title>
-        <meta name="description" content={description} />
+        <title>{metaTitle || `#1 ${city} Home Inspector | Certified & Same Day Reports`}</title>
+        <meta name="description" content={metaDescription || description} />
         <link rel="canonical" href={url} />
         <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
       </Helmet>
