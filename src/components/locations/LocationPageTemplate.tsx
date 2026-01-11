@@ -157,17 +157,17 @@ export function LocationPageTemplate({
       </Helmet>
 
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-slate-900 text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-2 mb-6 text-primary">
+            <div className="flex items-center gap-2 mb-6 text-amber-300">
                <Star className="fill-current w-5 h-5" />
                <span className="font-bold tracking-widest uppercase text-sm">Top Rated in {city}</span>
             </div>
             <h1 className="font-heading text-4xl md:text-6xl font-bold mb-6">
               {city} Home Inspector
             </h1>
-            <p className="text-xl text-slate-300 mb-8 max-w-2xl">
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl">
               {description}
             </p>
             <div className="flex flex-wrap gap-6 mb-8">

@@ -33,7 +33,7 @@ const FloatingCallButton = () => {
       "
     >
       <Phone className="h-5 w-5" />
-      <span className="hidden sm:inline">Call Now</span>
+      <span>Call Now</span>
     </a>
   );
 };
