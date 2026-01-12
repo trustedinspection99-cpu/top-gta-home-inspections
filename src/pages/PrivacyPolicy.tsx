@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
           name="description" 
           content="Privacy Policy for ASADS Home Inspection. Learn how we collect, use, and protect your personal information."
         />
-        <link rel="canonical" href="https://www.asads.ca/privacy/" />
+        <link rel="canonical" href="https://www.asads.ca/privacy" />
       </Helmet>
 
       <section className="py-16 md:py-24">
