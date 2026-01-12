@@ -33,7 +33,7 @@ export function Header() {
 
             <NavigationMenuItem>
               {/* FIXED: Added trailing slash to /about/ */}
-              <Link to="/about/" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", (location.pathname === "/about" || location.pathname === "/about/") && "bg-accent/50")}>About</Link>
+              <Link to="/about/" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", (location.pathname === "/about" || location.pathname === "/about") && "bg-accent/50")}>About</Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
@@ -42,12 +42,12 @@ export function Header() {
 
             <NavigationMenuItem>
               {/* FIXED: Added trailing slash to /testimonials/ */}
-              <Link to="/testimonials/" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", (location.pathname === "/testimonials" || location.pathname === "/testimonials/") && "bg-accent/50")}>Reviews</Link>
+              <Link to="/testimonials/" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", (location.pathname === "/testimonials" || location.pathname === "/testimonials") && "bg-accent/50")}>Reviews</Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
               {/* FIXED: Added trailing slash to /faq/ */}
-              <Link to="/faq/" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", (location.pathname === "/faq" || location.pathname === "/faq/") && "bg-accent/50")}>FAQ</Link>
+              <Link to="/faq/" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", (location.pathname === "/faq" || location.pathname === "/faq") && "bg-accent/50")}>FAQ</Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
@@ -78,16 +78,16 @@ export function Header() {
           <nav className="container py-4 space-y-2">
             {/* FIXED: All mobile links now use trailing slashes / */}
             <Link to="/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-            <Link to="/services/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-            <Link to="/locations/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Locations</Link>
-            <Link to="/about/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
-            <Link to="/blog/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-            <Link to="/testimonials/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Reviews</Link>
-            <Link to="/faq/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
-            <Link to="/contact/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            <Link to="/services" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+            <Link to="/locations" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Locations</Link>
+            <Link to="/about" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
+            <Link to="/blog" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+            <Link to="/testimonials" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Reviews</Link>
+            <Link to="/faq" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+            <Link to="/contact" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
             <div className="pt-4 border-t">
               <Button asChild className="w-full">
-                <Link to="/booking/" onClick={() => setMobileMenuOpen(false)}>Book Inspection</Link>
+                <Link to="/booking" onClick={() => setMobileMenuOpen(false)}>Book Inspection</Link>
               </Button>
             </div>
           </nav>
