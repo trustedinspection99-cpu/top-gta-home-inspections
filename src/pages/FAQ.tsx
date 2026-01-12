@@ -244,16 +244,16 @@ export default function FAQ() {
               Learn More About Our Services
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <Link to="/services/pre-purchase/" className="p-3 rounded-lg bg-muted/50 border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
+              <Link to="/services/pre-purchase" className="p-3 rounded-lg bg-muted/50 border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
                 Pre-Purchase Inspection
               </Link>
-              <Link to="/services/radon-testing/" className="p-3 rounded-lg bg-muted/50 border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
+              <Link to="/services/radon-testing" className="p-3 rounded-lg bg-muted/50 border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
                 Radon Testing
               </Link>
-              <Link to="/services/mold-inspection/" className="p-3 rounded-lg bg-muted/50 border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
+              <Link to="/services/mold-inspection" className="p-3 rounded-lg bg-muted/50 border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
                 Mold Inspection
               </Link>
-              <Link to="/services/thermal-imaging/" className="p-3 rounded-lg bg-muted/50 border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
+              <Link to="/services/thermal-imaging" className="p-3 rounded-lg bg-muted/50 border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
                 Thermal Imaging
               </Link>
             </div>
