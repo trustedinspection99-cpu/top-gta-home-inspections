@@ -11,7 +11,7 @@ export default function Terms() {
           name="description" 
           content="Terms of Service for ASADS Home Inspection. Read our terms and conditions for home inspection services in Toronto and the GTA."
         />
-        <link rel="canonical" href="https://www.asads.ca/terms/" />
+        <link rel="canonical" href="https://www.asads.ca/terms" />
       </Helmet>
 
       <section className="py-16 md:py-24">
