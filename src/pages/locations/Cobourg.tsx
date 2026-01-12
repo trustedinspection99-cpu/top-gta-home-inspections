@@ -1,23 +1,25 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function Cobourg() {
-  const data = getLocationBySlug("cobourg");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Downtown Cobourg", "Cobourg Beach", "Victoria Park", "Baltimore", "Grafton",
+    "Port Hope", "Campbellford", "Brighton", "Colborne", "Northumberland County"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Home Inspection Cobourg | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in Cobourg. Northumberland County specialists. Call (647) 801-9311!" />
+      </Helmet>
+      <LocationPageTemplate
+        city="Cobourg"
+        region="Ontario"
+        description="Cobourg's trusted home inspection service. We serve Cobourg, Port Hope, and all Northumberland County communities."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

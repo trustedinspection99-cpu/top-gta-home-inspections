@@ -1,23 +1,25 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function NewTecumseth() {
-  const data = getLocationBySlug("new-tecumseth");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Alliston", "Tottenham", "Beeton", "Thornton", "Cookstown",
+    "Lisle", "Rosemont", "Everett", "Newton Robinson", "Nottawasaga"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Home Inspection New Tecumseth | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in New Tecumseth. Serving Alliston, Tottenham & Beeton. Call (647) 801-9311!" />
+      </Helmet>
+      <LocationPageTemplate
+        city="New Tecumseth"
+        region="Ontario"
+        description="New Tecumseth's reliable home inspection experts. We serve Alliston, Tottenham, Beeton, and all New Tecumseth communities."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

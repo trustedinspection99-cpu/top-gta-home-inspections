@@ -1,23 +1,26 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function Scarborough() {
-  const data = getLocationBySlug("scarborough");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Scarborough Village", "Guildwood", "West Hill", "Highland Creek", "Malvern",
+    "Agincourt", "Wexford", "Birch Cliff", "Cliffside", "Rouge",
+    "Morningside", "Centennial", "Woburn", "Dorset Park", "Bendale"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Scarborough Property Inspection | Multi-Unit Experts</title>
+        <meta name="description" content="Expert inspections for Scarborough homes, duplexes, and multi-unit properties. Get the facts on your investment with ASADS." />
+      </Helmet>
+      <LocationPageTemplate
+        city="Scarborough"
+        region="Ontario"
+        description="Expert inspections for Scarborough homes, duplexes, and multi-unit properties. Get the facts on your investment with ASADS."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

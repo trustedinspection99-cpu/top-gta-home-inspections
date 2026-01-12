@@ -1,23 +1,25 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function Brock() {
-  const data = getLocationBySlug("brock");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Beaverton", "Cannington", "Sunderland", "Wilfrid", "Gamebridge",
+    "Thorah Island", "Vroomanton", "Vallentyne", "Bolsover", "Woodville"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Home Inspection Brock | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in Brock Township. Serving Beaverton, Cannington & Sunderland. Call (647) 801-9311!" />
+      </Helmet>
+      <LocationPageTemplate
+        city="Brock"
+        region="Ontario"
+        description="Brock Township's trusted home inspection service. We serve Beaverton, Cannington, Sunderland, and all Lake Simcoe waterfront communities."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

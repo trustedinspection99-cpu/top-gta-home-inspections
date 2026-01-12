@@ -1,23 +1,26 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function Oshawa() {
-  const data = getLocationBySlug("oshawa");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Downtown Oshawa", "Taunton", "Windfields", "Northwood", "Samac",
+    "Lakeview", "O'Neill", "McLaughlin", "Pinecrest", "Kedron",
+    "Eastdale", "Donevan", "Central", "Farewell", "Harmony"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Oshawa Home Inspector | Older Home & System Audits</title>
+        <meta name="description" content="Specialized in Oshawa's heritage homes and new builds. Detailed structural, electrical, and safety reporting." />
+      </Helmet>
+      <LocationPageTemplate
+        city="Oshawa"
+        region="Ontario"
+        description="Specialized in Oshawa's heritage homes and new builds. Detailed structural, electrical, and safety reporting."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

@@ -1,23 +1,26 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function Burlington() {
-  const data = getLocationBySlug("burlington");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Downtown Burlington", "Aldershot", "Tyandaga", "Headon Forest", "Palmer",
+    "Orchard", "Brant Hills", "Roseland", "Shoreacres", "LaSalle",
+    "Millcroft", "Tansley", "Elizabeth Gardens", "Maple", "Kilbride"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Burlington Home Inspector | Trusted Local Specialist</title>
+        <meta name="description" content="Reliable home inspections in Burlington with thorough reporting, thermal imaging, and professional inspection standards." />
+      </Helmet>
+      <LocationPageTemplate
+        city="Burlington"
+        region="Ontario"
+        description="Reliable home inspections in Burlington with thorough reporting, thermal imaging, and professional inspection standards."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

@@ -1,23 +1,25 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function Springwater() {
-  const data = getLocationBySlug("springwater");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Midhurst", "Minesing", "Anten Mills", "Elmvale", "Phelpston",
+    "Hillsdale", "Orr Lake", "Snow Valley", "Grenfel", "Crown Hill"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Home Inspection Springwater | Certified Inspectors | ASADS</title>
+        <meta name="description" content="Professional home inspection in Springwater Township. Serving Midhurst, Elmvale & area. Call (647) 801-9311!" />
+      </Helmet>
+      <LocationPageTemplate
+        city="Springwater"
+        region="Ontario"
+        description="Springwater Township's dependable home inspection experts. We serve Midhurst, Elmvale, and all Springwater communities."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

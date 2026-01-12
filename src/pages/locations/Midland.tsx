@@ -1,23 +1,25 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function Midland() {
-  const data = getLocationBySlug("midland");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Downtown Midland", "Tiffin", "Little Lake", "Georgian Bay Shores", "Wyebridge",
+    "Victoria Harbour", "Penetanguishene", "Tiny Beaches", "Balm Beach", "Bayshore Village"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Midland Home Inspection | Detached Home Specialist</title>
+        <meta name="description" content="Professional inspections in Midland for detached and semi-rural residential properties. Detailed system audits." />
+      </Helmet>
+      <LocationPageTemplate
+        city="Midland"
+        region="Ontario"
+        description="Professional inspections in Midland for detached and semi-rural residential properties. Detailed system audits."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

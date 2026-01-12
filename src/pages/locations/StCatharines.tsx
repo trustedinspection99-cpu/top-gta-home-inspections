@@ -1,23 +1,25 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function StCatharines() {
-  const data = getLocationBySlug("st-catharines");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Downtown St. Catharines", "Grantham", "Port Dalhousie", "Martindale", "Merritton",
+    "Facer", "Western Hill", "Queenston", "Thorold Stone Road", "Lakeshore"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>St. Catharines Home Inspector | Older Home Specialist</title>
+        <meta name="description" content="Home inspections in St. Catharines focused on older housing stock, structural safety, and electrical systems." />
+      </Helmet>
+      <LocationPageTemplate
+        city="St. Catharines"
+        region="Ontario"
+        description="Home inspections in St. Catharines focused on older housing stock, structural safety, and electrical systems."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

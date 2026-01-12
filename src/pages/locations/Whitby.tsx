@@ -1,23 +1,25 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function Whitby() {
-  const data = getLocationBySlug("whitby");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Downtown Whitby", "Brooklin", "Port Whitby", "Blue Grass Meadows", "Williamsburg",
+    "Pringle Creek", "Taunton", "Lynde Creek", "Rolling Acres", "Whitby Shores"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Whitby Home Inspector | Residential Family Homes</title>
+        <meta name="description" content="Detailed home inspections in Whitby covering modern subdivisions and established family homes. Thermal imaging included." />
+      </Helmet>
+      <LocationPageTemplate
+        city="Whitby"
+        region="Ontario"
+        description="Detailed home inspections in Whitby covering modern subdivisions and established family homes. Thermal imaging included."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

@@ -1,23 +1,26 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function Pickering() {
-  const data = getLocationBySlug("pickering");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Downtown Pickering", "Bay Ridges", "Dunbarton", "Liverpool", "Rosebank",
+    "Amberlea", "Brock Ridge", "Duffin Heights", "Highbush", "Village East",
+    "West Shore", "Rouge Park", "Claremont", "Cherrywood", "Whitevale"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Pickering Home Inspection | Suburban Property Audit</title>
+        <meta name="description" content="Professional inspections in Pickering for suburban developments and newer residential properties. Same-day reporting." />
+      </Helmet>
+      <LocationPageTemplate
+        city="Pickering"
+        region="Ontario"
+        description="Professional inspections in Pickering for suburban developments and newer residential properties. Same-day reporting."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

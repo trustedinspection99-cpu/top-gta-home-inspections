@@ -1,23 +1,25 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function Orillia() {
-  const data = getLocationBySlug("orillia");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Downtown Orillia", "West Orillia", "Couchiching Point", "Orchard Park",
+    "Cedar Island", "Geneva Park", "Bayshore", "West Ridge", "Memorial Avenue", "Uhthoff Trail"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Orillia Home Inspector | Older Home & Safety Audit</title>
+        <meta name="description" content="Home inspections in Orillia with a focus on structural condition and safety for the area's unique housing stock." />
+      </Helmet>
+      <LocationPageTemplate
+        city="Orillia"
+        region="Ontario"
+        description="Home inspections in Orillia with a focus on structural condition and safety for the area's unique housing stock."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

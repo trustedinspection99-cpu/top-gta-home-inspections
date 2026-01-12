@@ -1,23 +1,25 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function Aurora() {
-  const data = getLocationBySlug("aurora");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Downtown Aurora", "Aurora Highlands", "Bayview Northeast", "Aurora Grove", "Stronach",
+    "Town of Aurora", "Aurora Heights", "Industrial Parkway", "Yonge Street Corridor", "Highland Gate"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Aurora Home Inspection | Certified Safety Standards</title>
+        <meta name="description" content="Certified home inspections in Aurora following the highest standards for safety, performance, and structural integrity." />
+      </Helmet>
+      <LocationPageTemplate
+        city="Aurora"
+        region="Ontario"
+        description="Certified home inspections in Aurora following the highest standards for safety, performance, and structural integrity."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

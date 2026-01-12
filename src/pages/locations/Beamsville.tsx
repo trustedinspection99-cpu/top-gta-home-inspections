@@ -1,23 +1,25 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function Beamsville() {
-  const data = getLocationBySlug("beamsville");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Downtown Beamsville", "Mountain Road", "Ontario Street", "Lincoln Avenue",
+    "Greenlane", "King Street", "South Service Road", "Vineland", "Jordan"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Beamsville Home Inspector | Wine Country Specialist</title>
+        <meta name="description" content="Expert home inspections in Beamsville's wine country. We understand Niagara Escarpment properties and rural estates. Call (647) 801-9311." />
+      </Helmet>
+      <LocationPageTemplate
+        city="Beamsville"
+        region="Lincoln, Niagara"
+        description="Beamsville and Niagara wine country specialists. Our inspectors have deep experience with the unique properties along the Niagara Escarpment—from vineyard estates and historic farmhouses to modern developments in Vineland and Jordan. We understand the region's soil, drainage, and construction patterns."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

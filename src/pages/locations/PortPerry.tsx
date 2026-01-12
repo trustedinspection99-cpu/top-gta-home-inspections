@@ -1,23 +1,25 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function PortPerry() {
-  const data = getLocationBySlug("port-perry");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Downtown Port Perry", "Queen Street", "Lakeshore", "North Port Perry",
+    "Water Street", "Old Scugog Road", "Island Road", "Palmer Park", "Carnegie Beach", "Scugog Shores"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Port Perry Home Inspection | Rural Property Experts</title>
+        <meta name="description" content="Home inspections in Port Perry focused on detached and semi-rural residential properties and private systems." />
+      </Helmet>
+      <LocationPageTemplate
+        city="Port Perry"
+        region="Ontario"
+        description="Home inspections in Port Perry focused on detached and semi-rural residential properties and private systems."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

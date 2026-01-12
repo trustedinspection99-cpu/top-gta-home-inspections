@@ -1,23 +1,26 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function Oakville() {
-  const data = getLocationBySlug("oakville");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "Downtown Oakville", "Bronte", "Glen Abbey", "River Oaks", "Iroquois Ridge",
+    "Clearview", "Palermo", "West Oak Trails", "Eastlake", "Old Oakville",
+    "College Park", "Falgarwood", "Joshua Creek", "Uptown Core", "Sheridan"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>Oakville Home Inspection | Premium Residential Audit</title>
+        <meta name="description" content="High-standard inspections in Oakville. We focus on quality construction and safety for discerning buyers and sellers." />
+      </Helmet>
+      <LocationPageTemplate
+        city="Oakville"
+        region="Ontario"
+        description="High-standard inspections in Oakville. We focus on quality construction and safety for discerning buyers and sellers."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }
