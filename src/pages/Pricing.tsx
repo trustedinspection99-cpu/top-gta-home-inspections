@@ -189,7 +189,7 @@ export default function Pricing() {
           name="description" 
           content="Transparent home inspection pricing in Ontario. No hidden fees. View our packages for houses, condos, and multi-unit properties."
         />
-        <link rel="canonical" href="https://www.asads.ca/pricing/" />
+        <link rel="canonical" href="https://www.asads.ca/pricing" />
       </Helmet>
 
       {/* Hero Section */}
