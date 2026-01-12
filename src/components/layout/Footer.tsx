@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { OrphanLocationLinks } from "@/components/seo/OrphanLocationLinks";
 
 const services = [
@@ -36,7 +36,6 @@ export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container py-12 md:py-16">
-        {/* Changed grid to 5 columns on large screens to fit Quick Links */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
           {/* Company Info */}
           <div className="space-y-4">
@@ -50,11 +49,10 @@ export function Footer() {
               </div>
             </div>
             <p className="text-primary-foreground/80 text-sm">
-              Professional home inspection services throughout the Greater Toronto Area. 
+              Professional home inspection services throughout the Greater Toronto Area.
             </p>
             <div className="flex gap-4">
-               {/* Social icons (kept original SVG paths) */}
-               <a href="https://www.facebook.com/share/1ZhWQk97YY/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/1ZhWQk97YY/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="Facebook">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
               </a>
               <a href="https://www.instagram.com/asads_home_inspection" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="Instagram">
@@ -63,7 +61,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Quick Links Column (NEW: Fixes orphaned page SEO errors) */}
+          {/* Quick Links Column */}
           <div>
             <h3 className="font-heading font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -95,9 +93,11 @@ export function Footer() {
           <div>
             <h3 className="font-heading font-semibold text-lg mb-4">Service Areas</h3>
             <div className="space-y-4">
-              <OrphanLocationLinks className="grid grid-cols-2 gap-x-6 gap-y-2" linkClassName="text-primary-foreground/80 hover:text-primary-foreground" />
-              {/* FIXED: Using <Link> and relative path to prevent hard reload */}
-              <Link to="/locations/" className="inline-block text-accent hover:text-accent/80 text-sm transition-colors font-medium">
+              <OrphanLocationLinks
+                className="grid grid-cols-2 gap-x-6 gap-y-2"
+                linkClassName="text-primary-foreground/80 hover:text-primary-foreground"
+              />
+              <Link to="/locations" className="inline-block text-accent hover:text-accent/80 text-sm transition-colors font-medium">
                 View All Areas →
               </Link>
             </div>
@@ -125,10 +125,9 @@ export function Footer() {
         <div className="container py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">© {currentYear} ASADS Home Inspection. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link to="/terms/" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Terms of Service</Link>
-            {/* FIXED: Changed from /privacy-policy/ to /privacy/ to match your canonical URL */}
-            <Link to="/privacy/" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Privacy Policy</Link>
-            <Link to="/sitemap/" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Sitemap</Link>
+            <Link to="/terms" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Terms of Service</Link>
+            <Link to="/privacy" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Privacy Policy</Link>
+            <Link to="/sitemap" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Sitemap</Link>
           </div>
         </div>
       </div>
