@@ -1,25 +1,23 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Waterloo() {
-  const neighborhoods = [
-    "Uptown Waterloo", "Beechwood", "Lakeshore", "Westmount", "Columbia Forest",
-    "University District", "Laurelwood", "Westvale", "Lincoln Heights", "Eastbridge"
-  ];
+  const data = getLocationBySlug("waterloo");
+
+  if (!data) return null;
 
   return (
-    <>
-      <Helmet>
-        <title>Waterloo Home Inspector | University District | ASADS</title>
-        <meta name="description" content="Waterloo home inspections from Uptown to tech hub condos. Student rentals & family homes. Call (647) 801-9311." />
-      </Helmet>
-      <LocationPageTemplate
-        city="Waterloo"
-        region="Waterloo Region"
-        description="Waterloo's comprehensive home inspection service. From historic Uptown properties to modern condos in the tech corridor, and student rentals near the universities, we inspect all property types. Our inspectors understand the unique considerations of Waterloo's diverse housing market."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
-      />
-    </>
+    <LocationPageTemplate
+      city={data.city}
+      region={data.region}
+      description={data.description}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
+      neighborhoods={data.neighborhoods}
+      phoneNumber={data.phoneNumber}
+      localInsights={data.localInsights}
+      latitude={data.latitude}
+      longitude={data.longitude}
+    />
   );
 }

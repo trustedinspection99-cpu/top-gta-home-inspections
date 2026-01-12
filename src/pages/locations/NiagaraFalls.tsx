@@ -1,25 +1,23 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function NiagaraFalls() {
-  const neighborhoods = [
-    "Downtown Niagara Falls", "Lundy's Lane", "Clifton Hill", "Chippawa", "Fallsview",
-    "Drummond", "Stamford", "Willoughby", "Queenston", "Mount Carmel"
-  ];
+  const data = getLocationBySlug("niagara-falls");
+
+  if (!data) return null;
 
   return (
-    <>
-      <Helmet>
-        <title>Niagara Falls Property Inspection | Income Properties</title>
-        <meta name="description" content="Expert property inspections in Niagara Falls for rental, short-term, and residential income properties." />
-      </Helmet>
-      <LocationPageTemplate
-        city="Niagara Falls"
-        region="Ontario"
-        description="Expert property inspections in Niagara Falls for rental, short-term, and residential income properties."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
-      />
-    </>
+    <LocationPageTemplate
+      city={data.city}
+      region={data.region}
+      description={data.description}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
+      neighborhoods={data.neighborhoods}
+      phoneNumber={data.phoneNumber}
+      localInsights={data.localInsights}
+      latitude={data.latitude}
+      longitude={data.longitude}
+    />
   );
 }

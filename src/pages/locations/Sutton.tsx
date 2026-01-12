@@ -1,25 +1,23 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Sutton() {
-  const neighborhoods = [
-    "Downtown Sutton", "Jackson's Point", "Hedge Road", "Black River Road", "Baseline Road",
-    "Lake Drive", "Duclos Point", "Mossington Park", "High Street", "River Street"
-  ];
+  const data = getLocationBySlug("sutton");
+
+  if (!data) return null;
 
   return (
-    <>
-      <Helmet>
-        <title>Home Inspection Sutton | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Sutton. Waterfront and cottage specialists. Same-day reports. Call (647) 801-9311!" />
-      </Helmet>
-      <LocationPageTemplate
-        city="Sutton"
-        region="Ontario"
-        description="Sutton's dependable home inspection experts. We specialize in waterfront homes and cottages throughout the Lake Simcoe area."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
-      />
-    </>
+    <LocationPageTemplate
+      city={data.city}
+      region={data.region}
+      description={data.description}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
+      neighborhoods={data.neighborhoods}
+      phoneNumber={data.phoneNumber}
+      localInsights={data.localInsights}
+      latitude={data.latitude}
+      longitude={data.longitude}
+    />
   );
 }

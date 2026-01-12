@@ -1,26 +1,23 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Caledon() {
-  const neighborhoods = [
-    "Bolton", "Caledon East", "Palgrave", "Inglewood", "Cheltenham",
-    "Terra Cotta", "Belfountain", "Albion", "Mono Road", "Caledon Village",
-    "Valleywood", "Southfields", "Tullamore", "Sandhill", "Wildfield"
-  ];
+  const data = getLocationBySlug("caledon");
+
+  if (!data) return null;
 
   return (
-    <>
-      <Helmet>
-        <title>Caledon Home Inspector | Rural, Well & Septic Audit</title>
-        <meta name="description" content="Specialist in Caledon rural properties. We inspect private wells, septic systems, and large detached homes for total security." />
-      </Helmet>
-      <LocationPageTemplate
-        city="Caledon"
-        region="Ontario"
-        description="Specialist in Caledon rural properties. We inspect private wells, septic systems, and large detached homes for total security."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
-      />
-    </>
+    <LocationPageTemplate
+      city={data.city}
+      region={data.region}
+      description={data.description}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
+      neighborhoods={data.neighborhoods}
+      phoneNumber={data.phoneNumber}
+      localInsights={data.localInsights}
+      latitude={data.latitude}
+      longitude={data.longitude}
+    />
   );
 }
