@@ -98,7 +98,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 2,
       "name": "About Us",
-      "item": "https://www.asads.ca/about/"
+      "item": "https://www.asads.ca/about"
     }
   ]
 };
