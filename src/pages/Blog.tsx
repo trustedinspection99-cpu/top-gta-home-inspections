@@ -18,7 +18,7 @@ const blogPosts = [
     readTime: "8 min read",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
     featured: true,
-    relatedService: "/services/pre-purchase/",
+    relatedService: "/services/pre-purchase",
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const blogPosts = [
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/pre-purchase/",
+    relatedService: "/services/pre-purchase",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const blogPosts = [
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/pre-listing/",
+    relatedService: "/services/pre-listing",
   },
   {
     id: 4,
@@ -57,7 +57,7 @@ const blogPosts = [
     readTime: "7 min read",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/radon-testing/",
+    relatedService: "/services/radon-testing",
   },
   {
     id: 5,
@@ -83,7 +83,7 @@ const blogPosts = [
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/thermal-imaging/",
+    relatedService: "/services/thermal-imaging",
   },
   {
     id: 7,
@@ -96,7 +96,7 @@ const blogPosts = [
     readTime: "9 min read",
     image: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/pre-purchase/",
+    relatedService: "/services/pre-purchase",
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ const blogPosts = [
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/mold-inspection/",
+    relatedService: "/services/mold-inspection",
   },
   {
     id: 9,
@@ -122,7 +122,7 @@ const blogPosts = [
     readTime: "7 min read",
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/new-construction/",
+    relatedService: "/services/new-construction",
   },
   {
     id: 10,
@@ -135,7 +135,7 @@ const blogPosts = [
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/condo/",
+    relatedService: "/services/condo",
   },
 ];
 
