@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { Calendar, Clock, ArrowRight, Search, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -154,6 +155,11 @@ export default function Blog() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Home Inspection Blog | Tips & Guides | ASADS</title>
+        <meta name="description" content="Expert home inspection tips, industry insights, and helpful guides for GTA homeowners. Learn about common issues, maintenance, and inspection best practices." />
+        <link rel="canonical" href="https://www.asads.ca/blog/" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16 md:py-24">
         <div className="container">
@@ -237,7 +243,7 @@ export default function Blog() {
                   </span>
                 </div>
                 <Button asChild>
-                  <Link to={`/blog/${featuredPost.slug}`}>
+                  <Link to={`/blog/${featuredPost.slug}/`}>
                     Read Article
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -270,7 +276,7 @@ export default function Blog() {
                 <div className="p-6">
                   <span className="text-primary text-sm font-medium">{post.category}</span>
                   <h3 className="font-heading text-xl font-semibold text-foreground mt-2 mb-3 line-clamp-2 group-hover:text-primary transition-colors">
-                    <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                    <Link to={`/blog/${post.slug}/`}>{post.title}</Link>
                   </h3>
                   <p className="text-muted-foreground mb-4 line-clamp-2">
                     {post.excerpt}

@@ -5,6 +5,7 @@ export const SITE_NAME = "ASADS Home Inspection";
 /**
  * Ensures internal paths consistently use a leading and trailing slash.
  * Preserves query strings and hash fragments.
+ * Does NOT add trailing slash to .html files.
  */
 export function normalizePath(path: string): string {
   if (!path) return "/";
@@ -14,6 +15,11 @@ export function normalizePath(path: string): string {
   const suffix = path.slice(base.length); // includes ?query and/or #hash
 
   const withLeading = base.startsWith("/") ? base : `/${base}`;
+
+  // Don't add trailing slash to .html files
+  if (withLeading.endsWith(".html")) {
+    return `${withLeading}${suffix}`;
+  }
 
   // special-case root
   const withTrailing = withLeading === "/" ? "/" : withLeading.endsWith("/") ? withLeading : `${withLeading}/`;

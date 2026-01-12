@@ -132,7 +132,7 @@ export default function FAQ() {
       <Helmet>
         <title>FAQ | Home Inspection Questions | ASADS Home Inspection</title>
         <meta name="description" content="Find answers to frequently asked questions about home inspections in the Greater Toronto Area. Learn about costs, process, and what to expect." />
-        <link rel="canonical" href="https://www.asads.ca/faq" />
+        <link rel="canonical" href="https://www.asads.ca/faq/" />
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
         </script>
