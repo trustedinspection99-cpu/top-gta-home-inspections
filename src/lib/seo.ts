@@ -3,31 +3,33 @@ export const SITE_URL = "https://www.asads.ca";
 export const SITE_NAME = "ASADS Home Inspection";
 
 /**
- * Ensures internal paths consistently use a leading and trailing slash.
- * Preserves query strings and hash fragments.
- * Does NOT add trailing slash to .html files.
+ * Normalizes paths to:
+ * - Always have a leading slash
+ * - NEVER have a trailing slash (except root)
+ * - Preserve query strings and hash fragments
  */
 export function normalizePath(path: string): string {
   if (!path) return "/";
 
   const match = path.match(/^[^?#]*/);
   const base = match?.[0] ?? path;
-  const suffix = path.slice(base.length); // includes ?query and/or #hash
+  const suffix = path.slice(base.length); // ?query or #hash
 
-  const withLeading = base.startsWith("/") ? base : `/${base}`;
+  let normalized = base.startsWith("/") ? base : `/${base}`;
 
-  // Don't add trailing slash to .html files
-  if (withLeading.endsWith(".html")) {
-    return `${withLeading}${suffix}`;
+  // Root stays root
+  if (normalized === "/") {
+    return "/";
   }
 
-  // special-case root
-  const withTrailing = withLeading === "/" ? "/" : withLeading.endsWith("/") ? withLeading : `${withLeading}/`;
+  // Remove trailing slash
+  if (normalized.endsWith("/")) {
+    normalized = normalized.slice(0, -1);
+  }
 
-  return `${withTrailing}${suffix}`;
+  return `${normalized}${suffix}`;
 }
 
 export function getCanonicalUrl(path: string): string {
   return `${SITE_URL}${normalizePath(path)}`;
 }
-
