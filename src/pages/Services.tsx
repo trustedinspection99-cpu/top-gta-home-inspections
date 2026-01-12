@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -188,6 +189,11 @@ const processSteps = [
 export default function Services() {
   return (
     <Layout>
+      <Helmet>
+        <title>Home Inspection Services Ontario | ASADS</title>
+        <meta name="description" content="Comprehensive home inspection services in Ontario. Pre-purchase, pre-listing, condo, commercial, mold testing, radon, thermal imaging. Certified inspectors." />
+        <link rel="canonical" href="https://www.asads.ca/services/" />
+      </Helmet>
       {/* Hero Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5">
         <div className="container">
