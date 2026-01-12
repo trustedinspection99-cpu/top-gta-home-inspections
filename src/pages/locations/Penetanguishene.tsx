@@ -1,25 +1,23 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Penetanguishene() {
-  const neighborhoods = [
-    "Downtown Penetang", "Main Street", "Champlain Park", "Georgian Bay Shores",
-    "Discovery Harbour", "Midland Point", "Tiny Township", "Lafontaine", "Perkinsfield"
-  ];
+  const data = getLocationBySlug("penetanguishene");
+
+  if (!data) return null;
 
   return (
-    <>
-      <Helmet>
-        <title>Home Inspection Penetanguishene | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Penetanguishene. Georgian Bay specialists. Call (647) 801-9311!" />
-      </Helmet>
-      <LocationPageTemplate
-        city="Penetanguishene"
-        region="Ontario"
-        description="Penetanguishene's trusted home inspection professionals. We serve Penetang and all Georgian Bay waterfront communities."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
-      />
-    </>
+    <LocationPageTemplate
+      city={data.city}
+      region={data.region}
+      description={data.description}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
+      neighborhoods={data.neighborhoods}
+      phoneNumber={data.phoneNumber}
+      localInsights={data.localInsights}
+      latitude={data.latitude}
+      longitude={data.longitude}
+    />
   );
 }

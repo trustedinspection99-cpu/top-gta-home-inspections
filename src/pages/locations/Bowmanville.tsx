@@ -1,25 +1,23 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Bowmanville() {
-  const neighborhoods = [
-    "Downtown Bowmanville", "Bowmanville West", "Bowmanville Creek", "Soper Creek",
-    "Darlington", "Liberty Street", "King Street", "Scugog Street", "Baseline Road", "Green Road"
-  ];
+  const data = getLocationBySlug("bowmanville");
+
+  if (!data) return null;
 
   return (
-    <>
-      <Helmet>
-        <title>Bowmanville Home Inspections | Certified Local Audit</title>
-        <meta name="description" content="Professional inspections in Bowmanville for newer housing and expanding neighbourhoods. Get the facts before you buy." />
-      </Helmet>
-      <LocationPageTemplate
-        city="Bowmanville"
-        region="Ontario"
-        description="Professional inspections in Bowmanville for newer housing and expanding neighbourhoods. Get the facts before you buy."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
-      />
-    </>
+    <LocationPageTemplate
+      city={data.city}
+      region={data.region}
+      description={data.description}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
+      neighborhoods={data.neighborhoods}
+      phoneNumber={data.phoneNumber}
+      localInsights={data.localInsights}
+      latitude={data.latitude}
+      longitude={data.longitude}
+    />
   );
 }

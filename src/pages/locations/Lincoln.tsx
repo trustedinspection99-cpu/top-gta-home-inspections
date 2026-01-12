@@ -1,25 +1,23 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Lincoln() {
-  const neighborhoods = [
-    "Beamsville", "Vineland", "Jordan", "Jordan Station", "Campden",
-    "Tintern", "Rockway", "Ball's Falls", "Victoria Avenue", "King Street"
-  ];
+  const data = getLocationBySlug("lincoln");
+
+  if (!data) return null;
 
   return (
-    <>
-      <Helmet>
-        <title>Home Inspection Lincoln | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Lincoln, Ontario. Serving Beamsville, Vineland & Jordan. Call (647) 801-9311!" />
-      </Helmet>
-      <LocationPageTemplate
-        city="Lincoln"
-        region="Ontario"
-        description="Lincoln's reliable home inspection professionals. We serve all Lincoln wine country communities with comprehensive inspections."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
-      />
-    </>
+    <LocationPageTemplate
+      city={data.city}
+      region={data.region}
+      description={data.description}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
+      neighborhoods={data.neighborhoods}
+      phoneNumber={data.phoneNumber}
+      localInsights={data.localInsights}
+      latitude={data.latitude}
+      longitude={data.longitude}
+    />
   );
 }

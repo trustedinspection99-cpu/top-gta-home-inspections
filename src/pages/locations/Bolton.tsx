@@ -1,25 +1,23 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Bolton() {
-  const neighborhoods = [
-    "Downtown Bolton", "North Hill", "South Hill", "Humber Station", "Columbia Way",
-    "Harvest Hills", "Cedargrove", "Queensgate", "Glen Eagle", "King's Square"
-  ];
+  const data = getLocationBySlug("bolton");
+
+  if (!data) return null;
 
   return (
-    <>
-      <Helmet>
-        <title>Bolton Home Inspections | Rural Property Specialist</title>
-        <meta name="description" content="Professional inspections in Bolton focused on acreage homes, private systems, and detached residential properties." />
-      </Helmet>
-      <LocationPageTemplate
-        city="Bolton"
-        region="Ontario"
-        description="Professional inspections in Bolton focused on acreage homes, private systems, and detached residential properties."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
-      />
-    </>
+    <LocationPageTemplate
+      city={data.city}
+      region={data.region}
+      description={data.description}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
+      neighborhoods={data.neighborhoods}
+      phoneNumber={data.phoneNumber}
+      localInsights={data.localInsights}
+      latitude={data.latitude}
+      longitude={data.longitude}
+    />
   );
 }
