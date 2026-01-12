@@ -3,7 +3,10 @@
   "cleanUrls": true,
 
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ],
 
   "headers": [
@@ -46,12 +49,6 @@
   ],
 
   "redirects": [
-    {
-      "source": "/(.*)/",
-      "destination": "/$1",
-      "permanent": true
-    },
-
     {
       "source": "/home-inspection",
       "destination": "/services/pre-purchase",
