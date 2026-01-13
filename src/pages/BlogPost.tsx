@@ -30,7 +30,7 @@ export default function BlogPost() {
             The article you're looking for doesn't exist or has been moved.
           </p>
           <Button asChild>
-            <Link to="/blog/">Back to Blog</Link>
+            <Link to="/blog">Back to Blog</Link>
           </Button>
         </div>
       </Layout>
@@ -106,7 +106,7 @@ export default function BlogPost() {
       <Helmet>
         <title>{post.metaTitle}</title>
         <meta name="description" content={post.metaDescription} />
-        <link rel="canonical" href={`https://www.asads.ca/blog/${post.slug}/`} />
+        <link rel="canonical" href={`https://www.asads.ca/blog/${post.slug}`} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={post.image} />
@@ -278,7 +278,7 @@ export default function BlogPost() {
                       Our certified inspectors are ready to help you make informed property decisions.
                     </p>
                     <Button asChild className="w-full mb-3">
-                      <Link to="/booking/">Book Inspection</Link>
+                      <Link to="/booking">Book Inspection</Link>
                     </Button>
                     <Button variant="outline" className="w-full" asChild>
                       <a href="tel:+16478019311">
@@ -333,7 +333,7 @@ export default function BlogPost() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
-                <Link to="/booking/">Book Online Now</Link>
+                <Link to="/booking">Book Online Now</Link>
               </Button>
               <Button 
                 asChild 

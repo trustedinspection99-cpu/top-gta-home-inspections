@@ -17,7 +17,7 @@ const websiteSchema = {
   "@id": `${SITE_URL}/#website`,
   name: "ASADS Home Inspection",
   alternateName: "ASADS",
-  url: SITE_URL,
+  url: `${SITE_URL}/`,
   description: "Professional home inspection services in the Greater Toronto Area",
   publisher: {
     "@type": "Organization",
@@ -47,7 +47,7 @@ const localBusinessSchema = {
     `${SITE_URL}/images/home-inspection-service.webp`
   ],
   logo: `${SITE_URL}/logo.png`,
-  url: SITE_URL,
+  url: `${SITE_URL}/`,
   telephone: "+16478019311",
   email: "info@asads.ca",
   priceRange: "$350-$650",
@@ -94,22 +94,28 @@ const localBusinessSchema = {
 export function Layout({ children }: LayoutProps) {
   const location = useLocation();
 
-  // Canonical URL without trailing slash (except homepage)
-  const canonicalUrl =
-    location.pathname === "/" ? SITE_URL : `${SITE_URL}${location.pathname}`;
+  // Canonical with trailing slash
+  const path =
+    location.pathname === "/"
+      ? "/"
+      : location.pathname.endsWith("/")
+      ? location.pathname
+      : `${location.pathname}/`;
+
+  const canonicalUrl = `${SITE_URL}${path}`;
 
   return (
     <>
       <Helmet>
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="ASADS Home Inspection" />
-        <meta property="og:image" content={`${SITE_URL}/images/og-default.jpg`} />
-        <meta property="og:url" content={canonicalUrl} />
+<meta property="og:site_name" content="ASADS Home Inspection" />
+<meta property="og:image" content={`${SITE_URL}/images/og-default.jpg`} />
+<meta property="og:url" content={canonicalUrl} />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@AsadsInspection" />
-        
-        <link rel="canonical" href={canonicalUrl} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@AsadsInspection" />
+    
+       <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">
           {JSON.stringify(websiteSchema)}
         </script>

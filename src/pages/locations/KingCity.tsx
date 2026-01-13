@@ -1,23 +1,25 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { getLocationBySlug } from "@/data/locationData";
+import { Helmet } from "react-helmet-async";
 
 export default function KingCity() {
-  const data = getLocationBySlug("king-city");
-
-  if (!data) return null;
+  const neighborhoods = [
+    "King City", "Nobleton", "Schomberg", "Kettleby", "Pottageville",
+    "Laskay", "Snowball", "Ansnorveldt", "Strange", "King Station"
+  ];
 
   return (
-    <LocationPageTemplate
-      city={data.city}
-      region={data.region}
-      description={data.description}
-      metaTitle={data.metaTitle}
-      metaDescription={data.metaDescription}
-      neighborhoods={data.neighborhoods}
-      phoneNumber={data.phoneNumber}
-      localInsights={data.localInsights}
-      latitude={data.latitude}
-      longitude={data.longitude}
-    />
+    <>
+      <Helmet>
+        <title>King City Home Inspector | Luxury & Rural Specialist</title>
+        <meta name="description" content="Specialized inspections for King City's estates and rural homes, including private system checks and structural audits." />
+      </Helmet>
+      <LocationPageTemplate
+        city="King City"
+        region="Ontario"
+        description="Specialized inspections for King City's estates and rural homes, including private system checks and structural audits."
+        neighborhoods={neighborhoods}
+        phoneNumber="(647) 801-9311"
+      />
+    </>
   );
 }

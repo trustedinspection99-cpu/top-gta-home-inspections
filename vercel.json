@@ -1,126 +1,208 @@
 {
-  "trailingSlash": false,
-  "cleanUrls": true,
-  
+  "trailingSlash": true,
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
-
-  "headers": [
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    },
-    {
-      "source": "/(.*)\\.(css|js)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=2592000" }
-      ]
-    },
-    {
-      "source": "/(.*)\\.(png|jpg|jpeg|gif|svg|webp|ico|avif)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=2592000" }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=86400" }
-      ]
-    }
-  ],
-
   "redirects": [
-    { "source": "/home-inspection", "destination": "/services/pre-purchase", "permanent": true },
-    { "source": "/home-inspections", "destination": "/services", "permanent": true },
-    { "source": "/inspection-services", "destination": "/services", "permanent": true },
-    { "source": "/radon", "destination": "/services/radon-testing", "permanent": true },
-    { "source": "/mold", "destination": "/services/mold-inspection", "permanent": true },
-    { "source": "/asbestos", "destination": "/services/asbestos-testing", "permanent": true },
-    { "source": "/thermal", "destination": "/services/thermal-imaging", "permanent": true },
-    { "source": "/wett-inspection", "destination": "/services/wett", "permanent": true },
-    { "source": "/fireplace-inspection", "destination": "/services/wett", "permanent": true },
-    { "source": "/lead-paint", "destination": "/services/lead-paint-testing", "permanent": true },
-    { "source": "/well-water", "destination": "/services/well-water-testing", "permanent": true },
-    { "source": "/sewer", "destination": "/services/sewer-scope", "permanent": true },
-    { "source": "/air-quality-testing", "destination": "/services/air-quality", "permanent": true },
-    { "source": "/book", "destination": "/booking", "permanent": true },
-    { "source": "/schedule", "destination": "/booking", "permanent": true },
-    { "source": "/appointment", "destination": "/booking", "permanent": true },
-    { "source": "/areas", "destination": "/locations", "permanent": true },
-    { "source": "/service-areas", "destination": "/locations", "permanent": true },
-    { "source": "/coverage", "destination": "/locations", "permanent": true },
-    { "source": "/reviews", "destination": "/testimonials", "permanent": true },
-    { "source": "/customer-reviews", "destination": "/testimonials", "permanent": true },
-    { "source": "/about-us", "destination": "/about", "permanent": true },
-    { "source": "/our-team", "destination": "/about", "permanent": true },
-    { "source": "/faqs", "destination": "/faq", "permanent": true },
-    { "source": "/questions", "destination": "/faq", "permanent": true },
-    { "source": "/prices", "destination": "/pricing", "permanent": true },
-    { "source": "/rates", "destination": "/pricing", "permanent": true },
-    { "source": "/cost", "destination": "/pricing", "permanent": true },
-    { "source": "/privacy", "destination": "/privacy-policy", "permanent": true },
-    { "source": "/articles", "destination": "/blog", "permanent": true },
-    { "source": "/news", "destination": "/blog", "permanent": true },
-
-    // Location redirects without trailing slash
-    { "source": "/services/home-inspection-toronto", "destination": "/locations/toronto", "permanent": true },
-    { "source": "/services/home-inspection-north-york", "destination": "/locations/north-york", "permanent": true },
-    { "source": "/services/home-inspection-scarborough", "destination": "/locations/scarborough", "permanent": true },
-    { "source": "/services/home-inspection-etobicoke", "destination": "/locations/etobicoke", "permanent": true },
-    { "source": "/services/home-inspection-east-york", "destination": "/locations/east-york", "permanent": true },
-    { "source": "/services/home-inspection-mississauga", "destination": "/locations/mississauga", "permanent": true },
-    { "source": "/services/home-inspection-brampton", "destination": "/locations/brampton", "permanent": true },
-    { "source": "/services/home-inspection-caledon", "destination": "/locations/caledon", "permanent": true },
-    { "source": "/services/home-inspection-bolton", "destination": "/locations/bolton", "permanent": true },
-    { "source": "/services/home-inspection-vaughan", "destination": "/locations/vaughan", "permanent": true },
-    { "source": "/services/home-inspection-markham", "destination": "/locations/markham", "permanent": true },
-    { "source": "/services/home-inspection-richmond-hill", "destination": "/locations/richmond-hill", "permanent": true },
-    { "source": "/services/home-inspection-newmarket", "destination": "/locations/newmarket", "permanent": true },
-    { "source": "/services/home-inspection-aurora", "destination": "/locations/aurora", "permanent": true },
-    { "source": "/services/home-inspection-king-city", "destination": "/locations/king-city", "permanent": true },
-    { "source": "/services/home-inspection-stouffville", "destination": "/locations/stouffville", "permanent": true },
-    { "source": "/services/home-inspection-georgina", "destination": "/locations/georgina", "permanent": true },
-    { "source": "/services/home-inspection-east-gwillimbury", "destination": "/locations/east-gwillimbury", "permanent": true },
-    { "source": "/services/home-inspection-keswick", "destination": "/locations/keswick", "permanent": true },
-    { "source": "/services/home-inspection-sutton", "destination": "/locations/sutton", "permanent": true },
-    { "source": "/services/home-inspection-woodbridge", "destination": "/locations/woodbridge", "permanent": true },
-    { "source": "/services/home-inspection-thornhill", "destination": "/locations/thornhill", "permanent": true },
-    { "source": "/services/home-inspection-maple", "destination": "/locations/maple", "permanent": true },
-    { "source": "/services/home-inspection-kleinburg", "destination": "/locations/kleinburg", "permanent": true },
-    { "source": "/services/home-inspection-concord", "destination": "/locations/concord", "permanent": true },
-    { "source": "/services/home-inspection-unionville", "destination": "/locations/unionville", "permanent": true },
-    { "source": "/services/home-inspection-oakville", "destination": "/locations/oakville", "permanent": true },
-    { "source": "/services/home-inspection-burlington", "destination": "/locations/burlington", "permanent": true },
-    { "source": "/services/home-inspection-milton", "destination": "/locations/milton", "permanent": true },
-    { "source": "/services/home-inspection-halton-hills", "destination": "/locations/halton-hills", "permanent": true },
-    { "source": "/services/home-inspection-georgetown", "destination": "/locations/georgetown", "permanent": true },
-    { "source": "/services/home-inspection-acton", "destination": "/locations/acton", "permanent": true },
-    { "source": "/services/home-inspection-oshawa", "destination": "/locations/oshawa", "permanent": true },
-    { "source": "/services/home-inspection-whitby", "destination": "/locations/whitby", "permanent": true },
-    { "source": "/services/home-inspection-ajax", "destination": "/locations/ajax", "permanent": true },
-    { "source": "/services/home-inspection-pickering", "destination": "/locations/pickering", "permanent": true },
-    { "source": "/services/home-inspection-clarington", "destination": "/locations/clarington", "permanent": true },
-    { "source": "/services/home-inspection-bowmanville", "destination": "/locations/bowmanville", "permanent": true },
-    { "source": "/services/home-inspection-uxbridge", "destination": "/locations/uxbridge", "permanent": true },
-    { "source": "/services/home-inspection-scugog", "destination": "/locations/scugog", "permanent": true },
-    { "source": "/services/home-inspection-port-perry", "destination": "/locations/port-perry", "permanent": true },
-    { "source": "/services/home-inspection-brock", "destination": "/locations/brock", "permanent": true },
-    { "source": "/services/home-inspection-beaverton", "destination": "/locations/beaverton", "permanent": true },
-    { "source": "/services/home-inspection-cannington", "destination": "/locations/cannington", "permanent": true },
-    { "source": "/services/home-inspection-kitchener", "destination": "/locations/kitchener", "permanent": true },
-    { "source": "/services/home-inspection-waterloo", "destination": "/locations/waterloo", "permanent": true },
-    { "source": "/services/home-inspection-cambridge", "destination": "/locations/cambridge", "permanent": true },
-    { "source": "/services/home-inspection-guelph", "destination": "/locations/guelph", "permanent": true },
-    { "source": "/services/home-inspection-orangeville", "destination": "/locations/orangeville", "permanent": true },
-    { "source": "/services/home-inspection-peterborough", "destination": "/locations/peterborough", "permanent": true },
-    { "source": "/services/home-inspection-cobourg", "destination": "/locations/cobourg", "permanent": true },
-    { "source": "/services/home-inspection-brantford", "destination": "/locations/brantford", "permanent": true }
+    {
+      "source": "/home-inspection",
+      "destination": "/services/pre-purchase/",
+      "permanent": true
+    },
+    {
+      "source": "/home-inspections",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/inspection-services",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/radon",
+      "destination": "/services/radon-testing/",
+      "permanent": true
+    },
+    {
+      "source": "/mold",
+      "destination": "/services/mold-inspection/",
+      "permanent": true
+    },
+    {
+      "source": "/asbestos",
+      "destination": "/services/asbestos-testing/",
+      "permanent": true
+    },
+    {
+      "source": "/thermal",
+      "destination": "/services/thermal-imaging/",
+      "permanent": true
+    },
+    {
+      "source": "/wett-inspection",
+      "destination": "/services/wett/",
+      "permanent": true
+    },
+    {
+      "source": "/fireplace-inspection",
+      "destination": "/services/wett/",
+      "permanent": true
+    },
+    {
+      "source": "/lead-paint",
+      "destination": "/services/lead-paint-testing/",
+      "permanent": true
+    },
+    {
+      "source": "/well-water",
+      "destination": "/services/well-water-testing/",
+      "permanent": true
+    },
+    {
+      "source": "/sewer",
+      "destination": "/services/sewer-scope/",
+      "permanent": true
+    },
+    {
+      "source": "/air-quality-testing",
+      "destination": "/services/air-quality/",
+      "permanent": true
+    },
+    {
+      "source": "/book",
+      "destination": "/booking/",
+      "permanent": true
+    },
+    {
+      "source": "/schedule",
+      "destination": "/booking/",
+      "permanent": true
+    },
+    {
+      "source": "/appointment",
+      "destination": "/booking/",
+      "permanent": true
+    },
+    {
+      "source": "/areas",
+      "destination": "/locations/",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas",
+      "destination": "/locations/",
+      "permanent": true
+    },
+    {
+      "source": "/coverage",
+      "destination": "/locations/",
+      "permanent": true
+    },
+    {
+      "source": "/reviews",
+      "destination": "/testimonials/",
+      "permanent": true
+    },
+    {
+      "source": "/customer-reviews",
+      "destination": "/testimonials/",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/our-team",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/faqs",
+      "destination": "/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/questions",
+      "destination": "/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/prices",
+      "destination": "/pricing/",
+      "permanent": true
+    },
+    {
+      "source": "/rates",
+      "destination": "/pricing/",
+      "permanent": true
+    },
+    {
+      "source": "/cost",
+      "destination": "/pricing/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/articles",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/news",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/home-inspection-guide",
+      "destination": "/blog/first-time-home-buyer-inspection-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/toronto-home-issues",
+      "destination": "/blog/common-issues-toronto-homes/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sellers-inspection",
+      "destination": "/blog/pre-listing-inspection-benefits/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/radon-guide",
+      "destination": "/blog/radon-testing-importance/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/winter-maintenance",
+      "destination": "/blog/winter-home-maintenance-checklist/",
+      "permanent": true
+    },
+    {
+      "source": "/gta",
+      "destination": "/locations/toronto/",
+      "permanent": true
+    },
+    {
+      "source": "/toronto-inspection",
+      "destination": "/locations/toronto/",
+      "permanent": true
+    },
+    {
+      "source": "/mississauga-inspection",
+      "destination": "/locations/mississauga/",
+      "permanent": true
+    },
+    {
+      "source": "/brampton-inspection",
+      "destination": "/locations/brampton/",
+      "permanent": true
+    }
   ]
 }

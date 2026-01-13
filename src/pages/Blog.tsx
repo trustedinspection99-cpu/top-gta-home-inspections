@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { Calendar, Clock, ArrowRight, Search, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,7 +17,7 @@ const blogPosts = [
     readTime: "8 min read",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
     featured: true,
-    relatedService: "/services/pre-purchase",
+    relatedService: "/services/pre-purchase/",
   },
   {
     id: 2,
@@ -31,7 +30,7 @@ const blogPosts = [
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/pre-purchase",
+    relatedService: "/services/pre-purchase/",
   },
   {
     id: 3,
@@ -44,7 +43,7 @@ const blogPosts = [
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/pre-listing",
+    relatedService: "/services/pre-listing/",
   },
   {
     id: 4,
@@ -57,7 +56,7 @@ const blogPosts = [
     readTime: "7 min read",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/radon-testing",
+    relatedService: "/services/radon-testing/",
   },
   {
     id: 5,
@@ -83,7 +82,7 @@ const blogPosts = [
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/thermal-imaging",
+    relatedService: "/services/thermal-imaging/",
   },
   {
     id: 7,
@@ -96,7 +95,7 @@ const blogPosts = [
     readTime: "9 min read",
     image: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/pre-purchase",
+    relatedService: "/services/pre-purchase/",
   },
   {
     id: 8,
@@ -109,7 +108,7 @@ const blogPosts = [
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/mold-inspection",
+    relatedService: "/services/mold-inspection/",
   },
   {
     id: 9,
@@ -122,7 +121,7 @@ const blogPosts = [
     readTime: "7 min read",
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/new-construction",
+    relatedService: "/services/new-construction/",
   },
   {
     id: 10,
@@ -135,7 +134,7 @@ const blogPosts = [
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/condo",
+    relatedService: "/services/condo/",
   },
 ];
 
@@ -155,11 +154,6 @@ export default function Blog() {
 
   return (
     <Layout>
-      <Helmet>
-        <title>Home Inspection Blog | Tips & Guides | ASADS</title>
-        <meta name="description" content="Expert home inspection tips, industry insights, and helpful guides for GTA homeowners. Learn about common issues, maintenance, and inspection best practices." />
-        <link rel="canonical" href="https://www.asads.ca/blog/" />
-      </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16 md:py-24">
         <div className="container">
@@ -243,7 +237,7 @@ export default function Blog() {
                   </span>
                 </div>
                 <Button asChild>
-                  <Link to={`/blog/${featuredPost.slug}/`}>
+                  <Link to={`/blog/${featuredPost.slug}`}>
                     Read Article
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -276,7 +270,7 @@ export default function Blog() {
                 <div className="p-6">
                   <span className="text-primary text-sm font-medium">{post.category}</span>
                   <h3 className="font-heading text-xl font-semibold text-foreground mt-2 mb-3 line-clamp-2 group-hover:text-primary transition-colors">
-                    <Link to={`/blog/${post.slug}/`}>{post.title}</Link>
+                    <Link to={`/blog/${post.slug}`}>{post.title}</Link>
                   </h3>
                   <p className="text-muted-foreground mb-4 line-clamp-2">
                     {post.excerpt}

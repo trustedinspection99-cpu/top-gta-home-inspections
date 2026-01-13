@@ -116,7 +116,7 @@ export function LocationPageTemplate({
 }: LocationPageTemplateProps) {
   const location = useLocation();
   const slugifiedCity = city.toLowerCase().replace(/\s+/g, "-");
-  const url = getCanonicalUrl(`/locations/${slugifiedCity}/`);
+  const url = getCanonicalUrl(`/locations/${slugifiedCity}`);
 
   const schemaOrgJSONLD = useMemo(
     () => ({

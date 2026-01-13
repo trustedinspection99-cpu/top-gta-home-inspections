@@ -33,7 +33,7 @@ export function Header() {
 
             <NavigationMenuItem>
               {/* FIXED: Added trailing slash to /about/ */}
-              <Link to="/about/" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", (location.pathname === "/about" || location.pathname === "/about") && "bg-accent/50")}>About</Link>
+              <Link to="/about/" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", (location.pathname === "/about" || location.pathname === "/about/") && "bg-accent/50")}>About</Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
@@ -42,12 +42,12 @@ export function Header() {
 
             <NavigationMenuItem>
               {/* FIXED: Added trailing slash to /testimonials/ */}
-              <Link to="/testimonials/" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", (location.pathname === "/testimonials" || location.pathname === "/testimonials") && "bg-accent/50")}>Reviews</Link>
+              <Link to="/testimonials/" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", (location.pathname === "/testimonials" || location.pathname === "/testimonials/") && "bg-accent/50")}>Reviews</Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
               {/* FIXED: Added trailing slash to /faq/ */}
-              <Link to="/faq/" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", (location.pathname === "/faq" || location.pathname === "/faq") && "bg-accent/50")}>FAQ</Link>
+              <Link to="/faq/" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", (location.pathname === "/faq" || location.pathname === "/faq/") && "bg-accent/50")}>FAQ</Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
@@ -76,6 +76,7 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="lg:hidden border-t bg-background">
           <nav className="container py-4 space-y-2">
+            {/* FIXED: All mobile links now use trailing slashes / */}
             <Link to="/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
             <Link to="/services/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
             <Link to="/locations/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Locations</Link>

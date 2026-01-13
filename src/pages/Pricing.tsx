@@ -25,7 +25,7 @@ const mainInspections = [
       "Same-day digital report with photos",
       "90-day warranty coverage",
     ],
-    href: "/services/pre-purchase/",
+    href: "/services/pre-purchase",
     popular: true,
   },
   {
@@ -46,7 +46,7 @@ const mainInspections = [
       "Increase buyer confidence",
       "Same-day report delivery",
     ],
-    href: "/services/pre-listing/",
+    href: "/services/pre-listing",
   },
   {
     title: "New Construction Inspection",
@@ -64,7 +64,7 @@ const mainInspections = [
       "Tarion warranty compliance",
       "Detailed photo documentation",
     ],
-    href: "/services/new-construction/",
+    href: "/services/new-construction",
   },
   {
     title: "Condo Inspection",
@@ -83,7 +83,7 @@ const mainInspections = [
       "Status certificate review tips",
       "Same-day report",
     ],
-    href: "/services/condo/",
+    href: "/services/condo",
   },
   {
     title: "Commercial Inspection",
@@ -101,7 +101,7 @@ const mainInspections = [
       "ADA compliance observations",
       "Detailed commercial report",
     ],
-    href: "/services/commercial/",
+    href: "/services/commercial",
   },
 ];
 
@@ -111,63 +111,63 @@ const specialtyServices = [
     price: "$149",
     duration: "48-hour test",
     description: "Detect harmful radon gas in your home",
-    href: "/services/radon-testing/",
+    href: "/services/radon-testing",
   },
   {
     title: "Mold Inspection",
     price: "$299+",
     duration: "Visual + air sampling",
     description: "Identify mold issues and moisture sources",
-    href: "/services/mold-inspection/",
+    href: "/services/mold-inspection",
   },
   {
     title: "Asbestos Testing",
     price: "$99/sample",
     duration: "Lab results in 3-5 days",
     description: "Safe identification of asbestos materials",
-    href: "/services/asbestos-testing/",
+    href: "/services/asbestos-testing",
   },
   {
     title: "WETT Inspection",
     price: "$249",
     duration: "Wood-burning appliances",
     description: "Fireplace and wood stove safety inspection",
-    href: "/services/wett/",
+    href: "/services/wett",
   },
   {
     title: "Thermal Imaging",
     price: "$149",
     duration: "Add-on service",
     description: "Infrared scan for hidden issues",
-    href: "/services/thermal-imaging/",
+    href: "/services/thermal-imaging",
   },
   {
     title: "Lead Paint Testing",
     price: "$79/sample",
     duration: "Lab results in 5-7 days",
     description: "Protect your family from lead hazards",
-    href: "/services/lead-paint-testing/",
+    href: "/services/lead-paint-testing",
   },
   {
     title: "Well Water Testing",
     price: "$199",
     duration: "Comprehensive panel",
     description: "Ensure safe drinking water quality",
-    href: "/services/well-water-testing/",
+    href: "/services/well-water-testing",
   },
   {
     title: "Sewer Scope",
     price: "$199",
     duration: "Video inspection",
     description: "Camera inspection of sewer lines",
-    href: "/services/sewer-scope/",
+    href: "/services/sewer-scope",
   },
   {
     title: "Air Quality Testing",
     price: "$249+",
     duration: "Indoor air analysis",
     description: "Test for VOCs, allergens, and pollutants",
-    href: "/services/air-quality/",
+    href: "/services/air-quality",
   },
 ];
 
@@ -205,7 +205,7 @@ export default function Pricing() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <Link to="/booking/">
+                <Link to="/booking">
                   Book Your Inspection
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>

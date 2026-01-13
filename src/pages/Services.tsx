@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -25,7 +24,7 @@ const mainServices = [
     icon: Home,
     title: "Pre-Purchase Home Inspection",
     description: "Comprehensive evaluation before you buy. Identify issues, understand the property condition, and negotiate with confidence.",
-    href: "/services/pre-purchase",
+    href: "/services/pre-purchase/",
     features: [
       "200+ point inspection",
       "Detailed photo report",
@@ -38,7 +37,7 @@ const mainServices = [
     icon: Building2,
     title: "Pre-Listing Inspection",
     description: "Sell your home faster and for more. Address issues before listing and build buyer confidence with a pre-inspection report.",
-    href: "/services/pre-listing",
+    href: "/services/pre-listing/",
     features: [
       "Identify issues before buyers do",
       "Reduce negotiation surprises",
@@ -51,7 +50,7 @@ const mainServices = [
     icon: Hammer,
     title: "New Construction Inspection",
     description: "Don't assume new means perfect. We catch builder defects and incomplete work before your final walkthrough.",
-    href: "/services/new-construction",
+    href: "/services/new-construction/",
     features: [
       "Pre-delivery inspection",
       "Tarion warranty support",
@@ -64,7 +63,7 @@ const mainServices = [
     icon: Building,
     title: "Condo Inspection",
     description: "Specialized inspections for condos, townhomes, and stacked townhouses. Know exactly what you're buying.",
-    href: "/services/condo",
+    href: "/services/condo/",
     features: [
       "Unit-specific inspection",
       "HVAC and plumbing review",
@@ -77,7 +76,7 @@ const mainServices = [
     icon: Factory,
     title: "Commercial Inspection",
     description: "Protect your business investment with comprehensive commercial property assessments for all property types.",
-    href: "/services/commercial",
+    href: "/services/commercial/",
     features: [
       "Multi-unit buildings",
       "Retail and office spaces",
@@ -93,7 +92,7 @@ const specialtyServices = [
     icon: Thermometer,
     title: "Radon Testing",
     description: "Radon is the #1 cause of lung cancer in non-smokers. We test for this invisible, odorless gas to protect your family.",
-    href: "/services/radon-testing",
+    href: "/services/radon-testing/",
     duration: "48-96 hours",
     price: "From $149",
   },
@@ -101,7 +100,7 @@ const specialtyServices = [
     icon: Search,
     title: "Mold Inspection",
     description: "Identify hidden mold growth and moisture issues. Air sampling and visual inspection for comprehensive assessment.",
-    href: "/services/mold-inspection",
+    href: "/services/mold-inspection/",
     duration: "2-3 hours",
     price: "From $299",
   },
@@ -109,7 +108,7 @@ const specialtyServices = [
     icon: Flame,
     title: "Thermal Imaging",
     description: "See beyond walls. Infrared technology reveals hidden moisture, insulation gaps, and electrical hot spots.",
-    href: "/services/thermal-imaging",
+    href: "/services/thermal-imaging/",
     duration: "Included with inspection",
     price: "From $99",
   },
@@ -117,7 +116,7 @@ const specialtyServices = [
     icon: Flame,
     title: "WETT Inspection",
     description: "Safety certification for wood stoves, fireplaces, and chimneys. Required for insurance and peace of mind.",
-    href: "/services/wett",
+    href: "/services/wett/",
     duration: "1-2 hours",
     price: "From $199",
   },
@@ -125,7 +124,7 @@ const specialtyServices = [
     icon: Wind,
     title: "Air Quality Testing",
     description: "Comprehensive indoor air quality assessment including VOCs, allergens, and particulate matter.",
-    href: "/services/air-quality",
+    href: "/services/air-quality/",
     duration: "2-4 hours",
     price: "From $249",
   },
@@ -133,7 +132,7 @@ const specialtyServices = [
     icon: Search,
     title: "Asbestos Testing",
     description: "Safe identification and lab testing for asbestos in older homes. Protect your family from harmful fibers.",
-    href: "/services/asbestos-testing",
+    href: "/services/asbestos-testing/",
     duration: "Lab results 3-5 days",
     price: "From $99/sample",
   },
@@ -141,7 +140,7 @@ const specialtyServices = [
     icon: Search,
     title: "Lead Paint Testing",
     description: "Essential for pre-1978 homes. Identify lead paint hazards to protect children and families.",
-    href: "/services/lead-paint-testing",
+    href: "/services/lead-paint-testing/",
     duration: "Lab results 5-7 days",
     price: "From $79/sample",
   },
@@ -149,7 +148,7 @@ const specialtyServices = [
     icon: Search,
     title: "Well Water Testing",
     description: "Comprehensive water quality analysis for rural properties. Ensure safe drinking water for your family.",
-    href: "/services/well-water-testing",
+    href: "/services/well-water-testing/",
     duration: "Lab results 5-7 days",
     price: "From $199",
   },
@@ -157,7 +156,7 @@ const specialtyServices = [
     icon: Search,
     title: "Sewer Scope Inspection",
     description: "Camera inspection of sewer lines to identify blockages, root intrusion, and damage before costly repairs.",
-    href: "/services/sewer-scope",
+    href: "/services/sewer-scope/",
     duration: "30-60 minutes",
     price: "From $199",
   },
@@ -189,11 +188,6 @@ const processSteps = [
 export default function Services() {
   return (
     <Layout>
-      <Helmet>
-        <title>Home Inspection Services Ontario | ASADS</title>
-        <meta name="description" content="Comprehensive home inspection services in Ontario. Pre-purchase, pre-listing, condo, commercial, mold testing, radon, thermal imaging. Certified inspectors." />
-        <link rel="canonical" href="https://www.asads.ca/services/" />
-      </Helmet>
       {/* Hero Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5">
         <div className="container">

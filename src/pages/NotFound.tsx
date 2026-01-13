@@ -156,7 +156,7 @@ const NotFound = () => {
                   <Link to="/">Return to Homepage</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/contact/">Contact Support</Link>
+                  <Link to="/contact">Contact Support</Link>
                 </Button>
               </div>
             </div>
