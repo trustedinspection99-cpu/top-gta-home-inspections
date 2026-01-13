@@ -3,31 +3,31 @@ import { Phone, Mail } from "lucide-react";
 import { OrphanLocationLinks } from "@/components/seo/OrphanLocationLinks";
 
 const services = [
-  { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
-  { title: "Pre-Listing Inspection", href: "/services/pre-listing" },
-  { title: "Condo Inspection", href: "/services/condo" },
-  { title: "Commercial Inspection", href: "/services/commercial" },
-  { title: "New Construction", href: "/services/new-construction" },
-  { title: "Radon Testing", href: "/services/radon-testing" },
-  { title: "Mold Inspection", href: "/services/mold-inspection" },
-  { title: "Asbestos Testing", href: "/services/asbestos-testing" },
-  { title: "Lead Paint Testing", href: "/services/lead-paint-testing" },
-  { title: "Well Water Testing", href: "/services/well-water-testing" },
-  { title: "Thermal Imaging", href: "/services/thermal-imaging" },
-  { title: "Air Quality Testing", href: "/services/air-quality" },
-  { title: "Sewer Scope", href: "/services/sewer-scope" },
-  { title: "WETT Inspection", href: "/services/wett" },
+  { title: "Pre-Purchase Inspection", href: "/services/pre-purchase/" },
+  { title: "Pre-Listing Inspection", href: "/services/pre-listing/" },
+  { title: "Condo Inspection", href: "/services/condo/" },
+  { title: "Commercial Inspection", href: "/services/commercial/" },
+  { title: "New Construction", href: "/services/new-construction/" },
+  { title: "Radon Testing", href: "/services/radon-testing/" },
+  { title: "Mold Inspection", href: "/services/mold-inspection/" },
+  { title: "Asbestos Testing", href: "/services/asbestos-testing/" },
+  { title: "Lead Paint Testing", href: "/services/lead-paint-testing/" },
+  { title: "Well Water Testing", href: "/services/well-water-testing/" },
+  { title: "Thermal Imaging", href: "/services/thermal-imaging/" },
+  { title: "Air Quality Testing", href: "/services/air-quality/" },
+  { title: "Sewer Scope", href: "/services/sewer-scope/" },
+  { title: "WETT Inspection", href: "/services/wett/" },
 ];
 
 const quickLinks = [
-  { title: "About Us", href: "/about" },
-  { title: "All Services", href: "/services" },
-  { title: "Pricing", href: "/pricing" },
-  { title: "Blog", href: "/blog" },
-  { title: "FAQ", href: "/faq" },
-  { title: "Testimonials", href: "/testimonials" },
-  { title: "Book Online", href: "/booking" },
-  { title: "Contact", href: "/contact" },
+  { title: "About Us", href: "/about/" },
+  { title: "All Services", href: "/services/" },
+  { title: "Pricing", href: "/pricing/" },
+  { title: "Blog", href: "/blog/" },
+  { title: "FAQ", href: "/faq/" },
+  { title: "Testimonials", href: "/testimonials/" },
+  { title: "Book Online", href: "/booking/" },
+  { title: "Contact", href: "/contact/" },
 ];
 
 export function Footer() {
@@ -97,7 +97,7 @@ export function Footer() {
                 className="grid grid-cols-2 gap-x-6 gap-y-2"
                 linkClassName="text-primary-foreground/80 hover:text-primary-foreground"
               />
-              <Link to="/locations" className="inline-block text-accent hover:text-accent/80 text-sm transition-colors font-medium">
+              <Link to="/locations/" className="inline-block text-accent hover:text-accent/80 text-sm transition-colors font-medium">
                 View All Areas →
               </Link>
             </div>
@@ -125,9 +125,9 @@ export function Footer() {
         <div className="container py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">© {currentYear} ASADS Home Inspection. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link to="/terms" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Terms of Service</Link>
-            <Link to="/privacy" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Privacy Policy</Link>
-            <Link to="/sitemap" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Sitemap</Link>
+            <Link to="/terms/" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Terms of Service</Link>
+            <Link to="/privacy-policy/" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Privacy Policy</Link>
+            <Link to="/sitemap/" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Sitemap</Link>
           </div>
         </div>
       </div>
