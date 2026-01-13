@@ -5,8 +5,10 @@ export const SITE_NAME = "ASADS Home Inspection";
 /**
  * Normalizes paths to:
  * - Always have a leading slash
- * - NEVER have a trailing slash (except root)
+ * - ALWAYS have a trailing slash for directory-style URLs (not for .html files)
  * - Preserve query strings and hash fragments
+ * 
+ * This ensures canonical URLs match the final destination and prevent 308 redirects.
  */
 export function normalizePath(path: string): string {
   if (!path) return "/";
@@ -17,14 +19,19 @@ export function normalizePath(path: string): string {
 
   let normalized = base.startsWith("/") ? base : `/${base}`;
 
-  // Root stays root
-  if (normalized === "/") {
+  // Root stays root with trailing slash
+  if (normalized === "/" || normalized === "") {
     return "/";
   }
 
-  // Remove trailing slash
-  if (normalized.endsWith("/")) {
-    normalized = normalized.slice(0, -1);
+  // Don't add trailing slash to files with extensions (e.g., .html, .xml, .json)
+  if (/\.[a-zA-Z0-9]+$/.test(normalized)) {
+    return `${normalized}${suffix}`;
+  }
+
+  // Ensure trailing slash for all directory-style URLs
+  if (!normalized.endsWith("/")) {
+    normalized = `${normalized}/`;
   }
 
   return `${normalized}${suffix}`;
