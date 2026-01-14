@@ -17,7 +17,7 @@ import {
   FileText,
   ArrowRight,
   Star,
-  AlertCircle // Added for the new section
+  AlertCircle
 } from "lucide-react";
 
 interface SpecialtyService {
@@ -31,7 +31,6 @@ interface Article {
   slug: string;
 }
 
-// Updated Interface to accept localInsights
 interface LocalInsight {
   title: string;
   content: string;
@@ -114,16 +113,19 @@ export function LocationPageTemplate({
   localInsights = [],
   allCities = [],
 }: LocationPageTemplateProps) {
-  const location = useLocation();
   const slugifiedCity = city.toLowerCase().replace(/\s+/g, "-");
   const url = getCanonicalUrl(`/locations/${slugifiedCity}`);
+  const pageTitle = metaTitle || `#1 ${city} Home Inspector | Certified & Same Day Reports`;
+  const pageDescription = metaDescription || description;
 
-  const schemaOrgJSONLD = useMemo(
+  // LocalBusiness Schema
+  const localBusinessSchema = useMemo(
     () => ({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
+      "@id": `${url}#localbusiness`,
       name: `${siteName} ${city}`,
-      description,
+      description: pageDescription,
       url,
       telephone: phoneNumber,
       priceRange: "$$",
@@ -137,23 +139,131 @@ export function LocationPageTemplate({
         addressCountry: "Canada",
       },
       geo: latitude && longitude ? { "@type": "GeoCoordinates", latitude, longitude } : undefined,
-      areaServed: city,
+      areaServed: {
+        "@type": "City",
+        name: city,
+        containedInPlace: {
+          "@type": "AdministrativeArea",
+          name: region
+        }
+      },
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: "5.0",
-        reviewCount: "150"
+        reviewCount: "150",
+        bestRating: "5",
+        worstRating: "1"
       },
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "07:00",
+        closes: "22:00"
+      }
     }),
-    [city, region, description, phoneNumber, address, postalCode, url, siteName, latitude, longitude]
+    [city, region, pageDescription, phoneNumber, address, postalCode, url, siteName, latitude, longitude]
+  );
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = useMemo(
+    () => ({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: SITE_URL
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Locations",
+          item: `${SITE_URL}/locations`
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: city,
+          item: url
+        }
+      ]
+    }),
+    [city, url]
+  );
+
+  // FAQ Schema
+  const faqSchema = useMemo(
+    () => ({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: `How much does a home inspection cost in ${city}?`,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: `Home inspection costs in ${city} typically range from $400-$600 for a standard single-family home. Condos usually cost $350-$450. Contact ASADS at ${phoneNumber} for a personalized quote.`
+          }
+        },
+        {
+          "@type": "Question",
+          name: `How long does a home inspection take in ${city}?`,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: `A thorough home inspection in ${city} typically takes 2-4 hours depending on the property size and condition. You'll receive a same-day digital report.`
+          }
+        },
+        {
+          "@type": "Question",
+          name: `What areas of ${city} do you serve?`,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: `We serve all neighborhoods in ${city}${neighborhoods.length > 0 ? ` including ${neighborhoods.slice(0, 5).join(", ")}` : ""}. Our certified inspectors are familiar with local building practices and common issues.`
+          }
+        }
+      ]
+    }),
+    [city, phoneNumber, neighborhoods]
   );
 
   return (
     <Layout>
       <Helmet>
-        <title>{metaTitle || `#1 ${city} Home Inspector | Certified & Same Day Reports`}</title>
-        <meta name="description" content={metaDescription || description} />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <link rel="canonical" href={url} />
-        <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:site_name" content="ASADS Home Inspection" />
+        <meta property="og:image" content={`${SITE_URL}/images/og-default.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={`Home Inspection Services in ${city}`} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AsadsInspection" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={`${SITE_URL}/images/og-default.jpg`} />
+        
+        {/* Geo Tags */}
+        <meta name="geo.region" content="CA-ON" />
+        <meta name="geo.placename" content={city} />
+        {latitude && longitude && (
+          <meta name="geo.position" content={`${latitude};${longitude}`} />
+        )}
+        
+        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}
@@ -161,7 +271,7 @@ export function LocationPageTemplate({
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-2 mb-6 text-amber-300">
-               <Star className="fill-current w-5 h-5" />
+               <Star className="fill-current w-5 h-5" aria-hidden="true" />
                <span className="font-bold tracking-widest uppercase text-sm">Top Rated in {city}</span>
             </div>
             <h1 className="font-heading text-4xl md:text-6xl font-bold mb-6">
@@ -172,24 +282,24 @@ export function LocationPageTemplate({
             </p>
             <div className="flex flex-wrap gap-6 mb-8">
               <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5 text-primary" />
+                <Clock className="h-5 w-5 text-blue-200" aria-hidden="true" />
                 <span>2-4 Hour Inspections</span>
               </div>
               <div className="flex items-center gap-2">
-                <FileText className="h-5 w-5 text-primary" />
+                <FileText className="h-5 w-5 text-blue-200" aria-hidden="true" />
                 <span>Same-Day Report</span>
               </div>
               <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-primary" />
+                <Shield className="h-5 w-5 text-blue-200" aria-hidden="true" />
                 <span>$2M Liability Insured</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" variant="secondary" className="bg-primary hover:bg-primary/90 text-white border-none">
-                <Link to="/booking/">Book Inspection in {city}</Link>
+              <Button asChild size="lg" variant="secondary" className="bg-white hover:bg-gray-100 text-blue-700 border-none font-bold">
+                <Link to="/booking">Book Inspection in {city}</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                <a href={`tel:${phoneNumber.replace(/[^0-9+]/g, '')}`}>{phoneNumber}</a>
+                <a href={`tel:${phoneNumber.replace(/[^0-9+]/g, '')}`} aria-label={`Call ${phoneNumber}`}>{phoneNumber}</a>
               </Button>
             </div>
           </div>
@@ -202,11 +312,11 @@ export function LocationPageTemplate({
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-12">
               
-              {/* NEW SECTION: This renders the unique Toronto/Waterloo data */}
+              {/* Local Insights Section */}
               {localInsights && localInsights.length > 0 && (
                 <div className="bg-blue-50/50 border border-blue-100 rounded-3xl p-8 shadow-sm">
                   <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                    <AlertCircle className="text-blue-600 w-6 h-6" />
+                    <AlertCircle className="text-blue-600 w-6 h-6" aria-hidden="true" />
                     Property Specifics for {city} Buyers
                   </h2>
                   <div className="grid gap-8">
@@ -228,7 +338,7 @@ export function LocationPageTemplate({
                 <div className="grid sm:grid-cols-2 gap-4">
                   {services.map((service) => (
                     <div key={service} className="flex items-start gap-3 p-4 rounded-lg bg-muted/50">
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
                       <span className="text-foreground font-medium">{service}</span>
                     </div>
                   ))}
@@ -244,7 +354,7 @@ export function LocationPageTemplate({
                   {specialtyServices.map((s) => (
                     <Card key={s.name} className="border-border/50">
                       <CardContent className="p-6 flex gap-4">
-                        <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                           {s.icon}
                         </div>
                         <div>
@@ -268,6 +378,25 @@ export function LocationPageTemplate({
                   </div>
                 </div>
               )}
+
+              {/* Services Available - Internal Linking */}
+              <div>
+                <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
+                  Services Available in {city}
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  {featuredServices.map((service) => (
+                    <Link
+                      key={service.slug}
+                      to={`/services/${service.slug}`}
+                      className="flex items-center gap-2 p-3 rounded-lg bg-muted/50 hover:bg-primary/10 border border-border/50 hover:border-primary/50 transition-colors text-sm"
+                    >
+                      <ArrowRight className="h-4 w-4 text-primary flex-shrink-0" aria-hidden="true" />
+                      <span className="text-foreground">{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Sidebar */}
@@ -277,11 +406,63 @@ export function LocationPageTemplate({
                   <h3 className="text-xl font-bold mb-4">Book Your Inspection</h3>
                   <p className="text-sm text-slate-600 mb-6">Same-day digital reports with every {city} property audit.</p>
                   <Button asChild className="w-full bg-primary text-white py-6 shadow-lg shadow-primary/20">
-                    <Link to="/booking/">Check Availability</Link>
+                    <Link to="/booking">Check Availability</Link>
                   </Button>
                   <p className="mt-4 text-sm text-slate-500">Or call <a href={`tel:${phoneNumber}`} className="text-primary font-bold">{phoneNumber}</a></p>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-heading text-3xl font-bold text-foreground mb-8 text-center">
+              Frequently Asked Questions About {city} Home Inspections
+            </h2>
+            <div className="space-y-6">
+              <div className="bg-background p-6 rounded-xl border border-border/50">
+                <h3 className="font-bold text-lg mb-2">How much does a home inspection cost in {city}?</h3>
+                <p className="text-muted-foreground">Home inspection costs in {city} typically range from $400-$600 for a standard single-family home. Condos usually cost $350-$450. Contact us at {phoneNumber} for a personalized quote.</p>
+              </div>
+              <div className="bg-background p-6 rounded-xl border border-border/50">
+                <h3 className="font-bold text-lg mb-2">How long does a home inspection take in {city}?</h3>
+                <p className="text-muted-foreground">A thorough home inspection typically takes 2-4 hours depending on the property size and condition. You'll receive a same-day digital report with photos and detailed findings.</p>
+              </div>
+              <div className="bg-background p-6 rounded-xl border border-border/50">
+                <h3 className="font-bold text-lg mb-2">What areas of {city} do you serve?</h3>
+                <p className="text-muted-foreground">We serve all neighborhoods in {city}{neighborhoods.length > 0 ? ` including ${neighborhoods.slice(0, 5).join(", ")}` : ""}. Our certified inspectors are familiar with local building practices and common issues in the area.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-primary text-primary-foreground">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
+              Ready to Book Your {city} Home Inspection?
+            </h2>
+            <p className="text-xl text-primary-foreground/90 mb-8">
+              Get peace of mind with a thorough professional inspection. Book online or call today for same-day scheduling.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" variant="secondary">
+                <Link to="/booking">Book Online Now</Link>
+              </Button>
+              <Button 
+                asChild 
+                size="lg" 
+                variant="outline"
+                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              >
+                <a href={`tel:${phoneNumber.replace(/[^0-9+]/g, '')}`}>{phoneNumber}</a>
+              </Button>
             </div>
           </div>
         </div>
