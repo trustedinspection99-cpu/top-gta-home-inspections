@@ -123,8 +123,8 @@ const Index = () => {
             Protect your family and your investment with certified expertise.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="/booking/" className="bg-white text-blue-700 px-8 py-4 rounded-md font-bold text-lg hover:bg-gray-100 transition-all shadow-lg">Book Your Inspection</a>
-            <a href="tel:6478019311" className="bg-transparent border-2 border-white px-8 py-4 rounded-md font-bold text-lg hover:bg-white/10 transition-all">Call (647) 801-9311</a>
+            <a href="/booking" className="bg-white text-blue-700 px-8 py-4 rounded-md font-bold text-lg hover:bg-gray-100 transition-all shadow-lg">Book Your Inspection</a>
+            <a href="tel:6478019311" className="bg-transparent border-2 border-white px-8 py-4 rounded-md font-bold text-lg hover:bg-white/10 transition-all" aria-label="Call (647) 801-9311">Call (647) 801-9311</a>
           </div>
         </div>
       </section>
@@ -151,26 +151,26 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Professional Inspection Services</h2>
               <p className="text-gray-600">Comprehensive solutions for every property type in the GTA.</p>
             </div>
-            <a href="/services/" className="text-blue-600 font-bold hover:underline mt-4 md:mt-0">View All Services →</a>
+            <a href="/services" className="text-blue-600 font-bold hover:underline mt-4 md:mt-0">View All Services →</a>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-2xl shadow-sm border hover:shadow-md transition-all">
-              <Home className="text-blue-600 mb-4 h-10 w-10" />
+              <Home className="text-blue-600 mb-4 h-10 w-10" aria-hidden="true" />
               <h3 className="text-xl font-bold mb-3">Pre-Purchase Inspection</h3>
               <p className="text-gray-600 text-sm mb-6">Complete evaluation before you buy. Identify <strong>foundation cracks</strong> and <strong>roof leaks</strong> to negotiate with confidence.</p>
-              <a href="/services/pre-purchase/" className="text-blue-700 font-bold flex items-center gap-1">Details <ChevronRight size={16} /></a>
+              <a href="/services/pre-purchase" className="text-blue-700 font-bold flex items-center gap-1">Details <ChevronRight size={16} aria-hidden="true" /></a>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-sm border hover:shadow-md transition-all">
-              <FileText className="text-blue-600 mb-4 h-10 w-10" />
+              <FileText className="text-blue-600 mb-4 h-10 w-10" aria-hidden="true" />
               <h3 className="text-xl font-bold mb-3">Pre-Listing Inspection</h3>
               <p className="text-gray-600 text-sm mb-6">Sell your home faster. Our <strong>pre-listing inspection</strong> identifies issues early to build buyer trust and avoid renegotiation.</p>
-              <a href="/services/pre-listing/" className="text-blue-700 font-bold flex items-center gap-1">Seller Guide <ChevronRight size={16} /></a>
+              <a href="/services/pre-listing" className="text-blue-700 font-bold flex items-center gap-1">Seller Guide <ChevronRight size={16} aria-hidden="true" /></a>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-sm border hover:shadow-md transition-all">
-              <Construction className="text-blue-600 mb-4 h-10 w-10" />
+              <Construction className="text-blue-600 mb-4 h-10 w-10" aria-hidden="true" />
               <h3 className="text-xl font-bold mb-3">New Construction</h3>
               <p className="text-gray-600 text-sm mb-6">Verify builder quality and catch <strong>structural defects</strong> before your final walkthrough or Tarion warranty expiry.</p>
-              <a href="/services/new-construction/" className="text-blue-700 font-bold flex items-center gap-1">Warranty Check <ChevronRight size={16} /></a>
+              <a href="/services/new-construction" className="text-blue-700 font-bold flex items-center gap-1">Warranty Check <ChevronRight size={16} aria-hidden="true" /></a>
             </div>
           </div>
         </div>
@@ -343,8 +343,8 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Service Areas Across the GTA</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {["Toronto", "Mississauga", "Brampton", "Vaughan", "Markham", "Oakville", "Richmond Hill", "Burlington", "Pickering", "Oshawa", "Etobicoke", "North York", "Scarborough", "Milton", "Whitby"].map((city) => (
-              <a key={city} href={`/locations/${city.toLowerCase().replace(' ', '-')}/`} className="flex items-center gap-2 p-3 rounded-lg hover:bg-white/10 border border-white/10 text-sm justify-center transition-all">
-                <MapPin size={14} className="text-blue-400" /> {city}
+              <a key={city} href={`/locations/${city.toLowerCase().replace(' ', '-')}`} className="flex items-center gap-2 p-3 rounded-lg hover:bg-white/10 border border-white/10 text-sm justify-center transition-all">
+                <MapPin size={14} className="text-blue-400" aria-hidden="true" /> {city}
               </a>
             ))}
           </div>

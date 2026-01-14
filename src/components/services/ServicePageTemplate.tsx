@@ -409,21 +409,21 @@ export function ServicePageTemplate({
             {featuredLocations.map((location) => (
               <Link
                 key={location.slug}
-                to={`/locations/${location.slug}/`}
+                to={`/locations/${location.slug}`}
                 className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
               >
-                <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
+                <MapPin className="h-4 w-4 text-primary flex-shrink-0" aria-hidden="true" />
                 {location.name}
               </Link>
             ))}
           </div>
           <div className="text-center mt-6">
             <Link 
-              to="/locations/" 
+              to="/locations" 
               className="text-primary hover:underline text-sm font-medium inline-flex items-center gap-1"
             >
               View all service areas
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
         </div>

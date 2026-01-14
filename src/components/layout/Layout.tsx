@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import Breadcrumbs from "./Breadcrumbs";
-import { SITE_URL } from "@/lib/seo";
+import { SITE_URL, normalizePath } from "@/lib/seo";
 import FloatingCallButton from "@/components/FloatingCallButton";
 
 interface LayoutProps {
@@ -17,7 +17,7 @@ const websiteSchema = {
   "@id": `${SITE_URL}/#website`,
   name: "ASADS Home Inspection",
   alternateName: "ASADS",
-  url: `${SITE_URL}/`,
+  url: SITE_URL,
   description: "Professional home inspection services in the Greater Toronto Area",
   publisher: {
     "@type": "Organization",
@@ -47,7 +47,7 @@ const localBusinessSchema = {
     `${SITE_URL}/images/home-inspection-service.webp`
   ],
   logo: `${SITE_URL}/logo.png`,
-  url: `${SITE_URL}/`,
+  url: SITE_URL,
   telephone: "+16478019311",
   email: "info@asads.ca",
   priceRange: "$350-$650",
@@ -94,28 +94,29 @@ const localBusinessSchema = {
 export function Layout({ children }: LayoutProps) {
   const location = useLocation();
 
-  // Canonical with trailing slash
-  const path =
-    location.pathname === "/"
-      ? "/"
-      : location.pathname.endsWith("/")
-      ? location.pathname
-      : `${location.pathname}/`;
-
-  const canonicalUrl = `${SITE_URL}${path}`;
+  // Canonical URL without trailing slash (except root)
+  const canonicalUrl = `${SITE_URL}${normalizePath(location.pathname)}`;
 
   return (
     <>
       <Helmet>
+        {/* Core SEO Meta Tags */}
         <meta property="og:type" content="website" />
-<meta property="og:site_name" content="ASADS Home Inspection" />
-<meta property="og:image" content={`${SITE_URL}/images/og-default.jpg`} />
-<meta property="og:url" content={canonicalUrl} />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@AsadsInspection" />
+        <meta property="og:site_name" content="ASADS Home Inspection" />
+        <meta property="og:image" content={`${SITE_URL}/images/og-default.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="ASADS Home Inspection - Professional Home Inspectors in Toronto & GTA" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:locale" content="en_CA" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AsadsInspection" />
+        <meta name="twitter:image" content={`${SITE_URL}/images/og-default.jpg`} />
     
-       <link rel="canonical" href={canonicalUrl} />
+        <link rel="canonical" href={canonicalUrl} />
+        
         <script type="application/ld+json">
           {JSON.stringify(websiteSchema)}
         </script>

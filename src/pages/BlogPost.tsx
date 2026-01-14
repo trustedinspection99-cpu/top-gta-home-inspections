@@ -84,13 +84,13 @@ export default function BlogPost() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.asads.ca/"
+        "item": "https://www.asads.ca"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://www.asads.ca/blog/"
+        "item": "https://www.asads.ca/blog"
       },
       {
         "@type": "ListItem",
@@ -171,6 +171,9 @@ export default function BlogPost() {
                 src={post.image}
                 alt={post.title}
                 className="absolute inset-0 w-full h-full object-cover"
+                loading="eager"
+                width="800"
+                height="450"
               />
             </div>
           </div>
