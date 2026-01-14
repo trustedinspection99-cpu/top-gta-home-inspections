@@ -3,7 +3,7 @@ export const SITE_URL = "https://www.asads.ca";
 export const SITE_NAME = "ASADS Home Inspection";
 
 /**
- * Ensures internal paths consistently use a leading and trailing slash.
+ * Ensures internal paths consistently use a leading slash without trailing slash.
  * Preserves query strings and hash fragments.
  */
 export function normalizePath(path: string): string {
@@ -15,13 +15,12 @@ export function normalizePath(path: string): string {
 
   const withLeading = base.startsWith("/") ? base : `/${base}`;
 
-  // special-case root
-  const withTrailing = withLeading === "/" ? "/" : withLeading.endsWith("/") ? withLeading : `${withLeading}/`;
+  // Remove trailing slash except for root
+  const normalized = withLeading === "/" ? "/" : withLeading.endsWith("/") ? withLeading.slice(0, -1) : withLeading;
 
-  return `${withTrailing}${suffix}`;
+  return `${normalized}${suffix}`;
 }
 
 export function getCanonicalUrl(path: string): string {
   return `${SITE_URL}${normalizePath(path)}`;
 }
-

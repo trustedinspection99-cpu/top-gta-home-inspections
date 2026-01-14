@@ -1,207 +1,207 @@
 {
-  "trailingSlash": true,
+  "trailingSlash": false,
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "redirects": [
     {
       "source": "/home-inspection",
-      "destination": "/services/pre-purchase/",
+      "destination": "/services/pre-purchase",
       "permanent": true
     },
     {
       "source": "/home-inspections",
-      "destination": "/services/",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/inspection-services",
-      "destination": "/services/",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/radon",
-      "destination": "/services/radon-testing/",
+      "destination": "/services/radon-testing",
       "permanent": true
     },
     {
       "source": "/mold",
-      "destination": "/services/mold-inspection/",
+      "destination": "/services/mold-inspection",
       "permanent": true
     },
     {
       "source": "/asbestos",
-      "destination": "/services/asbestos-testing/",
+      "destination": "/services/asbestos-testing",
       "permanent": true
     },
     {
       "source": "/thermal",
-      "destination": "/services/thermal-imaging/",
+      "destination": "/services/thermal-imaging",
       "permanent": true
     },
     {
       "source": "/wett-inspection",
-      "destination": "/services/wett/",
+      "destination": "/services/wett",
       "permanent": true
     },
     {
       "source": "/fireplace-inspection",
-      "destination": "/services/wett/",
+      "destination": "/services/wett",
       "permanent": true
     },
     {
       "source": "/lead-paint",
-      "destination": "/services/lead-paint-testing/",
+      "destination": "/services/lead-paint-testing",
       "permanent": true
     },
     {
       "source": "/well-water",
-      "destination": "/services/well-water-testing/",
+      "destination": "/services/well-water-testing",
       "permanent": true
     },
     {
       "source": "/sewer",
-      "destination": "/services/sewer-scope/",
+      "destination": "/services/sewer-scope",
       "permanent": true
     },
     {
       "source": "/air-quality-testing",
-      "destination": "/services/air-quality/",
+      "destination": "/services/air-quality",
       "permanent": true
     },
     {
       "source": "/book",
-      "destination": "/booking/",
+      "destination": "/booking",
       "permanent": true
     },
     {
       "source": "/schedule",
-      "destination": "/booking/",
+      "destination": "/booking",
       "permanent": true
     },
     {
       "source": "/appointment",
-      "destination": "/booking/",
+      "destination": "/booking",
       "permanent": true
     },
     {
       "source": "/areas",
-      "destination": "/locations/",
+      "destination": "/locations",
       "permanent": true
     },
     {
       "source": "/service-areas",
-      "destination": "/locations/",
+      "destination": "/locations",
       "permanent": true
     },
     {
       "source": "/coverage",
-      "destination": "/locations/",
+      "destination": "/locations",
       "permanent": true
     },
     {
       "source": "/reviews",
-      "destination": "/testimonials/",
+      "destination": "/testimonials",
       "permanent": true
     },
     {
       "source": "/customer-reviews",
-      "destination": "/testimonials/",
+      "destination": "/testimonials",
       "permanent": true
     },
     {
       "source": "/about-us",
-      "destination": "/about/",
+      "destination": "/about",
       "permanent": true
     },
     {
       "source": "/our-team",
-      "destination": "/about/",
+      "destination": "/about",
       "permanent": true
     },
     {
       "source": "/faqs",
-      "destination": "/faq/",
+      "destination": "/faq",
       "permanent": true
     },
     {
       "source": "/questions",
-      "destination": "/faq/",
+      "destination": "/faq",
       "permanent": true
     },
     {
       "source": "/prices",
-      "destination": "/pricing/",
+      "destination": "/pricing",
       "permanent": true
     },
     {
       "source": "/rates",
-      "destination": "/pricing/",
+      "destination": "/pricing",
       "permanent": true
     },
     {
       "source": "/cost",
-      "destination": "/pricing/",
+      "destination": "/pricing",
       "permanent": true
     },
     {
       "source": "/privacy",
-      "destination": "/privacy-policy/",
+      "destination": "/privacy-policy",
       "permanent": true
     },
     {
       "source": "/articles",
-      "destination": "/blog/",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/news",
-      "destination": "/blog/",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/blog/home-inspection-guide",
-      "destination": "/blog/first-time-home-buyer-inspection-guide/",
+      "destination": "/blog/first-time-home-buyer-inspection-guide",
       "permanent": true
     },
     {
       "source": "/blog/toronto-home-issues",
-      "destination": "/blog/common-issues-toronto-homes/",
+      "destination": "/blog/common-issues-toronto-homes",
       "permanent": true
     },
     {
       "source": "/blog/sellers-inspection",
-      "destination": "/blog/pre-listing-inspection-benefits/",
+      "destination": "/blog/pre-listing-inspection-benefits",
       "permanent": true
     },
     {
       "source": "/blog/radon-guide",
-      "destination": "/blog/radon-testing-importance/",
+      "destination": "/blog/radon-testing-importance",
       "permanent": true
     },
     {
       "source": "/blog/winter-maintenance",
-      "destination": "/blog/winter-home-maintenance-checklist/",
+      "destination": "/blog/winter-home-maintenance-checklist",
       "permanent": true
     },
     {
       "source": "/gta",
-      "destination": "/locations/toronto/",
+      "destination": "/locations/toronto",
       "permanent": true
     },
     {
       "source": "/toronto-inspection",
-      "destination": "/locations/toronto/",
+      "destination": "/locations/toronto",
       "permanent": true
     },
     {
       "source": "/mississauga-inspection",
-      "destination": "/locations/mississauga/",
+      "destination": "/locations/mississauga",
       "permanent": true
     },
     {
       "source": "/brampton-inspection",
-      "destination": "/locations/brampton/",
+      "destination": "/locations/brampton",
       "permanent": true
     }
   ]
