@@ -88,19 +88,22 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.asads.ca/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "About Us",
-      "item": "https://www.asads.ca/about/"
-    }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.asads.ca" },
+    { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.asads.ca/about" }
   ]
+};
+
+// About Page specific schema - ProfilePage
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About ASADS Home Inspection",
+  "description": "Learn about ASADS Home Inspection - trusted Ontario home inspectors since 2015 with rigorous standards and commitment to home safety.",
+  "url": "https://www.asads.ca/about",
+  "mainEntity": {
+    "@type": "Organization",
+    "@id": "https://www.asads.ca/#organization"
+  }
 };
 
 const values = [
@@ -165,13 +168,10 @@ export default function About() {
       <Helmet>
         <title>Expert Home Inspectors in Ontario | ASADS Certified</title>
         <meta name="description" content="Trusted Ontario home inspectors since 2015. Learn about our rigorous standards, honest reporting, and commitment to your home safety." />
-        <link rel="canonical" href="https://www.asads.ca/about/" />
-        <script type="application/ld+json">
-          {JSON.stringify(organizationSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
+        <link rel="canonical" href="https://www.asads.ca/about" />
+        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(aboutPageSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}

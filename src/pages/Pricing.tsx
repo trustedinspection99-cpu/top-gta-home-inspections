@@ -181,6 +181,50 @@ const addOns = [
 ];
 
 export default function Pricing() {
+  // Pricing Page Schema - PriceSpecification
+  const pricingSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.asads.ca/pricing#service",
+    "name": "Home Inspection Services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "ASADS Home Inspection",
+      "telephone": "+1-647-801-9311"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Ontario"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Home Inspection Pricing",
+      "itemListElement": mainInspections.map((inspection, index) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": inspection.title,
+          "description": inspection.description
+        },
+        "priceSpecification": inspection.prices.map(p => ({
+          "@type": "UnitPriceSpecification",
+          "name": p.size,
+          "price": p.price.replace(/[^0-9]/g, ''),
+          "priceCurrency": "CAD"
+        }))
+      }))
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.asads.ca" },
+      { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://www.asads.ca/pricing" }
+    ]
+  };
+
   return (
     <Layout>
       <Helmet>
@@ -189,7 +233,9 @@ export default function Pricing() {
           name="description" 
           content="Transparent home inspection pricing in Ontario. No hidden fees. View our packages for houses, condos, and multi-unit properties."
         />
-        <link rel="canonical" href="https://www.asads.ca/pricing/" />
+        <link rel="canonical" href="https://www.asads.ca/pricing" />
+        <script type="application/ld+json">{JSON.stringify(pricingSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}

@@ -113,12 +113,58 @@ export default function Contact() {
     }
   };
 
+  // Contact Page Schema
+  const contactPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact ASADS Home Inspection",
+    "description": "Contact ASADS for fast scheduling and expert home inspections across Ontario.",
+    "url": "https://www.asads.ca/contact",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "ASADS Home Inspection",
+      "telephone": "+1-647-801-9311",
+      "email": "info@asads.ca",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "16:00"
+        }
+      ]
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.asads.ca" },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.asads.ca/contact" }
+    ]
+  };
+
   return (
     <Layout>
       <Helmet>
         <title>Contact ASADS | Book a Certified Home Inspector</title>
         <meta name="description" content="Ready to book? Contact ASADS for fast scheduling and expert home inspections across Ontario. Get the clarity you need before you buy." />
-        <link rel="canonical" href="https://www.asads.ca/contact/" />
+        <link rel="canonical" href="https://www.asads.ca/contact" />
+        <script type="application/ld+json">{JSON.stringify(contactPageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5">
         <div className="container">

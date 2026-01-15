@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -186,8 +187,67 @@ const processSteps = [
 ];
 
 export default function Services() {
+  // Services Page Schema - ItemList of Services
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "ASADS Home Inspection Services",
+    "description": "Comprehensive home inspection services for buyers, sellers, and property investors in Ontario.",
+    "url": "https://www.asads.ca/services",
+    "numberOfItems": mainServices.length + specialtyServices.length,
+    "itemListElement": [
+      ...mainServices.map((service, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Service",
+          "name": service.title,
+          "description": service.description,
+          "url": `https://www.asads.ca${service.href.replace(/\/$/, '')}`,
+          "offers": {
+            "@type": "Offer",
+            "price": service.price.replace(/[^0-9]/g, ''),
+            "priceCurrency": "CAD"
+          }
+        }
+      })),
+      ...specialtyServices.map((service, index) => ({
+        "@type": "ListItem",
+        "position": mainServices.length + index + 1,
+        "item": {
+          "@type": "Service",
+          "name": service.title,
+          "description": service.description,
+          "url": `https://www.asads.ca${service.href.replace(/\/$/, '')}`,
+          "offers": {
+            "@type": "Offer",
+            "price": service.price.replace(/[^0-9]/g, ''),
+            "priceCurrency": "CAD"
+          }
+        }
+      }))
+    ]
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.asads.ca" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.asads.ca/services" }
+    ]
+  };
+
   return (
     <Layout>
+      <Helmet>
+        <title>Home Inspection Services Ontario | ASADS</title>
+        <meta name="description" content="Comprehensive home inspection services for buyers, sellers, and property investors. Certified inspectors, detailed reports, and peace of mind guaranteed." />
+        <link rel="canonical" href="https://www.asads.ca/services" />
+        <script type="application/ld+json">{JSON.stringify(servicesSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+      </Helmet>
+
       {/* Hero Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5">
         <div className="container">
@@ -201,10 +261,10 @@ export default function Services() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
-                <Link to="/booking/">Book an Inspection</Link>
+                <Link to="/booking">Book an Inspection</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link to="/pricing/">View Pricing</Link>
+                <Link to="/pricing">View Pricing</Link>
               </Button>
             </div>
           </div>
