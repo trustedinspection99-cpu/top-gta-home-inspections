@@ -122,12 +122,53 @@ export default function Booking() {
     return true;
   };
 
+  // Booking Page Schema - ReservationAction
+  const bookingSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Book a Home Inspection Online",
+    "description": "Schedule your Ontario home inspection in minutes with ASADS.",
+    "url": "https://www.asads.ca/booking",
+    "mainEntity": {
+      "@type": "Service",
+      "name": "Home Inspection Booking",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "ASADS Home Inspection",
+        "telephone": "+1-647-801-9311"
+      },
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.asads.ca/booking",
+          "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Home Inspection Appointment"
+        }
+      }
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.asads.ca" },
+      { "@type": "ListItem", "position": 2, "name": "Book Inspection", "item": "https://www.asads.ca/booking" }
+    ]
+  };
+
   return (
     <Layout>
       <Helmet>
         <title>Schedule a Home Inspection Online | ASADS Booking</title>
         <meta name="description" content="Book your Ontario home inspection in minutes. Fast confirmation, certified inspectors, and flexible scheduling for your real estate needs." />
-        <link rel="canonical" href="https://www.asads.ca/booking/" />
+        <link rel="canonical" href="https://www.asads.ca/booking" />
+        <script type="application/ld+json">{JSON.stringify(bookingSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <section className="py-16 md:py-24 hero-gradient text-primary-foreground">

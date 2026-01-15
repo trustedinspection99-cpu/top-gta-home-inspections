@@ -117,6 +117,9 @@ export default function FAQ() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "name": "Home Inspection FAQ",
+    "description": "Frequently asked questions about home inspections in the Greater Toronto Area.",
+    "url": "https://www.asads.ca/faq",
     "mainEntity": allFaqs.map(faq => ({
       "@type": "Question",
       "name": faq.question,
@@ -127,15 +130,23 @@ export default function FAQ() {
     }))
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.asads.ca" },
+      { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://www.asads.ca/faq" }
+    ]
+  };
+
   return (
     <Layout>
       <Helmet>
         <title>FAQ | Home Inspection Questions | ASADS Home Inspection</title>
         <meta name="description" content="Find answers to frequently asked questions about home inspections in the Greater Toronto Area. Learn about costs, process, and what to expect." />
         <link rel="canonical" href="https://www.asads.ca/faq" />
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16 md:py-24">
