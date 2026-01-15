@@ -150,26 +150,26 @@ export const routes: RouteRecord[] = [
     element: <RootLayout />,
     children: [
       { index: true, element: <Index /> },
-      // Main Pages - UPDATED WITH SLASHES
-      { path: 'about/', element: <About /> },
-      { path: 'contact/', element: <Contact /> },
-      { path: 'services/', element: <Services /> },
-      { path: 'blog/', element: <Blog /> },
+      // Main Pages - No trailing slashes (consistent with URL policy)
+      { path: 'about', element: <About /> },
+      { path: 'contact', element: <Contact /> },
+      { path: 'services', element: <Services /> },
+      { path: 'blog', element: <Blog /> },
       { 
-        path: 'blog/:slug/', 
+        path: 'blog/:slug', 
         element: <BlogPost />, 
-        getStaticPaths: () => blogPostsData.map(p => `blog/${p.slug}/`) 
+        getStaticPaths: () => blogPostsData.map(p => `blog/${p.slug}`) 
       },
-      { path: 'testimonials/', element: <Testimonials /> },
-      { path: 'faq/', element: <FAQ /> },
-      { path: 'locations/', element: <Locations /> },
-      { path: 'booking/', element: <Booking /> },
-      { path: 'pricing/', element: <Pricing /> },
-      { path: 'privacy-policy/', element: <PrivacyPolicy /> },
-      { path: 'terms/', element: <Terms /> },
-      { path: 'sitemap/', element: <Sitemap /> },
+      { path: 'testimonials', element: <Testimonials /> },
+      { path: 'faq', element: <FAQ /> },
+      { path: 'locations', element: <Locations /> },
+      { path: 'booking', element: <Booking /> },
+      { path: 'pricing', element: <Pricing /> },
+      { path: 'privacy-policy', element: <PrivacyPolicy /> },
+      { path: 'terms', element: <Terms /> },
+      { path: 'sitemap', element: <Sitemap /> },
 
-      // Service Pages - UPDATED WITH SLASHES
+      // Service Pages
       { path: 'services/pre-purchase', element: <PrePurchase /> },
       { path: 'services/pre-listing', element: <PreListing /> },
       { path: 'services/new-construction', element: <NewConstruction /> },
@@ -185,7 +185,7 @@ export const routes: RouteRecord[] = [
       { path: 'services/sewer-scope', element: <SewerScope /> },
       { path: 'services/air-quality', element: <AirQuality /> },
 
-      // Location Pages - UPDATED removed SLASHES
+      // Location Pages
       { path: 'locations/toronto', element: <Toronto /> },
       { path: 'locations/north-york', element: <NorthYork /> },
       { path: 'locations/scarborough', element: <Scarborough /> },
@@ -235,7 +235,7 @@ export const routes: RouteRecord[] = [
       { path: 'locations/innisfil', element: <Innisfil /> },
       { path: 'locations/bradford', element: <Bradford /> },
       { path: 'locations/alliston', element: <Alliston /> },
-      { path: 'locations/collingwood/', element: <Collingwood /> },
+      { path: 'locations/collingwood', element: <Collingwood /> },
       { path: 'locations/wasaga-beach', element: <WasagaBeach /> },
       { path: 'locations/midland', element: <Midland /> },
       { path: 'locations/penetanguishene', element: <Penetanguishene /> },
