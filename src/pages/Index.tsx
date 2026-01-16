@@ -101,7 +101,27 @@ const Index = () => {
       <Helmet>
         <title>Home Inspection Toronto & GTA | Same-Day Reports | ASADS</title>
         <meta name="description" content="Certified home inspections in Toronto & GTA. Pre-Purchase, Pre-Listing, Condo, and Commercial inspections with same-day digital reports. Call (647) 801-9311." />
-        <link rel="canonical" href={`${SITE_URL}/`} />
+        <link rel="canonical" href={`${SITE_URL}`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Home Inspection Toronto & GTA | Same-Day Reports | ASADS" />
+        <meta property="og:description" content="Certified home inspections in Toronto & GTA. Pre-Purchase, Pre-Listing, Condo, and Commercial inspections with same-day digital reports." />
+        <meta property="og:url" content={SITE_URL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:site_name" content="ASADS Home Inspection" />
+        <meta property="og:image" content={`${SITE_URL}/images/og-default.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="ASADS Home Inspection - Professional Home Inspectors in Toronto & GTA" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AsadsInspection" />
+        <meta name="twitter:title" content="Home Inspection Toronto & GTA | Same-Day Reports | ASADS" />
+        <meta name="twitter:description" content="Certified home inspections in Toronto & GTA. Pre-Purchase, Pre-Listing, Condo, and Commercial inspections with same-day digital reports." />
+        <meta name="twitter:image" content={`${SITE_URL}/images/og-default.jpg`} />
+        
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>

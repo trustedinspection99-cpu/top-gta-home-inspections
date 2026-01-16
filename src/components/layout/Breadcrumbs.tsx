@@ -161,7 +161,7 @@ const formatLabel = (segment: string, isBlogPost: boolean): string => {
 };
 
 // Pages that already have their own BreadcrumbList schema (to avoid duplication)
-const PAGES_WITH_OWN_SCHEMA = new Set(["/blog/"]);
+const PAGES_WITH_OWN_SCHEMA = new Set(["/blog"]);
 
 const Breadcrumbs = () => {
   const location = useLocation();
