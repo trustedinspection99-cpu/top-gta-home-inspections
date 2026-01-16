@@ -34,7 +34,7 @@ const getRegionList = () => {
     acc[regionName].push({
       city: loc.city,
       slug: loc.slug,
-      href: `/locations/${loc.slug}/`,
+      href: `/locations/${loc.slug}`,
       popular: (loc as any).popular || false,
       region: regionName,
     });
@@ -101,7 +101,43 @@ export default function Locations() {
           name="description"
           content="ASADS provides professional home inspection services across the Greater Toronto Area. Certified inspectors in Toronto, Mississauga, Brampton, Vaughan, Markham & 80+ more cities."
         />
-        <link rel="canonical" href="https://www.asads.ca/locations/" />
+        <link rel="canonical" href="https://www.asads.ca/locations" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Service Areas | Home Inspection Across the GTA | ASADS" />
+        <meta property="og:description" content="ASADS provides professional home inspection services across 80+ cities in the Greater Toronto Area." />
+        <meta property="og:url" content="https://www.asads.ca/locations" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:site_name" content="ASADS Home Inspection" />
+        <meta property="og:image" content="https://www.asads.ca/images/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AsadsInspection" />
+        <meta name="twitter:title" content="Service Areas | Home Inspection Across the GTA | ASADS" />
+        <meta name="twitter:description" content="ASADS provides professional home inspection services across 80+ cities in the Greater Toronto Area." />
+        <meta name="twitter:image" content="https://www.asads.ca/images/og-default.jpg" />
+        
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.asads.ca/#localbusiness",
+          "name": "ASADS Home Inspection",
+          "url": "https://www.asads.ca",
+          "telephone": "+16478019311",
+          "areaServed": allLocations.map(loc => ({ "@type": "City", "name": loc.city }))
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.asads.ca" },
+            { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://www.asads.ca/locations" }
+          ]
+        })}</script>
       </Helmet>
 
       {/* HERO */}

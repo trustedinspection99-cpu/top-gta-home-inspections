@@ -52,39 +52,39 @@ const App = () => (
           <Routes>
             {/* Core Pages */}
             <Route path="/" element={<Index />} />
-            <Route path="/about/" element={<About />} />
-            <Route path="/contact/" element={<Contact />} />
-            <Route path="/services/" element={<Services />} />
-            <Route path="/blog/" element={<Blog />} />
-            <Route path="/blog/:slug/" element={<BlogPost />} />
-            <Route path="/testimonials/" element={<Testimonials />} />
-            <Route path="/faq/" element={<FAQ />} />
-            <Route path="/booking/" element={<Booking />} />
-            <Route path="/pricing/" element={<Pricing />} />
-            <Route path="/privacy/" element={<PrivacyPolicy />} />
-            <Route path="/terms/" element={<Terms />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<Terms />} />
 
             {/* Service Area Index Page */}
-            <Route path="/locations/" element={<Locations />} />
+            <Route path="/locations" element={<Locations />} />
             
             {/* DYNAMIC LOCATION ROUTE - Handles all cities in your data file */}
-            <Route path="/locations/:slug/" element={<LocationDetail />} />
+            <Route path="/locations/:slug" element={<LocationDetail />} />
 
             {/* Service Pages */}
-            <Route path="/services/pre-purchase/" element={<PrePurchase />} />
-            <Route path="/services/pre-listing/" element={<PreListing />} />
-            <Route path="/services/new-construction/" element={<NewConstruction />} />
-            <Route path="/services/condo/" element={<Condo />} />
-            <Route path="/services/commercial/" element={<Commercial />} />
-            <Route path="/services/radon-testing/" element={<RadonTesting />} />
-            <Route path="/services/mold-inspection/" element={<MoldInspection />} />
-            <Route path="/services/asbestos-testing/" element={<AsbestosTesting />} />
-            <Route path="/services/wett/" element={<WETT />} />
-            <Route path="/services/thermal-imaging/" element={<ThermalImaging />} />
-            <Route path="/services/lead-paint-testing/" element={<LeadPaintTesting />} />
-            <Route path="/services/well-water-testing/" element={<WellWaterTesting />} />
-            <Route path="/services/sewer-scope/" element={<SewerScope />} />
-            <Route path="/services/air-quality/" element={<AirQuality />} />
+            <Route path="/services/pre-purchase" element={<PrePurchase />} />
+            <Route path="/services/pre-listing" element={<PreListing />} />
+            <Route path="/services/new-construction" element={<NewConstruction />} />
+            <Route path="/services/condo" element={<Condo />} />
+            <Route path="/services/commercial" element={<Commercial />} />
+            <Route path="/services/radon-testing" element={<RadonTesting />} />
+            <Route path="/services/mold-inspection" element={<MoldInspection />} />
+            <Route path="/services/asbestos-testing" element={<AsbestosTesting />} />
+            <Route path="/services/wett" element={<WETT />} />
+            <Route path="/services/thermal-imaging" element={<ThermalImaging />} />
+            <Route path="/services/lead-paint-testing" element={<LeadPaintTesting />} />
+            <Route path="/services/well-water-testing" element={<WellWaterTesting />} />
+            <Route path="/services/sewer-scope" element={<SewerScope />} />
+            <Route path="/services/air-quality" element={<AirQuality />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>

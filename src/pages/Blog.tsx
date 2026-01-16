@@ -1,8 +1,10 @@
+import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { Calendar, Clock, ArrowRight, Search, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
+import { SITE_URL } from "@/lib/seo";
 
 // Blog posts with proper slugs matching route expectations
 const blogPosts = [
@@ -17,7 +19,7 @@ const blogPosts = [
     readTime: "8 min read",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
     featured: true,
-    relatedService: "/services/pre-purchase/",
+    relatedService: "/services/pre-purchase",
   },
   {
     id: 2,
@@ -30,7 +32,7 @@ const blogPosts = [
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/pre-purchase/",
+    relatedService: "/services/pre-purchase",
   },
   {
     id: 3,
@@ -43,7 +45,7 @@ const blogPosts = [
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/pre-listing/",
+    relatedService: "/services/pre-listing",
   },
   {
     id: 4,
@@ -56,7 +58,7 @@ const blogPosts = [
     readTime: "7 min read",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/radon-testing/",
+    relatedService: "/services/radon-testing",
   },
   {
     id: 5,
@@ -69,7 +71,7 @@ const blogPosts = [
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/thermal-imaging/",
+    relatedService: "/services/thermal-imaging",
   },
   {
     id: 6,
@@ -82,7 +84,7 @@ const blogPosts = [
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/thermal-imaging/",
+    relatedService: "/services/thermal-imaging",
   },
   {
     id: 7,
@@ -95,7 +97,7 @@ const blogPosts = [
     readTime: "9 min read",
     image: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/pre-purchase/",
+    relatedService: "/services/pre-purchase",
   },
   {
     id: 8,
@@ -108,7 +110,7 @@ const blogPosts = [
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/mold-inspection/",
+    relatedService: "/services/mold-inspection",
   },
   {
     id: 9,
@@ -121,7 +123,7 @@ const blogPosts = [
     readTime: "7 min read",
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/new-construction/",
+    relatedService: "/services/new-construction",
   },
   {
     id: 10,
@@ -134,7 +136,7 @@ const blogPosts = [
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=500&fit=crop",
     featured: false,
-    relatedService: "/services/condo/",
+    relatedService: "/services/condo",
   },
 ];
 
@@ -154,7 +156,51 @@ export default function Blog() {
 
   return (
     <Layout>
-      {/* Hero Section */}
+      <Helmet>
+        <title>Home Inspection Blog | Expert Tips & Guides | ASADS</title>
+        <meta name="description" content="Expert home inspection tips, buying guides, and maintenance advice for GTA homeowners. Learn about common issues, inspection processes, and how to protect your investment." />
+        <link rel="canonical" href={`${SITE_URL}/blog`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Home Inspection Blog | Expert Tips & Guides | ASADS" />
+        <meta property="og:description" content="Expert home inspection tips, buying guides, and maintenance advice for GTA homeowners." />
+        <meta property="og:url" content={`${SITE_URL}/blog`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:site_name" content="ASADS Home Inspection" />
+        <meta property="og:image" content={`${SITE_URL}/images/og-default.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AsadsInspection" />
+        <meta name="twitter:title" content="Home Inspection Blog | Expert Tips & Guides | ASADS" />
+        <meta name="twitter:description" content="Expert home inspection tips, buying guides, and maintenance advice for GTA homeowners." />
+        <meta name="twitter:image" content={`${SITE_URL}/images/og-default.jpg`} />
+        
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "@id": `${SITE_URL}/blog#blog`,
+          "name": "ASADS Home Inspection Blog",
+          "description": "Expert home inspection tips, buying guides, and maintenance advice for GTA homeowners.",
+          "url": `${SITE_URL}/blog`,
+          "publisher": {
+            "@type": "Organization",
+            "@id": `${SITE_URL}/#organization`,
+            "name": "ASADS Home Inspection"
+          }
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${SITE_URL}/blog` }
+          ]
+        })}</script>
+      </Helmet>
       <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16 md:py-24">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
