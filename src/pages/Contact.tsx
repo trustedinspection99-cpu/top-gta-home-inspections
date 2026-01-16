@@ -402,7 +402,7 @@ export default function Contact() {
             ))}
           </div>
           <div className="text-center">
-            <Link to="/locations/" className="text-primary hover:underline text-sm font-medium">
+            <Link to="/locations" className="text-primary hover:underline text-sm font-medium">
               View all 80+ service areas →
             </Link>
           </div>
@@ -413,15 +413,15 @@ export default function Contact() {
       <section className="py-8 bg-background border-t border-border/50">
         <div className="container">
           <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <Link to="/services/" className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link>
+            <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link>
             <span className="text-border">•</span>
-            <Link to="/pricing/" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link>
+            <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link>
             <span className="text-border">•</span>
-            <Link to="/faq/" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
+            <Link to="/faq" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
             <span className="text-border">•</span>
-            <Link to="/about/" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link>
+            <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link>
             <span className="text-border">•</span>
-            <Link to="/booking/" className="text-muted-foreground hover:text-primary transition-colors">Book Online</Link>
+            <Link to="/booking" className="text-muted-foreground hover:text-primary transition-colors">Book Online</Link>
           </div>
         </div>
       </section>

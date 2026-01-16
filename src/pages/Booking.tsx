@@ -386,15 +386,15 @@ export default function Booking() {
           {/* Related Links */}
           <div className="mt-12 pt-8 border-t border-border">
             <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <Link to="/services/" className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link>
+              <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link>
               <span className="text-border">•</span>
-              <Link to="/pricing/" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link>
+              <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link>
               <span className="text-border">•</span>
-              <Link to="/faq/" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
+              <Link to="/faq" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
               <span className="text-border">•</span>
-              <Link to="/locations/" className="text-muted-foreground hover:text-primary transition-colors">Service Areas</Link>
+              <Link to="/locations" className="text-muted-foreground hover:text-primary transition-colors">Service Areas</Link>
               <span className="text-border">•</span>
-              <Link to="/contact/" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link>
+              <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link>
             </div>
           </div>
         </div>

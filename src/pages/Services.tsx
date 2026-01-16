@@ -329,7 +329,7 @@ export default function Services() {
                       {service.price}
                     </p>
                       <Button asChild variant="outline" className="w-full">
-                        <Link to="/booking/">Book Now</Link>
+                        <Link to="/booking">Book Now</Link>
                       </Button>
                   </div>
                 </div>
@@ -456,7 +456,7 @@ export default function Services() {
             ].map((location) => (
               <Link
                 key={location.slug}
-                to={`/locations/${location.slug}/`}
+                to={`/locations/${location.slug}`}
                 className="flex items-center justify-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
               >
                 {location.name}
@@ -465,7 +465,7 @@ export default function Services() {
           </div>
           <div className="text-center mt-8">
             <Button asChild variant="outline">
-              <Link to="/locations/">
+              <Link to="/locations">
                 View All 80+ Locations
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -478,17 +478,17 @@ export default function Services() {
       <section className="py-12 bg-background border-t border-border/50">
         <div className="container">
           <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <Link to="/about/" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link>
+            <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link>
             <span className="text-border">•</span>
-            <Link to="/pricing/" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link>
+            <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link>
             <span className="text-border">•</span>
-            <Link to="/faq/" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
+            <Link to="/faq" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
             <span className="text-border">•</span>
-            <Link to="/testimonials/" className="text-muted-foreground hover:text-primary transition-colors">Testimonials</Link>
+            <Link to="/testimonials" className="text-muted-foreground hover:text-primary transition-colors">Testimonials</Link>
             <span className="text-border">•</span>
-            <Link to="/blog/" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link>
+            <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link>
             <span className="text-border">•</span>
-            <Link to="/contact/" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link>
+            <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link>
           </div>
         </div>
       </section>
@@ -505,7 +505,7 @@ export default function Services() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
-                <Link to="/booking/">Book Online Now</Link>
+                <Link to="/booking">Book Online Now</Link>
               </Button>
               <Button 
                 asChild 

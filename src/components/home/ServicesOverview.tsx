@@ -172,7 +172,7 @@ export function ServicesOverview() {
         {/* CTA */}
         <div className="text-center mt-12">
           <Button asChild size="lg">
-            <Link to="/services/">
+            <Link to="/services">
               View All Services
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

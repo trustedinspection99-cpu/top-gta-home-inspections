@@ -233,7 +233,7 @@ export function ServicePageTemplate({
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" variant="secondary">
-                <Link to="/booking/">
+                <Link to="/booking">
                   <Calendar className="mr-2 h-5 w-5" />
                   Book This Inspection
                 </Link>
@@ -266,9 +266,9 @@ export function ServicePageTemplate({
               <CheckCircle className="h-5 w-5" />
               <span>No hidden fees • Detailed report included</span>
             </div>
-            <Button asChild variant="secondary">
-              <Link to="/booking/">Get Started</Link>
-            </Button>
+              <Button asChild variant="secondary">
+                <Link to="/booking">Get Started</Link>
+              </Button>
           </div>
         </div>
       </section>
@@ -357,7 +357,7 @@ export function ServicePageTemplate({
                   </ul>
                   <div className="mt-6 pt-6 border-t border-border">
                     <Button asChild className="w-full" size="lg">
-                      <Link to="/booking/">Book Now</Link>
+                      <Link to="/booking">Book Now</Link>
                     </Button>
                     <p className="text-center text-sm text-muted-foreground mt-3">
                       or call <a href="tel:+16478019311" className="text-primary hover:underline">(647) 801-9311</a>
@@ -441,7 +441,7 @@ export function ServicePageTemplate({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
-                <Link to="/booking/">Book Online Now</Link>
+                <Link to="/booking">Book Online Now</Link>
               </Button>
               <Button 
                 asChild 
