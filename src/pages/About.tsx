@@ -479,27 +479,27 @@ export default function About() {
               Explore Our Services
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              <Link to="/services/pre-purchase/" className="p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
+              <Link to="/services/pre-purchase" className="p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
                 Pre-Purchase Inspection
               </Link>
-              <Link to="/services/pre-listing/" className="p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
+              <Link to="/services/pre-listing" className="p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
                 Pre-Listing Inspection
               </Link>
-              <Link to="/services/radon-testing/" className="p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
+              <Link to="/services/radon-testing" className="p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
                 Radon Testing
               </Link>
-              <Link to="/services/mold-inspection/" className="p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
+              <Link to="/services/mold-inspection" className="p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
                 Mold Inspection
               </Link>
             </div>
             <div className="flex flex-wrap justify-center gap-4 mt-6 text-sm">
-              <Link to="/services/" className="text-primary hover:underline">All Services</Link>
+              <Link to="/services" className="text-primary hover:underline">All Services</Link>
               <span className="text-border">•</span>
-              <Link to="/locations/" className="text-primary hover:underline">Service Areas</Link>
+              <Link to="/locations" className="text-primary hover:underline">Service Areas</Link>
               <span className="text-border">•</span>
-              <Link to="/testimonials/" className="text-primary hover:underline">Customer Reviews</Link>
+              <Link to="/testimonials" className="text-primary hover:underline">Customer Reviews</Link>
               <span className="text-border">•</span>
-              <Link to="/faq/" className="text-primary hover:underline">FAQ</Link>
+              <Link to="/faq" className="text-primary hover:underline">FAQ</Link>
             </div>
           </div>
         </div>
@@ -518,13 +518,13 @@ export default function About() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
-                <Link to="/booking/">
+                <Link to="/booking">
                   Book Your Inspection
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link to="/contact/">Contact Us</Link>
+                <Link to="/contact">Contact Us</Link>
               </Button>
             </div>
           </div>

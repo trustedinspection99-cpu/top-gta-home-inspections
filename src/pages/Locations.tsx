@@ -219,7 +219,7 @@ export default function Locations() {
               </a>
             </Button>
             <Button asChild variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
-              <Link to="/contact/">Request Inspection</Link>
+              <Link to="/contact">Request Inspection</Link>
             </Button>
           </div>
         </div>
