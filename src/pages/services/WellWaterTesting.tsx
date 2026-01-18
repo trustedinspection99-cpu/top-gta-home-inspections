@@ -36,8 +36,6 @@ export default function WellWaterTesting() {
             </p>
           </div>
 
-          
-
           <p>
             Our technicians use sterile sampling protocols to prevent cross-contamination. 
             We handle the chain of custody and utilize <strong>same-day lab courier services</strong> 
@@ -90,27 +88,31 @@ export default function WellWaterTesting() {
       ]}
       faqs={[
         {
-          question: "How often should I test my well in Ontario?",
-          answer: "Public Health Ontario recommends testing for bacteria (E.coli/Coliform) every 6 months and a full chemical/mineral analysis every 2 years."
+          question: "How often should I test my well water in Ontario?",
+          answer: "Public Health Ontario recommends testing for bacteria (E.coli/Coliform) every 6 months and a full chemical/mineral analysis every 2 years, or after any significant weather events."
         },
         {
-          question: "Can I just use the free provincial test?",
-          answer: "The free public health test only covers basic bacteria. It does not test for Nitrates, Lead, Arsenic, or chemicals—parameters required by most mortgage lenders and essential for health safety."
+          question: "Can I just use the free provincial well water test?",
+          answer: "The free public health test only covers basic bacteria. It does not test for Nitrates, Lead, Arsenic, or chemicals—parameters required by most mortgage lenders and essential for comprehensive health safety."
         },
         {
-          question: "What if my water fails the test?",
+          question: "What if my well water fails the test?",
           answer: "We provide a clear remediation roadmap. This may include 'shocking' the well with chlorine, installing a UV light system, or repairing a damaged well cap or casing."
         },
         {
-          question: "What is the MAC for Nitrates in Ontario?",
+          question: "What is the MAC for Nitrates in Ontario well water?",
           answer: "The Maximum Acceptable Concentration (MAC) for Nitrate-Nitrogen is 10 mg/L. Levels above this pose a risk of 'Blue Baby Syndrome' (methemoglobinemia) in infants."
+        },
+        {
+          question: "How much does well water testing cost in the GTA?",
+          answer: "Well water testing starts from $149 for basic bacteria analysis. Our comprehensive 'Real Estate Full Analysis' package is priced higher and meets all lender requirements. Contact us at (647) 801-9311."
         },
       ]}
       relatedServices={[
         { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
         { title: "Sewer Scope Inspection", href: "/services/sewer-scope" },
-        { title: "Septic System Inspection", href: "/services/septic-inspection" },
-        { title: "Mold Testing", href: "/services/mold-testing-toronto" },
+        { title: "Radon Testing", href: "/services/radon-testing" },
+        { title: "Mold Inspection", href: "/services/mold-inspection" },
       ]}
     />
   );

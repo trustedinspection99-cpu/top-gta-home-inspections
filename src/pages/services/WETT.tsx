@@ -37,8 +37,6 @@ export default function WETT() {
             </p>
           </div>
 
-          
-
           <p>
             Our certified inspectors perform a comprehensive 50-point assessment. We verify 
             critical safety clearances to combustible walls, floor protection (hearth) 
@@ -92,7 +90,7 @@ export default function WETT() {
       faqs={[
         {
           question: "Why do insurance companies require WETT inspections?",
-          answer: "Insurance providers view wood-burning appliances as high-risk. A WETT inspection proves the system was installed according to the Ontario Building Code and CSA B365, reducing fire risk."
+          answer: "Insurance providers view wood-burning appliances as high-risk. A WETT inspection proves the system was installed according to the Ontario Building Code and CSA B365, reducing fire risk and liability."
         },
         {
           question: "How long is a WETT certificate valid for?",
@@ -103,15 +101,19 @@ export default function WETT() {
           answer: "Yes. Our inspections include a visual check of the chimney termination, flashing, and cap from the roof level (weather and safety permitting)."
         },
         {
-          question: "What happens if the fireplace fails?",
+          question: "What happens if the fireplace fails the WETT inspection?",
           answer: "If we find deficiencies (e.g., inadequate clearance), we provide a detailed list of required corrections. We can often suggest simple heat-shielding solutions to bring an appliance into compliance."
+        },
+        {
+          question: "How much does a WETT inspection cost in Toronto?",
+          answer: "WETT inspections in Toronto start from $249. This includes thermal imaging and same-day digital certification. Contact us at (647) 801-9311 for a quote."
         },
       ]}
       relatedServices={[
-        { title: "Pre-Purchase Inspection", href: "/services/pre-purchase-inspection.html" },
-        { title: "Infrared Thermal Imaging", href: "/services/infrared-thermal-imaging.html" },
-        { title: "Sewer Scope Inspection", href: "/services/sewer-scope-inspection.html" },
-        { title: "Mold Testing", href: "/services/mold-testing-toronto.html" },
+        { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
+        { title: "Thermal Imaging", href: "/services/thermal-imaging" },
+        { title: "Sewer Scope Inspection", href: "/services/sewer-scope" },
+        { title: "Mold Inspection", href: "/services/mold-inspection" },
       ]}
     />
   );

@@ -37,8 +37,6 @@ export default function LeadPaintTesting() {
             Health Canada and Ontario Ministry of Labour standards.
           </p>
 
-          
-
           <p>
             Whether you are planning a renovation, buying an older Toronto home, or are 
             concerned about child safety, our certified Lead Risk Assessors provide 
@@ -106,12 +104,16 @@ export default function LeadPaintTesting() {
           question: "What are the health effects of lead exposure?",
           answer: "In children, exposure leads to permanent IQ loss, learning disabilities, and behavioral issues. In adults, it causes hypertension and kidney damage. No amount of lead in the blood is considered safe."
         },
+        {
+          question: "How much does lead paint testing cost in Toronto?",
+          answer: "Lead paint testing in Toronto starts from $349. Pricing depends on home size and number of surfaces tested. Contact us at (647) 801-9311 for a personalized quote."
+        },
       ]}
       relatedServices={[
-        { title: "Asbestos Testing", href: "/services/asbestos-testing-toronto.html" },
-        { title: "Mold Testing", href: "/services/mold-testing-toronto.html" },
-        { title: "Air Quality Testing", href: "/services/air-quality-testing.html" },
-        { title: "Pre-Purchase Inspection", href: "/services/pre-purchase-inspection.html" },
+        { title: "Asbestos Testing", href: "/services/asbestos-testing" },
+        { title: "Mold Inspection", href: "/services/mold-inspection" },
+        { title: "Air Quality Testing", href: "/services/air-quality" },
+        { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
       ]}
     />
   );
