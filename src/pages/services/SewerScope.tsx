@@ -1,4 +1,3 @@
-
 import { Video, Search, Map, AlertCircle, ShieldCheck, Clock } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
@@ -37,10 +36,8 @@ export default function SewerScope() {
             </p>
           </div>
 
-          
-
           <p>
-            Our inspection is critical for Toronto’s older neighborhoods where 
+            Our inspection is critical for Toronto's older neighborhoods where 
             <strong> clay tiles, cast iron, or "Orangeburg" bituminized fiber pipes</strong> are common. 
             We provide a narrated video file the same day, giving you the immediate 
             leverage needed for real estate negotiations.
@@ -91,7 +88,7 @@ export default function SewerScope() {
       ]}
       faqs={[
         {
-          question: "Why isn't this included in a standard home inspection?",
+          question: "Why isn't sewer scope included in a standard home inspection?",
           answer: "Sewer scoping requires specialized, expensive CCTV equipment and additional training. Most home inspectors only check if drains are currently flowing; we check if they are about to fail."
         },
         {
@@ -103,15 +100,19 @@ export default function SewerScope() {
           answer: "Yes. While a dedicated cleanout is ideal, we can often access the line by removing a basement toilet or via a roof vent, though additional fees may apply."
         },
         {
-          question: "How far can your camera go?",
+          question: "How far can your sewer camera go?",
           answer: "Our professional systems carry 200 feet of cable, which is more than enough to reach the city's main connection for almost any residential property in the GTA."
+        },
+        {
+          question: "How much does a sewer scope inspection cost in Toronto?",
+          answer: "Sewer camera inspection in Toronto starts from $299. This includes HD video recording, same-day cloud delivery, and a detailed condition report for real estate negotiations."
         },
       ]}
       relatedServices={[
         { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
-        { title: "WETT Inspection", href: "/services/wett-inspection-toronto" },
+        { title: "WETT Inspection", href: "/services/wett" },
         { title: "Thermal Imaging", href: "/services/thermal-imaging" },
-        { title: "Mold Testing", href: "/services/mold-testing-toronto" },
+        { title: "Mold Inspection", href: "/services/mold-inspection" },
       ]}
     />
   );
