@@ -1,8 +1,8 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { getLocationBySlug } from "@/data/locationData";
 
-export default function Clearview() {
-  const data = getLocationBySlug("clearview");
+export default function Woodstock() {
+  const data = getLocationBySlug("woodstock");
 
   if (!data) return null;
 
