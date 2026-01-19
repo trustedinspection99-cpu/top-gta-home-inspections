@@ -143,6 +143,30 @@ const Orangeville = lazy(() => import('./pages/locations/Orangeville'));
 const Peterborough = lazy(() => import('./pages/locations/Peterborough'));
 const Cobourg = lazy(() => import('./pages/locations/Cobourg'));
 const Brantford = lazy(() => import('./pages/locations/Brantford'));
+const Mapleton = lazy(() => import('./pages/locations/Mapleton'));
+const Woodstock = lazy(() => import('./pages/locations/Woodstock'));
+const AdelaideMetcalfe = lazy(() => import('./pages/locations/AdelaideMetcalfe'));
+const Erin = lazy(() => import('./pages/locations/Erin'));
+const Puslinch = lazy(() => import('./pages/locations/Puslinch'));
+const Shelburne = lazy(() => import('./pages/locations/Shelburne'));
+const NorthDumfries = lazy(() => import('./pages/locations/NorthDumfries'));
+const WellingtonNorth = lazy(() => import('./pages/locations/WellingtonNorth'));
+const TayTownship = lazy(() => import('./pages/locations/TayTownship'));
+const Minto = lazy(() => import('./pages/locations/Minto'));
+const CentreWellington = lazy(() => import('./pages/locations/CentreWellington'));
+const Ingersoll = lazy(() => import('./pages/locations/Ingersoll'));
+const Woolwich = lazy(() => import('./pages/locations/Woolwich'));
+const Pelham = lazy(() => import('./pages/locations/Pelham'));
+const TinyTownship = lazy(() => import('./pages/locations/TinyTownship'));
+const WestLincoln = lazy(() => import('./pages/locations/WestLincoln'));
+const Mono = lazy(() => import('./pages/locations/Mono'));
+const Severn = lazy(() => import('./pages/locations/Severn'));
+const Wellesley = lazy(() => import('./pages/locations/Wellesley'));
+const Wainfleet = lazy(() => import('./pages/locations/Wainfleet'));
+const GuelphEramosa = lazy(() => import('./pages/locations/GuelphEramosa'));
+const Wilmot = lazy(() => import('./pages/locations/Wilmot'));
+const Tillsonburg = lazy(() => import('./pages/locations/Tillsonburg'));
+const Paris = lazy(() => import('./pages/locations/Paris'));
 
 export const routes: RouteRecord[] = [
   {
@@ -267,6 +291,30 @@ export const routes: RouteRecord[] = [
       { path: 'locations/peterborough', element: <Peterborough /> },
       { path: 'locations/cobourg', element: <Cobourg /> },
       { path: 'locations/brantford', element: <Brantford /> },
+      { path: 'locations/mapleton', element: <Mapleton /> },
+      { path: 'locations/woodstock', element: <Woodstock /> },
+      { path: 'locations/adelaide-metcalfe', element: <AdelaideMetcalfe /> },
+      { path: 'locations/erin', element: <Erin /> },
+      { path: 'locations/puslinch', element: <Puslinch /> },
+      { path: 'locations/shelburne', element: <Shelburne /> },
+      { path: 'locations/north-dumfries', element: <NorthDumfries /> },
+      { path: 'locations/wellington-north', element: <WellingtonNorth /> },
+      { path: 'locations/tay-township', element: <TayTownship /> },
+      { path: 'locations/minto', element: <Minto /> },
+      { path: 'locations/centre-wellington', element: <CentreWellington /> },
+      { path: 'locations/ingersoll', element: <Ingersoll /> },
+      { path: 'locations/woolwich', element: <Woolwich /> },
+      { path: 'locations/pelham', element: <Pelham /> },
+      { path: 'locations/tiny-township', element: <TinyTownship /> },
+      { path: 'locations/west-lincoln', element: <WestLincoln /> },
+      { path: 'locations/mono', element: <Mono /> },
+      { path: 'locations/severn', element: <Severn /> },
+      { path: 'locations/wellesley', element: <Wellesley /> },
+      { path: 'locations/wainfleet', element: <Wainfleet /> },
+      { path: 'locations/guelph-eramosa', element: <GuelphEramosa /> },
+      { path: 'locations/wilmot', element: <Wilmot /> },
+      { path: 'locations/tillsonburg', element: <Tillsonburg /> },
+      { path: 'locations/paris', element: <Paris /> },
 
       { path: '*', element: <NotFound /> },
     ],

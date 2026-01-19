@@ -193,7 +193,7 @@ export function LocationPageTemplate({
     [city, url]
   );
 
-  // FAQ Schema
+  // FAQ Schema - 5 questions for rich snippets
   const faqSchema = useMemo(
     () => ({
       "@context": "https://schema.org",
@@ -221,6 +221,22 @@ export function LocationPageTemplate({
           acceptedAnswer: {
             "@type": "Answer",
             text: `We serve all neighborhoods in ${city}${neighborhoods.length > 0 ? ` including ${neighborhoods.slice(0, 5).join(", ")}` : ""}. Our certified inspectors are familiar with local building practices and common issues.`
+          }
+        },
+        {
+          "@type": "Question",
+          name: `Do I need to be present during my ${city} home inspection?`,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: `While not required, we encourage ${city} buyers to attend the final hour of the inspection. This allows you to ask questions, see issues firsthand, and learn about the property's systems and maintenance needs.`
+          }
+        },
+        {
+          "@type": "Question",
+          name: `What does a home inspection in ${city} include?`,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: `Our ${city} home inspections cover 400+ checkpoints including roof, foundation, plumbing, electrical, HVAC, insulation, windows, doors, and structural components. We also offer optional add-ons like radon testing, mold inspection, and thermal imaging.`
           }
         }
       ]
@@ -435,6 +451,14 @@ export function LocationPageTemplate({
               <div className="bg-background p-6 rounded-xl border border-border/50">
                 <h3 className="font-bold text-lg mb-2">What areas of {city} do you serve?</h3>
                 <p className="text-muted-foreground">We serve all neighborhoods in {city}{neighborhoods.length > 0 ? ` including ${neighborhoods.slice(0, 5).join(", ")}` : ""}. Our certified inspectors are familiar with local building practices and common issues in the area.</p>
+              </div>
+              <div className="bg-background p-6 rounded-xl border border-border/50">
+                <h3 className="font-bold text-lg mb-2">Do I need to be present during my {city} home inspection?</h3>
+                <p className="text-muted-foreground">While not required, we encourage {city} buyers to attend the final hour of the inspection. This allows you to ask questions, see issues firsthand, and learn about the property's systems and maintenance needs.</p>
+              </div>
+              <div className="bg-background p-6 rounded-xl border border-border/50">
+                <h3 className="font-bold text-lg mb-2">What does a home inspection in {city} include?</h3>
+                <p className="text-muted-foreground">Our {city} home inspections cover 400+ checkpoints including roof, foundation, plumbing, electrical, HVAC, insulation, windows, doors, and structural components. We also offer optional add-ons like radon testing, mold inspection, and thermal imaging.</p>
               </div>
             </div>
           </div>
