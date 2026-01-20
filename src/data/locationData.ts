@@ -2014,7 +2014,7 @@ export const locationData: LocationData[] = [
     ]
   },
   {
-    slug: "bradford-west-gwillimbury",
+    slug: "bradford",
     city: "Bradford West Gwillimbury",
     region: "Simcoe County",
     metaTitle: "Bradford Home Inspector | Rural Family Specialist",

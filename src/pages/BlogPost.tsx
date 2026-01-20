@@ -107,14 +107,26 @@ export default function BlogPost() {
         <title>{post.metaTitle}</title>
         <meta name="description" content={post.metaDescription} />
         <link rel="canonical" href={`https://www.asads.ca/blog/${post.slug}`} />
+        
+        {/* Open Graph */}
+        <meta property="og:site_name" content="ASADS Home Inspection" />
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={post.image} />
-        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://www.asads.ca/blog/${post.slug}`} />
+        <meta property="og:image" content={post.image || "https://www.asads.ca/images/og-default.jpg"} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="article:published_time" content={post.date} />
         <meta property="article:author" content={post.author} />
         <meta property="article:section" content={post.category} />
+        
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <meta name="twitter:image" content={post.image || "https://www.asads.ca/images/og-default.jpg"} />
+        
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
         </script>
