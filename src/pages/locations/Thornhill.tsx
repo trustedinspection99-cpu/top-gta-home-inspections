@@ -1,25 +1,23 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function Thornhill() {
-  const neighborhoods = [
-    "Thornhill Woods", "Patterson", "Brownridge", "Langstaff", "Thornhill Village",
-    "Thornhill City Centre", "Royal Orchard", "Bayview Glen", "German Mills", "Concord"
-  ];
+  const data = getLocationBySlug("thornhill");
+
+  if (!data) return null;
 
   return (
-    <>
-      <Helmet>
-        <title>Thornhill Home Inspection | Trusted Safety Reporting</title>
-        <meta name="description" content="Professional home inspections in Thornhill focused on accuracy, electrical safety, and reliable reporting." />
-      </Helmet>
-      <LocationPageTemplate
-        city="Thornhill"
-        region="Ontario"
-        description="Professional home inspections in Thornhill focused on accuracy, electrical safety, and reliable reporting."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
-      />
-    </>
+    <LocationPageTemplate
+      city={data.city}
+      region={data.region}
+      description={data.description}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
+      neighborhoods={data.neighborhoods}
+      phoneNumber={data.phoneNumber}
+      localInsights={data.localInsights}
+      latitude={data.latitude}
+      longitude={data.longitude}
+    />
   );
 }

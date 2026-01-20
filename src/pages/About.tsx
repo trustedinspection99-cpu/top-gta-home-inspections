@@ -169,6 +169,23 @@ export default function About() {
         <title>Expert Home Inspectors in Ontario | ASADS Certified</title>
         <meta name="description" content="Trusted Ontario home inspectors since 2015. Learn about our rigorous standards, honest reporting, and commitment to your home safety." />
         <link rel="canonical" href="https://www.asads.ca/about" />
+        
+        {/* Open Graph */}
+        <meta property="og:site_name" content="ASADS Home Inspection" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Expert Home Inspectors in Ontario | ASADS Certified" />
+        <meta property="og:description" content="Trusted Ontario home inspectors since 2015. Learn about our rigorous standards, honest reporting, and commitment to your home safety." />
+        <meta property="og:url" content="https://www.asads.ca/about" />
+        <meta property="og:image" content="https://www.asads.ca/images/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Expert Home Inspectors in Ontario | ASADS Certified" />
+        <meta name="twitter:description" content="Trusted Ontario home inspectors since 2015. Learn about our rigorous standards, honest reporting, and commitment to your home safety." />
+        <meta name="twitter:image" content="https://www.asads.ca/images/og-default.jpg" />
+        
         <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(aboutPageSchema)}</script>

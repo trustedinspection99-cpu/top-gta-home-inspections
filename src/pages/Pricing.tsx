@@ -234,6 +234,23 @@ export default function Pricing() {
           content="Transparent home inspection pricing in Ontario. No hidden fees. View our packages for houses, condos, and multi-unit properties."
         />
         <link rel="canonical" href="https://www.asads.ca/pricing" />
+        
+        {/* Open Graph */}
+        <meta property="og:site_name" content="ASADS Home Inspection" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Home Inspection Cost Ontario | Clear Rates & Packages" />
+        <meta property="og:description" content="Transparent home inspection pricing in Ontario. No hidden fees. View our packages for houses, condos, and multi-unit properties." />
+        <meta property="og:url" content="https://www.asads.ca/pricing" />
+        <meta property="og:image" content="https://www.asads.ca/images/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Home Inspection Cost Ontario | Clear Rates & Packages" />
+        <meta name="twitter:description" content="Transparent home inspection pricing in Ontario. No hidden fees. View our packages for houses, condos, and multi-unit properties." />
+        <meta name="twitter:image" content="https://www.asads.ca/images/og-default.jpg" />
+        
         <script type="application/ld+json">{JSON.stringify(pricingSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
