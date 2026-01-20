@@ -984,6 +984,201 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">A sewer scope is a small investment that can reveal expensive hidden problems. For older homes especially, it's one of the smartest add-on inspections you can get.</p>
     `,
   },
+  {
+    id: 11,
+    slug: "thermal-imaging-benefits",
+    title: "How Thermal Imaging Reveals Hidden Home Problems",
+    metaTitle: "Thermal Imaging Home Inspection Benefits | ASADS Toronto",
+    metaDescription: "Discover how infrared thermal imaging detects hidden moisture, insulation gaps, electrical hotspots, and energy loss that visual inspections miss.",
+    excerpt: "Learn how thermal imaging technology helps detect hidden problems like moisture intrusion, insulation deficiencies, and electrical issues before they become costly repairs.",
+    category: "Inspection Technology",
+    author: "Haroon Choudhry",
+    date: "2024-03-15",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=500&fit=crop",
+    featured: true,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What is Thermal Imaging in Home Inspections?</h2>
+      <p class="mb-4">Thermal imaging, also known as infrared thermography, uses specialized cameras to detect temperature differences across surfaces in your home. These temperature variations often reveal hidden problems that are invisible to the naked eye, making it an invaluable tool for comprehensive home inspections.</p>
+      
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Hidden Problems Thermal Imaging Can Detect</h2>
+      
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Moisture Intrusion and Water Damage</h3>
+      <p class="mb-4">Water infiltration is one of the most damaging and expensive problems a home can face. Thermal imaging detects moisture by identifying cooler areas where evaporation is occurring. We can find:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Roof leaks before they cause visible damage</li>
+        <li>Plumbing leaks hidden behind walls</li>
+        <li>Foundation moisture seepage</li>
+        <li>Window and door seal failures</li>
+      </ul>
+      
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Insulation Deficiencies</h3>
+      <p class="mb-4">Poor or missing insulation shows up clearly on thermal images as temperature anomalies. In Ontario's climate, proper insulation is critical for energy efficiency and comfort. We commonly find:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Missing insulation in walls and ceilings</li>
+        <li>Settling or compressed insulation</li>
+        <li>Thermal bridging through studs</li>
+        <li>Air infiltration points</li>
+      </ul>
+      
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. Electrical Issues</h3>
+      <p class="mb-4">Overloaded circuits, loose connections, and faulty breakers generate excess heat that thermal cameras can detect before they become fire hazards:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Overloaded circuits generating heat</li>
+        <li>Loose electrical connections</li>
+        <li>Failing breakers in electrical panels</li>
+        <li>Overheated wiring behind walls</li>
+      </ul>
+      
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. HVAC System Problems</h3>
+      <p class="mb-4">Heating and cooling systems are major investments. Thermal imaging helps identify efficiency problems:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Duct leaks and disconnections</li>
+        <li>Blocked or restricted airflow</li>
+        <li>Radiant heating system failures</li>
+        <li>Heat loss through ductwork</li>
+      </ul>
+      
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Benefits of Thermal Imaging Inspections</h2>
+      
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Non-Invasive Detection</h3>
+      <p class="mb-4">Unlike traditional methods that might require cutting into walls or ceilings, thermal imaging is completely non-destructive. We can scan entire rooms in minutes without leaving a mark.</p>
+      
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Early Problem Detection</h3>
+      <p class="mb-4">Many issues develop slowly over time. Thermal imaging catches problems in their early stages before they cause significant damage or require expensive repairs.</p>
+      
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Comprehensive Documentation</h3>
+      <p class="mb-4">Every thermal image is documented in your inspection report, providing visual evidence of any concerns and a baseline for future reference.</p>
+      
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When is Thermal Imaging Most Effective?</h2>
+      <p class="mb-4">Thermal imaging works best when there is a temperature difference between inside and outside. In Ontario, late fall through early spring provides ideal conditions, though our inspectors can work around various conditions throughout the year.</p>
+      
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Add Thermal Imaging to Your Inspection</h2>
+      <p class="mb-4">At ASADS Home Inspection, we offer thermal imaging as an add-on service to any of our standard inspections. For new construction homes, we strongly recommend it to verify insulation installation and identify any thermal bypasses before they become long-term energy drains.</p>
+      <p class="mb-4">Contact us at (647) 801-9311 to add thermal imaging to your next home inspection.</p>
+    `,
+  },
+  {
+    id: 12,
+    slug: "what-to-expect-home-inspection",
+    title: "What to Expect During Your Home Inspection",
+    metaTitle: "What to Expect During a Home Inspection | ASADS Toronto",
+    metaDescription: "Learn what happens during a professional home inspection, how long it takes, what is included, and how to prepare for your inspection day.",
+    excerpt: "A complete guide to the home inspection process, from scheduling to receiving your report. Know exactly what to expect on inspection day.",
+    category: "Buying Tips",
+    author: "Haroon Choudhry",
+    date: "2024-02-28",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Before the Inspection: How to Prepare</h2>
+      <p class="mb-4">A little preparation goes a long way toward ensuring a thorough and efficient inspection. Here is what you and the seller can do:</p>
+      
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">For Buyers</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Schedule 2-3 hours for a typical home inspection</li>
+        <li>Wear comfortable clothes and closed-toe shoes</li>
+        <li>Prepare questions about the property</li>
+        <li>Plan to attend at least the final hour for the walkthrough</li>
+      </ul>
+      
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">For Sellers (If Applicable)</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Ensure all utilities are on (electricity, gas, water)</li>
+        <li>Clear access to the electrical panel, furnace, and water heater</li>
+        <li>Unlock any outbuildings, gates, or utility areas</li>
+        <li>Replace burned-out light bulbs</li>
+        <li>Clear items from around the furnace and water heater</li>
+      </ul>
+      
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Happens During the Inspection</h2>
+      
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Exterior Inspection</h3>
+      <p class="mb-4">We start outside, examining the property from the ground up:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Roof:</strong> Shingles, flashing, chimneys, vents, and gutters</li>
+        <li><strong>Siding:</strong> Condition, damage, and proper installation</li>
+        <li><strong>Foundation:</strong> Visible cracks, settling, and drainage</li>
+        <li><strong>Grading:</strong> Slope away from the house for proper drainage</li>
+        <li><strong>Driveways and walkways:</strong> Condition and trip hazards</li>
+        <li><strong>Decks and porches:</strong> Structure, railings, and safety</li>
+      </ul>
+      
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Interior Inspection</h3>
+      <p class="mb-4">Inside, we go room by room and system by system:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Electrical:</strong> Panel capacity, wiring type, outlets, and safety</li>
+        <li><strong>Plumbing:</strong> Water pressure, drainage, water heater, visible pipes</li>
+        <li><strong>HVAC:</strong> Furnace, air conditioning, ductwork, filters</li>
+        <li><strong>Walls and ceilings:</strong> Cracks, stains, and damage</li>
+        <li><strong>Windows and doors:</strong> Operation, seals, and condition</li>
+        <li><strong>Kitchen:</strong> Appliances, ventilation, and plumbing</li>
+        <li><strong>Bathrooms:</strong> Fixtures, ventilation, and moisture issues</li>
+      </ul>
+      
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Attic Inspection</h3>
+      <p class="mb-4">If accessible, we enter the attic to check:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Insulation type, depth, and condition</li>
+        <li>Ventilation adequacy</li>
+        <li>Signs of moisture, mold, or pest intrusion</li>
+        <li>Roof structure and sheathing condition</li>
+      </ul>
+      
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Basement or Crawl Space</h3>
+      <p class="mb-4">Below grade, we look for:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Foundation cracks and water intrusion</li>
+        <li>Structural supports and floor joists</li>
+        <li>Moisture, mold, and efflorescence</li>
+        <li>Sump pump operation (if present)</li>
+      </ul>
+      
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Long Does a Home Inspection Take?</h2>
+      <p class="mb-4">A typical home inspection takes 2-4 hours depending on the size and condition of the property:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo (under 1,000 sq ft):</strong> 1.5-2 hours</li>
+        <li><strong>Average home (1,500-2,500 sq ft):</strong> 2-3 hours</li>
+        <li><strong>Large home (3,000+ sq ft):</strong> 3-4 hours</li>
+        <li><strong>Older or complex properties:</strong> May take longer</li>
+      </ul>
+      
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Should You Attend the Inspection?</h2>
+      <p class="mb-4">We strongly encourage buyers to attend, at least for the final walkthrough. Being present allows you to:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Ask questions in real-time</li>
+        <li>See issues firsthand</li>
+        <li>Learn about the home systems and maintenance needs</li>
+        <li>Understand the severity and context of findings</li>
+      </ul>
+      
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">After the Inspection: Your Report</h2>
+      <p class="mb-4">At ASADS, we provide same-day digital reports that include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Summary of major findings</li>
+        <li>Detailed descriptions of each issue</li>
+        <li>High-resolution photos documenting conditions</li>
+        <li>Recommendations for repairs or further evaluation</li>
+        <li>Maintenance tips for the new homeowner</li>
+      </ul>
+      <p class="mb-4">You will receive your report via email, usually within a few hours of the inspection completion.</p>
+      
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What a Home Inspection Does NOT Include</h2>
+      <p class="mb-4">It is important to understand the scope of a standard inspection. We do not:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Move furniture or personal belongings</li>
+        <li>Perform destructive testing</li>
+        <li>Inspect inside walls (unless using thermal imaging)</li>
+        <li>Test for radon, mold, or asbestos (available as add-ons)</li>
+        <li>Evaluate cosmetic conditions</li>
+        <li>Provide repair cost estimates</li>
+      </ul>
+      
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your Inspection Today</h2>
+      <p class="mb-4">Ready to get your home inspection scheduled? Contact ASADS Home Inspection at (647) 801-9311 or book online. We serve the entire Greater Toronto Area with same-day reporting and flexible scheduling.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
