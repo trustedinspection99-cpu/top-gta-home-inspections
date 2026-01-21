@@ -1,25 +1,23 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function EastYork() {
-  const neighborhoods = [
-    "The Danforth", "Woodbine Heights", "Pape Village", "Leaside", "Thorncliffe Park",
-    "Flemingdon Park", "O'Connor-Parkview", "Governor's Bridge", "Bermondsey", "Crescent Town"
-  ];
+  const data = getLocationBySlug("east-york");
+
+  if (!data) return null;
 
   return (
-    <>
-      <Helmet>
-        <title>East York Home Inspections | Residential Specialist</title>
-        <meta name="description" content="Detailed property inspections in East York. Ideal for buyers of semi-detached homes and multi-unit income properties." />
-      </Helmet>
-      <LocationPageTemplate
-        city="East York"
-        region="Ontario"
-        description="Detailed property inspections in East York. Ideal for buyers of semi-detached homes and multi-unit income properties."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
-      />
-    </>
+    <LocationPageTemplate
+      city={data.city}
+      region={data.region}
+      description={data.description}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
+      neighborhoods={data.neighborhoods}
+      phoneNumber={data.phoneNumber}
+      localInsights={data.localInsights}
+      latitude={data.latitude}
+      longitude={data.longitude}
+    />
   );
 }

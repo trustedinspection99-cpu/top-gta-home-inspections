@@ -5,6 +5,81 @@
   ],
   "redirects": [
     {
+      "source": "/locationsmarkham",
+      "destination": "/locations/markham",
+      "permanent": true
+    },
+    {
+      "source": "/locationsbrampton",
+      "destination": "/locations/brampton",
+      "permanent": true
+    },
+    {
+      "source": "/locationsmississauga",
+      "destination": "/locations/mississauga",
+      "permanent": true
+    },
+    {
+      "source": "/locationsvaughan",
+      "destination": "/locations/vaughan",
+      "permanent": true
+    },
+    {
+      "source": "/locationsnorth-york",
+      "destination": "/locations/north-york",
+      "permanent": true
+    },
+    {
+      "source": "/locationshamilton",
+      "destination": "/locations/hamilton",
+      "permanent": true
+    },
+    {
+      "source": "/locationstoronto",
+      "destination": "/locations/toronto",
+      "permanent": true
+    },
+    {
+      "source": "/locationsoakville",
+      "destination": "/locations/oakville",
+      "permanent": true
+    },
+    {
+      "source": "/locationsscarborough",
+      "destination": "/locations/scarborough",
+      "permanent": true
+    },
+    {
+      "source": "/locationsburlington",
+      "destination": "/locations/burlington",
+      "permanent": true
+    },
+    {
+      "source": "/locationsrichmond-hill",
+      "destination": "/locations/richmond-hill",
+      "permanent": true
+    },
+    {
+      "source": "/locationsbarrie",
+      "destination": "/locations/barrie",
+      "permanent": true
+    },
+    {
+      "source": "/locations/st.-catharines",
+      "destination": "/locations/st-catharines",
+      "permanent": true
+    },
+    {
+      "source": "/locations/guelph/eramosa",
+      "destination": "/locations/guelph-eramosa",
+      "permanent": true
+    },
+    {
+      "source": "/blog/thermal-imaging-inspection-benefits",
+      "destination": "/blog/thermal-imaging-benefits",
+      "permanent": true
+    },
+    {
       "source": "/home-inspection",
       "destination": "/services/pre-purchase",
       "permanent": true
