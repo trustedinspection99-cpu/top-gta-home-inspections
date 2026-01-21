@@ -1,25 +1,23 @@
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
-import { Helmet } from "react-helmet-async";
+import { getLocationBySlug } from "@/data/locationData";
 
 export default function PortColborne() {
-  const neighborhoods = [
-    "Downtown Port Colborne", "Sherkston", "Sherkston Shores", "Humberstone",
-    "West Street", "King Street", "Elm Street", "Nickel Beach", "Sugarloaf", "Gravelly Bay"
-  ];
+  const data = getLocationBySlug("port-colborne");
+
+  if (!data) return null;
 
   return (
-    <>
-      <Helmet>
-        <title>Home Inspection Port Colborne | Certified Inspectors | ASADS</title>
-        <meta name="description" content="Professional home inspection in Port Colborne. Lake Erie waterfront specialists. Call (647) 801-9311!" />
-      </Helmet>
-      <LocationPageTemplate
-        city="Port Colborne"
-        region="Ontario"
-        description="Port Colborne's dependable home inspection service. We serve Port Colborne and Sherkston with comprehensive inspections."
-        neighborhoods={neighborhoods}
-        phoneNumber="(647) 801-9311"
-      />
-    </>
+    <LocationPageTemplate
+      city={data.city}
+      region={data.region}
+      description={data.description}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
+      neighborhoods={data.neighborhoods}
+      phoneNumber={data.phoneNumber}
+      localInsights={data.localInsights}
+      latitude={data.latitude}
+      longitude={data.longitude}
+    />
   );
 }
