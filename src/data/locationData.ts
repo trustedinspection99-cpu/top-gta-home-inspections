@@ -371,6 +371,72 @@ export const locationData: LocationData[] = [
     ]
   },
   {
+    slug: "bolton",
+    city: "Bolton",
+    region: "Peel Region",
+    metaTitle: "Bolton Home Inspector | Rural Estate Certified",
+    metaDescription: "Certified Bolton home inspector for rural estates, hobby farms & new construction. Well/septic testing, thermal imaging. Same-day reports.",
+    description: "Bolton's trusted certified home inspector for rural estate pre-purchase inspections, new construction warranty reviews & thermal imaging diagnostics throughout Caledon.",
+    neighborhoods: [
+      "Downtown Bolton", "Humber Station", "Albion", "Caledon East", "Palgrave",
+      "Sandhill", "Columbia Way", "Whitehill", "King's Crossing"
+    ],
+    phoneNumber: "(647) 801-9311",
+    latitude: 43.8756,
+    longitude: -79.7336,
+    localInsights: [
+      { 
+        title: "Bolton Pre-Purchase Buyer Inspections", 
+        content: "Comprehensive buyer inspections identify private well capacity, septic system conditions & rural drainage infrastructure before closing." 
+      },
+      { 
+        title: "Thermal Imaging Bolton Custom Homes", 
+        content: "Infrared scans verify geothermal heat pumps, radiant floor zones & cathedral ceiling insulation in Bolton's executive estates." 
+      },
+      { 
+        title: "New Construction Warranty Inspections", 
+        content: "Tarion warranty inspections for Bolton's growing new subdivisions including HRV commissioning & air barrier continuity testing." 
+      },
+      { 
+        title: "Pre-Listing Rural Property Inspections", 
+        content: "Detailed condition reports with repair estimates maximize Bolton seller negotiating position in competitive Caledon market." 
+      }
+    ]
+  },
+  {
+    slug: "halton-hills",
+    city: "Halton Hills",
+    region: "Halton Region",
+    metaTitle: "Halton Hills Home Inspector | Georgetown Certified",
+    metaDescription: "Certified Halton Hills home inspector serving Georgetown, Acton & rural estates. Thermal imaging, well/septic testing. Same-day reports.",
+    description: "Halton Hills' premier certified inspector for Georgetown heritage homes, Acton family properties & rural estate pre-purchase inspections with thermal imaging.",
+    neighborhoods: [
+      "Georgetown", "Acton", "Glen Williams", "Limehouse", "Norval",
+      "Stewarttown", "Ballinafad", "Silver Creek", "Hornby"
+    ],
+    phoneNumber: "(647) 801-9311",
+    latitude: 43.6300,
+    longitude: -79.9500,
+    localInsights: [
+      { 
+        title: "Georgetown Heritage Home Inspections", 
+        content: "Pre-purchase assessments of century homes including stone foundations, heritage windows & knob-and-tube wiring in Georgetown's historic core." 
+      },
+      { 
+        title: "Thermal Imaging Halton Hills Properties", 
+        content: "Infrared scans reveal missing insulation, air leakage & hidden moisture in Acton family homes and Georgetown custom builds." 
+      },
+      { 
+        title: "Rural Estate Well & Septic Testing", 
+        content: "Private system flow testing & reserve capacity assessment for Halton Hills acreages and Glen Williams rural properties." 
+      },
+      { 
+        title: "Pre-Listing Seller Inspections", 
+        content: "Comprehensive condition reports maximize Halton Hills seller value in competitive Georgetown and Acton real estate markets." 
+      }
+    ]
+  },
+  {
     slug: "caledon",
     city: "Caledon",
     region: "Peel Region",

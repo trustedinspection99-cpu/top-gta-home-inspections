@@ -393,7 +393,7 @@ export default function Contact() {
             ].map((location) => (
               <Link
                 key={location.slug}
-                to={`/locations${location.slug}`}
+                to={`/locations/${location.slug}`}
                 className="flex items-center justify-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
               >
                 <MapPin className="h-4 w-4 text-primary" />
