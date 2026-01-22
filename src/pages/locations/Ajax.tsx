@@ -18,6 +18,7 @@ export default function Ajax() {
       localInsights={data.localInsights}
       latitude={data.latitude}
       longitude={data.longitude}
+      slug={data.slug}
     />
   );
 }

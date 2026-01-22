@@ -53,6 +53,7 @@ interface LocationPageTemplateProps {
   specialtyServices?: SpecialtyService[];
   localInsights?: LocalInsight[];
   allCities?: string[];
+  slug?: string;
 }
 
 const featuredServices = [
@@ -112,9 +113,11 @@ export function LocationPageTemplate({
   ],
   localInsights = [],
   allCities = [],
+  slug,
 }: LocationPageTemplateProps) {
-  const slugifiedCity = city.toLowerCase().replace(/\s+/g, "-");
-  const url = getCanonicalUrl(`/locations/${slugifiedCity}`);
+  // Use provided slug, fallback to generating from city name
+  const locationSlug = slug || city.toLowerCase().replace(/\s+/g, "-");
+  const url = getCanonicalUrl(`/locations/${locationSlug}`);
   const pageTitle = metaTitle || `#1 ${city} Home Inspector | Certified & Same Day Reports`;
   const pageDescription = metaDescription || description;
 

@@ -18,6 +18,7 @@ export default function Brock() {
       localInsights={data.localInsights}
       latitude={data.latitude}
       longitude={data.longitude}
+      slug={data.slug}
     />
   );
 }

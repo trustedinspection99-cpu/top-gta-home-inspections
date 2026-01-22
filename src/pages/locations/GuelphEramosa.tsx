@@ -18,6 +18,7 @@ export default function GuelphEramosa() {
       localInsights={data.localInsights}
       latitude={data.latitude}
       longitude={data.longitude}
+      slug={data.slug}
     />
   );
 }
