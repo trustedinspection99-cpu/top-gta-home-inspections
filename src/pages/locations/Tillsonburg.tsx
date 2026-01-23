@@ -8,6 +8,7 @@ export default function Tillsonburg() {
 
   return (
     <LocationPageTemplate
+      slug={data.slug}
       city={data.city}
       region={data.region}
       description={data.description}
