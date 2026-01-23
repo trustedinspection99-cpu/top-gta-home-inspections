@@ -8,6 +8,7 @@ export default function EastGwillimbury() {
 
   return (
     <LocationPageTemplate
+      slug={data.slug}
       city={data.city}
       region={data.region}
       description={data.description}

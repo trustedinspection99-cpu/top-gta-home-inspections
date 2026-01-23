@@ -8,6 +8,7 @@ export default function Stayner() {
 
   return (
     <LocationPageTemplate
+      slug={data.slug}
       city={data.city}
       region={data.region}
       description={data.description}

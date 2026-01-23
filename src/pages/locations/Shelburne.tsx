@@ -8,6 +8,7 @@ export default function Shelburne() {
 
   return (
     <LocationPageTemplate
+      slug={data.slug}
       city={data.city}
       region={data.region}
       description={data.description}
