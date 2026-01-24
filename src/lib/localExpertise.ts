@@ -1,22 +1,20 @@
-type Location = {
+export function buildLocalExpertise(data: {
   city: string;
   region?: string;
   neighborhoods?: string[];
-  localInsights?: { title: string; content: string }[];
-};
+}) {
+  const areas = data.neighborhoods?.slice(0, 3).join(", ");
 
-export function generateLocalExpertise(loc: Location) {
-  const city = loc.city;
-  const region = loc.region;
-  const neighborhoods = loc.neighborhoods?.slice(0, 3).join(", ");
-  const insight = loc.localInsights?.[0]?.title;
-
-  return `
-ASADS provides professional home inspection services in ${city}${
-    region ? ` and throughout the ${region}` : ""
-  }. Our inspectors are familiar with common property conditions in areas such as ${neighborhoods}, 
-including building practices, age-related defects, and local construction standards. 
-Whether you're buying, selling, or evaluating a property, we perform detailed inspections 
-tailored to ${city} homes, with same-day reports and clear recommendations.
-`.replace(/\s+/g, " ").trim();
+  return {
+    title: `Local Home Inspection Expertise in ${data.city}`,
+    paragraphs: [
+      `As a professional home inspector serving ${data.city}${
+        data.region ? ` within the ${data.region}` : ""
+      }, we regularly inspect homes across ${
+        areas || "multiple established neighbourhoods"
+      }. Each area presents different construction styles, materials, and age-related conditions.`,
+      `Our inspections are tailored to local building practices, climate exposure, and common deficiencies seen in this region. This local familiarity allows us to identify issues that are often overlooked during general inspections.`,
+      `Whether you're purchasing a resale property, a newer build, or preparing for a warranty or pre-listing inspection, our local experience in ${data.city} ensures you receive accurate, relevant, and actionable findings.`
+    ],
+  };
 }
