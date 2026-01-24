@@ -1,3 +1,4 @@
+import { generateLocalExpertise } from "@/lib/localExpertise";
 import React, { useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link, useLocation } from "react-router-dom";
