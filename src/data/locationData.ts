@@ -21,6 +21,11 @@ export interface LocalInsight {
   content: string;
 }
 
+export interface LocalExpertise {
+  title: string;
+  paragraphs: string[];
+}
+
 export interface LocationData {
   slug: string;
   city: string;
@@ -31,6 +36,7 @@ export interface LocationData {
   neighborhoods: string[];
   phoneNumber: string;
   localInsights?: LocalInsight[];
+  localExpertise?: LocalExpertise;
   latitude?: number;
   longitude?: number;
 }
@@ -71,7 +77,15 @@ export const locationData: LocationData[] = [
         title: "Mold & Asbestos Testing Toronto",
         content: "Certified mold inspections and asbestos surveys for pre-renovation & pre-sale. We identify black mold in HVAC systems and friable asbestos in century home popcorn ceilings."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Toronto",
+      paragraphs: [
+        "Toronto's housing stock spans Victorian-era century homes in Cabbagetown to modern high-rise condos in CityPlace. Each property type presents unique inspection challenges requiring specialized knowledge of local construction practices.",
+        "Downtown condos demand assessment of fan coil HVAC units, balcony membranes, and underground parking waterproofing. Heritage homes in The Annex and Rosedale require foundation settlement analysis and knob-and-tube wiring evaluation.",
+        "Our inspectors understand Toronto's building evolution from post-war bungalows to contemporary glass towers, allowing buyers and sellers to make informed decisions with confidence."
+      ]
+    }
   },
   {
     slug: "north-york",
@@ -104,7 +118,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Inspections North York Sellers",
         content: "Identify and document existing conditions before listing. Detailed reports with photos help sellers price accurately and negotiate from strength in competitive market."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in North York",
+      paragraphs: [
+        "North York's diverse housing ranges from post-war bungalows in Downsview to luxury estates in Bridle Path. High-rise condos along the Yonge-Sheppard corridor require specialized fan coil and common element inspection expertise.",
+        "Willowdale and Bayview Village homes commonly feature aluminum wiring installations from the 1970s requiring arc fault assessment. Ravine-lot properties demand foundation slope stability and erosion control evaluation.",
+        "Our inspectors understand North York's construction patterns from mid-century homes to modern executive builds, providing buyers with the detailed insights needed for confident purchasing decisions."
+      ]
+    }
   },
   {
     slug: "scarborough",
@@ -137,7 +159,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Seller Inspections Scarborough",
         content: "Proactive sellers choose pre-listing inspections to identify repair needs before multiple offer situations. Detailed digital reports delivered within 24 hours."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Scarborough",
+      paragraphs: [
+        "Scarborough's housing stock varies from 1950s bungalows in Birchcliff to modern townhouse developments in Rouge Hill. Older properties frequently present galvanized plumbing deterioration and original electrical panel upgrades.",
+        "Bluffs-area waterfront properties require specialized assessment of shoreline erosion, retaining wall conditions, and salt-air corrosion impacts on exterior systems and foundations.",
+        "Our inspectors understand Scarborough's diverse neighbourhood construction including post-war rental conversions, established family homes, and new infill developments requiring different inspection approaches."
+      ]
+    }
   },
   {
     slug: "etobicoke",
@@ -170,7 +200,15 @@ export const locationData: LocationData[] = [
         title: "Mold Testing Etobicoke Basements",
         content: "Post-flood mold growth testing for Richview finished basements. Air sampling and bulk sampling identifies hidden moisture sources."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Etobicoke",
+      paragraphs: [
+        "Etobicoke offers diverse housing from heritage estates in The Kingsway to waterfront condos in Humber Bay Shores. Each neighbourhood presents distinct inspection requirements based on era and construction type.",
+        "Lakefront high-rises demand assessment of balcony membranes, salt-air corrosion, and underground parking waterproofing. Century homes in established areas require foundation underpinning and heritage window evaluation.",
+        "Our inspectors understand Etobicoke's construction evolution from Lakeshore bungalows to Islington luxury builds, ensuring buyers receive comprehensive property assessments tailored to each property type."
+      ]
+    }
   },
   {
     slug: "mississauga",
@@ -203,7 +241,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Inspections Mississauga Sellers",
         content: "Proactive pre-listing inspections provide repair cost estimates and condition documentation for competitive Peel Region multiple offer situations."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Mississauga",
+      paragraphs: [
+        "Mississauga housing ranges from heritage properties in Port Credit to modern condos at Square One. Each area presents unique inspection challenges from Credit River flood zones to high-rise mechanical systems.",
+        "Newer subdivisions in Erin Mills and Churchill Meadows commonly require Tarion warranty inspections verifying spray foam insulation, HRV commissioning, and exterior envelope performance.",
+        "Our inspectors understand Mississauga's construction patterns from lakefront estates to family subdivisions, providing buyers and sellers with the detailed assessments needed for confident real estate decisions."
+      ]
+    }
   },
   {
     slug: "brampton",
@@ -236,7 +282,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Seller Inspections Brampton",
         content: "Detailed condition reports with digital photo documentation and repair cost estimates for Brampton's competitive seller's market."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Brampton",
+      paragraphs: [
+        "Brampton's rapid growth has created diverse housing stock from established Fletcher's Creek homes to new construction in Gore Meadows. Many properties feature legal or illegal secondary suites requiring specialized basement inspection.",
+        "New subdivisions commonly present builder deficiencies including HRV ductwork issues, inadequate drainage grades, and ice damming from poor eavestrough design that thermal imaging can identify.",
+        "Our inspectors understand Brampton's construction patterns and common defects in both established neighbourhoods and growing communities, ensuring buyers make informed purchasing decisions."
+      ]
+    }
   },
   {
     slug: "markham",
@@ -269,7 +323,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Luxury Home Inspections",
         content: "Comprehensive condition assessment provides sellers with detailed repair estimates and systems performance verification for premium listings."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Markham",
+      paragraphs: [
+        "Markham's housing ranges from heritage properties in Unionville to luxury estates in Cachet and Angus Glen. New construction in Cornell and Wismer requires specialized warranty inspection for builder deficiency identification.",
+        "Executive homes commonly feature complex multi-zone HVAC systems, smart home automation, and custom millwork installations requiring detailed assessment beyond standard inspection protocols.",
+        "Our inspectors understand Markham's construction evolution from century villages to modern master-planned communities, providing buyers with comprehensive property assessments for confident decisions."
+      ]
+    }
   },
   {
     slug: "vaughan",
@@ -302,7 +364,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Inspections Vaughan Sellers",
         content: "Comprehensive systems assessment provides competitive market intelligence through detailed condition reporting."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Vaughan",
+      paragraphs: [
+        "Vaughan's housing stock spans from established Woodbridge homes to custom estates in Kleinburg and new construction throughout Vellore Village. Each area presents distinct inspection requirements based on age and construction type.",
+        "New home warranty inspections are critical in Vaughan's growing communities, verifying HRV commissioning, vapour barrier continuity, and exterior envelope performance before closing.",
+        "Our inspectors understand Vaughan's construction patterns from Italian-influenced custom homes to modern energy-efficient builds, ensuring buyers receive detailed assessments tailored to each property type."
+      ]
+    }
   },
   {
     slug: "richmond-hill",
@@ -335,7 +405,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Seller Inspections", 
         content: "Comprehensive condition reports with repair estimates for competitive York Region luxury market listings." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Richmond Hill",
+      paragraphs: [
+        "Richmond Hill's housing ranges from established family homes in Richvale to luxury estates in Oak Ridges. High-end properties demand inspection of geothermal systems, custom millwork, and complex drainage solutions.",
+        "New developments require Tarion warranty inspections verifying HRV commissioning, air barrier continuity, and spray foam insulation performance before closing.",
+        "Our inspectors understand Richmond Hill's premium real estate market, providing buyers with the detailed assessments needed for confident purchasing decisions in York Region."
+      ]
+    }
   },
   {
     slug: "aurora",
@@ -368,7 +446,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Seller Property Reviews", 
         content: "Detailed condition documentation for Aurora's competitive heritage and luxury resale markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Aurora",
+      paragraphs: [
+        "Aurora's housing stock includes heritage properties in the downtown core and modern executive homes in established neighbourhoods. Each property type presents distinct inspection challenges based on era and construction methods.",
+        "Heritage homes require foundation settlement analysis, chimney condition evaluation, and assessment of period electrical and plumbing systems that may need upgrades.",
+        "Our inspectors understand Aurora's construction evolution from historic village homes to contemporary custom builds, ensuring buyers receive thorough assessments for confident decision-making."
+      ]
+    }
   },
   {
     slug: "bolton",
@@ -401,7 +487,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Rural Property Inspections", 
         content: "Detailed condition reports with repair estimates maximize Bolton seller negotiating position in competitive Caledon market." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Bolton",
+      paragraphs: [
+        "Bolton's housing ranges from established village homes to custom rural estates throughout Caledon. Properties commonly feature private wells, septic systems, and equestrian facilities requiring specialized inspection expertise.",
+        "New subdivisions require Tarion warranty inspections verifying HRV commissioning, spray foam insulation continuity, and exterior envelope performance before closing.",
+        "Our inspectors understand Bolton's unique rural and estate construction patterns, providing buyers with comprehensive assessments for confident purchasing decisions in Caledon."
+      ]
+    }
   },
   {
     slug: "halton-hills",
@@ -434,7 +528,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Seller Inspections", 
         content: "Comprehensive condition reports maximize Halton Hills seller value in competitive Georgetown and Acton real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Halton Hills",
+      paragraphs: [
+        "Halton Hills encompasses Georgetown's heritage downtown, Acton's family neighbourhoods, and surrounding rural estates. Each area presents distinct inspection requirements based on age and property type.",
+        "Heritage homes in Georgetown require foundation and chimney assessments, while rural properties demand private well and septic system evaluation with thermal imaging diagnostics.",
+        "Our inspectors understand Halton Hills' diverse construction from century homes to modern custom builds, ensuring buyers receive thorough property assessments for confident decisions."
+      ]
+    }
   },
   {
     slug: "caledon",
@@ -467,7 +569,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Rural Property Inspections", 
         content: "Comprehensive estate condition reports including barn, stable & outbuilding structural assessments." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Caledon",
+      paragraphs: [
+        "Caledon's rural character features equestrian estates, hobby farms, and custom homes on large acreages. Properties commonly require private well, septic system, and barn structural assessments.",
+        "Geothermal heating systems, in-floor radiant heating, and timber frame construction are common in Caledon's luxury rural properties requiring specialized thermal imaging expertise.",
+        "Our inspectors understand Caledon's unique rural construction patterns, providing buyers with comprehensive estate assessments for confident purchasing decisions."
+      ]
+    }
   },
   {
     slug: "oakville",
@@ -500,7 +610,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Luxury Seller Inspections", 
         content: "Detailed condition reports with repair cost estimates for Oakville's premium resale market." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Oakville",
+      paragraphs: [
+        "Oakville's premium housing ranges from lakefront estates to luxury subdivisions in Glen Abbey and River Oaks. High-end properties feature smart home automation, wine cellars, and complex pool systems requiring detailed assessment.",
+        "Waterfront properties demand shoreline erosion evaluation, retaining wall condition assessment, and salt-air corrosion impact analysis on exterior building systems.",
+        "Our inspectors understand Oakville's luxury real estate market, providing buyers with the comprehensive assessments needed for confident purchasing decisions in Halton Region."
+      ]
+    }
   },
   {
     slug: "oshawa",
@@ -533,7 +651,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Seller Inspections Oshawa", 
         content: "Detailed digital condition reports for competitive Durham Region multiple offer situations." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Oshawa",
+      paragraphs: [
+        "Oshawa's housing stock varies from established bungalows in Central Oshawa to newer developments in Windfields and Taunton. Older properties commonly present weeping tile issues, undersized HVAC systems, and ice damming.",
+        "Legal secondary suites require specialized basement mold assessment with air quality sampling. Thermal imaging identifies hidden moisture and electrical deficiencies before purchase.",
+        "Our inspectors understand Oshawa's construction patterns and common defects in Durham Region properties, ensuring buyers make informed purchasing decisions with confidence."
+      ]
+    }
   },
   {
     slug: "barrie",
