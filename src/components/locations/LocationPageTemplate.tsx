@@ -36,6 +36,11 @@ interface LocalInsight {
   content: string;
 }
 
+interface LocalExpertise {
+  title: string;
+  paragraphs: string[];
+}
+
 interface LocationPageTemplateProps {
   city: string;
   region: string;
@@ -52,6 +57,7 @@ interface LocationPageTemplateProps {
   services?: string[];
   specialtyServices?: SpecialtyService[];
   localInsights?: LocalInsight[];
+  localExpertise?: LocalExpertise;
   allCities?: string[];
   slug?: string;
 }
@@ -112,14 +118,17 @@ export function LocationPageTemplate({
     },
   ],
   localInsights = [],
+  localExpertise,
   allCities = [],
   slug,
 }: LocationPageTemplateProps) {
   // Use provided slug, fallback to generating from city name
-  const locationSlug = slug || city.toLowerCase().replace(/\s+/g, "-");
+  const locationSlug = slug || `home-inspection-${city.toLowerCase().replace(/\s+/g, "-")}`;
   const url = getCanonicalUrl(`/locations/${locationSlug}`);
-  const pageTitle = metaTitle || `#1 ${city} Home Inspector | Certified & Same Day Reports`;
-  const pageDescription = metaDescription || description;
+  const pageTitle = metaTitle || `${city} Home Inspection | Certified Home Inspector`;
+  const pageDescription =
+    metaDescription ||
+    `Professional home inspection services in ${city}. Certified inspectors, same-day reports, and comprehensive inspections. Call ${phoneNumber}.`;
 
   // LocalBusiness Schema
   const localBusinessSchema = useMemo(
@@ -247,6 +256,31 @@ export function LocationPageTemplate({
     [city, phoneNumber, neighborhoods]
   );
 
+  // Service Schema
+  const serviceSchema = useMemo(
+    () => ({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: `Home Inspection Services in ${city}`,
+      serviceType: "Home Inspection",
+      provider: {
+        "@type": "LocalBusiness",
+        name: siteName,
+        telephone: phoneNumber,
+        url
+      },
+      areaServed: {
+        "@type": "City",
+        name: city,
+        containedInPlace: {
+          "@type": "AdministrativeArea",
+          name: region
+        }
+      }
+    }),
+    [city, region, phoneNumber, siteName, url]
+  );
+
   return (
     <Layout>
       <Helmet>
@@ -283,6 +317,7 @@ export function LocationPageTemplate({
         <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}
@@ -324,6 +359,22 @@ export function LocationPageTemplate({
           </div>
         </div>
       </section>
+
+      {/* Local Expertise Section */}
+      {localExpertise && (
+        <section className="py-16 bg-background">
+          <div className="container max-w-4xl">
+            <h2 className="font-heading text-3xl font-bold text-foreground mb-6">
+              {localExpertise.title}
+            </h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              {localExpertise.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Main Content */}
       <section className="py-16 md:py-24 bg-background">
