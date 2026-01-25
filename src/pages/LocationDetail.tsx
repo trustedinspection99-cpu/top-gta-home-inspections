@@ -1,4 +1,4 @@
-import { buildLocalExpertise } from "@/lib/localExpertiseGenerator";
+import { buildLocalExpertise } from "@/lib/localExpertise";
 import { useParams, Navigate } from "react-router-dom";
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { locationData } from "@/data/locationData";
