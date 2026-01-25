@@ -692,7 +692,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Seller Property Reviews", 
         content: "Detailed condition documentation for Barrie's competitive spring real estate market." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Barrie",
+      paragraphs: [
+        "Barrie's housing ranges from established neighbourhoods in Allandale to new developments in South Barrie. Waterfront properties require dock and shoreline assessment, while new construction demands Tarion warranty inspections.",
+        "Simcoe County properties commonly feature HRV systems and spray foam insulation requiring thermal imaging verification. Ice damming is prevalent in homes with complex roof designs.",
+        "Our inspectors understand Barrie's construction patterns from lakefront cottages to suburban family homes, ensuring buyers receive comprehensive assessments for confident purchasing decisions."
+      ]
+    }
   },
   {
     slug: "whitby",
@@ -719,10 +727,18 @@ export const locationData: LocationData[] = [
         content: "Infrared scans identify HVAC deficiencies, insulation performance issues & hidden moisture in Whitby's established neighborhoods." 
       },
       { 
-        title: "Pre-Listing Seller Inspections", 
-        content: "Condition reports maximize seller negotiating position in Whitby's competitive waterfront and family home markets." 
+        title: "Pre-Listing Seller Inspections",
+        content: "Condition reports maximize seller negotiating position in Whitby's competitive waterfront and family home markets."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Whitby",
+      paragraphs: [
+        "Whitby's housing stock spans from established homes in downtown to lakefront properties in Port Whitby and new construction in Brooklin. Each area presents distinct inspection requirements.",
+        "Lake Ontario waterfront homes require shoreline erosion assessment and flood mitigation evaluation. New subdivisions demand Tarion warranty inspections for HRV and insulation performance.",
+        "Our inspectors understand Whitby's construction patterns in Durham Region, providing buyers with detailed assessments for confident purchasing decisions."
+      ]
+    }
   },
   {
     slug: "peterborough",
@@ -749,10 +765,18 @@ export const locationData: LocationData[] = [
         content: "Infrared scans verify seasonal home heating systems & insulation performance in Kawarthas cottage country." 
       },
       { 
-        title: "Pre-Listing Cottage Seller Inspections", 
-        content: "Detailed condition reports for Kawarthas recreational property sales maximize seller value in seasonal markets." 
+        title: "Pre-Listing Cottage Seller Inspections",
+        content: "Detailed condition reports for Kawarthas recreational property sales maximize seller value in seasonal markets."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Peterborough",
+      paragraphs: [
+        "Peterborough's housing ranges from downtown heritage homes to Kawarthas lakefront cottages. Seasonal properties require winterization and dock assessment, while heritage homes demand foundation and chimney evaluation.",
+        "Lake properties commonly feature seasonal heating systems, wood stoves, and private well/septic requiring specialized inspection expertise for cottage country conditions.",
+        "Our inspectors understand Peterborough's unique construction from urban family homes to recreational lakefront properties, ensuring buyers make informed decisions."
+      ]
+    }
   },
   {
     slug: "newmarket",
@@ -782,10 +806,18 @@ export const locationData: LocationData[] = [
         content: "Detailed condition reports with repair cost estimates maximize seller negotiating position in competitive market." 
       },
       { 
-        title: "Mold Testing Newmarket Finished Basements", 
-        content: "Certified mold air sampling identifies hidden moisture sources in legal secondary suites." 
+        title: "Mold Testing Newmarket Finished Basements",
+        content: "Certified mold air sampling identifies hidden moisture sources in legal secondary suites."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Newmarket",
+      paragraphs: [
+        "Newmarket's housing stock ranges from heritage properties in the downtown core to modern executive homes in Stonehaven and Summerhill Estates. Each neighbourhood presents unique inspection requirements.",
+        "York Region homes commonly feature ice damming issues, foundation settlement in clay soils, and undersized HVAC systems requiring thermal imaging diagnostics.",
+        "Our inspectors understand Newmarket's construction patterns from century homes to contemporary builds, providing buyers with comprehensive assessments for confident decisions."
+      ]
+    }
   },
   {
     slug: "burlington",
@@ -815,10 +847,18 @@ export const locationData: LocationData[] = [
         content: "Comprehensive structural, mechanical & exterior condition assessment for Brant Hills family residences and established neighborhoods." 
       },
       { 
-        title: "Pre-Listing Seller Property Reviews", 
-        content: "Detailed condition documentation maximizes seller position in Halton's competitive waterfront and family home markets." 
+        title: "Pre-Listing Seller Property Reviews",
+        content: "Detailed condition documentation maximizes seller position in Halton's competitive waterfront and family home markets."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Burlington",
+      paragraphs: [
+        "Burlington's housing ranges from lakefront estates along the waterfront to established family homes in Brant Hills and Headon Forest. Each area presents distinct inspection challenges.",
+        "Lake Ontario waterfront properties require shoreline stabilization, dock condition, and flood mitigation assessment. High-rise condos demand fan coil and underground garage inspection.",
+        "Our inspectors understand Burlington's premium real estate market, providing buyers with the detailed assessments needed for confident purchasing decisions in Halton Region."
+      ]
+    }
   },
   {
     slug: "ajax",
@@ -848,10 +888,18 @@ export const locationData: LocationData[] = [
         content: "Comprehensive detached home structural, mechanical & exterior condition assessment before purchase in Ajax's established neighborhoods." 
       },
       { 
-        title: "Mold Testing Ajax Finished Basements", 
-        content: "Certified post-flood mold assessment with air quality sampling for legal secondary suites in Ajax's lower-level living spaces." 
+        title: "Mold Testing Ajax Finished Basements",
+        content: "Certified post-flood mold assessment with air quality sampling for legal secondary suites in Ajax's lower-level living spaces."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Ajax",
+      paragraphs: [
+        "Ajax's housing ranges from lakefront properties along Lake Ontario to established family homes in Central Ajax. Waterfront properties require erosion control and flood barrier assessment.",
+        "Townhouse communities commonly present party wall deficiencies and shared exhaust issues. Thermal imaging identifies hidden moisture and insulation problems in all property types.",
+        "Our inspectors understand Ajax's construction patterns in Durham Region, ensuring buyers receive comprehensive assessments for confident real estate decisions."
+      ]
+    }
   },
   {
     slug: "collingwood",
@@ -881,10 +929,18 @@ export const locationData: LocationData[] = [
         content: "Infrared verification of radiant floor heating, wood stove installations & cathedral ceiling insulation in Collingwood seasonal residences." 
       },
       { 
-        title: "Pre-Listing Chalet Seller Inspections", 
-        content: "Detailed seasonal property condition reports for Blue Mountain real estate sales maximize seller value in resort markets." 
+        title: "Pre-Listing Chalet Seller Inspections",
+        content: "Detailed seasonal property condition reports for Blue Mountain real estate sales maximize seller value in resort markets."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Collingwood",
+      paragraphs: [
+        "Collingwood's housing includes ski chalets at Blue Mountain, waterfront cottages on Georgian Bay, and year-round family homes. Seasonal properties require specialized winterization and snow load assessment.",
+        "Vacation properties commonly feature hot tubs, wood-burning appliances, and radiant floor heating systems requiring detailed thermal imaging inspection.",
+        "Our inspectors understand Collingwood's resort property construction patterns, providing buyers with comprehensive assessments for recreational and investment property decisions."
+      ]
+    }
   },
   {
     slug: "stouffville",
@@ -907,14 +963,22 @@ export const locationData: LocationData[] = [
         content: "Infrared verification of geothermal systems & timber frame construction moisture content in Stouffville's premium acreage homes." 
       },
       { 
-        title: "Pre-Listing Rural Property Reviews", 
-        content: "Comprehensive estate condition documentation for York Region rural sales maximizes seller negotiating position." 
+        title: "Pre-Listing Rural Property Reviews",
+        content: "Comprehensive estate condition documentation for York Region rural sales maximizes seller negotiating position."
       },
       { 
-        title: "New Construction Warranty Inspections", 
-        content: "Tarion deficiency inspections for Stouffville new home developments verify builder quality and energy performance." 
+        title: "New Construction Warranty Inspections",
+        content: "Tarion deficiency inspections for Stouffville new home developments verify builder quality and energy performance."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Stouffville",
+      paragraphs: [
+        "Stouffville's housing ranges from downtown heritage properties to rural estates with private wells and septic systems. Ballantrae and Musselmans Lake feature lakefront and acreage properties.",
+        "Rural properties require specialized well capacity testing, septic reserve assessment, and geothermal system evaluation with thermal imaging diagnostics.",
+        "Our inspectors understand Stouffville's unique rural and estate construction patterns in York Region, ensuring buyers make informed purchasing decisions."
+      ]
+    }
   },
   {
     slug: "thornhill",
@@ -944,10 +1008,18 @@ export const locationData: LocationData[] = [
         content: "Special reserve fund analysis & common element condition assessment for Thornhill condo buyers." 
       },
       { 
-        title: "Pre-Listing Luxury Seller Inspections", 
-        content: "Detailed condition documentation maximizes seller negotiating position in Thornhill's competitive luxury market." 
+        title: "Pre-Listing Luxury Seller Inspections",
+        content: "Detailed condition documentation maximizes seller negotiating position in Thornhill's competitive luxury market."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Thornhill",
+      paragraphs: [
+        "Thornhill's housing ranges from luxury estates in Thornhill Woods to high-rise condos along Yonge Street. Premium properties feature multi-zone HVAC, smart home systems, and wine cellars.",
+        "Established neighbourhoods commonly present aluminum wiring, foundation settlement, and complex radiant floor systems requiring thermal imaging assessment.",
+        "Our inspectors understand Thornhill's diverse construction from heritage homes to modern luxury builds, ensuring buyers receive comprehensive assessments in York Region."
+      ]
+    }
   },
   {
     slug: "milton",
@@ -977,10 +1049,18 @@ export const locationData: LocationData[] = [
         content: "Comprehensive structural & mechanical assessment for Milton's growing family neighborhoods before purchase." 
       },
       { 
-        title: "Pre-Listing Seller Inspections", 
-        content: "Condition reports optimize seller positioning in Halton's competitive new build and resale markets." 
+        title: "Pre-Listing Seller Inspections",
+        content: "Condition reports optimize seller positioning in Halton's competitive new build and resale markets."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Milton",
+      paragraphs: [
+        "Milton's rapid growth has created diverse housing from established communities in Scott to new developments throughout the town. New construction commonly requires Tarion warranty inspections.",
+        "Modern subdivisions feature HRV systems, spray foam insulation, and high-efficiency building envelopes requiring thermal imaging verification before purchase.",
+        "Our inspectors understand Milton's new construction patterns in Halton Region, providing buyers with detailed warranty and pre-purchase assessments."
+      ]
+    }
   },
   {
     slug: "pickering",
@@ -1010,10 +1090,18 @@ export const locationData: LocationData[] = [
         content: "Comprehensive detached home structural & mechanical assessment before purchase in Pickering's established neighborhoods." 
       },
       { 
-        title: "Pre-Listing Seller Inspections Pickering", 
-        content: "Detailed condition reports for competitive Durham Region multiple offer situations maximize seller negotiating position." 
+        title: "Pre-Listing Seller Inspections Pickering",
+        content: "Detailed condition reports for competitive Durham Region multiple offer situations maximize seller negotiating position."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Pickering",
+      paragraphs: [
+        "Pickering's housing ranges from Lake Ontario waterfront properties to established family homes in Liverpool and Dunbarton. Waterfront homes require erosion control and flood mitigation assessment.",
+        "Townhouse communities commonly present party wall deficiencies and shared system issues. Thermal imaging identifies hidden moisture and insulation problems.",
+        "Our inspectors understand Pickering's construction patterns in Durham Region, ensuring buyers receive comprehensive assessments for confident purchasing decisions."
+      ]
+    }
   },
   {
     slug: "clarington",
@@ -1043,10 +1131,18 @@ export const locationData: LocationData[] = [
         content: "Infrared verification of wood heating appliances & timber construction moisture content in Clarington's rural homes." 
       },
       { 
-        title: "New Construction Warranty Inspections", 
-        content: "Tarion deficiency inspections for Clarington planned communities verify builder quality standards." 
+        title: "New Construction Warranty Inspections",
+        content: "Tarion deficiency inspections for Clarington planned communities verify builder quality standards."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Clarington",
+      paragraphs: [
+        "Clarington's housing spans from heritage properties in Bowmanville to rural acreages throughout the municipality. Private well and septic systems are common requiring specialized assessment.",
+        "Heritage homes in Bowmanville's downtown require foundation, chimney, and period systems evaluation. New developments demand Tarion warranty inspection expertise.",
+        "Our inspectors understand Clarington's diverse construction from century homes to modern subdivisions, ensuring buyers receive comprehensive Durham Region assessments."
+      ]
+    }
   },
   {
     slug: "orillia",
@@ -1076,10 +1172,18 @@ export const locationData: LocationData[] = [
         content: "Comprehensive seasonal property structural & mechanical assessment before purchase in Orillia's cottage country." 
       },
       { 
-        title: "Pre-Listing Waterfront Seller Reviews", 
-        content: "Detailed condition reports optimize lakefront property sales positioning in Orillia's competitive recreational market." 
+        title: "Pre-Listing Waterfront Seller Reviews",
+        content: "Detailed condition reports optimize lakefront property sales positioning in Orillia's competitive recreational market."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Orillia",
+      paragraphs: [
+        "Orillia's housing includes Lake Simcoe and Lake Couchiching waterfront cottages and year-round residences. Lakefront properties require dock and shoreline stabilization assessment.",
+        "Seasonal cottages commonly feature wood stoves, propane heating, and winterization systems requiring specialized thermal imaging inspection.",
+        "Our inspectors understand Orillia's cottage country construction patterns, providing buyers with comprehensive assessments for recreational and permanent residence purchases."
+      ]
+    }
   },
   {
     slug: "innisfil",
@@ -1109,10 +1213,18 @@ export const locationData: LocationData[] = [
         content: "Comprehensive structural, mechanical & exterior condition assessment for Innisfil's family homes." 
       },
       { 
-        title: "Pre-Listing Waterfront Seller Inspections", 
-        content: "Detailed condition reports for Simcoe County lakefront real estate sales maximize seller negotiating position." 
+        title: "Pre-Listing Waterfront Seller Inspections",
+        content: "Detailed condition reports for Simcoe County lakefront real estate sales maximize seller negotiating position."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Innisfil",
+      paragraphs: [
+        "Innisfil's housing ranges from Lake Simcoe waterfront cottages in Alcona to rural properties throughout the township. Lakefront homes require erosion control and flood risk assessment.",
+        "Rural properties commonly feature private wells, septic systems, and acreage infrastructure requiring specialized thermal imaging diagnostics.",
+        "Our inspectors understand Innisfil's unique waterfront and rural construction patterns in Simcoe County, ensuring buyers make confident purchasing decisions."
+      ]
+    }
   },
   {
     slug: "uxbridge",
@@ -1142,10 +1254,18 @@ export const locationData: LocationData[] = [
         content: "Flow testing, pump performance verification & reserve capacity assessment for Uxbridge rural properties." 
       },
       { 
-        title: "Pre-Listing Rural Estate Inspections", 
-        content: "Comprehensive condition reports optimize Durham Region acreage real estate sales for Uxbridge sellers." 
+        title: "Pre-Listing Rural Estate Inspections",
+        content: "Comprehensive condition reports optimize Durham Region acreage real estate sales for Uxbridge sellers."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Uxbridge",
+      paragraphs: [
+        "Uxbridge's housing consists primarily of rural acreages, hobby farms, and small-town properties. Private wells and septic systems are standard requiring specialized flow testing.",
+        "Timber frame construction and wood heating appliances are common, demanding thermal imaging expertise for moisture and safety assessment.",
+        "Our inspectors understand Uxbridge's unique rural construction patterns in Durham Region, ensuring buyers receive thorough property assessments."
+      ]
+    }
   },
   {
     slug: "beaverton",
@@ -1174,10 +1294,18 @@ export const locationData: LocationData[] = [
         content: "Private well, septic & acreage infrastructure evaluation before purchase for Beaverton's rural properties." 
       },
       { 
-        title: "Pre-Listing Waterfront Seller Reviews", 
-        content: "Detailed condition reports optimize Lake Simcoe cottage real estate sales for Beaverton sellers." 
+        title: "Pre-Listing Waterfront Seller Reviews",
+        content: "Detailed condition reports optimize Lake Simcoe cottage real estate sales for Beaverton sellers."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Beaverton",
+      paragraphs: [
+        "Beaverton's housing includes Lake Simcoe waterfront cottages and rural properties throughout Thorah Township. Lakefront properties require dock and winterization assessment.",
+        "Seasonal cottages commonly feature wood stoves, propane heating, and private well/septic systems requiring specialized inspection expertise.",
+        "Our inspectors understand Beaverton's cottage country and rural construction patterns, providing buyers with comprehensive assessments for confident decisions."
+      ]
+    }
   },
   {
     slug: "cannington",
@@ -1206,10 +1334,18 @@ export const locationData: LocationData[] = [
         content: "Well pump performance, septic reserve capacity & drainage system evaluation for Cannington acreages." 
       },
       { 
-        title: "Pre-Listing Farm Property Inspections", 
-        content: "Comprehensive condition reports for Brock Township agricultural real estate maximize seller value." 
+        title: "Pre-Listing Farm Property Inspections",
+        content: "Comprehensive condition reports for Brock Township agricultural real estate maximize seller value."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Cannington",
+      paragraphs: [
+        "Cannington's housing consists primarily of rural farms, acreages, and small-town properties in Brock Township. Barn structures and agricultural infrastructure require specialized assessment.",
+        "Private wells, septic systems, and wood heating appliances are standard, demanding thermal imaging expertise for safety and performance verification.",
+        "Our inspectors understand Cannington's rural agricultural construction patterns, ensuring buyers receive thorough farm and acreage property assessments."
+      ]
+    }
   },
   {
     slug: "cobourg",
@@ -1238,10 +1374,18 @@ export const locationData: LocationData[] = [
         content: "Infrared verification of salt air corrosion damage & heating system performance for Cobourg's Lake Ontario homes." 
       },
       { 
-        title: "Pre-Listing Waterfront Seller Inspections", 
-        content: "Detailed condition reports optimize Northumberland County lakefront sales for Cobourg property sellers." 
+        title: "Pre-Listing Waterfront Seller Inspections",
+        content: "Detailed condition reports optimize Northumberland County lakefront sales for Cobourg property sellers."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Cobourg",
+      paragraphs: [
+        "Cobourg's housing includes Lake Ontario waterfront estates, heritage downtown properties, and established family homes. Lakefront homes require shoreline erosion and flood mitigation assessment.",
+        "Heritage properties in downtown Cobourg feature century-old foundations, chimneys, and period systems demanding specialized inspection expertise.",
+        "Our inspectors understand Cobourg's diverse construction in Northumberland County, providing buyers with comprehensive assessments for confident purchasing decisions."
+      ]
+    }
   },
   {
     slug: "east-york",
@@ -1268,10 +1412,18 @@ export const locationData: LocationData[] = [
         content: "Comprehensive structural assessment of 1940s-60s foundation settlement & chimney conditions in East York's heritage properties." 
       },
       { 
-        title: "Pre-Listing Bungalow Inspections", 
-        content: "Detailed condition reports maximize seller position in competitive GTA bungalow market for East York properties." 
+        title: "Pre-Listing Bungalow Inspections",
+        content: "Detailed condition reports maximize seller position in competitive GTA bungalow market for East York properties."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in East York",
+      paragraphs: [
+        "East York's housing stock consists primarily of post-war bungalows built in the 1940s-60s. These properties commonly present coal chute conversions, galvanized plumbing, and original electrical panels.",
+        "Foundation settlement, chimney deterioration, and knob-and-tube wiring are frequent findings requiring thermal imaging and detailed structural assessment.",
+        "Our inspectors understand East York's vintage construction patterns, providing buyers with the expertise needed for confident bungalow purchases in the GTA."
+      ]
+    }
   },
   {
     slug: "king-city",
@@ -1298,10 +1450,18 @@ export const locationData: LocationData[] = [
         content: "Private system flow testing & reserve capacity assessment for King Township acreages and rural estates." 
       },
       { 
-        title: "Pre-Listing Estate Inspections", 
-        content: "Comprehensive barn & outbuilding assessments maximize seller position in King City's premium rural market." 
+        title: "Pre-Listing Estate Inspections",
+        content: "Comprehensive barn & outbuilding assessments maximize seller position in King City's premium rural market."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in King City",
+      paragraphs: [
+        "King City's housing consists primarily of luxury estates, equestrian properties, and rural acreages throughout King Township. Premium estates feature geothermal, wine cellars, and multi-zone systems.",
+        "Private wells, septic systems, and barn structures are common requiring specialized flow testing and structural assessment.",
+        "Our inspectors understand King City's luxury rural construction patterns in York Region, ensuring buyers receive comprehensive estate assessments."
+      ]
+    }
   },
   {
     slug: "georgina",
@@ -1328,10 +1488,18 @@ export const locationData: LocationData[] = [
         content: "Private well capacity, septic reserve & acreage drainage assessment before purchase for Georgina's rural properties." 
       },
       { 
-        title: "Pre-Listing Waterfront Inspections", 
-        content: "Detailed seasonal property reports maximize Lake Simcoe seller negotiating position for Georgina cottage owners." 
+        title: "Pre-Listing Waterfront Inspections",
+        content: "Detailed seasonal property reports maximize Lake Simcoe seller negotiating position for Georgina cottage owners."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Georgina",
+      paragraphs: [
+        "Georgina's housing includes Lake Simcoe waterfront cottages, rural acreages, and family homes in Keswick and Sutton. Lakefront properties require dock and winterization assessment.",
+        "Seasonal cottages commonly feature wood stoves, propane heating, and private well/septic systems requiring specialized inspection expertise.",
+        "Our inspectors understand Georgina's cottage country construction patterns in York Region, providing buyers with comprehensive lakefront and rural assessments."
+      ]
+    }
   },
   {
     slug: "keswick",
@@ -1358,10 +1526,18 @@ export const locationData: LocationData[] = [
         content: "Comprehensive boathouse, septic & winterization system assessment before purchase for Keswick seasonal properties." 
       },
       { 
-        title: "Pre-Listing Lakefront Inspections", 
-        content: "Detailed waterfront condition reports maximize cottage seller value in Keswick's recreational real estate market." 
+        title: "Pre-Listing Lakefront Inspections",
+        content: "Detailed waterfront condition reports maximize cottage seller value in Keswick's recreational real estate market."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Keswick",
+      paragraphs: [
+        "Keswick's housing consists primarily of Lake Simcoe waterfront cottages and year-round family homes. Lakefront properties require dock structural and erosion control assessment.",
+        "Seasonal cottages feature wood stoves, boathouses, and winterization systems demanding specialized thermal imaging inspection.",
+        "Our inspectors understand Keswick's waterfront construction patterns on Lake Simcoe, ensuring buyers receive thorough cottage assessments."
+      ]
+    }
   },
   {
     slug: "sutton",
@@ -1388,10 +1564,18 @@ export const locationData: LocationData[] = [
         content: "Comprehensive boathouse & septic system assessment before purchase for Sutton's Lake Simcoe cottages." 
       },
       { 
-        title: "Pre-Listing Cottage Inspections", 
-        content: "Detailed seasonal property reports maximize Lake Simcoe seller value for Sutton cottage owners." 
+        title: "Pre-Listing Cottage Inspections",
+        content: "Detailed seasonal property reports maximize Lake Simcoe seller value for Sutton cottage owners."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Sutton",
+      paragraphs: [
+        "Sutton's housing includes Lake Simcoe waterfront cottages and recreational properties. Lakefront homes require dock and shoreline stabilization assessment.",
+        "Seasonal cottages commonly feature wood stoves, cathedral ceilings, and boathouse structures requiring detailed inspection.",
+        "Our inspectors understand Sutton's cottage country construction on Lake Simcoe, providing buyers with comprehensive waterfront property assessments."
+      ]
+    }
   },
   {
     slug: "east-gwillimbury",
@@ -1418,10 +1602,18 @@ export const locationData: LocationData[] = [
         content: "Private system flow testing & reserve capacity assessment for East Gwillimbury acreages." 
       },
       { 
-        title: "Tarion Warranty Inspections", 
-        content: "New construction deficiency inspections verify builder quality standards for East Gwillimbury's growing communities." 
+        title: "Tarion Warranty Inspections",
+        content: "New construction deficiency inspections verify builder quality standards for East Gwillimbury's growing communities."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in East Gwillimbury",
+      paragraphs: [
+        "East Gwillimbury's housing ranges from rural acreages in Holland Landing to new developments throughout the township. Private wells and septic systems are common.",
+        "New construction requires Tarion warranty inspections for HRV commissioning and spray foam insulation verification.",
+        "Our inspectors understand East Gwillimbury's diverse construction patterns in York Region, providing buyers with comprehensive rural and new home assessments."
+      ]
+    }
   },
   {
     slug: "unionville",
@@ -1448,10 +1640,18 @@ export const locationData: LocationData[] = [
         content: "Comprehensive smart home & custom millwork installation verification for Unionville luxury home buyers." 
       },
       { 
-        title: "Pre-Listing Heritage Inspections", 
-        content: "Detailed condition documentation preserves Unionville property value in competitive heritage real estate markets." 
+        title: "Pre-Listing Heritage Inspections",
+        content: "Detailed condition documentation preserves Unionville property value in competitive heritage real estate markets."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Unionville",
+      paragraphs: [
+        "Unionville's housing includes heritage properties along Main Street and modern luxury estates. Heritage homes require foundation and period structural element assessment.",
+        "Luxury properties feature custom HVAC, radiant floor heating, and smart home systems demanding thermal imaging verification.",
+        "Our inspectors understand Unionville's diverse construction from historic village homes to contemporary custom builds in Markham."
+      ]
+    }
   },
   {
     slug: "kleinburg",
@@ -1478,10 +1678,18 @@ export const locationData: LocationData[] = [
         content: "New construction deficiency inspections verify complex custom systems in Kleinburg's estate developments." 
       },
       { 
-        title: "Pre-Listing Estate Inspections", 
-        content: "Comprehensive condition reports maximize Kleinburg luxury seller value in premium real estate markets." 
+        title: "Pre-Listing Estate Inspections",
+        content: "Comprehensive condition reports maximize Kleinburg luxury seller value in premium real estate markets."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Kleinburg",
+      paragraphs: [
+        "Kleinburg's housing consists primarily of custom luxury estates with geothermal systems, wine cellars, and stone veneer construction.",
+        "Premium properties feature multi-zone radiant heating, pool systems, and complex building envelopes requiring thermal imaging expertise.",
+        "Our inspectors understand Kleinburg's luxury estate construction patterns in Vaughan, ensuring buyers receive comprehensive high-end property assessments."
+      ]
+    }
   },
   {
     slug: "maple",
@@ -1508,10 +1716,18 @@ export const locationData: LocationData[] = [
         content: "New construction deficiency inspections verify builder quality standards for Maple's growing communities." 
       },
       { 
-        title: "Pre-Listing Family Inspections", 
-        content: "Detailed condition reports maximize Vaughan seller negotiating position for Maple family homes." 
+        title: "Pre-Listing Family Inspections",
+        content: "Detailed condition reports maximize Vaughan seller negotiating position for Maple family homes."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Maple",
+      paragraphs: [
+        "Maple's housing ranges from established family homes to new developments in Vellore. Foundation settlement and HVAC sizing issues are common in established neighbourhoods.",
+        "New construction requires Tarion warranty inspections for HRV commissioning and building envelope performance verification.",
+        "Our inspectors understand Maple's construction patterns in Vaughan, providing buyers with comprehensive family home and new build assessments."
+      ]
+    }
   },
   {
     slug: "woodbridge",
@@ -1540,10 +1756,18 @@ export const locationData: LocationData[] = [
         content: "Comprehensive structural, mechanical & exterior condition assessment before purchase in Woodbridge's family communities." 
       },
       { 
-        title: "Pre-Listing Seller Inspections", 
-        content: "Detailed condition documentation maximizes seller position in competitive Vaughan market for Woodbridge properties." 
+        title: "Pre-Listing Seller Inspections",
+        content: "Detailed condition documentation maximizes seller position in competitive Vaughan market for Woodbridge properties."
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Woodbridge",
+      paragraphs: [
+        "Woodbridge's housing includes established 1970s-80s family homes and custom estates throughout Vaughan. Older properties commonly present aluminum wiring and eavestrough deterioration.",
+        "Custom estates feature in-ground pools, complex HVAC systems, and finished basements requiring detailed thermal imaging inspection.",
+        "Our inspectors understand Woodbridge's diverse construction from established neighbourhoods to premium custom builds in Vaughan."
+      ]
+    }
   },
   {
     slug: "concord",

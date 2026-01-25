@@ -1,4 +1,4 @@
-import { generateLocalExpertise } from "@/lib/localExpertise";
+import { buildLocalExpertise } from "@/lib/localExpertise";
 import React, { useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link, useLocation } from "react-router-dom";
@@ -257,7 +257,7 @@ export function LocationPageTemplate({
     [city, phoneNumber, neighborhoods]
   );
 
-  // Service Schema
+  // Service Schema with hasOfferCatalog
   const serviceSchema = useMemo(
     () => ({
       "@context": "https://schema.org",
@@ -277,6 +277,44 @@ export function LocationPageTemplate({
           "@type": "AdministrativeArea",
           name: region
         }
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: `Home Inspection Services in ${city}`,
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Pre-Purchase Home Inspection",
+              description: `Comprehensive buyer inspection for ${city} properties`
+            }
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Pre-Listing Home Inspection",
+              description: `Seller inspection services for ${city} homeowners`
+            }
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Thermal Imaging Inspection",
+              description: `Advanced infrared diagnostics for ${city} properties`
+            }
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Mold & Air Quality Testing",
+              description: `Certified mold inspections for ${city} homes`
+            }
+          }
+        ]
       }
     }),
     [city, region, phoneNumber, siteName, url]
