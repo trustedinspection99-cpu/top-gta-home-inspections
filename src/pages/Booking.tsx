@@ -82,7 +82,7 @@ export default function Booking() {
     submitData.append("Postal Code", formData.postalCode || "Not specified");
     submitData.append("First Name", formData.firstName);
     submitData.append("Last Name", formData.lastName);
-    submitData.append("Email", formData.email);
+    submitData.append("email", formData.email);
     submitData.append("Phone", formData.phone);
     submitData.append("Notes", formData.notes || "None");
 
