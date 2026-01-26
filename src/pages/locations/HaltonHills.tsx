@@ -8,6 +8,7 @@ export default function HaltonHills() {
 
   return (
     <LocationPageTemplate
+      slug={data.slug}
       city={data.city}
       region={data.region}
       description={data.description}
@@ -16,9 +17,9 @@ export default function HaltonHills() {
       neighborhoods={data.neighborhoods}
       phoneNumber={data.phoneNumber}
       localInsights={data.localInsights}
+      localExpertise={data.localExpertise}
       latitude={data.latitude}
       longitude={data.longitude}
-      slug={data.slug}
     />
   );
 }
