@@ -17,6 +17,7 @@ export default function Essa() {
       neighborhoods={data.neighborhoods}
       phoneNumber={data.phoneNumber}
       localInsights={data.localInsights}
+      localExpertise={data.localExpertise}
       latitude={data.latitude}
       longitude={data.longitude}
     />
