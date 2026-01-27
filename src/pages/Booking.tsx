@@ -15,8 +15,8 @@ import { format } from "date-fns";
 import { Calendar as CalendarIcon, CheckCircle, Phone, Clock, Shield, FileText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-// TODO: Replace with your Formspree form ID from https://formspree.io
-const FORMSPREE_BOOKING_ID = "mjnzzoz";
+// Formspree form ID for booking submissions
+const FORMSPREE_BOOKING_ID = "xkgwqzpv";
 
 const inspectionTypes = [
   { value: "pre-purchase", label: "Pre-Purchase Home Inspection", price: "$399+" },
