@@ -111,9 +111,43 @@
   <url><loc>https://www.asads.ca/locations/kitchener</loc><priority>0.6</priority></url>
   <url><loc>https://www.asads.ca/locations/waterloo</loc><priority>0.6</priority></url>
   <url><loc>https://www.asads.ca/locations/cambridge</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/north-dumfries</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/wilmot</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/wellesley</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/woolwich</loc><priority>0.6</priority></url>
+
   <url><loc>https://www.asads.ca/locations/guelph</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/guelph-eramosa</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/puslinch</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/centre-wellington</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/mapleton</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/minto</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/wellington-north</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/erin</loc><priority>0.6</priority></url>
+
   <url><loc>https://www.asads.ca/locations/orangeville</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/shelburne</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/mono</loc><priority>0.6</priority></url>
+
   <url><loc>https://www.asads.ca/locations/peterborough</loc><priority>0.6</priority></url>
   <url><loc>https://www.asads.ca/locations/cobourg</loc><priority>0.6</priority></url>
+
   <url><loc>https://www.asads.ca/locations/brantford</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/paris</loc><priority>0.6</priority></url>
+
+  <url><loc>https://www.asads.ca/locations/pelham</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/wainfleet</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/west-lincoln</loc><priority>0.6</priority></url>
+
+  <url><loc>https://www.asads.ca/locations/severn</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/tay-township</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/tiny-township</loc><priority>0.6</priority></url>
+
+  <url><loc>https://www.asads.ca/locations/ingersoll</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/tillsonburg</loc><priority>0.6</priority></url>
+  <url><loc>https://www.asads.ca/locations/woodstock</loc><priority>0.6</priority></url>
+
+  <url><loc>https://www.asads.ca/locations/adelaide-metcalfe</loc><priority>0.6</priority></url>
+
+  <url><loc>https://www.asads.ca/sitemap</loc><priority>0.5</priority></url>
 </urlset>
