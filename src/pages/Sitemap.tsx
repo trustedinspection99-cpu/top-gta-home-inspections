@@ -121,14 +121,43 @@ const locations = [
   { name: "Kitchener", href: "/locations/kitchener" },
   { name: "Waterloo", href: "/locations/waterloo" },
   { name: "Cambridge", href: "/locations/cambridge" },
-  // Wellington & Dufferin
+  { name: "North Dumfries", href: "/locations/north-dumfries" },
+  { name: "Wilmot", href: "/locations/wilmot" },
+  { name: "Wellesley", href: "/locations/wellesley" },
+  { name: "Woolwich", href: "/locations/woolwich" },
+  // Wellington County
   { name: "Guelph", href: "/locations/guelph" },
+  { name: "Guelph/Eramosa", href: "/locations/guelph-eramosa" },
+  { name: "Puslinch", href: "/locations/puslinch" },
+  { name: "Centre Wellington", href: "/locations/centre-wellington" },
+  { name: "Mapleton", href: "/locations/mapleton" },
+  { name: "Minto", href: "/locations/minto" },
+  { name: "Wellington North", href: "/locations/wellington-north" },
+  { name: "Erin", href: "/locations/erin" },
+  // Dufferin County
   { name: "Orangeville", href: "/locations/orangeville" },
-  // Kawartha & Peterborough
+  { name: "Shelburne", href: "/locations/shelburne" },
+  { name: "Mono", href: "/locations/mono" },
+  // Peterborough & Northumberland
   { name: "Peterborough", href: "/locations/peterborough" },
-  // Northumberland & Brant
   { name: "Cobourg", href: "/locations/cobourg" },
+  // Brant County
   { name: "Brantford", href: "/locations/brantford" },
+  { name: "Paris", href: "/locations/paris" },
+  // Additional Niagara
+  { name: "Pelham", href: "/locations/pelham" },
+  { name: "Wainfleet", href: "/locations/wainfleet" },
+  { name: "West Lincoln", href: "/locations/west-lincoln" },
+  // Additional Simcoe
+  { name: "Severn", href: "/locations/severn" },
+  { name: "Tay Township", href: "/locations/tay-township" },
+  { name: "Tiny Township", href: "/locations/tiny-township" },
+  // Oxford County
+  { name: "Ingersoll", href: "/locations/ingersoll" },
+  { name: "Tillsonburg", href: "/locations/tillsonburg" },
+  { name: "Woodstock", href: "/locations/woodstock" },
+  // Middlesex County
+  { name: "Adelaide Metcalfe", href: "/locations/adelaide-metcalfe" },
 ];
 
 const breadcrumbSchema = {
