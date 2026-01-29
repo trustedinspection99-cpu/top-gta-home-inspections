@@ -2969,7 +2969,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Pelham Estate Inspections", 
         content: "Comprehensive rural condition reports maximize Fonthill premium property seller value in Pelham's real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Pelham",
+      paragraphs: [
+        "Pelham's housing ranges from established Fonthill village homes to expansive rural estates near Niagara Escarpment vineyards. Each property type presents distinct inspection requirements from heritage foundations to modern winery-adjacent infrastructure.",
+        "Rural properties commonly feature private well and septic systems requiring flow testing and reserve capacity verification. Properties near active vineyards may experience spray drift and agricultural runoff requiring specialized drainage assessment.",
+        "Our inspectors understand Pelham's unique construction patterns from Fenwick farmsteads to Fonthill executive homes, providing buyers with the detailed rural property assessments needed for confident Niagara Region purchasing decisions."
+      ]
+    }
   },
   {
     slug: "wainfleet",
@@ -2999,7 +3007,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Rural Farm Inspections", 
         content: "Detailed agricultural property condition reports maximize Lake Erie rural seller value in Wainfleet's real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Wainfleet",
+      paragraphs: [
+        "Wainfleet's Lake Erie shoreline properties range from century farmhouses to modern lakefront retreats. Agricultural operations dominate the landscape with cash crop farms, livestock facilities, and seasonal produce operations requiring specialized inspection knowledge.",
+        "Lakefront properties demand assessment of shoreline erosion, flood mitigation systems, and salt-air corrosion impacts. Agricultural buildings require structural evaluation of barns, silos, and equipment storage facilities common throughout the township.",
+        "Our inspectors understand Wainfleet's unique mix of waterfront recreational properties and working agricultural operations, ensuring buyers receive comprehensive assessments tailored to Lake Erie rural property challenges."
+      ]
+    }
   },
   {
     slug: "west-lincoln",
@@ -3029,7 +3045,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Rural Estate Inspections", 
         content: "Comprehensive property condition reports maximize Smithville premium seller value in West Lincoln's real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in West Lincoln",
+      paragraphs: [
+        "West Lincoln's rolling countryside features equestrian estates, hobby farms, and established Smithville village homes. Each property type presents unique inspection challenges from horse barn structural assessments to heritage foundation evaluations.",
+        "Rural properties commonly feature geothermal heating systems, extensive outbuildings, and private well/septic infrastructure requiring specialized flow testing and capacity verification beyond standard residential inspections.",
+        "Our inspectors understand West Lincoln's diverse housing stock from Caistor Centre agricultural properties to premium Smithville executive estates, providing buyers with detailed assessments suited to Niagara's rural luxury market."
+      ]
+    }
   },
   {
     slug: "woolwich",
@@ -3059,7 +3083,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Mennonite Property Inspections", 
         content: "Detailed condition reports maximize Elmira rural community seller value in Woolwich's real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Woolwich",
+      paragraphs: [
+        "Woolwich Township encompasses the vibrant communities of Elmira and St. Jacobs alongside traditional Mennonite farming operations. Housing ranges from modern subdivisions to century farmhouses with unique construction methods and systems.",
+        "Mennonite properties often feature wood heating systems, cistern water storage, and traditional timber-frame construction requiring specialized inspection knowledge beyond standard residential assessments.",
+        "Our inspectors understand Woolwich's diverse housing landscape from Conestogo river properties to Winterbourne estates, providing buyers with culturally-informed assessments that respect traditional construction while identifying modern safety concerns."
+      ]
+    }
   },
   {
     slug: "wilmot",
@@ -3089,7 +3121,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Rural Farm Inspections", 
         content: "Comprehensive agricultural property condition reports maximize seller value in Wilmot's real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Wilmot",
+      paragraphs: [
+        "Wilmot Township features the historic communities of Baden and New Hamburg alongside productive agricultural operations. Housing stock includes Victorian-era village homes, century farmhouses, and modern rural subdivisions each requiring distinct inspection approaches.",
+        "Agricultural properties demand barn structural assessments, livestock facility evaluations, and private well/septic capacity testing. Newer developments may present builder deficiencies requiring thermal imaging verification of insulation and air sealing.",
+        "Our inspectors understand Wilmot's unique blend of heritage architecture and working farms, providing buyers with comprehensive assessments tailored to Waterloo Region's rural property market."
+      ]
+    }
   },
   {
     slug: "north-dumfries",
@@ -3119,7 +3159,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Rural Estate Inspections", 
         content: "Detailed condition reports maximize Ayr premium property seller value in North Dumfries' real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in North Dumfries",
+      paragraphs: [
+        "North Dumfries encompasses the historic village of Ayr and surrounding rural landscapes featuring equestrian estates, hobby farms, and executive country properties. Each property type presents distinct inspection requirements from arena facilities to heritage foundations.",
+        "Rural properties commonly feature geothermal heating systems, extensive horse barn infrastructure, and private well/septic systems requiring specialized capacity verification beyond standard residential assessments.",
+        "Our inspectors understand North Dumfries' premium rural market from Ayr village character homes to sprawling countryside estates, providing buyers with detailed assessments suited to Waterloo Region's luxury rural property segment."
+      ]
+    }
   },
   {
     slug: "wellesley",
@@ -3149,7 +3197,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Mennonite Property Inspections", 
         content: "Detailed rural condition reports maximize Wellesley agricultural seller value in local real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Wellesley",
+      paragraphs: [
+        "Wellesley Township is home to one of Ontario's largest Old Order Mennonite communities, featuring unique traditional construction methods alongside modern rural properties. Housing ranges from heritage farmhouses with cistern water systems to contemporary builds.",
+        "Mennonite properties commonly feature wood stove heating systems, traditional timber-frame barn construction, and cistern water storage requiring specialized inspection knowledge beyond standard residential assessments.",
+        "Our inspectors understand Wellesley's distinct cultural and construction heritage, providing buyers with thorough assessments that respect traditional building methods while identifying modern safety and efficiency concerns."
+      ]
+    }
   },
   {
     slug: "centre-wellington",
@@ -3179,7 +3235,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Heritage Estate Inspections", 
         content: "Comprehensive condition reports maximize Fergus/Elora premium seller value in Centre Wellington's real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Centre Wellington",
+      paragraphs: [
+        "Centre Wellington encompasses the picturesque communities of Fergus and Elora, featuring significant heritage architecture dating to the mid-1800s alongside modern rural estates. Each property type presents distinct inspection requirements from limestone foundations to geothermal systems.",
+        "Heritage properties in Elora's conservation district require assessment of century foundations, period chimney conditions, and heritage window systems. Rural acreages demand private well and septic capacity verification.",
+        "Our inspectors understand Centre Wellington's blend of heritage preservation and modern rural living, providing buyers with comprehensive assessments tailored to both historic village properties and contemporary country estates."
+      ]
+    }
   },
   {
     slug: "erin",
@@ -3209,7 +3273,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Equestrian Estate Inspections", 
         content: "Comprehensive rural condition reports maximize premium Erin seller value in Wellington County real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Erin",
+      paragraphs: [
+        "Erin Township has become a premier equestrian community featuring world-class horse farms, indoor arenas, and sprawling rural estates. Housing ranges from century farmhouses to custom-built luxury properties with extensive barn facilities.",
+        "Equestrian properties demand specialized inspection of horse barn structural systems, indoor arena ventilation, and private well capacity for livestock operations. Many estates feature geothermal heating and radiant floor systems.",
+        "Our inspectors understand Erin's premium equestrian market requirements, providing buyers with detailed assessments of both residential and agricultural infrastructure essential for confident Wellington County purchasing decisions."
+      ]
+    }
   },
   {
     slug: "guelph-eramosa",
@@ -3239,7 +3311,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Heritage Estate Inspections", 
         content: "Detailed condition reports maximize Rockwood premium property seller value in Guelph/Eramosa's real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Guelph/Eramosa",
+      paragraphs: [
+        "Guelph/Eramosa Township features the historic village of Rockwood with its distinctive limestone architecture alongside productive agricultural operations. Housing ranges from 1850s stone buildings to modern rural executive properties.",
+        "Rockwood heritage properties require specialized assessment of limestone foundation conditions, period chimney construction, and heritage window systems. Rural acreages demand private well and septic evaluation.",
+        "Our inspectors understand Guelph/Eramosa's unique blend of limestone heritage and contemporary rural estates, providing buyers with thorough assessments suited to Wellington County's diverse property market."
+      ]
+    }
   },
   {
     slug: "mapleton",
@@ -3269,7 +3349,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Farm Property Inspections", 
         content: "Comprehensive agricultural condition reports maximize rural seller value in Mapleton's real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Mapleton",
+      paragraphs: [
+        "Mapleton Township encompasses productive agricultural communities including Moorefield and surrounding farmland. Housing stock consists primarily of working farms with century barns, livestock facilities, and traditional farmhouses.",
+        "Agricultural properties require comprehensive barn structural assessments, silo condition evaluations, and private well capacity testing for livestock operations. Many properties feature traditional timber-frame construction.",
+        "Our inspectors understand Mapleton's agricultural property requirements, providing buyers with detailed assessments of both residential and farm infrastructure essential for informed Wellington County purchasing decisions."
+      ]
+    }
   },
   {
     slug: "puslinch",
@@ -3299,7 +3387,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Rural Estate Inspections", 
         content: "Comprehensive condition reports maximize Puslinch premium seller value in Wellington County luxury real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Puslinch",
+      paragraphs: [
+        "Puslinch Township offers premium rural living between Guelph and Cambridge, featuring executive country estates, hobby farms, and lakefront properties around Puslinch Lake. Each property type presents sophisticated inspection requirements.",
+        "Luxury rural properties commonly feature geothermal heating systems, radiant floor installations, and extensive private well/septic infrastructure requiring specialized capacity verification beyond standard residential inspections.",
+        "Our inspectors understand Puslinch's premium rural market from Aberfoyle estates to Puslinch Lake waterfront, providing buyers with comprehensive assessments suited to Wellington County's luxury country property segment."
+      ]
+    }
   },
   {
     slug: "wellington-north",
@@ -3329,7 +3425,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Farm Property Inspections", 
         content: "Comprehensive agricultural condition reports maximize rural seller value in Wellington North's real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Wellington North",
+      paragraphs: [
+        "Wellington North encompasses the communities of Mount Forest and Arthur alongside extensive agricultural operations. Housing ranges from small-town character homes to working farms with century barns and livestock facilities.",
+        "Agricultural properties require comprehensive barn structural assessments, silo condition evaluations, and private well capacity testing for livestock operations. Many farmhouses feature original foundations and heating systems requiring careful evaluation.",
+        "Our inspectors understand Wellington North's agricultural community requirements, providing buyers with detailed assessments of both residential and farm infrastructure essential for informed rural purchasing decisions."
+      ]
+    }
   },
   {
     slug: "minto",
@@ -3359,7 +3463,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Farm Property Inspections", 
         content: "Comprehensive agricultural condition reports maximize rural seller value in Minto's real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Minto",
+      paragraphs: [
+        "Minto Township encompasses the communities of Palmerston, Harriston, and Clifford, featuring productive dairy and livestock operations alongside small-town residential areas. Housing ranges from Victorian-era village homes to working century farms.",
+        "Agricultural properties demand barn structural assessments, silo condition evaluations, and private well capacity testing for livestock operations. Village homes often feature original foundations, chimneys, and electrical systems requiring careful evaluation.",
+        "Our inspectors understand Minto's blend of small-town character and agricultural heritage, providing buyers with comprehensive assessments suited to Wellington County's northern rural property market."
+      ]
+    }
   },
   {
     slug: "adelaide-metcalfe",
@@ -3389,7 +3501,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Farm Property Inspections", 
         content: "Comprehensive agricultural condition reports maximize rural seller value in Adelaide Metcalfe's real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Adelaide Metcalfe",
+      paragraphs: [
+        "Adelaide Metcalfe Township features productive agricultural operations in Middlesex County, with proximity to Strathroy and Mount Brydges. Housing stock includes working farms with century barns, traditional farmhouses, and rural family properties.",
+        "Agricultural properties require barn structural assessments, silo evaluations, and private well/septic capacity testing. Many farmhouses feature original construction elements including fieldstone foundations and wood-frame additions.",
+        "Our inspectors understand Adelaide Metcalfe's agricultural property requirements, providing buyers with detailed assessments of both residential and farm infrastructure essential for confident Middlesex County purchasing decisions."
+      ]
+    }
   },
   {
     slug: "severn",
@@ -3419,7 +3539,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Rural Waterfront Inspections", 
         content: "Detailed condition reports maximize Severn Township lakefront seller negotiating position in recreational real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Severn",
+      paragraphs: [
+        "Severn Township offers diverse recreational properties from Washago cottages to Horseshoe Valley ski country estates. Housing ranges from seasonal waterfront cabins to year-round luxury homes with sophisticated heating and cooling systems.",
+        "Cottage properties require seasonal system assessments including propane heating, foundation frost protection, and dock/shoreline conditions. Year-round homes demand evaluation of cathedral ceiling insulation and winterization systems.",
+        "Our inspectors understand Severn's recreational property market from seasonal cottages to four-season estates, providing buyers with thorough assessments suited to Simcoe County's waterfront and resort area requirements."
+      ]
+    }
   },
   {
     slug: "tiny-township",
@@ -3449,7 +3577,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Georgian Bay Inspections", 
         content: "Detailed seasonal property condition reports maximize Tiny Township seller value in recreational real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Tiny Township",
+      paragraphs: [
+        "Tiny Township features some of Georgian Bay's most sought-after waterfront properties, from rustic seasonal cottages to luxury year-round estates. Each property type presents distinct inspection challenges from dock assessments to sophisticated mechanical systems.",
+        "Georgian Bay cottages require evaluation of seasonal heating systems, boathouse structural conditions, and shoreline stabilization. Year-round properties demand assessment of propane systems, cathedral ceiling insulation, and frost protection.",
+        "Our inspectors understand Tiny Township's premium recreational market, providing buyers with comprehensive waterfront property assessments essential for confident Georgian Bay purchasing decisions."
+      ]
+    }
   },
   {
     slug: "tay-township",
@@ -3479,7 +3615,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Waterfront Estate Inspections", 
         content: "Detailed rural waterfront condition reports maximize seller negotiating position in Tay Township's real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Tay Township",
+      paragraphs: [
+        "Tay Township encompasses the communities of Port McNicoll and Waubaushene, featuring Georgian Bay waterfront properties and rural acreages. Housing ranges from historic railway-era cottages to contemporary waterfront estates.",
+        "Waterfront properties demand dock condition assessments, flood mitigation system evaluations, and seasonal heating system inspections. Rural acreages require private well and septic capacity verification beyond standard residential assessments.",
+        "Our inspectors understand Tay Township's diverse waterfront and rural properties, providing buyers with thorough assessments suited to Georgian Bay's recreational and permanent residence markets."
+      ]
+    }
   },
   {
     slug: "shelburne",
@@ -3509,7 +3653,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Rural Farm Inspections", 
         content: "Comprehensive agricultural condition reports maximize Dufferin County seller value in Shelburne's real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Shelburne",
+      paragraphs: [
+        "Shelburne serves as a gateway community to Dufferin County's equestrian and agricultural heartland. Housing ranges from small-town character homes to sprawling horse farms with indoor arenas and extensive outbuilding infrastructure.",
+        "Equestrian properties require specialized horse barn structural assessments, arena ventilation evaluations, and private well capacity testing for livestock operations. Agricultural buildings demand timber-frame and foundation stability assessment.",
+        "Our inspectors understand Shelburne's blend of small-town residential and rural equestrian properties, providing buyers with comprehensive assessments suited to Dufferin County's diverse property market."
+      ]
+    }
   },
   {
     slug: "mono",
@@ -3539,7 +3691,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Luxury Estate Inspections", 
         content: "Comprehensive rural condition reports maximize Mono premium seller value in Dufferin County luxury real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Mono",
+      paragraphs: [
+        "Mono Township has become Dufferin County's premier luxury rural community, featuring world-class equestrian estates with indoor arenas, geothermal heating systems, and custom-built executive homes on expansive acreages.",
+        "Luxury rural properties demand sophisticated inspection of multi-zone radiant heating, geothermal systems, and extensive private well/septic infrastructure. Equestrian facilities require structural assessments of barns, arenas, and specialized buildings.",
+        "Our inspectors understand Mono's ultra-premium equestrian market, providing discerning buyers with detailed assessments of both residential luxury features and agricultural infrastructure essential for confident high-end purchasing decisions."
+      ]
+    }
   },
   {
     slug: "woodstock",
@@ -3569,7 +3729,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Farm Property Inspections", 
         content: "Comprehensive agricultural condition reports maximize Woodstock rural seller value in Oxford County real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Woodstock",
+      paragraphs: [
+        "Woodstock serves as Oxford County's principal city, surrounded by productive dairy farms and agricultural operations. Housing ranges from Victorian-era downtown character homes to working family farms with century barns and livestock facilities.",
+        "Agricultural properties require comprehensive barn structural assessments, silo condition evaluations, and private well capacity testing for dairy and livestock operations. Town homes often feature original foundations and period electrical systems.",
+        "Our inspectors understand Woodstock's mix of urban character homes and surrounding agricultural properties, providing buyers with assessments tailored to Oxford County's diverse real estate market."
+      ]
+    }
   },
   {
     slug: "ingersoll",
@@ -3599,7 +3767,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Rural Family Inspections", 
         content: "Detailed condition reports maximize Ingersoll rural seller negotiating position in Oxford County real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Ingersoll",
+      paragraphs: [
+        "Ingersoll offers small-town living along the Thames River, surrounded by productive agricultural operations in Oxford County. Housing ranges from heritage downtown properties to rural family acreages and working farms.",
+        "Rural properties demand private well and septic capacity verification, drainage system assessments, and evaluation of agricultural outbuildings. Downtown properties often feature original foundations, chimneys, and electrical systems.",
+        "Our inspectors understand Ingersoll's blend of riverside character homes and surrounding agricultural properties, providing buyers with comprehensive assessments suited to Oxford County's family-oriented rural market."
+      ]
+    }
   },
   {
     slug: "tillsonburg",
@@ -3629,7 +3805,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Farm Property Inspections", 
         content: "Comprehensive agricultural condition reports maximize Tillsonburg rural seller value in Oxford County real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Tillsonburg",
+      paragraphs: [
+        "Tillsonburg anchors Oxford County's southern agricultural region, featuring tobacco heritage properties and productive cash crop operations. Housing ranges from town character homes to rural family farms with century barns and specialized agricultural buildings.",
+        "Agricultural properties demand barn structural assessments, specialized crop storage facility evaluations, and private well capacity testing. Rural acreages require drainage system and septic reserve assessment beyond standard residential inspections.",
+        "Our inspectors understand Tillsonburg's unique agricultural heritage and rural property requirements, providing buyers with detailed assessments essential for confident Oxford County purchasing decisions."
+      ]
+    }
   },
   {
     slug: "paris",
@@ -3659,7 +3843,15 @@ export const locationData: LocationData[] = [
         title: "Pre-Listing Waterfront Inspections", 
         content: "Detailed riverfront condition reports maximize Paris seller negotiating position in Brant County real estate markets." 
       }
-    ]
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in Paris",
+      paragraphs: [
+        "Paris is one of Ontario's most picturesque communities, featuring cobblestone heritage architecture alongside Grand River waterfront properties. Housing ranges from 1850s stone cottages to contemporary riverfront estates and rural acreages.",
+        "Grand River properties require specialized flood risk assessment, backwater valve verification, and foundation waterproofing evaluation. Heritage downtown homes demand assessment of century foundations, chimneys, and period electrical systems.",
+        "Our inspectors understand Paris's unique blend of heritage preservation and riverfront living, providing buyers with comprehensive assessments suited to Brant County's premium residential market."
+      ]
+    }
   }
 ];
 
