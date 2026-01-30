@@ -123,8 +123,8 @@ export function LocationPageTemplate({
   allCities = [],
   slug,
 }: LocationPageTemplateProps) {
-  // Use provided slug, fallback to generating from city name
-  const locationSlug = slug || `home-inspection-${city.toLowerCase().replace(/\s+/g, "-")}`;
+  // Always use home-inspection- prefix for canonical URLs
+  const locationSlug = slug ? `home-inspection-${slug}` : `home-inspection-${city.toLowerCase().replace(/\s+/g, "-")}`;
   const url = getCanonicalUrl(`/locations/${locationSlug}`);
   const pageTitle = metaTitle || `${city} Home Inspection | Certified Home Inspector`;
   const pageDescription =

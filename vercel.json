@@ -5,73 +5,598 @@
   ],
   "redirects": [
     {
+      "source": "/locations/toronto",
+      "destination": "/locations/home-inspection-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/locations/north-york",
+      "destination": "/locations/home-inspection-north-york",
+      "permanent": true
+    },
+    {
+      "source": "/locations/scarborough",
+      "destination": "/locations/home-inspection-scarborough",
+      "permanent": true
+    },
+    {
+      "source": "/locations/etobicoke",
+      "destination": "/locations/home-inspection-etobicoke",
+      "permanent": true
+    },
+    {
+      "source": "/locations/east-york",
+      "destination": "/locations/home-inspection-east-york",
+      "permanent": true
+    },
+    {
+      "source": "/locations/mississauga",
+      "destination": "/locations/home-inspection-mississauga",
+      "permanent": true
+    },
+    {
+      "source": "/locations/brampton",
+      "destination": "/locations/home-inspection-brampton",
+      "permanent": true
+    },
+    {
+      "source": "/locations/caledon",
+      "destination": "/locations/home-inspection-caledon",
+      "permanent": true
+    },
+    {
+      "source": "/locations/bolton",
+      "destination": "/locations/home-inspection-bolton",
+      "permanent": true
+    },
+    {
+      "source": "/locations/vaughan",
+      "destination": "/locations/home-inspection-vaughan",
+      "permanent": true
+    },
+    {
+      "source": "/locations/markham",
+      "destination": "/locations/home-inspection-markham",
+      "permanent": true
+    },
+    {
+      "source": "/locations/richmond-hill",
+      "destination": "/locations/home-inspection-richmond-hill",
+      "permanent": true
+    },
+    {
+      "source": "/locations/newmarket",
+      "destination": "/locations/home-inspection-newmarket",
+      "permanent": true
+    },
+    {
+      "source": "/locations/aurora",
+      "destination": "/locations/home-inspection-aurora",
+      "permanent": true
+    },
+    {
+      "source": "/locations/king-city",
+      "destination": "/locations/home-inspection-king-city",
+      "permanent": true
+    },
+    {
+      "source": "/locations/stouffville",
+      "destination": "/locations/home-inspection-stouffville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/georgina",
+      "destination": "/locations/home-inspection-georgina",
+      "permanent": true
+    },
+    {
+      "source": "/locations/east-gwillimbury",
+      "destination": "/locations/home-inspection-east-gwillimbury",
+      "permanent": true
+    },
+    {
+      "source": "/locations/keswick",
+      "destination": "/locations/home-inspection-keswick",
+      "permanent": true
+    },
+    {
+      "source": "/locations/sutton",
+      "destination": "/locations/home-inspection-sutton",
+      "permanent": true
+    },
+    {
+      "source": "/locations/woodbridge",
+      "destination": "/locations/home-inspection-woodbridge",
+      "permanent": true
+    },
+    {
+      "source": "/locations/thornhill",
+      "destination": "/locations/home-inspection-thornhill",
+      "permanent": true
+    },
+    {
+      "source": "/locations/maple",
+      "destination": "/locations/home-inspection-maple",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kleinburg",
+      "destination": "/locations/home-inspection-kleinburg",
+      "permanent": true
+    },
+    {
+      "source": "/locations/concord",
+      "destination": "/locations/home-inspection-concord",
+      "permanent": true
+    },
+    {
+      "source": "/locations/unionville",
+      "destination": "/locations/home-inspection-unionville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/oakville",
+      "destination": "/locations/home-inspection-oakville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/burlington",
+      "destination": "/locations/home-inspection-burlington",
+      "permanent": true
+    },
+    {
+      "source": "/locations/milton",
+      "destination": "/locations/home-inspection-milton",
+      "permanent": true
+    },
+    {
+      "source": "/locations/halton-hills",
+      "destination": "/locations/home-inspection-halton-hills",
+      "permanent": true
+    },
+    {
+      "source": "/locations/georgetown",
+      "destination": "/locations/home-inspection-georgetown",
+      "permanent": true
+    },
+    {
+      "source": "/locations/acton",
+      "destination": "/locations/home-inspection-acton",
+      "permanent": true
+    },
+    {
+      "source": "/locations/oshawa",
+      "destination": "/locations/home-inspection-oshawa",
+      "permanent": true
+    },
+    {
+      "source": "/locations/whitby",
+      "destination": "/locations/home-inspection-whitby",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ajax",
+      "destination": "/locations/home-inspection-ajax",
+      "permanent": true
+    },
+    {
+      "source": "/locations/pickering",
+      "destination": "/locations/home-inspection-pickering",
+      "permanent": true
+    },
+    {
+      "source": "/locations/clarington",
+      "destination": "/locations/home-inspection-clarington",
+      "permanent": true
+    },
+    {
+      "source": "/locations/bowmanville",
+      "destination": "/locations/home-inspection-bowmanville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/uxbridge",
+      "destination": "/locations/home-inspection-uxbridge",
+      "permanent": true
+    },
+    {
+      "source": "/locations/scugog",
+      "destination": "/locations/home-inspection-scugog",
+      "permanent": true
+    },
+    {
+      "source": "/locations/port-perry",
+      "destination": "/locations/home-inspection-port-perry",
+      "permanent": true
+    },
+    {
+      "source": "/locations/brock",
+      "destination": "/locations/home-inspection-brock",
+      "permanent": true
+    },
+    {
+      "source": "/locations/beaverton",
+      "destination": "/locations/home-inspection-beaverton",
+      "permanent": true
+    },
+    {
+      "source": "/locations/cannington",
+      "destination": "/locations/home-inspection-cannington",
+      "permanent": true
+    },
+    {
+      "source": "/locations/barrie",
+      "destination": "/locations/home-inspection-barrie",
+      "permanent": true
+    },
+    {
+      "source": "/locations/orillia",
+      "destination": "/locations/home-inspection-orillia",
+      "permanent": true
+    },
+    {
+      "source": "/locations/innisfil",
+      "destination": "/locations/home-inspection-innisfil",
+      "permanent": true
+    },
+    {
+      "source": "/locations/bradford",
+      "destination": "/locations/home-inspection-bradford",
+      "permanent": true
+    },
+    {
+      "source": "/locations/alliston",
+      "destination": "/locations/home-inspection-alliston",
+      "permanent": true
+    },
+    {
+      "source": "/locations/collingwood",
+      "destination": "/locations/home-inspection-collingwood",
+      "permanent": true
+    },
+    {
+      "source": "/locations/wasaga-beach",
+      "destination": "/locations/home-inspection-wasaga-beach",
+      "permanent": true
+    },
+    {
+      "source": "/locations/midland",
+      "destination": "/locations/home-inspection-midland",
+      "permanent": true
+    },
+    {
+      "source": "/locations/penetanguishene",
+      "destination": "/locations/home-inspection-penetanguishene",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-tecumseth",
+      "destination": "/locations/home-inspection-new-tecumseth",
+      "permanent": true
+    },
+    {
+      "source": "/locations/essa",
+      "destination": "/locations/home-inspection-essa",
+      "permanent": true
+    },
+    {
+      "source": "/locations/springwater",
+      "destination": "/locations/home-inspection-springwater",
+      "permanent": true
+    },
+    {
+      "source": "/locations/clearview",
+      "destination": "/locations/home-inspection-clearview",
+      "permanent": true
+    },
+    {
+      "source": "/locations/stayner",
+      "destination": "/locations/home-inspection-stayner",
+      "permanent": true
+    },
+    {
+      "source": "/locations/hamilton",
+      "destination": "/locations/home-inspection-hamilton",
+      "permanent": true
+    },
+    {
+      "source": "/locations/stoney-creek",
+      "destination": "/locations/home-inspection-stoney-creek",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ancaster",
+      "destination": "/locations/home-inspection-ancaster",
+      "permanent": true
+    },
+    {
+      "source": "/locations/dundas",
+      "destination": "/locations/home-inspection-dundas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/flamborough",
+      "destination": "/locations/home-inspection-flamborough",
+      "permanent": true
+    },
+    {
+      "source": "/locations/grimsby",
+      "destination": "/locations/home-inspection-grimsby",
+      "permanent": true
+    },
+    {
+      "source": "/locations/beamsville",
+      "destination": "/locations/home-inspection-beamsville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/lincoln",
+      "destination": "/locations/home-inspection-lincoln",
+      "permanent": true
+    },
+    {
+      "source": "/locations/st-catharines",
+      "destination": "/locations/home-inspection-st-catharines",
+      "permanent": true
+    },
+    {
+      "source": "/locations/niagara-falls",
+      "destination": "/locations/home-inspection-niagara-falls",
+      "permanent": true
+    },
+    {
+      "source": "/locations/niagara-on-the-lake",
+      "destination": "/locations/home-inspection-niagara-on-the-lake",
+      "permanent": true
+    },
+    {
+      "source": "/locations/welland",
+      "destination": "/locations/home-inspection-welland",
+      "permanent": true
+    },
+    {
+      "source": "/locations/fort-erie",
+      "destination": "/locations/home-inspection-fort-erie",
+      "permanent": true
+    },
+    {
+      "source": "/locations/port-colborne",
+      "destination": "/locations/home-inspection-port-colborne",
+      "permanent": true
+    },
+    {
+      "source": "/locations/thorold",
+      "destination": "/locations/home-inspection-thorold",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kitchener",
+      "destination": "/locations/home-inspection-kitchener",
+      "permanent": true
+    },
+    {
+      "source": "/locations/waterloo",
+      "destination": "/locations/home-inspection-waterloo",
+      "permanent": true
+    },
+    {
+      "source": "/locations/cambridge",
+      "destination": "/locations/home-inspection-cambridge",
+      "permanent": true
+    },
+    {
+      "source": "/locations/guelph",
+      "destination": "/locations/home-inspection-guelph",
+      "permanent": true
+    },
+    {
+      "source": "/locations/orangeville",
+      "destination": "/locations/home-inspection-orangeville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/peterborough",
+      "destination": "/locations/home-inspection-peterborough",
+      "permanent": true
+    },
+    {
+      "source": "/locations/cobourg",
+      "destination": "/locations/home-inspection-cobourg",
+      "permanent": true
+    },
+    {
+      "source": "/locations/brantford",
+      "destination": "/locations/home-inspection-brantford",
+      "permanent": true
+    },
+    {
+      "source": "/locations/mapleton",
+      "destination": "/locations/home-inspection-mapleton",
+      "permanent": true
+    },
+    {
+      "source": "/locations/woodstock",
+      "destination": "/locations/home-inspection-woodstock",
+      "permanent": true
+    },
+    {
+      "source": "/locations/adelaide-metcalfe",
+      "destination": "/locations/home-inspection-adelaide-metcalfe",
+      "permanent": true
+    },
+    {
+      "source": "/locations/erin",
+      "destination": "/locations/home-inspection-erin",
+      "permanent": true
+    },
+    {
+      "source": "/locations/puslinch",
+      "destination": "/locations/home-inspection-puslinch",
+      "permanent": true
+    },
+    {
+      "source": "/locations/shelburne",
+      "destination": "/locations/home-inspection-shelburne",
+      "permanent": true
+    },
+    {
+      "source": "/locations/north-dumfries",
+      "destination": "/locations/home-inspection-north-dumfries",
+      "permanent": true
+    },
+    {
+      "source": "/locations/wellington-north",
+      "destination": "/locations/home-inspection-wellington-north",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tay-township",
+      "destination": "/locations/home-inspection-tay-township",
+      "permanent": true
+    },
+    {
+      "source": "/locations/minto",
+      "destination": "/locations/home-inspection-minto",
+      "permanent": true
+    },
+    {
+      "source": "/locations/centre-wellington",
+      "destination": "/locations/home-inspection-centre-wellington",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ingersoll",
+      "destination": "/locations/home-inspection-ingersoll",
+      "permanent": true
+    },
+    {
+      "source": "/locations/woolwich",
+      "destination": "/locations/home-inspection-woolwich",
+      "permanent": true
+    },
+    {
+      "source": "/locations/pelham",
+      "destination": "/locations/home-inspection-pelham",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tiny-township",
+      "destination": "/locations/home-inspection-tiny-township",
+      "permanent": true
+    },
+    {
+      "source": "/locations/west-lincoln",
+      "destination": "/locations/home-inspection-west-lincoln",
+      "permanent": true
+    },
+    {
+      "source": "/locations/mono",
+      "destination": "/locations/home-inspection-mono",
+      "permanent": true
+    },
+    {
+      "source": "/locations/severn",
+      "destination": "/locations/home-inspection-severn",
+      "permanent": true
+    },
+    {
+      "source": "/locations/wellesley",
+      "destination": "/locations/home-inspection-wellesley",
+      "permanent": true
+    },
+    {
+      "source": "/locations/wainfleet",
+      "destination": "/locations/home-inspection-wainfleet",
+      "permanent": true
+    },
+    {
+      "source": "/locations/guelph-eramosa",
+      "destination": "/locations/home-inspection-guelph-eramosa",
+      "permanent": true
+    },
+    {
+      "source": "/locations/wilmot",
+      "destination": "/locations/home-inspection-wilmot",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tillsonburg",
+      "destination": "/locations/home-inspection-tillsonburg",
+      "permanent": true
+    },
+    {
+      "source": "/locations/paris",
+      "destination": "/locations/home-inspection-paris",
+      "permanent": true
+    },
+    {
       "source": "/locationsmarkham",
-      "destination": "/locations/markham",
+      "destination": "/locations/home-inspection-markham",
       "permanent": true
     },
     {
       "source": "/locationsbrampton",
-      "destination": "/locations/brampton",
+      "destination": "/locations/home-inspection-brampton",
       "permanent": true
     },
     {
       "source": "/locationsmississauga",
-      "destination": "/locations/mississauga",
+      "destination": "/locations/home-inspection-mississauga",
       "permanent": true
     },
     {
       "source": "/locationsvaughan",
-      "destination": "/locations/vaughan",
+      "destination": "/locations/home-inspection-vaughan",
       "permanent": true
     },
     {
       "source": "/locationsnorth-york",
-      "destination": "/locations/north-york",
+      "destination": "/locations/home-inspection-north-york",
       "permanent": true
     },
     {
       "source": "/locationshamilton",
-      "destination": "/locations/hamilton",
+      "destination": "/locations/home-inspection-hamilton",
       "permanent": true
     },
     {
       "source": "/locationstoronto",
-      "destination": "/locations/toronto",
+      "destination": "/locations/home-inspection-toronto",
       "permanent": true
     },
     {
       "source": "/locationsoakville",
-      "destination": "/locations/oakville",
+      "destination": "/locations/home-inspection-oakville",
       "permanent": true
     },
     {
       "source": "/locationsscarborough",
-      "destination": "/locations/scarborough",
+      "destination": "/locations/home-inspection-scarborough",
       "permanent": true
     },
     {
       "source": "/locationsburlington",
-      "destination": "/locations/burlington",
+      "destination": "/locations/home-inspection-burlington",
       "permanent": true
     },
     {
       "source": "/locationsrichmond-hill",
-      "destination": "/locations/richmond-hill",
+      "destination": "/locations/home-inspection-richmond-hill",
       "permanent": true
     },
     {
       "source": "/locationsbarrie",
-      "destination": "/locations/barrie",
+      "destination": "/locations/home-inspection-barrie",
       "permanent": true
     },
     {
       "source": "/locations/st.-catharines",
-      "destination": "/locations/st-catharines",
+      "destination": "/locations/home-inspection-st-catharines",
       "permanent": true
     },
     {
       "source": "/locations/guelph/eramosa",
-      "destination": "/locations/guelph-eramosa",
+      "destination": "/locations/home-inspection-guelph-eramosa",
       "permanent": true
     },
     {
@@ -261,22 +786,22 @@
     },
     {
       "source": "/gta",
-      "destination": "/locations/toronto",
+      "destination": "/locations/home-inspection-toronto",
       "permanent": true
     },
     {
       "source": "/toronto-inspection",
-      "destination": "/locations/toronto",
+      "destination": "/locations/home-inspection-toronto",
       "permanent": true
     },
     {
       "source": "/mississauga-inspection",
-      "destination": "/locations/mississauga",
+      "destination": "/locations/home-inspection-mississauga",
       "permanent": true
     },
     {
       "source": "/brampton-inspection",
-      "destination": "/locations/brampton",
+      "destination": "/locations/home-inspection-brampton",
       "permanent": true
     }
   ]
