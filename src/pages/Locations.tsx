@@ -34,7 +34,7 @@ const getRegionList = () => {
     acc[regionName].push({
       city: loc.city,
       slug: loc.slug,
-      href: `/locations/${loc.slug}`,
+      href: `/locations/home-inspection-${loc.slug}`,
       popular: (loc as any).popular || false,
       region: regionName,
     });
