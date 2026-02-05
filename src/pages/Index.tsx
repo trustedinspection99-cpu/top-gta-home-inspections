@@ -1,101 +1,565 @@
-import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { TrustBadges } from "@/components/home/TrustBadges";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { CTASection } from "@/components/home/CTASection";
+import { SITE_URL } from "@/lib/seo";
 import { 
-  Search, FileText, Construction, Building2, Camera, 
-  Droplets, Microscope, Radiation, Pipette, AlertOctagon, 
-  Flame, ChevronRight 
+  CheckCircle2, Shield, Clock, MapPin, Search, 
+  Home, Zap, Droplets, Thermometer, Construction, 
+  AlertTriangle, BadgeCheck, FileText, BarChart, Info,
+  ChevronRight, Phone, Instagram, Facebook, Youtube, Twitter, Video,
+  Award, Users, FileCheck, Building, ArrowRight, Star,
+  DollarSign, Calculator, Download, BookOpen, CheckSquare,
+  AlertCircle, Home as HomeIcon, BarChart3, Settings,
+  Wind, FlaskConical, Droplet, Eye, Radio, Wrench,
+  ThermometerSun, Waves, Factory, WavesIcon, ShieldAlert
 } from "lucide-react";
+
+// --- ONTARIO-FOCUSED FAQS ---
+const homepageFaqs = [
+  {
+    question: "How much does a home inspection cost in Ontario?",
+    answer: "In Ontario, home inspection costs range from $400-$600 for single-family homes and $350-$450 for condos. Prices vary by property size, age, and location. ASADS offers transparent pricing with no hidden fees. Call (647) 801-9311 for an exact quote tailored to your Ontario property.",
+  },
+  {
+    question: "What's included in a full home inspection in Ontario?",
+    answer: "Our Ontario home inspections include 200+ points covering foundation, roof, electrical, plumbing, HVAC, insulation, windows, doors, and safety systems. We follow OAHI standards and include thermal imaging, moisture detection, and comprehensive digital reporting.",
+  },
+  {
+    question: "Which home inspection services include radon testing in Ontario?",
+    answer: "Radon testing is available as an add-on service with any inspection. Ontario has varying radon levels, especially in basements. We use certified long-term testing devices and provide Health Canada-compliant reports within 48-96 hours.",
+  },
+  {
+    question: "What are the biggest red flags in Ontario home inspections?",
+    answer: "Top red flags in Ontario: foundation cracks from freeze-thaw cycles, knob & tube wiring (insurance issues), aluminum wiring, asbestos in older homes, mold from poor ventilation, and outdated electrical panels. These are common in Ontario's aging housing stock.",
+  },
+  {
+    question: "How do I book a certified home inspector in Toronto?",
+    answer: "Book online instantly at asads.ca/booking for Toronto and GTA. Our certified OAHI inspectors are available 7 days a week with same-day booking options for urgent pre-purchase inspections throughout Ontario.",
+  },
+  {
+    question: "Do you offer WETT inspections for wood stoves in Ontario?",
+    answer: "Yes, we provide certified WETT inspections across Ontario to ensure wood-burning appliances meet safety standards and insurance requirements. This is essential for rural Ontario properties and homes with fireplaces.",
+  },
+  {
+    question: "What specialty inspections are most common in Ontario?",
+    answer: "Most requested Ontario specialty inspections: mold testing (especially in basements), asbestos testing (pre-1990 homes), radon testing, WETT certifications, and well water testing for rural properties.",
+  },
+];
+
+// --- ONTARIO PRICING ---
+const ontarioPricing = [
+  { service: "Pre-Purchase Inspection", price: "$450-$650", details: "Single Family Home" },
+  { service: "Condo Inspection", price: "$350-$475", details: "Apartment/Condo Unit" },
+  { service: "Pre-Listing Inspection", price: "$400-$550", details: "Seller's Package" },
+  { service: "New Construction", price: "$500-$700", details: "Phase & Final Inspections" },
+  { service: "Commercial Inspection", price: "$600+", details: "Price per square foot" },
+  { service: "Radon Testing", price: "$200-$300", details: "Add-on service" },
+  { service: "Mold Testing", price: "$250-$400", details: "Air & surface samples" },
+  { service: "WETT Inspection", price: "$200-$350", details: "Wood stove/fireplace" },
+];
+
+// --- YOUR ONTARIO SERVICES ---
+const ontarioServices = [
+  { name: "Pre-Purchase", icon: Home, href: "/services/pre-purchase", description: "Complete evaluation before buying" },
+  { name: "Pre-Listing", icon: FileText, href: "/services/pre-listing", description: "Seller's inspection package" },
+  { name: "Condo", icon: Building, href: "/services/condo", description: "Condo & apartment inspections" },
+  { name: "Commercial", icon: Factory, href: "/services/commercial", description: "Commercial property inspections" },
+  { name: "New Construction", icon: Construction, href: "/services/new-construction", description: "Phase & final inspections" },
+  { name: "Radon Testing", icon: Radio, href: "/services/radon-testing", description: "Long-term radon detection" },
+  { name: "Mold Inspection", icon: Droplets, href: "/services/mold-inspection", description: "Air quality & mold testing" },
+  { name: "Asbestos Testing", icon: ShieldAlert, href: "/services/asbestos-testing", description: "Material sampling & analysis" },
+  { name: "Air Quality", icon: Wind, href: "/services/air-quality", description: "Indoor air quality testing" },
+  { name: "Lead Paint Testing", icon: FlaskConical, href: "/services/lead-paint-testing", description: "Lead detection services" },
+  { name: "Sewer Scope", icon: Eye, href: "/services/sewer-scope", description: "Camera sewer line inspection" },
+  { name: "Thermal Imaging", icon: ThermometerSun, href: "/services/thermal-imaging", description: "Infrared moisture detection" },
+  { name: "WETT", icon: Zap, href: "/services/wett", description: "Wood energy technology transfer" },
+  { name: "Well Water Testing", icon: WavesIcon, href: "/services/well-water-testing", description: "Water quality analysis" },
+];
+
+// --- ONTARIO-SPECIFIC RED FLAGS ---
+const ontarioRedFlags = [
+  "Foundation Cracks (Freeze-Thaw Damage)",
+  "Knob & Tube Wiring (Insurance Decline)",
+  "Aluminum Wiring Hazards",
+  "Asbestos in Pre-1990 Homes",
+  "Basement Moisture & Mold",
+  "Roof Ice Dam Damage",
+  "Improper Attic Ventilation",
+  "Poly-B Plumbing Pipes",
+  "Oil Tank Concerns",
+  "Wood Stove Safety Issues"
+];
+
+// --- ONTARIO CITIES SERVED ---
+const ontarioCities = [
+  "Toronto", "Mississauga", "Brampton", "Vaughan", "Markham",
+  "Oakville", "Richmond Hill", "Burlington", "Pickering", "Oshawa",
+  "Hamilton", "Kitchener", "Waterloo", "London", "Ottawa",
+  "Windsor", "Barrie", "Guelph", "Cambridge", "Whitby"
+];
+
+// --- BREADCRUMB COMPONENT ---
+const Breadcrumbs = ({ items }: { items: { label: string; href?: string }[] }) => (
+  <nav aria-label="Breadcrumb" className="container mx-auto px-4 py-4 flex items-center gap-2 text-sm text-gray-500">
+    <a href="/" className="hover:text-blue-600 transition-colors">Home</a>
+    {items.map((item, index) => (
+      <div key={index} className="flex items-center gap-2">
+        <ChevronRight size={14} className="text-gray-400" />
+        {item.href ? (
+          <a href={item.href} className="hover:text-blue-600 transition-colors">{item.label}</a>
+        ) : (
+          <span className="font-medium text-blue-800">{item.label}</span>
+        )}
+      </div>
+    ))}
+  </nav>
+);
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": SITE_URL
+    }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: homepageFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "HomeInspector"],
+  name: "ASADS Home Inspection",
+  image: `${SITE_URL}/og-image.jpg`,
+  url: `${SITE_URL}/`,
+  telephone: "(647) 801-9311",
+  priceRange: "$$",
+  address: { "@type": "PostalAddress", addressLocality: "Toronto", addressRegion: "ON", addressCountry: "CA" },
+  geo: { "@type": "GeoCoordinates", latitude: 43.7, longitude: -79.42 },
+  areaServed: ontarioCities,
+  sameAs: [
+    "https://youtube.com/@asadshomeinspection",
+    "https://www.instagram.com/asads_home_inspection",
+    "https://x.com/AsadsInspection",
+    "https://www.facebook.com/share/1ZhWQk97YY/",
+    "https://www.tiktok.com/@asads_home_inspection",
+  ],
+};
 
 const Index = () => {
   return (
     <Layout>
       <Helmet>
-        <title>ASADS Home Inspection | Professional Property Inspections Toronto</title>
-        <meta name="description" content="Expert Home, WETT, Mold, Radon, and Well Water inspections across Toronto & GTA." />
+        <title>Ontario Home Inspection | Cost, Services & Red Flags Guide | ASADS</title>
+        <meta name="description" content="Ontario home inspection cost: $400-$600. Certified OAHI inspections with 14 specialty services. Learn Ontario-specific red flags & book online. (647) 801-9311" />
+        <link rel="canonical" href={`${SITE_URL}`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Ontario Home Inspection | Complete Services & Cost Guide | ASADS" />
+        <meta property="og:description" content="How much does a home inspection cost in Ontario? $400-$600. Certified OAHI inspectors with 14 specialty services including radon, mold, WETT & asbestos testing." />
+        <meta property="og:url" content={SITE_URL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:site_name" content="ASADS Home Inspection" />
+        <meta property="og:image" content={`${SITE_URL}/images/og-default.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="ASADS Home Inspection - Ontario Certified Home Inspector Services" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AsadsInspection" />
+        <meta name="twitter:title" content="Ontario Home Inspection Cost & Services | ASADS" />
+        <meta name="twitter:description" content="Home inspection cost in Ontario: $400-$600. Certified OAHI inspectors with 14 specialty services. Book online for Toronto & GTA." />
+        <meta name="twitter:image" content={`${SITE_URL}/images/og-default.jpg`} />
+        
+        {/* Additional Meta Tags */}
+        <meta name="keywords" content="home inspection ontario, home inspection toronto, home inspection cost ontario, home inspection checklist, home inspection course ontario, radon testing ontario, mold inspection ontario, wett inspection ontario" />
+        
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="bg-blue-700 py-16 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Expert Inspections. Precision Results.</h1>
-          <div className="flex justify-center gap-4">
-            <Link to="/booking" className="bg-white text-blue-700 px-8 py-3 rounded-md font-bold hover:bg-gray-100 transition-all">Book Now</Link>
-            <a href="tel:6478019311" className="border-2 border-white px-8 py-3 rounded-md font-bold hover:bg-white/10 transition-all">Call Us</a>
+      {/* Breadcrumb Row */}
+      <div className="bg-gray-50 border-b">
+        <Breadcrumbs items={[]} />
+      </div>
+
+      {/* 1. ONTARIO-FOCUSED HERO */}
+      <section className="relative bg-gradient-to-br from-blue-800 to-blue-900 py-24 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid opacity-10"></div>
+        <div className="container relative z-10 mx-auto px-4">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 bg-blue-700/30 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-blue-600">
+              <Award className="h-4 w-4" />
+              <span className="text-sm font-medium">OAHI Certified • Serving Ontario Since 2009</span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
+              Ontario Home Inspection Experts
+            </h1>
+            <p className="text-xl mb-10 opacity-95 leading-relaxed">
+              Get <strong className="text-white">certified home inspections</strong> across Ontario with 
+              <strong className="text-white"> 14 specialty services</strong> including radon testing, mold inspection, 
+              and WETT certification. <strong className="text-white">Same-day digital reports</strong> for peace of mind.
+            </p>
+            
+            {/* Quick Ontario Cost Info */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/20">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="text-center p-4">
+                  <div className="text-3xl font-bold text-white">$400-$600</div>
+                  <div className="text-sm opacity-90">Standard Home Inspection</div>
+                </div>
+                <div className="text-center p-4 border-l border-r border-white/20">
+                  <div className="text-3xl font-bold text-white">$350-$475</div>
+                  <div className="text-sm opacity-90">Condo Inspection</div>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-3xl font-bold text-white">14+</div>
+                  <div className="text-sm opacity-90">Specialty Services</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="/booking" className="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group">
+                Book Ontario Inspection
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+              </a>
+              <a href="tel:6478019311" className="bg-transparent border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+                <Phone size={20} />
+                Call (647) 801-9311
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. ONTARIO STATS */}
+      <section className="py-12 bg-white border-b">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { value: "2,000+", label: "Ontario Inspections", icon: <FileCheck className="h-8 w-8" /> },
+              { value: "15+", label: "Years in Ontario", icon: <Award className="h-8 w-8" /> },
+              { value: "98%", label: "Ontario Client Satisfaction", icon: <Star className="h-8 w-8" /> },
+              { value: "24hr", label: "Report Delivery in Ontario", icon: <Clock className="h-8 w-8" /> },
+            ].map((stat, index) => (
+              <div key={index} className="flex flex-col items-center text-center">
+                <div className="text-blue-600 mb-3">{stat.icon}</div>
+                <p className="text-4xl font-extrabold text-gray-900 mb-2">{stat.value}</p>
+                <p className="text-gray-600 font-medium">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <TrustBadges />
 
-      <section className="py-16 bg-gray-50">
+      {/* 3. COMPLETE ONTARIO SERVICES */}
+      <section id="services" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              14+ Certified Home Inspection Services in Ontario
+            </h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Comprehensive inspection solutions for every Ontario property type and concern
+            </p>
+          </div>
           
-          {/* 1. Real Estate & Structural */}
-          <h2 className="text-2xl font-bold mb-8 text-gray-800 border-l-4 border-blue-600 pl-4">Real Estate & Structural</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            <ServiceCard title="Pre-Purchase" href="/services/pre-purchase" icon={<Search />} desc="200+ point audit for buyers." color="blue" />
-            <ServiceCard title="Pre-Listing" href="/services/pre-listing" icon={<FileText />} desc="Sellers disclosure reports." color="blue" />
-            <ServiceCard title="New Construction" href="/services/new-construction" icon={<Construction />} desc="Tarion warranty & PDI checks." color="blue" />
-            {/* FIXED LINK FOR COMMERCIAL */}
-            <ServiceCard title="Commercial" href="/services/commercial-inspection" icon={<Building2 />} desc="Building Condition Assessments (BCA)." color="blue" />
-            <ServiceCard title="Thermal Imaging" href="/services/thermal-imaging" icon={<Camera />} desc="Infrared leak & heat loss detection." color="blue" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+            {ontarioServices.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <a 
+                  key={index} 
+                  href={service.href}
+                  className="bg-white rounded-xl shadow-sm border hover:shadow-md transition-all duration-300 p-6 group hover:border-blue-300"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="bg-blue-50 text-blue-600 p-3 rounded-lg group-hover:bg-blue-100 transition-colors">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-lg text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
+                        {service.name}
+                      </h3>
+                      <p className="text-gray-600 text-sm">{service.description}</p>
+                      <div className="mt-4 flex items-center gap-1 text-blue-600 text-sm font-medium">
+                        Learn More
+                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              );
+            })}
           </div>
 
-          {/* 2. Health & Environmental */}
-          <h2 className="text-2xl font-bold mb-8 text-gray-800 border-l-4 border-cyan-500 pl-4">Health & Environmental</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            <ServiceCard title="Well Water Testing" href="/services/well-water-testing" icon={<Droplets />} desc="MOH Lab analysis for bacteria/nitrates." color="cyan" />
-            <ServiceCard title="Mold & Air Quality" href="/services/mold-inspection" icon={<Microscope />} desc="Spore count & DNA air sampling." color="cyan" />
-            <ServiceCard title="Radon Gas" href="/services/radon-testing" icon={<Radiation />} desc="48hr digital toxicity monitoring." color="cyan" />
-            <ServiceCard title="Asbestos Sampling" href="/services/asbestos-testing" icon={<AsbestosIcon />} desc="Verified identification of hazmat." color="cyan" />
-            {/* FIXED LINK FOR LEAD PAINT */}
-            <ServiceCard title="Lead Paint Testing" href="/services/lead-testing" icon={<AlertOctagon />} desc="XRF & swab testing for older homes." color="cyan" />
-            {/* FIXED LINK FOR SEWER SCOPE */}
-            <ServiceCard title="Sewer Scope" href="/services/sewer-scope" icon={<Search />} desc="Lateral line video inspections." color="cyan" />
+          <div className="text-center">
+            <a href="/services" className="inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-800 transition-all">
+              Explore All Services
+              <ChevronRight size={20} />
+            </a>
           </div>
-
-          {/* 3. Safety & Compliance */}
-          <h2 className="text-2xl font-bold mb-8 text-gray-800 border-l-4 border-orange-500 pl-4">Safety & Compliance</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* FIXED LINK FOR WETT */}
-            <ServiceCard title="WETT Inspection" href="/services/wett-inspection" icon={<Flame />} desc="Wood stove & fireplace insurance certs." color="orange" />
-          </div>
-
         </div>
       </section>
 
+      {/* 4. ONTARIO-SPECIFIC RED FLAGS */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-red-50 text-red-700 px-4 py-2 rounded-full mb-6">
+                <AlertTriangle className="h-4 w-4" />
+                <span className="text-sm font-bold">Ontario Home Buyers Alert</span>
+              </div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Top 10 Red Flags in Ontario Home Inspections
+              </h2>
+              <p className="text-gray-600 mb-8">
+                Ontario's climate and aging housing stock present unique challenges. 
+                Here are the most common and costly issues we find in properties across the province.
+              </p>
+              
+              <div className="space-y-4">
+                {ontarioRedFlags.map((flag, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="bg-red-100 text-red-600 p-1 rounded">
+                      <AlertTriangle className="h-4 w-4" />
+                    </div>
+                    <span className="text-gray-700">{flag}</span>
+                  </div>
+                ))}
+              </div>
+              
+              <a href="/blog/ontario-red-flags" className="inline-flex items-center gap-2 text-blue-700 font-bold mt-8 hover:text-blue-800">
+                Read Ontario Red Flag Guide
+                <ArrowRight size={16} />
+              </a>
+            </div>
+            
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Ontario Home Inspection Pricing</h3>
+              <div className="space-y-4">
+                {ontarioPricing.map((item, index) => (
+                  <div key={index} className="flex justify-between items-center p-4 bg-white rounded-lg border">
+                    <div>
+                      <div className="font-bold text-gray-900">{item.service}</div>
+                      <div className="text-sm text-gray-500">{item.details}</div>
+                    </div>
+                    <div className="text-xl font-bold text-blue-700">{item.price}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <div className="flex items-center gap-3">
+                  <Info className="h-5 w-5 text-blue-600" />
+                  <p className="text-sm text-gray-700">
+                    <strong>Note:</strong> Final pricing depends on property size, age, and location. 
+                    Contact us for exact quotes for your Ontario property.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. SPECIALTY SERVICES HIGHLIGHT */}
+      <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Ontario-Specific Specialty Inspections
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Address Ontario's unique property concerns with our certified specialty services
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: <Radio className="h-8 w-8" />,
+                title: "Radon Testing",
+                description: "Essential for Ontario basements. Long-term testing with Health Canada compliance.",
+                link: "/services/radon-testing"
+              },
+              {
+                icon: <Droplets className="h-8 w-8" />,
+                title: "Mold Inspection",
+                description: "Common in Ontario's humid summers. Air quality and surface testing.",
+                link: "/services/mold-inspection"
+              },
+              {
+                icon: <ShieldAlert className="h-8 w-8" />,
+                title: "Asbestos Testing",
+                description: "Critical for pre-1990 Ontario homes. Material sampling and analysis.",
+                link: "/services/asbestos-testing"
+              },
+              {
+                icon: <Zap className="h-8 w-8" />,
+                title: "WETT Inspection",
+                description: "Required for wood stove insurance in rural Ontario properties.",
+                link: "/services/wett"
+              },
+            ].map((service, index) => (
+              <a 
+                key={index} 
+                href={service.link}
+                className="bg-white p-6 rounded-xl shadow-sm border hover:shadow-md transition-all group"
+              >
+                <div className="bg-blue-100 text-blue-600 p-3 rounded-lg w-fit mb-4 group-hover:bg-blue-200 transition-colors">
+                  {service.icon}
+                </div>
+                <h3 className="font-bold text-lg text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{service.description}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. ONTARIO SERVICE AREAS */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Serving All Ontario</h2>
+            <p className="text-gray-300 text-lg">
+              Certified home inspection services available across Ontario
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-12">
+            {ontarioCities.map((city) => (
+              <div key={city} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center hover:bg-white/10 transition-all">
+                <MapPin className="h-5 w-5 text-blue-400 mx-auto mb-2" />
+                <span className="font-medium">{city}</span>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <p className="text-gray-300 mb-6">
+              Plus all other Ontario cities and towns - call to confirm service in your area
+            </p>
+            <a href="tel:6478019311" className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all">
+              <Phone size={20} />
+              Check Your Ontario Area
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. ONTARIO FAQS */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Ontario Home Inspection FAQs
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Answers to common questions about home inspections in Ontario
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            {homepageFaqs.map((faq, index) => (
+              <details key={index} className="group bg-gray-50 rounded-xl hover:bg-gray-100 transition-all">
+                <summary className="flex items-center justify-between p-6 cursor-pointer">
+                  <h3 className="font-bold text-lg text-gray-900">{faq.question}</h3>
+                  <ChevronRight className="h-5 w-5 text-gray-400 group-open:rotate-90 transition-transform" />
+                </summary>
+                <div className="px-6 pb-6 pt-0">
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <a href="/faq" className="inline-flex items-center gap-2 text-blue-700 font-bold hover:text-blue-800">
+              View All Ontario FAQs
+              <ArrowRight size={16} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. SOCIAL PROOF & TESTIMONIALS */}
       <TestimonialsSection />
+
+      {/* 9. ONTARIO BOOKING CTA */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+            <Clock className="h-4 w-4" />
+            <span className="text-sm font-bold">Same-Day Booking Available</span>
+          </div>
+          
+          <h2 className="text-4xl font-bold mb-6">
+            Ready for Your Ontario Home Inspection?
+          </h2>
+          <p className="text-xl opacity-95 mb-10 max-w-2xl mx-auto">
+            Book online now for certified home inspections across Ontario. 
+            Same-day appointments available for urgent pre-purchase inspections.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/booking" className="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center gap-2">
+              Book Ontario Inspection Online
+              <ArrowRight size={20} />
+            </a>
+            <a href="tel:6478019311" className="bg-transparent border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+              <Phone size={20} />
+              Call (647) 801-9311
+            </a>
+          </div>
+          
+          <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="h-5 w-5 text-green-400" />
+              <span>OAHI Certified Inspectors</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="h-5 w-5 text-green-400" />
+              <span>Serving All Ontario</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="h-5 w-5 text-green-400" />
+              <span>14+ Specialty Services</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="h-5 w-5 text-green-400" />
+              <span>Same-Day Digital Reports</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <CTASection />
     </Layout>
   );
 };
-
-// Helper component to ensure Link is always wrapping the entire card correctly
-const ServiceCard = ({ title, href, icon, desc, color }: any) => {
-  const colorMap: any = {
-    blue: "text-blue-600 border-blue-600 hover:border-blue-500",
-    cyan: "text-cyan-500 border-cyan-500 hover:border-cyan-500",
-    orange: "text-orange-500 border-orange-500 hover:border-orange-500"
-  };
-
-  return (
-    <Link to={href} className="group bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all block">
-      <div className={`${colorMap[color]} mb-4 h-10 w-10 group-hover:scale-110 transition-transform`}>
-        {icon}
-      </div>
-      <h3 className="font-bold text-xl mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm mb-4">{desc}</p>
-      <div className={`${colorMap[color].split(' ')[0]} font-bold text-sm flex items-center group-hover:underline`}>
-        View Service <ChevronRight size={14} className="ml-1" />
-      </div>
-    </Link>
-  );
-};
-
-const AsbestosIcon = () => <Pipette />;
 
 export default Index;
