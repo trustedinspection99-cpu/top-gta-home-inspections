@@ -26,8 +26,7 @@ import {
   ThumbsUp,
   BookOpen,
   PhoneCall,
-  Mail,
-  Navigation
+  Mail
 } from "lucide-react";
 
 // Primary keyword: "home inspection toronto"
@@ -145,52 +144,52 @@ const allServices = [
   }
 ];
 
-// Toronto neighborhoods for local SEO
+// Toronto neighborhoods - NO LINKS, just display
 const torontoNeighborhoods = [
-  { name: "Downtown Toronto" },
-  { name: "North York" },
-  { name: "Scarborough" },
-  { name: "Etobicoke" },
-  { name: "Midtown Toronto" },
-  { name: "York" },
-  { name: "East York" },
-  { name: "The Beaches" },
-  { name: "Liberty Village" },
-  { name: "Distillery District" },
-  { name: "Financial District" },
-  { name: "Annex" },
-  { name: "Cabbagetown" },
-  { name: "Rosedale" },
-  { name: "Forest Hill" },
-  { name: "King West" }
+  { name: "Downtown Toronto", service: "Home Inspection" },
+  { name: "North York", service: "Home Inspection" },
+  { name: "Scarborough", service: "Home Inspection" },
+  { name: "Etobicoke", service: "Home Inspection" },
+  { name: "Midtown Toronto", service: "Home Inspection" },
+  { name: "York", service: "Home Inspection" },
+  { name: "East York", service: "Home Inspection" },
+  { name: "The Beaches", service: "Home Inspection" },
+  { name: "Liberty Village", service: "Home Inspection" },
+  { name: "Distillery District", service: "Home Inspection" },
+  { name: "Financial District", service: "Home Inspection" },
+  { name: "Annex", service: "Home Inspection" },
+  { name: "Cabbagetown", service: "Home Inspection" },
+  { name: "Rosedale", service: "Home Inspection" },
+  { name: "Forest Hill", service: "Home Inspection" },
+  { name: "King West", service: "Home Inspection" }
 ];
 
-// GTA suburbs for expanded service area
+// GTA suburbs for expanded service area - NO LINKS
 const gtaSuburbs = [
-  { name: "Mississauga", slug: "mississauga" },
-  { name: "Brampton", slug: "brampton" },
-  { name: "Vaughan", slug: "vaughan" },
-  { name: "Markham", slug: "markham" },
-  { name: "Oakville", slug: "oakville" },
-  { name: "Richmond Hill", slug: "richmond-hill" },
-  { name: "Pickering", slug: "pickering" },
-  { name: "Ajax", slug: "ajax" },
-  { name: "Whitby", slug: "whitby" },
-  { name: "Oshawa", slug: "oshawa" },
-  { name: "Burlington", slug: "burlington" },
-  { name: "Milton", slug: "milton" },
-  { name: "Newmarket", slug: "newmarket" },
-  { name: "Aurora", slug: "aurora" },
-  { name: "Bolton", slug: "bolton" },
-  { name: "Caledon", slug: "caledon" }
+  "Mississauga",
+  "Brampton", 
+  "Vaughan",
+  "Markham",
+  "Oakville",
+  "Richmond Hill",
+  "Pickering",
+  "Ajax",
+  "Whitby",
+  "Oshawa",
+  "Burlington",
+  "Milton",
+  "Newmarket",
+  "Aurora",
+  "Bolton",
+  "Caledon"
 ];
 
 // SEO-optimized metadata
 const metaTitle = "Home Inspection Toronto | Professional House Inspectors & Property Assessments | ASADS";
 const metaDescription = "Looking for comprehensive home inspection in Toronto? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $450. Serving Toronto, Mississauga, Vaughan, Markham, Oakville, and all GTA neighborhoods.";
 const pageTitle = "Professional Home Inspection Services in Toronto | ASADS Certified Inspectors";
-const price = "$350-$750";
-const duration = "2-3 Hours";
+const price = "$450-$750";
+const duration = "2-4 Hours";
 
 // Comprehensive inspection checklist
 const whatWeInspect = [
@@ -719,22 +718,21 @@ export default function Toronto() {
               </div>
             </div>
 
-            {/* Local Service Areas */}
+            {/* Local Service Areas - NO LINKS, just display */}
             <div className="mb-16">
               <h2 className="font-heading text-3xl font-bold text-foreground mb-8 text-center">
                 Toronto Neighborhoods We Serve
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-                {torontoNeighborhoods.map((hood) => (
-                  <Link
-                    key={hood.slug}
-                    to={`/locations/toronto/${hood.slug}`}
-                    className="flex flex-col items-center justify-center p-4 rounded-lg bg-card border border-border hover:border-primary hover:bg-primary/5 transition-all text-center group"
+                {torontoNeighborhoods.map((hood, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col items-center justify-center p-4 rounded-lg bg-card border border-border text-center"
                   >
-                    <MapPin className="h-5 w-5 text-primary mb-2 group-hover:scale-110 transition-transform" />
+                    <MapPin className="h-5 w-5 text-primary mb-2" />
                     <span className="text-sm font-medium text-foreground">{hood.name}</span>
-                    <span className="text-xs text-muted-foreground mt-1">Home Inspection</span>
-                  </Link>
+                    <span className="text-xs text-muted-foreground mt-1">{hood.service}</span>
+                  </div>
                 ))}
               </div>
               <div className="text-center mt-8">
@@ -851,4 +849,4 @@ export default function Toronto() {
       </section>
     </Layout>
   );
-                     }
+                                  }
