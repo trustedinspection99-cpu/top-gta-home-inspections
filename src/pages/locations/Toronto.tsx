@@ -22,8 +22,103 @@ import {
   Wrench,
   Search,
   Users,
-  Award
+  Award,
+  Droplets,
+  Wind,
+  Factory,
+  TestTube,
+  Water,
+  Zap,
+  Flame
 } from "lucide-react";
+
+// All available service pages based on the provided list
+const allServices = [
+  { 
+    title: "Pre-Purchase Home Inspection", 
+    href: "/services/pre-purchase",
+    description: "Comprehensive evaluation before buying a home in Toronto",
+    icon: <Home className="h-5 w-5 text-primary" />
+  },
+  { 
+    title: "Condo Inspection", 
+    href: "/services/condo",
+    description: "Specialized inspections for Toronto condos and high-rises",
+    icon: <Building className="h-5 w-5 text-primary" />
+  },
+  { 
+    title: "New Construction Inspection", 
+    href: "/services/new-construction",
+    description: "Phase inspections for newly built Toronto homes",
+    icon: <Wrench className="h-5 w-5 text-primary" />
+  },
+  { 
+    title: "Pre-Listing Inspection", 
+    href: "/services/pre-listing",
+    description: "Home inspection before selling your Toronto property",
+    icon: <FileText className="h-5 w-5 text-primary" />
+  },
+  { 
+    title: "Commercial Inspection", 
+    href: "/services/commercial",
+    description: "Commercial property inspections in Toronto",
+    icon: <Factory className="h-5 w-5 text-primary" />
+  },
+  { 
+    title: "Thermal Imaging", 
+    href: "/services/thermal-imaging",
+    description: "Infrared scanning for hidden moisture and insulation issues",
+    icon: <Thermometer className="h-5 w-5 text-primary" />
+  },
+  { 
+    title: "Radon Testing", 
+    href: "/services/radon-testing",
+    description: "Radon gas testing for Toronto homes and basements",
+    icon: <Wind className="h-5 w-5 text-primary" />
+  },
+  { 
+    title: "Mold Inspection", 
+    href: "/services/mold-inspection",
+    description: "Mold and moisture assessment in Toronto properties",
+    icon: <Droplets className="h-5 w-5 text-primary" />
+  },
+  { 
+    title: "Asbestos Testing", 
+    href: "/services/asbestos-testing",
+    description: "Asbestos material testing for older Toronto homes",
+    icon: <TestTube className="h-5 w-5 text-primary" />
+  },
+  { 
+    title: "Lead Paint Testing", 
+    href: "/services/lead-paint-testing",
+    description: "Lead-based paint testing in Toronto heritage properties",
+    icon: <TestTube className="h-5 w-5 text-primary" />
+  },
+  { 
+    title: "WETT Inspection", 
+    href: "/services/wett",
+    description: "Wood-burning appliance safety inspections in Toronto",
+    icon: <Flame className="h-5 w-5 text-primary" />
+  },
+  { 
+    title: "Well Water Testing", 
+    href: "/services/well-water-testing",
+    description: "Water quality testing for Toronto area wells",
+    icon: <Water className="h-5 w-5 text-primary" />
+  },
+  { 
+    title: "Sewer Scope Inspection", 
+    href: "/services/sewer-scope",
+    description: "Sewer line inspection using camera technology in Toronto",
+    icon: <Zap className="h-5 w-5 text-primary" />
+  },
+  { 
+    title: "Air Quality Testing", 
+    href: "/services/air-quality",
+    description: "Indoor air quality assessments for Toronto homes",
+    icon: <Wind className="h-5 w-5 text-primary" />
+  }
+];
 
 // Toronto neighborhoods and suburbs
 const torontoNeighborhoods = [
@@ -73,25 +168,6 @@ const whatWeInspect = [
   "Basement Waterproofing & Drainage",
 ];
 
-const torontoFeatures = [
-  {
-    title: "Toronto-Specific Expertise",
-    description: "Our inspectors understand Toronto's diverse architecture, from Victorian homes to modern condos, and common issues in each."
-  },
-  {
-    title: "Local Building Code Knowledge",
-    description: "Familiar with Toronto building codes, heritage property regulations, and municipal bylaws affecting home inspections."
-  },
-  {
-    title: "Condo & High-Rise Specialists",
-    description: "Specialized in Toronto condo inspections, including unit assessments and building Status Certificate reviews."
-  },
-  {
-    title: "Seasonal Toronto Considerations",
-    description: "Understanding of Toronto's climate effects: winter ice damming, summer humidity impacts, and foundation movement."
-  }
-];
-
 const benefits = [
   "Licensed Toronto Home Inspectors",
   "Same-Day Digital Reports",
@@ -103,64 +179,67 @@ const benefits = [
   "Lifetime Technical Support",
 ];
 
-// FAQs based on actual search queries people use
+// FAQs with natural service page links
 const faqs = [
   {
     question: "How much does a home inspection cost in Toronto?",
-    answer: "Home inspection costs in Toronto typically range from $450 to $750, depending on property size, age, and additional services like thermal imaging. Contact us for an exact quote based on your specific Toronto property."
+    answer: `Home inspection costs in Toronto typically range from $450 to $750, depending on property size, age, and additional services like <Link to="/services/thermal-imaging">thermal imaging</Link>. For an exact quote on your Toronto home inspection, contact us directly with your property details.`
   },
   {
     question: "What does a home inspection include in Toronto?",
-    answer: "A standard home inspection in Toronto includes evaluation of structural components, foundation, roofing, plumbing, electrical systems, HVAC equipment, interior finishes, exterior envelope, and basement/crawl space conditions, following Ontario home inspection standards."
+    answer: `A standard <Link to="/services/pre-purchase">pre-purchase home inspection in Toronto</Link> includes evaluation of structural components, foundation, roof, plumbing, electrical systems, HVAC equipment, windows, doors, insulation, and interior components. We provide detailed reports with photos and recommendations.`
   },
   {
-    question: "How do I find the best home inspection companies in Toronto?",
-    answer: "Look for licensed, insured inspectors with Toronto-specific experience, positive reviews, clear pricing, and comprehensive reporting. ASADS Home Inspection meets all these criteria for Toronto home inspections."
+    question: "Do you offer condo inspections in Toronto?",
+    answer: `Yes, we specialize in <Link to="/services/condo">condo inspections in Toronto</Link>. Our condo inspections focus on the unit's interior systems, including HVAC units within the unit, electrical panels, plumbing fixtures, windows, balconies, and interior finishes. We also review Status Certificates for building health.`
   },
   {
-    question: "What is included in a standard home inspection in Toronto?",
-    answer: "Our standard inspection covers all major systems including foundation, roof, plumbing, electrical, HVAC, windows, doors, insulation, and interior components. We provide detailed reports with photos and recommendations."
+    question: "What specialized testing do you offer for Toronto homes?",
+    answer: `We offer comprehensive specialized testing including <Link to="/services/radon-testing">radon testing</Link> for basements, <Link to="/services/mold-inspection">mold inspection</Link> for moisture issues, <Link to="/services/asbestos-testing">asbestos testing</Link> for older homes, <Link to="/services/lead-paint-testing">lead paint testing</Link> for heritage properties, and <Link to="/services/well-water-testing">well water testing</Link> for rural properties near Toronto.`
   },
   {
-    question: "How much does a typical home inspection cost in the Toronto area?",
-    answer: "The typical cost for a home inspection in the Toronto area is $450-$750. Condo inspections are generally $350-$550, while larger homes or heritage properties may cost $650-$900."
+    question: "Do you inspect new construction homes in Toronto?",
+    answer: `Yes, we provide <Link to="/services/new-construction">new construction inspections in Toronto</Link> at various phases of construction, including pre-drywall and final walkthroughs. This ensures quality construction and identifies issues before closing.`
   },
   {
-    question: "What are the biggest red flags in a home inspection?",
-    answer: "Major red flags in Toronto homes include foundation cracks, roof leaks, knob and tube wiring, galvanized plumbing, moisture intrusion, and outdated electrical panels. We identify these issues and explain their significance."
+    question: "What is a WETT inspection and do I need one in Toronto?",
+    answer: `A <Link to="/services/wett">WETT inspection</Link> (Wood Energy Technology Transfer) is required for wood-burning fireplaces and stoves in Toronto homes. It verifies safe installation and proper clearances. We recommend this inspection for any Toronto home with wood-burning appliances.`
   },
   {
-    question: "How to book a home inspection appointment in Toronto online?",
-    answer: "You can book your Toronto home inspection online through our website booking system, by calling (647) 801-9311, or by emailing toronto@asads.ca. We offer flexible scheduling including evenings and weekends."
+    question: "Do you offer sewer line inspections in Toronto?",
+    answer: `Yes, our <Link to="/services/sewer-scope">sewer scope inspection service</Link> uses camera technology to inspect sewer lines in Toronto homes. This is especially important for older properties with clay pipes that may have root intrusion or damage.`
   },
   {
-    question: "What are the most common home inspection fails in Toronto?",
-    answer: "Common issues in Toronto homes include roofing problems, electrical safety violations, plumbing leaks, foundation cracks, inadequate insulation, and HVAC system deficiencies. Our inspectors are trained to identify these problems."
+    question: "Can you test indoor air quality in my Toronto home?",
+    answer: `Yes, we offer <Link to="/services/air-quality">air quality testing in Toronto</Link> homes to identify pollutants, allergens, and contaminants that may affect your family's health. This service is especially important for homes with mold concerns or poor ventilation.`
   }
-];
-
-const relatedServices = [
-  { title: "Condo Inspection Toronto", href: "/services/condo-inspection" },
-  { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
-  { title: "New Construction Inspection", href: "/services/new-construction" },
-  { title: "Thermal Imaging Toronto", href: "/services/thermal-imaging" },
-];
-
-// Popular search terms people actually use
-const popularSearches = [
-  "home inspection companies toronto",
-  "home inspection toronto cost",
-  "best home inspection toronto",
-  "home inspection condo toronto",
-  "home inspection in toronto",
-  "house inspection toronto",
-  "property inspection toronto",
-  "home inspector toronto"
 ];
 
 export default function Toronto() {
   const location = useLocation();
   const pageUrl = getCanonicalUrl(location.pathname);
+
+  // Function to render links in FAQ answers
+  const renderAnswerWithLinks = (answer: string) => {
+    const parts = answer.split(/(<Link[^>]*>[^<]*<\/Link>)/g);
+    return parts.map((part, index) => {
+      if (part.startsWith('<Link')) {
+        const match = part.match(/<Link to="([^"]+)">([^<]+)<\/Link>/);
+        if (match) {
+          return (
+            <Link 
+              key={index} 
+              to={normalizePath(match[1])} 
+              className="text-primary hover:underline"
+            >
+              {match[2]}
+            </Link>
+          );
+        }
+      }
+      return <span key={index}>{part}</span>;
+    });
+  };
 
   return (
     <Layout>
@@ -238,7 +317,7 @@ export default function Toronto() {
               "name": faq.question,
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": faq.answer
+                "text": faq.answer.replace(/<[^>]+>/g, '') // Remove HTML tags for schema
               }
             }))
           })}
@@ -295,71 +374,13 @@ export default function Toronto() {
         </div>
       </section>
 
-      {/* Popular Searches Section */}
-      <section className="py-12 bg-muted/50">
-        <div className="container">
-          <div className="text-center mb-8">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-4 flex items-center justify-center gap-2">
-              <Search className="h-6 w-6 text-primary" />
-              Toronto Home Inspection Services
-            </h2>
-            <p className="text-muted-foreground max-w-3xl mx-auto">
-              Find professional home inspection services in Toronto for all property types. 
-              We provide comprehensive assessments for houses, condos, and investment properties throughout Toronto.
-            </p>
-          </div>
-          
-          {/* Popular search terms displayed naturally */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="space-y-4">
-              <h3 className="font-heading font-semibold text-lg text-foreground flex items-center gap-2">
-                <Users className="h-5 w-5 text-primary" />
-                Popular Toronto Home Inspection Queries
-              </h3>
-              <ul className="space-y-2">
-                {popularSearches.slice(0, 4).map((search, index) => (
-                  <li key={index} className="flex items-center gap-3 text-muted-foreground">
-                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                    {search}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h3 className="font-heading font-semibold text-lg text-foreground flex items-center gap-2">
-                <Award className="h-5 w-5 text-primary" />
-                Why Choose ASADS in Toronto
-              </h3>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                  Top-rated home inspection services near me in Toronto
-                </li>
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                  Find reputable home inspection companies serving Toronto
-                </li>
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                  Questions to ask a potential home inspector in Toronto
-                </li>
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                  How to book a home inspection appointment in Toronto online
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Main Content */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-12">
-              {/* Introduction */}
+              {/* Introduction with service links */}
               <div className="prose prose-lg max-w-none">
                 <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
                   Professional Home Inspection Services in Toronto
@@ -367,39 +388,44 @@ export default function Toronto() {
                 
                 <div className="text-muted-foreground space-y-4">
                   <p>
-                    When searching for <strong>home inspection companies in Toronto</strong>, 
+                    When searching for home inspection companies in Toronto, 
                     it's essential to choose licensed professionals with local expertise. 
-                    At ASADS, we provide comprehensive <strong>home inspection in Toronto</strong> 
+                    At ASADS, we provide comprehensive <Link to="/services/pre-purchase" className="text-primary hover:underline">pre-purchase home inspection in Toronto</Link> 
                     that covers all major systems and components of your property.
                   </p>
                   
                   <p>
-                    Our <strong>Toronto home inspection</strong> services are designed to give you peace of mind 
-                    whether you're buying, selling, or maintaining a property in the GTA. 
-                    From <strong>home inspection condo Toronto</strong> assessments to full house inspections, 
-                    our licensed inspectors deliver detailed reports with clear recommendations.
+                    Our <strong>Toronto home inspection</strong> services include <Link to="/services/condo" className="text-primary hover:underline">condo inspections</Link>, 
+                    <Link to="/services/new-construction" className="text-primary hover:underline"> new construction inspections</Link>, and 
+                    specialized services like <Link to="/services/thermal-imaging" className="text-primary hover:underline">thermal imaging</Link> and 
+                    <Link to="/services/radon-testing" className="text-primary hover:underline"> radon testing</Link>. 
+                    From heritage properties to modern high-rises, our licensed inspectors deliver detailed reports with clear recommendations.
                   </p>
                   
                   <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-4">
-                    What to Expect from Your Toronto Home Inspection
+                    Comprehensive Toronto Home Inspection Services
                   </h3>
                   
                   <p>
-                    A typical <strong>home inspection in Toronto</strong> includes evaluation of structural components, 
-                    foundation integrity, roofing systems, plumbing, electrical systems, HVAC equipment, 
-                    and interior finishes. We're familiar with common issues in Toronto homes, 
-                    including those found in heritage properties and modern condos alike.
+                    We offer a full range of inspection services for Toronto properties. Our 
+                    <Link to="/services/pre-purchase" className="text-primary hover:underline"> pre-purchase inspections</Link> help buyers make informed decisions, 
+                    while <Link to="/services/pre-listing" className="text-primary hover:underline">pre-listing inspections</Link> give sellers confidence before putting their 
+                    homes on the market. For older Toronto homes, we provide 
+                    <Link to="/services/asbestos-testing" className="text-primary hover:underline"> asbestos testing</Link> and 
+                    <Link to="/services/lead-paint-testing" className="text-primary hover:underline"> lead paint testing</Link> to ensure safety.
                   </p>
                   
                   <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-4">
-                    Average Cost of Home Inspection in Toronto
+                    Specialized Testing Services in Toronto
                   </h3>
                   
                   <p>
-                    The average <strong>home inspection Toronto cost</strong> ranges from ${price.replace('$', '')}, 
-                    depending on property size and additional services. While price is important, 
-                    the value comes from thorough inspection and detailed reporting that can save 
-                    you thousands in unexpected repairs.
+                    Beyond standard inspections, we offer specialized testing including 
+                    <Link to="/services/mold-inspection" className="text-primary hover:underline"> mold inspection</Link> for moisture problems, 
+                    <Link to="/services/air-quality" className="text-primary hover:underline"> air quality testing</Link> for indoor pollutants, 
+                    <Link to="/services/well-water-testing" className="text-primary hover:underline"> well water testing</Link> for rural properties, and 
+                    <Link to="/services/wett" className="text-primary hover:underline"> WETT inspections</Link> for wood-burning appliances. 
+                    For sewer line concerns, our <Link to="/services/sewer-scope" className="text-primary hover:underline">sewer scope inspections</Link> use camera technology to identify issues.
                   </p>
                 </div>
               </div>
@@ -419,61 +445,51 @@ export default function Toronto() {
                 </div>
               </div>
 
-              {/* Toronto-Specific Services */}
+              {/* Complete Services Grid */}
               <div>
                 <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
-                  Specialized Toronto Home Inspection Services
+                  All Our Toronto Home Inspection Services
                 </h2>
-                <div className="grid gap-6">
-                  {[
-                    {
-                      icon: <Building className="h-6 w-6 text-primary" />,
-                      title: "Condo Inspection Toronto",
-                      description: "Specialized inspections for Toronto's extensive condo market, including unit assessments and building Status Certificate reviews.",
-                      href: "/services/condo-inspection"
-                    },
-                    {
-                      icon: <Home className="h-6 w-6 text-primary" />,
-                      title: "Pre-Purchase Home Inspection Toronto",
-                      description: "Comprehensive evaluations before property purchase to identify issues and provide negotiation leverage.",
-                      href: "/services/pre-purchase"
-                    },
-                    {
-                      icon: <Wrench className="h-6 w-6 text-primary" />,
-                      title: "Heritage Property Inspection",
-                      description: "Expert assessments of Toronto's heritage homes with knowledge of original materials and preservation requirements.",
-                      href: "/services/heritage-inspection"
-                    },
-                    {
-                      icon: <Thermometer className="h-6 w-6 text-primary" />,
-                      title: "Thermal Imaging Toronto",
-                      description: "Infrared scanning to detect hidden moisture, insulation gaps, and electrical issues not visible to the naked eye.",
-                      href: "/services/thermal-imaging"
-                    }
-                  ].map((service) => (
-                    <Card key={service.title} className="border-border/50 hover:border-primary/50 transition-colors">
-                      <CardContent className="p-6">
-                        <div className="flex items-start gap-4">
-                          <div className="bg-primary/10 p-3 rounded-lg">
-                            {service.icon}
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
-                              {service.title}
-                            </h3>
-                            <p className="text-muted-foreground mb-4">{service.description}</p>
-                            <Link 
-                              to={normalizePath(service.href)}
-                              className="inline-flex items-center gap-2 text-primary hover:underline font-medium text-sm"
-                            >
-                              Learn more <ArrowRight className="h-4 w-4" />
-                            </Link>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {allServices.map((service) => (
+                    <Link 
+                      key={service.href}
+                      to={normalizePath(service.href)}
+                      className="flex items-start gap-4 p-4 rounded-lg border border-border hover:border-primary hover:bg-primary/5 transition-all group"
+                    >
+                      <div className="bg-primary/10 p-2 rounded-lg group-hover:scale-110 transition-transform">
+                        {service.icon}
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-heading font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
+                          {service.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground">{service.description}</p>
+                      </div>
+                      <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                    </Link>
                   ))}
                 </div>
+              </div>
+
+              {/* Commercial Services Mention */}
+              <div className="p-6 bg-primary/5 rounded-xl border border-primary/10">
+                <h3 className="font-heading text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+                  <Factory className="h-6 w-6 text-primary" />
+                  Commercial Property Inspections in Toronto
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  In addition to residential services, we provide comprehensive 
+                  <Link to="/services/commercial" className="text-primary hover:underline font-medium"> commercial property inspections in Toronto</Link>. 
+                  Our commercial inspections cover retail spaces, office buildings, multi-unit residential buildings, 
+                  and industrial properties throughout the GTA.
+                </p>
+                <Link 
+                  to="/services/commercial" 
+                  className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                >
+                  Learn about commercial inspections <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
 
               {/* FAQ Section */}
@@ -487,7 +503,9 @@ export default function Toronto() {
                       <h3 className="font-heading font-semibold text-foreground mb-2">
                         {faq.question}
                       </h3>
-                      <p className="text-muted-foreground">{faq.answer}</p>
+                      <p className="text-muted-foreground">
+                        {renderAnswerWithLinks(faq.answer)}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -541,6 +559,56 @@ export default function Toronto() {
                 </CardContent>
               </Card>
 
+              {/* Popular Services */}
+              <Card className="border-border/50">
+                <CardContent className="p-6">
+                  <h3 className="font-heading font-semibold text-lg text-foreground mb-4">
+                    Popular Toronto Services
+                  </h3>
+                  <ul className="space-y-3">
+                    {allServices.slice(0, 6).map((service) => (
+                      <li key={service.href}>
+                        <Link 
+                          to={normalizePath(service.href)}
+                          className="flex items-center justify-between text-sm text-muted-foreground hover:text-primary transition-colors group"
+                        >
+                          <span className="flex items-center gap-2">
+                            {service.icon}
+                            {service.title}
+                          </span>
+                          <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-4 pt-4 border-t border-border">
+                    <Link 
+                      to="/services"
+                      className="text-sm text-primary hover:underline font-medium inline-flex items-center gap-1"
+                    >
+                      View all services <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Benefits */}
+              <Card className="border-border/50">
+                <CardContent className="p-6">
+                  <h3 className="font-heading font-semibold text-lg text-foreground mb-4">
+                    Why Choose ASADS in Toronto
+                  </h3>
+                  <ul className="space-y-3">
+                    {benefits.slice(0, 6).map((benefit) => (
+                      <li key={benefit} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-foreground">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
               {/* Service Areas */}
               <Card className="border-border/50">
                 <CardContent className="p-6">
@@ -549,7 +617,7 @@ export default function Toronto() {
                     Toronto Service Areas
                   </h3>
                   <div className="space-y-3">
-                    {torontoNeighborhoods.slice(0, 8).map((hood) => (
+                    {torontoNeighborhoods.slice(0, 6).map((hood) => (
                       <div key={hood.slug} className="flex items-center justify-between">
                         <Link 
                           to={`/locations/toronto/${hood.slug}`}
@@ -570,45 +638,6 @@ export default function Toronto() {
                       <ArrowRight className="h-4 w-4" />
                     </Link>
                   </div>
-                </CardContent>
-              </Card>
-
-              {/* Related Services */}
-              <Card className="border-border/50">
-                <CardContent className="p-6">
-                  <h3 className="font-heading font-semibold text-lg text-foreground mb-4">
-                    Popular Toronto Services
-                  </h3>
-                  <ul className="space-y-3">
-                    {relatedServices.map((service) => (
-                      <li key={service.href}>
-                        <Link 
-                          to={normalizePath(service.href)}
-                          className="flex items-center justify-between text-sm text-muted-foreground hover:text-primary transition-colors group"
-                        >
-                          <span>{service.title}</span>
-                          <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* Benefits */}
-              <Card className="border-border/50">
-                <CardContent className="p-6">
-                  <h3 className="font-heading font-semibold text-lg text-foreground mb-4">
-                    Why Choose ASADS in Toronto
-                  </h3>
-                  <ul className="space-y-3">
-                    {benefits.slice(0, 6).map((benefit) => (
-                      <li key={benefit} className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </CardContent>
               </Card>
             </div>
@@ -678,8 +707,11 @@ export default function Toronto() {
               Ready to Schedule Your Toronto Home Inspection?
             </h2>
             <p className="text-xl text-primary-foreground/90 mb-8">
-              As one of Toronto's leading home inspection companies, we provide comprehensive 
-              property assessments with licensed inspectors, same-day reports, and competitive pricing.
+              Choose from our comprehensive range of Toronto home inspection services, 
+              including <Link to="/services/pre-purchase" className="text-secondary hover:underline">pre-purchase inspections</Link>, 
+              <Link to="/services/condo" className="text-secondary hover:underline"> condo inspections</Link>, 
+              <Link to="/services/new-construction" className="text-secondary hover:underline"> new construction inspections</Link>, 
+              and specialized testing services.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -710,4 +742,4 @@ export default function Toronto() {
       </section>
     </Layout>
   );
-                          }
+          }
