@@ -147,22 +147,22 @@ const allServices = [
 
 // Toronto neighborhoods for local SEO
 const torontoNeighborhoods = [
-  { name: "Downtown Toronto", slug: "downtown-toronto" },
-  { name: "North York", slug: "north-york" },
-  { name: "Scarborough", slug: "scarborough" },
-  { name: "Etobicoke", slug: "etobicoke" },
-  { name: "Midtown Toronto", slug: "midtown-toronto" },
-  { name: "York", slug: "york-toronto" },
-  { name: "East York", slug: "east-york" },
-  { name: "The Beaches", slug: "the-beaches" },
-  { name: "Liberty Village", slug: "liberty-village" },
-  { name: "Distillery District", slug: "distillery-district" },
-  { name: "Financial District", slug: "financial-district" },
-  { name: "Annex", slug: "the-annex" },
-  { name: "Cabbagetown", slug: "cabbagetown" },
-  { name: "Rosedale", slug: "rosedale" },
-  { name: "Forest Hill", slug: "forest-hill" },
-  { name: "King West", slug: "king-west" }
+  { name: "Downtown Toronto" },
+  { name: "North York" },
+  { name: "Scarborough" },
+  { name: "Etobicoke" },
+  { name: "Midtown Toronto" },
+  { name: "York" },
+  { name: "East York" },
+  { name: "The Beaches" },
+  { name: "Liberty Village" },
+  { name: "Distillery District" },
+  { name: "Financial District" },
+  { name: "Annex" },
+  { name: "Cabbagetown" },
+  { name: "Rosedale" },
+  { name: "Forest Hill" },
+  { name: "King West" }
 ];
 
 // GTA suburbs for expanded service area
@@ -189,8 +189,8 @@ const gtaSuburbs = [
 const metaTitle = "Home Inspection Toronto | Professional House Inspectors & Property Assessments | ASADS";
 const metaDescription = "Looking for comprehensive home inspection in Toronto? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $450. Serving Toronto, Mississauga, Vaughan, Markham, Oakville, and all GTA neighborhoods.";
 const pageTitle = "Professional Home Inspection Services in Toronto | ASADS Certified Inspectors";
-const price = "$450-$750";
-const duration = "2-4 Hours";
+const price = "$350-$750";
+const duration = "2-3 Hours";
 
 // Comprehensive inspection checklist
 const whatWeInspect = [
