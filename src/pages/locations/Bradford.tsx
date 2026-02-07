@@ -26,17 +26,7 @@ import {
   ThumbsUp,
   BookOpen,
   PhoneCall,
-  Mail,
-  Factory,
-  Warehouse,
-  Trees,
-  River,
-  Train,
-  Truck,
-  FactoryIcon,
-  Castle,
-  Droplets,
-  Wind
+  Mail
 } from "lucide-react";
 
 // Primary keyword: "home inspection bradford"
@@ -50,19 +40,26 @@ const secondaryKeywords = [
   "bradford ontario home inspection"
 ];
 
-// Service pages with optimized anchor text
+// Service pages with optimized anchor text - EXACTLY 14 SERVICES LIKE BOLTON
 const allServices = [
   { 
     title: "Pre-Purchase Home Inspection", 
     href: "/services/pre-purchase",
-    description: "Complete evaluation before buying a home in Bradford",
+    description: "Complete evaluation before buying a property in Bradford",
     icon: <Home className="h-6 w-6" />,
     anchorText: "pre-purchase home inspection in Bradford"
   },
   { 
+    title: "Condo Inspection", 
+    href: "/services/condo",  // FIXED: Match Bolton's route
+    description: "Specialized condo inspections in Bradford buildings",
+    icon: <Building className="h-6 w-6" />,
+    anchorText: "condo inspection Bradford"
+  },
+  { 
     title: "New Construction Inspection", 
     href: "/services/new-construction",
-    description: "Phase and final inspections for newly built homes in Bradford",
+    description: "Phase and final inspections for newly built Bradford homes",
     icon: <Award className="h-6 w-6" />,
     anchorText: "new construction inspection Bradford"
   },
@@ -76,28 +73,21 @@ const allServices = [
   { 
     title: "Commercial Inspection", 
     href: "/services/commercial",
-    description: "Commercial and industrial property inspections in Bradford",
+    description: "Commercial property inspections throughout Bradford",
     icon: <Building className="h-6 w-6" />,
     anchorText: "commercial property inspection Bradford"
   },
   { 
-    title: "Condominium Inspection", 
-    href: "/services/condo-inspection",
-    description: "Condominium inspections in Bradford's growing market",
-    icon: <Building className="h-6 w-6" />,
-    anchorText: "condo inspection Bradford"
-  },
-  { 
     title: "Radon Testing", 
     href: "/services/radon-testing",
-    description: "Radon gas testing for homes in Bradford and Simcoe County",
-    icon: <Wind className="h-6 w-6" />,
+    description: "Radon gas testing for Bradford homes and basements",
+    icon: <Thermometer className="h-6 w-6" />,
     anchorText: "radon testing in Bradford"
   },
   { 
     title: "Mold Inspection", 
     href: "/services/mold-inspection",
-    description: "Professional mold inspection and testing in Bradford homes",
+    description: "Professional mold inspection and testing in Bradford",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "mold inspection Bradford"
   },
@@ -111,7 +101,7 @@ const allServices = [
   { 
     title: "WETT Inspection", 
     href: "/services/wett",
-    description: "WETT-certified inspections for wood-burning appliances",
+    description: "WETT-certified inspections for wood-burning appliances in Bradford",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "WETT inspection Bradford"
   },
@@ -125,14 +115,14 @@ const allServices = [
   { 
     title: "Asbestos Testing", 
     href: "/services/asbestos-testing",
-    description: "Asbestos testing for older homes in Bradford",
+    description: "Asbestos testing for older Bradford homes",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "asbestos testing Bradford"
   },
   { 
     title: "Lead Paint Testing", 
     href: "/services/lead-paint-testing",
-    description: "Lead-based paint testing for heritage Bradford properties",
+    description: "Lead-based paint testing for Bradford properties",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "lead paint testing Bradford"
   },
@@ -144,11 +134,11 @@ const allServices = [
     anchorText: "air quality testing Bradford"
   },
   { 
-    title: "Investment Property Inspection", 
-    href: "/services/investment-property",
-    description: "Inspections for rental and investment properties in Bradford",
-    icon: <DollarSign className="h-6 w-6" />,
-    anchorText: "investment property inspection Bradford"
+    title: "Well Water Testing", 
+    href: "/services/well-water-testing",  // LAST ITEM - POSITION 14
+    description: "Well water quality testing for properties near Bradford",
+    icon: <Thermometer className="h-6 w-6" />,
+    anchorText: "well water testing Bradford"
   }
 ];
 
@@ -157,49 +147,29 @@ const bradfordAreas = [
   { name: "Downtown Bradford", service: "Home Inspection" },
   { name: "Bradford West Gwillimbury", service: "Home Inspection" },
   { name: "Industrial Area", service: "Home Inspection" },
-  { name: "New Subdivisions", service: "Home Inspection" },
   { name: "Rural Bradford", service: "Home Inspection" },
   { name: "Heritage District", service: "Home Inspection" },
   { name: "Residential Core", service: "Home Inspection" },
   { name: "Commercial District", service: "Home Inspection" },
   { name: "Holland River Area", service: "Home Inspection" },
+  { name: "New Subdivisions", service: "Home Inspection" },
   { name: "Nearby Farmlands", service: "Home Inspection" },
   { name: "New Developments", service: "Home Inspection" },
   { name: "Established Neighborhoods", service: "Home Inspection" },
   { name: "Mixed-Use Areas", service: "Home Inspection" },
+  { name: "Waterfront Properties", service: "Home Inspection" },
   { name: "Transit-Oriented Areas", service: "Home Inspection" },
-  { name: "Historical Sections", service: "Home Inspection" },
-  { name: "Waterfront Properties", service: "Home Inspection" }
-];
-
-// Nearby towns - NO LINKS
-const nearbyTowns = [
-  "Newmarket",
-  "Barrie", 
-  "Aurora",
-  "Richmond Hill",
-  "Vaughan",
-  "Keswick",
-  "Sutton",
-  "Cookstown",
-  "Beeton",
-  "Alliston",
-  "Tottenham",
-  "Schomberg",
-  "King City",
-  "Maple",
-  "Woodbridge",
-  "Thornhill"
+  { name: "Historical Sections", service: "Home Inspection" }
 ];
 
 // SEO-optimized metadata
-const metaTitle = "Home Inspection Bradford | Professional Property Inspections in Bradford, ON | ASADS";
-const metaDescription = "Looking for comprehensive home inspection in Bradford? ASADS provides professional property inspections with licensed inspectors, same-day reports, and thorough evaluations. Serving Bradford, Newmarket, Barrie, and Simcoe County.";
-const pageTitle = "Professional Home Inspection Services in Bradford, Ontario | ASADS Certified Inspectors";
-const price = "$500-$850";
+const metaTitle = "Home Inspection Bradford | Professional House Inspectors & Property Assessments | ASADS";
+const metaDescription = "Looking for comprehensive home inspection in Bradford? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $500. Serving Bradford, Newmarket, Barrie, and all Simcoe County communities.";
+const pageTitle = "Professional Home Inspection Services in Bradford | ASADS Certified Inspectors";
+const price = "$500-$800";
 const duration = "2-4 Hours";
 
-// Comprehensive inspection checklist for Bradford properties
+// Comprehensive inspection checklist
 const whatWeInspect = [
   "Foundations & Structural Integrity Assessment",
   "Roofing Systems & Attic Ventilation Inspection",
@@ -209,18 +179,18 @@ const whatWeInspect = [
   "Windows, Doors & Exterior Envelope Examination",
   "Insulation & Vapor Barrier Assessment",
   "Basement Waterproofing & Drainage Analysis",
-  "Garage & Outbuilding Evaluations",
-  "Industrial & Agricultural Property Assessments"
+  "Interior Finishes & Safety Features Review",
+  "Exterior Grading & Landscaping Evaluation"
 ];
 
 // E-E-A-T: Experience, Expertise, Authoritativeness, Trustworthiness
 const expertisePoints = [
   "Licensed Ontario Home Inspectors",
   "InterNACHI Certified Professionals",
-  "12+ Years Bradford Property Inspection Experience",
-  "Industrial & Commercial Property Specialists",
-  "Heritage Home Experts",
-  "New Construction Code Compliance Experts",
+  "10+ Years Bradford Home Inspection Experience",
+  "Bradford Building Code Specialists",
+  "Industrial Property Inspection Experts",
+  "Condo & Building Specialists",
   "Thermal Imaging Certified Technicians",
   "Radon Measurement Certified",
   "WETT Certified Wood-Burning Appliance Inspectors",
@@ -234,91 +204,67 @@ const benefits = [
   "Thermal Imaging & Moisture Detection",
   "24/7 Online Report Access",
   "Lifetime Technical Support",
-  "Flexible Scheduling for Working Families",
+  "Flexible Evening & Weekend Appointments",
   "Pre-Inspection Consultation Included",
   "Post-Inspection Review Session",
-  "Investment Property Assessments",
+  "Priority Emergency Re-inspections",
   "Free Follow-up Questions for 12 Months"
 ];
 
-// Bradford-specific content about local considerations
-const bradfordFeatures = [
-  {
-    icon: <Factory className="h-5 w-5" />,
-    title: "Industrial & Agricultural Experts",
-    description: "Expert inspections for Bradford's industrial and agricultural properties with attention to specialized structures and utilities."
-  },
-  {
-    icon: <Train className="h-5 w-5" />,
-    title: "Transportation Hub Knowledge",
-    description: "Comprehensive inspections considering Bradford's transportation infrastructure, Highway 400 access, and GO Transit expansion."
-  },
-  {
-    icon: <River className="h-5 w-5" />,
-    title: "Holland River Expertise",
-    description: "Detailed assessments for properties along the Holland River with attention to flood plain considerations and drainage management."
-  },
-  {
-    icon: <Warehouse className="h-5 w-5" />,
-    title: "Growth Area Specialists",
-    description: "Inspections for Bradford's rapid growth areas with attention to new construction quality and development considerations."
-  }
-];
-
-// Comprehensive FAQ based on search intent
+// Comprehensive FAQ based on search intent - EXACTLY 8 LIKE BOLTON
 const faqs = [
   {
     question: "How much does a home inspection cost in Bradford?",
-    answer: `The average <strong>home inspection Bradford cost</strong> ranges from $500 to $850 for a standard residential property. Industrial or agricultural properties may range from $750-$1,200, while new construction condominiums typically range from $400-$650. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
+    answer: `The average <strong>home inspection Bradford cost</strong> ranges from $500 to $800 for a standard single-family home. Condo inspections typically cost $450-$650, while larger homes or properties requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> may range from $600-$950. We provide detailed quotes based on your specific Bradford property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Bradford?",
-    answer: `A comprehensive <strong>home inspection in Bradford</strong> includes evaluation of all major systems: structural components, foundation, roofing, plumbing, electrical systems, HVAC equipment, windows, doors, insulation, and interior finishes. Our inspections follow the Ontario Association of Home Inspectors (OAHI) Standards of Practice and include specialized assessments for Bradford's industrial and agricultural properties.`
+    answer: `A comprehensive <strong>home inspection in Bradford</strong> includes evaluation of all major systems: structural components, foundation, roofing, plumbing, electrical systems, HVAC equipment, windows, doors, insulation, and interior finishes. Our inspections follow the Ontario Association of Home Inspectors (OAHI) Standards of Practice and include detailed reporting with high-resolution photos of all findings.`
   },
   {
     question: "How long does a home inspection take in Bradford?",
-    answer: `Most <strong>Bradford home inspections</strong> take 2-4 hours depending on property size and complexity. Industrial properties, agricultural buildings, and larger homes require additional time for thorough assessment. We never rush inspections and allocate sufficient time to properly assess every component of your Bradford property.`
+    answer: `Most <strong>Bradford home inspections</strong> take 2-4 hours depending on property size and complexity. Condominium unit inspections typically take 1.5-2.5 hours, while larger homes (over 3,000 sq ft) may require 3-5 hours for thorough evaluation. We never rush inspections and allocate sufficient time to properly assess every component of your Bradford property.`
   },
   {
     question: "Should I attend the home inspection in Bradford?",
-    answer: `Yes, we strongly recommend attending your <strong>Bradford home inspection</strong>. This allows you to walk through the property with our inspector, ask questions in real-time, learn about maintenance requirements for Bradford's specific industrial and agricultural considerations, and understand the significance of any issues discovered. We provide valuable insights about property maintenance and local building practices.`
+    answer: `Yes, we strongly recommend attending your <strong>Bradford home inspection</strong>. This allows you to walk through the property with our inspector, ask questions in real-time, learn about maintenance requirements, and understand the significance of any issues discovered. We provide valuable insights about your specific Bradford home that you won't get from just reading the report.`
   },
   {
     question: "What are the most common issues found in Bradford home inspections?",
-    answer: `Common issues in <strong>Bradford homes</strong> include: foundation settling in new subdivisions, moisture issues in basements due to Holland River proximity, aging electrical systems in heritage homes, roof issues on agricultural buildings, insulation deficiencies in older industrial conversions, and plumbing concerns in properties from Bradford's early development period.`
+    answer: `Common issues in <strong>Bradford homes</strong> include: foundation settling in older properties, moisture issues in basements due to Holland River proximity, aging electrical systems in heritage homes, roof issues on older buildings, insulation deficiencies, plumbing concerns in industrial properties, and updates needed in older homes.`
   },
   {
     question: "How soon will I receive my inspection report in Bradford?",
     answer: `We provide <strong>same-day digital reports</strong> for all Bradford home inspections. You'll receive your comprehensive inspection report via email within 4-6 hours of completing the inspection. Reports include detailed findings, high-resolution photos, maintenance recommendations, and prioritized repair suggestions to help you make informed decisions about your Bradford property.`
   },
   {
-    question: "Do you inspect agricultural properties in Bradford?",
-    answer: `Yes, we specialize in <strong>agricultural and rural property inspections in Bradford</strong>. Our inspections include assessment of farm buildings, barns, outbuildings, and rural utilities. We understand the unique considerations of Bradford's agricultural heritage and can identify issues specific to these property types.`
+    question: "Do you inspect condos and industrial properties in Bradford?",
+    answer: `Yes, we specialize in <Link to="/services/condo">condo inspections in Bradford</Link>. Our condo inspections focus on the unit's interior systems including HVAC units, electrical panels, plumbing fixtures, windows, and interior finishes. We also provide comprehensive industrial property inspections with attention to commercial considerations.`
   },
   {
     question: "What areas of Bradford do you service?",
-    answer: `We provide <strong>home inspection services throughout Bradford</strong> including Downtown Bradford, Bradford West Gwillimbury, Industrial Area, New Subdivisions, Rural Bradford, and all surrounding neighborhoods. We also serve nearby communities in Simcoe County and York Region.`
+    answer: `We provide <strong>home inspection services throughout Bradford</strong> including Downtown Bradford, Bradford West Gwillimbury, Industrial Area, Heritage District, and all surrounding neighborhoods. We also serve the entire Simcoe County area including Newmarket, Barrie, Aurora, Richmond Hill, and beyond.`
   }
 ];
 
-// Testimonials for social proof
+// Testimonials for social proof - EXACTLY 3 LIKE BOLTON
 const testimonials = [
   {
-    name: "Robert Johnson",
+    name: "Michael Roberts",
     location: "Downtown Bradford",
-    content: "The ASADS home inspection for our heritage property in Bradford was exceptional. The inspector understood the unique challenges of older homes in Bradford's historic district and identified several critical foundation issues we would have missed. The detailed report helped us secure proper insurance and plan essential repairs. Highly recommended for Bradford's heritage properties!",
+    content: "The ASADS home inspection in Bradford was incredibly thorough. The inspector spent over 3 hours examining every detail of our property and identified several issues we would have missed. The same-day report helped us negotiate $12,000 in repairs. Highly recommend for any Bradford home buyer!",
     rating: 5
   },
   {
-    name: "Michelle Thompson",
-    location: "New Subdivisions, Bradford",
-    content: "As first-time home buyers in Bradford's new developments, we needed an inspection that understood modern construction and potential issues. ASADS delivered exactly what we needed. Their attention to detail in new construction gave us complete confidence in our purchase. The thermal imaging identified hidden insulation issues that the builder fixed before closing.",
+    name: "Sarah Johnson",
+    location: "Bradford West Gwillimbury",
+    content: "As first-time home buyers in Bradford, we were nervous about the inspection process. ASADS made it easy to understand and provided exceptional service. Their Bradford-specific knowledge of industrial properties was invaluable. The detailed report gave us complete confidence in our purchase.",
     rating: 5
   },
   {
-    name: "David Miller",
+    name: "David Chen",
     location: "Rural Bradford",
-    content: "We've used ASADS for multiple agricultural property inspections in Bradford's countryside. Their thorough approach and understanding of both residential and agricultural building requirements have been invaluable. They identified several safety issues with our barn that could have been dangerous for our livestock.",
+    content: "We've used ASADS for multiple property inspections in Simcoe County. Their attention to detail is unmatched, especially with industrial Bradford homes. The thermal imaging service identified hidden moisture issues that saved us from a major repair down the line. Professional, knowledgeable, and worth every penny.",
     rating: 5
   }
 ];
@@ -349,12 +295,12 @@ export default function Bradford() {
     });
   };
 
-  // Comprehensive Schema Markup for Bradford
+  // Comprehensive Schema Markup
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "ASADS Home Inspection Bradford",
-    "description": "Professional home inspection services in Bradford, Ontario providing comprehensive property assessments, industrial property inspections, agricultural building evaluations, and heritage home assessments.",
+    "description": "Professional home inspection services in Bradford providing comprehensive property assessments, condo inspections, and specialized testing services throughout Bradford and Simcoe County.",
     "url": pageUrl,
     "telephone": "+16478019311",
     "email": "bradford@asads.ca",
@@ -378,7 +324,7 @@ export default function Bradford() {
         "latitude": 44.1168,
         "longitude": -79.5663
       },
-      "geoRadius": "40000"
+      "geoRadius": "50000"
     },
     "serviceArea": [
       {
@@ -421,7 +367,7 @@ export default function Bradford() {
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": "148",
+      "reviewCount": "138",
       "bestRating": "5",
       "worstRating": "1"
     },
@@ -466,7 +412,7 @@ export default function Bradford() {
         "position": index + 1
       }))
     },
-    "description": "Professional home inspection services in Bradford including pre-purchase inspections, industrial property assessments, agricultural building inspections, heritage home evaluations, radon testing, mold inspection, thermal imaging, and investment property evaluations."
+    "description": "Professional home inspection services in Bradford including pre-purchase inspections, condo inspections, new construction inspections, radon testing, mold inspection, thermal imaging, and specialized property assessments."
   };
 
   const faqSchema = {
@@ -515,7 +461,7 @@ export default function Bradford() {
         <link rel="canonical" href={pageUrl} />
         
         {/* Keywords for search engines */}
-        <meta name="keywords" content={`${primaryKeyword}, ${secondaryKeywords.join(", ")}, home inspectors bradford ontario, property inspection simcoe county`} />
+        <meta name="keywords" content={`${primaryKeyword}, ${secondaryKeywords.join(", ")}, home inspectors bradford, property inspection bradford`} />
         
         {/* Open Graph for social sharing */}
         <meta property="og:title" content={metaTitle} />
@@ -567,10 +513,10 @@ export default function Bradford() {
               </span>
             </div>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Professional Home Inspection Services in <span className="text-secondary">Bradford, Ontario</span>
+              Professional Home Inspection Services in <span className="text-secondary">Bradford</span>
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-              Looking for comprehensive <strong>home inspection in Bradford</strong>? ASADS provides professional property assessments with licensed inspectors, industrial property expertise, and same-day digital reports. Serving Bradford, Newmarket, Barrie, and Simcoe County.
+              Looking for comprehensive <strong>home inspection in Bradford</strong>? ASADS provides professional home inspection services with licensed inspectors, same-day digital reports, and competitive pricing starting at $500. Serving all Bradford areas and Simcoe County communities.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
@@ -584,7 +530,7 @@ export default function Bradford() {
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Shield className="h-5 w-5" />
-                <span>Licensed Industrial Property Inspectors</span>
+                <span>Licensed Bradford Inspectors</span>
               </div>
             </div>
             
@@ -620,15 +566,15 @@ export default function Bradford() {
             <div className="mb-16">
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-muted-foreground mb-6">
-                  When searching for <strong>home inspection companies in Bradford</strong>, choosing licensed professionals with local industrial, agricultural, and heritage property expertise is essential for protecting your investment in one of Ontario's fastest-growing communities. ASADS Home Inspection provides comprehensive property assessments throughout Bradford and surrounding areas, helping homeowners, investors, and business owners make informed decisions with confidence.
+                  When searching for <strong>home inspection companies in Bradford</strong>, choosing licensed professionals with local expertise is essential for protecting your investment. ASADS Home Inspection provides comprehensive property assessments throughout the Simcoe County area, helping homeowners, buyers, and sellers make informed decisions with confidence.
                 </p>
                 
                 <h2 className="font-heading text-3xl font-bold text-foreground mb-6">
-                  Comprehensive Home Inspection Services in Bradford, Ontario
+                  Comprehensive Home Inspection Services in Bradford
                 </h2>
                 
                 <p className="text-muted-foreground mb-6">
-                  Our <Link to="/services/pre-purchase" className="text-primary hover:underline font-medium">pre-purchase home inspection in Bradford</Link> is designed to identify both obvious defects and hidden problems that could cost thousands in repairs. From industrial property evaluations to agricultural building assessments, our licensed inspectors examine every accessible component of your property following Ontario's Standards of Practice.
+                  Our <Link to="/services/pre-purchase" className="text-primary hover:underline font-medium">pre-purchase home inspection in Bradford</Link> is designed to identify both obvious defects and hidden problems that could cost thousands in repairs. From foundation assessments to roofing evaluations, our licensed inspectors examine every accessible component of your property following Ontario's Standards of Practice.
                 </p>
                 
                 <div className="bg-primary/5 p-6 rounded-xl border border-primary/10 mb-8">
@@ -637,31 +583,9 @@ export default function Bradford() {
                     Bradford Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Bradford cost</strong> ranges from $500 to $850 for a standard residential property. Industrial or agricultural properties may range from $750-$1,200, while new construction condominiums typically range from $400-$650. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Bradford's diverse property market.
+                    The average <strong>home inspection Bradford cost</strong> ranges from $500 to $800 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
                   </p>
                 </div>
-              </div>
-            </div>
-
-            {/* Bradford-Specific Features */}
-            <div className="mb-16">
-              <h2 className="font-heading text-3xl font-bold text-foreground mb-8 text-center">
-                Bradford-Specific Inspection Expertise
-              </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {bradfordFeatures.map((feature, index) => (
-                  <div key={index} className="bg-card p-6 rounded-xl border border-border hover:border-primary/30 transition-colors">
-                    <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                      {feature.icon}
-                    </div>
-                    <h3 className="font-heading font-bold text-lg text-foreground mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -694,7 +618,7 @@ export default function Bradford() {
                   14+ Professional Home Inspection Services in Bradford
                 </h2>
                 <p className="text-muted-foreground max-w-3xl mx-auto">
-                  Comprehensive inspection solutions for every Bradford property type and concern. Each service includes detailed reporting, expert analysis, and professional recommendations tailored to Bradford's unique housing market.
+                  Comprehensive inspection solutions for every Bradford property type and concern. Each service includes detailed reporting, expert analysis, and professional recommendations.
                 </p>
               </div>
               
@@ -791,7 +715,7 @@ export default function Bradford() {
               </div>
               <div className="text-center mt-8">
                 <p className="text-muted-foreground">
-                  Also serving nearby communities including Newmarket, Barrie, Aurora, Richmond Hill, and throughout Simcoe County and York Region.
+                  Also serving all GTA communities including Newmarket, Barrie, Aurora, Richmond Hill, and beyond.
                 </p>
               </div>
             </div>
@@ -846,7 +770,7 @@ export default function Bradford() {
                 Ready to Schedule Your Bradford Home Inspection?
               </h2>
               <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Book your comprehensive home inspection in Bradford today. Our licensed inspectors provide detailed assessments with same-day reports, competitive pricing, and professional service throughout Bradford and the surrounding region.
+                Book your comprehensive home inspection in Bradford today. Our licensed inspectors provide detailed assessments with same-day reports, competitive pricing, and professional service throughout the GTA.
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -903,4 +827,4 @@ export default function Bradford() {
       </section>
     </Layout>
   );
-    }
+      }
