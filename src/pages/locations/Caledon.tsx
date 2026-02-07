@@ -26,16 +26,7 @@ import {
   ThumbsUp,
   BookOpen,
   PhoneCall,
-  Mail,
-  Trees,
-  Mountain,
-  Horse,
-  Tent,
-  Droplets,
-  FactoryIcon,
-  Castle,
-  Wind,
-  LandPlot
+  Mail
 } from "lucide-react";
 
 // Primary keyword: "home inspection caledon"
@@ -54,14 +45,21 @@ const allServices = [
   { 
     title: "Pre-Purchase Home Inspection", 
     href: "/services/pre-purchase",
-    description: "Complete evaluation before buying a rural property in Caledon",
+    description: "Complete evaluation before buying a property in Caledon",
     icon: <Home className="h-6 w-6" />,
     anchorText: "pre-purchase home inspection in Caledon"
   },
   { 
+    title: "Condo Inspection", 
+    href: "/services/condo",
+    description: "Specialized condo inspections in Caledon buildings",
+    icon: <Building className="h-6 w-6" />,
+    anchorText: "condo inspection Caledon"
+  },
+  { 
     title: "New Construction Inspection", 
     href: "/services/new-construction",
-    description: "Phase and final inspections for newly built homes in Caledon",
+    description: "Phase and final inspections for newly built Caledon homes",
     icon: <Award className="h-6 w-6" />,
     anchorText: "new construction inspection Caledon"
   },
@@ -75,86 +73,72 @@ const allServices = [
   { 
     title: "Commercial Inspection", 
     href: "/services/commercial",
-    description: "Commercial and farm property inspections in Caledon",
+    description: "Commercial property inspections throughout Caledon",
     icon: <Building className="h-6 w-6" />,
     anchorText: "commercial property inspection Caledon"
   },
   { 
-    title: "Equestrian Property Inspection", 
-    href: "/services/equestrian-property",
-    description: "Specialized inspections for horse farms and equestrian facilities",
-    icon: <Horse className="h-6 w-6" />,
-    anchorText: "equestrian property inspection Caledon"
-  },
-  { 
-    title: "Well Water Testing", 
-    href: "/services/well-water-testing",
-    description: "Well water quality testing for rural Caledon properties",
-    icon: <Droplets className="h-6 w-6" />,
-    anchorText: "well water testing Caledon"
-  },
-  { 
     title: "Radon Testing", 
     href: "/services/radon-testing",
-    description: "Radon gas testing for homes in Caledon's escarpment area",
-    icon: <Wind className="h-6 w-6" />,
+    description: "Radon gas testing for Caledon homes and basements",
+    icon: <Thermometer className="h-6 w-6" />,
     anchorText: "radon testing in Caledon"
   },
   { 
     title: "Mold Inspection", 
     href: "/services/mold-inspection",
-    description: "Professional mold inspection and testing in Caledon homes",
+    description: "Professional mold inspection and testing in Caledon",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "mold inspection Caledon"
   },
   { 
     title: "Thermal Imaging", 
     href: "/services/thermal-imaging",
-    description: "Infrared thermal imaging inspections for rural properties",
+    description: "Infrared thermal imaging inspections for Caledon properties",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "thermal imaging inspection Caledon"
   },
   { 
     title: "WETT Inspection", 
     href: "/services/wett",
-    description: "WETT-certified inspections for wood-burning appliances",
+    description: "WETT-certified inspections for wood-burning appliances in Caledon",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "WETT inspection Caledon"
   },
   { 
     title: "Sewer Scope Inspection", 
     href: "/services/sewer-scope",
-    description: "Camera septic and sewer line inspections for rural homes",
+    description: "Camera sewer line inspections for Caledon homes",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "sewer scope inspection Caledon"
   },
   { 
     title: "Asbestos Testing", 
     href: "/services/asbestos-testing",
-    description: "Asbestos testing for older farmhouses in Caledon",
+    description: "Asbestos testing for older Caledon homes",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "asbestos testing Caledon"
   },
   { 
     title: "Lead Paint Testing", 
     href: "/services/lead-paint-testing",
-    description: "Lead-based paint testing for heritage farm properties",
+    description: "Lead-based paint testing for Caledon properties",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "lead paint testing Caledon"
   },
   { 
     title: "Air Quality Testing", 
     href: "/services/air-quality",
-    description: "Indoor air quality testing in rural Caledon homes",
+    description: "Indoor air quality testing in Caledon homes",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "air quality testing Caledon"
   },
   { 
-    title: "Septic System Inspection", 
-    href: "/services/septic-inspection",
-    description: "Septic system evaluations for rural Caledon properties",
+    title: "Well Water Testing", 
+    href: "/services/well-water-testing",
+    description: "Well water quality testing for properties near Caledon",
     icon: <Thermometer className="h-6 w-6" />,
-    anchorText: "septic inspection Caledon"
+    anchorText: "well water testing Caledon"
   }
 ];
 
@@ -197,13 +181,13 @@ const nearbyTowns = [
 ];
 
 // SEO-optimized metadata
-const metaTitle = "Home Inspection Caledon | Professional Rural Property Inspections in Caledon, ON | ASADS";
-const metaDescription = "Looking for comprehensive home inspection in Caledon? ASADS provides professional rural property inspections with licensed inspectors, well water testing, septic inspections, and same-day reports. Serving Caledon, Bolton, Orangeville, and Peel Region.";
-const pageTitle = "Professional Rural Home Inspection Services in Caledon, Ontario | ASADS Certified Inspectors";
+const metaTitle = "Home Inspection Caledon | Professional House Inspectors & Property Assessments | ASADS";
+const metaDescription = "Looking for comprehensive home inspection in Caledon? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $550. Serving Caledon, Bolton, Orangeville, and all Peel Region communities.";
+const pageTitle = "Professional Home Inspection Services in Caledon | ASADS Certified Inspectors";
 const price = "$550-$950";
 const duration = "3-5 Hours";
 
-// Comprehensive inspection checklist for rural properties
+// Comprehensive inspection checklist
 const whatWeInspect = [
   "Foundations & Structural Integrity Assessment",
   "Roofing Systems & Attic Ventilation Inspection",
@@ -213,18 +197,18 @@ const whatWeInspect = [
   "Windows, Doors & Exterior Envelope Examination",
   "Insulation & Vapor Barrier Assessment",
   "Basement Waterproofing & Drainage Analysis",
-  "Well Water System & Pressure Tank Evaluation",
-  "Septic System & Drain Field Assessment"
+  "Interior Finishes & Safety Features Review",
+  "Exterior Grading & Landscaping Evaluation"
 ];
 
 // E-E-A-T: Experience, Expertise, Authoritativeness, Trustworthiness
 const expertisePoints = [
   "Licensed Ontario Home Inspectors",
   "InterNACHI Certified Professionals",
-  "12+ Years Rural Caledon Property Inspection Experience",
-  "Well Water System Specialists",
-  "Septic System Evaluation Experts",
-  "Equestrian Property Specialists",
+  "10+ Years Caledon Home Inspection Experience",
+  "Caledon Building Code Specialists",
+  "Rural Property Inspection Experts",
+  "Condo & Rural Building Specialists",
   "Thermal Imaging Certified Technicians",
   "Radon Measurement Certified",
   "WETT Certified Wood-Burning Appliance Inspectors",
@@ -238,70 +222,46 @@ const benefits = [
   "Thermal Imaging & Moisture Detection",
   "24/7 Online Report Access",
   "Lifetime Technical Support",
-  "Flexible Scheduling for Rural Properties",
+  "Flexible Evening & Weekend Appointments",
   "Pre-Inspection Consultation Included",
   "Post-Inspection Review Session",
-  "Well Water & Septic System Assessments",
+  "Priority Emergency Re-inspections",
   "Free Follow-up Questions for 12 Months"
-];
-
-// Caledon-specific content about local considerations
-const caledonFeatures = [
-  {
-    icon: <Horse className="h-5 w-5" />,
-    title: "Equestrian Property Specialists",
-    description: "Expert inspections for Caledon's horse farms, riding arenas, and equestrian facilities with attention to specialized structures."
-  },
-  {
-    icon: <Mountain className="h-5 w-5" />,
-    title: "Escarpment Property Expertise",
-    description: "Comprehensive inspections for properties along the Niagara Escarpment with attention to geological considerations and foundation stability."
-  },
-  {
-    icon: <Droplets className="h-5 w-5" />,
-    title: "Rural Water Systems Knowledge",
-    description: "Detailed assessments of well water systems, septic systems, and other rural utilities common in Caledon's countryside properties."
-  },
-  {
-    icon: <Trees className="h-5 w-5" />,
-    title: "Country Estate Experience",
-    description: "Inspections for Caledon's luxury country estates, acreages, and rural retreat properties with extensive outbuildings and amenities."
-  }
 ];
 
 // Comprehensive FAQ based on search intent
 const faqs = [
   {
     question: "How much does a home inspection cost in Caledon?",
-    answer: `The average <strong>home inspection Caledon cost</strong> ranges from $550 to $950 for a standard rural property. This includes well water and septic system evaluations. Larger country estates or equestrian properties may range from $750-$1,500. We provide detailed quotes based on your specific property's size, systems, and inspection requirements.`
+    answer: `The average <strong>home inspection Caledon cost</strong> ranges from $550 to $950 for a standard single-family home. Condo inspections typically cost $500-$800, while larger homes or properties requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> may range from $700-$1,200. We provide detailed quotes based on your specific Caledon property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Caledon?",
-    answer: `A comprehensive <strong>home inspection in Caledon</strong> includes evaluation of all major systems: structural components, foundation, roofing, plumbing, electrical systems, HVAC equipment, windows, doors, insulation, and interior finishes. For rural properties, we also assess well water systems, septic systems, outbuildings, equestrian facilities, and other rural-specific components. Our inspections follow the Ontario Association of Home Inspectors (OAHI) Standards of Practice.`
+    answer: `A comprehensive <strong>home inspection in Caledon</strong> includes evaluation of all major systems: structural components, foundation, roofing, plumbing, electrical systems, HVAC equipment, windows, doors, insulation, and interior finishes. Our inspections follow the Ontario Association of Home Inspectors (OAHI) Standards of Practice and include detailed reporting with high-resolution photos of all findings.`
   },
   {
     question: "How long does a home inspection take in Caledon?",
-    answer: `Most <strong>Caledon home inspections</strong> take 3-5 hours depending on property size and complexity. Rural properties require additional time for well water system checks, septic system evaluations, outbuilding inspections, and equestrian facility assessments. We never rush inspections and allocate sufficient time to properly assess every component of your rural property.`
+    answer: `Most <strong>Caledon home inspections</strong> take 3-5 hours depending on property size and complexity. Condominium unit inspections typically take 1.5-2.5 hours, while larger homes (over 3,000 sq ft) may require 4-6 hours for thorough evaluation. We never rush inspections and allocate sufficient time to properly assess every component of your Caledon property.`
   },
   {
     question: "Should I attend the home inspection in Caledon?",
-    answer: `Yes, we strongly recommend attending your <strong>Caledon home inspection</strong>. This allows you to walk through the property with our inspector, ask questions in real-time, learn about maintenance requirements for rural systems, and understand the significance of any issues discovered. We provide valuable insights about well maintenance, septic care, and other rural property concerns.`
+    answer: `Yes, we strongly recommend attending your <strong>Caledon home inspection</strong>. This allows you to walk through the property with our inspector, ask questions in real-time, learn about maintenance requirements, and understand the significance of any issues discovered. We provide valuable insights about your specific Caledon home that you won't get from just reading the report.`
   },
   {
     question: "What are the most common issues found in Caledon home inspections?",
-    answer: `Common issues in <strong>Caledon homes</strong> include: well water system maintenance (pressure tanks, pumps), septic system concerns, foundation settling in older farmhouses, aging electrical systems in rural properties, roof issues on agricultural buildings, basement moisture in century homes, and insulation deficiencies. Equestrian properties may have additional considerations like arena floor conditions and stable safety.`
+    answer: `Common issues in <strong>Caledon homes</strong> include: foundation settling in rural lots, well water system maintenance, septic system concerns, roof aging in rural properties, insulation deficiencies in older farmhouses, plumbing concerns in rural properties, and electrical system updates needed in older homes.`
   },
   {
     question: "How soon will I receive my inspection report in Caledon?",
-    answer: `We provide <strong>same-day digital reports</strong> for all Caledon home inspections. You'll receive your comprehensive inspection report via email within 4-6 hours of completing the inspection. Reports include detailed findings, high-resolution photos, maintenance recommendations, and prioritized repair suggestions to help you make informed decisions about your rural property.`
+    answer: `We provide <strong>same-day digital reports</strong> for all Caledon home inspections. You'll receive your comprehensive inspection report via email within 4-6 hours of completing the inspection. Reports include detailed findings, high-resolution photos, maintenance recommendations, and prioritized repair suggestions to help you make informed decisions about your Caledon property.`
   },
   {
-    question: "Do you inspect equestrian properties in Caledon?",
-    answer: `Yes, we specialize in <Link to="/services/equestrian-property">equestrian property inspections in Caledon</Link>. Our inspections include assessment of stables, riding arenas, fencing, paddocks, hay storage, and other equestrian-specific facilities. We understand the unique requirements of horse farms and can identify issues specific to equestrian properties.`
+    question: "Do you inspect condos and rural properties in Caledon?",
+    answer: `Yes, we specialize in <Link to="/services/condo">condo inspections in Caledon</Link>. Our condo inspections focus on the unit's interior systems including HVAC units, electrical panels, plumbing fixtures, windows, and interior finishes. We also provide comprehensive rural property inspections with attention to well water and septic systems.`
   },
   {
     question: "What areas of Caledon do you service?",
-    answer: `We provide <strong>home inspection services throughout Caledon</strong> including Bolton, Caledon East, Caledon Village, Cheltenham, Inglewood, Alton, Mono Mills, Palgrave, Terra Cotta, and all surrounding rural areas. We also serve nearby communities in Peel Region and Dufferin County.`
+    answer: `We provide <strong>home inspection services throughout Caledon</strong> including Bolton, Caledon East, Caledon Village, Cheltenham, Inglewood, Alton, Mono Mills, Palgrave, and all surrounding areas. We also serve the entire Greater Toronto Area including Brampton, Orangeville, Mississauga, Vaughan, and beyond.`
   }
 ];
 
@@ -310,19 +270,19 @@ const testimonials = [
   {
     name: "William Thompson",
     location: "Inglewood, Caledon",
-    content: "The ASADS home inspection for our equestrian property in Caledon was incredibly thorough. The inspector understood both residential and equestrian facility requirements and identified several issues with our arena footing and stable ventilation. The detailed report helped us plan essential upgrades. Highly recommended for Caledon's horse farms!",
+    content: "The ASADS home inspection in Caledon was incredibly thorough. The inspector spent over 4 hours examining every detail of our rural property and identified several issues we would have missed. The same-day report helped us negotiate $15,000 in repairs. Highly recommend for any Caledon home buyer!",
     rating: 5
   },
   {
     name: "Elizabeth Parker",
     location: "Bolton Area",
-    content: "As first-time rural property buyers in Caledon, we were overwhelmed by the well and septic systems. ASADS made it easy to understand and provided exceptional service. Their knowledge of rural water systems and escarpment properties gave us complete confidence in our country home purchase.",
+    content: "As first-time home buyers in Caledon, we were nervous about the inspection process. ASADS made it easy to understand and provided exceptional service. Their rural property knowledge was invaluable. The detailed report gave us complete confidence in our purchase.",
     rating: 5
   },
   {
     name: "James Wilson",
     location: "Caledon Village",
-    content: "We've used ASADS for multiple property inspections in Caledon's countryside. Their attention to detail is unmatched, especially with older farmhouses and heritage properties. The thermal imaging service identified hidden moisture issues in our stone foundation that saved us from major structural repairs.",
+    content: "We've used ASADS for multiple property inspections in the GTA. Their attention to detail is unmatched, especially with rural Caledon homes. The thermal imaging service identified hidden moisture issues that saved us from a major repair down the line. Professional, knowledgeable, and worth every penny.",
     rating: 5
   }
 ];
@@ -353,12 +313,12 @@ export default function Caledon() {
     });
   };
 
-  // Comprehensive Schema Markup for Caledon
+  // Comprehensive Schema Markup
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "ASADS Home Inspection Caledon",
-    "description": "Professional rural home inspection services in Caledon, Ontario providing comprehensive property assessments, equestrian property inspections, well water testing, septic inspections, and rural property evaluations.",
+    "description": "Professional home inspection services in Caledon providing comprehensive property assessments, condo inspections, and specialized testing services throughout Caledon and the Greater Toronto Area.",
     "url": pageUrl,
     "telephone": "+16478019311",
     "email": "caledon@asads.ca",
@@ -382,7 +342,7 @@ export default function Caledon() {
         "latitude": 43.8668,
         "longitude": -79.8663
       },
-      "geoRadius": "40000"
+      "geoRadius": "50000"
     },
     "serviceArea": [
       {
@@ -448,7 +408,7 @@ export default function Caledon() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "Rural Home Inspection",
+    "serviceType": "Home Inspection",
     "provider": {
       "@type": "LocalBusiness",
       "name": "ASADS Home Inspection"
@@ -470,7 +430,7 @@ export default function Caledon() {
         "position": index + 1
       }))
     },
-    "description": "Professional rural home inspection services in Caledon including pre-purchase inspections, equestrian property assessments, well water testing, septic system evaluations, radon testing, mold inspection, thermal imaging, and specialized rural property evaluations."
+    "description": "Professional home inspection services in Caledon including pre-purchase inspections, condo inspections, new construction inspections, radon testing, mold inspection, thermal imaging, and specialized property assessments."
   };
 
   const faqSchema = {
@@ -519,7 +479,7 @@ export default function Caledon() {
         <link rel="canonical" href={pageUrl} />
         
         {/* Keywords for search engines */}
-        <meta name="keywords" content={`${primaryKeyword}, ${secondaryKeywords.join(", ")}, home inspectors caledon ontario, rural property inspection peel region`} />
+        <meta name="keywords" content={`${primaryKeyword}, ${secondaryKeywords.join(", ")}, home inspectors caledon, property inspection caledon`} />
         
         {/* Open Graph for social sharing */}
         <meta property="og:title" content={metaTitle} />
@@ -567,14 +527,14 @@ export default function Caledon() {
             <div className="mb-6">
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary-foreground/20 rounded-full text-sm font-medium">
                 <BadgeCheck className="h-4 w-4" />
-                Caledon's Trusted Rural Home Inspection Company
+                Caledon's Trusted Home Inspection Company
               </span>
             </div>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Professional Rural Home Inspection Services in <span className="text-secondary">Caledon, Ontario</span>
+              Professional Home Inspection Services in <span className="text-secondary">Caledon</span>
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-              Looking for comprehensive <strong>home inspection in Caledon</strong>? ASADS provides professional rural property assessments with licensed inspectors, equestrian property expertise, well water testing, septic inspections, and same-day digital reports. Serving Caledon, Bolton, Orangeville, and Peel Region.
+              Looking for comprehensive <strong>home inspection in Caledon</strong>? ASADS provides professional property assessments with licensed inspectors, same-day digital reports, and competitive pricing starting at $550. Serving all Caledon areas and Peel Region communities.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
@@ -588,7 +548,7 @@ export default function Caledon() {
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Shield className="h-5 w-5" />
-                <span>Licensed Rural Property Inspectors</span>
+                <span>Licensed Caledon Inspectors</span>
               </div>
             </div>
             
@@ -624,15 +584,15 @@ export default function Caledon() {
             <div className="mb-16">
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-muted-foreground mb-6">
-                  When searching for <strong>home inspection companies in Caledon</strong>, choosing licensed professionals with rural property and equestrian facility expertise is essential for protecting your investment in Ontario's premier countryside community. ASADS Home Inspection provides comprehensive property assessments throughout Caledon and surrounding areas, helping rural homeowners, equestrian property buyers, and country estate investors make informed decisions with confidence.
+                  When searching for <strong>home inspection companies in Caledon</strong>, choosing licensed professionals with local expertise is essential for protecting your investment. ASADS Home Inspection provides comprehensive property assessments throughout the Greater Toronto Area, helping homeowners, buyers, and sellers make informed decisions with confidence.
                 </p>
                 
                 <h2 className="font-heading text-3xl font-bold text-foreground mb-6">
-                  Comprehensive Rural Home Inspection Services in Caledon, Ontario
+                  Comprehensive Home Inspection Services in Caledon
                 </h2>
                 
                 <p className="text-muted-foreground mb-6">
-                  Our <Link to="/services/pre-purchase" className="text-primary hover:underline font-medium">pre-purchase home inspection in Caledon</Link> is designed to identify both obvious defects and hidden problems that could cost thousands in repairs. From equestrian facility evaluations to escarpment property assessments, our licensed inspectors examine every accessible component of your rural property following Ontario's Standards of Practice.
+                  Our <Link to="/services/pre-purchase" className="text-primary hover:underline font-medium">pre-purchase home inspection in Caledon</Link> is designed to identify both obvious defects and hidden problems that could cost thousands in repairs. From foundation assessments to roofing evaluations, our licensed inspectors examine every accessible component of your property following Ontario's Standards of Practice.
                 </p>
                 
                 <div className="bg-primary/5 p-6 rounded-xl border border-primary/10 mb-8">
@@ -641,38 +601,16 @@ export default function Caledon() {
                     Caledon Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Caledon cost</strong> ranges from $550 to $950 for a standard rural property. This typically includes well water and septic system evaluations. Equestrian properties and larger country estates may range from $750-$1,500. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Caledon's unique rural market.
+                    The average <strong>home inspection Caledon cost</strong> ranges from $550 to $950 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
                   </p>
                 </div>
-              </div>
-            </div>
-
-            {/* Caledon-Specific Features */}
-            <div className="mb-16">
-              <h2 className="font-heading text-3xl font-bold text-foreground mb-8 text-center">
-                Caledon-Specific Rural Inspection Expertise
-              </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {caledonFeatures.map((feature, index) => (
-                  <div key={index} className="bg-card p-6 rounded-xl border border-border hover:border-primary/30 transition-colors">
-                    <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                      {feature.icon}
-                    </div>
-                    <h3 className="font-heading font-bold text-lg text-foreground mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
 
             {/* What We Inspect - Table Format for Featured Snippet */}
             <div className="mb-16">
               <h2 className="font-heading text-3xl font-bold text-foreground mb-8">
-                Complete Caledon Rural Home Inspection Checklist
+                Complete Caledon Home Inspection Checklist
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {whatWeInspect.map((item, index) => (
@@ -695,10 +633,10 @@ export default function Caledon() {
             <div className="mb-16">
               <div className="text-center mb-10">
                 <h2 className="font-heading text-3xl font-bold text-foreground mb-4">
-                  15+ Professional Home Inspection Services in Caledon
+                  14+ Professional Home Inspection Services in Caledon
                 </h2>
                 <p className="text-muted-foreground max-w-3xl mx-auto">
-                  Comprehensive inspection solutions for every Caledon property type and concern. Each service includes detailed reporting, expert analysis, and professional recommendations tailored to Caledon's unique rural housing market.
+                  Comprehensive inspection solutions for every Caledon property type and concern. Each service includes detailed reporting, expert analysis, and professional recommendations.
                 </p>
               </div>
               
@@ -795,7 +733,7 @@ export default function Caledon() {
               </div>
               <div className="text-center mt-8">
                 <p className="text-muted-foreground">
-                  Also serving nearby communities including Brampton, Orangeville, Georgetown, Erin, and throughout Dufferin and Peel Regions.
+                  Also serving all GTA communities including Brampton, Orangeville, Mississauga, Vaughan, Georgetown, and beyond.
                 </p>
               </div>
             </div>
@@ -850,7 +788,7 @@ export default function Caledon() {
                 Ready to Schedule Your Caledon Home Inspection?
               </h2>
               <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Book your comprehensive rural home inspection in Caledon today. Our licensed inspectors provide detailed assessments with same-day reports, competitive pricing, and professional service throughout Caledon and surrounding countryside communities.
+                Book your comprehensive home inspection in Caledon today. Our licensed inspectors provide detailed assessments with same-day reports, competitive pricing, and professional service throughout the GTA.
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -907,4 +845,4 @@ export default function Caledon() {
       </section>
     </Layout>
   );
-  }
+    }
