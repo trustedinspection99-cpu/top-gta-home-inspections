@@ -29,7 +29,6 @@ import {
   Mail,
   Train,
   Bus,
-  Subway,
   Landmark,
   Hotel,
   University,
