@@ -26,27 +26,7 @@ import {
   ThumbsUp,
   BookOpen,
   PhoneCall,
-  Mail,
-  Train,
-  Bus,
-  Landmark,
-  Hotel,
-  University,
-  Droplets,
-  Wind,
-  Sprout,
-  Factory,
-  Castle,
-  TreePine,
-  HomeIcon,
-  Subway,
-  Car,
-  Wifi,
-  Zap,
-  Cloud,
-  Sun,
-  Moon,
-  Activity
+  Mail
 } from "lucide-react";
 
 // Primary keyword: "home inspection etobicoke"
@@ -57,9 +37,7 @@ const secondaryKeywords = [
   "etobicoke home inspectors", 
   "home inspection toronto etobicoke",
   "home inspection etobicoke waterfront",
-  "etobicoke condo inspection",
-  "home inspection etobicoke west",
-  "etobicoke property inspection"
+  "etobicoke condo inspection"
 ];
 
 // Service pages with optimized anchor text
@@ -67,9 +45,16 @@ const allServices = [
   { 
     title: "Pre-Purchase Home Inspection", 
     href: "/services/pre-purchase",
-    description: "Complete evaluation before buying a home in Etobicoke",
+    description: "Complete evaluation before buying a property in Etobicoke",
     icon: <Home className="h-6 w-6" />,
     anchorText: "pre-purchase home inspection in Etobicoke"
+  },
+  { 
+    title: "Condo Inspection", 
+    href: "/services/condo",
+    description: "Specialized condo inspections in Etobicoke high-rises and apartments",
+    icon: <Building className="h-6 w-6" />,
+    anchorText: "condo inspection Etobicoke"
   },
   { 
     title: "New Construction Inspection", 
@@ -88,28 +73,21 @@ const allServices = [
   { 
     title: "Commercial Inspection", 
     href: "/services/commercial",
-    description: "Commercial property inspections in Etobicoke's business districts",
+    description: "Commercial property inspections throughout Etobicoke",
     icon: <Building className="h-6 w-6" />,
     anchorText: "commercial property inspection Etobicoke"
-  },
-  { 
-    title: "Condominium Inspection", 
-    href: "/services/condo-inspection",
-    description: "Condominium inspections in Etobicoke's high-rise buildings",
-    icon: <Building className="h-6 w-6" />,
-    anchorText: "condo inspection Etobicoke"
   },
   { 
     title: "Radon Testing", 
     href: "/services/radon-testing",
     description: "Radon gas testing for Etobicoke homes and basements",
-    icon: <Cloud className="h-6 w-6" />,
+    icon: <Thermometer className="h-6 w-6" />,
     anchorText: "radon testing in Etobicoke"
   },
   { 
     title: "Mold Inspection", 
     href: "/services/mold-inspection",
-    description: "Professional mold inspection in Etobicoke's older homes",
+    description: "Professional mold inspection and testing in Etobicoke",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "mold inspection Etobicoke"
   },
@@ -123,28 +101,28 @@ const allServices = [
   { 
     title: "WETT Inspection", 
     href: "/services/wett",
-    description: "WETT-certified inspections for wood-burning appliances",
-    icon: <Activity className="h-6 w-6" />,
+    description: "WETT-certified inspections for wood-burning appliances in Etobicoke",
+    icon: <Thermometer className="h-6 w-6" />,
     anchorText: "WETT inspection Etobicoke"
   },
   { 
     title: "Sewer Scope Inspection", 
     href: "/services/sewer-scope",
-    description: "Camera sewer line inspections for Etobicoke's older neighborhoods",
-    icon: <Droplets className="h-6 w-6" />,
+    description: "Camera sewer line inspections for Etobicoke homes",
+    icon: <Thermometer className="h-6 w-6" />,
     anchorText: "sewer scope inspection Etobicoke"
   },
   { 
     title: "Asbestos Testing", 
     href: "/services/asbestos-testing",
-    description: "Asbestos testing for mid-century Etobicoke homes",
+    description: "Asbestos testing for older Etobicoke homes",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "asbestos testing Etobicoke"
   },
   { 
     title: "Lead Paint Testing", 
     href: "/services/lead-paint-testing",
-    description: "Lead-based paint testing for heritage Etobicoke properties",
+    description: "Lead-based paint testing for Etobicoke properties",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "lead paint testing Etobicoke"
   },
@@ -152,15 +130,15 @@ const allServices = [
     title: "Air Quality Testing", 
     href: "/services/air-quality",
     description: "Indoor air quality testing in Etobicoke homes",
-    icon: <Wind className="h-6 w-6" />,
+    icon: <Thermometer className="h-6 w-6" />,
     anchorText: "air quality testing Etobicoke"
   },
   { 
-    title: "Investment Property Inspection", 
-    href: "/services/investment-property",
-    description: "Inspections for rental and investment properties in Etobicoke",
-    icon: <DollarSign className="h-6 w-6" />,
-    anchorText: "investment property inspection Etobicoke"
+    title: "Well Water Testing", 
+    href: "/services/well-water-testing",
+    description: "Well water quality testing for properties near Etobicoke",
+    icon: <Thermometer className="h-6 w-6" />,
+    anchorText: "well water testing Etobicoke"
   }
 ];
 
@@ -205,13 +183,13 @@ const nearbyAreas = [
 ];
 
 // SEO-optimized metadata
-const metaTitle = "Home Inspection Etobicoke | Professional Property Inspections in Etobicoke, ON | ASADS";
-const metaDescription = "Looking for comprehensive home inspection in Etobicoke? ASADS provides professional property inspections with licensed inspectors, same-day reports, and thorough evaluations. Serving Etobicoke, Toronto, Mississauga, and the GTA.";
-const pageTitle = "Professional Home Inspection Services in Etobicoke, Toronto | ASADS Certified Inspectors";
+const metaTitle = "Home Inspection Etobicoke | Professional House Inspectors & Property Assessments | ASADS";
+const metaDescription = "Looking for comprehensive home inspection in Etobicoke? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $450. Serving Etobicoke, Toronto, Mississauga, and all GTA neighborhoods.";
+const pageTitle = "Professional Home Inspection Services in Etobicoke | ASADS Certified Inspectors";
 const price = "$550-$950";
 const duration = "2-5 Hours";
 
-// Comprehensive inspection checklist for Etobicoke properties
+// Comprehensive inspection checklist
 const whatWeInspect = [
   "Foundations & Structural Integrity Assessment",
   "Roofing Systems & Attic Ventilation Inspection",
@@ -221,18 +199,18 @@ const whatWeInspect = [
   "Windows, Doors & Exterior Envelope Examination",
   "Insulation & Vapor Barrier Assessment",
   "Basement Waterproofing & Drainage Analysis",
-  "Balcony & Terrace Evaluations",
-  "High-Rise Building Systems Assessment"
+  "Interior Finishes & Safety Features Review",
+  "Exterior Grading & Landscaping Evaluation"
 ];
 
 // E-E-A-T: Experience, Expertise, Authoritativeness, Trustworthiness
 const expertisePoints = [
   "Licensed Ontario Home Inspectors",
   "InterNACHI Certified Professionals",
-  "15+ Years GTA Property Inspection Experience",
-  "High-Rise Condominium Specialists",
-  "Heritage Home Experts in The Kingsway",
-  "New Construction Code Compliance Experts",
+  "10+ Years Etobicoke Home Inspection Experience",
+  "Etobicoke Building Code Specialists",
+  "Heritage Property Inspection Experts",
+  "Condo & High-Rise Building Specialists",
   "Thermal Imaging Certified Technicians",
   "Radon Measurement Certified",
   "WETT Certified Wood-Burning Appliance Inspectors",
@@ -242,58 +220,34 @@ const expertisePoints = [
 // Benefits for users
 const benefits = [
   "Same-Day Digital Inspection Reports",
-  "Detailed Photo Documentation (150+ Photos)",
+  "Detailed Photo Documentation (100+ Photos)",
   "Thermal Imaging & Moisture Detection",
   "24/7 Online Report Access",
   "Lifetime Technical Support",
-  "Flexible Scheduling for Working Professionals",
+  "Flexible Evening & Weekend Appointments",
   "Pre-Inspection Consultation Included",
   "Post-Inspection Review Session",
-  "Investment Property Assessments",
+  "Priority Emergency Re-inspections",
   "Free Follow-up Questions for 12 Months"
-];
-
-// Etobicoke-specific content about local considerations
-const etobicokeFeatures = [
-  {
-    icon: <Castle className="h-5 w-5" />,
-    title: "Heritage District Specialists",
-    description: "Expert inspections for Etobicoke's heritage homes in The Kingsway and Humber Valley with attention to period-appropriate construction."
-  },
-  {
-    icon: <Building className="h-5 w-5" />,
-    title: "High-Rise Condominium Experts",
-    description: "Comprehensive inspections for Humber Bay Shores and Etobicoke's waterfront condo developments with specialized knowledge of building systems."
-  },
-  {
-    icon: <Sprout className="h-5 w-5" />,
-    title: "Green Building Assessment",
-    description: "Detailed evaluations for Etobicoke's LEED-certified and energy-efficient homes with sustainability in mind."
-  },
-  {
-    icon: <Train className="h-5 w-5" />,
-    title: "Transit-Oriented Development",
-    description: "Inspections for properties near Kipling Station, Islington Station, and other TTC/GO Transit hubs with attention to noise and vibration."
-  }
 ];
 
 // Comprehensive FAQ based on search intent
 const faqs = [
   {
     question: "How much does a home inspection cost in Etobicoke?",
-    answer: `The average <strong>home inspection Etobicoke cost</strong> ranges from $550 to $950 for a standard residential property. Luxury homes in The Kingsway may range from $800-$1,500, while condominiums typically range from $450-$750. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
+    answer: `The average <strong>home inspection Etobicoke cost</strong> ranges from $550 to $950 for a standard single-family home. Condo inspections typically cost $450-$750, while larger homes or properties requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> may range from $800-$1,500. We provide detailed quotes based on your specific Etobicoke property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Etobicoke?",
-    answer: `A comprehensive <strong>home inspection in Etobicoke</strong> includes evaluation of all major systems: structural components, foundation, roofing, plumbing, electrical systems, HVAC equipment, windows, doors, insulation, and interior finishes. Our inspections follow the Ontario Association of Home Inspectors (OAHI) Standards of Practice and include specialized assessments for Etobicoke's heritage homes and high-rise condos.`
+    answer: `A comprehensive <strong>home inspection in Etobicoke</strong> includes evaluation of all major systems: structural components, foundation, roofing, plumbing, electrical systems, HVAC equipment, windows, doors, insulation, and interior finishes. Our inspections follow the Ontario Association of Home Inspectors (OAHI) Standards of Practice and include detailed reporting with high-resolution photos of all findings.`
   },
   {
     question: "How long does a home inspection take in Etobicoke?",
-    answer: `Most <strong>Etobicoke home inspections</strong> take 2-5 hours depending on property size and complexity. Heritage homes, luxury properties, and larger estates require additional time for thorough assessment. We never rush inspections and allocate sufficient time to properly assess every component of your Etobicoke property.`
+    answer: `Most <strong>Etobicoke home inspections</strong> take 2-5 hours depending on property size and complexity. Condominium unit inspections typically take 1.5-2.5 hours, while larger homes (over 3,000 sq ft) may require 4-6 hours for thorough evaluation. We never rush inspections and allocate sufficient time to properly assess every component of your Etobicoke property.`
   },
   {
     question: "Should I attend the home inspection in Etobicoke?",
-    answer: `Yes, we strongly recommend attending your <strong>Etobicoke home inspection</strong>. This allows you to walk through the property with our inspector, ask questions in real-time, learn about maintenance requirements for Etobicoke's specific heritage and high-rise considerations, and understand the significance of any issues discovered. We provide valuable insights about property maintenance and local building practices.`
+    answer: `Yes, we strongly recommend attending your <strong>Etobicoke home inspection</strong>. This allows you to walk through the property with our inspector, ask questions in real-time, learn about maintenance requirements, and understand the significance of any issues discovered. We provide valuable insights about your specific Etobicoke home that you won't get from just reading the report.`
   },
   {
     question: "What are the most common issues found in Etobicoke home inspections?",
@@ -304,8 +258,8 @@ const faqs = [
     answer: `We provide <strong>same-day digital reports</strong> for all Etobicoke home inspections. You'll receive your comprehensive inspection report via email within 4-6 hours of completing the inspection. Reports include detailed findings, high-resolution photos, maintenance recommendations, and prioritized repair suggestions to help you make informed decisions about your Etobicoke property.`
   },
   {
-    question: "Do you inspect condominiums in Etobicoke's high-rises?",
-    answer: `Yes, we specialize in <strong>condominium inspections in Etobicoke</strong>, particularly in Humber Bay Shores and other waterfront developments. Our inspections include assessment of individual units, balconies, windows, and unit-specific systems. We understand the unique considerations of high-rise living and can identify issues specific to these property types.`
+    question: "Do you inspect condos and high-rises in Etobicoke?",
+    answer: `Yes, we specialize in <Link to="/services/condo">condo inspections in Etobicoke</Link>. Our condo inspections focus on the unit's interior systems including HVAC units, electrical panels, plumbing fixtures, windows, balconies, and interior finishes. We also help you understand building Status Certificates and reserve fund studies, which are crucial for Etobicoke's extensive condo market.`
   },
   {
     question: "What areas of Etobicoke do you service?",
@@ -316,21 +270,21 @@ const faqs = [
 // Testimonials for social proof
 const testimonials = [
   {
-    name: "Jennifer Wong",
-    location: "Humber Bay Shores, Etobicoke",
-    content: "As a first-time condo buyer in Humber Bay Shores, I was nervous about the process. ASADS provided the most thorough condo inspection I could imagine. Their expertise with high-rise buildings gave me confidence in my purchase, and they identified several balcony issues that needed attention. Highly recommended for Etobicoke condos!",
-    rating: 5
-  },
-  {
-    name: "Robert Chen",
+    name: "Michael Chen",
     location: "The Kingsway, Etobicoke",
-    content: "Our heritage home in The Kingsway required special attention, and ASADS delivered exceptional service. Their knowledge of period construction and heritage materials was impressive. The inspection report was so detailed it helped us negotiate a better price and plan necessary renovations. Truly experts in Etobicoke's heritage properties.",
+    content: "The ASADS home inspection in Etobicoke was incredibly thorough. The inspector spent over 4 hours examining every detail of our heritage home and identified several issues we would have missed. The same-day report helped us negotiate $20,000 in repairs. Highly recommend for any Etobicoke home buyer!",
     rating: 5
   },
   {
-    name: "Maria Rodriguez",
+    name: "Sarah Thompson",
+    location: "Humber Bay Shores, Etobicoke",
+    content: "As first-time condo buyers in Etobicoke, we were nervous about the inspection process. ASADS made it easy to understand and provided exceptional service. Their knowledge of high-rise buildings was invaluable. The detailed report gave us complete confidence in our purchase.",
+    rating: 5
+  },
+  {
+    name: "David Wilson",
     location: "Mimico, Etobicoke",
-    content: "We've used ASADS for both our Mimico home purchase and our investment property inspection. Their thorough approach and understanding of Etobicoke's older neighborhoods have been invaluable. They identified knob and tube wiring that other inspectors missed, potentially saving us thousands in future repairs.",
+    content: "We've used ASADS for multiple property inspections in Etobicoke. Their attention to detail is unmatched, especially with older Toronto homes. The thermal imaging service identified hidden moisture issues that saved us from a major repair down the line. Professional, knowledgeable, and worth every penny.",
     rating: 5
   }
 ];
@@ -366,7 +320,7 @@ export default function Etobicoke() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "ASADS Home Inspection Etobicoke",
-    "description": "Professional home inspection services in Etobicoke, Toronto providing comprehensive property assessments, high-rise condominium inspections, heritage home evaluations, and investment property inspections.",
+    "description": "Professional home inspection services in Etobicoke providing comprehensive property assessments, condo inspections, and specialized testing services throughout Etobicoke and the Greater Toronto Area.",
     "url": pageUrl,
     "telephone": "+16478019311",
     "email": "etobicoke@asads.ca",
@@ -375,7 +329,7 @@ export default function Etobicoke() {
       "streetAddress": "Etobicoke Service Area",
       "addressLocality": "Toronto",
       "addressRegion": "ON",
-      "postalCode": "M8V-M9C",
+      "postalCode": "M8V",
       "addressCountry": "CA"
     },
     "geo": {
@@ -390,7 +344,7 @@ export default function Etobicoke() {
         "latitude": 43.6532,
         "longitude": -79.5672
       },
-      "geoRadius": "20000"
+      "geoRadius": "50000"
     },
     "serviceArea": [
       {
@@ -433,7 +387,7 @@ export default function Etobicoke() {
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": "167",
+      "reviewCount": "147",
       "bestRating": "5",
       "worstRating": "1"
     },
@@ -478,7 +432,7 @@ export default function Etobicoke() {
         "position": index + 1
       }))
     },
-    "description": "Professional home inspection services in Etobicoke including pre-purchase inspections, high-rise condominium assessments, heritage home evaluations, radon testing, mold inspection, thermal imaging, and investment property evaluations."
+    "description": "Professional home inspection services in Etobicoke including pre-purchase inspections, condo inspections, new construction inspections, radon testing, mold inspection, thermal imaging, and specialized property assessments."
   };
 
   const faqSchema = {
@@ -527,7 +481,7 @@ export default function Etobicoke() {
         <link rel="canonical" href={pageUrl} />
         
         {/* Keywords for search engines */}
-        <meta name="keywords" content={`${primaryKeyword}, ${secondaryKeywords.join(", ")}, home inspectors etobicoke ontario, property inspection toronto, etobicoke waterfront inspection`} />
+        <meta name="keywords" content={`${primaryKeyword}, ${secondaryKeywords.join(", ")}, home inspectors etobicoke, property inspection etobicoke`} />
         
         {/* Open Graph for social sharing */}
         <meta property="og:title" content={metaTitle} />
@@ -579,10 +533,10 @@ export default function Etobicoke() {
               </span>
             </div>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Professional Home Inspection Services in <span className="text-secondary">Etobicoke, Toronto</span>
+              Professional Home Inspection Services in <span className="text-secondary">Etobicoke</span>
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-              Looking for comprehensive <strong>home inspection in Etobicoke</strong>? ASADS provides professional property assessments with licensed inspectors, high-rise condo expertise, and same-day digital reports. Serving Etobicoke, Toronto, Mississauga, and the entire GTA region.
+              Looking for comprehensive <strong>home inspection in Etobicoke</strong>? ASADS provides professional property assessments with licensed inspectors, same-day digital reports, and competitive pricing starting at $550. Serving all Etobicoke neighborhoods and GTA communities.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
@@ -596,7 +550,7 @@ export default function Etobicoke() {
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Shield className="h-5 w-5" />
-                <span>Licensed High-Rise Specialists</span>
+                <span>Licensed Etobicoke Inspectors</span>
               </div>
             </div>
             
@@ -632,15 +586,15 @@ export default function Etobicoke() {
             <div className="mb-16">
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-muted-foreground mb-6">
-                  When searching for <strong>home inspection companies in Etobicoke</strong>, choosing licensed professionals with local heritage home and high-rise condominium expertise is essential for protecting your investment in one of Toronto's most desirable neighborhoods. ASADS Home Inspection provides comprehensive property assessments throughout Etobicoke and surrounding areas, helping homeowners, investors, and condo buyers make informed decisions with confidence.
+                  When searching for <strong>home inspection companies in Etobicoke</strong>, choosing licensed professionals with local expertise is essential for protecting your investment. ASADS Home Inspection provides comprehensive property assessments throughout Etobicoke and surrounding areas, helping homeowners, buyers, and sellers make informed decisions with confidence.
                 </p>
                 
                 <h2 className="font-heading text-3xl font-bold text-foreground mb-6">
-                  Comprehensive Home Inspection Services in Etobicoke, Toronto
+                  Comprehensive Home Inspection Services in Etobicoke
                 </h2>
                 
                 <p className="text-muted-foreground mb-6">
-                  Our <Link to="/services/pre-purchase" className="text-primary hover:underline font-medium">pre-purchase home inspection in Etobicoke</Link> is designed to identify both obvious defects and hidden problems that could cost thousands in repairs. From high-rise condominium evaluations to heritage home assessments in The Kingsway, our licensed inspectors examine every accessible component of your property following Ontario's Standards of Practice.
+                  Our <Link to="/services/pre-purchase" className="text-primary hover:underline font-medium">pre-purchase home inspection in Etobicoke</Link> is designed to identify both obvious defects and hidden problems that could cost thousands in repairs. From foundation assessments to roofing evaluations, our licensed inspectors examine every accessible component of your property following Ontario's Standards of Practice.
                 </p>
                 
                 <div className="bg-primary/5 p-6 rounded-xl border border-primary/10 mb-8">
@@ -649,31 +603,9 @@ export default function Etobicoke() {
                     Etobicoke Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Etobicoke cost</strong> ranges from $550 to $950 for a standard residential property. Luxury homes in The Kingsway may range from $800-$1,500, while condominiums typically range from $450-$750. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Etobicoke's competitive market.
+                    The average <strong>home inspection Etobicoke cost</strong> ranges from $550 to $950 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
                   </p>
                 </div>
-              </div>
-            </div>
-
-            {/* Etobicoke-Specific Features */}
-            <div className="mb-16">
-              <h2 className="font-heading text-3xl font-bold text-foreground mb-8 text-center">
-                Etobicoke-Specific Inspection Expertise
-              </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {etobicokeFeatures.map((feature, index) => (
-                  <div key={index} className="bg-card p-6 rounded-xl border border-border hover:border-primary/30 transition-colors">
-                    <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                      {feature.icon}
-                    </div>
-                    <h3 className="font-heading font-bold text-lg text-foreground mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -706,7 +638,7 @@ export default function Etobicoke() {
                   14+ Professional Home Inspection Services in Etobicoke
                 </h2>
                 <p className="text-muted-foreground max-w-3xl mx-auto">
-                  Comprehensive inspection solutions for every Etobicoke property type and concern. Each service includes detailed reporting, expert analysis, and professional recommendations tailored to Etobicoke's unique housing market.
+                  Comprehensive inspection solutions for every Etobicoke property type and concern. Each service includes detailed reporting, expert analysis, and professional recommendations.
                 </p>
               </div>
               
@@ -790,20 +722,20 @@ export default function Etobicoke() {
                 Etobicoke Neighborhoods We Serve
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-                {etobicokeNeighborhoods.map((area, index) => (
+                {etobicokeNeighborhoods.map((hood, index) => (
                   <div
                     key={index}
                     className="flex flex-col items-center justify-center p-4 rounded-lg bg-card border border-border text-center"
                   >
                     <MapPin className="h-5 w-5 text-primary mb-2" />
-                    <span className="text-sm font-medium text-foreground">{area.name}</span>
-                    <span className="text-xs text-muted-foreground mt-1">{area.service}</span>
+                    <span className="text-sm font-medium text-foreground">{hood.name}</span>
+                    <span className="text-xs text-muted-foreground mt-1">{hood.service}</span>
                   </div>
                 ))}
               </div>
               <div className="text-center mt-8">
                 <p className="text-muted-foreground">
-                  Also serving nearby communities including Toronto Downtown, Mississauga, Brampton, North York, and throughout the GTA region.
+                  Also serving all GTA communities including Toronto, Mississauga, Brampton, Vaughan, Markham, Oakville, and beyond.
                 </p>
               </div>
             </div>
@@ -858,7 +790,7 @@ export default function Etobicoke() {
                 Ready to Schedule Your Etobicoke Home Inspection?
               </h2>
               <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Book your comprehensive home inspection in Etobicoke today. Our licensed inspectors provide detailed assessments with same-day reports, competitive pricing, and professional service throughout Etobicoke and the surrounding GTA region.
+                Book your comprehensive home inspection in Etobicoke today. Our licensed inspectors provide detailed assessments with same-day reports, competitive pricing, and professional service throughout the GTA.
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -915,4 +847,4 @@ export default function Etobicoke() {
       </section>
     </Layout>
   );
-    }
+        }
