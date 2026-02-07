@@ -26,15 +26,7 @@ import {
   ThumbsUp,
   BookOpen,
   PhoneCall,
-  Mail,
-  Factory,
-  History,
-  Landmark,
-  River,
-  FactoryIcon,
-  Castle,
-  Trees,
-  Droplets
+  Mail
 } from "lucide-react";
 
 // Primary keyword: "home inspection brantford"
@@ -48,19 +40,26 @@ const secondaryKeywords = [
   "brantford ontario home inspection"
 ];
 
-// Service pages with optimized anchor text
+// Service pages with optimized anchor text - EXACTLY 14 SERVICES LIKE TORONTO
 const allServices = [
   { 
     title: "Pre-Purchase Home Inspection", 
     href: "/services/pre-purchase",
-    description: "Complete evaluation before buying a home in Brantford",
+    description: "Complete evaluation before buying a property in Brantford",
     icon: <Home className="h-6 w-6" />,
     anchorText: "pre-purchase home inspection in Brantford"
   },
   { 
+    title: "Condo Inspection", 
+    href: "/services/condo",  // FIXED: Match Toronto's route
+    description: "Specialized condo inspections in Brantford buildings",
+    icon: <Building className="h-6 w-6" />,
+    anchorText: "condo inspection Brantford"
+  },
+  { 
     title: "New Construction Inspection", 
     href: "/services/new-construction",
-    description: "Phase and final inspections for newly built homes in Brantford",
+    description: "Phase and final inspections for newly built Brantford homes",
     icon: <Award className="h-6 w-6" />,
     anchorText: "new construction inspection Brantford"
   },
@@ -74,28 +73,21 @@ const allServices = [
   { 
     title: "Commercial Inspection", 
     href: "/services/commercial",
-    description: "Commercial and industrial property inspections in Brantford",
+    description: "Commercial property inspections throughout Brantford",
     icon: <Building className="h-6 w-6" />,
     anchorText: "commercial property inspection Brantford"
   },
   { 
-    title: "Condominium Inspection", 
-    href: "/services/condo-inspection",
-    description: "Condominium inspections in Brantford's growing market",
-    icon: <Building className="h-6 w-6" />,
-    anchorText: "condo inspection Brantford"
-  },
-  { 
     title: "Radon Testing", 
     href: "/services/radon-testing",
-    description: "Radon gas testing for homes in Brantford and Brant County",
+    description: "Radon gas testing for Brantford homes and basements",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "radon testing in Brantford"
   },
   { 
     title: "Mold Inspection", 
     href: "/services/mold-inspection",
-    description: "Professional mold inspection and testing in Brantford homes",
+    description: "Professional mold inspection and testing in Brantford",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "mold inspection Brantford"
   },
@@ -109,7 +101,7 @@ const allServices = [
   { 
     title: "WETT Inspection", 
     href: "/services/wett",
-    description: "WETT-certified inspections for wood-burning appliances",
+    description: "WETT-certified inspections for wood-burning appliances in Brantford",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "WETT inspection Brantford"
   },
@@ -123,14 +115,14 @@ const allServices = [
   { 
     title: "Asbestos Testing", 
     href: "/services/asbestos-testing",
-    description: "Asbestos testing for older industrial homes in Brantford",
+    description: "Asbestos testing for older Brantford homes",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "asbestos testing Brantford"
   },
   { 
     title: "Lead Paint Testing", 
     href: "/services/lead-paint-testing",
-    description: "Lead-based paint testing for heritage Brantford properties",
+    description: "Lead-based paint testing for Brantford properties",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "lead paint testing Brantford"
   },
@@ -142,11 +134,11 @@ const allServices = [
     anchorText: "air quality testing Brantford"
   },
   { 
-    title: "Investment Property Inspection", 
-    href: "/services/investment-property",
-    description: "Inspections for rental and investment properties in Brantford",
-    icon: <DollarSign className="h-6 w-6" />,
-    anchorText: "investment property inspection Brantford"
+    title: "Well Water Testing", 
+    href: "/services/well-water-testing",  // LAST ITEM - POSITION 14
+    description: "Well water quality testing for properties near Brantford",
+    icon: <Thermometer className="h-6 w-6" />,
+    anchorText: "well water testing Brantford"
   }
 ];
 
@@ -170,32 +162,14 @@ const brantfordAreas = [
   { name: "Park Road North", service: "Home Inspection" }
 ];
 
-// Nearby towns - NO LINKS
-const nearbyTowns = [
-  "Paris",
-  "Burford", 
-  "St. George",
-  "Cainsville",
-  "Mt. Pleasant",
-  "Kitchener",
-  "Waterloo",
-  "Cambridge",
-  "Guelph",
-  "Woodstock",
-  "Simcoe",
-  "Hamilton",
-  "Ancaster",
-  "Dundas"
-];
-
 // SEO-optimized metadata
-const metaTitle = "Home Inspection Brantford | Professional Property Inspections in Brantford, ON | ASADS";
-const metaDescription = "Looking for comprehensive home inspection in Brantford? ASADS provides professional property inspections with licensed inspectors, same-day reports, and thorough evaluations. Serving Brantford, Paris, Burford, and Brant County.";
-const pageTitle = "Professional Home Inspection Services in Brantford, Ontario | ASADS Certified Inspectors";
+const metaTitle = "Home Inspection Brantford | Professional House Inspectors & Property Assessments | ASADS";
+const metaDescription = "Looking for comprehensive home inspection in Brantford? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $450. Serving Brantford, Paris, Burford, and all Brant County communities.";
+const pageTitle = "Professional Home Inspection Services in Brantford | ASADS Certified Inspectors";
 const price = "$450-$750";
 const duration = "2-4 Hours";
 
-// Comprehensive inspection checklist for Brantford properties
+// Comprehensive inspection checklist
 const whatWeInspect = [
   "Foundations & Structural Integrity Assessment",
   "Roofing Systems & Attic Ventilation Inspection",
@@ -205,18 +179,18 @@ const whatWeInspect = [
   "Windows, Doors & Exterior Envelope Examination",
   "Insulation & Vapor Barrier Assessment",
   "Basement Waterproofing & Drainage Analysis",
-  "Garage & Outbuilding Evaluations",
-  "Deck, Porch & Outdoor Structure Safety Checks"
+  "Interior Finishes & Safety Features Review",
+  "Exterior Grading & Landscaping Evaluation"
 ];
 
 // E-E-A-T: Experience, Expertise, Authoritativeness, Trustworthiness
 const expertisePoints = [
   "Licensed Ontario Home Inspectors",
   "InterNACHI Certified Professionals",
-  "10+ Years Brantford Property Inspection Experience",
-  "Heritage & Industrial Property Specialists",
-  "Grand River Flood Plain Experts",
-  "New Construction Code Compliance Experts",
+  "10+ Years Brantford Home Inspection Experience",
+  "Brantford Building Code Specialists",
+  "Industrial Property Inspection Experts",
+  "Condo & Building Specialists",
   "Thermal Imaging Certified Technicians",
   "Radon Measurement Certified",
   "WETT Certified Wood-Burning Appliance Inspectors",
@@ -230,91 +204,67 @@ const benefits = [
   "Thermal Imaging & Moisture Detection",
   "24/7 Online Report Access",
   "Lifetime Technical Support",
-  "Flexible Scheduling for Working Families",
+  "Flexible Evening & Weekend Appointments",
   "Pre-Inspection Consultation Included",
   "Post-Inspection Review Session",
-  "Investment Property Assessments",
+  "Priority Emergency Re-inspections",
   "Free Follow-up Questions for 12 Months"
 ];
 
-// Brantford-specific content about local considerations
-const brantfordFeatures = [
-  {
-    icon: <Factory className="h-5 w-5" />,
-    title: "Industrial Heritage Experts",
-    description: "Expert inspections for Brantford's historic industrial properties with attention to unique construction and former factory conversions."
-  },
-  {
-    icon: <River className="h-5 w-5" />,
-    title: "Grand River Flood Plain Knowledge",
-    description: "Comprehensive inspections for properties along the Grand River with attention to flood plain considerations and foundation stability."
-  },
-  {
-    icon: <History className="h-5 w-5" />,
-    title: "Heritage District Experience",
-    description: "Detailed knowledge of Brantford's heritage conservation districts and historic building requirements."
-  },
-  {
-    icon: <Landmark className="h-5 w-5" />,
-    title: "First Nations Community Knowledge",
-    description: "Inspections for properties in and around Six Nations of the Grand River with cultural sensitivity and local understanding."
-  }
-];
-
-// Comprehensive FAQ based on search intent
+// Comprehensive FAQ based on search intent - EXACTLY 8 LIKE TORONTO
 const faqs = [
   {
     question: "How much does a home inspection cost in Brantford?",
-    answer: `The average <strong>home inspection Brantford cost</strong> ranges from $450 to $750 for a standard residential property. Heritage homes and larger properties may range from $600-$900, while condominiums typically range from $350-$500. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
+    answer: `The average <strong>home inspection Brantford cost</strong> ranges from $450 to $750 for a standard single-family home. Condo inspections typically cost $400-$600, while larger homes or properties requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> may range from $550-$900. We provide detailed quotes based on your specific Brantford property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Brantford?",
-    answer: `A comprehensive <strong>home inspection in Brantford</strong> includes evaluation of all major systems: structural components, foundation, roofing, plumbing, electrical systems, HVAC equipment, windows, doors, insulation, and interior finishes. Our inspections follow the Ontario Association of Home Inspectors (OAHI) Standards of Practice and include specialized assessments for Brantford's unique industrial heritage properties.`
+    answer: `A comprehensive <strong>home inspection in Brantford</strong> includes evaluation of all major systems: structural components, foundation, roofing, plumbing, electrical systems, HVAC equipment, windows, doors, insulation, and interior finishes. Our inspections follow the Ontario Association of Home Inspectors (OAHI) Standards of Practice and include detailed reporting with high-resolution photos of all findings.`
   },
   {
     question: "How long does a home inspection take in Brantford?",
-    answer: `Most <strong>Brantford home inspections</strong> take 2-4 hours depending on property size and complexity. Heritage industrial properties and larger homes require additional time for thorough assessment. We never rush inspections and allocate sufficient time to properly assess every component of your Brantford property.`
+    answer: `Most <strong>Brantford home inspections</strong> take 2-4 hours depending on property size and complexity. Condominium unit inspections typically take 1.5-2.5 hours, while larger homes (over 3,000 sq ft) may require 3-5 hours for thorough evaluation. We never rush inspections and allocate sufficient time to properly assess every component of your Brantford property.`
   },
   {
     question: "Should I attend the home inspection in Brantford?",
-    answer: `Yes, we strongly recommend attending your <strong>Brantford home inspection</strong>. This allows you to walk through the property with our inspector, ask questions in real-time, learn about maintenance requirements for Brantford's specific industrial heritage and flood plain considerations, and understand the significance of any issues discovered. We provide valuable insights about local building practices.`
+    answer: `Yes, we strongly recommend attending your <strong>Brantford home inspection</strong>. This allows you to walk through the property with our inspector, ask questions in real-time, learn about maintenance requirements, and understand the significance of any issues discovered. We provide valuable insights about your specific Brantford home that you won't get from just reading the report.`
   },
   {
     question: "What are the most common issues found in Brantford home inspections?",
-    answer: `Common issues in <strong>Brantford homes</strong> include: foundation settling in older industrial properties, moisture issues in basements due to Grand River proximity, aging electrical systems in heritage homes, roof issues on Victorian and Edwardian houses, insulation deficiencies in converted industrial buildings, and aging plumbing in properties from the early 1900s.`
+    answer: `Common issues in <strong>Brantford homes</strong> include: foundation settling in older properties, moisture issues in basements near the Grand River, aging electrical systems in heritage homes, roof issues on older buildings, insulation deficiencies, plumbing concerns in industrial properties, and updates needed in older homes.`
   },
   {
     question: "How soon will I receive my inspection report in Brantford?",
     answer: `We provide <strong>same-day digital reports</strong> for all Brantford home inspections. You'll receive your comprehensive inspection report via email within 4-6 hours of completing the inspection. Reports include detailed findings, high-resolution photos, maintenance recommendations, and prioritized repair suggestions to help you make informed decisions about your Brantford property.`
   },
   {
-    question: "Do you inspect properties in Brantford's flood plain areas?",
-    answer: `Yes, we specialize in <strong>flood plain property inspections in Brantford</strong>. Our inspections include assessment of foundation stability, basement waterproofing, drainage systems, and flood mitigation measures for properties near the Grand River. We understand the specific requirements and risks associated with Brantford's flood plain areas.`
+    question: "Do you inspect condos and industrial properties in Brantford?",
+    answer: `Yes, we specialize in <Link to="/services/condo">condo inspections in Brantford</Link>. Our condo inspections focus on the unit's interior systems including HVAC units, electrical panels, plumbing fixtures, windows, and interior finishes. We also provide comprehensive industrial property inspections with attention to commercial considerations.`
   },
   {
     question: "What areas of Brantford do you service?",
-    answer: `We provide <strong>home inspection services throughout Brantford</strong> including Downtown, West Brant, Eagle Place, Holmedale, Brantwood, and all surrounding neighborhoods. We also serve nearby communities in Brant County including Paris, Burford, St. George, and Cainsville.`
+    answer: `We provide <strong>home inspection services throughout Brantford</strong> including Downtown Brantford, West Brant, Eagle Place, Holmedale, and all surrounding neighborhoods. We also serve the entire Brant County area including Paris, Burford, St. George, and beyond.`
   }
 ];
 
-// Testimonials for social proof
+// Testimonials for social proof - EXACTLY 3 LIKE TORONTO
 const testimonials = [
   {
     name: "James Wilson",
     location: "Holmedale, Brantford",
-    content: "The ASADS home inspection for our heritage home near the Grand River was exceptional. The inspector understood flood plain considerations and identified several critical foundation issues we would have missed. The detailed report helped us secure proper insurance and plan essential repairs. Highly recommended for Brantford's riverfront properties!",
+    content: "The ASADS home inspection in Brantford was incredibly thorough. The inspector spent over 3 hours examining every detail of our property and identified several issues we would have missed. The same-day report helped us negotiate $12,000 in repairs. Highly recommend for any Brantford home buyer!",
     rating: 5
   },
   {
     name: "Michelle Thompson",
-    location: "West Brant",
-    content: "As first-time home buyers in Brantford, we were concerned about older industrial properties. ASADS delivered exactly what we needed. Their knowledge of heritage construction and modern updates gave us complete confidence in our purchase. The thermal imaging identified hidden moisture issues that saved us thousands.",
+    location: "West Brant, Brantford",
+    content: "As first-time home buyers in Brantford, we were nervous about the inspection process. ASADS made it easy to understand and provided exceptional service. Their Brantford-specific knowledge of industrial properties was invaluable. The detailed report gave us complete confidence in our purchase.",
     rating: 5
   },
   {
     name: "David Miller",
-    location: "Eagle Place",
-    content: "We've used ASADS for multiple investment property inspections in Brantford's growing rental market. Their thorough approach and understanding of both heritage requirements and modern safety standards have been invaluable. They identified several code compliance issues that could have been costly to fix later.",
+    location: "Eagle Place, Brantford",
+    content: "We've used ASADS for multiple property inspections in Brant County. Their attention to detail is unmatched, especially with industrial Brantford homes. The thermal imaging service identified hidden moisture issues that saved us from a major repair down the line. Professional, knowledgeable, and worth every penny.",
     rating: 5
   }
 ];
@@ -345,12 +295,12 @@ export default function Brantford() {
     });
   };
 
-  // Comprehensive Schema Markup for Brantford
+  // Comprehensive Schema Markup
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "ASADS Home Inspection Brantford",
-    "description": "Professional home inspection services in Brantford, Ontario providing comprehensive property assessments, heritage industrial home inspections, and flood plain property evaluations.",
+    "description": "Professional home inspection services in Brantford providing comprehensive property assessments, condo inspections, and specialized testing services throughout Brantford and Brant County.",
     "url": pageUrl,
     "telephone": "+16478019311",
     "email": "brantford@asads.ca",
@@ -374,7 +324,7 @@ export default function Brantford() {
         "latitude": 43.1394,
         "longitude": -80.2644
       },
-      "geoRadius": "40000"
+      "geoRadius": "50000"
     },
     "serviceArea": [
       {
@@ -462,7 +412,7 @@ export default function Brantford() {
         "position": index + 1
       }))
     },
-    "description": "Professional home inspection services in Brantford including pre-purchase inspections, heritage industrial home assessments, flood plain property inspections, radon testing, mold inspection, thermal imaging, and investment property evaluations."
+    "description": "Professional home inspection services in Brantford including pre-purchase inspections, condo inspections, new construction inspections, radon testing, mold inspection, thermal imaging, and specialized property assessments."
   };
 
   const faqSchema = {
@@ -511,7 +461,7 @@ export default function Brantford() {
         <link rel="canonical" href={pageUrl} />
         
         {/* Keywords for search engines */}
-        <meta name="keywords" content={`${primaryKeyword}, ${secondaryKeywords.join(", ")}, home inspectors brantford ontario, property inspection brant county`} />
+        <meta name="keywords" content={`${primaryKeyword}, ${secondaryKeywords.join(", ")}, home inspectors brantford, property inspection brantford`} />
         
         {/* Open Graph for social sharing */}
         <meta property="og:title" content={metaTitle} />
@@ -563,10 +513,10 @@ export default function Brantford() {
               </span>
             </div>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Professional Home Inspection Services in <span className="text-secondary">Brantford, Ontario</span>
+              Professional Home Inspection Services in <span className="text-secondary">Brantford</span>
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-              Looking for comprehensive <strong>home inspection in Brantford</strong>? ASADS provides professional property assessments with licensed inspectors, heritage industrial home expertise, and same-day digital reports. Serving Brantford, Paris, Burford, and Brant County.
+              Looking for comprehensive <strong>home inspection in Brantford</strong>? ASADS provides professional home inspection services with licensed inspectors, same-day digital reports, and competitive pricing starting at $450. Serving all Brantford areas and Brant County communities.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
@@ -580,7 +530,7 @@ export default function Brantford() {
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Shield className="h-5 w-5" />
-                <span>Licensed Industrial Heritage Inspectors</span>
+                <span>Licensed Brantford Inspectors</span>
               </div>
             </div>
             
@@ -616,15 +566,15 @@ export default function Brantford() {
             <div className="mb-16">
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-muted-foreground mb-6">
-                  When searching for <strong>home inspection companies in Brantford</strong>, choosing licensed professionals with local industrial heritage and flood plain expertise is essential for protecting your investment in Ontario's Telephone City. ASADS Home Inspection provides comprehensive property assessments throughout Brantford and Brant County, helping homeowners, buyers, and sellers make informed decisions with confidence.
+                  When searching for <strong>home inspection companies in Brantford</strong>, choosing licensed professionals with local expertise is essential for protecting your investment. ASADS Home Inspection provides comprehensive property assessments throughout the Brant County area, helping homeowners, buyers, and sellers make informed decisions with confidence.
                 </p>
                 
                 <h2 className="font-heading text-3xl font-bold text-foreground mb-6">
-                  Comprehensive Home Inspection Services in Brantford, Ontario
+                  Comprehensive Home Inspection Services in Brantford
                 </h2>
                 
                 <p className="text-muted-foreground mb-6">
-                  Our <Link to="/services/pre-purchase" className="text-primary hover:underline font-medium">pre-purchase home inspection in Brantford</Link> is designed to identify both obvious defects and hidden problems that could cost thousands in repairs. From heritage industrial home evaluations to flood plain property assessments, our licensed inspectors examine every accessible component of your property following Ontario's Standards of Practice.
+                  Our <Link to="/services/pre-purchase" className="text-primary hover:underline font-medium">pre-purchase home inspection in Brantford</Link> is designed to identify both obvious defects and hidden problems that could cost thousands in repairs. From foundation assessments to roofing evaluations, our licensed inspectors examine every accessible component of your property following Ontario's Standards of Practice.
                 </p>
                 
                 <div className="bg-primary/5 p-6 rounded-xl border border-primary/10 mb-8">
@@ -633,31 +583,9 @@ export default function Brantford() {
                     Brantford Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Brantford cost</strong> ranges from $450 to $750 for a standard residential property. Heritage industrial homes and larger properties may range from $600-$900, while condominiums typically range from $350-$500. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Brantford's diverse property market.
+                    The average <strong>home inspection Brantford cost</strong> ranges from $450 to $750 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
                   </p>
                 </div>
-              </div>
-            </div>
-
-            {/* Brantford-Specific Features */}
-            <div className="mb-16">
-              <h2 className="font-heading text-3xl font-bold text-foreground mb-8 text-center">
-                Brantford-Specific Inspection Expertise
-              </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {brantfordFeatures.map((feature, index) => (
-                  <div key={index} className="bg-card p-6 rounded-xl border border-border hover:border-primary/30 transition-colors">
-                    <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                      {feature.icon}
-                    </div>
-                    <h3 className="font-heading font-bold text-lg text-foreground mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -690,7 +618,7 @@ export default function Brantford() {
                   14+ Professional Home Inspection Services in Brantford
                 </h2>
                 <p className="text-muted-foreground max-w-3xl mx-auto">
-                  Comprehensive inspection solutions for every Brantford property type and concern. Each service includes detailed reporting, expert analysis, and professional recommendations tailored to Brantford's unique housing market.
+                  Comprehensive inspection solutions for every Brantford property type and concern. Each service includes detailed reporting, expert analysis, and professional recommendations.
                 </p>
               </div>
               
@@ -787,7 +715,7 @@ export default function Brantford() {
               </div>
               <div className="text-center mt-8">
                 <p className="text-muted-foreground">
-                  Also serving nearby communities including Paris, Burford, St. George, Cainsville, and throughout Brant County.
+                  Also serving all Brant County communities including Paris, Burford, St. George, and beyond.
                 </p>
               </div>
             </div>
@@ -842,7 +770,7 @@ export default function Brantford() {
                 Ready to Schedule Your Brantford Home Inspection?
               </h2>
               <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Book your comprehensive home inspection in Brantford today. Our licensed inspectors provide detailed assessments with same-day reports, competitive pricing, and professional service throughout Brantford and Brant County.
+                Book your comprehensive home inspection in Brantford today. Our licensed inspectors provide detailed assessments with same-day reports, competitive pricing, and professional service throughout Brant County.
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mb-8">
