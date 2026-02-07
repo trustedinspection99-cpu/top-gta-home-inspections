@@ -26,22 +26,7 @@ import {
   ThumbsUp,
   BookOpen,
   PhoneCall,
-  Mail,
-  Train,
-  Subway,
-  HomeIcon,
-  Castle,
-  Tree,
-  Factory,
-  Warehouse,
-  Bridge,
-  River,
-  Trees,
-  Wrench,
-  Hammer,
-  Zap,
-  Droplets,
-  Wind
+  Mail
 } from "lucide-react";
 
 // Primary keyword: "home inspection east york"
@@ -52,9 +37,7 @@ const secondaryKeywords = [
   "east york home inspectors", 
   "home inspection east york ontario",
   "home inspection leaside",
-  "east york condo inspection",
-  "home inspection east york don mills",
-  "east york property inspection"
+  "east york condo inspection"
 ];
 
 // Service pages with optimized anchor text
@@ -62,14 +45,21 @@ const allServices = [
   { 
     title: "Pre-Purchase Home Inspection", 
     href: "/services/pre-purchase",
-    description: "Complete evaluation before buying a home in East York",
+    description: "Complete evaluation before buying a property in East York",
     icon: <Home className="h-6 w-6" />,
     anchorText: "pre-purchase home inspection in East York"
   },
   { 
+    title: "Condo Inspection", 
+    href: "/services/condo",
+    description: "Specialized condo inspections in East York buildings",
+    icon: <Building className="h-6 w-6" />,
+    anchorText: "condo inspection East York"
+  },
+  { 
     title: "New Construction Inspection", 
     href: "/services/new-construction",
-    description: "Phase and final inspections for newly built homes in East York",
+    description: "Phase and final inspections for newly built East York homes",
     icon: <Award className="h-6 w-6" />,
     anchorText: "new construction inspection East York"
   },
@@ -83,28 +73,21 @@ const allServices = [
   { 
     title: "Commercial Inspection", 
     href: "/services/commercial",
-    description: "Commercial property inspections in East York's business corridors",
+    description: "Commercial property inspections throughout East York",
     icon: <Building className="h-6 w-6" />,
     anchorText: "commercial property inspection East York"
-  },
-  { 
-    title: "Condominium Inspection", 
-    href: "/services/condo-inspection",
-    description: "Condominium inspections in East York's mid-rise buildings",
-    icon: <Building className="h-6 w-6" />,
-    anchorText: "condo inspection East York"
   },
   { 
     title: "Radon Testing", 
     href: "/services/radon-testing",
     description: "Radon gas testing for East York homes and basements",
-    icon: <Wind className="h-6 w-6" />,
+    icon: <Thermometer className="h-6 w-6" />,
     anchorText: "radon testing in East York"
   },
   { 
     title: "Mold Inspection", 
     href: "/services/mold-inspection",
-    description: "Professional mold inspection in East York's older homes",
+    description: "Professional mold inspection and testing in East York",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "mold inspection East York"
   },
@@ -118,28 +101,28 @@ const allServices = [
   { 
     title: "WETT Inspection", 
     href: "/services/wett",
-    description: "WETT-certified inspections for wood-burning appliances",
+    description: "WETT-certified inspections for wood-burning appliances in East York",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "WETT inspection East York"
   },
   { 
     title: "Sewer Scope Inspection", 
     href: "/services/sewer-scope",
-    description: "Camera sewer line inspections for East York's tree-root areas",
-    icon: <Droplets className="h-6 w-6" />,
+    description: "Camera sewer line inspections for East York homes",
+    icon: <Thermometer className="h-6 w-6" />,
     anchorText: "sewer scope inspection East York"
   },
   { 
     title: "Asbestos Testing", 
     href: "/services/asbestos-testing",
-    description: "Asbestos testing for post-war East York homes",
+    description: "Asbestos testing for older East York homes",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "asbestos testing East York"
   },
   { 
     title: "Lead Paint Testing", 
     href: "/services/lead-paint-testing",
-    description: "Lead-based paint testing for older East York properties",
+    description: "Lead-based paint testing for East York properties",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "lead paint testing East York"
   },
@@ -147,15 +130,15 @@ const allServices = [
     title: "Air Quality Testing", 
     href: "/services/air-quality",
     description: "Indoor air quality testing in East York homes",
-    icon: <Wind className="h-6 w-6" />,
+    icon: <Thermometer className="h-6 w-6" />,
     anchorText: "air quality testing East York"
   },
   { 
-    title: "Investment Property Inspection", 
-    href: "/services/investment-property",
-    description: "Inspections for rental and investment properties in East York",
-    icon: <DollarSign className="h-6 w-6" />,
-    anchorText: "investment property inspection East York"
+    title: "Well Water Testing", 
+    href: "/services/well-water-testing",
+    description: "Well water quality testing for properties near East York",
+    icon: <Thermometer className="h-6 w-6" />,
+    anchorText: "well water testing East York"
   }
 ];
 
@@ -200,13 +183,13 @@ const nearbyAreas = [
 ];
 
 // SEO-optimized metadata
-const metaTitle = "Home Inspection East York | Professional Property Inspections in East York, Toronto | ASADS";
-const metaDescription = "Looking for comprehensive home inspection in East York? ASADS provides professional property inspections with licensed inspectors, same-day reports, and thorough evaluations. Serving East York, Leaside, Don Mills, and all Toronto neighborhoods.";
-const pageTitle = "Professional Home Inspection Services in East York, Toronto | ASADS Certified Inspectors";
+const metaTitle = "Home Inspection East York | Professional House Inspectors & Property Assessments | ASADS";
+const metaDescription = "Looking for comprehensive home inspection in East York? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $525. Serving East York, Leaside, Don Mills, and all Toronto neighborhoods.";
+const pageTitle = "Professional Home Inspection Services in East York | ASADS Certified Inspectors";
 const price = "$525-$875";
 const duration = "2-4 Hours";
 
-// Comprehensive inspection checklist for East York properties
+// Comprehensive inspection checklist
 const whatWeInspect = [
   "Foundations & Structural Integrity Assessment",
   "Roofing Systems & Attic Ventilation Inspection",
@@ -216,18 +199,18 @@ const whatWeInspect = [
   "Windows, Doors & Exterior Envelope Examination",
   "Insulation & Vapor Barrier Assessment",
   "Basement Waterproofing & Drainage Analysis",
-  "Garage & Outbuilding Evaluations",
-  "Post-War Construction Quality Assessment"
+  "Interior Finishes & Safety Features Review",
+  "Exterior Grading & Landscaping Evaluation"
 ];
 
 // E-E-A-T: Experience, Expertise, Authoritativeness, Trustworthiness
 const expertisePoints = [
   "Licensed Ontario Home Inspectors",
   "InterNACHI Certified Professionals",
-  "12+ Years East York Property Inspection Experience",
-  "Post-War Construction Specialists",
-  "Leaside Heritage Home Experts",
-  "Don Mills Garden City Community Knowledge",
+  "10+ Years East York Home Inspection Experience",
+  "Toronto Building Code Specialists",
+  "Heritage Property Inspection Experts",
+  "Condo & Mid-Rise Building Specialists",
   "Thermal Imaging Certified Technicians",
   "Radon Measurement Certified",
   "WETT Certified Wood-Burning Appliance Inspectors",
@@ -237,58 +220,34 @@ const expertisePoints = [
 // Benefits for users
 const benefits = [
   "Same-Day Digital Inspection Reports",
-  "Detailed Photo Documentation (120+ Photos)",
+  "Detailed Photo Documentation (100+ Photos)",
   "Thermal Imaging & Moisture Detection",
   "24/7 Online Report Access",
   "Lifetime Technical Support",
-  "Flexible Scheduling for Working Professionals",
+  "Flexible Evening & Weekend Appointments",
   "Pre-Inspection Consultation Included",
   "Post-Inspection Review Session",
-  "Investment Property Assessments",
+  "Priority Emergency Re-inspections",
   "Free Follow-up Questions for 12 Months"
-];
-
-// East York-specific content about local considerations
-const eastYorkFeatures = [
-  {
-    icon: <Castle className="h-5 w-5" />,
-    title: "Leaside Heritage Experts",
-    description: "Expert inspections for Leaside's heritage homes and historic properties with attention to original construction methods and materials."
-  },
-  {
-    icon: <Tree className="h-5 w-5" />,
-    title: "Don Mills Garden City Specialists",
-    description: "Comprehensive inspections for Don Mills' Garden City community with attention to mature landscaping, drainage, and tree root systems."
-  },
-  {
-    icon: <Bridge className="h-5 w-5" />,
-    title: "Don Valley Expertise",
-    description: "Detailed assessments for properties near the Don Valley with attention to erosion, drainage, and foundation stability in ravine lots."
-  },
-  {
-    icon: <Factory className="h-5 w-5" />,
-    title: "Post-War Construction Knowledge",
-    description: "Inspections for East York's post-war homes with specialized knowledge of construction methods from the 1940s-1960s."
-  }
 ];
 
 // Comprehensive FAQ based on search intent
 const faqs = [
   {
     question: "How much does a home inspection cost in East York?",
-    answer: `The average <strong>home inspection East York cost</strong> ranges from $525 to $875 for a standard residential property. Heritage homes in Leaside may range from $650-$1,200, while condominiums typically range from $425-$700. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
+    answer: `The average <strong>home inspection East York cost</strong> ranges from $525 to $875 for a standard single-family home. Condo inspections typically cost $425-$650, while larger homes or properties requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> may range from $650-$1,000. We provide detailed quotes based on your specific East York property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in East York?",
-    answer: `A comprehensive <strong>home inspection in East York</strong> includes evaluation of all major systems: structural components, foundation, roofing, plumbing, electrical systems, HVAC equipment, windows, doors, insulation, and interior finishes. Our inspections follow the Ontario Association of Home Inspectors (OAHI) Standards of Practice and include specialized assessments for East York's post-war homes and heritage properties.`
+    answer: `A comprehensive <strong>home inspection in East York</strong> includes evaluation of all major systems: structural components, foundation, roofing, plumbing, electrical systems, HVAC equipment, windows, doors, insulation, and interior finishes. Our inspections follow the Ontario Association of Home Inspectors (OAHI) Standards of Practice and include detailed reporting with high-resolution photos of all findings.`
   },
   {
     question: "How long does a home inspection take in East York?",
-    answer: `Most <strong>East York home inspections</strong> take 2-4 hours depending on property size and complexity. Heritage homes, post-war bungalows, and larger properties require additional time for thorough assessment. We never rush inspections and allocate sufficient time to properly assess every component of your East York property.`
+    answer: `Most <strong>East York home inspections</strong> take 2-4 hours depending on property size and complexity. Condominium unit inspections typically take 1.5-2.5 hours, while larger homes (over 3,000 sq ft) may require 3-5 hours for thorough evaluation. We never rush inspections and allocate sufficient time to properly assess every component of your East York property.`
   },
   {
     question: "Should I attend the home inspection in East York?",
-    answer: `Yes, we strongly recommend attending your <strong>East York home inspection</strong>. This allows you to walk through the property with our inspector, ask questions in real-time, learn about maintenance requirements for East York's specific heritage and post-war considerations, and understand the significance of any issues discovered. We provide valuable insights about property maintenance and local building practices.`
+    answer: `Yes, we strongly recommend attending your <strong>East York home inspection</strong>. This allows you to walk through the property with our inspector, ask questions in real-time, learn about maintenance requirements, and understand the significance of any issues discovered. We provide valuable insights about your specific East York home that you won't get from just reading the report.`
   },
   {
     question: "What are the most common issues found in East York home inspections?",
@@ -299,12 +258,12 @@ const faqs = [
     answer: `We provide <strong>same-day digital reports</strong> for all East York home inspections. You'll receive your comprehensive inspection report via email within 4-6 hours of completing the inspection. Reports include detailed findings, high-resolution photos, maintenance recommendations, and prioritized repair suggestions to help you make informed decisions about your East York property.`
   },
   {
-    question: "Do you inspect post-war bungalows in East York?",
-    answer: `Yes, we specialize in <strong>post-war home inspections in East York</strong>. Our inspectors have extensive knowledge of construction methods from the 1940s to 1960s, including identifying aluminum wiring, asbestos insulation, and other period-specific concerns common in East York's post-war neighborhoods.`
+    question: "Do you inspect condos and mid-rises in East York?",
+    answer: `Yes, we specialize in <Link to="/services/condo">condo inspections in East York</Link>. Our condo inspections focus on the unit's interior systems including HVAC units, electrical panels, plumbing fixtures, windows, and interior finishes. We also help you understand building Status Certificates and reserve fund studies, which are crucial for East York's condo market.`
   },
   {
     question: "What areas of East York do you service?",
-    answer: `We provide <strong>home inspection services throughout East York</strong> including Leaside, Thorncliffe Park, Flemingdon Park, Don Mills, Old East York, Taylor-Massey, and all surrounding neighborhoods. We also serve nearby communities throughout Toronto and the GTA.`
+    answer: `We provide <strong>home inspection services throughout East York</strong> including Leaside, Thorncliffe Park, Flemingdon Park, Don Mills, Old East York, Taylor-Massey, and all surrounding neighborhoods. We also serve the entire Greater Toronto Area including North York, Scarborough, Markham, Vaughan, and beyond.`
   }
 ];
 
@@ -313,19 +272,19 @@ const testimonials = [
   {
     name: "Michael Thompson",
     location: "Leaside, East York",
-    content: "Our heritage home inspection in Leaside was exceptional. The inspector understood the unique challenges of East York's historic properties and identified several issues that other inspectors missed. Their knowledge of original construction methods gave us confidence in our renovation plans. Highly recommended for East York heritage homes!",
+    content: "The ASADS home inspection in East York was incredibly thorough. The inspector spent over 3 hours examining every detail of our heritage home and identified several issues we would have missed. The same-day report helped us negotiate $18,000 in repairs. Highly recommend for any East York home buyer!",
     rating: 5
   },
   {
     name: "Sarah Chen",
     location: "Don Mills, East York",
-    content: "As first-time home buyers in Don Mills, we needed an inspector who understood the Garden City community's unique characteristics. ASADS delivered exactly what we needed. Their attention to tree root systems and drainage in our ravine lot was invaluable. The detailed report helped us plan preventative maintenance.",
+    content: "As first-time home buyers in East York, we were nervous about the inspection process. ASADS made it easy to understand and provided exceptional service. Their Toronto-specific knowledge of heritage homes was invaluable. The detailed report gave us complete confidence in our purchase.",
     rating: 5
   },
   {
     name: "David Wilson",
     location: "Thorncliffe Park, East York",
-    content: "We've used ASADS for multiple investment property inspections in East York. Their thorough approach and understanding of post-war construction have been invaluable. They identified aluminum wiring and asbestos concerns that could have been expensive surprises. Excellent service for East York properties.",
+    content: "We've used ASADS for multiple property inspections in the GTA. Their attention to detail is unmatched, especially with older East York homes. The thermal imaging service identified hidden moisture issues that saved us from a major repair down the line. Professional, knowledgeable, and worth every penny.",
     rating: 5
   }
 ];
@@ -356,12 +315,12 @@ export default function EastYork() {
     });
   };
 
-  // Comprehensive Schema Markup for East York
+  // Comprehensive Schema Markup
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "ASADS Home Inspection East York",
-    "description": "Professional home inspection services in East York, Toronto providing comprehensive property assessments, heritage home inspections, post-war construction evaluations, and investment property inspections.",
+    "description": "Professional home inspection services in East York providing comprehensive property assessments, condo inspections, and specialized testing services throughout East York and the Greater Toronto Area.",
     "url": pageUrl,
     "telephone": "+16478019311",
     "email": "eastyork@asads.ca",
@@ -370,7 +329,7 @@ export default function EastYork() {
       "streetAddress": "East York Service Area",
       "addressLocality": "Toronto",
       "addressRegion": "ON",
-      "postalCode": "M4G-M4C",
+      "postalCode": "M4G",
       "addressCountry": "CA"
     },
     "geo": {
@@ -385,7 +344,7 @@ export default function EastYork() {
         "latitude": 43.7010,
         "longitude": -79.3472
       },
-      "geoRadius": "15000"
+      "geoRadius": "50000"
     },
     "serviceArea": [
       {
@@ -473,7 +432,7 @@ export default function EastYork() {
         "position": index + 1
       }))
     },
-    "description": "Professional home inspection services in East York including pre-purchase inspections, heritage home assessments, post-war construction evaluations, radon testing, mold inspection, thermal imaging, and investment property inspections."
+    "description": "Professional home inspection services in East York including pre-purchase inspections, condo inspections, new construction inspections, radon testing, mold inspection, thermal imaging, and specialized property assessments."
   };
 
   const faqSchema = {
@@ -522,7 +481,7 @@ export default function EastYork() {
         <link rel="canonical" href={pageUrl} />
         
         {/* Keywords for search engines */}
-        <meta name="keywords" content={`${primaryKeyword}, ${secondaryKeywords.join(", ")}, home inspectors east york toronto, property inspection east york ontario, leaside home inspection`} />
+        <meta name="keywords" content={`${primaryKeyword}, ${secondaryKeywords.join(", ")}, home inspectors east york, property inspection east york`} />
         
         {/* Open Graph for social sharing */}
         <meta property="og:title" content={metaTitle} />
@@ -544,7 +503,7 @@ export default function EastYork() {
         
         {/* Geo tags for local SEO */}
         <meta name="geo.region" content="CA-ON" />
-        <meta name="geo.placename" content="East York, Toronto" />
+        <meta name="geo.placename" content="East York" />
         <meta name="geo.position" content="43.7010;-79.3472" />
         <meta name="ICBM" content="43.7010, -79.3472" />
         
@@ -574,10 +533,10 @@ export default function EastYork() {
               </span>
             </div>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Professional Home Inspection Services in <span className="text-secondary">East York, Toronto</span>
+              Professional Home Inspection Services in <span className="text-secondary">East York</span>
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-              Looking for comprehensive <strong>home inspection in East York</strong>? ASADS provides professional property assessments with licensed inspectors, heritage home expertise, and same-day digital reports. Serving East York, Leaside, Don Mills, and all Toronto neighborhoods.
+              Looking for comprehensive <strong>home inspection in East York</strong>? ASADS provides professional property assessments with licensed inspectors, same-day digital reports, and competitive pricing starting at $525. Serving all East York neighborhoods and GTA communities.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
@@ -591,7 +550,7 @@ export default function EastYork() {
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Shield className="h-5 w-5" />
-                <span>Licensed Heritage Home Specialists</span>
+                <span>Licensed East York Inspectors</span>
               </div>
             </div>
             
@@ -627,15 +586,15 @@ export default function EastYork() {
             <div className="mb-16">
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-muted-foreground mb-6">
-                  When searching for <strong>home inspection companies in East York</strong>, choosing licensed professionals with local heritage home, post-war construction, and Don Valley ravine expertise is essential for protecting your investment in one of Toronto's most diverse communities. ASADS Home Inspection provides comprehensive property assessments throughout East York and surrounding areas, helping homeowners, investors, and first-time buyers make informed decisions with confidence.
+                  When searching for <strong>home inspection companies in East York</strong>, choosing licensed professionals with local expertise is essential for protecting your investment. ASADS Home Inspection provides comprehensive property assessments throughout the Greater Toronto Area, helping homeowners, buyers, and sellers make informed decisions with confidence.
                 </p>
                 
                 <h2 className="font-heading text-3xl font-bold text-foreground mb-6">
-                  Comprehensive Home Inspection Services in East York, Toronto
+                  Comprehensive Home Inspection Services in East York
                 </h2>
                 
                 <p className="text-muted-foreground mb-6">
-                  Our <Link to="/services/pre-purchase" className="text-primary hover:underline font-medium">pre-purchase home inspection in East York</Link> is designed to identify both obvious defects and hidden problems that could cost thousands in repairs. From heritage home evaluations in Leaside to post-war bungalow assessments in Don Mills, our licensed inspectors examine every accessible component of your property following Ontario's Standards of Practice.
+                  Our <Link to="/services/pre-purchase" className="text-primary hover:underline font-medium">pre-purchase home inspection in East York</Link> is designed to identify both obvious defects and hidden problems that could cost thousands in repairs. From foundation assessments to roofing evaluations, our licensed inspectors examine every accessible component of your property following Ontario's Standards of Practice.
                 </p>
                 
                 <div className="bg-primary/5 p-6 rounded-xl border border-primary/10 mb-8">
@@ -644,31 +603,9 @@ export default function EastYork() {
                     East York Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection East York cost</strong> ranges from $525 to $875 for a standard residential property. Heritage homes in Leaside may range from $650-$1,200, while condominiums typically range from $425-$700. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in East York's diverse market.
+                    The average <strong>home inspection East York cost</strong> ranges from $525 to $875 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
                   </p>
                 </div>
-              </div>
-            </div>
-
-            {/* East York-Specific Features */}
-            <div className="mb-16">
-              <h2 className="font-heading text-3xl font-bold text-foreground mb-8 text-center">
-                East York-Specific Inspection Expertise
-              </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {eastYorkFeatures.map((feature, index) => (
-                  <div key={index} className="bg-card p-6 rounded-xl border border-border hover:border-primary/30 transition-colors">
-                    <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                      {feature.icon}
-                    </div>
-                    <h3 className="font-heading font-bold text-lg text-foreground mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -701,7 +638,7 @@ export default function EastYork() {
                   14+ Professional Home Inspection Services in East York
                 </h2>
                 <p className="text-muted-foreground max-w-3xl mx-auto">
-                  Comprehensive inspection solutions for every East York property type and concern. Each service includes detailed reporting, expert analysis, and professional recommendations tailored to East York's unique housing market.
+                  Comprehensive inspection solutions for every East York property type and concern. Each service includes detailed reporting, expert analysis, and professional recommendations.
                 </p>
               </div>
               
@@ -785,20 +722,20 @@ export default function EastYork() {
                 East York Neighborhoods We Serve
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-                {eastYorkNeighborhoods.map((area, index) => (
+                {eastYorkNeighborhoods.map((hood, index) => (
                   <div
                     key={index}
                     className="flex flex-col items-center justify-center p-4 rounded-lg bg-card border border-border text-center"
                   >
                     <MapPin className="h-5 w-5 text-primary mb-2" />
-                    <span className="text-sm font-medium text-foreground">{area.name}</span>
-                    <span className="text-xs text-muted-foreground mt-1">{area.service}</span>
+                    <span className="text-sm font-medium text-foreground">{hood.name}</span>
+                    <span className="text-xs text-muted-foreground mt-1">{hood.service}</span>
                   </div>
                 ))}
               </div>
               <div className="text-center mt-8">
                 <p className="text-muted-foreground">
-                  Also serving nearby communities including Downtown Toronto, North York, Scarborough, Markham, and throughout the GTA region.
+                  Also serving all GTA communities including Toronto, North York, Scarborough, Markham, Vaughan, and beyond.
                 </p>
               </div>
             </div>
@@ -853,7 +790,7 @@ export default function EastYork() {
                 Ready to Schedule Your East York Home Inspection?
               </h2>
               <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Book your comprehensive home inspection in East York today. Our licensed inspectors provide detailed assessments with same-day reports, competitive pricing, and professional service throughout East York and the surrounding Toronto region.
+                Book your comprehensive home inspection in East York today. Our licensed inspectors provide detailed assessments with same-day reports, competitive pricing, and professional service throughout the GTA.
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -910,4 +847,4 @@ export default function EastYork() {
       </section>
     </Layout>
   );
-      }
+    }
