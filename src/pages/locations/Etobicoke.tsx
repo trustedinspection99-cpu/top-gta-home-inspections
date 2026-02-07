@@ -38,7 +38,15 @@ import {
   Factory,
   Castle,
   TreePine,
-  HomeIcon
+  HomeIcon,
+  Subway,
+  Car,
+  Wifi,
+  Zap,
+  Cloud,
+  Sun,
+  Moon,
+  Activity
 } from "lucide-react";
 
 // Primary keyword: "home inspection etobicoke"
@@ -95,7 +103,7 @@ const allServices = [
     title: "Radon Testing", 
     href: "/services/radon-testing",
     description: "Radon gas testing for Etobicoke homes and basements",
-    icon: <Wind className="h-6 w-6" />,
+    icon: <Cloud className="h-6 w-6" />,
     anchorText: "radon testing in Etobicoke"
   },
   { 
@@ -116,7 +124,7 @@ const allServices = [
     title: "WETT Inspection", 
     href: "/services/wett",
     description: "WETT-certified inspections for wood-burning appliances",
-    icon: <Thermometer className="h-6 w-6" />,
+    icon: <Activity className="h-6 w-6" />,
     anchorText: "WETT inspection Etobicoke"
   },
   { 
@@ -248,7 +256,7 @@ const benefits = [
 // Etobicoke-specific content about local considerations
 const etobicokeFeatures = [
   {
-    icon: <Landmark className="h-5 w-5" />,
+    icon: <Castle className="h-5 w-5" />,
     title: "Heritage District Specialists",
     description: "Expert inspections for Etobicoke's heritage homes in The Kingsway and Humber Valley with attention to period-appropriate construction."
   },
@@ -263,7 +271,7 @@ const etobicokeFeatures = [
     description: "Detailed evaluations for Etobicoke's LEED-certified and energy-efficient homes with sustainability in mind."
   },
   {
-    icon: <Subway className="h-5 w-5" />,
+    icon: <Train className="h-5 w-5" />,
     title: "Transit-Oriented Development",
     description: "Inspections for properties near Kipling Station, Islington Station, and other TTC/GO Transit hubs with attention to noise and vibration."
   }
@@ -907,4 +915,4 @@ export default function Etobicoke() {
       </section>
     </Layout>
   );
-              }
+    }
