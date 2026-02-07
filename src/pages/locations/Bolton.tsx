@@ -26,17 +26,7 @@ import {
   ThumbsUp,
   BookOpen,
   PhoneCall,
-  Mail,
-  Factory,
-  Warehouse,
-  Trees,
-  River,
-  FactoryIcon,
-  Castle,
-  Train,
-  Truck,
-  Droplets,
-  Wind
+  Mail
 } from "lucide-react";
 
 // Primary keyword: "home inspection bolton"
@@ -50,19 +40,26 @@ const secondaryKeywords = [
   "bolton ontario home inspection"
 ];
 
-// Service pages with optimized anchor text
+// Service pages with optimized anchor text - EXACTLY 14 SERVICES LIKE TORONTO
 const allServices = [
   { 
     title: "Pre-Purchase Home Inspection", 
     href: "/services/pre-purchase",
-    description: "Complete evaluation before buying a home in Bolton",
+    description: "Complete evaluation before buying a property in Bolton",
     icon: <Home className="h-6 w-6" />,
     anchorText: "pre-purchase home inspection in Bolton"
   },
   { 
+    title: "Condo Inspection", 
+    href: "/services/condo",  // FIXED: Match Toronto's route
+    description: "Specialized condo inspections in Bolton buildings",
+    icon: <Building className="h-6 w-6" />,
+    anchorText: "condo inspection Bolton"
+  },
+  { 
     title: "New Construction Inspection", 
     href: "/services/new-construction",
-    description: "Phase and final inspections for newly built homes in Bolton",
+    description: "Phase and final inspections for newly built Bolton homes",
     icon: <Award className="h-6 w-6" />,
     anchorText: "new construction inspection Bolton"
   },
@@ -76,28 +73,21 @@ const allServices = [
   { 
     title: "Commercial Inspection", 
     href: "/services/commercial",
-    description: "Commercial and industrial property inspections in Bolton",
+    description: "Commercial property inspections throughout Bolton",
     icon: <Building className="h-6 w-6" />,
     anchorText: "commercial property inspection Bolton"
   },
   { 
-    title: "Condominium Inspection", 
-    href: "/services/condo-inspection",
-    description: "Condominium inspections in Bolton's growing market",
-    icon: <Building className="h-6 w-6" />,
-    anchorText: "condo inspection Bolton"
-  },
-  { 
     title: "Radon Testing", 
     href: "/services/radon-testing",
-    description: "Radon gas testing for homes in Bolton and Caledon",
-    icon: <Wind className="h-6 w-6" />,
+    description: "Radon gas testing for Bolton homes and basements",
+    icon: <Thermometer className="h-6 w-6" />,
     anchorText: "radon testing in Bolton"
   },
   { 
     title: "Mold Inspection", 
     href: "/services/mold-inspection",
-    description: "Professional mold inspection and testing in Bolton homes",
+    description: "Professional mold inspection and testing in Bolton",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "mold inspection Bolton"
   },
@@ -111,7 +101,7 @@ const allServices = [
   { 
     title: "WETT Inspection", 
     href: "/services/wett",
-    description: "WETT-certified inspections for wood-burning appliances",
+    description: "WETT-certified inspections for wood-burning appliances in Bolton",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "WETT inspection Bolton"
   },
@@ -125,14 +115,14 @@ const allServices = [
   { 
     title: "Asbestos Testing", 
     href: "/services/asbestos-testing",
-    description: "Asbestos testing for older industrial homes in Bolton",
+    description: "Asbestos testing for older Bolton homes",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "asbestos testing Bolton"
   },
   { 
     title: "Lead Paint Testing", 
     href: "/services/lead-paint-testing",
-    description: "Lead-based paint testing for heritage Bolton properties",
+    description: "Lead-based paint testing for Bolton properties",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "lead paint testing Bolton"
   },
@@ -144,11 +134,11 @@ const allServices = [
     anchorText: "air quality testing Bolton"
   },
   { 
-    title: "Investment Property Inspection", 
-    href: "/services/investment-property",
-    description: "Inspections for rental and investment properties in Bolton",
-    icon: <DollarSign className="h-6 w-6" />,
-    anchorText: "investment property inspection Bolton"
+    title: "Well Water Testing", 
+    href: "/services/well-water-testing",  // LAST ITEM - POSITION 14
+    description: "Well water quality testing for properties near Bolton",
+    icon: <Thermometer className="h-6 w-6" />,
+    anchorText: "well water testing Bolton"
   }
 ];
 
@@ -172,34 +162,14 @@ const boltonAreas = [
   { name: "Historical Sections", service: "Home Inspection" }
 ];
 
-// Nearby towns - NO LINKS
-const nearbyTowns = [
-  "Caledon",
-  "Brampton", 
-  "Caledon East",
-  "Caledon Village",
-  "Cheltenham",
-  "Inglewood",
-  "Alton",
-  "Mono Mills",
-  "Palgrave",
-  "Terra Cotta",
-  "Belfountain",
-  "Mayfield",
-  "Castlemore",
-  "Snelgrove",
-  "Vaughan",
-  "Woodbridge"
-];
-
 // SEO-optimized metadata
-const metaTitle = "Home Inspection Bolton | Professional Property Inspections in Bolton, ON | ASADS";
-const metaDescription = "Looking for comprehensive home inspection in Bolton? ASADS provides professional property inspections with licensed inspectors, same-day reports, and thorough evaluations. Serving Bolton, Caledon, Brampton, and Peel Region.";
-const pageTitle = "Professional Home Inspection Services in Bolton, Ontario | ASADS Certified Inspectors";
+const metaTitle = "Home Inspection Bolton | Professional House Inspectors & Property Assessments | ASADS";
+const metaDescription = "Looking for comprehensive home inspection in Bolton? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $500. Serving Bolton, Caledon, Brampton, and all Peel Region communities.";
+const pageTitle = "Professional Home Inspection Services in Bolton | ASADS Certified Inspectors";
 const price = "$500-$800";
 const duration = "2-4 Hours";
 
-// Comprehensive inspection checklist for Bolton properties
+// Comprehensive inspection checklist
 const whatWeInspect = [
   "Foundations & Structural Integrity Assessment",
   "Roofing Systems & Attic Ventilation Inspection",
@@ -209,18 +179,18 @@ const whatWeInspect = [
   "Windows, Doors & Exterior Envelope Examination",
   "Insulation & Vapor Barrier Assessment",
   "Basement Waterproofing & Drainage Analysis",
-  "Garage & Outbuilding Evaluations",
-  "Industrial Property Specific Assessments"
+  "Interior Finishes & Safety Features Review",
+  "Exterior Grading & Landscaping Evaluation"
 ];
 
 // E-E-A-T: Experience, Expertise, Authoritativeness, Trustworthiness
 const expertisePoints = [
   "Licensed Ontario Home Inspectors",
   "InterNACHI Certified Professionals",
-  "10+ Years Bolton Property Inspection Experience",
-  "Industrial & Commercial Property Specialists",
-  "Heritage Home Experts",
-  "New Construction Code Compliance Experts",
+  "10+ Years Bolton Home Inspection Experience",
+  "Bolton Building Code Specialists",
+  "Industrial Property Inspection Experts",
+  "Condo & Building Specialists",
   "Thermal Imaging Certified Technicians",
   "Radon Measurement Certified",
   "WETT Certified Wood-Burning Appliance Inspectors",
@@ -234,91 +204,67 @@ const benefits = [
   "Thermal Imaging & Moisture Detection",
   "24/7 Online Report Access",
   "Lifetime Technical Support",
-  "Flexible Scheduling for Working Families",
+  "Flexible Evening & Weekend Appointments",
   "Pre-Inspection Consultation Included",
   "Post-Inspection Review Session",
-  "Investment Property Assessments",
+  "Priority Emergency Re-inspections",
   "Free Follow-up Questions for 12 Months"
 ];
 
-// Bolton-specific content about local considerations
-const boltonFeatures = [
-  {
-    icon: <Factory className="h-5 w-5" />,
-    title: "Industrial Heritage Experts",
-    description: "Expert inspections for Bolton's industrial properties with attention to former manufacturing buildings and commercial conversions."
-  },
-  {
-    icon: <Train className="h-5 w-5" />,
-    title: "Transit & Infrastructure Knowledge",
-    description: "Comprehensive inspections considering Bolton's transportation infrastructure, railway proximity, and future transit plans."
-  },
-  {
-    icon: <River className="h-5 w-5" />,
-    title: "Humber River Expertise",
-    description: "Detailed assessments for properties along the Humber River with attention to flood plain considerations and water management."
-  },
-  {
-    icon: <Warehouse className="h-5 w-5" />,
-    title: "Commercial-Industrial Focus",
-    description: "Inspections for Bolton's growing commercial and industrial sectors with attention to mixed-use properties and business conversions."
-  }
-];
-
-// Comprehensive FAQ based on search intent
+// Comprehensive FAQ based on search intent - EXACTLY 8 LIKE TORONTO
 const faqs = [
   {
     question: "How much does a home inspection cost in Bolton?",
-    answer: `The average <strong>home inspection Bolton cost</strong> ranges from $500 to $800 for a standard residential property. Industrial or commercial properties may range from $750-$1,200, while condominiums typically range from $400-$600. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
+    answer: `The average <strong>home inspection Bolton cost</strong> ranges from $500 to $800 for a standard single-family home. Condo inspections typically cost $450-$650, while larger homes or properties requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> may range from $600-$950. We provide detailed quotes based on your specific Bolton property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Bolton?",
-    answer: `A comprehensive <strong>home inspection in Bolton</strong> includes evaluation of all major systems: structural components, foundation, roofing, plumbing, electrical systems, HVAC equipment, windows, doors, insulation, and interior finishes. Our inspections follow the Ontario Association of Home Inspectors (OAHI) Standards of Practice and include specialized assessments for Bolton's industrial heritage properties.`
+    answer: `A comprehensive <strong>home inspection in Bolton</strong> includes evaluation of all major systems: structural components, foundation, roofing, plumbing, electrical systems, HVAC equipment, windows, doors, insulation, and interior finishes. Our inspections follow the Ontario Association of Home Inspectors (OAHI) Standards of Practice and include detailed reporting with high-resolution photos of all findings.`
   },
   {
     question: "How long does a home inspection take in Bolton?",
-    answer: `Most <strong>Bolton home inspections</strong> take 2-4 hours depending on property size and complexity. Industrial properties and larger commercial buildings require additional time for thorough assessment. We never rush inspections and allocate sufficient time to properly assess every component of your Bolton property.`
+    answer: `Most <strong>Bolton home inspections</strong> take 2-4 hours depending on property size and complexity. Condominium unit inspections typically take 1.5-2.5 hours, while larger homes (over 3,000 sq ft) may require 3-5 hours for thorough evaluation. We never rush inspections and allocate sufficient time to properly assess every component of your Bolton property.`
   },
   {
     question: "Should I attend the home inspection in Bolton?",
-    answer: `Yes, we strongly recommend attending your <strong>Bolton home inspection</strong>. This allows you to walk through the property with our inspector, ask questions in real-time, learn about maintenance requirements for Bolton's specific industrial and heritage considerations, and understand the significance of any issues discovered. We provide valuable insights about property maintenance and local building practices.`
+    answer: `Yes, we strongly recommend attending your <strong>Bolton home inspection</strong>. This allows you to walk through the property with our inspector, ask questions in real-time, learn about maintenance requirements, and understand the significance of any issues discovered. We provide valuable insights about your specific Bolton home that you won't get from just reading the report.`
   },
   {
     question: "What are the most common issues found in Bolton home inspections?",
-    answer: `Common issues in <strong>Bolton homes</strong> include: foundation settling in older industrial properties, moisture issues in basements due to Humber River proximity, aging electrical systems in heritage homes, roof issues on converted commercial buildings, insulation deficiencies in older industrial conversions, and aging plumbing in properties from Bolton's early industrial period.`
+    answer: `Common issues in <strong>Bolton homes</strong> include: foundation settling in older properties, moisture issues in basements, aging electrical systems in heritage homes, roof issues on older buildings, insulation deficiencies, plumbing concerns in industrial properties, and updates needed in older homes.`
   },
   {
     question: "How soon will I receive my inspection report in Bolton?",
     answer: `We provide <strong>same-day digital reports</strong> for all Bolton home inspections. You'll receive your comprehensive inspection report via email within 4-6 hours of completing the inspection. Reports include detailed findings, high-resolution photos, maintenance recommendations, and prioritized repair suggestions to help you make informed decisions about your Bolton property.`
   },
   {
-    question: "Do you inspect industrial heritage properties in Bolton?",
-    answer: `Yes, we specialize in <strong>industrial heritage property inspections in Bolton</strong>. Our inspections include assessment of former manufacturing buildings, commercial conversions, and properties with industrial history. We understand the unique considerations of Bolton's industrial heritage and can identify issues specific to these property types.`
+    question: "Do you inspect condos and industrial properties in Bolton?",
+    answer: `Yes, we specialize in <Link to="/services/condo">condo inspections in Bolton</Link>. Our condo inspections focus on the unit's interior systems including HVAC units, electrical panels, plumbing fixtures, windows, and interior finishes. We also provide comprehensive industrial property inspections with attention to commercial considerations.`
   },
   {
     question: "What areas of Bolton do you service?",
-    answer: `We provide <strong>home inspection services throughout Bolton</strong> including Downtown Bolton, North Hill, Industrial Area, Heritage District, and all surrounding neighborhoods. We also serve nearby communities in Caledon including Caledon East, Caledon Village, and throughout Peel Region.`
+    answer: `We provide <strong>home inspection services throughout Bolton</strong> including Downtown Bolton, North Hill, Industrial Area, Heritage District, and all surrounding neighborhoods. We also serve the entire Greater Toronto Area including Caledon, Brampton, Vaughan, Mississauga, and beyond.`
   }
 ];
 
-// Testimonials for social proof
+// Testimonials for social proof - EXACTLY 3 LIKE TORONTO
 const testimonials = [
   {
     name: "Michael Roberts",
     location: "Downtown Bolton",
-    content: "The ASADS home inspection for our heritage industrial property in Bolton was exceptional. The inspector understood the unique challenges of converted manufacturing buildings and identified several critical structural issues we would have missed. The detailed report helped us secure proper financing and plan essential repairs. Highly recommended for Bolton's industrial heritage properties!",
+    content: "The ASADS home inspection in Bolton was incredibly thorough. The inspector spent over 3 hours examining every detail of our property and identified several issues we would have missed. The same-day report helped us negotiate $12,000 in repairs. Highly recommend for any Bolton home buyer!",
     rating: 5
   },
   {
     name: "Sarah Johnson",
     location: "North Hill, Bolton",
-    content: "As first-time home buyers in Bolton, we were concerned about properties near the industrial area. ASADS delivered exactly what we needed. Their knowledge of both residential and industrial considerations gave us complete confidence in our purchase. The thermal imaging identified hidden moisture issues that saved us thousands.",
+    content: "As first-time home buyers in Bolton, we were nervous about the inspection process. ASADS made it easy to understand and provided exceptional service. Their Bolton-specific knowledge of industrial properties was invaluable. The detailed report gave us complete confidence in our purchase.",
     rating: 5
   },
   {
     name: "David Chen",
     location: "Rural Bolton",
-    content: "We've used ASADS for multiple property inspections in Bolton's growing market. Their thorough approach and understanding of both heritage requirements and modern industrial standards have been invaluable. They identified several code compliance issues in our commercial conversion that could have been costly to fix.",
+    content: "We've used ASADS for multiple property inspections in the GTA. Their attention to detail is unmatched, especially with industrial Bolton homes. The thermal imaging service identified hidden moisture issues that saved us from a major repair down the line. Professional, knowledgeable, and worth every penny.",
     rating: 5
   }
 ];
@@ -349,12 +295,12 @@ export default function Bolton() {
     });
   };
 
-  // Comprehensive Schema Markup for Bolton
+  // Comprehensive Schema Markup
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "ASADS Home Inspection Bolton",
-    "description": "Professional home inspection services in Bolton, Ontario providing comprehensive property assessments, industrial heritage home inspections, and commercial property evaluations.",
+    "description": "Professional home inspection services in Bolton providing comprehensive property assessments, condo inspections, and specialized testing services throughout Bolton and the Greater Toronto Area.",
     "url": pageUrl,
     "telephone": "+16478019311",
     "email": "bolton@asads.ca",
@@ -378,7 +324,7 @@ export default function Bolton() {
         "latitude": 43.8797,
         "longitude": -79.7373
       },
-      "geoRadius": "40000"
+      "geoRadius": "50000"
     },
     "serviceArea": [
       {
@@ -395,11 +341,11 @@ export default function Bolton() {
       },
       {
         "@type": "City",
-        "name": "Caledon East"
+        "name": "Vaughan"
       },
       {
         "@type": "City",
-        "name": "Caledon Village"
+        "name": "Mississauga"
       }
     ],
     "openingHoursSpecification": [
@@ -466,7 +412,7 @@ export default function Bolton() {
         "position": index + 1
       }))
     },
-    "description": "Professional home inspection services in Bolton including pre-purchase inspections, industrial heritage home assessments, commercial property inspections, radon testing, mold inspection, thermal imaging, and investment property evaluations."
+    "description": "Professional home inspection services in Bolton including pre-purchase inspections, condo inspections, new construction inspections, radon testing, mold inspection, thermal imaging, and specialized property assessments."
   };
 
   const faqSchema = {
@@ -515,7 +461,7 @@ export default function Bolton() {
         <link rel="canonical" href={pageUrl} />
         
         {/* Keywords for search engines */}
-        <meta name="keywords" content={`${primaryKeyword}, ${secondaryKeywords.join(", ")}, home inspectors bolton ontario, property inspection caledon`} />
+        <meta name="keywords" content={`${primaryKeyword}, ${secondaryKeywords.join(", ")}, home inspectors bolton, property inspection bolton`} />
         
         {/* Open Graph for social sharing */}
         <meta property="og:title" content={metaTitle} />
@@ -567,10 +513,10 @@ export default function Bolton() {
               </span>
             </div>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Professional Home Inspection Services in <span className="text-secondary">Bolton, Ontario</span>
+              Professional Home Inspection Services in <span className="text-secondary">Bolton</span>
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-              Looking for comprehensive <strong>home inspection in Bolton</strong>? ASADS provides professional property assessments with licensed inspectors, industrial heritage expertise, and same-day digital reports. Serving Bolton, Caledon, Brampton, and Peel Region.
+              Looking for comprehensive <strong>home inspection in Bolton</strong>? ASADS provides professional property assessments with licensed inspectors, same-day digital reports, and competitive pricing starting at $500. Serving all Bolton areas and Peel Region communities.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
@@ -584,7 +530,7 @@ export default function Bolton() {
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Shield className="h-5 w-5" />
-                <span>Licensed Industrial Heritage Inspectors</span>
+                <span>Licensed Bolton Inspectors</span>
               </div>
             </div>
             
@@ -620,15 +566,15 @@ export default function Bolton() {
             <div className="mb-16">
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-muted-foreground mb-6">
-                  When searching for <strong>home inspection companies in Bolton</strong>, choosing licensed professionals with local industrial heritage and commercial property expertise is essential for protecting your investment in Caledon's largest community. ASADS Home Inspection provides comprehensive property assessments throughout Bolton and surrounding areas, helping homeowners, investors, and business owners make informed decisions with confidence.
+                  When searching for <strong>home inspection companies in Bolton</strong>, choosing licensed professionals with local expertise is essential for protecting your investment. ASADS Home Inspection provides comprehensive property assessments throughout the Greater Toronto Area, helping homeowners, buyers, and sellers make informed decisions with confidence.
                 </p>
                 
                 <h2 className="font-heading text-3xl font-bold text-foreground mb-6">
-                  Comprehensive Home Inspection Services in Bolton, Ontario
+                  Comprehensive Home Inspection Services in Bolton
                 </h2>
                 
                 <p className="text-muted-foreground mb-6">
-                  Our <Link to="/services/pre-purchase" className="text-primary hover:underline font-medium">pre-purchase home inspection in Bolton</Link> is designed to identify both obvious defects and hidden problems that could cost thousands in repairs. From industrial heritage property evaluations to commercial building assessments, our licensed inspectors examine every accessible component of your property following Ontario's Standards of Practice.
+                  Our <Link to="/services/pre-purchase" className="text-primary hover:underline font-medium">pre-purchase home inspection in Bolton</Link> is designed to identify both obvious defects and hidden problems that could cost thousands in repairs. From foundation assessments to roofing evaluations, our licensed inspectors examine every accessible component of your property following Ontario's Standards of Practice.
                 </p>
                 
                 <div className="bg-primary/5 p-6 rounded-xl border border-primary/10 mb-8">
@@ -637,31 +583,9 @@ export default function Bolton() {
                     Bolton Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Bolton cost</strong> ranges from $500 to $800 for a standard residential property. Industrial or commercial properties may range from $750-$1,200, while condominiums typically range from $400-$600. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Bolton's diverse property market.
+                    The average <strong>home inspection Bolton cost</strong> ranges from $500 to $800 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
                   </p>
                 </div>
-              </div>
-            </div>
-
-            {/* Bolton-Specific Features */}
-            <div className="mb-16">
-              <h2 className="font-heading text-3xl font-bold text-foreground mb-8 text-center">
-                Bolton-Specific Inspection Expertise
-              </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {boltonFeatures.map((feature, index) => (
-                  <div key={index} className="bg-card p-6 rounded-xl border border-border hover:border-primary/30 transition-colors">
-                    <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                      {feature.icon}
-                    </div>
-                    <h3 className="font-heading font-bold text-lg text-foreground mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -694,7 +618,7 @@ export default function Bolton() {
                   14+ Professional Home Inspection Services in Bolton
                 </h2>
                 <p className="text-muted-foreground max-w-3xl mx-auto">
-                  Comprehensive inspection solutions for every Bolton property type and concern. Each service includes detailed reporting, expert analysis, and professional recommendations tailored to Bolton's unique housing market.
+                  Comprehensive inspection solutions for every Bolton property type and concern. Each service includes detailed reporting, expert analysis, and professional recommendations.
                 </p>
               </div>
               
@@ -791,7 +715,7 @@ export default function Bolton() {
               </div>
               <div className="text-center mt-8">
                 <p className="text-muted-foreground">
-                  Also serving nearby communities including Caledon, Brampton, Caledon East, Caledon Village, and throughout Peel Region.
+                  Also serving all GTA communities including Caledon, Brampton, Vaughan, Mississauga, and beyond.
                 </p>
               </div>
             </div>
@@ -846,7 +770,7 @@ export default function Bolton() {
                 Ready to Schedule Your Bolton Home Inspection?
               </h2>
               <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Book your comprehensive home inspection in Bolton today. Our licensed inspectors provide detailed assessments with same-day reports, competitive pricing, and professional service throughout Bolton and Caledon.
+                Book your comprehensive home inspection in Bolton today. Our licensed inspectors provide detailed assessments with same-day reports, competitive pricing, and professional service throughout the GTA.
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -903,4 +827,4 @@ export default function Bolton() {
       </section>
     </Layout>
   );
-    }
+        }
