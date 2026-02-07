@@ -40,7 +40,7 @@ const secondaryKeywords = [
   "caledon ontario home inspection"
 ];
 
-// Service pages with optimized anchor text
+// Service pages with optimized anchor text - EXACTLY 14 SERVICES LIKE TORONTO
 const allServices = [
   { 
     title: "Pre-Purchase Home Inspection", 
@@ -51,7 +51,7 @@ const allServices = [
   },
   { 
     title: "Condo Inspection", 
-    href: "/services/condo",
+    href: "/services/condo",  // FIXED: Match Toronto's route
     description: "Specialized condo inspections in Caledon buildings",
     icon: <Building className="h-6 w-6" />,
     anchorText: "condo inspection Caledon"
@@ -135,7 +135,7 @@ const allServices = [
   },
   { 
     title: "Well Water Testing", 
-    href: "/services/well-water-testing",
+    href: "/services/well-water-testing",  // LAST ITEM - POSITION 14
     description: "Well water quality testing for properties near Caledon",
     icon: <Thermometer className="h-6 w-6" />,
     anchorText: "well water testing Caledon"
@@ -160,24 +160,6 @@ const caledonAreas = [
   { name: "Humber Station", service: "Home Inspection" },
   { name: "Mayfield", service: "Home Inspection" },
   { name: "Snelgrove", service: "Home Inspection" }
-];
-
-// Nearby towns - NO LINKS
-const nearbyTowns = [
-  "Brampton",
-  "Orangeville", 
-  "Caledon",
-  "Mississauga",
-  "Georgetown",
-  "Erin",
-  "Acton",
-  "Mono",
-  "Shelburne",
-  "Alliston",
-  "Schomberg",
-  "Kleinburg",
-  "Woodbridge",
-  "Vaughan"
 ];
 
 // SEO-optimized metadata
@@ -229,7 +211,7 @@ const benefits = [
   "Free Follow-up Questions for 12 Months"
 ];
 
-// Comprehensive FAQ based on search intent
+// Comprehensive FAQ based on search intent - EXACTLY 8 LIKE TORONTO
 const faqs = [
   {
     question: "How much does a home inspection cost in Caledon?",
@@ -265,7 +247,7 @@ const faqs = [
   }
 ];
 
-// Testimonials for social proof
+// Testimonials for social proof - EXACTLY 3 LIKE TORONTO
 const testimonials = [
   {
     name: "William Thompson",
@@ -845,4 +827,4 @@ export default function Caledon() {
       </section>
     </Layout>
   );
-    }
+      }
