@@ -196,8 +196,8 @@ const nearbyTowns = [
 const metaTitle = "Home Inspection Kitchener | Professional Property Inspections in Kitchener, ON | ASADS";
 const metaDescription = "Looking for comprehensive home inspection in Kitchener? ASADS provides professional property inspections with licensed inspectors, same-day reports, and thorough evaluations. Serving Kitchener, Waterloo, Cambridge, and surrounding areas.";
 const pageTitle = "Professional Home Inspection Services in Kitchener, Ontario | ASADS Certified Inspectors";
-const price = "$450-$750";
-const duration = "2-4 Hours";
+const price = "$350-$600";
+const duration = "2 Hours";
 
 // Comprehensive inspection checklist for Kitchener properties
 const whatWeInspect = [
@@ -269,7 +269,7 @@ const kitchenerFeatures = [
 const faqs = [
   {
     question: "How much does a home inspection cost in Kitchener?",
-    answer: `The average <strong>home inspection Kitchener cost</strong> ranges from $450 to $750 for a standard residential property. Condominium inspections typically range from $350-$500, while larger homes or investment properties may range from $650-$950. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
+    answer: `The average <strong>home inspection Kitchener cost</strong> ranges from $350 to $600 for a standard residential property. Condominium inspections typically range from $350-$500, while larger homes or investment properties may range from $650-$950. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Kitchener?",
@@ -277,7 +277,7 @@ const faqs = [
   },
   {
     question: "How long does a home inspection take in Kitchener?",
-    answer: `Most <strong>Kitchener home inspections</strong> take 2-4 hours depending on property size and age. Larger homes and properties with extensive systems require additional time for thorough assessment. We never rush inspections and allocate sufficient time to properly assess every component of your Kitchener property.`
+    answer: `Most <strong>Kitchener home inspections</strong> take 2-3 hours depending on property size and age. Larger homes and properties with extensive systems require additional time for thorough assessment. We never rush inspections and allocate sufficient time to properly assess every component of your Kitchener property.`
   },
   {
     question: "Should I attend the home inspection in Kitchener?",
@@ -576,11 +576,11 @@ export default function Kitchener() {
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Clock className="h-5 w-5" />
-                <span>2-4 Hour Inspections</span>
+                <span>2-3 Hour Inspections</span>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <DollarSign className="h-5 w-5" />
-                <span>Starting at $450</span>
+                <span>Starting at $350</span>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Shield className="h-5 w-5" />
@@ -861,8 +861,8 @@ export default function Kitchener() {
                 <div className="bg-card border border-border rounded-xl p-6">
                   <Mail className="h-10 w-10 text-primary mx-auto mb-4" />
                   <h3 className="font-heading font-bold text-lg text-foreground mb-2">Email Us</h3>
-                  <a href="mailto:kitchener@asads.ca" className="text-primary hover:underline text-lg font-bold">
-                    kitchener@asads.ca
+                  <a href="mailto:info@asads.ca" className="text-primary hover:underline text-lg font-bold">
+                    info@asads.ca
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">Response within 2 hours</p>
                 </div>
