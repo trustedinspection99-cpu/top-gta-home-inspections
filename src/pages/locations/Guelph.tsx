@@ -633,7 +633,7 @@ export default function Guelph() {
                     Guelph Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Guelph cost</strong> ranges from $450 to $800 for a standard residential property. Heritage stone homes and larger properties may range from $650-$950, while condominiums typically range from $350-$500. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Guelph's diverse property market.
+                    The average <strong>home inspection Guelph cost</strong> ranges from $350 to $600 for a standard residential property. Heritage stone homes and larger properties may range from $650-$950, while condominiums typically range from $350-$500. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Guelph's diverse property market.
                   </p>
                 </div>
               </div>
