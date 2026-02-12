@@ -182,7 +182,7 @@ const nearbyCities = [
 
 // SEO-optimized metadata
 const metaTitle = "Home Inspection Brampton | Professional House Inspectors & Property Assessments | ASADS";
-const metaDescription = "Looking for comprehensive home inspection in Brampton? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $450. Serving Brampton and all Peel Region communities.";
+const metaDescription = "Looking for comprehensive home inspection in Brampton? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $350. Serving Brampton and all Peel Region communities.";
 const pageTitle = "Professional Home Inspection Services in Brampton | ASADS Certified Inspectors";
 const price = "$350-$600";
 const duration = "2 Hours";
@@ -558,7 +558,7 @@ export default function Brampton() {
               Professional Home Inspection Services in <span className="text-secondary">Brampton</span>
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-              Looking for comprehensive <strong>home inspection in Brampton</strong>? ASADS provides professional property assessments with licensed inspectors, same-day digital reports, and competitive pricing starting at $450. Serving all Brampton neighborhoods and Peel Region communities.
+              Looking for comprehensive <strong>home inspection in Brampton</strong>? ASADS provides professional property assessments with licensed inspectors, same-day digital reports, and competitive pricing starting at $350. Serving all Brampton neighborhoods and Peel Region communities.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
@@ -625,7 +625,7 @@ export default function Brampton() {
                     Brampton Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Brampton cost</strong> ranges from $450 to $750 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Brampton's competitive market.
+                    The average <strong>home inspection Brampton cost</strong> ranges from $350 to $600 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Brampton's competitive market.
                   </p>
                 </div>
               </div>
