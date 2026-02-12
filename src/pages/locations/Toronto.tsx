@@ -188,8 +188,8 @@ const gtaSuburbs = [
 const metaTitle = "Home Inspection Toronto | Professional House Inspectors & Property Assessments | ASADS";
 const metaDescription = "Looking for comprehensive home inspection in Toronto? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $450. Serving Toronto, Mississauga, Vaughan, Markham, Oakville, and all GTA neighborhoods.";
 const pageTitle = "Professional Home Inspection Services in Toronto | ASADS Certified Inspectors";
-const price = "$450-$750";
-const duration = "2-4 Hours";
+const price = "$350-$600";
+const duration = "2 Hours";
 
 // Comprehensive inspection checklist
 const whatWeInspect = [
@@ -237,7 +237,7 @@ const benefits = [
 const faqs = [
   {
     question: "How much does a home inspection cost in Toronto?",
-    answer: `The average <strong>home inspection Toronto cost</strong> ranges from $450 to $750 for a standard single-family home. Condo inspections typically cost $350-$550, while larger homes or properties requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> may range from $650-$900. We provide detailed quotes based on your specific Toronto property's size, age, and inspection requirements.`
+    answer: `The average <strong>home inspection Toronto cost</strong> ranges from $350 to $600 for a standard single-family home. Condo inspections typically cost $350-$550, while larger homes or properties requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> may range from $650-$900. We provide detailed quotes based on your specific Toronto property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Toronto?",
@@ -245,7 +245,7 @@ const faqs = [
   },
   {
     question: "How long does a home inspection take in Toronto?",
-    answer: `Most <strong>Toronto home inspections</strong> take 2-4 hours depending on property size and complexity. Condominium unit inspections typically take 1.5-2.5 hours, while larger homes (over 3,000 sq ft) may require 3-5 hours for thorough evaluation. We never rush inspections and allocate sufficient time to properly assess every component of your Toronto property.`
+    answer: `Most <strong>Toronto home inspections</strong> take 2-3 hours depending on property size and complexity. Condominium unit inspections typically take 1.5-2.5 hours, while larger homes (over 3,000 sq ft) may require 3-5 hours for thorough evaluation. We never rush inspections and allocate sufficient time to properly assess every component of your Toronto property.`
   },
   {
     question: "Should I attend the home inspection in Toronto?",
@@ -544,11 +544,11 @@ export default function Toronto() {
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Clock className="h-5 w-5" />
-                <span>2-4 Hour Inspections</span>
+                <span>2-3 Hour Inspections</span>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <DollarSign className="h-5 w-5" />
-                <span>Starting at $450</span>
+                <span>Starting at $350</span>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Shield className="h-5 w-5" />
@@ -807,8 +807,8 @@ export default function Toronto() {
                 <div className="bg-card border border-border rounded-xl p-6">
                   <Mail className="h-10 w-10 text-primary mx-auto mb-4" />
                   <h3 className="font-heading font-bold text-lg text-foreground mb-2">Email Us</h3>
-                  <a href="mailto:toronto@asads.ca" className="text-primary hover:underline text-lg font-bold">
-                    toronto@asads.ca
+                  <a href="mailto:info@asads.ca" className="text-primary hover:underline text-lg font-bold">
+                    info@asads.ca
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">Response within 2 hours</p>
                 </div>
