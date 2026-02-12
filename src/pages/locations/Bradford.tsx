@@ -166,8 +166,8 @@ const bradfordAreas = [
 const metaTitle = "Home Inspection Bradford | Professional House Inspectors & Property Assessments | ASADS";
 const metaDescription = "Looking for comprehensive home inspection in Bradford? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $500. Serving Bradford, Newmarket, Barrie, and all Simcoe County communities.";
 const pageTitle = "Professional Home Inspection Services in Bradford | ASADS Certified Inspectors";
-const price = "$500-$800";
-const duration = "2-4 Hours";
+const price = "$350-$600";
+const duration = "2 Hours";
 
 // Comprehensive inspection checklist
 const whatWeInspect = [
@@ -215,7 +215,7 @@ const benefits = [
 const faqs = [
   {
     question: "How much does a home inspection cost in Bradford?",
-    answer: `The average <strong>home inspection Bradford cost</strong> ranges from $500 to $800 for a standard single-family home. Condo inspections typically cost $450-$650, while larger homes or properties requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> may range from $600-$950. We provide detailed quotes based on your specific Bradford property's size, age, and inspection requirements.`
+    answer: `The average <strong>home inspection Bradford cost</strong> ranges from $350 to $600 for a standard single-family home. Condo inspections typically cost $450-$650, while larger homes or properties requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> may range from $600-$950. We provide detailed quotes based on your specific Bradford property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Bradford?",
@@ -223,7 +223,7 @@ const faqs = [
   },
   {
     question: "How long does a home inspection take in Bradford?",
-    answer: `Most <strong>Bradford home inspections</strong> take 2-4 hours depending on property size and complexity. Condominium unit inspections typically take 1.5-2.5 hours, while larger homes (over 3,000 sq ft) may require 3-5 hours for thorough evaluation. We never rush inspections and allocate sufficient time to properly assess every component of your Bradford property.`
+    answer: `Most <strong>Bradford home inspections</strong> take 2-3 hours depending on property size and complexity. Condominium unit inspections typically take 1.5-2.5 hours, while larger homes (over 3,000 sq ft) may require 3-5 hours for thorough evaluation. We never rush inspections and allocate sufficient time to properly assess every component of your Bradford property.`
   },
   {
     question: "Should I attend the home inspection in Bradford?",
@@ -785,8 +785,8 @@ export default function Bradford() {
                 <div className="bg-card border border-border rounded-xl p-6">
                   <Mail className="h-10 w-10 text-primary mx-auto mb-4" />
                   <h3 className="font-heading font-bold text-lg text-foreground mb-2">Email Us</h3>
-                  <a href="mailto:bradford@asads.ca" className="text-primary hover:underline text-lg font-bold">
-                    bradford@asads.ca
+                  <a href="mailto:info@asads.ca" className="text-primary hover:underline text-lg font-bold">
+                    info@asads.ca
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">Response within 2 hours</p>
                 </div>
