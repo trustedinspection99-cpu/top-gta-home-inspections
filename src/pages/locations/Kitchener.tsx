@@ -637,7 +637,7 @@ export default function Kitchener() {
                     Kitchener Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Kitchener cost</strong> ranges from $450 to $750 for a standard residential property. Condominiums and smaller homes may range from $350-$500, while larger homes or investment properties may range from $650-$950. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Kitchener's competitive market.
+                    The average <strong>home inspection Kitchener cost</strong> ranges from $350 to $600 for a standard residential property. Condominiums and smaller homes may range from $300-$500, while larger homes or investment properties may range from $500-$700. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Kitchener's competitive market.
                   </p>
                 </div>
               </div>
