@@ -583,7 +583,7 @@ export default function Bolton() {
                     Bolton Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Bolton cost</strong> ranges from $500 to $800 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
+                    The average <strong>home inspection Bolton cost</strong> ranges from $350 to $600 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
                   </p>
                 </div>
               </div>
