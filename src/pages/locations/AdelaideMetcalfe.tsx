@@ -186,8 +186,8 @@ const nearbyTowns = [
 const metaTitle = "Home Inspection Adelaide Metcalfe | Rural Property Inspections & Well Water Testing | ASADS";
 const metaDescription = "Looking for comprehensive home inspection in Adelaide Metcalfe? ASADS provides professional rural property inspections with licensed inspectors, well water testing, septic inspections, and same-day reports. Serving Adelaide Metcalfe Township and surrounding areas.";
 const pageTitle = "Professional Rural Home Inspection Services in Adelaide Metcalfe | ASADS Certified Inspectors";
-const price = "$500-$850";
-const duration = "3-5 Hours";
+const price = "$350-$600";
+const duration = "2 Hours";
 
 // Comprehensive inspection checklist for rural properties
 const whatWeInspect = [
@@ -259,7 +259,7 @@ const adelaideMetcalfeFeatures = [
 const faqs = [
   {
     question: "How much does a home inspection cost in Adelaide Metcalfe?",
-    answer: `The average <strong>home inspection Adelaide Metcalfe cost</strong> ranges from $500 to $850 for a standard rural property. This includes well water and septic system evaluations. Larger farm properties or those requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> or <Link to="/services/radon-testing">radon testing</Link> may range from $650-$1,000. We provide detailed quotes based on your specific property's size, systems, and inspection requirements.`
+    answer: `The average <strong>home inspection Adelaide Metcalfe cost</strong> ranges from $350 to $600 for a standard rural property. This includes well water and septic system evaluations. Larger farm properties or those requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> or <Link to="/services/radon-testing">radon testing</Link> may range from $650-$1,000. We provide detailed quotes based on your specific property's size, systems, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Adelaide Metcalfe?",
@@ -267,7 +267,7 @@ const faqs = [
   },
   {
     question: "How long does a home inspection take in Adelaide Metcalfe?",
-    answer: `Most <strong>Adelaide Metcalfe home inspections</strong> take 3-5 hours depending on property size and complexity. Rural properties require additional time for well water system checks, septic system evaluations, and outbuilding inspections. We never rush inspections and allocate sufficient time to properly assess every component of your rural property.`
+    answer: `Most <strong>Adelaide Metcalfe home inspections</strong> take 2-3 hours depending on property size and complexity. Rural properties require additional time for well water system checks, septic system evaluations, and outbuilding inspections. We never rush inspections and allocate sufficient time to properly assess every component of your rural property.`
   },
   {
     question: "Should I attend the home inspection in Adelaide Metcalfe?",
@@ -851,8 +851,8 @@ export default function AdelaideMetcalfe() {
                 <div className="bg-card border border-border rounded-xl p-6">
                   <Mail className="h-10 w-10 text-primary mx-auto mb-4" />
                   <h3 className="font-heading font-bold text-lg text-foreground mb-2">Email Us</h3>
-                  <a href="mailto:adelaide@asads.ca" className="text-primary hover:underline text-lg font-bold">
-                    adelaide@asads.ca
+                  <a href="mailto:info@asads.ca" className="text-primary hover:underline text-lg font-bold">
+                    info@asads.ca
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">Response within 2 hours</p>
                 </div>
