@@ -184,7 +184,7 @@ const nearbyAreas = [
 
 // SEO-optimized metadata
 const metaTitle = "Home Inspection Etobicoke | Professional House Inspectors & Property Assessments | ASADS";
-const metaDescription = "Looking for comprehensive home inspection in Etobicoke? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $450. Serving Etobicoke, Toronto, Mississauga, and all GTA neighborhoods.";
+const metaDescription = "Looking for comprehensive home inspection in Etobicoke? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $350. Serving Etobicoke, Toronto, Mississauga, and all GTA neighborhoods.";
 const pageTitle = "Professional Home Inspection Services in Etobicoke | ASADS Certified Inspectors";
 const price = "$350-$600";
 const duration = "2 Hours";
@@ -536,7 +536,7 @@ export default function Etobicoke() {
               Professional Home Inspection Services in <span className="text-secondary">Etobicoke</span>
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-              Looking for comprehensive <strong>home inspection in Etobicoke</strong>? ASADS provides professional property assessments with licensed inspectors, same-day digital reports, and competitive pricing starting at $550. Serving all Etobicoke neighborhoods and GTA communities.
+              Looking for comprehensive <strong>home inspection in Etobicoke</strong>? ASADS provides professional property assessments with licensed inspectors, same-day digital reports, and competitive pricing starting $350. Serving all Etobicoke neighborhoods and GTA communities.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
@@ -603,7 +603,7 @@ export default function Etobicoke() {
                     Etobicoke Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Etobicoke cost</strong> ranges from $550 to $950 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
+                    The average <strong>home inspection Etobicoke cost</strong> ranges from $350 to $600 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
                   </p>
                 </div>
               </div>
