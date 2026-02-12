@@ -522,11 +522,11 @@ export default function Caledon() {
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Clock className="h-5 w-5" />
-                <span>3-5 Hour Inspections</span>
+                <span>2-3 Hour Inspections</span>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <DollarSign className="h-5 w-5" />
-                <span>Starting at $550</span>
+                <span>Starting at $350</span>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Shield className="h-5 w-5" />
