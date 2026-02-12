@@ -192,8 +192,8 @@ const nearbyTowns = [
 const metaTitle = "Home Inspection Guelph | Professional Property Inspections in Guelph, ON | ASADS";
 const metaDescription = "Looking for comprehensive home inspection in Guelph? ASADS provides professional property inspections with licensed inspectors, same-day reports, and thorough evaluations. Serving Guelph, Kitchener, Cambridge, and Wellington County.";
 const pageTitle = "Professional Home Inspection Services in Guelph, Ontario | ASADS Certified Inspectors";
-const price = "$450-$800";
-const duration = "2-4 Hours";
+const price = "$350-$600";
+const duration = "2 Hours";
 
 // Comprehensive inspection checklist for Guelph properties
 const whatWeInspect = [
@@ -265,7 +265,7 @@ const guelphFeatures = [
 const faqs = [
   {
     question: "How much does a home inspection cost in Guelph?",
-    answer: `The average <strong>home inspection Guelph cost</strong> ranges from $450 to $800 for a standard residential property. Heritage stone homes and larger properties may range from $650-$950, while condominiums typically range from $350-$500. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
+    answer: `The average <strong>home inspection Guelph cost</strong> ranges from $350 to $600 for a standard residential property. Heritage stone homes and larger properties may range from $650-$950, while condominiums typically range from $350-$500. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Guelph?",
@@ -273,7 +273,7 @@ const faqs = [
   },
   {
     question: "How long does a home inspection take in Guelph?",
-    answer: `Most <strong>Guelph home inspections</strong> take 2-4 hours depending on property size and complexity. Heritage stone homes and larger properties require additional time for thorough assessment of unique construction features. We never rush inspections and allocate sufficient time to properly assess every component of your Guelph property.`
+    answer: `Most <strong>Guelph home inspections</strong> take 2-3 hours depending on property size and complexity. Heritage stone homes and larger properties require additional time for thorough assessment of unique construction features. We never rush inspections and allocate sufficient time to properly assess every component of your Guelph property.`
   },
   {
     question: "Should I attend the home inspection in Guelph?",
@@ -572,11 +572,11 @@ export default function Guelph() {
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Clock className="h-5 w-5" />
-                <span>2-4 Hour Inspections</span>
+                <span>2-3 Hour Inspections</span>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <DollarSign className="h-5 w-5" />
-                <span>Starting at $450</span>
+                <span>Starting at $350</span>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Shield className="h-5 w-5" />
