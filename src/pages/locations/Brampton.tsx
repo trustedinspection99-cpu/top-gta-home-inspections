@@ -184,8 +184,8 @@ const nearbyCities = [
 const metaTitle = "Home Inspection Brampton | Professional House Inspectors & Property Assessments | ASADS";
 const metaDescription = "Looking for comprehensive home inspection in Brampton? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $450. Serving Brampton and all Peel Region communities.";
 const pageTitle = "Professional Home Inspection Services in Brampton | ASADS Certified Inspectors";
-const price = "$450-$750";
-const duration = "2-4 Hours";
+const price = "$350-$600";
+const duration = "2 Hours";
 
 // Comprehensive inspection checklist
 const whatWeInspect = [
@@ -257,7 +257,7 @@ const bramptonFeatures = [
 const faqs = [
   {
     question: "How much does a home inspection cost in Brampton?",
-    answer: `The average <strong>home inspection Brampton cost</strong> ranges from $450 to $750 for a standard single-family home. Townhouse inspections typically cost $400-$600, while larger homes or properties requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> may range from $650-$900. We provide detailed quotes based on your specific Brampton property's size, age, and inspection requirements.`
+    answer: `The average <strong>home inspection Brampton cost</strong> ranges from $350 to $600 for a standard single-family home. Townhouse inspections typically cost $400-$600, while larger homes or properties requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> may range from $650-$900. We provide detailed quotes based on your specific Brampton property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Brampton?",
@@ -265,7 +265,7 @@ const faqs = [
   },
   {
     question: "How long does a home inspection take in Brampton?",
-    answer: `Most <strong>Brampton home inspections</strong> take 2-4 hours depending on property size and complexity. Townhouse inspections typically take 1.5-2.5 hours, while larger homes (over 3,000 sq ft) may require 3-5 hours for thorough evaluation. We never rush inspections and allocate sufficient time to properly assess every component of your Brampton property.`
+    answer: `Most <strong>Brampton home inspections</strong> take 2-3 hours depending on property size and complexity. Townhouse inspections typically take 1.5-2.5 hours, while larger homes (over 3,000 sq ft) may require 3-5 hours for thorough evaluation. We never rush inspections and allocate sufficient time to properly assess every component of your Brampton property.`
   },
   {
     question: "Should I attend the home inspection in Brampton?",
@@ -849,8 +849,8 @@ export default function Brampton() {
                 <div className="bg-card border border-border rounded-xl p-6">
                   <Mail className="h-10 w-10 text-primary mx-auto mb-4" />
                   <h3 className="font-heading font-bold text-lg text-foreground mb-2">Email Us</h3>
-                  <a href="mailto:brampton@asads.ca" className="text-primary hover:underline text-lg font-bold">
-                    brampton@asads.ca
+                  <a href="mailto:info@asads.ca" className="text-primary hover:underline text-lg font-bold">
+                    info@asads.ca
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">Response within 2 hours</p>
                 </div>
