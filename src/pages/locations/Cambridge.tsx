@@ -632,7 +632,7 @@ export default function Cambridge() {
                     Cambridge Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Cambridge cost</strong> ranges from $450 to $750 for a standard residential property. Heritage homes and larger properties may range from $650-$950. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Cambridge's diverse property market.
+                    The average <strong>home inspection Cambridge cost</strong> ranges from $350 to $600 for a standard residential property. Heritage homes and larger properties may range from $500-$750. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Cambridge's diverse property market.
                   </p>
                 </div>
               </div>
