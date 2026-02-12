@@ -215,7 +215,7 @@ const benefits = [
 const faqs = [
   {
     question: "How much does a home inspection cost in Caledon?",
-    answer: `The average <strong>home inspection Caledon cost</strong> ranges from $350 to $600 for a standard single-family home. Condo inspections typically cost $500-$800, while larger homes or properties requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> may range from $700-$1,200. We provide detailed quotes based on your specific Caledon property's size, age, and inspection requirements.`
+    answer: `The average <strong>home inspection Caledon cost</strong> ranges from $350 to $600 for a standard single-family home. Condo inspections typically cost $300-$500, while larger homes or properties requiring additional services like <Link to="/services/thermal-imaging">thermal imaging</Link> may range from $700-$1,200. We provide detailed quotes based on your specific Caledon property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Caledon?",
@@ -516,7 +516,7 @@ export default function Caledon() {
               Professional Home Inspection Services in <span className="text-secondary">Caledon</span>
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-              Looking for comprehensive <strong>home inspection in Caledon</strong>? ASADS provides professional property assessments with licensed inspectors, same-day digital reports, and competitive pricing starting at $550. Serving all Caledon areas and Peel Region communities.
+              Looking for comprehensive <strong>home inspection in Caledon</strong>? ASADS provides professional property assessments with licensed inspectors, same-day digital reports, and competitive pricing starting at $350. Serving all Caledon areas and Peel Region communities.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
@@ -583,7 +583,7 @@ export default function Caledon() {
                     Caledon Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Caledon cost</strong> ranges from $550 to $950 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
+                    The average <strong>home inspection Caledon cost</strong> ranges from $350 to $600 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
                   </p>
                 </div>
               </div>
