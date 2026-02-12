@@ -164,7 +164,7 @@ const brantfordAreas = [
 
 // SEO-optimized metadata
 const metaTitle = "Home Inspection Brantford | Professional House Inspectors & Property Assessments | ASADS";
-const metaDescription = "Looking for comprehensive home inspection in Brantford? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $450. Serving Brantford, Paris, Burford, and all Brant County communities.";
+const metaDescription = "Looking for comprehensive home inspection in Brantford? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $350. Serving Brantford, Paris, Burford, and all Brant County communities.";
 const pageTitle = "Professional Home Inspection Services in Brantford | ASADS Certified Inspectors";
 const price = "$350-$600";
 const duration = "2 Hours";
@@ -516,7 +516,7 @@ export default function Brantford() {
               Professional Home Inspection Services in <span className="text-secondary">Brantford</span>
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-              Looking for comprehensive <strong>home inspection in Brantford</strong>? ASADS provides professional home inspection services with licensed inspectors, same-day digital reports, and competitive pricing starting at $450. Serving all Brantford areas and Brant County communities.
+              Looking for comprehensive <strong>home inspection in Brantford</strong>? ASADS provides professional home inspection services with licensed inspectors, same-day digital reports, and competitive pricing starting at $350. Serving all Brantford areas and Brant County communities.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
@@ -583,7 +583,7 @@ export default function Brantford() {
                     Brantford Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Brantford cost</strong> ranges from $450 to $750 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
+                    The average <strong>home inspection Brantford cost</strong> ranges from $350 to $600 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
                   </p>
                 </div>
               </div>
