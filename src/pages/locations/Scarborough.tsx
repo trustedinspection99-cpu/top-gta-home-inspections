@@ -173,7 +173,7 @@ const scarboroughNeighborhoods = [
 
 // SEO-optimized metadata
 const metaTitle = "Home Inspection Scarborough | Professional House Inspectors & Property Assessments | ASADS";
-const metaDescription = "Looking for comprehensive home inspection in Scarborough? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $450. Serving Scarborough, Toronto East, and all GTA communities.";
+const metaDescription = "Looking for comprehensive home inspection in Scarborough? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $350. Serving Scarborough, Toronto East, and all GTA communities.";
 const pageTitle = "Professional Home Inspection Services in Scarborough | ASADS Certified Inspectors";
 const price = "$350-$600";
 const duration = "2 Hours";
@@ -525,7 +525,7 @@ export default function Scarborough() {
               Professional Home Inspection Services in <span className="text-secondary">Scarborough</span>
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-              Looking for comprehensive <strong>home inspection in Scarborough</strong>? ASADS provides professional property assessments with licensed inspectors, same-day digital reports, and competitive pricing starting at $450. Serving all Scarborough neighborhoods and GTA communities.
+              Looking for comprehensive <strong>home inspection in Scarborough</strong>? ASADS provides professional property assessments with licensed inspectors, same-day digital reports, and competitive pricing starting from $350. Serving all Scarborough neighborhoods and GTA communities.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
@@ -592,7 +592,7 @@ export default function Scarborough() {
                     Scarborough Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Scarborough cost</strong> ranges from $450 to $750 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
+                    The average <strong>home inspection Scarborough cost</strong> ranges from $350 to $600 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
                   </p>
                 </div>
               </div>
