@@ -192,8 +192,8 @@ const nearbyTowns = [
 const metaTitle = "Home Inspection Waterloo | Professional Property Inspections in Waterloo, ON | ASADS";
 const metaDescription = "Looking for comprehensive home inspection in Waterloo? ASADS provides professional property inspections with licensed inspectors, same-day reports, and thorough evaluations. Serving Waterloo, Kitchener, Cambridge, and the tech corridor.";
 const pageTitle = "Professional Home Inspection Services in Waterloo, Ontario | ASADS Certified Inspectors";
-const price = "$450-$800";
-const duration = "2-4 Hours";
+const price = "$350-$600";
+const duration = "2 Hours";
 
 // Comprehensive inspection checklist for Waterloo properties
 const whatWeInspect = [
@@ -265,7 +265,7 @@ const waterlooFeatures = [
 const faqs = [
   {
     question: "How much does a home inspection cost in Waterloo?",
-    answer: `The average <strong>home inspection Waterloo cost</strong> ranges from $450 to $800 for a standard residential property. Condominium inspections typically range from $350-$550, while larger homes or investment properties in the tech corridor may range from $650-$1,000. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
+    answer: `The average <strong>home inspection Waterloo cost</strong> ranges from $350 to $600 for a standard residential property. Condominium inspections typically range from $350-$550, while larger homes or investment properties in the tech corridor may range from $650-$1,000. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Waterloo?",
@@ -273,7 +273,7 @@ const faqs = [
   },
   {
     question: "How long does a home inspection take in Waterloo?",
-    answer: `Most <strong>Waterloo home inspections</strong> take 2-4 hours depending on property size and complexity. Larger homes and properties with extensive smart home systems require additional time for thorough assessment. We never rush inspections and allocate sufficient time to properly assess every component of your Waterloo property.`
+    answer: `Most <strong>Waterloo home inspections</strong> take 2-3 hours depending on property size and complexity. Larger homes and properties with extensive smart home systems require additional time for thorough assessment. We never rush inspections and allocate sufficient time to properly assess every component of your Waterloo property.`
   },
   {
     question: "Should I attend the home inspection in Waterloo?",
@@ -572,11 +572,11 @@ export default function Waterloo() {
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Clock className="h-5 w-5" />
-                <span>2-4 Hour Inspections</span>
+                <span>2-3 Hour Inspections</span>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <DollarSign className="h-5 w-5" />
-                <span>Starting at $450</span>
+                <span>Starting at $350</span>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Shield className="h-5 w-5" />
@@ -857,8 +857,8 @@ export default function Waterloo() {
                 <div className="bg-card border border-border rounded-xl p-6">
                   <Mail className="h-10 w-10 text-primary mx-auto mb-4" />
                   <h3 className="font-heading font-bold text-lg text-foreground mb-2">Email Us</h3>
-                  <a href="mailto:waterloo@asads.ca" className="text-primary hover:underline text-lg font-bold">
-                    waterloo@asads.ca
+                  <a href="mailto:info@asads.ca" className="text-primary hover:underline text-lg font-bold">
+                    info@asads.ca
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">Response within 2 hours</p>
                 </div>
