@@ -191,8 +191,8 @@ const nearbyTowns = [
 const metaTitle = "Home Inspection Mississauga | Professional Property Inspections in Mississauga, ON | ASADS";
 const metaDescription = "Looking for comprehensive home inspection in Mississauga? ASADS provides professional property inspections with licensed inspectors, same-day reports, and thorough evaluations. Serving Mississauga, Toronto, Brampton, and Peel Region.";
 const pageTitle = "Professional Home Inspection Services in Mississauga, Ontario | ASADS Certified Inspectors";
-const price = "$500-$900";
-const duration = "2-4 Hours";
+const price = "$350-$600";
+const duration = "2 Hours";
 
 // Comprehensive inspection checklist for Mississauga properties
 const whatWeInspect = [
@@ -264,7 +264,7 @@ const mississaugaFeatures = [
 const faqs = [
   {
     question: "How much does a home inspection cost in Mississauga?",
-    answer: `The average <strong>home inspection Mississauga cost</strong> ranges from $500 to $900 for a standard residential property. High-rise condominiums typically range from $400-$700, while luxury homes may range from $800-$1,500. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
+    answer: `The average <strong>home inspection Mississauga cost</strong> ranges from $350 to $600 for a standard residential property. High-rise condominiums typically range from $400-$700, while luxury homes may range from $800-$1,500. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Mississauga?",
@@ -272,7 +272,7 @@ const faqs = [
   },
   {
     question: "How long does a home inspection take in Mississauga?",
-    answer: `Most <strong>Mississauga home inspections</strong> take 2-4 hours depending on property size and complexity. High-rise condominiums and larger luxury homes require additional time for thorough assessment of complex systems. We never rush inspections and allocate sufficient time to properly assess every component of your Mississauga property.`
+    answer: `Most <strong>Mississauga home inspections</strong> take 2-3 hours depending on property size and complexity. High-rise condominiums and larger luxury homes require additional time for thorough assessment of complex systems. We never rush inspections and allocate sufficient time to properly assess every component of your Mississauga property.`
   },
   {
     question: "Should I attend the home inspection in Mississauga?",
@@ -571,11 +571,11 @@ export default function Mississauga() {
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Clock className="h-5 w-5" />
-                <span>2-4 Hour Inspections</span>
+                <span>2-3 Hour Inspections</span>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <DollarSign className="h-5 w-5" />
-                <span>Starting at $500</span>
+                <span>Starting at $350</span>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Shield className="h-5 w-5" />
@@ -856,8 +856,8 @@ export default function Mississauga() {
                 <div className="bg-card border border-border rounded-xl p-6">
                   <Mail className="h-10 w-10 text-primary mx-auto mb-4" />
                   <h3 className="font-heading font-bold text-lg text-foreground mb-2">Email Us</h3>
-                  <a href="mailto:mississauga@asads.ca" className="text-primary hover:underline text-lg font-bold">
-                    mississauga@asads.ca
+                  <a href="mailto:info@asads.ca" className="text-primary hover:underline text-lg font-bold">
+                    info@asads.ca
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">Response within 2 hours</p>
                 </div>
