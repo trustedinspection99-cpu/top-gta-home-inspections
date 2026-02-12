@@ -632,7 +632,7 @@ export default function Mississauga() {
                     Mississauga Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Mississauga cost</strong> ranges from $500 to $900 for a standard residential property. High-rise condominiums typically range from $400-$700, while luxury homes and commercial properties may range from $800-$1,500. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Mississauga's competitive market.
+                    The average <strong>home inspection Mississauga cost</strong> ranges from $350 to $600 for a standard residential property. High-rise condominiums typically range from $300-$500, while luxury homes and commercial properties may range from $600-$1,200. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Mississauga's competitive market.
                   </p>
                 </div>
               </div>
