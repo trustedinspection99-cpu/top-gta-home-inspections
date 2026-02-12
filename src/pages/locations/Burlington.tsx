@@ -191,8 +191,8 @@ const nearbyTowns = [
 const metaTitle = "Home Inspection Burlington | Professional Property Inspections in Burlington, ON | ASADS";
 const metaDescription = "Looking for comprehensive home inspection in Burlington? ASADS provides professional property inspections with licensed inspectors, same-day reports, and thorough evaluations. Serving Burlington, Oakville, Hamilton, and Halton Region.";
 const pageTitle = "Professional Home Inspection Services in Burlington, Ontario | ASADS Certified Inspectors";
-const price = "$500-$850";
-const duration = "2-4 Hours";
+const price = "$350-$600";
+const duration = "2 Hours";
 
 // Comprehensive inspection checklist for Burlington properties
 const whatWeInspect = [
@@ -264,7 +264,7 @@ const burlingtonFeatures = [
 const faqs = [
   {
     question: "How much does a home inspection cost in Burlington?",
-    answer: `The average <strong>home inspection Burlington cost</strong> ranges from $500 to $850 for a standard residential property. Waterfront properties and luxury homes may range from $750-$1,200, while condominiums typically range from $400-$600. We provide detailed quotes based on your specific property's size, age, location, and inspection requirements.`
+    answer: `The average <strong>home inspection Burlington cost</strong> ranges from $350 to $600 for a standard residential property. Waterfront properties and luxury homes may range from $750-$1,200, while condominiums typically range from $400-$600. We provide detailed quotes based on your specific property's size, age, location, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Burlington?",
@@ -272,7 +272,7 @@ const faqs = [
   },
   {
     question: "How long does a home inspection take in Burlington?",
-    answer: `Most <strong>Burlington home inspections</strong> take 2-4 hours depending on property size and complexity. Waterfront properties and larger luxury homes require additional time for thorough assessment of specialized systems and features. We never rush inspections and allocate sufficient time to properly assess every component of your Burlington property.`
+    answer: `Most <strong>Burlington home inspections</strong> take 2-3 hours depending on property size and complexity. Waterfront properties and larger luxury homes require additional time for thorough assessment of specialized systems and features. We never rush inspections and allocate sufficient time to properly assess every component of your Burlington property.`
   },
   {
     question: "Should I attend the home inspection in Burlington?",
@@ -856,8 +856,8 @@ export default function Burlington() {
                 <div className="bg-card border border-border rounded-xl p-6">
                   <Mail className="h-10 w-10 text-primary mx-auto mb-4" />
                   <h3 className="font-heading font-bold text-lg text-foreground mb-2">Email Us</h3>
-                  <a href="mailto:burlington@asads.ca" className="text-primary hover:underline text-lg font-bold">
-                    burlington@asads.ca
+                  <a href="mailto:info@asads.ca" className="text-primary hover:underline text-lg font-bold">
+                    info@asads.ca
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">Response within 2 hours</p>
                 </div>
