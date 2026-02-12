@@ -49,7 +49,7 @@ const featuredLocations = [
 const title = "Pre-Listing Home Inspection";
 const metaTitle = "Pre-Listing Home Inspection Ontario | Sell for More | ASADS";
 const metaDescription = "Maximize your GTA home sale price with a professional Pre-Listing Audit. Identify defects early, provide accurate SPIS disclosures, and secure firm offers. Same-day reports.";
-const price = "$450-$750";
+const price = "$350-$600";
 const duration = "2-4 Hours";
 
 const whatWeInspect = [
