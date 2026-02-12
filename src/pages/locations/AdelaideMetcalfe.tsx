@@ -627,7 +627,7 @@ export default function AdelaideMetcalfe() {
                     Adelaide Metcalfe Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Adelaide Metcalfe cost</strong> ranges from $500 to $850 for a standard rural property. This typically includes well water and septic system evaluations. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Adelaide Metcalfe's unique rural market.
+                    The average <strong>home inspection Adelaide Metcalfe cost</strong> ranges from $350 to $600 for a standard rural property. This typically includes well water and septic system evaluations. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Adelaide Metcalfe's unique rural market.
                   </p>
                 </div>
               </div>
