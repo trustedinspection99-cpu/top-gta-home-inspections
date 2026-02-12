@@ -38,8 +38,8 @@
  const title = "Pre-Purchase Home Inspection";
  const metaTitle = "Pre-Purchase Home Inspection Ontario | ASADS";
  const metaDescription = "Professional pre-purchase home inspections in Ontario. Detailed property assessments before you buy. Licensed inspectors, same-day reports. Book today.";
- const price = "$450-$750";
- const duration = "2-4 Hours";
+ const price = "$350-$600";
+ const duration = "2 Hours";
 
  const whatWeInspect = [
    "Structural Components & Foundation",
@@ -189,7 +189,7 @@
        "@type": "Offer",
        "availability": "https://schema.org/InStock",
        "priceCurrency": "CAD",
-       "priceRange": "$450-$750"
+       "priceRange": "$350-$600"
      },
      "category": "Home Inspection Services",
      "hasOfferCatalog": {
