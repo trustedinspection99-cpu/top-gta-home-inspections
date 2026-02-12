@@ -191,8 +191,8 @@ const nearbyTowns = [
 const metaTitle = "Home Inspection Cambridge | Professional Property Inspections in Cambridge, ON | ASADS";
 const metaDescription = "Looking for comprehensive home inspection in Cambridge? ASADS provides professional property inspections with licensed inspectors, same-day reports, and thorough evaluations. Serving Cambridge, Kitchener, Waterloo, and surrounding areas.";
 const pageTitle = "Professional Home Inspection Services in Cambridge, Ontario | ASADS Certified Inspectors";
-const price = "$450-$750";
-const duration = "2-4 Hours";
+const price = "$350-$600";
+const duration = "2 Hours";
 
 // Comprehensive inspection checklist for Cambridge properties
 const whatWeInspect = [
@@ -264,7 +264,7 @@ const cambridgeFeatures = [
 const faqs = [
   {
     question: "How much does a home inspection cost in Cambridge?",
-    answer: `The average <strong>home inspection Cambridge cost</strong> ranges from $450 to $750 for a standard residential property. Condominium inspections typically range from $350-$500, while larger heritage homes or investment properties may range from $650-$950. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
+    answer: `The average <strong>home inspection Cambridge cost</strong> ranges from $350 to $600 for a standard residential property. Condominium inspections typically range from $350-$500, while larger heritage homes or investment properties may range from $650-$950. We provide detailed quotes based on your specific property's size, age, and inspection requirements.`
   },
   {
     question: "What does a home inspection include in Cambridge?",
@@ -272,7 +272,7 @@ const faqs = [
   },
   {
     question: "How long does a home inspection take in Cambridge?",
-    answer: `Most <strong>Cambridge home inspections</strong> take 2-4 hours depending on property size and age. Heritage homes and larger properties require additional time for thorough assessment of period features and multiple systems. We never rush inspections and allocate sufficient time to properly assess every component of your Cambridge property.`
+    answer: `Most <strong>Cambridge home inspections</strong> take 2-3 hours depending on property size and age. Heritage homes and larger properties require additional time for thorough assessment of period features and multiple systems. We never rush inspections and allocate sufficient time to properly assess every component of your Cambridge property.`
   },
   {
     question: "Should I attend the home inspection in Cambridge?",
@@ -856,8 +856,8 @@ export default function Cambridge() {
                 <div className="bg-card border border-border rounded-xl p-6">
                   <Mail className="h-10 w-10 text-primary mx-auto mb-4" />
                   <h3 className="font-heading font-bold text-lg text-foreground mb-2">Email Us</h3>
-                  <a href="mailto:cambridge@asads.ca" className="text-primary hover:underline text-lg font-bold">
-                    cambridge@asads.ca
+                  <a href="mailto:info@asads.ca" className="text-primary hover:underline text-lg font-bold">
+                    info@asads.ca
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">Response within 2 hours</p>
                 </div>
