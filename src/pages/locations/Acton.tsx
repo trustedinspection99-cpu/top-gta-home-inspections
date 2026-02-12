@@ -626,7 +626,7 @@ export default function Acton() {
                     Acton Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Acton cost</strong> ranges from $450 to $750 for a standard single-family home. Rural properties with wells and septic systems may cost $500-$850. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Acton's unique market.
+                    The average <strong>home inspection Acton cost</strong> ranges from $350 to $600 for a standard single-family home. Rural properties with wells and septic systems may cost $500-$850. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions in Acton's unique market.
                   </p>
                 </div>
               </div>
