@@ -164,7 +164,7 @@ const bradfordAreas = [
 
 // SEO-optimized metadata
 const metaTitle = "Home Inspection Bradford | Professional House Inspectors & Property Assessments | ASADS";
-const metaDescription = "Looking for comprehensive home inspection in Bradford? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $500. Serving Bradford, Newmarket, Barrie, and all Simcoe County communities.";
+const metaDescription = "Looking for comprehensive home inspection in Bradford? ASADS provides professional home inspection services with licensed inspectors, same-day reports, and competitive pricing starting at $350. Serving Bradford, Newmarket, Barrie, and all Simcoe County communities.";
 const pageTitle = "Professional Home Inspection Services in Bradford | ASADS Certified Inspectors";
 const price = "$350-$600";
 const duration = "2 Hours";
@@ -583,7 +583,7 @@ export default function Bradford() {
                     Bradford Home Inspection Cost & Value
                   </h3>
                   <p className="text-muted-foreground">
-                    The average <strong>home inspection Bradford cost</strong> ranges from $500 to $800 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
+                    The average <strong>home inspection Bradford cost</strong> ranges from $350 to $600 for a standard single-family home. While price is an important consideration, the true value comes from thorough inspection and detailed reporting that can save you thousands in unexpected repairs and provide negotiation leverage during real estate transactions.
                   </p>
                 </div>
               </div>
