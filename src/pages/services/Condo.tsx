@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -25,6 +25,7 @@ import {
 } from "lucide-react";
 
 // Featured locations for service pages internal linking
+const CANONICAL_URL = `${SITE_URL}/services/condo-inspection`;
 const featuredLocations = [
   { name: "Toronto", slug: "toronto" },
   { name: "Mississauga", slug: "mississauga" },
@@ -126,9 +127,7 @@ const relatedServices = [
 ];
 
 export default function CondoInspection() {
-  const location = useLocation();
-  const serviceUrl = getCanonicalUrl(location.pathname);
-
+  
   // Schema 1: LocalBusiness
   const localBusinessSchema = {
     "@context": "https://schema.org",
