@@ -127,7 +127,7 @@ const relatedServices = [
 ];
 
 export default function CondoInspection() {
-  
+  const serviceUrl = CANONICAL_URL;
   // Schema 1: LocalBusiness
   const localBusinessSchema = {
     "@context": "https://schema.org",
