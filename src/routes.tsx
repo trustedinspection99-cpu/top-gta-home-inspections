@@ -49,7 +49,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 const PrePurchase = lazy(() => import('./pages/services/PrePurchase'));
 const PreListing = lazy(() => import('./pages/services/PreListing'));
 const NewConstruction = lazy(() => import('./pages/services/NewConstruction'));
-const Condo = lazy(() => import('./pages/services/Condo'));
+const Condo = lazy(() => import('./pages/services/Condo-inspection'));
 const Commercial = lazy(() => import('./pages/services/Commercial'));
 const RadonTesting = lazy(() => import('./pages/services/RadonTesting'));
 const MoldInspection = lazy(() => import('./pages/services/MoldInspection'));
