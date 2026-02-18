@@ -454,6 +454,7 @@ export default function CondoInspection() {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={serviceUrl} />
+        <link rel="canonical" href="https://www.asads.ca/services/condo" />
 <link rel="sitemap" type="application/xml" title="Sitemap" href={`${SITE_URL}/sitemap.xml`} />
         {/* Open Graph */}
         <meta property="og:site_name" content="ASADS Home Inspection" />
