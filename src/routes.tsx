@@ -197,7 +197,7 @@ export const routes: RouteRecord[] = [
       { path: 'services/pre-purchase', element: <PrePurchase /> },
       { path: 'services/pre-listing', element: <PreListing /> },
       { path: 'services/new-construction', element: <NewConstruction /> },
-      { path: 'services/condo', element: <Condo /> },
+      { path: 'services/condo-inspection', element: <Condo /> },
       { path: 'services/commercial', element: <Commercial /> },
       { path: 'services/radon-testing', element: <RadonTesting /> },
       { path: 'services/mold-inspection', element: <MoldInspection /> },
