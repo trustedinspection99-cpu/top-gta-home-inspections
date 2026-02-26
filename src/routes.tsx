@@ -19,9 +19,8 @@ function RootLayout() {
           <Toaster />
           <Sonner />
           <ScrollToTop />
-          <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
-            <Outlet />
-          </Suspense>
+           <Outlet />
+          
         </TooltipProvider>
       </QueryClientProvider>
     </HelmetProvider>
