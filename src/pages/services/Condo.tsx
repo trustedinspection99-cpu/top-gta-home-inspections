@@ -1,134 +1,425 @@
-import { Building, Thermometer, Droplets, Zap, ShieldCheck, ClipboardList } from "lucide-react";
-import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { Layout } from "@/components/layout/Layout";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { getCanonicalUrl } from "@/lib/seo";
+import {
+  Building,
+  Thermometer,
+  Droplets,
+  ShieldCheck,
+  CheckCircle,
+  Phone,
+  Clock,
+  AlertTriangle,
+  FileText,
+  Shield
+} from "lucide-react";
 
-export default function Condo() {
-  const pageTitle = "Condo Inspection Toronto & GTA | Certified Suite Specialist";
-  const schemaDescription = "Expert pre-purchase and pre-listing condo inspections. Detect Kitec plumbing, Fan Coil failures, balcony envelope risks, and HOA compliance. Same-day reports.";
+const metaTitle =
+  "Condo & Townhome Inspection Toronto | Kitec, Fan Coil & HVAC Specialists | ASADS";
+
+const metaDescription =
+  "Certified condo & townhome inspections in Toronto and the GTA. We identify Kitec plumbing, fan coil failures, moisture intrusion, and in-suite liabilities before you buy.";
+
+const duration = "1.5 – 2.5 Hours";
+
+const whatWeInspect = [
+  "In-suite plumbing supply and drain systems",
+  "Kitec & Poly-B plumbing identification",
+  "Fan coil / heat pump operation and drainage",
+  "Electrical panel, breakers & load issues",
+  "Appliance safety and functional lifespan",
+  "Bathroom and laundry moisture intrusion",
+  "Ceiling moisture from unit-above leaks",
+  "Window wall seals & thermal performance",
+  "Balcony floor, guardrail & door thresholds",
+  "Dryer vents and exhaust ducting",
+  "Smoke, CO detectors & life-safety items",
+  "Owner-responsibility vs HOA responsibility mapping"
+];
+
+const benefits = [
+  "Avoid hidden in-suite repair costs",
+  "Identify recalled Kitec plumbing early",
+  "Reduce insurance and financing risk",
+  "Protect against unit-to-unit liability",
+  "Same-day digital inspection reports",
+  "Licensed & Certified Master Inspector",
+  "Toronto condo specialist experience",
+  "Evening & weekend availability"
+];
+
+const faqs = [
+  {
+    q: "How is a condo inspection different from a house inspection?",
+    a: "A condo inspection focuses entirely on in-suite systems you are legally responsible for. Unlike a house, the roof, foundation, and main structure are excluded — but plumbing, electrical, HVAC, moisture, and balconies can still cost tens of thousands if they fail."
+  },
+  {
+    q: "Do you check for Kitec plumbing in condos?",
+    a: "Yes. Kitec plumbing is one of the biggest insurance red flags in Toronto condos built between 1995–2007. We visually identify it and document its presence so buyers can negotiate or plan replacement."
+  },
+  {
+    q: "Is thermal imaging included?",
+    a: "Yes. Thermal imaging is essential for condos. It allows us to detect moisture from leaking units above, failing window seals, and hidden condensation inside walls and ceilings."
+  },
+  {
+    q: "Does the condo corporation inspection replace this?",
+    a: "No. A Status Certificate and building inspection do not evaluate your unit’s plumbing joints, fan coil condition, electrical panel, or moisture damage. Those liabilities belong to the owner."
+  },
+  {
+    q: "How much does a condo inspection cost?",
+    a: "Pricing depends on unit size, HVAC type, and inspection complexity. Contact ASADS at (647) 801-9311 for an exact quote."
+  }
+];
+
+export default function CondoInspection() {
+  const location = useLocation();
+  const canonical = getCanonicalUrl(location.pathname);
+
+  const schemas = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ASADS Home Inspection",
+      "url": canonical,
+      "telephone": "+1-647-801-9311",
+      "areaServed": "Ontario, Canada"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "ASADS Home Inspection",
+      "url": canonical,
+      "telephone": "+1-647-801-9311",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Condo & Townhome Inspection",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "ASADS Home Inspection"
+      },
+      "areaServed": "Toronto & Greater Toronto Area",
+      "description": metaDescription,
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "CAD",
+        "price": "350",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.a
+        }
+      }))
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://asads.ca/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://asads.ca/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Condo & Townhome Inspection",
+          "item": canonical
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": metaTitle,
+      "description": metaDescription,
+      "url": canonical
+    }
+  ];
 
   return (
-    <ServicePageTemplate
-      title="Condo & Townhome Inspection Services"
-      metaTitle={pageTitle}
-      metaDescription={schemaDescription}
-      heroTitle="Certified Condo Inspections – Buyer & Seller Ready"
-      heroSubtitle={
-        <>
-          Avoid hidden liabilities in multi-unit properties. From Kitec plumbing and HVAC Fan Coil issues to HOA compliance and balcony envelope risks, we cover the components you're responsible for.  
-          <br />
-          <Link to="/services/pre-purchase" className="text-blue-600 underline">
-            Pre-Purchase Condo Inspections
-          </Link>{" "}
-          and{" "}
-          <Link to="/services/pre-listing" className="text-blue-600 underline">
-            Pre-Listing Inspections
-          </Link>{" "}
-          ensure buyers and sellers are protected before closing.
-        </>
-      }
-      icon={Building}
-      price="GTA Specialist Rates"
-      duration="1.5 - 2.5 Hours"
-      description={
-        <div className="space-y-6">
-          <p className="text-lg leading-relaxed text-slate-700">
-            In Toronto, the "Common Elements" stop at your drywall. Everything inside—the plumbing, electrical panel, HVAC, and balcony—is your financial responsibility.  
-            Our condo inspection checklist covers HOA rules, structural limits, and in-suite systems, ensuring you know exactly what you're buying or selling.
+    <Layout>
+      <Helmet>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={canonical} />
+        <script type="application/ld+json">
+          {JSON.stringify(schemas)}
+        </script>
+      </Helmet>
+
+      {/* HERO */}
+      <section className="py-20 hero-gradient text-primary-foreground">
+        <div className="container max-w-4xl">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="h-14 w-14 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
+              <Building />
+            </div>
+            <h1 className="font-heading text-4xl md:text-5xl font-bold">
+              Condo & Townhome Inspection
+            </h1>
+          </div>
+
+          <p className="text-xl opacity-90 mb-8">
+            Condo ownership comes with hidden in-suite liabilities. We identify
+            plumbing failures, HVAC risks, moisture intrusion, and safety issues
+            before they become expensive surprises.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
-            <div className="flex flex-col items-center text-center p-5 bg-red-50 rounded-xl border border-red-100 shadow-sm">
-              <Droplets className="text-red-600 mb-2" size={32} />
-              <h4 className="font-bold text-red-900">Kitec & Plumbing Audit</h4>
-              <p className="text-xs text-red-800">Identify recalled piping that can lead to leaks, insurance issues, and costly repairs.</p>
+          <div className="flex flex-wrap gap-6 mb-10">
+            <div className="flex items-center gap-2">
+              <Clock /> {duration}
             </div>
-            <div className="flex flex-col items-center text-center p-5 bg-blue-50 rounded-xl border border-blue-100 shadow-sm">
-              <Thermometer className="text-blue-600 mb-2" size={32} />
-              <h4 className="font-bold text-blue-900">Fan Coil / HVAC Specialist</h4>
-              <p className="text-xs text-blue-800">Deep inspection of actuators, valves, and condensation pans to prevent mold growth and system failures.</p>
+            <div className="flex items-center gap-2">
+              <Droplets /> Kitec Plumbing Audit
             </div>
-            <div className="flex flex-col items-center text-center p-5 bg-amber-50 rounded-xl border border-amber-100 shadow-sm">
-              <ShieldCheck className="text-amber-600 mb-2" size={32} />
-              <h4 className="font-bold text-amber-900">Balcony & Envelope Scan</h4>
-              <p className="text-xs text-amber-800">Thermal imaging of window walls and balcony doors to detect heat loss, water intrusion, and structural concerns.</p>
+            <div className="flex items-center gap-2">
+              <Thermometer /> HVAC & Fan Coil Inspection
             </div>
           </div>
 
-          <p>
-            Our reports complement your <strong>Status Certificate</strong> review, providing evidence to negotiate repairs or credits. High-intent services like "pre-purchase condo inspection near me" and "pre-listing condo inspection for sellers" are designed for immediate bookings to secure your transaction.
-          </p>
+          <div className="flex gap-4 flex-wrap">
+            <Button asChild size="lg" variant="secondary">
+              <Link to="/booking">Book Condo Inspection</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <a href="tel:+16478019311">
+                <Phone className="mr-2 h-5 w-5" />
+                (647) 801-9311
+              </a>
+            </Button>
+          </div>
         </div>
-      }
-      whatWeInspect={[
-        "In-Suite Fan Coil / Heat Pump Operation",
-        "Kitec & Polybutylene Plumbing Audit",
-        "Main Water Shut-off Valve Functionality",
-        "Electrical Panel & Breaker Safety (Thermal Scan)",
-        "Appliance Functional Lifetime Analysis",
-        "Window Wall Seal & Thermal Performance",
-        "Balcony Guardrail & Floor Integrity",
-        "Dryer Vent & Exhaust Duct Health",
-        "Laundry Room Moisture & Leak Detection",
-        "Ceiling/Wall Moisture Mapping (Unit-to-Unit Leaks)",
-        "HOA & Common Element Compliance Checks",
-        "Status Certificate Contextual Notes",
-      ]}
-      features={[
-        {
-          title: "Fan Coil & HVAC Specialist",
-          description: "In-suite HVAC systems are often neglected. We check internal actuators, drain pans, and condensate lines."
-        },
-        {
-          title: "Infrared & Moisture Detection",
-          description: "FLIR® thermal imaging finds hidden leaks, cold spots, and potential mold risk before they become costly."
-        },
-        {
-          title: "Status Certificate & HOA Review",
-          description: "We document condo-specific issues that may affect your HOA disclosure or future special assessments."
-        },
-        {
-          title: "Insurance-Ready Documentation",
-          description: "Reports provide proof of in-suite conditions for claims or lender requirements."
-        },
-      ]}
-      benefits={[
-        "Prevent costly Kitec plumbing issues",
-        "Ensure HVAC systems are mold-free",
-        "Verify window wall and balcony performance",
-        "Protect against unit-to-unit water damage",
-        "Same-day, clear digital PDF reports",
-        "InterNACHI Certified Master Inspector",
-        "Evening & weekend GTA bookings available",
-        "Competitive rates for high-rise suites",
-      ]}
-      faqs={[
-        {
-          question: "Do you inspect condos differently than houses?",
-          answer: "Yes. We focus on in-suite systems, balcony envelope, and HOA-specific concerns, unlike house inspections that cover entire lot systems."
-        },
-        {
-          question: "Do you check for Kitec plumbing in condos?",
-          answer: "Absolutely. Kitec piping is common in condos built 1995-2007. We identify it early so buyers can negotiate replacements or factor in future costs."
-        },
-        {
-          question: "Is thermal imaging included in condo inspections?",
-          answer: "Yes. Thermal scans detect hidden leaks behind walls, ceilings, and balconies that are not visible to standard visual inspections."
-        },
-        {
-          question: "How fast will I get my condo inspection report?",
-          answer: "Digital reports are delivered same-day with photos and annotations, essential in fast-moving Toronto condo transactions."
-        },
-        {
-          question: "How much does a condo inspection cost in Toronto?",
-          answer: "Condo inspection pricing depends on unit size and location. Contact us at (647) 801-9311 for a personalized quote. We offer competitive rates for high-rise suites."
-        },
-      ]}
-      relatedServices={[
-        { title: "Thermal Imaging", href: "/services/thermal-imaging" },
-        { title: "Mold Inspection", href: "/services/mold-inspection" },
-        { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
-        { title: "Pre-Listing Inspection", href: "/services/pre-listing" },
-      ]}
-    />
+      </section>
+
+      {/* CONTENT */}
+      <section className="py-20 bg-background">
+        <div className="container grid lg:grid-cols-3 gap-12">
+          <div className="lg:col-span-2 space-y-14">
+            <div className="prose prose-lg max-w-none">
+              <h2>Understanding Condo & Townhome Liability in Ontario</h2>
+              <p>
+                In Ontario, condo ownership typically ends at the drywall. While
+                the condominium corporation maintains common elements, the
+                systems hidden behind your walls — plumbing joints, electrical
+                panels, fan coils, and moisture damage — are the unit owner’s
+                responsibility.
+              </p>
+
+              <p>
+                Buyers often assume the Status Certificate protects them from
+                defects. In reality, it does not evaluate in-suite conditions.
+                Our condo inspection focuses exclusively on the systems that can
+                trigger insurance claims, special assessments, or personal
+                liability.
+              </p>
+
+              <h3>Kitec Plumbing & Insurance Risk</h3>
+              <p>
+                Kitec plumbing is a recalled aluminum-PEX system widely installed
+                in Toronto condos between the late 1990s and mid-2000s. It is
+                prone to sudden failure and is frequently excluded by insurers.
+                We identify Kitec visually and document it clearly in your
+                inspection report.
+              </p>
+
+              <h3>Fan Coil & HVAC Failures</h3>
+              <p>
+                Condo HVAC systems are commonly neglected. Blocked condensate
+                drains, mold growth, and failing actuators can cause leaks into
+                neighbouring units — creating liability far beyond your own
+                repair costs.
+              </p>
+
+              <h3>Moisture & Unit-to-Unit Leaks</h3>
+              <p>
+                Thermal imaging allows us to detect moisture intrusion from
+                plumbing failures above or beside your unit. These issues are
+                often invisible but can result in drywall damage, mold growth,
+                and disputes with neighbours or the condo corporation.
+              </p>
+
+              {/* PATCH 1: Inspection Process */}
+              <h2>Our Condo & Townhome Inspection Process</h2>
+
+              <h3>Before the Inspection</h3>
+              <p>
+                Once booked, we review the property type, age, and known building systems
+                (fan coil vs heat pump, window wall construction, plumbing era). This allows
+                us to anticipate common failure points specific to Toronto condos and
+                townhomes before arriving on site.
+              </p>
+
+              <h3>During the Inspection</h3>
+              <p>
+                The inspection focuses exclusively on <strong>in-suite systems</strong>.
+                We test plumbing supply and drains, evaluate the electrical panel and breakers,
+                inspect HVAC fan coils or heat pumps, and perform thermal imaging to identify
+                hidden moisture from neighbouring units or failed window seals.
+              </p>
+
+              <h3>After the Inspection</h3>
+              <p>
+                You receive a <strong>same-day digital report</strong> outlining defects,
+                risk levels, and recommended actions. Findings are clearly categorized so
+                buyers can prioritize negotiations, future repairs, or insurance concerns
+                before closing.
+              </p>
+
+              {/* PATCH 4: Internal Pillar Links */}
+              <p>
+                For buyers concerned about specific risks, you may also want to review our
+                related inspection services, including{" "}
+                <Link to="/services/kitec-plumbing-inspection" className="text-primary underline">
+                  Kitec plumbing inspections
+                </Link>,{" "}
+                <Link to="/services/thermal-imaging-inspection" className="text-primary underline">
+                  thermal imaging inspections
+                </Link>, and{" "}
+                <Link to="/services/hvac-inspection" className="text-primary underline">
+                  HVAC system inspections
+                </Link>.
+              </p>
+
+              {/* PATCH 3: Service Areas */}
+              <div>
+                <h2 className="font-heading text-3xl mb-6">
+                  Condo & Townhome Inspections Across Toronto & the GTA
+                </h2>
+
+                <p className="text-muted-foreground mb-4">
+                  ASADS provides condo and townhome inspections throughout Toronto and the
+                  Greater Toronto Area, including:
+                </p>
+
+                <ul className="grid sm:grid-cols-2 gap-2 text-muted-foreground">
+                  <li>Toronto (Downtown, North York, Etobicoke, Scarborough)</li>
+                  <li>Mississauga</li>
+                  <li>Vaughan</li>
+                  <li>Markham</li>
+                  <li>Richmond Hill</li>
+                  <li>Oakville & Burlington</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* PATCH 2: Pricing Section */}
+            <div>
+              <h2 className="font-heading text-3xl mb-6">
+                Condo Inspection Pricing & What Affects Cost
+              </h2>
+
+              <p className="text-muted-foreground mb-4">
+                Condo and townhome inspection pricing varies based on unit size, building
+                systems, and inspection complexity. Unlike houses, condos often require
+                specialized HVAC, plumbing, and moisture analysis.
+              </p>
+
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                <li>Square footage and number of bathrooms</li>
+                <li>Fan coil vs heat pump HVAC systems</li>
+                <li>Presence of Kitec or Poly-B plumbing</li>
+                <li>Balconies, terraces, or stacked townhome layouts</li>
+                <li>Thermal imaging and moisture investigation time</li>
+              </ul>
+
+              <p className="text-muted-foreground mt-4">
+                For an exact quote, contact ASADS at <strong>(647) 801-9311</strong>.
+                Transparent pricing with no hidden add-ons.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="font-heading text-3xl mb-6">
+                Condo Inspection Checklist
+              </h2>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {whatWeInspect.map(i => (
+                  <div key={i} className="flex gap-3 p-4 bg-muted/50 rounded-lg">
+                    <CheckCircle className="text-accent" />
+                    <span>{i}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="font-heading text-3xl mb-6">
+                Frequently Asked Questions
+              </h2>
+              {faqs.map((f, i) => (
+                <div key={i} className="border rounded-lg p-6 mb-4">
+                  <h3 className="font-semibold mb-2">{f.q}</h3>
+                  <p className="text-muted-foreground">{f.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* SIDEBAR */}
+          <aside>
+            <Card className="sticky top-24">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-lg mb-4">
+                  Why Choose ASADS
+                </h3>
+                <ul className="space-y-3">
+                  {benefits.map(b => (
+                    <li key={b} className="flex gap-3">
+                      <Shield className="text-accent" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Button asChild className="w-full mt-6" size="lg">
+                  <Link to="/booking">Book Inspection</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </aside>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-primary text-primary-foreground text-center">
+        <div className="container max-w-3xl">
+          <h2 className="text-4xl font-bold mb-6">
+            Protect Your Condo Investment
+          </h2>
+          <p className="text-xl opacity-90 mb-8">
+            Identify in-suite risks before closing day. Same-day digital reports
+            with clear repair guidance.
+          </p>
+          <Button asChild size="lg" variant="secondary">
+            <Link to="/booking">Schedule Your Inspection</Link>
+          </Button>
+        </div>
+      </section>
+    </Layout>
   );
 }
