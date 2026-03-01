@@ -55,7 +55,7 @@ interface Benefit {
 
 interface FAQ {
   question: string;
-  answer: ReactNode; // Now using JSX instead of string with HTML
+  answer: ReactNode; // JSX content
 }
 
 interface Testimonial {
@@ -66,7 +66,7 @@ interface Testimonial {
 }
 
 // ============================================================================
-// SEO Constants
+// Constants
 // ============================================================================
 const SITE_PHONE = "+16478019311";
 const SITE_EMAIL = "info@asads.ca";
@@ -89,6 +89,12 @@ const secondaryKeywords = [
   "red flags in a home inspection",
   "how long does a house inspection take in Ontario",
 ];
+
+const priceRange = {
+  condo: "$300+",
+  house: "$350-$600",
+};
+const duration = "2-3 Hours (depends on size/complexity)";
 
 // ============================================================================
 // Data Arrays (typed)
@@ -171,15 +177,46 @@ const whatWeInspect: string[] = [
   "Garage & Outbuildings",
 ];
 
-// FAQ answers are now JSX (with links when needed)
+const checklistDetails: Record<string, string> = {
+  "Structural Components & Foundation":
+    "We examine the foundation for cracks, settlement, or water damage; check for proper drainage; and assess the structural integrity of load‑bearing walls, columns, and beams. Any signs of movement or instability are noted.",
+  "Roofing, Flashings & Attic Ventilation":
+    "Our inspectors evaluate the roof covering (shingles, tiles, etc.) for wear, leaks, or missing components; inspect flashings around chimneys and vents; and check attic ventilation and insulation to prevent moisture buildup and ice dams.",
+  "Plumbing Systems & Water Heater":
+    "We test water pressure, check for leaks in visible pipes, evaluate the condition of fixtures, and inspect the water heater (age, tank condition, T&P valve). We also note any signs of corrosion or improper installation.",
+  "Electrical Systems & Panel":
+    "The electrical panel is examined for proper breakers, aluminum wiring, or double‑tapping. We test a representative number of outlets and switches, and look for any hazardous DIY modifications.",
+  "HVAC Equipment & Ductwork":
+    "We inspect the heating and cooling systems (furnace, A/C, heat pump) for age, maintenance, and safe operation. Ductwork is checked for leaks or disconnections, and we note any carbon monoxide or gas line concerns.",
+  "Interior Finishes & Windows":
+    "Walls, ceilings, and floors are examined for cracks, water stains, or uneven surfaces. Windows are checked for proper operation, seal failures (fogging), and signs of rot or moisture intrusion.",
+  "Exterior Envelope & Grading":
+    "We assess siding, brickwork, and trim for damage or deterioration; check that grading slopes away from the foundation; and inspect walkways, decks, and porches for safety issues.",
+  "Basement & Crawl Space":
+    "The basement or crawl space is inspected for moisture, mold, sump pump operation, and foundation condition. We also look for signs of past flooding or inadequate ventilation.",
+  "Insulation & Vapor Barrier":
+    "We evaluate insulation levels in the attic and walls (where visible) and check for a proper vapor barrier in crawl spaces. Inadequate insulation can lead to energy loss and ice dams.",
+  "Garage & Outbuildings":
+    "Garages and detached structures are inspected for structural soundness, electrical safety, fire separation from the house, and operation of overhead doors and openers.",
+};
+
+// FAQ answers – now detailed
 const faqs: FAQ[] = [
   {
     question: "How much does a home inspection cost in Scarborough?",
     answer: (
       <>
-        The average <strong>home inspection cost in Scarborough</strong> ranges from $450 to $750
-        for a standard single‑family home. Condos typically cost $350‑$550, while larger properties
-        may range from $650‑$900. We provide transparent, competitive pricing with no hidden fees.
+        <p>
+          In Scarborough, home inspection prices are based on property type, size, and age.
+          Condominiums typically start at <strong>$300</strong>, while single‑family homes range
+          from <strong>$350 to $600</strong>. Larger or older homes may be at the higher end due to
+          additional systems (e.g., knob‑and‑tube wiring, multiple HVAC units). We provide a
+          detailed quote after a quick conversation about your property – no hidden fees.
+        </p>
+        <p className="mt-2">
+          Remember, the cheapest inspection isn’t always the best value. A thorough inspection can
+          uncover issues that save you thousands in future repairs and give you negotiating power.
+        </p>
       </>
     ),
   },
@@ -187,10 +224,21 @@ const faqs: FAQ[] = [
     question: "What does a pre‑purchase home inspection include in Scarborough?",
     answer: (
       <>
-        A pre‑purchase home inspection in Scarborough includes a thorough evaluation of all major
-        systems: roof, structure, electrical, plumbing, HVAC, insulation, windows, doors, and
-        interior finishes. We identify existing defects, safety hazards, and maintenance needs so
-        you can make an informed buying decision.
+        <p>
+          A pre‑purchase inspection in Scarborough covers all major systems and components:
+        </p>
+        <ul className="list-disc pl-5 mt-2 space-y-1">
+          <li><strong>Structure & Foundation:</strong> checking for cracks, settlement, or moisture.</li>
+          <li><strong>Roof & Attic:</strong> examining shingles, flashings, ventilation, and insulation.</li>
+          <li><strong>Plumbing:</strong> testing water pressure, looking for leaks, and inspecting the water heater.</li>
+          <li><strong>Electrical:</strong> evaluating the panel, wiring, outlets, and safety.</li>
+          <li><strong>HVAC:</strong> assessing the furnace/AC, ductwork, and thermostat.</li>
+          <li><strong>Interior & Exterior:</strong> windows, doors, walls, floors, grading, and decks.</li>
+        </ul>
+        <p className="mt-2">
+          You’ll receive a detailed report with photos and prioritized repair recommendations,
+          helping you decide whether to move forward, negotiate, or walk away.
+        </p>
       </>
     ),
   },
@@ -198,9 +246,18 @@ const faqs: FAQ[] = [
     question: "How long does a home inspection take in Scarborough?",
     answer: (
       <>
-        Most Scarborough home inspections take <strong>2 to 4 hours</strong>, depending on the
-        property’s size, age, and condition. We never rush – we allocate sufficient time to examine
-        every accessible area.
+        <p>
+          A typical home inspection in Scarborough takes <strong>2 to 3 hours</strong>, but the
+          exact time depends on the property’s size, age, and condition. For example:
+        </p>
+        <ul className="list-disc pl-5 mt-2">
+          <li>A 1‑bedroom condo may take 1.5–2 hours.</li>
+          <li>A 3‑bedroom detached house might take 2.5–3 hours.</li>
+          <li>Larger homes (over 3,000 sq. ft.) or those with multiple outbuildings could take 4 hours.</li>
+        </ul>
+        <p className="mt-2">
+          We never rush – we allocate enough time to inspect every accessible area thoroughly.
+        </p>
       </>
     ),
   },
@@ -208,9 +265,19 @@ const faqs: FAQ[] = [
     question: "What are the most common home inspection scams?",
     answer: (
       <>
-        Common scams include unlicensed or uncertified inspectors, missing major defects, or
-        offering to perform repairs themselves (a conflict of interest). ASADS inspectors are fully
-        licensed, certified, and provide unbiased, third‑party evaluations you can trust.
+        <p>
+          Unfortunately, some “inspectors” cut corners or use deceptive tactics. Common scams include:
+        </p>
+        <ul className="list-disc pl-5 mt-2">
+          <li><strong>Unlicensed or uncertified inspectors</strong> – In Ontario, anyone can call themselves a home inspector. Always verify credentials (OAHI, InterNACHI).</li>
+          <li><strong>Missing major defects</strong> – Some inspectors gloss over serious issues to keep the deal moving. Always ask for references and sample reports.</li>
+          <li><strong>Offering repairs</strong> – An inspector who also offers to fix problems has a conflict of interest. ASADS provides unbiased, third‑party evaluations only.</li>
+          <li><strong>Bait‑and‑switch pricing</strong> – A very low quote may lead to upselling during the inspection. We’re transparent about our fees.</li>
+        </ul>
+        <p className="mt-2">
+          With ASADS, you get a certified, experienced professional who follows Ontario’s Standards
+          of Practice.
+        </p>
       </>
     ),
   },
@@ -218,9 +285,20 @@ const faqs: FAQ[] = [
     question: "What are the biggest red flags in a home inspection?",
     answer: (
       <>
-        Major red flags include foundation cracks, water damage or mold, outdated electrical
-        (knob‑and‑tube, aluminum wiring), roof leaks, and signs of structural movement. Our
-        inspectors are trained to spot these issues and explain their implications.
+        <p>
+          During a Scarborough home inspection, we pay special attention to these red flags:
+        </p>
+        <ul className="list-disc pl-5 mt-2">
+          <li><strong>Foundation cracks</strong> – Horizontal or stair‑step cracks can indicate structural movement.</li>
+          <li><strong>Water damage / mold</strong> – Stains on ceilings, walls, or in the basement suggest leaks or poor drainage.</li>
+          <li><strong>Outdated electrical</strong> – Knob‑and‑tube wiring, aluminum wiring, or Federal Pacific panels are fire hazards.</li>
+          <li><strong>Roof age / condition</strong> – Missing shingles, curling, or multiple layers can mean a replacement is imminent.</li>
+          <li><strong>HVAC age</strong> – Furnaces or AC units over 15–20 years old are nearing the end of their service life.</li>
+          <li><strong>DIY renovations</strong> – Unpermitted work often hides code violations and safety issues.</li>
+        </ul>
+        <p className="mt-2">
+          If we spot any of these, we’ll explain the severity and what it might cost to address them.
+        </p>
       </>
     ),
   },
@@ -228,10 +306,20 @@ const faqs: FAQ[] = [
     question: "What's the worst thing a home inspector can find?",
     answer: (
       <>
-        The most serious findings are major structural defects (e.g., compromised foundation),
-        extensive water damage, hazardous electrical systems, or mold infestations. These can be
-        costly to repair, but early detection gives you negotiation power or the chance to walk
-        away.
+        <p>
+          The most serious findings are those that affect safety, structural integrity, or cost a
+          fortune to fix. Examples include:
+        </p>
+        <ul className="list-disc pl-5 mt-2">
+          <li><strong>Major foundation issues</strong> – Repairs can run $10,000–$50,000+.</li>
+          <li><strong>Extensive knob‑and‑tube wiring</strong> – Rewiring an entire house costs $8,000–$15,000.</li>
+          <li><strong>Significant mold or water damage</strong> – Remediation and repairs may exceed $10,000.</li>
+          <li><strong>Structural rot or termite damage</strong> – Can compromise the whole building.</li>
+        </ul>
+        <p className="mt-2">
+          The good news: discovering these before you buy gives you the power to negotiate repairs,
+          a price reduction, or even walk away.
+        </p>
       </>
     ),
   },
@@ -239,9 +327,19 @@ const faqs: FAQ[] = [
     question: "What is the most common home inspection fail?",
     answer: (
       <>
-        Roof problems, plumbing leaks, and HVAC inefficiencies are among the most common issues
-        found. Many homes also have inadequate attic ventilation or insulation. Our detailed
-        reports help you prioritize repairs.
+        <p>
+          Based on our experience in Scarborough, the most common issues we uncover are:
+        </p>
+        <ul className="list-disc pl-5 mt-2">
+          <li><strong>Roof problems</strong> – Aging shingles, poor flashing, or inadequate attic ventilation.</li>
+          <li><strong>Plumbing leaks</strong> – Dripping faucets, corroded pipes, or outdated galvanized supply lines.</li>
+          <li><strong>HVAC inefficiencies</strong> – Dirty filters, failing components, or systems past their expected life.</li>
+          <li><strong>Electrical panel issues</strong> – Double‑tapped breakers, amateur additions, or obsolete panels.</li>
+          <li><strong>Moisture in basements</strong> – Often due to poor grading or missing downspout extensions.</li>
+        </ul>
+        <p className="mt-2">
+          Most of these are fixable, but knowing about them upfront helps you budget and plan.
+        </p>
       </>
     ),
   },
@@ -249,8 +347,17 @@ const faqs: FAQ[] = [
     question: "Is the seller present during a home inspection in Canada?",
     answer: (
       <>
-        In Ontario, sellers are typically not present during the inspection. Buyers and their agents
-        are encouraged to attend to ask questions and learn about the property firsthand.
+        <p>
+          In Ontario, sellers are generally <strong>not present</strong> during the inspection.
+          This allows the buyer and their inspector to speak freely and ask questions without
+          feeling awkward. However, the buyer’s real estate agent often attends, and we encourage
+          buyers to be there too – it’s the best way to learn about the property’s systems and
+          maintenance needs.
+        </p>
+        <p className="mt-2">
+          If the seller or their agent insists on being present, we still conduct a thorough,
+          objective inspection and note any concerns.
+        </p>
       </>
     ),
   },
@@ -258,8 +365,20 @@ const faqs: FAQ[] = [
     question: "What is the most expensive part of a house to fix?",
     answer: (
       <>
-        Foundation repairs, roof replacement, and HVAC system overhauls are typically the most
-        costly. That’s why we pay special attention to these areas during your inspection.
+        <p>
+          The costliest repairs typically involve:
+        </p>
+        <ul className="list-disc pl-5 mt-2">
+          <li><strong>Foundation repair</strong> – $5,000–$50,000 depending on the extent.</li>
+          <li><strong>Roof replacement</strong> – $5,000–$15,000 for an average home.</li>
+          <li><strong>HVAC system replacement</strong> – $4,000–$12,000 for furnace + AC.</li>
+          <li><strong>Rewiring an old house</strong> – $8,000–$15,000.</li>
+          <li><strong>Plumbing re-pipe</strong> – $5,000–$15,000 if replacing all supply lines.</li>
+          <li><strong>Mold remediation</strong> – $2,000–$10,000+ for extensive contamination.</li>
+        </ul>
+        <p className="mt-2">
+          Our inspections highlight these big‑ticket items so you can make an informed decision.
+        </p>
       </>
     ),
   },
@@ -267,9 +386,17 @@ const faqs: FAQ[] = [
     question: "Are home inspections required in Scarborough?",
     answer: (
       <>
-        No, home inspections are not legally required in Ontario, but they are strongly
-        recommended. Most buyers include an inspection condition in their offer to avoid expensive
-        surprises after closing.
+        <p>
+          No, home inspections are <strong>not legally required</strong> in Ontario, including
+          Scarborough. However, they are highly recommended by real estate professionals. Most
+          purchase agreements include an “inspection condition” that gives the buyer a set number
+          of days (typically 5–7) to have the property inspected. If major issues are found, the
+          buyer can negotiate repairs, a price adjustment, or withdraw without penalty.
+        </p>
+        <p className="mt-2">
+          Skipping an inspection might save a few hundred dollars upfront, but it can lead to
+          expensive surprises after closing – a risk most buyers aren’t willing to take.
+        </p>
       </>
     ),
   },
@@ -277,9 +404,20 @@ const faqs: FAQ[] = [
     question: "What are 5 red flag symptoms in a home inspection?",
     answer: (
       <>
-        1. Water stains or musty odours (moisture intrusion) 2. Large foundation cracks 3.
-        Mismatched or DIY electrical work 4. Sagging roof lines 5. Signs of pest infestation. Our
-        inspectors are trained to detect these early.
+        <p>
+          Here are five symptoms that often point to bigger problems:
+        </p>
+        <ol className="list-decimal pl-5 mt-2 space-y-1">
+          <li><strong>Water stains or musty odours</strong> – Indicates leaks, poor drainage, or mould.</li>
+          <li><strong>Large foundation cracks</strong> – Especially if they’re horizontal or widening.</li>
+          <li><strong>Mismatched or DIY electrical work</strong> – Exposed junction boxes, wrong wire sizes, etc.</li>
+          <li><strong>Sagging roof lines</strong> – Could mean structural issues or inadequate framing.</li>
+          <li><strong>Signs of pest infestation</strong> – Termite mud tubes, carpenter ant frass, or rodent droppings.</li>
+        </ol>
+        <p className="mt-2">
+          If you notice any of these during a showing, point them out to your inspector so they can
+          investigate more closely.
+        </p>
       </>
     ),
   },
@@ -287,8 +425,18 @@ const faqs: FAQ[] = [
     question: "Do you offer reliable home inspection services with warranty?",
     answer: (
       <>
-        Yes, all our inspections come with a satisfaction guarantee and we stand behind our work.
-        We also offer optional warranty programs for added peace of mind.
+        <p>
+          Yes, we stand behind every inspection we perform. All ASADS inspections include:
+        </p>
+        <ul className="list-disc pl-5 mt-2">
+          <li>A <strong>satisfaction guarantee</strong> – if you’re not happy, we’ll address your concerns.</li>
+          <li><strong>Errors & Omissions (E&O) insurance</strong> – protects you in the unlikely event we miss something.</li>
+          <li>Optional <strong>warranty programs</strong> through third‑party providers that cover certain systems after closing.</li>
+        </ul>
+        <p className="mt-2">
+          Our reputation is built on thorough, unbiased reports and excellent customer service.
+          Read our testimonials to see why Scarborough homeowners trust us.
+        </p>
       </>
     ),
   },
@@ -318,22 +466,16 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-const priceRange = "$450-$750";
-const duration = "2-4 Hours";
-
-// ============================================================================
-// Schema Markup (unchanged but we'll keep them here)
-// ============================================================================
-
 // ============================================================================
 // Reusable Components
 // ============================================================================
 
 interface ChecklistItemProps {
   item: string;
+  detail: string;
 }
 
-function ChecklistItem({ item }: ChecklistItemProps) {
+function ChecklistItem({ item, detail }: ChecklistItemProps) {
   return (
     <div className="flex items-start gap-4 p-5 bg-card rounded-xl border border-border hover:border-primary/30 transition-colors">
       <div className="bg-primary/10 p-2 rounded-lg">
@@ -341,10 +483,7 @@ function ChecklistItem({ item }: ChecklistItemProps) {
       </div>
       <div>
         <h3 className="font-semibold text-foreground mb-2">{item}</h3>
-        <p className="text-sm text-muted-foreground">
-          Thorough evaluation and detailed reporting of this critical component in your Scarborough
-          property.
-        </p>
+        <p className="text-sm text-muted-foreground">{detail}</p>
       </div>
     </div>
   );
@@ -434,7 +573,23 @@ export default function Scarborough() {
   const location = useLocation();
   const pageUrl = getCanonicalUrl(location.pathname);
 
-  // Schema Markup (LocalBusiness, FAQ, Breadcrumb, WebPage) – unchanged but we need to pass the clean text for FAQ answers
+  // Plain‑text answers for FAQ schema (stripped of HTML)
+  const faqPlainTextAnswers = [
+    "In Scarborough, home inspection prices are based on property type, size, and age. Condominiums typically start at $300, while single‑family homes range from $350 to $600. Larger or older homes may be at the higher end due to additional systems. We provide a detailed quote after a quick conversation about your property – no hidden fees. Remember, the cheapest inspection isn’t always the best value. A thorough inspection can uncover issues that save you thousands in future repairs and give you negotiating power.",
+    "A pre‑purchase inspection in Scarborough covers all major systems and components: Structure & Foundation: checking for cracks, settlement, or moisture. Roof & Attic: examining shingles, flashings, ventilation, and insulation. Plumbing: testing water pressure, looking for leaks, and inspecting the water heater. Electrical: evaluating the panel, wiring, outlets, and safety. HVAC: assessing the furnace/AC, ductwork, and thermostat. Interior & Exterior: windows, doors, walls, floors, grading, and decks. You’ll receive a detailed report with photos and prioritized repair recommendations, helping you decide whether to move forward, negotiate, or walk away.",
+    "A typical home inspection in Scarborough takes 2 to 3 hours, but the exact time depends on the property’s size, age, and condition. For example: A 1‑bedroom condo may take 1.5–2 hours. A 3‑bedroom detached house might take 2.5–3 hours. Larger homes (over 3,000 sq. ft.) or those with multiple outbuildings could take 4 hours. We never rush – we allocate enough time to inspect every accessible area thoroughly.",
+    "Unfortunately, some “inspectors” cut corners or use deceptive tactics. Common scams include: Unlicensed or uncertified inspectors – In Ontario, anyone can call themselves a home inspector. Always verify credentials (OAHI, InterNACHI). Missing major defects – Some inspectors gloss over serious issues to keep the deal moving. Always ask for references and sample reports. Offering repairs – An inspector who also offers to fix problems has a conflict of interest. ASADS provides unbiased, third‑party evaluations only. Bait‑and‑switch pricing – A very low quote may lead to upselling during the inspection. We’re transparent about our fees. With ASADS, you get a certified, experienced professional who follows Ontario’s Standards of Practice.",
+    "During a Scarborough home inspection, we pay special attention to these red flags: Foundation cracks – Horizontal or stair‑step cracks can indicate structural movement. Water damage / mold – Stains on ceilings, walls, or in the basement suggest leaks or poor drainage. Outdated electrical – Knob‑and‑tube wiring, aluminum wiring, or Federal Pacific panels are fire hazards. Roof age / condition – Missing shingles, curling, or multiple layers can mean a replacement is imminent. HVAC age – Furnaces or AC units over 15–20 years old are nearing the end of their service life. DIY renovations – Unpermitted work often hides code violations and safety issues. If we spot any of these, we’ll explain the severity and what it might cost to address them.",
+    "The most serious findings are those that affect safety, structural integrity, or cost a fortune to fix. Examples include: Major foundation issues – Repairs can run $10,000–$50,000+. Extensive knob‑and‑tube wiring – Rewiring an entire house costs $8,000–$15,000. Significant mold or water damage – Remediation and repairs may exceed $10,000. Structural rot or termite damage – Can compromise the whole building. The good news: discovering these before you buy gives you the power to negotiate repairs, a price reduction, or even walk away.",
+    "Based on our experience in Scarborough, the most common issues we uncover are: Roof problems – Aging shingles, poor flashing, or inadequate attic ventilation. Plumbing leaks – Dripping faucets, corroded pipes, or outdated galvanized supply lines. HVAC inefficiencies – Dirty filters, failing components, or systems past their expected life. Electrical panel issues – Double‑tapped breakers, amateur additions, or obsolete panels. Moisture in basements – Often due to poor grading or missing downspout extensions. Most of these are fixable, but knowing about them upfront helps you budget and plan.",
+    "In Ontario, sellers are generally not present during the inspection. This allows the buyer and their inspector to speak freely and ask questions without feeling awkward. However, the buyer’s real estate agent often attends, and we encourage buyers to be there too – it’s the best way to learn about the property’s systems and maintenance needs. If the seller or their agent insists on being present, we still conduct a thorough, objective inspection and note any concerns.",
+    "The costliest repairs typically involve: Foundation repair – $5,000–$50,000 depending on the extent. Roof replacement – $5,000–$15,000 for an average home. HVAC system replacement – $4,000–$12,000 for furnace + AC. Rewiring an old house – $8,000–$15,000. Plumbing re-pipe – $5,000–$15,000 if replacing all supply lines. Mold remediation – $2,000–$10,000+ for extensive contamination. Our inspections highlight these big‑ticket items so you can make an informed decision.",
+    "No, home inspections are not legally required in Ontario, including Scarborough. However, they are highly recommended by real estate professionals. Most purchase agreements include an “inspection condition” that gives the buyer a set number of days (typically 5–7) to have the property inspected. If major issues are found, the buyer can negotiate repairs, a price adjustment, or withdraw without penalty. Skipping an inspection might save a few hundred dollars upfront, but it can lead to expensive surprises after closing – a risk most buyers aren’t willing to take.",
+    "Here are five symptoms that often point to bigger problems: 1. Water stains or musty odours – Indicates leaks, poor drainage, or mould. 2. Large foundation cracks – Especially if they’re horizontal or widening. 3. Mismatched or DIY electrical work – Exposed junction boxes, wrong wire sizes, etc. 4. Sagging roof lines – Could mean structural issues or inadequate framing. 5. Signs of pest infestation – Termite mud tubes, carpenter ant frass, or rodent droppings. If you notice any of these during a showing, point them out to your inspector so they can investigate more closely.",
+    "Yes, we stand behind every inspection we perform. All ASADS inspections include: A satisfaction guarantee – if you’re not happy, we’ll address your concerns. Errors & Omissions (E&O) insurance – protects you in the unlikely event we miss something. Optional warranty programs through third‑party providers that cover certain systems after closing. Our reputation is built on thorough, unbiased reports and excellent customer service. Read our testimonials to see why Scarborough homeowners trust us.",
+  ];
+
+  // Schema Markup
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -476,24 +631,6 @@ export default function Scarborough() {
       reviewCount: "247",
     },
   };
-
-  // For schema we need plain text, so we map faqs to extract text from React elements (simplified: we assume answers are plain text or we use a function to strip tags)
-  // Since our answers now contain JSX, we need to provide plain text for schema. We'll reuse the previous answer strings (stripped of HTML) for schema.
-  // Let's create a separate array of plain-text answers for schema.
-  const faqPlainTextAnswers = [
-    "The average home inspection cost in Scarborough ranges from $450 to $750 for a standard single‑family home. Condos typically cost $350‑$550, while larger properties may range from $650‑$900. We provide transparent, competitive pricing with no hidden fees.",
-    "A pre‑purchase home inspection in Scarborough includes a thorough evaluation of all major systems: roof, structure, electrical, plumbing, HVAC, insulation, windows, doors, and interior finishes. We identify existing defects, safety hazards, and maintenance needs so you can make an informed buying decision.",
-    "Most Scarborough home inspections take 2 to 4 hours, depending on the property’s size, age, and condition. We never rush – we allocate sufficient time to examine every accessible area.",
-    "Common scams include unlicensed or uncertified inspectors, missing major defects, or offering to perform repairs themselves (a conflict of interest). ASADS inspectors are fully licensed, certified, and provide unbiased, third‑party evaluations you can trust.",
-    "Major red flags include foundation cracks, water damage or mold, outdated electrical (knob‑and‑tube, aluminum wiring), roof leaks, and signs of structural movement. Our inspectors are trained to spot these issues and explain their implications.",
-    "The most serious findings are major structural defects (e.g., compromised foundation), extensive water damage, hazardous electrical systems, or mold infestations. These can be costly to repair, but early detection gives you negotiation power or the chance to walk away.",
-    "Roof problems, plumbing leaks, and HVAC inefficiencies are among the most common issues found. Many homes also have inadequate attic ventilation or insulation. Our detailed reports help you prioritize repairs.",
-    "In Ontario, sellers are typically not present during the inspection. Buyers and their agents are encouraged to attend to ask questions and learn about the property firsthand.",
-    "Foundation repairs, roof replacement, and HVAC system overhauls are typically the most costly. That’s why we pay special attention to these areas during your inspection.",
-    "No, home inspections are not legally required in Ontario, but they are strongly recommended. Most buyers include an inspection condition in their offer to avoid expensive surprises after closing.",
-    "1. Water stains or musty odours (moisture intrusion) 2. Large foundation cracks 3. Mismatched or DIY electrical work 4. Sagging roof lines 5. Signs of pest infestation. Our inspectors are trained to detect these early.",
-    "Yes, all our inspections come with a satisfaction guarantee and we stand behind our work. We also offer optional warranty programs for added peace of mind.",
-  ];
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -559,7 +696,7 @@ export default function Scarborough() {
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={pageUrl} />
 
-        {/* Keywords – optional, not used by Google but harmless */}
+        {/* Keywords (optional) */}
         <meta
           name="keywords"
           content={`${primaryKeyword}, ${secondaryKeywords.join(", ")}`}
@@ -620,19 +757,18 @@ export default function Scarborough() {
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
               Looking for the <strong>best home inspection in Scarborough</strong>? ASADS provides
-              certified inspectors, same‑day digital reports, and competitive pricing starting at
-              $450. We answer all your questions – from cost to red flags – so you can buy or sell
-              with confidence.
+              certified inspectors, same‑day digital reports, and competitive pricing. We answer all
+              your questions – from cost to red flags – so you can buy or sell with confidence.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Clock className="h-5 w-5" aria-hidden="true" />
-                <span>{duration} Inspections</span>
+                <span>{duration}</span>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <DollarSign className="h-5 w-5" aria-hidden="true" />
-                <span>Starting at {priceRange.split("-")[0]}</span>
+                <span>Condos {priceRange.condo} | Houses {priceRange.house}</span>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/15 px-4 py-3 rounded-xl">
                 <Shield className="h-5 w-5" aria-hidden="true" />
@@ -700,10 +836,11 @@ export default function Scarborough() {
                   Scarborough Home Inspection Cost & Value
                 </h3>
                 <p className="text-muted-foreground">
-                  The average <strong>home inspection cost in Scarborough</strong> ranges from $450
-                  to $750 for a standard single‑family home. While price matters, the true value
-                  comes from a thorough inspection that can save you thousands in unexpected
-                  repairs and give you leverage in negotiations.
+                  The average <strong>home inspection cost in Scarborough</strong> starts at $300
+                  for condominiums and ranges from $350 to $600 for houses, depending on size and
+                  complexity. While price matters, the true value comes from a thorough inspection
+                  that can save you thousands in unexpected repairs and give you leverage in
+                  negotiations.
                 </p>
               </div>
             </div>
@@ -715,7 +852,7 @@ export default function Scarborough() {
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {whatWeInspect.map((item) => (
-                  <ChecklistItem key={item} item={item} />
+                  <ChecklistItem key={item} item={item} detail={checklistDetails[item]} />
                 ))}
               </div>
             </div>
@@ -904,4 +1041,4 @@ export default function Scarborough() {
       </section>
     </Layout>
   );
-  }
+            }
