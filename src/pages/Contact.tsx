@@ -160,9 +160,20 @@ export default function Contact() {
   return (
     <Layout>
       <Helmet>
-        <title>Contact ASADS | Book a Certified Home Inspector</title>
-        <meta name="description" content="Ready to book? Contact ASADS for fast scheduling and expert home inspections across Ontario. Get the clarity you need before you buy." />
+        <title>Contact ASADS | Book a Home Inspector in Ontario</title>
+        <meta name="description" content="Ready to book? Contact ASADS Home Inspection for fast scheduling across Ontario. Certified inspectors available 7 days a week. Call (647) 801-9311." />
         <link rel="canonical" href="https://www.asads.ca/contact" />
+        <meta property="og:title" content="Contact ASADS | Book a Home Inspector in Ontario" />
+        <meta property="og:description" content="Ready to book? Contact ASADS Home Inspection for fast scheduling across Ontario. Certified inspectors available 7 days a week. Call (647) 801-9311." />
+        <meta property="og:url" content="https://www.asads.ca/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.asads.ca/images/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact ASADS | Book a Home Inspector in Ontario" />
+        <meta name="twitter:description" content="Fast scheduling for certified home inspections across Ontario. Call (647) 801-9311 or book online." />
+        <meta name="twitter:image" content="https://www.asads.ca/images/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(contactPageSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>

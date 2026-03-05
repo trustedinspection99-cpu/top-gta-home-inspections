@@ -7,6 +7,7 @@ export default function PrivacyPolicy() {
     <Layout>
       <Helmet>
         <title>Privacy Policy | ASADS Home Inspection Toronto</title>
+        <meta name="robots" content="noindex, follow" />
         <meta 
           name="description" 
           content="Privacy Policy for ASADS Home Inspection. Learn how we collect, use, and protect your personal information."

@@ -138,7 +138,7 @@ export default function Testimonials() {
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://asads.ca/#localbusiness",
+    "@id": "https://www.asads.ca/#localbusiness",
     "name": "ASADS Home Inspection",
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -180,7 +180,7 @@ export default function Testimonials() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://asads.ca/"
+        "item": "https://www.asads.ca/"
       },
       {
         "@type": "ListItem",
@@ -195,8 +195,19 @@ export default function Testimonials() {
     <Layout>
       <Helmet>
         <title>Customer Testimonials | ASADS Home Inspection Reviews</title>
-        <meta name="description" content="Read verified customer reviews and testimonials from homeowners across the GTA who trusted ASADS for their home inspection needs." />
+        <meta name="description" content="Read verified customer reviews from GTA homeowners who trusted ASADS for home inspections. 4.9 stars from 163+ Ontario clients. See what buyers & sellers say." />
         <link rel="canonical" href="https://www.asads.ca/testimonials" />
+        <meta property="og:title" content="Customer Testimonials | ASADS Home Inspection Reviews" />
+        <meta property="og:description" content="Read verified customer reviews from GTA homeowners who trusted ASADS for home inspections. 4.9 stars from 163+ Ontario clients." />
+        <meta property="og:url" content="https://www.asads.ca/testimonials" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.asads.ca/images/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Customer Testimonials | ASADS Home Inspection Reviews" />
+        <meta name="twitter:description" content="Read verified customer reviews from GTA homeowners. 4.9 stars from 163+ clients across Ontario." />
+        <meta name="twitter:image" content="https://www.asads.ca/images/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify(reviewSchema)}
         </script>

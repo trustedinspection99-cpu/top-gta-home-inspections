@@ -142,9 +142,18 @@ export default function FAQ() {
   return (
     <Layout>
       <Helmet>
-        <title>FAQ | Home Inspection Questions | ASADS Home Inspection</title>
-        <meta name="description" content="Find answers to frequently asked questions about home inspections in the Greater Toronto Area. Learn about costs, process, and what to expect." />
+        <title>Home Inspection FAQ | Common Questions Answered | ASADS</title>
+        <meta name="description" content="Answers to common Ontario home inspection questions: cost, process, what's included, radon, mold, WETT & more. Call (647) 801-9311 to book." />
         <link rel="canonical" href="https://www.asads.ca/faq" />
+        <meta property="og:title" content="Home Inspection FAQ | Common Questions Answered | ASADS" />
+        <meta property="og:description" content="Answers to common Ontario home inspection questions: cost, process, what's included, radon, mold, WETT & more. Call (647) 801-9311 to book." />
+        <meta property="og:url" content="https://www.asads.ca/faq" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.asads.ca/images/og-default.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Home Inspection FAQ | Common Questions Answered | ASADS" />
+        <meta name="twitter:description" content="Answers to common Ontario home inspection questions: cost, process, radon, mold, WETT & more." />
+        <meta name="twitter:image" content="https://www.asads.ca/images/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
@@ -153,7 +162,7 @@ export default function FAQ() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Frequently Asked Questions
+              Home Inspection FAQ: Ontario Questions Answered
             </h1>
             <p className="text-xl text-muted-foreground">
               Find answers to common questions about our home inspection services. Can't find what you're looking for? Contact us directly.

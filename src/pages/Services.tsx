@@ -242,8 +242,19 @@ export default function Services() {
     <Layout>
       <Helmet>
         <title>Home Inspection Services Ontario | ASADS</title>
-        <meta name="description" content="Comprehensive home inspection services for buyers, sellers, and property investors. Certified inspectors, detailed reports, and peace of mind guaranteed." />
+        <meta name="description" content="14 certified home inspection services for Ontario buyers, sellers & investors. Pre-purchase, condo, commercial, radon, mold, asbestos & more. Certified inspectors." />
         <link rel="canonical" href="https://www.asads.ca/services" />
+        <meta property="og:title" content="Home Inspection Services Ontario | ASADS" />
+        <meta property="og:description" content="14 certified home inspection services for Ontario buyers, sellers & investors. Pre-purchase, condo, commercial, radon, mold, asbestos & more." />
+        <meta property="og:url" content="https://www.asads.ca/services" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.asads.ca/images/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Home Inspection Services Ontario | ASADS" />
+        <meta name="twitter:description" content="14 certified home inspection services for Ontario buyers, sellers & investors. Pre-purchase, condo, radon, mold, asbestos & more." />
+        <meta name="twitter:image" content="https://www.asads.ca/images/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(servicesSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
@@ -253,7 +264,7 @@ export default function Services() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Our Inspection Services
+              Home Inspection Services in Ontario
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Comprehensive home inspection services for buyers, sellers, and property investors. 
@@ -456,7 +467,7 @@ export default function Services() {
             ].map((location) => (
               <Link
                 key={location.slug}
-                to={`/locations/${location.slug}`}
+                to={`/locations/home-inspection-${location.slug}`}
                 className="flex items-center justify-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
               >
                 {location.name}

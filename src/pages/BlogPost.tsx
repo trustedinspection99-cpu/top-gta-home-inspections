@@ -50,7 +50,12 @@ export default function BlogPost() {
     "@type": "Article",
     "headline": post.title,
     "description": post.excerpt,
-    "image": post.image,
+    "image": {
+      "@type": "ImageObject",
+      "url": post.image,
+      "width": 800,
+      "height": 500
+    },
     "datePublished": post.date,
     "dateModified": post.date,
     "author": {

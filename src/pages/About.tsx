@@ -20,7 +20,7 @@ const organizationSchema = {
   },
   "image": "https://www.asads.ca/images/toronto-home-inspection-hero.webp",
   "description": "Professional home inspection services in the Greater Toronto Area since 2009. Certified inspectors providing comprehensive property assessments with same-day reports.",
-  "foundingDate": "2015",
+  "foundingDate": "2009",
   "foundingLocation": {
     "@type": "Place",
     "name": "Toronto, Ontario, Canada"
@@ -98,7 +98,7 @@ const aboutPageSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
   "name": "About ASADS Home Inspection",
-  "description": "Learn about ASADS Home Inspection - trusted Ontario home inspectors since 2015 with rigorous standards and commitment to home safety.",
+  "description": "Learn about ASADS Home Inspection - trusted Ontario home inspectors since 2009 with rigorous standards and commitment to home safety.",
   "url": "https://www.asads.ca/about",
   "mainEntity": {
     "@type": "Organization",
@@ -167,14 +167,14 @@ export default function About() {
     <Layout>
       <Helmet>
         <title>Expert Home Inspectors in Ontario | ASADS Certified</title>
-        <meta name="description" content="Trusted Ontario home inspectors since 2015. Learn about our rigorous standards, honest reporting, and commitment to your home safety." />
+        <meta name="description" content="ASADS — Ontario's trusted home inspector since 2009. OAHI & InterNACHI certified. 2,000+ inspections completed. Book online or call (647) 801-9311." />
         <link rel="canonical" href="https://www.asads.ca/about" />
         
         {/* Open Graph */}
         <meta property="og:site_name" content="ASADS Home Inspection" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Expert Home Inspectors in Ontario | ASADS Certified" />
-        <meta property="og:description" content="Trusted Ontario home inspectors since 2015. Learn about our rigorous standards, honest reporting, and commitment to your home safety." />
+        <meta property="og:description" content="Trusted Ontario home inspectors since 2009. Learn about our rigorous standards, honest reporting, and commitment to your home safety." />
         <meta property="og:url" content="https://www.asads.ca/about" />
         <meta property="og:image" content="https://www.asads.ca/images/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
@@ -183,7 +183,7 @@ export default function About() {
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Expert Home Inspectors in Ontario | ASADS Certified" />
-        <meta name="twitter:description" content="Trusted Ontario home inspectors since 2015. Learn about our rigorous standards, honest reporting, and commitment to your home safety." />
+        <meta name="twitter:description" content="Trusted Ontario home inspectors since 2009. Learn about our rigorous standards, honest reporting, and commitment to your home safety." />
         <meta name="twitter:image" content="https://www.asads.ca/images/og-default.jpg" />
         
         <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
@@ -199,7 +199,7 @@ export default function About() {
               Expert Home Inspectors in Ontario
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Since 2015, we've been the GTA's trusted partner for comprehensive home inspections. 
+              Since 2009, we've been the GTA's trusted partner for comprehensive home inspections. 
               Our mission is simple: protect your investment and give you peace of mind.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">

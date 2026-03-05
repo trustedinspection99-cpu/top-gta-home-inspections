@@ -164,9 +164,20 @@ export default function Booking() {
   return (
     <Layout>
       <Helmet>
-        <title>Schedule a Home Inspection Online | ASADS Booking</title>
-        <meta name="description" content="Book your Ontario home inspection in minutes. Fast confirmation, certified inspectors, and flexible scheduling for your real estate needs." />
+        <title>Book a Certified Home Inspector in Ontario | ASADS</title>
+        <meta name="description" content="Book your certified Ontario home inspection in minutes. Same-day appointments available. Pre-purchase, condo, radon, mold & more. Call (647) 801-9311." />
         <link rel="canonical" href="https://www.asads.ca/booking" />
+        <meta property="og:title" content="Book a Home Inspection Online in Ontario | ASADS" />
+        <meta property="og:description" content="Book your certified Ontario home inspection in minutes. Same-day appointments available. Pre-purchase, condo, radon, mold & more. Call (647) 801-9311." />
+        <meta property="og:url" content="https://www.asads.ca/booking" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.asads.ca/images/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Book a Home Inspection Online in Ontario | ASADS" />
+        <meta name="twitter:description" content="Fast scheduling for certified home inspections across Ontario. Same-day available. Call (647) 801-9311 or book online." />
+        <meta name="twitter:image" content="https://www.asads.ca/images/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(bookingSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>

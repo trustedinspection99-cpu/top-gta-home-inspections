@@ -100,23 +100,6 @@ const ontarioCities = [
   "Windsor", "Barrie", "Guelph", "Cambridge", "Whitby"
 ];
 
-// --- BREADCRUMB COMPONENT ---
-const Breadcrumbs = ({ items }: { items: { label: string; href?: string }[] }) => (
-  <nav aria-label="Breadcrumb" className="container mx-auto px-4 py-4 flex items-center gap-2 text-sm text-gray-500">
-    <a href="/" className="hover:text-blue-600 transition-colors">Home</a>
-    {items.map((item, index) => (
-      <div key={index} className="flex items-center gap-2">
-        <ChevronRight size={14} className="text-gray-400" />
-        {item.href ? (
-          <a href={item.href} className="hover:text-blue-600 transition-colors">{item.label}</a>
-        ) : (
-          <span className="font-medium text-blue-800">{item.label}</span>
-        )}
-      </div>
-    ))}
-  </nav>
-);
-
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -140,36 +123,12 @@ const faqSchema = {
   })),
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "HomeInspector"],
-  name: "ASADS Home Inspection",
-  image: `${SITE_URL}/og-image.jpg`,
-  url: `${SITE_URL}/`,
-  telephone: "(647) 801-9311",
-  priceRange: "$$",
-  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "163", bestRating: "5", worstRating: "1" },
-  openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "07:00", closes: "21:00" },
-  address: { "@type": "PostalAddress", addressLocality: "Toronto", addressRegion: "ON", addressCountry: "CA" },
-  geo: { "@type": "GeoCoordinates", latitude: 43.7, longitude: -79.42 },
-  areaServed: ontarioCities,
-  sameAs: [
-    "https://youtube.com/@asadshomeinspection",
-    "https://www.instagram.com/asads_home_inspection",
-    "https://x.com/AsadsInspection",
-    "https://www.facebook.com/share/1ZhWQk97YY/",
-    "https://www.tiktok.com/@asads_home_inspection",
-  ],
-};
-
 const Index = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Ontario Home Inspection | Cost, Services & Red Flags Guide | ASADS</title>
+        <title>Ontario Home Inspection | Certified Services & Pricing | ASADS</title>
         <meta name="description" content="Ontario home inspection cost: $400-$600. Certified OAHI inspections with 14 specialty services. Learn Ontario-specific red flags & book online. (647) 801-9311" />
-        <link rel="canonical" href={`${SITE_URL}`} />
-        
         {/* Open Graph */}
         <meta property="og:title" content="Ontario Home Inspection | Complete Services & Cost Guide | ASADS" />
         <meta property="og:description" content="How much does a home inspection cost in Ontario? $400-$600. Certified OAHI inspectors with 14 specialty services including radon, mold, WETT & asbestos testing." />
@@ -193,14 +152,8 @@ const Index = () => {
         <meta name="keywords" content="home inspection ontario, home inspection toronto, home inspection cost ontario, home inspection checklist, home inspection course ontario, radon testing ontario, mold inspection ontario, wett inspection ontario" />
         
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
-
-      {/* Breadcrumb Row */}
-      <div className="bg-gray-50 border-b">
-        <Breadcrumbs items={[]} />
-      </div>
 
       {/* 1. ONTARIO-FOCUSED HERO */}
       <section className="relative bg-gradient-to-br from-blue-800 to-blue-900 py-24 text-white overflow-hidden">

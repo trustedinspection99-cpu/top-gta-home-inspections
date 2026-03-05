@@ -16,13 +16,15 @@ export default function LocationDetail() {
     <LocationPageTemplate
       city={data.city}
       region={data.region}
-      description={data.description || (data as any).metaDescription}
+      description={data.description || data.metaDescription}
+      metaTitle={data.metaTitle}
+      metaDescription={data.metaDescription}
       phoneNumber={data.phoneNumber}
       neighborhoods={data.neighborhoods}
       localInsights={data.localInsights}
       latitude={data.latitude}
       longitude={data.longitude}
-      localExpertise={buildLocalExpertise({
+      localExpertise={data.localExpertise || buildLocalExpertise({
         city: data.city,
         region: data.region,
         neighborhoods: data.neighborhoods,

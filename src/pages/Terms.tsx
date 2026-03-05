@@ -7,6 +7,7 @@ export default function Terms() {
     <Layout>
       <Helmet>
         <title>Terms of Service | ASADS Home Inspection Toronto</title>
+        <meta name="robots" content="noindex, follow" />
         <meta 
           name="description" 
           content="Terms of Service for ASADS Home Inspection. Read our terms and conditions for home inspection services in Toronto and the GTA."
