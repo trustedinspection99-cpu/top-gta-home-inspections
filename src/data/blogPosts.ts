@@ -2110,6 +2110,691 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">ASADS performs pre-purchase condo inspections across all Toronto neighbourhoods and GTA municipalities including Mississauga, Brampton, Vaughan, Richmond Hill, Markham, and Oshawa. Call (647) 801-9311 or book online. Same-day reports delivered in PDF format with full photographic documentation.</p>
     `,
   },
+  {
+    id: 34,
+    slug: "home-inspection-mississauga-guide",
+    title: "Home Inspection Mississauga: What Every Buyer Needs to Know",
+    metaTitle: "Home Inspection Mississauga | Certified Home Inspector | ASADS",
+    metaDescription: "Looking for a certified home inspector in Mississauga? Learn about local housing issues—KITEC plumbing, condo defects, and more. Book ASADS today.",
+    excerpt: "Mississauga home buyers face unique inspection challenges from KITEC-era plumbing to aging Cooksville bungalows and Square One high-rises. Here's what to watch for.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-01",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Mississauga: Understanding the City's Diverse Housing Stock</h2>
+      <p class="mb-4">Mississauga is Ontario's second-largest city, and its housing market reflects decades of suburban expansion layered on top of older village communities. If you are searching for a home inspection in Mississauga, you need a certified home inspector who understands the distinct challenges that come with each era and neighbourhood of this sprawling city. From 1950s bungalows in Cooksville to 2000s subdivision homes in Erin Mills and brand-new high-rises orbiting Square One, no two Mississauga inspections are quite the same.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Neighbourhood Spotlight: What Changes by Area</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Port Credit and Cooksville Heritage Homes</h3>
+      <p class="mb-4">The older neighbourhoods of Port Credit and Cooksville contain homes built from the 1940s through the 1970s. These properties are charming but carry age-related risks. Inspectors regularly encounter knob-and-tube wiring that has been poorly extended over the decades, galvanized steel plumbing nearing the end of its service life, and single-pane windows long overdue for replacement. Basement moisture intrusion is common in these low-lying areas, particularly near the Credit River floodplain. Buyers should budget for waterproofing and electrical upgrades when targeting these neighbourhoods.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Erin Mills and 1980s–90s Subdivisions</h3>
+      <p class="mb-4">The Erin Mills master-planned community developed rapidly through the 1980s and 1990s, producing thousands of detached and semi-detached homes with similar construction profiles. One of the most urgent issues in this era of Mississauga housing is KITEC plumbing. KITEC was a flexible orange-and-blue pipe system installed in homes built roughly between 1995 and 2007. It is prone to premature failure, fitting corrosion, and sudden leaks. A <a href="/services/pre-purchase">pre-purchase home inspection</a> that specifically investigates plumbing materials is critical before buying any Erin Mills home built during this window. Replacement typically costs $8,000–$15,000.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Square One Condo Towers</h3>
+      <p class="mb-4">The Square One area has transformed into a dense high-rise corridor. Condo buyers face a different set of concerns: HVAC fan coil unit condition, balcony membrane integrity, suite ventilation, and electrical panel amperage are the most common deficiencies our inspectors flag. Reserve fund health is a building-level concern, but suite-level defects are surprisingly common even in newer towers. Our <a href="/services/condo">condo inspection service</a> is tailored specifically to these units and includes a review of status certificate red flags.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Top Issues Found During Mississauga Home Inspections</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>KITEC plumbing:</strong> Present in thousands of homes built 1995–2007 across Erin Mills, Meadowvale, and Churchill Meadows</li>
+        <li><strong>Basement water infiltration:</strong> Especially in Cooksville, Malton, and older Lakeview homes</li>
+        <li><strong>Aging electrical panels:</strong> Fuse boxes and Federal Pacific Stab-Lok panels still found in 1960s–70s properties</li>
+        <li><strong>Roof deterioration:</strong> Many 1980s–90s roofs in Erin Mills are on their second or third layer of shingles</li>
+        <li><strong>Grading and drainage issues:</strong> Flat lots throughout central Mississauga direct water toward foundations</li>
+        <li><strong>Asbestos-containing materials:</strong> Floor tiles, pipe insulation, and vermiculite attic insulation in pre-1985 builds</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why KITEC Plumbing Is a Top Priority in Mississauga</h2>
+      <p class="mb-4">Mississauga's rapid growth through the late 1990s and early 2000s coincided exactly with the KITEC era. The pipe was approved as a cost-effective alternative to copper, and developers used it extensively. Class action settlements have since been reached, but most homeowners received only partial compensation. Today, the presence of KITEC is a material defect that every Mississauga home inspector should flag. ASADS inspectors visually identify KITEC at exposed locations—under sinks, in mechanical rooms, and at water heater connections—and document findings clearly in the report.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Additional Testing Services for Mississauga Buyers</h2>
+      <p class="mb-4">Depending on the age and location of your Mississauga property, you may want to supplement your standard inspection with specialized testing. Homes built before 1985 in Malton, Lakeview, or Clarkson may contain asbestos in textured ceilings, vinyl floor tiles, or HVAC duct insulation. Our <a href="/services/asbestos-testing">asbestos testing service</a> can identify these materials before you close. Similarly, if the home has a gas fireplace or wood-burning stove, a <a href="/services/wett">WETT inspection</a> is required by most insurers.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Booking a Certified Home Inspector in Mississauga</h2>
+      <p class="mb-4">ASADS serves all Mississauga neighbourhoods including Port Credit, Cooksville, Erin Mills, Meadowvale, Churchill Meadows, Clarkson, Lakeview, Malton, and the Square One condo corridor. Our certified home inspectors carry errors and omissions insurance, use thermal imaging cameras as standard equipment, and deliver same-day digital reports. Whether you are a first-time buyer or an experienced investor, a thorough Mississauga home inspection with ASADS gives you the information you need to negotiate with confidence. Call (647) 801-9311 to book your inspection today.</p>
+    `,
+  },
+  {
+    id: 35,
+    slug: "home-inspection-brampton-guide",
+    title: "Home Inspection Brampton: Local Risks Every Buyer Should Know",
+    metaTitle: "Home Inspection Brampton | Certified Home Inspector | ASADS",
+    metaDescription: "Buying a home in Brampton? Learn about clay soil foundation risks, 2000s subdivision issues, and why a certified home inspector in Brampton is essential.",
+    excerpt: "Brampton's rapid growth has produced thousands of subdivision homes with shared risks—clay soil movement, plumbing concerns, and builder-grade finishes. Know what to inspect.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-02",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Brampton: One of Ontario's Fastest-Growing Cities</h2>
+      <p class="mb-4">Brampton has grown at a remarkable pace over the past three decades, evolving from a mid-sized town into one of Canada's largest cities. That growth has produced a housing stock dominated by subdivisions built in waves from the 1990s through the 2010s, with pockets of older housing in Brampton's historic downtown and the Bramalea area. A home inspection in Brampton requires specific local knowledge—particularly regarding soil conditions, construction-era plumbing, and the unique issues that come with rapid suburban development.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Clay Soil Problem: Brampton's Hidden Foundation Risk</h2>
+      <p class="mb-4">Much of Brampton sits on Halton clay—a dense, expansive soil that swells when wet and shrinks dramatically during dry periods. This seasonal movement creates significant stress on foundations, concrete slabs, and underground services. During a Brampton home inspection, our team looks carefully for stair-step cracking in brick veneer, diagonal cracks at window and door corners, uneven floors, and doors that stick seasonally. These are all signs of differential foundation movement driven by clay soil. While minor movement is common and manageable, severe cases may require underpinning or helical pier repairs costing tens of thousands of dollars.</p>
+      <p class="mb-4">The problem is compounded in Brampton because many of the 2000s-era subdivisions were built on former agricultural land where clay content is especially high. Buyers should always request a <a href="/services/pre-purchase">comprehensive pre-purchase inspection</a> that includes a careful foundation assessment before buying in areas like Sandalwood, Castlemore, or Gore Road corridors.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Neighbourhood Breakdown: What to Expect by Area</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Bramalea</h3>
+      <p class="mb-4">Bramalea is one of Brampton's oldest planned communities, developed from the 1960s through the 1980s. Homes here are semi-detached and detached bungalows and two-storeys with typical age-related deficiencies: outdated electrical panels, galvanized plumbing, original single-pane windows, and undersized insulation levels by current standards. Asbestos-containing materials are a real possibility in Bramalea homes built before 1985.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Heart Lake and Older West Brampton</h3>
+      <p class="mb-4">Heart Lake homes from the 1980s and early 1990s frequently show signs of deferred maintenance. Roof flashings, wood decks, and window caulking are common deficiency areas. Some properties in this area had KITEC plumbing installed during renovations or additions in the late 1990s, so even older homes are not immune to this concern.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2000s Subdivision Homes: Castlemore, Springdale, Vales of Castlemore</h3>
+      <p class="mb-4">These northeast Brampton subdivisions represent the bulk of Brampton's housing market. Homes here were built quickly to meet demand, and builder-grade materials and workmanship vary considerably. Common findings include improperly supported roof structures, inadequate attic ventilation, missing air/vapour barriers in basements, and early signs of clay-driven foundation movement. Many homeowners have finished basements with undisclosed moisture histories.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Most Common Defects in Brampton Home Inspections</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Clay soil foundation movement:</strong> Stair-step cracking, settling, and differential movement across much of the city</li>
+        <li><strong>Inadequate attic ventilation:</strong> A pervasive issue in 2000s tract homes leading to ice damming and premature shingle wear</li>
+        <li><strong>Basement moisture:</strong> Finished basements often conceal older water infiltration or ongoing seepage</li>
+        <li><strong>KITEC plumbing:</strong> Found in homes built 1995–2007 throughout Brampton's growth corridors</li>
+        <li><strong>Reverse-slope grading:</strong> Lot grading that has settled toward the house over time, directing water to the foundation</li>
+        <li><strong>Bathroom exhaust venting into attics:</strong> Extremely common in 1990s–2000s builds, causing condensation and mould</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Thermal Imaging and Brampton Homes</h2>
+      <p class="mb-4">Given the prevalence of finished basements and hidden moisture histories in Brampton, thermal imaging is particularly valuable. Our <a href="/services/thermal-imaging">thermal imaging inspections</a> can detect temperature anomalies behind drywall that indicate moisture intrusion, missing insulation, and air leakage that would otherwise go undetected during a visual inspection. This technology has saved Brampton buyers from purchasing homes with serious hidden water damage on multiple occasions.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your Brampton Home Inspection with ASADS</h2>
+      <p class="mb-4">ASADS certified home inspectors serve all Brampton communities including Bramalea, Heart Lake, Springdale, Castlemore, Vales of Castlemore, Sandalwood, Fletcher's Meadow, and Credit Valley. We provide same-day digital inspection reports with high-resolution photos and clear, actionable findings. For a reliable home inspection in Brampton from a certified home inspector you can trust, call ASADS at (647) 801-9311.</p>
+    `,
+  },
+  {
+    id: 36,
+    slug: "home-inspection-markham-guide",
+    title: "Home Inspection Markham: Heritage Homes to Modern Subdivisions",
+    metaTitle: "Home Inspection Markham | Certified Home Inspector | ASADS",
+    metaDescription: "Need a home inspection in Markham? From heritage Unionville to Cornell's new builds, ASADS certified inspectors know every era of Markham housing. Book now.",
+    excerpt: "Markham's housing spans heritage Unionville streetscapes to Cornell's master-planned streets. A Markham home inspector needs to understand all of it.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-03",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Markham: A City of Contrasts</h2>
+      <p class="mb-4">Markham is one of the GTA's most desirable cities, blending preserved heritage streetscapes with master-planned new communities and a thriving tech sector. Whether you are purchasing a Victorian-era home on Unionville's Main Street, a 1980s detached in Markham Village, or a brand-new townhouse in Cornell, a thorough home inspection in Markham is essential. The diversity of Markham's housing stock means inspection findings vary dramatically depending on neighbourhood and construction era.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Heritage Unionville: Beauty and Risk in Equal Measure</h2>
+      <p class="mb-4">Unionville's heritage district is one of Ontario's most picturesque main streets, lined with 19th-century homes that attract buyers willing to pay a premium for historic character. However, these older properties carry significant inspection risks. Rubble stone foundations are common and prone to mortar failure and water infiltration. Knob-and-tube wiring, lead water supply pipes, and single-brick exterior walls with no cavity insulation are standard features of pre-1920 construction. Our <a href="/services/pre-purchase">pre-purchase inspection</a> for heritage Unionville properties includes careful documentation of these systems and realistic cost projections for modernisation.</p>
+      <p class="mb-4">Buyers of heritage homes in Unionville should also be aware that heritage designation may restrict the scope of exterior alterations, which can complicate remediation work on items like windows, siding, and foundation parging.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Markham Village and 1980s Suburban Homes</h2>
+      <p class="mb-4">Markham Village developed through the 1970s and 1980s, producing a large stock of detached and semi-detached homes that are now reaching a critical maintenance inflection point. Roofs on these homes are frequently approaching or past their expected lifespan. Electrical panels from this era—particularly Federal Pacific Stab-Lok and Zinsco brands—have documented reliability problems and are flagged by every competent home inspector in Markham. Plumbing in this era includes both copper and early ABS drain systems; the latter is generally reliable but connections to older cast iron stacks can be problematic.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Cornell and Newer Master-Planned Communities</h2>
+      <p class="mb-4">Cornell is Markham's celebrated new urbanism community, but even relatively new homes built in the 2000s and early 2010s are now showing age-related deficiencies. KITEC plumbing was used in some Cornell-area homes built before 2007. More commonly, our Markham home inspectors find attic insulation deficiencies, cracked driveways from frost heave, and deck ledger boards improperly flashed against stucco cladding. Newer townhomes in Cornell and adjacent communities sometimes have party wall penetrations that were improperly fire-stopped during construction.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Common Findings During Markham Home Inspections</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Aging electrical panels:</strong> Federal Pacific and Zinsco panels in 1970s–80s properties throughout Markham Village and Thornhill</li>
+        <li><strong>Heritage foundation issues:</strong> Rubble stone and early concrete block foundations in Unionville with mortar failure</li>
+        <li><strong>KITEC plumbing:</strong> Found in Cornell and other 1995–2007 builds</li>
+        <li><strong>Roof end-of-life:</strong> Many 1980s homes are on second or third shingle layers approaching their limit</li>
+        <li><strong>Stucco cladding failures:</strong> Common in 1990s–2000s Markham homes, often allowing water infiltration behind the surface</li>
+        <li><strong>Attic moisture and mould:</strong> Inadequate ventilation in sealed soffits of 2000s townhomes</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Specialized Testing in Markham</h2>
+      <p class="mb-4">For older Markham homes, we recommend <a href="/services/asbestos-testing">asbestos testing</a> if textured ceilings, vinyl floor tiles, or pipe insulation are present. Pre-1976 homes in Markham Village and Unionville may also have lead paint—our <a href="/services/lead-paint-testing">lead paint testing service</a> provides definitive results and helps buyers understand remediation requirements before purchasing.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Certified Home Inspector in Markham</h2>
+      <p class="mb-4">ASADS serves all Markham neighbourhoods including Unionville, Markham Village, Cornell, Berczy Village, Cathedraltown, Wismer, Angus Glen, and Milliken Mills. Our certified home inspectors deliver detailed, photo-rich reports on the day of inspection. Call (647) 801-9311 to schedule your Markham home inspection.</p>
+    `,
+  },
+  {
+    id: 37,
+    slug: "home-inspection-vaughan-guide",
+    title: "Home Inspection Vaughan: McMansions, Condos, and Clay Soil Risks",
+    metaTitle: "Home Inspection Vaughan | Certified Home Inspector | ASADS",
+    metaDescription: "Searching for a certified home inspector in Vaughan? ASADS covers Woodbridge, Maple, Thornhill, and VMC condos. Book a Vaughan home inspection today.",
+    excerpt: "Vaughan's Woodbridge Italian-built homes, Maple clay soil issues, and VMC condo towers each present distinct inspection challenges. Here's what buyers need to know.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-04",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Vaughan: Understanding a Premium and Complex Market</h2>
+      <p class="mb-4">Vaughan is one of York Region's most prestigious housing markets, known for its large detached homes, well-appointed interiors, and strong community identity. But prestige does not equal perfection, and a home inspection in Vaughan regularly uncovers significant deficiencies hidden behind high-end finishes. Whether you are buying in Woodbridge, Maple, Thornhill, or the emerging Vaughan Metropolitan Centre condo corridor, a certified home inspector in Vaughan is your most important ally.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Woodbridge: Italian-Built Homes with Unique Characteristics</h2>
+      <p class="mb-4">Woodbridge developed substantially in the 1980s and 1990s, and many of its large homes were custom-built by Italian-Canadian contractors who had their own construction traditions. These homes are often solidly built with masonry features, but they also carry characteristic issues. Flat roof sections on front porticos and extensions are extremely common and are a frequent source of leaks—these membrane roofs require maintenance every 10–15 years and are often deferred. Tile flooring over wood subfloors sometimes shows cracking from deflection. And the custom nature of these builds means non-standard electrical and plumbing configurations are encountered regularly.</p>
+      <p class="mb-4">A <a href="/services/pre-purchase">pre-purchase home inspection</a> in Woodbridge always includes a careful examination of flat roof sections, masonry veneer ties, and the condition of the often-elaborate interlocking stone driveways and retaining walls that characterize the area.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Maple and Kleinburg: Clay Soil Movement</h2>
+      <p class="mb-4">The Maple area sits on Halton and South Ontario clay that behaves similarly to Brampton's expansive soils. Large, heavy homes on clay lots experience measurable seasonal movement that manifests as stair-step brick cracking, sloping floors, and sticking doors. In Kleinburg and the Highway 400 corridor, newer McMansion-scale homes built in the 2000s and 2010s show this movement clearly despite their relative youth. Our inspectors document foundation crack patterns, measure floor levelness, and assess whether movement appears active or historical.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Vaughan Metropolitan Centre Condos</h2>
+      <p class="mb-4">The VMC subway extension has catalyzed intense condo development around the Vaughan Metropolitan Centre station. These are relatively new towers, but even recent builds have deficiencies. Common issues include inadequate suite ventilation, sliding door hardware failures, fan coil unit drain pan problems, and electrical panel amperage that is insufficient for electric vehicle charging or modern appliance loads. Our <a href="/services/condo">condo inspection service</a> examines all suite-level systems and identifies items that should be raised with the builder under Tarion warranty.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Top Defects Found in Vaughan Home Inspections</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Flat roof leaks:</strong> Front portico and rear addition flat roofs in Woodbridge are a chronic maintenance issue</li>
+        <li><strong>Clay soil foundation movement:</strong> Particularly in Maple, Kleinburg, and newer Highway 400 corridor builds</li>
+        <li><strong>Finished basement moisture:</strong> Vaughan's premium finishes sometimes conceal historical water infiltration</li>
+        <li><strong>KITEC plumbing:</strong> Present in homes built 1995–2007 across all Vaughan communities</li>
+        <li><strong>Masonry veneer tie failure:</strong> Older Woodbridge brick veneer sometimes shows separation from the structural wall</li>
+        <li><strong>Oversized HVAC equipment:</strong> Custom homes often have oversized heating systems that short-cycle and reduce efficiency</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Air Quality and Mould in Vaughan Homes</h2>
+      <p class="mb-4">Vaughan's many large, tightly sealed newer homes can accumulate indoor air quality issues quickly when ventilation systems are not maintained. We recommend <a href="/services/air-quality">air quality testing</a> for any Vaughan home where musty odours are present, where the previous occupants had pets or smoked indoors, or where a finished basement shows any history of moisture. Early mould detection protects your family and prevents a minor remediation from becoming a major gut-and-rebuild situation.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Schedule Your Vaughan Home Inspection</h2>
+      <p class="mb-4">ASADS certified home inspectors serve all of Vaughan including Woodbridge, Maple, Kleinburg, Thornhill (Vaughan), Concord, and the Vaughan Metropolitan Centre. We provide evening and weekend appointments, same-day digital reports, and direct access to your inspector for questions after the inspection. Call (647) 801-9311 to book your certified home inspection in Vaughan.</p>
+    `,
+  },
+  {
+    id: 38,
+    slug: "home-inspection-oakville-guide",
+    title: "Home Inspection Oakville: Premium Properties, Real Risks",
+    metaTitle: "Home Inspection Oakville | Certified Home Inspector | ASADS",
+    metaDescription: "Oakville home inspection experts. From Glen Abbey to Kerr Village heritage homes, ASADS certified inspectors know Oakville's KITEC risk and ravine drainage issues.",
+    excerpt: "Oakville's premium real estate market includes everything from lakefront heritage homes to Glen Abbey estates—each with specific inspection concerns buyers must understand.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-05",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Oakville: High Prices Don't Mean No Problems</h2>
+      <p class="mb-4">Oakville consistently ranks among the most expensive real estate markets in Canada. Its combination of lakefront location, excellent schools, and mature tree-lined neighbourhoods commands prices that can easily exceed $2 million for a family home. That premium price does not guarantee a defect-free property. A thorough home inspection in Oakville is every bit as important here as it is in any other Ontario city—and in some cases, the stakes are higher precisely because more money is on the line.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Kerr Village and Old Oakville Heritage Homes</h2>
+      <p class="mb-4">Old Oakville's heritage core along Lakeshore Road and through Kerr Village contains some of the region's most beautiful century homes. These properties are highly sought after, but age brings complexity. Pre-1940 homes in Old Oakville often have rubble stone or early poured concrete foundations, cast iron drainage plumbing that has partially deteriorated, and knob-and-tube electrical systems that have been imperfectly extended over the decades. Our <a href="/services/pre-purchase">pre-purchase inspection</a> for Old Oakville heritage homes includes detailed documentation of every major system and honest assessments of remaining service life and upgrade costs.</p>
+      <p class="mb-4">Lead paint is a realistic concern in any Oakville home built before 1976, and our <a href="/services/lead-paint-testing">lead paint testing</a> is recommended for buyers of older Oakville properties, especially those with young children.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Glen Abbey: Estate Homes and the KITEC Problem</h2>
+      <p class="mb-4">Glen Abbey developed through the late 1980s, 1990s, and into the early 2000s—squarely within the KITEC plumbing installation window (1995–2007). Many of Glen Abbey's larger executive homes were plumbed with KITEC as part of original construction or during renovations in this period. KITEC's failure mode is particularly problematic in large homes: a single fitting failure behind a finished wall in a $2 million Glen Abbey property can cause enormous water damage before it is detected. Every home inspection in Oakville targeting this era must specifically check for KITEC at all accessible locations.</p>
+
+      <h2 class="font-heading text-2xlsx font-bold mt-8 mb-4">Ravine Lots: Drainage and Erosion Issues</h2>
+      <p class="mb-4">Oakville's ravine lots are among the city's most desirable—and most complex from an inspection standpoint. Properties backing onto Sixteen Mile Creek, Morrison Creek, or other ravine systems face unique drainage challenges. Retaining walls on ravine lots deteriorate from constant moisture and root pressure. Lot grading on steep ravine properties can direct surface water toward the foundation. Erosion along ravine edges sometimes threatens the structural integrity of rear yards and outbuildings. Our inspectors evaluate all visible drainage patterns, retaining wall conditions, and foundation exposure on ravine lot properties.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Common Findings in Oakville Home Inspections</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>KITEC plumbing:</strong> Widespread in Glen Abbey and other 1995–2007 Oakville builds</li>
+        <li><strong>Heritage foundation issues:</strong> Stone and early concrete deterioration in Old Oakville and Kerr Village</li>
+        <li><strong>Ravine retaining wall failure:</strong> Common on properties backing onto Oakville's many creek systems</li>
+        <li><strong>Aging cedar shake roofs:</strong> Premium finishes used on estate homes require more frequent maintenance than asphalt</li>
+        <li><strong>Knob-and-tube wiring remnants:</strong> Found in older Oakville homes where original wiring was not fully replaced</li>
+        <li><strong>Whole-home generator and standby system issues:</strong> Common in executive homes and frequently poorly maintained</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Thermal Imaging for Oakville Luxury Homes</h2>
+      <p class="mb-4">Oakville's large luxury homes have more square footage to hide problems in. Our <a href="/services/thermal-imaging">thermal imaging inspection service</a> is particularly valuable in this market, identifying hidden moisture behind premium tile work, insulation gaps in cathedral ceilings, and radiant floor heating system failures that would be entirely invisible to the naked eye. All ASADS inspectors carry thermal imaging cameras as standard equipment on every Oakville inspection.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Certified Home Inspector in Oakville</h2>
+      <p class="mb-4">ASADS serves all Oakville communities including Old Oakville, Kerr Village, Glen Abbey, River Oaks, Palermo Village, Bronte, and Joshua Creek. Our certified home inspectors understand the premium Oakville market and provide reports detailed enough to support informed negotiations on high-value transactions. Call (647) 801-9311 to schedule your Oakville home inspection.</p>
+    `,
+  },
+  {
+    id: 39,
+    slug: "home-inspection-burlington-guide",
+    title: "Home Inspection Burlington: Lakefront Heritage to Modern Suburbs",
+    metaTitle: "Home Inspection Burlington | Certified Home Inspector | ASADS",
+    metaDescription: "Burlington home inspection by ASADS. From Aldershot heritage homes to Tyandaga estates, we know Burlington's KITEC risk, waterfront erosion, and more.",
+    excerpt: "Burlington's mix of lakefront heritage, mid-century Aldershot homes, and Tyandaga luxury properties each require a different inspection approach. Here's what buyers should know.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-06",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Burlington: A City of Distinct Neighbourhoods</h2>
+      <p class="mb-4">Burlington sits at the western end of Lake Ontario, blending lakefront heritage with mid-century suburbs and newer master-planned communities. It is consistently ranked among Ontario's most livable cities, which drives strong real estate demand and high transaction values. A home inspection in Burlington from a certified home inspector is essential in this market—the combination of older housing stock and high prices means that uncovering deficiencies before closing can save Burlington buyers substantial sums.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Aldershot: Mid-Century Homes with Age-Related Concerns</h2>
+      <p class="mb-4">The Aldershot neighbourhood in east Burlington developed primarily in the 1950s and 1960s, producing a stock of bungalows and ranch-style homes that are now over 60 years old. At this age, multiple building systems are at or near end of life simultaneously. Common Aldershot inspection findings include galvanized steel water supply pipes (visibly rusty at exposed sections and severely restricted internally), knob-and-tube wiring still present in attics, original 60-amp service panels that cannot support modern electrical loads, and asbestos-containing materials in floor tiles, ceiling stipple, and HVAC duct insulation.</p>
+      <p class="mb-4">Our <a href="/services/asbestos-testing">asbestos testing service</a> is strongly recommended for any Aldershot home built before 1985. Disturbing asbestos-containing materials during a renovation without professional abatement creates serious health and legal liability.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Downtown Burlington and Waterfront Properties</h2>
+      <p class="mb-4">Burlington's lakefront and downtown heritage homes are among the city's most coveted properties. Many date to the early 20th century and require the same careful heritage inspection approach used in Oakville's Old Town and Hamilton's Durand neighbourhood. Beyond the standard age-related concerns, waterfront and near-waterfront properties in Burlington face specific risks from lake-level erosion and drainage. Our <a href="/services/pre-purchase">pre-purchase home inspection</a> for Burlington waterfront properties includes a careful assessment of lot grading, seawall or shoreline armour conditions, and any evidence of basement water infiltration related to high water tables near the lake.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Tyandaga and Millcroft: Luxury Homes and the KITEC Era</h2>
+      <p class="mb-4">Tyandaga is Burlington's premium escarpment neighbourhood, with large executive homes built primarily from the 1980s through the early 2000s. The late-1990s and early-2000s portion of Tyandaga falls squarely in the KITEC installation window. Our Burlington home inspectors specifically check for KITEC at all accessible locations in homes built during this period. The Millcroft golf course community has a similar profile—large homes, high values, and KITEC risk in properties built before 2007.</p>
+      <p class="mb-4">KITEC replacement in a large Burlington executive home can cost $10,000–$20,000 depending on accessibility. Finding it during a home inspection allows buyers to negotiate a price adjustment or seller credit rather than discovering it after a flood.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Top Defects Found in Burlington Home Inspections</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>KITEC plumbing:</strong> Tyandaga, Millcroft, and other 1995–2007 Burlington builds</li>
+        <li><strong>Galvanized plumbing:</strong> Aldershot bungalows and mid-century downtown homes</li>
+        <li><strong>Asbestos-containing materials:</strong> Pre-1985 homes throughout east Burlington</li>
+        <li><strong>Waterfront erosion and drainage:</strong> Lake Ontario proximity affects grading and foundation drainage</li>
+        <li><strong>Electrical service upgrades needed:</strong> 60-amp panels in Aldershot cannot support modern loads</li>
+        <li><strong>Basement moisture in older stock:</strong> Stone and early concrete foundations throughout older Burlington communities</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mould and Air Quality in Burlington Homes</h2>
+      <p class="mb-4">Burlington's proximity to Lake Ontario means elevated humidity levels, particularly in basements. Older homes with imperfect foundation waterproofing accumulate moisture over decades, creating conditions favourable to mould growth. If you notice musty odours or see discolouration on basement walls during a showing, request our <a href="/services/mould-inspection">mould inspection service</a> as an add-on to your standard home inspection. Early detection is far less expensive than discovering an active mould problem after closing.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your Burlington Home Inspection</h2>
+      <p class="mb-4">ASADS certified home inspectors serve all Burlington neighbourhoods including Aldershot, downtown Burlington, Tyandaga, Millcroft, Brant Hills, Headon Forest, and the lakefront communities. Call (647) 801-9311 to schedule a Burlington home inspection with a certified inspector who understands your neighbourhood.</p>
+    `,
+  },
+  {
+    id: 40,
+    slug: "home-inspection-hamilton-guide",
+    title: "Home Inspection Hamilton: Steel City Homes and Century-Old Risks",
+    metaTitle: "Home Inspection Hamilton | Certified Home Inspector | ASADS",
+    metaDescription: "Hamilton home inspection by ASADS. Lead paint, older plumbing, knob-and-tube wiring, and escarpment drainage—our certified inspectors know Hamilton's risks.",
+    excerpt: "Hamilton's revitalized neighbourhoods contain some of Ontario's oldest housing stock. Lead paint, knob-and-tube wiring, and heritage foundation issues are common. Know what to inspect.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-07",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Hamilton: Canada's Most Underrated Heritage City</h2>
+      <p class="mb-4">Hamilton has undergone a remarkable transformation over the past decade, with its revitalized arts districts, restored heritage properties, and strong population growth attracting buyers from across the Greater Toronto Area. The city's housing stock is among the oldest in Ontario outside of Toronto itself, with large swaths of the lower city built before 1940. This heritage character is part of Hamilton's appeal—but it also means that a home inspection in Hamilton must account for building materials, systems, and construction practices that have not been used for 50 to 100 years.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Lead Paint: Hamilton's Most Widespread Hazard</h2>
+      <p class="mb-4">Lead-based paint was used in Canadian homes until 1976, when federal regulations restricted its use. In Hamilton, where a substantial portion of the housing stock predates 1976—and a large portion predates 1940—lead paint is not a hypothetical risk. It is an extremely common finding. Hamilton's manufacturing and working-class heritage means homes were often painted and repainted over many decades, building up layers of paint that include lead-containing coats beneath.</p>
+      <p class="mb-4">Lead paint is not an immediate hazard when it is intact and not disturbed. It becomes dangerous when it peels, chalks, or is disturbed during renovation. Every family with children under six purchasing a Hamilton home built before 1976 should request our <a href="/services/lead-paint-testing">lead paint testing service</a>. This is not optional—it is a health imperative.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Durand and Locke Street: Hamilton's Heritage Core</h2>
+      <p class="mb-4">The Durand neighbourhood and the Locke Street corridor represent Hamilton's most concentrated heritage housing, with Victorian and Edwardian-era homes lining tree-canopied streets. These properties have tremendous character—and significant inspection complexity. Rubble stone foundations with failed lime mortar point to chronic water infiltration. Knob-and-tube wiring that has been extended with inappropriate modern circuits creates fire risk. Cast iron drainage stacks that are partially deteriorated contribute to slow drains and sewage gas infiltration. Our <a href="/services/pre-purchase">pre-purchase inspection</a> for Durand and Locke Street heritage homes is one of the most comprehensive inspections we perform.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Escarpment: Drainage and Foundation Challenges</h2>
+      <p class="mb-4">The Niagara Escarpment bisects Hamilton, and homes on the mountain face (both lower and upper city) deal with unique drainage challenges. Surface water running down the escarpment can accumulate against foundations. Homes on the brow of the escarpment sometimes have soil erosion issues at their rear yards. In the lower city, the shallow water table in some areas means basement flooding is a recurring rather than exceptional event. Our inspectors assess all drainage patterns, identify high-risk foundation exposures, and document any evidence of past water infiltration.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Common Defects in Hamilton Home Inspections</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Lead paint:</strong> Extremely widespread in pre-1976 homes throughout the lower city, Durand, Westdale, and Strathcona</li>
+        <li><strong>Knob-and-tube wiring:</strong> Active in attics and walls of many pre-1950 Hamilton homes</li>
+        <li><strong>Lead water service pipes:</strong> The original lead pipe from the city main to the house still exists in some older Hamilton properties</li>
+        <li><strong>Foundation mortar failure:</strong> Rubble stone foundations in heritage Hamilton homes regularly require repointing</li>
+        <li><strong>Asbestos-containing materials:</strong> Present in pre-1985 homes in insulation, floor tiles, and plaster coatings</li>
+        <li><strong>Cast iron drain deterioration:</strong> Original cast iron stacks in older homes show internal corrosion and joint failure</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Westdale, Kirkendall, and Emerging Neighbourhoods</h2>
+      <p class="mb-4">Westdale near McMaster University and Kirkendall along Locke Street South are popular with younger buyers seeking character homes at prices below Toronto. These are predominantly 1920s–1940s builds with the full suite of age-related concerns. Investors and first-time buyers alike are drawn to these areas, but without a professional home inspection, they risk underestimating the renovation costs embedded in the purchase price.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Asbestos Testing in Hamilton</h2>
+      <p class="mb-4">Given Hamilton's manufacturing heritage and the age of its housing stock, asbestos is a significant concern. Our <a href="/services/asbestos-testing">asbestos testing service</a> identifies asbestos-containing materials in floor tiles, pipe insulation, furnace duct wrap, attic vermiculite, and acoustic ceiling finishes. Pre-purchase testing gives buyers certainty before they commit to a renovation project that could unknowingly disturb hazardous materials.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Certified Home Inspector in Hamilton</h2>
+      <p class="mb-4">ASADS certified home inspectors serve all Hamilton neighbourhoods including Durand, Locke Street, Westdale, Kirkendall, Strathcona, Stipeley, Crown Point, and the Hamilton Mountain communities. Our inspectors are experienced with Hamilton's unique heritage housing challenges and deliver clear, actionable reports. Call (647) 801-9311 to book your Hamilton home inspection.</p>
+    `,
+  },
+  {
+    id: 41,
+    slug: "home-inspection-barrie-guide",
+    title: "Home Inspection Barrie: Growing City, Hidden Risks",
+    metaTitle: "Home Inspection Barrie | Certified Home Inspector | ASADS",
+    metaDescription: "Need a home inspection in Barrie? ASADS certified inspectors cover radon risks, newer north-end builds, and older Allandale homes. Book your Barrie inspection today.",
+    excerpt: "Barrie is growing fast along the GO corridor, but new homes have issues too. Radon gas, Allandale's older stock, and north-end subdivision defects require a certified Barrie home inspector.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-08",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Barrie: Ontario's Fastest-Growing City</h2>
+      <p class="mb-4">Barrie has transformed from a regional service centre into one of Ontario's fastest-growing communities, fuelled by GO Transit expansion, remote work flexibility, and housing affordability relative to the GTA. This growth has produced thousands of new homes in Barrie's north end while leaving a significant stock of older properties in established neighbourhoods like Allandale, the downtown core, and the waterfront. A home inspection in Barrie must account for both the age-related deficiencies of older homes and the construction-quality concerns that come with rapid suburban development.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Radon Gas: Barrie's Geology Creates Real Risk</h2>
+      <p class="mb-4">Barrie sits on Canadian Shield-influenced geology with significant granite and uranium-bearing rock deposits in the surrounding region. This geology contributes to elevated radon gas potential across Simcoe County. Radon is a naturally occurring radioactive gas that enters homes through foundation cracks, floor drains, and gaps around utility penetrations. It is the second leading cause of lung cancer in Canada after smoking, and it is entirely invisible and odourless. Health Canada recommends testing all homes, but the geological context around Barrie makes radon testing especially important.</p>
+      <p class="mb-4">Our <a href="/services/radon-testing">radon testing service</a> uses long-term alpha-track detectors placed in the lowest livable level of the home for 90 days to provide a statistically valid result. We also offer short-term testing for buyers who need results within their condition period. If you are buying any home in Barrie—new or old—radon testing is strongly recommended.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Allandale: Older Stock with Classic Age-Related Issues</h2>
+      <p class="mb-4">Allandale is one of Barrie's oldest residential neighbourhoods, with homes dating from the early 1900s through the 1960s. These properties have the character that attracts buyers seeking alternatives to cookie-cutter subdivision homes, but they carry corresponding inspection complexity. Knob-and-tube wiring, galvanized plumbing, original single-pane windows, and undersized insulation are all standard findings in Allandale. Foundation types range from rubble stone to early poured concrete, with varying degrees of deterioration and water infiltration risk. Our <a href="/services/pre-purchase">pre-purchase inspection</a> for Allandale properties includes a thorough assessment of all primary systems and realistic cost estimates for necessary upgrades.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">North Barrie Subdivisions: Newer Homes Are Not Problem-Free</h2>
+      <p class="mb-4">The rapid growth of north Barrie—communities like Innishore, Ardagh Bluffs, and the Lampman Lane corridor—has produced thousands of homes built from the late 1990s through the present. Common issues in this stock include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Attic insulation deficiencies:</strong> Barrie's cold climate demands R-60 attic insulation; many newer homes fall short</li>
+        <li><strong>Frost heave effects:</strong> Driveways, walkways, and garage slabs frequently crack from the freeze-thaw cycle</li>
+        <li><strong>KITEC plumbing:</strong> Homes built before 2007 in north Barrie may have KITEC water distribution piping</li>
+        <li><strong>Unfinished Tarion deficiencies:</strong> Newer homes sometimes have outstanding warranty items that previous owners did not pursue</li>
+        <li><strong>Basement humidity:</strong> New subdivision homes on low-lying lots accumulate basement moisture without adequate drainage tile systems</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Lake Simcoe Waterfront Properties</h2>
+      <p class="mb-4">Barrie's Kempenfelt Bay shoreline and the surrounding Lake Simcoe waterfront attract buyers seeking recreational properties or year-round waterfront living. Waterfront homes present specific inspection concerns including well and septic system condition, shoreline erosion, dock and boathouse structural integrity, and water infiltration from seasonal high water levels. Our inspectors are experienced with Simcoe County waterfront properties and assess all of these systems as part of a comprehensive inspection.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Additional Testing for Barrie Buyers</h2>
+      <p class="mb-4">Beyond radon testing, Barrie buyers of older homes should consider <a href="/services/asbestos-testing">asbestos testing</a> for any pre-1985 property. Barrie's growth period in the 1950s–70s coincided with widespread use of asbestos in insulation, floor tiles, and acoustic ceiling finishes. Buyers of properties with private wells should also consider well water testing—a service ASADS provides for Simcoe County waterfront and rural properties.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Certified Home Inspector in Barrie</h2>
+      <p class="mb-4">ASADS certified home inspectors serve all Barrie neighbourhoods including Allandale, Ardagh Bluffs, Innishore, Holly, Painswick, Sunnidale, and the Kempenfelt Bay waterfront. We provide same-day digital reports and radon test add-on packages. Call (647) 801-9311 to schedule your Barrie home inspection today.</p>
+    `,
+  },
+  {
+    id: 42,
+    slug: "home-inspection-kitchener-guide",
+    title: "Home Inspection Kitchener: Bungalows, Tech Hubs, and Hidden Hazards",
+    metaTitle: "Home Inspection Kitchener | Certified Home Inspector | ASADS",
+    metaDescription: "Kitchener home inspection by ASADS. Asbestos in older bungalows, clay soil risks, and tech-era condo growth—our certified inspectors cover it all. Book today.",
+    excerpt: "Kitchener's German heritage and 1950s–70s bungalow stock hides asbestos and outdated systems. The tech sector is driving new condo growth with its own inspection concerns.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-09",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Kitchener: Understanding a City in Transition</h2>
+      <p class="mb-4">Kitchener—historically known as Berlin until 1916—has deep German-Canadian roots and a rich manufacturing heritage that shaped its residential development for most of the 20th century. Today, the city is in a second transformation, driven by its emergence as a technology sector hub anchored by Communitech and the Waterloo Region tech ecosystem. This transition means Kitchener buyers face an unusually wide range of housing eras: post-war bungalows from the 1950s and 1960s, mid-century infill from the 1970s, and a growing stock of condo towers and townhomes built in the past decade. A home inspection in Kitchener requires expertise across all of these contexts.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Asbestos: Kitchener's Most Common Hidden Hazard</h2>
+      <p class="mb-4">Kitchener's large stock of homes built between 1945 and 1985 contains a significant proportion of properties with asbestos-containing materials. The 1950s–70s bungalow neighborhoods of Kitchener—Stanley Park, Centreville, and Highland Road—are particularly affected. Asbestos was used extensively in floor tiles (9"x9" vinyl tiles almost always contain asbestos), acoustic ceiling stipple, pipe insulation, HVAC duct tape, and attic vermiculite fill during this era.</p>
+      <p class="mb-4">The critical point for Kitchener buyers is that asbestos in good condition does not need to be removed—it needs to be documented and left undisturbed. However, if you plan any renovation that involves cutting, drilling, or demolishing materials from this era, professional asbestos assessment and abatement is legally required. Our <a href="/services/asbestos-testing">asbestos testing service</a> provides laboratory-confirmed identification of all suspect materials sampled during the inspection.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Clay Soil Issues in Kitchener Neighbourhoods</h2>
+      <p class="mb-4">Much of Kitchener sits on Waterloo Region clay till—an expansive soil similar to the clays that cause foundation movement in Brampton and Vaughan. Post-war bungalows built directly on this clay show the characteristic signs of differential movement: stair-step brick cracks, slightly out-of-plumb doorframes, and sloping floors. Our <a href="/services/pre-purchase">pre-purchase home inspection</a> documents all of these indicators and helps buyers understand whether movement is historical and stable or active and progressive.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Post-War Bungalows: What Inspectors Find Most Often</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Asbestos-containing materials:</strong> Floor tiles, pipe insulation, and acoustic ceilings in pre-1985 Kitchener bungalows</li>
+        <li><strong>Knob-and-tube wiring:</strong> Still active in attics of some 1950s–60s homes, particularly in older Kitchener neighbourhoods</li>
+        <li><strong>Galvanized water supply pipes:</strong> Corroded internally, reducing water pressure and causing discolouration</li>
+        <li><strong>Undersized electrical service:</strong> 60-amp panels cannot support modern electrical loads and require upgrading</li>
+        <li><strong>Basement water infiltration:</strong> Block and early poured concrete foundations with failed parging and cracked walls</li>
+        <li><strong>Single-pane windows:</strong> Original aluminum-framed windows are energy losers and often require replacement</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Kitchener's New Condo Market</h2>
+      <p class="mb-4">The LRT corridor through downtown Kitchener has catalyzed a wave of condo development, with towers rising near the King Street stations. These units are popular with tech workers and investors, but even new construction has deficiencies. Our <a href="/services/condo">condo inspection service</a> examines suite-level systems, identifies deficiencies that qualify for Tarion warranty claims, and checks for common issues in new construction like improperly sealed balcony doors, inadequate bathroom exhaust, and electrical panel amperage limitations.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Victoria Park and Established Neighbourhoods</h2>
+      <p class="mb-4">The Victoria Park area and surrounding established neighbourhoods contain some of Kitchener's most desirable older homes—Edwardian and inter-war properties with character features buyers prize. These are precisely the homes most likely to contain lead paint (pre-1976 builds) and knob-and-tube wiring. Our certified inspectors are experienced with these properties and provide honest assessments of what buyers are taking on.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Certified Home Inspector in Kitchener</h2>
+      <p class="mb-4">ASADS certified home inspectors serve all Kitchener communities including Stanley Park, Centreville, Highland Road, Victoria Park, Forest Hill, Pioneer Park, and the downtown LRT corridor. Call (647) 801-9311 to schedule your Kitchener home inspection and get the certified, thorough assessment you need before purchasing.</p>
+    `,
+  },
+  {
+    id: 43,
+    slug: "home-inspection-guelph-guide",
+    title: "Home Inspection Guelph: Heritage Limestone and University-City Challenges",
+    metaTitle: "Home Inspection Guelph | Certified Home Inspector | ASADS",
+    metaDescription: "Guelph home inspection by ASADS. Heritage limestone homes, century homes in the Ward, clay soil, and student rental stock—our certified inspectors know Guelph inside out.",
+    excerpt: "Guelph's limestone heritage buildings, century homes in the Ward neighbourhood, and rapid university-driven growth each present distinct inspection challenges for buyers.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-10",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Guelph: The Royal City's Unique Housing Landscape</h2>
+      <p class="mb-4">Guelph stands apart from most Ontario cities. Founded in 1827 by John Galt, it has preserved a remarkable built heritage of limestone commercial buildings and residential properties that give the city centre a distinctly European character. At the same time, the University of Guelph drives a substantial student rental market and rapid residential growth on the city's periphery. A home inspection in Guelph must be grounded in the city's dual nature—historic core with century-old construction and expanding outer communities with contemporary suburban issues.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Ward Neighbourhood: Century Homes and Heritage Complexity</h2>
+      <p class="mb-4">The Ward, Guelph's oldest residential neighbourhood, is a collection of Victorian and Edwardian homes built between the 1870s and the 1920s. These properties are some of the most visually appealing in Waterloo Region—and among the most inspection-intensive. Rubble limestone foundations, which are common in the Ward, behave differently than poured concrete. Lime mortar between limestone blocks is self-healing to a degree but can fail under sustained moisture pressure, allowing water infiltration. Interior drainage systems, exterior waterproofing, and foundation repointing are all common recommendations from Ward neighbourhood inspections.</p>
+      <p class="mb-4">Knob-and-tube wiring is the norm rather than the exception in Ward properties. While in good condition it is often acceptable to insurers, many insurance companies now require a licensed electrician's letter confirming its condition. Lead paint is a near-certainty in any Ward home built before 1976. Our <a href="/services/lead-paint-testing">lead paint testing service</a> is particularly relevant for buyers planning renovations in the Ward.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Heritage Conservation in Guelph: Inspection Implications</h2>
+      <p class="mb-4">Guelph takes heritage conservation seriously, and many Ward neighbourhood and downtown properties are subject to Heritage Conservation District designations or individual heritage designations. This has direct implications for buyers: exterior alterations, window replacements, and even certain interior changes may require heritage permits. During a <a href="/services/pre-purchase">pre-purchase inspection</a>, our certified inspectors note all systems that may require upgrading and discuss the heritage designation implications for completing that work.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Clay Soil and Foundation Movement in Guelph</h2>
+      <p class="mb-4">Like much of southwestern Ontario, Guelph sits on clay-rich glacial till that is prone to seasonal expansion and contraction. This affects properties across all eras of Guelph construction. In the Ward, clay movement exacerbates the already-complex behaviour of rubble stone foundations. In Guelph's 1950s–80s suburban areas—St. George's Park, Exhibition Park, and Kortright Hills—clay movement produces the characteristic diagonal cracks and sloping floors that indicate differential foundation settlement.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Student Rental Properties: Deferred Maintenance and Hidden Damage</h2>
+      <p class="mb-4">The student rental market around the University of Guelph produces a category of homes that require particularly careful inspection. Properties that have been student rentals for years often show accumulated deferred maintenance, wear from high occupancy, and DIY repairs that do not meet code. Basement conversions, additional bathroom installations, and electrical modifications are common—and commonly not done to standard. Our inspectors look beyond surface condition to identify code-deficient modifications, hidden moisture in high-occupancy bathrooms, and structural concerns from informal renovation work.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Common Findings in Guelph Home Inspections</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Rubble limestone foundation issues:</strong> Failed lime mortar, water infiltration, and drainage concerns in Ward and downtown properties</li>
+        <li><strong>Knob-and-tube wiring:</strong> Active in many pre-1950 Guelph homes</li>
+        <li><strong>Lead paint:</strong> Standard concern in all pre-1976 Guelph properties</li>
+        <li><strong>Deferred maintenance in rental stock:</strong> Properties near the university show accelerated wear</li>
+        <li><strong>Asbestos-containing materials:</strong> In pre-1985 homes throughout all Guelph neighbourhoods</li>
+        <li><strong>Unpermitted basement apartments:</strong> Illegal secondary units are common and create safety and insurance concerns</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mould Risk in Guelph Homes</h2>
+      <p class="mb-4">Guelph's older housing stock, combined with high-occupancy rental use and clay soil drainage challenges, creates conditions where mould is a realistic concern. Our <a href="/services/mould-inspection">mould inspection service</a> uses moisture meters, thermal imaging, and air sampling to identify mould growth and moisture conditions before they become a costly post-purchase discovery. This service is particularly recommended for any Guelph home that has been a student rental or shows any evidence of basement moisture.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Certified Home Inspector in Guelph</h2>
+      <p class="mb-4">ASADS certified home inspectors serve all Guelph communities including the Ward, St. George's Park, Exhibition Park, Kortright Hills, Pineridge, and the growing south-end subdivisions. Call (647) 801-9311 to book your Guelph home inspection with a certified inspector who understands Guelph's unique housing challenges.</p>
+    `,
+  },
+  {
+    id: 44,
+    slug: "home-inspection-oshawa-guide",
+    title: "Home Inspection Oshawa: GM Legacy Homes and Older Downtown Stock",
+    metaTitle: "Home Inspection Oshawa | Certified Home Inspector | ASADS",
+    metaDescription: "Oshawa home inspection by ASADS. Knob-and-tube wiring, 1940s–60s downtown homes, and aging basement systems—certified Oshawa home inspectors you can trust.",
+    excerpt: "Oshawa's manufacturing heritage produced thousands of 1940s–60s worker homes now showing their age. Knob-and-tube wiring and older plumbing are extremely common findings.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-11",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Oshawa: Understanding the Automotive City's Housing Stock</h2>
+      <p class="mb-4">Oshawa's identity was shaped by General Motors, which established its Canadian operations there in the early 20th century. The auto plant drove decades of residential construction to house workers and their families, producing a dense stock of modest, well-built homes in the city's downtown core and surrounding neighbourhoods from the 1920s through the 1960s. Today, with GM's presence reduced and the city diversifying its economy through Durham College and Ontario Tech University, Oshawa is attracting a new wave of buyers—many of them drawn by relatively affordable prices compared to the GTA. A thorough home inspection in Oshawa is essential for these buyers, because affordability often comes with the hidden costs of aging systems that need replacement.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Knob-and-Tube Wiring: Oshawa's Most Common Electrical Finding</h2>
+      <p class="mb-4">Knob-and-tube (K&T) wiring is the single most common significant deficiency our certified home inspectors find in Oshawa. The city's large stock of 1920s–1950s worker homes were originally wired with K&T, which was the standard of the era. Unlike modern grounded wiring, K&T has no ground conductor, uses individual conductors run through air (relying on air cooling), and has rubber insulation that becomes brittle with age. The most serious risk is not the original K&T itself but rather improper modifications made over the decades—junction boxes made in wall cavities, insulation buried over K&T in attics (which causes overheating), and circuits extended with modern wire connected improperly.</p>
+      <p class="mb-4">Our <a href="/services/pre-purchase">pre-purchase home inspection</a> for older Oshawa homes includes a thorough attic inspection to identify active K&T, examination of all accessible junction points, and documentation of any modifications that appear unsafe. Many Oshawa homeowners have partially rewired their homes over the years, which creates a patchwork of old and new wiring that is sometimes more problematic than original K&T.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Oshawa's Downtown Core: What Buyers Find</h2>
+      <p class="mb-4">The downtown Oshawa neighbourhoods—Vanier, O'Neill, and McLaughlin—contain the city's oldest and most densely developed residential areas. Homes here range from pre-1920 worker cottages to 1950s–60s bungalows and semi-detached properties. Common inspection findings in this area include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Knob-and-tube wiring:</strong> Active in attics and some wall circuits of pre-1960 homes</li>
+        <li><strong>Galvanized steel water supply pipes:</strong> Heavily corroded, causing low water pressure and rust-coloured water</li>
+        <li><strong>Cast iron sewer laterals:</strong> Original cast iron from house to street sometimes requires replacement, particularly where root intrusion has occurred</li>
+        <li><strong>Aging basement systems:</strong> Original clay tile weeping tile systems have often failed, and sump pumps may have been retrofitted without proper drainage systems</li>
+        <li><strong>Lead paint:</strong> Likely in all pre-1976 properties throughout Oshawa's established neighbourhoods</li>
+        <li><strong>Foundation parging failure:</strong> Exposed block and poured concrete foundations show cracking and spalling</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Newer North Oshawa: A Different Set of Concerns</h2>
+      <p class="mb-4">North Oshawa has seen significant development from the 1990s through the present, with subdivisions along Taunton Road and north of Rossland Road attracting families seeking newer homes. These properties have fewer age-related concerns but are not without issues. KITEC plumbing in homes built before 2007 is a consistent finding. Attic insulation deficiencies, garage fire separation problems, and grading that has settled toward foundations over two to three decades are all regularly documented in north Oshawa inspections.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Basement Systems in Older Oshawa Homes</h2>
+      <p class="mb-4">Oshawa's older homes frequently have basement systems that have been informally modified over decades. Original gravity-fed drainage, clay tile weeping tile systems, and stone-faced block foundations were the norm in pre-1960 construction. These systems often show evidence of past or ongoing water infiltration. Sump pumps have been added in many homes but without the proper drainage tile to make them effective. Our inspectors assess the entire basement moisture management system, from exterior grading through to sump discharge, and identify gaps that put the basement at risk.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Thermal Imaging for Oshawa Homes</h2>
+      <p class="mb-4">Our <a href="/services/thermal-imaging">thermal imaging service</a> is particularly valuable in Oshawa's older homes, where moisture infiltration behind finished basement walls and in attic cavities is common but visually concealed. Thermal imaging identifies temperature differentials that indicate active moisture even when no visible staining is present. This technology has revealed significant hidden water damage in multiple Oshawa properties that appeared dry during visual inspection.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your Oshawa Home Inspection</h2>
+      <p class="mb-4">ASADS certified home inspectors serve all Oshawa neighbourhoods including Vanier, O'Neill, McLaughlin, Centennial, Pinecrest, Kedron, and north Oshawa subdivisions. We provide same-day digital reports and are available evenings and weekends. Call (647) 801-9311 to schedule your certified home inspection in Oshawa.</p>
+    `,
+  },
+  {
+    id: 45,
+    slug: "home-inspection-ajax-guide",
+    title: "Home Inspection Ajax: Commuter City, Waterfront Community, Growing Suburb",
+    metaTitle: "Home Inspection Ajax | Certified Home Inspector | ASADS",
+    metaDescription: "Ajax home inspection by ASADS. Port Whitby waterfront, 1980s–90s suburban stock, and newer north Ajax builds—certified inspectors serving all Ajax communities.",
+    excerpt: "Ajax grew rapidly as a GTA commuter community. Its 1980s–90s housing stock is reaching a maintenance inflection point, and newer north Ajax builds have their own concerns.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-12",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Ajax: What Every Buyer Should Know</h2>
+      <p class="mb-4">Ajax is one of Durham Region's most established communities, developing as a planned post-war industrial town and evolving into a sought-after GTA commuter suburb. Its housing stock is concentrated in two major eras: the 1980s–90s suburban expansion that produced the bulk of Ajax's detached and semi-detached homes, and the more recent north Ajax developments from the 2000s–2010s. A home inspection in Ajax is essential in both eras—the older stock is reaching a critical maintenance inflection point, while newer developments have their own construction-quality concerns.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Ajax's 1980s–90s Housing Stock: The Maintenance Inflection Point</h2>
+      <p class="mb-4">Homes built in Ajax during the 1980s and 1990s are now 30–40 years old—an age at which multiple building systems reach the end of their expected service life simultaneously. Roofs from this era are frequently at or past their useful life; a roof installed in 1990 on a 35-year-old home has been through hundreds of freeze-thaw cycles and is likely showing granule loss, curling shingles, or deteriorated flashing. Furnaces from this era are approaching 30–40 years of service—well past the expected 20-year lifespan. Air conditioners installed in the early 1990s are typically end-of-life.</p>
+      <p class="mb-4">KITEC plumbing is a significant concern in Ajax homes built between 1995 and 2007. Our <a href="/services/pre-purchase">pre-purchase home inspection</a> specifically checks for KITEC at all accessible locations and documents clearly whether it is present, as this finding has a direct impact on property value and insurance eligibility.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Port Whitby: Waterfront Properties and Their Specific Risks</h2>
+      <p class="mb-4">The Port Whitby waterfront area, which straddles the Ajax-Whitby border along Lake Ontario, contains some of the most desirable and expensive properties in Durham Region. Waterfront and near-waterfront homes face specific inspection concerns including:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Foundation drainage influenced by high water tables near the lake</li>
+        <li>Basement sump pump reliance—critical systems that need annual maintenance</li>
+        <li>Window and door seal failures from the demanding lake exposure environment</li>
+        <li>Deck and outdoor structure deterioration from moisture and freeze-thaw cycles</li>
+        <li>Grading changes from erosion and landscaping modification over decades</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">North Ajax New Development: Newer Doesn't Mean Problem-Free</h2>
+      <p class="mb-4">North Ajax has seen substantial residential development in the 2000s and 2010s, including large subdivisions along Taunton Road and Rossland Road corridors. While newer construction avoids many of the age-related deficiencies of older Ajax homes, our certified home inspectors regularly find issues in this stock: inadequate attic insulation and ventilation, improperly installed vapour barriers, garages with fire-separation deficiencies, and grading that has settled toward foundations. Sewer backup protection (backwater valves) is not universally installed in older Ajax builds and is recommended by Durham Region for flood-risk areas.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Common Findings in Ajax Home Inspections</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>KITEC plumbing:</strong> Present in 1995–2007 Ajax builds throughout central and south Ajax</li>
+        <li><strong>Aging roofs:</strong> 1980s–90s roofs frequently at or past expected lifespan</li>
+        <li><strong>Furnace and AC end-of-life:</strong> Original HVAC systems in 30–40-year-old homes</li>
+        <li><strong>Attic insulation deficiencies:</strong> Particularly in newer north Ajax builds</li>
+        <li><strong>Garage fire-separation issues:</strong> Missing or compromised drywall separation between garage and living space</li>
+        <li><strong>Sump pump reliance without backup:</strong> Single sump pumps without battery backup in flood-risk areas</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Thermal Imaging for Ajax Buyers</h2>
+      <p class="mb-4">Our <a href="/services/thermal-imaging">thermal imaging inspection service</a> helps Ajax buyers identify hidden insulation gaps, moisture infiltration behind finished drywall, and cold air intrusion around windows and exterior penetrations that would otherwise go undetected. This is particularly useful for Ajax buyers targeting finished basement homes where previous water infiltration may have been concealed behind renovations.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Certified Home Inspector in Ajax</h2>
+      <p class="mb-4">ASADS certified home inspectors serve all Ajax communities including south Ajax, central Ajax, Pickering Village area, north Ajax along Taunton and Rossland, and the Port Whitby waterfront. Call (647) 801-9311 to schedule your Ajax home inspection today.</p>
+    `,
+  },
+  {
+    id: 46,
+    slug: "home-inspection-whitby-guide",
+    title: "Home Inspection Whitby: Heritage Downtown to Suburban Growth Corridors",
+    metaTitle: "Home Inspection Whitby | Certified Home Inspector | ASADS",
+    metaDescription: "Whitby home inspection by ASADS. Downtown heritage core, Blue Grass Meadows, Pringle Creek, and suburban growth—certified Whitby home inspectors with local expertise.",
+    excerpt: "Whitby spans a heritage downtown core and rapidly growing suburban neighbourhoods. Each area has distinct inspection concerns that every Whitby buyer should understand.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-13",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Whitby: A Community of Many Eras</h2>
+      <p class="mb-4">Whitby is one of Durham Region's most diverse communities in terms of housing age and style. Its downtown core preserves a Victorian-era streetscape with homes dating to the mid-19th century. Surrounding neighbourhoods like Blue Grass Meadows and Pringle Creek represent post-war and 1970s–80s residential development. And the city's northern and eastern edges are home to newer subdivisions built from the 1990s through the present. A home inspection in Whitby needs to be calibrated to the specific era and neighbourhood of the property being purchased—there is no one-size-fits-all approach in this city.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Downtown Whitby Heritage Homes: Character and Complexity</h2>
+      <p class="mb-4">Whitby's downtown core and the heritage residential streets around Brock Street contain some of Durham Region's oldest homes. Victorian and Edwardian properties built between 1860 and 1920 are charming but carry significant inspection complexity. Stone and early brick foundations require careful evaluation—lime mortar between older brick courses can fail over time, and rubble stone foundations are prone to water infiltration without ongoing maintenance. Knob-and-tube wiring is standard in homes from this era. Lead paint is a near-certainty in any downtown Whitby home built before 1976.</p>
+      <p class="mb-4">Our <a href="/services/pre-purchase">pre-purchase home inspection</a> for downtown Whitby heritage properties includes detailed documentation of all original systems, identification of modifications made over the decades (some safe, some not), and realistic cost projections for necessary upgrades. We also recommend our <a href="/services/lead-paint-testing">lead paint testing service</a> for buyers of pre-1976 Whitby properties who plan renovations.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Blue Grass Meadows and Pringle Creek: Mid-Century and 1970s Homes</h2>
+      <p class="mb-4">These established Whitby neighbourhoods developed primarily in the 1960s and 1970s, producing a stock of detached bungalows and two-storey homes that are now 50–60 years old. At this age, the critical systems have turned over at least once in most cases—original knob-and-tube wiring has typically been replaced, and galvanized plumbing has often been updated (at least partially). However, original windows, insulation levels, and basement waterproofing systems in these homes are typically at or past their useful life.</p>
+      <p class="mb-4">Asbestos-containing materials are a realistic concern in Blue Grass Meadows and Pringle Creek homes built before 1985. Floor tiles, acoustic ceiling stipple, and pipe insulation from this era may contain asbestos. Our <a href="/services/asbestos-testing">asbestos testing service</a> provides laboratory confirmation before buyers commit to purchase.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Newer Whitby Subdivisions: Common Construction-Era Issues</h2>
+      <p class="mb-4">Whitby's suburban growth areas—particularly along Taunton Road and in the Rolling Acres community—contain homes built from the 1990s through the 2010s. These properties are generally in better overall condition than older Whitby stock, but they have their own characteristic deficiencies:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>KITEC plumbing:</strong> Present in homes built between 1995 and 2007 throughout central and north Whitby</li>
+        <li><strong>Attic ventilation deficiencies:</strong> Blocked soffits and undersized ridge vents in 1990s–2000s builds</li>
+        <li><strong>Basement moisture:</strong> Finished basements in 30-year-old homes sometimes conceal historical water infiltration</li>
+        <li><strong>Grading settlement:</strong> Original lot grading has settled toward foundations in many properties</li>
+        <li><strong>Deck structure issues:</strong> Informal deck additions without permits are extremely common</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mixed-Age Communities: What Every Whitby Buyer Should Ask</h2>
+      <p class="mb-4">Because Whitby spans such a wide range of construction eras, buyers should always confirm the construction date of any Whitby property before the inspection—not just the year built on the listing, but whether additions or renovations have been made and in what era. This determines which hazardous materials are realistic concerns and which building systems are most likely approaching end of life.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Certified Home Inspector in Whitby</h2>
+      <p class="mb-4">ASADS certified home inspectors serve all Whitby communities including downtown Whitby, Blue Grass Meadows, Pringle Creek, Rolling Acres, Williamsburg, Port Whitby, and the Taunton Road corridor. We provide same-day digital inspection reports with photos and clear, prioritized findings. Call (647) 801-9311 to schedule your Whitby home inspection.</p>
+    `,
+  },
+  {
+    id: 47,
+    slug: "home-inspection-richmond-hill-guide",
+    title: "Home Inspection Richmond Hill: Mill Pond Heritage to Bayview Hill Estates",
+    metaTitle: "Home Inspection Richmond Hill | Certified Home Inspector | ASADS",
+    metaDescription: "Richmond Hill home inspection by ASADS. Mill Pond older homes, Bayview Hill estates, 1990s–2000s builds, and growing condo market—certified inspectors with local knowledge.",
+    excerpt: "Richmond Hill's housing ranges from Mill Pond heritage properties to Bayview Hill luxury estates and a growing condo market. Each era requires a different inspection approach.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-14",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Richmond Hill: A Premium York Region Market</h2>
+      <p class="mb-4">Richmond Hill occupies a premier position in York Region's real estate hierarchy, offering a combination of excellent schools, transit access, and a wide range of housing types from entry-level condos to multi-million-dollar estates. A home inspection in Richmond Hill must account for the city's substantial range of housing eras and styles. Whether you are purchasing an older Mill Pond-area home, a 1990s Bayview Hill estate, or a newer condo near Yonge Street, a certified home inspector in Richmond Hill provides the information you need to buy with confidence.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mill Pond Area: Older Homes with Heritage Character</h2>
+      <p class="mb-4">The Mill Pond neighbourhood in central Richmond Hill contains some of York Region's oldest residential properties, with homes dating from the late 19th century through the mid-20th century. These properties have the character and lot sizes that attract buyers willing to take on older housing, but they require careful inspection. Foundation types in the oldest Mill Pond homes include rubble stone, early brick, and poured concrete of varying quality. Knob-and-tube wiring is realistic in any Mill Pond home built before 1950. Lead paint is a certainty in pre-1976 homes.</p>
+      <p class="mb-4">Our <a href="/services/pre-purchase">pre-purchase inspection</a> for Mill Pond area properties is thorough and includes specific attention to foundation condition, moisture infiltration, and the condition of original building elements that may have been modified over the decades. We also offer <a href="/services/lead-paint-testing">lead paint testing</a> as an add-on service for buyers planning renovations in older Richmond Hill properties.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Bayview Hill: Executive Homes from the 1990s–2000s</h2>
+      <p class="mb-4">Bayview Hill developed rapidly through the 1990s and early 2000s, producing a stock of large, executive-class homes on generous lots. The timing of Bayview Hill's development places many of these homes within the KITEC plumbing installation window (1995–2007). Our Richmond Hill home inspectors specifically look for KITEC at all accessible locations—under kitchen sinks, in utility rooms, at water heater connections, and in unfinished basement areas. Finding KITEC in a Bayview Hill home is not a deal-breaker, but it is a material defect that buyers need to factor into their negotiations.</p>
+      <p class="mb-4">Beyond KITEC, Bayview Hill homes show the typical deficiencies of 25–30-year-old construction: roofs approaching the end of their third decade, aging HVAC systems, and in some cases, the early signs of clay soil movement manifesting as stair-step brick cracking or doors that stick seasonally.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Richmond Hill's Growing Condo Market</h2>
+      <p class="mb-4">The Yonge Street corridor through Richmond Hill has seen substantial condo development in recent years, producing towers that serve both owner-occupiers and investors. Our <a href="/services/condo">condo inspection service</a> examines suite-level systems comprehensively and identifies deficiencies that may qualify for builder warranty claims or that represent deferred maintenance by previous owners. Fan coil unit condition, balcony membrane integrity, and electrical panel capacity are the most common findings in Richmond Hill condo inspections.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Common Defects in Richmond Hill Home Inspections</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>KITEC plumbing:</strong> Bayview Hill, Elgin Mills, and other 1995–2007 Richmond Hill builds</li>
+        <li><strong>Aging electrical panels:</strong> Federal Pacific Stab-Lok panels in some older Richmond Hill properties</li>
+        <li><strong>Foundation movement:</strong> Clay soil in York Region creates differential settlement in many 1990s–2000s homes</li>
+        <li><strong>Flat roof sections:</strong> Custom homes with front portico or addition flat roofs are a common leak source</li>
+        <li><strong>Attic insulation and ventilation:</strong> Deficiencies in many 1990s tract homes</li>
+        <li><strong>Window seal failure:</strong> Failed insulated glass units (fogged windows) are common in 25–30-year-old homes</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Radon and Air Quality in Richmond Hill</h2>
+      <p class="mb-4">While Richmond Hill is not in a high-radon geology zone like Barrie, Health Canada recommends radon testing for all homes in Canada. Our <a href="/services/radon-testing">radon testing service</a> provides both short-term options suitable for conditional periods and long-term tests for the most accurate results. We also offer air quality testing for Richmond Hill buyers concerned about VOCs, mould spores, or allergens in homes with visible moisture histories or strong odours.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Certified Home Inspector in Richmond Hill</h2>
+      <p class="mb-4">ASADS certified home inspectors serve all Richmond Hill communities including Mill Pond, Bayview Hill, Jefferson, Elgin Mills, Crosby, Westbrook, and the Yonge Street condo corridor. Call (647) 801-9311 to schedule your Richmond Hill home inspection with an experienced, certified inspector.</p>
+    `,
+  },
+  {
+    id: 48,
+    slug: "home-inspection-newmarket-guide",
+    title: "Home Inspection Newmarket: Main Street Heritage to Summerhill Estates",
+    metaTitle: "Home Inspection Newmarket | Certified Home Inspector | ASADS",
+    metaDescription: "Newmarket home inspection by ASADS. Heritage Main Street, Stonehaven, Summerhill Estates, and older downtown asbestos risk—certified inspectors with deep local knowledge.",
+    excerpt: "Newmarket's revitalized heritage Main Street district, established Stonehaven community, and upscale Summerhill Estates each require a distinct inspection approach.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2025-03-15",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Newmarket: York Region's Hidden Gem</h2>
+      <p class="mb-4">Newmarket has quietly become one of York Region's most desirable communities, combining a beautifully preserved heritage Main Street with established residential neighbourhoods and upscale newer communities. Its housing market draws buyers from across the GTA who value the combination of small-town character, excellent schools, and GO Transit access. A home inspection in Newmarket is as important here as anywhere in Ontario—and the city's mix of housing eras means that a certified home inspector in Newmarket needs to be equally comfortable with century homes and modern construction.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Heritage Main Street Area: Oldest Homes in Newmarket</h2>
+      <p class="mb-4">The streets surrounding Newmarket's designated Heritage Main Street district contain some of York Region's oldest residential properties, with homes dating from the mid-19th century through the early 20th century. These are the homes that give Newmarket its distinctive character—but they are also the homes that carry the most significant inspection complexity. Victorian-era properties in the downtown core may have rubble stone or early brick foundations, original knob-and-tube wiring (sometimes partially updated, which creates its own hazards), and lead paint that is a near-certainty in any pre-1976 build.</p>
+      <p class="mb-4">Asbestos is also a realistic concern in any Newmarket home built or renovated before 1985. The downtown Newmarket area, which experienced substantial commercial and residential renovation activity in the 1970s and early 1980s, saw extensive use of asbestos-containing materials including vermiculite attic insulation, acoustic ceiling coatings, and vinyl floor tiles. Our <a href="/services/asbestos-testing">asbestos testing service</a> provides laboratory-confirmed identification of all suspect materials before buyers commit to purchase.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Stonehaven: Established Community, Mixed-Era Challenges</h2>
+      <p class="mb-4">Stonehaven is one of Newmarket's most established residential communities, developed primarily in the 1980s and 1990s. Homes here are mature and well-settled into the landscape, but they are now 30–40 years old—the age at which multiple building systems reach end of life simultaneously. Roofing from this era is frequently at or past its expected lifespan. Furnaces and air conditioners installed in the 1990s are at or beyond their typical service life. KITEC plumbing is a significant concern in any Stonehaven home built after 1995.</p>
+      <p class="mb-4">Our <a href="/services/pre-purchase">pre-purchase home inspection</a> for Stonehaven properties includes specific attention to the age and condition of all major mechanical systems, plumbing material identification, and foundation assessment for the early signs of differential movement that can appear in 30-40-year-old homes on York Region clay soils.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Summerhill Estates and Newer Newmarket Communities</h2>
+      <p class="mb-4">Summerhill Estates is Newmarket's premium newer community, developed primarily in the early 2000s with executive-class homes on larger lots. Buyers targeting Summerhill Estates should be aware that many of these homes fall within the KITEC plumbing window (1995–2007). KITEC in a large Summerhill Estates home represents a replacement cost of $10,000–$18,000 that buyers should negotiate into the purchase price or have sellers remediate before closing.</p>
+      <p class="mb-4">Beyond KITEC, Summerhill Estates homes show the typical deficiencies of 20-year-old construction: window seal failures (fogged insulated glass), aging HVAC equipment, and early signs of clay soil movement in brick veneer. Newer communities along Bayview Avenue north of Davis Drive also show construction-quality variations that a certified home inspector will identify during inspection.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Common Defects in Newmarket Home Inspections</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>KITEC plumbing:</strong> Stonehaven and Summerhill Estates homes built between 1995 and 2007</li>
+        <li><strong>Asbestos-containing materials:</strong> Downtown heritage area homes built or renovated before 1985</li>
+        <li><strong>Lead paint:</strong> Pre-1976 homes throughout downtown Newmarket and older established areas</li>
+        <li><strong>Aging roofs:</strong> 1980s–90s Stonehaven homes frequently at end of shingle life</li>
+        <li><strong>Knob-and-tube wiring:</strong> Heritage downtown properties from the early 20th century</li>
+        <li><strong>Foundation movement on clay:</strong> Stair-step brick cracking and door/window alignment issues in 2000s builds</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Radon Testing in Newmarket</h2>
+      <p class="mb-4">Newmarket is in Simcoe County's transition zone where radon levels can exceed Health Canada's guideline of 200 Bq/m³ in some properties. Our <a href="/services/radon-testing">radon testing service</a> provides certified radon measurement that is particularly recommended for any Newmarket home with a basement or crawl space. Short-term tests can be completed within the typical conditional period, while long-term tests provide the most accurate annual average measurement.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Certified Home Inspector in Newmarket</h2>
+      <p class="mb-4">ASADS certified home inspectors serve all Newmarket communities including the heritage Main Street area, Stonehaven, Summerhill Estates, Glenway, Armitage, and the Bayview Avenue corridor. We provide same-day digital reports, thermal imaging as standard equipment, and a full suite of add-on testing services. Call (647) 801-9311 to book your certified home inspection in Newmarket today.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
