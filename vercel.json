@@ -4,6 +4,7 @@
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "redirects": [
+    { "source": "/:path+/", "destination": "/:path+", "permanent": true },
     {
       "source": "/locations/toronto",
       "destination": "/locations/home-inspection-toronto",
