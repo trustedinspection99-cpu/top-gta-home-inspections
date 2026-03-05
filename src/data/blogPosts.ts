@@ -1179,6 +1179,937 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">Ready to get your home inspection scheduled? Contact ASADS Home Inspection at (647) 801-9311 or book online. We serve the entire Greater Toronto Area with same-day reporting and flexible scheduling.</p>
     `,
   },
+  {
+    id: 19,
+    slug: "aluminum-wiring-toronto-homes",
+    title: "Aluminum Wiring in Toronto Homes: What Every Buyer Needs to Know",
+    metaTitle: "Aluminum Wiring Toronto Homes | Safety Risks & Insurance | ASADS",
+    metaDescription: "Aluminum wiring was installed in thousands of GTA homes built between 1965–1978. Learn the fire risks, insurance implications, and what to do if your home has it.",
+    excerpt: "Aluminum wiring was installed in thousands of GTA homes during the 1960s and 70s. Here's what buyers need to know about insurance, fire risk, and remediation options.",
+    category: "Electrical Safety",
+    author: "ASADS Team",
+    date: "2025-02-10",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Aluminum Wiring Is a Red Flag in GTA Real Estate</h2>
+      <p class="mb-4">Between approximately 1965 and 1978, aluminum wiring was used as a less expensive alternative to copper in residential construction across Canada. During that period, thousands of Toronto, Etobicoke, North York, Scarborough, and Mississauga homes were wired entirely — or partially — with aluminum. Today, it is one of the most commonly flagged issues in pre-purchase home inspections in the GTA.</p>
+      <p class="mb-4">If you are buying a home built during this era, or already own one, understanding aluminum wiring is essential — not just for safety, but for insurability.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Aluminum Wiring Is Problematic</h2>
+      <p class="mb-4">Aluminum is a perfectly acceptable electrical conductor — it's used in transmission lines across the province. The problem is not the wire itself, but how it behaves at connection points inside your home.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Expansion and contraction:</strong> Aluminum expands and contracts significantly with temperature changes — more so than copper. Over decades, this loosens connections at outlets, switches, and panel terminations.</li>
+        <li><strong>Oxidation:</strong> Aluminum oxidizes when exposed to air, forming aluminum oxide on the surface. This oxide layer is resistive, meaning it impedes the flow of electricity and generates heat at connection points.</li>
+        <li><strong>Galvanic corrosion:</strong> When aluminum contacts copper (at outlets and devices not rated for aluminum), electrolytic corrosion occurs, further increasing resistance and heat buildup.</li>
+        <li><strong>Fire risk:</strong> According to the Canadian Standards Association (CSA), homes with aluminum wiring have a significantly higher fire risk if connections are not properly maintained and upgraded.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Identify Aluminum Wiring in a Toronto Home</h2>
+      <p class="mb-4">Your home inspector will check several indicators during a pre-purchase inspection:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>The electrical panel: aluminum branch circuit wiring appears silver in colour, not the orange/red of copper. The wire sheathing may be labelled "AL" or "Aluminum."</li>
+        <li>Outlets and switches: if the device is not rated "CO/ALR" (copper/aluminum rated), it was not designed for aluminum conductors.</li>
+        <li>Build date: homes built 1965–1978 have the highest probability. Some were re-wired later; some retain original aluminum throughout.</li>
+        <li>Permit history: a City of Toronto building permit pull can reveal if electrical upgrades were completed under permit.</li>
+      </ul>
+      <p class="mb-4">Our inspectors use thermal imaging as part of every pre-purchase inspection. Heat signatures at outlet and switch locations are a reliable indicator of high-resistance aluminum connections that have not been properly remediated.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Insurance Problem</h2>
+      <p class="mb-4">This is where aluminum wiring becomes a practical problem for GTA homebuyers. Many Ontario insurance providers will not issue a new homeowner policy, or will significantly surcharge an existing policy, on a home with unmodified aluminum wiring. Insurers that do provide coverage typically require one of the following before binding:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>A certificate from a licensed electrician confirming the aluminum wiring has been remediated to ESA (Electrical Safety Authority) satisfaction.</li>
+        <li>Proof of ESA permit and inspection for remediation work.</li>
+        <li>In some cases, a home inspection report from a qualified inspector documenting the scope of the aluminum wiring.</li>
+      </ul>
+      <p class="mb-4">If you receive an offer accepted on a home with aluminum wiring, contact your insurance broker <em>before</em> waiving conditions. Confirm they will insure the property and at what premium. Budget surprises at this stage can derail closings.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Remediation Options: What Can Be Done</h2>
+      <p class="mb-4">There are three accepted remediation approaches recognized by the Electrical Safety Authority of Ontario and the Canadian Electrical Code:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Complete Copper Re-wire (Most Comprehensive)</h3>
+      <p class="mb-4">All aluminum branch circuit wiring is replaced with copper. This is the most thorough solution but also the most expensive — typically $8,000–$20,000+ for a full GTA home, depending on size and complexity. Walls must be opened in accessible areas. Required ESA permits and inspections apply.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Pigtailing with AlumiConn or COPALUM Connectors</h3>
+      <p class="mb-4">A short copper "pigtail" wire is spliced onto the end of each aluminum conductor at every outlet, switch, and fixture using a specially rated connector (AlumiConn or the COPALUM crimp connector). This creates a copper-to-device connection while leaving the aluminum in the walls. Cost is significantly lower than full re-wire — typically $2,000–$6,000 for a GTA home. This method is ESA-approved when done by a licensed electrician under permit.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. CO/ALR Rated Devices</h3>
+      <p class="mb-4">Replacing all outlets and switches with devices specifically rated for aluminum wiring (marked "CO/ALR"). Less commonly accepted by insurers alone, and does not address panel terminations. Generally considered an interim measure, not a final solution.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Handle Aluminum Wiring in a Real Estate Transaction</h2>
+      <p class="mb-4">If your home inspection identifies unmodified aluminum wiring, here are your practical options:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Request seller remediation:</strong> Ask the seller to hire a licensed electrician and complete pigtailing under ESA permit before closing. Obtain the ESA certificate at closing.</li>
+        <li><strong>Price reduction:</strong> Negotiate a holdback or price reduction equal to the remediation cost. Have the electrician quote the work before waiving conditions.</li>
+        <li><strong>Accept and budget:</strong> Purchase the home as-is and budget remediation as a first-year project. Confirm your insurer will bind coverage first.</li>
+      </ul>
+      <p class="mb-4">ASADS inspectors are available to consult with your real estate agent and explain findings to facilitate negotiations. We can also refer you to ESA-licensed electricians who specialize in aluminum wiring remediation across the GTA.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Bottom Line</h2>
+      <p class="mb-4">Aluminum wiring is common, manageable, and not a reason to automatically walk away from a home — but it must be identified, understood, and properly remediated. A home inspection that includes thermal imaging of the electrical system is the best way to assess the current condition of aluminum wiring connections and determine the scope of remediation needed before you commit to a purchase. Contact ASADS at (647) 801-9311 to book a pre-purchase inspection with thermal imaging included.</p>
+    `,
+  },
+  {
+    id: 20,
+    slug: "kitec-plumbing-toronto-guide",
+    title: "KITEC Plumbing in Toronto Homes: The Complete Buyer's Guide",
+    metaTitle: "KITEC Plumbing Toronto | Risks, Recall & Replacement Cost | ASADS",
+    metaDescription: "KITEC plumbing was installed in thousands of GTA condos and homes from 1995–2007. Learn the risks, class action details, and what replacement costs in Ontario.",
+    excerpt: "KITEC plumbing was used in thousands of Toronto condos and homes from 1995 to 2007. Learn the risks, how to identify it, and what to do before buying.",
+    category: "Plumbing",
+    author: "ASADS Team",
+    date: "2025-02-18",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is KITEC Plumbing?</h2>
+      <p class="mb-4">KITEC is a brand name for a type of plumbing system that used flexible aluminum pipe sandwiched between layers of polyethylene (PEX). It was marketed as a modern, affordable alternative to copper plumbing for hot and cold water supply lines, and was installed in residential properties — including thousands of Toronto-area condominiums — between approximately 1995 and 2007.</p>
+      <p class="mb-4">KITEC was manufactured by IPEX Inc. and sold under several brand names including: KITEC, PlumbBetter, WARMRITE, Plomberie Amelioree, AmbioComfort, XPA, KERR Controls, and BIFATHERM. The fittings are brass and typically orange (hot water) or blue (cold water), making them identifiable once you know what to look for.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Is KITEC a Problem?</h2>
+      <p class="mb-4">The core problem with KITEC is premature failure of the brass fittings. The fittings contain zinc in quantities that make them susceptible to dezincification — a process where zinc leeches out of the brass alloy, leaving behind a porous, weakened structure that eventually fails. When a KITEC fitting fails, it typically does so suddenly and catastrophically, releasing water inside walls, ceilings, or mechanical rooms.</p>
+      <p class="mb-4">The consequences of a KITEC fitting failure include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Extensive water damage to drywall, flooring, and personal property</li>
+        <li>Mold growth in wall cavities within days of a leak</li>
+        <li>Damage to units below in condominium buildings</li>
+        <li>Insurance claims that can run $50,000–$200,000+ in severe cases</li>
+      </ul>
+      <p class="mb-4">As a result of widespread failures, a class action lawsuit was settled in 2011 for $125 million (USD). The settlement fund provided compensation to affected homeowners — but that fund closed in 2020. Homeowners with KITEC plumbing today must fund replacement themselves.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Where Is KITEC Most Common in Toronto?</h2>
+      <p class="mb-4">KITEC was particularly popular in condominium construction during the condo boom of the late 1990s and early 2000s. Buildings in the Entertainment District, Liberty Village, King West, and Cityplace areas of Toronto are commonly flagged. It was also used in townhouse complexes and tract housing in Mississauga, Brampton, Vaughan, and Markham during the same period.</p>
+      <p class="mb-4">Any GTA property built or renovated between 1995 and 2007 warrants a check for KITEC plumbing as part of a pre-purchase inspection.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Identify KITEC Plumbing</h2>
+      <p class="mb-4">KITEC is identifiable by its distinctive characteristics:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Colour-coded flexible pipe:</strong> orange pipe for hot water lines, blue for cold water lines (though some installations used both orange and blue for all lines)</li>
+        <li><strong>Brass fittings:</strong> the brass couplings and connectors are visually distinctive; look at exposed plumbing under sinks, in mechanical rooms, and where pipes enter walls</li>
+        <li><strong>KITEC labelling:</strong> the pipe itself is typically stamped with the KITEC brand name or one of its equivalents</li>
+        <li><strong>Building records:</strong> for condominiums, the status certificate and condominium corporation records should disclose known KITEC presence</li>
+      </ul>
+      <p class="mb-4">Our inspectors check all accessible plumbing supply lines as part of a standard pre-purchase inspection. For condominium units, we also review the status certificate for KITEC disclosures and any reserve fund provisions for replacement.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Insurance Implications</h2>
+      <p class="mb-4">Many Ontario home insurance providers will not insure properties with KITEC plumbing, or will add significant exclusion riders that eliminate coverage for water damage — the exact loss you are most at risk for. As with aluminum wiring, confirm your insurer's position on KITEC before waiving conditions on a purchase.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Replacement Cost in Ontario</h2>
+      <p class="mb-4">Replacement costs depend on the size of the home and accessibility of the plumbing:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Detached/semi-detached home:</strong> $5,000–$15,000 for full replacement with PEX-A or copper</li>
+        <li><strong>Condominium unit:</strong> $3,000–$8,000 for the unit's internal plumbing; if the building's common element risers also contain KITEC, this becomes a major capital repair project shared across all owners</li>
+        <li><strong>Townhouse complex:</strong> varies significantly by building configuration</li>
+      </ul>
+      <p class="mb-4">For condominiums, check whether the reserve fund study has accounted for KITEC replacement. If the building's plumbing has not yet been replaced and no reserve provision exists, a special assessment is likely — a cost that falls on whoever owns the unit at the time it is levied.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What to Do If Your Inspection Finds KITEC</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Request the seller replace the KITEC before closing, under permit, with appropriate documentation</li>
+        <li>Negotiate a price reduction or holdback equal to a licensed plumber's quote for full replacement</li>
+        <li>For condos, review the status certificate carefully — if the corporation has a replacement plan, confirm the timeline and reserve fund adequacy</li>
+        <li>Do not proceed without confirming your insurer will bind full coverage including water damage</li>
+      </ul>
+      <p class="mb-4">ASADS inspectors document KITEC findings with photos and provide you with a written report you can use in negotiations. Book your pre-purchase inspection today at (647) 801-9311.</p>
+    `,
+  },
+  {
+    id: 21,
+    slug: "ice-dams-attic-mold-toronto",
+    title: "How Ice Dams Cause Attic Mold in Toronto Homes",
+    metaTitle: "Ice Dams & Attic Mold Toronto | Prevention & Inspection | ASADS",
+    metaDescription: "Ice dams are a leading cause of attic mold in Toronto and GTA homes. Learn how they form, what damage they cause, and how to prevent and detect mold before it spreads.",
+    excerpt: "Ice dams cause hidden water intrusion that leads to attic mold in thousands of GTA homes every winter. Learn how to identify and prevent this costly problem.",
+    category: "Mold & Air Quality",
+    author: "ASADS Team",
+    date: "2025-01-22",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1608818379960-e3dbedb5f5f8?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is an Ice Dam and Why Should You Care?</h2>
+      <p class="mb-4">An ice dam is a ridge of ice that forms at the edge of a roof and prevents melting snow from draining. The result is standing water that backs up under shingles and infiltrates the roof structure — attic sheathing, insulation, rafters, and eventually ceilings below. In the Greater Toronto Area, where freeze-thaw cycles are common throughout winter, ice dams are one of the most frequent causes of attic mold and ceiling water staining seen during home inspections.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Ice Dams Form: The Science</h2>
+      <p class="mb-4">Ice dams are fundamentally a symptom of heat loss from the living space into the attic. Here's the process:</p>
+      <ol class="list-decimal pl-6 mb-4 space-y-2">
+        <li>Interior heat escapes through air leaks (pot lights, plumbing penetrations, attic hatch) and insufficient insulation into the attic space.</li>
+        <li>This heat warms the roof deck, melting snow from the underside outward.</li>
+        <li>Melt water runs down the slope and reaches the cold roof overhang (soffit area), which is not heated from below.</li>
+        <li>The water refreezes at the cold overhang, gradually building up a ridge of ice.</li>
+        <li>As more snow melts, water pools behind the ice dam and is forced under shingles and into the roof assembly.</li>
+      </ol>
+      <p class="mb-4">Once water penetrates the roof deck, it saturates insulation (dramatically reducing its effectiveness), wets wooden rafters and sheathing, and creates the persistently moist environment that mold requires to colonize.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Attic Mold Follows Ice Dams</h2>
+      <p class="mb-4">Mold requires three conditions: a food source (wood), moisture, and temperatures above freezing. An ice dam delivers all three in the attic space:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Wet OSB sheathing and dimensional lumber provide abundant food</li>
+        <li>Ice dam water intrusion provides sustained moisture</li>
+        <li>The attic, while cold, is rarely cold enough to prevent mold growth — particularly in the insulated areas near the ceiling line where temperatures moderate</li>
+      </ul>
+      <p class="mb-4">Within days to weeks of significant water intrusion, visible mold colonies — typically dark grey, green, or black — appear on the underside of roof sheathing. In severe cases, mold spreads across entire roof panels and down into wall top plates.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Signs of Ice Dam Damage to Look For</h2>
+      <p class="mb-4">You may not see the attic mold directly — but these warning signs during a home inspection or home purchase viewing should prompt further investigation:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Water staining on ceilings near exterior walls or at the top of exterior walls</li>
+        <li>Paint bubbling or peeling at ceiling-wall junctions on upper floors</li>
+        <li>Visible ice dams on the roof edge in winter, or water staining on fascia and soffits</li>
+        <li>Staining on interior attic insulation near eaves</li>
+        <li>Dark discolouration on the underside of roof sheathing visible from inside the attic</li>
+        <li>A musty odour in upstairs rooms or when the attic hatch is opened</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How ASADS Detects Ice Dam Mold</h2>
+      <p class="mb-4">A standard visual inspection of the attic will identify visible mold on sheathing. However, the most valuable tool for ice dam damage assessment is <strong>infrared thermal imaging</strong>. Our FLIR® cameras detect wet insulation as a cold thermal anomaly in the roof assembly — revealing water intrusion that isn't yet visible as staining. This allows us to map the full extent of damage before recommending remediation.</p>
+      <p class="mb-4">If visual inspection or thermal imaging suggests mold presence, we collect air samples inside the attic space and compare results to outdoor baseline samples at an AIHA-accredited laboratory. This confirms whether elevated spore counts are present and what species are involved — information essential for scoping remediation correctly.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Prevention: How to Stop Ice Dams</h2>
+      <p class="mb-4">The permanent solution to ice dams is eliminating the heat loss that causes them:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Air sealing:</strong> seal all attic penetrations — pot lights, plumbing stacks, electrical boxes, and the attic hatch — with spray foam or rigid board to prevent warm interior air from entering the attic</li>
+        <li><strong>Insulation:</strong> upgrade attic insulation to current OBC minimums (RSI-8.6 / R-50 for most Toronto climate zones); blown cellulose or fiberglass are cost-effective</li>
+        <li><strong>Ventilation:</strong> ensure adequate soffit and ridge ventilation to keep the attic cold and even-tempered — a cold attic doesn't melt snow unevenly</li>
+        <li><strong>Bathroom fans:</strong> confirm bath and kitchen fans are exhausted outside, not into the attic — a bath fan venting into the attic dumps warm moist air directly onto cold sheathing year-round</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What to Do If Attic Mold Is Found Before Closing</h2>
+      <p class="mb-4">If a pre-purchase inspection reveals attic mold related to ice dam damage:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Request a written scope of work from a licensed mold remediation contractor (ASADS can provide this as part of the inspection report)</li>
+        <li>Obtain 2–3 remediation quotes before waiving conditions</li>
+        <li>Require the seller to fund remediation before closing, or negotiate a holdback sufficient to cover it</li>
+        <li>Book a post-remediation clearance test before final closing to confirm the work is complete</li>
+        <li>Address the root cause (air sealing and insulation) as a condition of the remediation scope — otherwise mold will return</li>
+      </ul>
+      <p class="mb-4">Call ASADS at (647) 801-9311 to book an attic mold inspection with thermal imaging anywhere in the GTA. Same-day service available.</p>
+    `,
+  },
+  {
+    id: 22,
+    slug: "knob-and-tube-wiring-ontario",
+    title: "Knob and Tube Wiring in Ontario Homes: Risks, Insurance & Your Options",
+    metaTitle: "Knob and Tube Wiring Ontario | Insurance & Replacement Cost | ASADS",
+    metaDescription: "Knob and tube wiring is still found in thousands of pre-1950 Toronto homes. Learn the fire risks, why insurers reject it, and what replacement costs in the GTA.",
+    excerpt: "Knob and tube wiring is present in many pre-1950 GTA homes and creates serious insurance and safety challenges for buyers. Here's what you need to know.",
+    category: "Electrical Safety",
+    author: "ASADS Team",
+    date: "2025-01-08",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is Knob and Tube Wiring?</h2>
+      <p class="mb-4">Knob and tube (K&T) wiring is an early electrical system used in North American homes from approximately the 1880s to the 1950s. It consists of single-conductor copper wires run through ceramic tube insulators where they pass through framing and supported by ceramic knobs where they run along framing. Unlike modern wiring, knob and tube has no ground wire and uses rubber insulation that degrades significantly over time.</p>
+      <p class="mb-4">In Toronto's oldest neighbourhoods — Roncesvalles, The Annex, Cabbagetown, East York, and parts of Etobicoke — knob and tube wiring is still present in a significant percentage of homes that have not been fully rewired. It is consistently among the most common major deficiencies identified in pre-purchase home inspections of pre-1950 housing stock.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Core Problems with Knob and Tube</h2>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Degraded Insulation</h3>
+      <p class="mb-4">The rubber and cloth insulation used on K&T wiring becomes brittle and cracks over time — particularly when exposed to heat, vibration, or physical contact. Exposed conductors are a shock and fire hazard. Insulation condition is evaluated visually in accessible areas (attic, basement, crawlspace) during inspection.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. No Ground Wire</h3>
+      <p class="mb-4">Knob and tube is a two-wire system — hot and neutral only, no equipment grounding conductor. This means three-prong outlets in a K&T home are not actually grounded (a common and dangerous DIY "upgrade"). Ungrounded circuits cannot protect modern electronics and create shock risks with appliances that rely on grounding for safe operation.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. Insufficient Capacity</h3>
+      <p class="mb-4">K&T circuits were designed for the electrical loads of the early 20th century — a few lights, an iron. Modern homes draw vastly more power. Overloaded circuits cause wire insulation to overheat, which is why many K&T fires occur inside walls and ceiling cavities where the deteriorated wiring is buried and invisible.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. Inappropriate Modifications</h3>
+      <p class="mb-4">Decades of amateur modifications — splices in wall cavities, improper connections to modern Romex wiring, circuits overloaded with additional outlets — compound the original system's risks. Our inspectors evaluate the overall state of the electrical system including the panel, service size, and visible wiring condition.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Insurance Challenge</h2>
+      <p class="mb-4">The insurance situation with K&T wiring is stark: most Ontario home insurance providers will not bind a new homeowner policy on a home with active knob and tube wiring. Some will provide coverage with a surcharge and conditions; some will issue a policy and then discover K&T during a home inspection they conduct — and cancel coverage.</p>
+      <p class="mb-4">Before waiving conditions on a home with K&T, confirm your broker can bind full coverage. Get this confirmation in writing. Do not assume coverage exists because a quote was provided.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Remediation Options and Costs</h2>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Full Electrical Re-wire</h3>
+      <p class="mb-4">The permanent solution: all K&T wiring is replaced with modern ESA-approved copper Romex wiring. A new panel (typically 200-amp) is usually installed simultaneously. Cost in the GTA: $12,000–$25,000+ for a typical detached home, depending on size and complexity. This work requires ESA permits and inspection and involves partial drywall opening in some areas.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Partial Updates</h3>
+      <p class="mb-4">Some insurers will accept coverage if the K&T in the attic (the most accessible and most degraded area) is replaced or deactivated, with the remaining K&T circuits still in use but assessed as lower-risk. This is a negotiation with your specific insurer — not a code requirement. A licensed electrician can deactivate attic K&T and run new circuits for approximately $3,000–$8,000.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Buying a Home with Knob and Tube: What to Do</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Get a quote from a licensed ESA-registered electrician for full re-wire before waiving conditions</li>
+        <li>Contact your insurance broker to confirm coverage is available and at what terms</li>
+        <li>Negotiate a seller concession equal to the re-wire cost, or make seller-funded re-wire a condition of the sale</li>
+        <li>Factor ongoing risk: if you proceed without immediate re-wire, you are living with a known hazard — ensure your smoke detectors are current and interconnected</li>
+      </ul>
+      <p class="mb-4">ASADS inspectors document all visible knob and tube wiring with photos and provide a written assessment of condition and extent. Book your inspection at (647) 801-9311.</p>
+    `,
+  },
+  {
+    id: 23,
+    slug: "foundation-cracks-toronto-what-they-mean",
+    title: "Foundation Cracks in Toronto Homes: What's Serious and What's Not",
+    metaTitle: "Foundation Cracks Toronto | Structural vs Cosmetic | ASADS Inspector",
+    metaDescription: "Not all foundation cracks are equal. Learn how Toronto home inspectors assess horizontal, vertical, and diagonal cracks, and when a crack signals a serious structural problem.",
+    excerpt: "Foundation cracks are one of the most common and misunderstood findings in GTA home inspections. Learn which cracks are cosmetic and which demand urgent attention.",
+    category: "Structural",
+    author: "ASADS Team",
+    date: "2025-03-01",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+    featured: true,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Foundation Cracks Are So Common in Toronto</h2>
+      <p class="mb-4">Toronto's clay-heavy soil expands when wet and contracts when dry — a process called shrink-swell. Combined with freeze-thaw cycles that can penetrate several feet into the ground, and aging housing stock that includes a significant proportion of homes built before modern waterproofing standards, foundation cracks are among the most common findings in GTA home inspections. Understanding which cracks require urgent attention and which are part of normal settlement is one of the most valuable skills a home inspector brings to a pre-purchase inspection.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Types of Foundation Cracks and What They Mean</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Hairline Cracks (Less Than 1mm wide)</h3>
+      <p class="mb-4">Extremely fine surface cracks in concrete or mortar joints are almost always the result of normal curing shrinkage or minor seasonal movement. These are cosmetic. They can still allow moisture infiltration if left unsealed, but do not indicate structural distress. Monitor them; seal them with hydraulic cement or polyurethane injection if they allow water entry.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Vertical Cracks</h3>
+      <p class="mb-4">Vertical cracks running straight up and down (or within approximately 30 degrees of vertical) are typically caused by concrete shrinkage or differential settlement — one part of the foundation settling at a slightly different rate than an adjacent section. These are common in poured concrete foundations. A straight, uniform-width vertical crack is generally low concern structurally, but should be waterproofed to prevent seepage. Monitor the crack's width over time; if it is widening, further investigation is warranted.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Diagonal Cracks (Stair-Step Cracks in Block)</h3>
+      <p class="mb-4">Diagonal cracks — or stair-step cracks following mortar joints in concrete block foundations — indicate differential settlement: one corner or section of the foundation has moved more than an adjacent area. The concern level depends on the crack width and whether it is active (still moving) or historic. A diagonal crack wider than 6mm (1/4 inch), cracks that are wider at one end than the other (indicating rotation), or cracks with vertical displacement (one side higher than the other) are serious and require evaluation by a licensed structural engineer, not just a home inspector.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Horizontal Cracks — The Most Serious</h3>
+      <p class="mb-4">Horizontal cracks running across a foundation wall are a significant structural warning sign. They indicate lateral pressure from soil on the outside of the wall — the wall is being pushed inward. This type of crack is most common in concrete block and brick foundations. Any horizontal crack in a foundation wall should be evaluated by a structural engineer. Left unaddressed, the wall can bow inward progressively and ultimately fail. Repair options include carbon fibre strapping, helical pier underpinning, or full wall reconstruction — costs ranging from $5,000 to $50,000+ depending on severity.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Cracks with Water Infiltration</h3>
+      <p class="mb-4">Any crack that is actively admitting water changes the risk profile regardless of orientation. Water infiltration promotes efflorescence (white mineral deposits), mold growth on foundation walls and insulation, damage to finished basement spaces, and accelerates concrete degradation. A crack that leaks during rain or snowmelt requires waterproofing regardless of structural significance.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How ASADS Evaluates Foundation Cracks</h2>
+      <p class="mb-4">Our inspectors document every visible crack with photographs and measurements. We assess:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Orientation (vertical, diagonal, horizontal)</li>
+        <li>Width and length</li>
+        <li>Whether displacement is present (one side higher than the other)</li>
+        <li>Evidence of previous patching (indicates a known, potentially recurring issue)</li>
+        <li>Signs of active water infiltration (efflorescence, staining, dampness)</li>
+        <li>Wall bowing (measured with a level against the wall face)</li>
+      </ul>
+      <p class="mb-4">Where crack patterns suggest structural concern beyond what a home inspection can definitively resolve, we clearly recommend a structural engineer's evaluation as a condition of purchase. We do not provide structural engineering opinions — but we identify when one is needed.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Waterproofing vs. Structural Repair — Understanding the Difference</h2>
+      <p class="mb-4">These are two separate issues that are often conflated by contractors and sellers:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Waterproofing</strong> addresses water infiltration. Interior drainage systems (weeping tile, sump pit), exterior excavation and membrane application, and crack injection all stop water from entering — but do not address structural movement.</li>
+        <li><strong>Structural repair</strong> addresses movement and load-bearing capacity. Helical piers, carbon fibre strapping, and wall reconstruction address the causes and consequences of foundation movement.</li>
+      </ul>
+      <p class="mb-4">A home with horizontal cracking that has been "fixed" with an interior drainage system has had its symptom managed, not its problem solved. The wall may still be moving. Our inspectors will flag this distinction clearly in the report.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What to Do at Purchase If Foundation Cracks Are Found</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>For minor cosmetic cracks: note them, plan to seal them, and budget $500–$2,000 for polyurethane crack injection if leaking</li>
+        <li>For significant diagonal or widening cracks: obtain a structural engineer's report as a condition of purchase before waiving</li>
+        <li>For horizontal cracks: obtain both a structural engineer's report and contractor quotes for remediation; these can range from $8,000–$50,000+</li>
+        <li>In all cases, do not rely solely on a seller-provided contractor's assessment — get independent engineering and contractor quotes</li>
+      </ul>
+      <p class="mb-4">Book a pre-purchase inspection with ASADS at (647) 801-9311 to get a thorough foundation evaluation with photos and clear written recommendations before you commit to a purchase.</p>
+    `,
+  },
+  {
+    id: 24,
+    slug: "mold-without-visible-water-damage",
+    title: "Can Mold Grow Without Visible Water Damage? What GTA Homeowners Need to Know",
+    metaTitle: "Mold Without Visible Water Damage Toronto | Hidden Mold Signs | ASADS",
+    metaDescription: "Mold can thrive in Toronto homes with no visible leaks or staining. Learn the hidden sources of moisture that cause mold growth and how professional air testing detects it.",
+    excerpt: "Mold can grow in a home with no visible leaks, staining, or flooding. Learn the hidden moisture sources that allow mold to colonize walls, attics, and HVAC systems undetected.",
+    category: "Mold & Air Quality",
+    author: "ASADS Team",
+    date: "2025-02-28",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Myth of the "Obvious" Water Source</h2>
+      <p class="mb-4">Most homeowners associate mold with flooded basements, burst pipes, or visible ceiling stains. These are certainly sources of mold — but a significant proportion of the mold problems ASADS inspectors find across Toronto and the GTA exist in homes with no obvious water event, no visible leaks, and no previous flooding history. Moisture is everywhere in a home, and it doesn't need to come from a dramatic source to create the conditions mold needs to grow.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Hidden Moisture Sources That Drive Mold Growth</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Condensation Inside Wall Assemblies</h3>
+      <p class="mb-4">When warm, humid interior air contacts a cold surface inside a wall or ceiling cavity, it condenses. In Toronto winters, the temperature differential between the heated interior and the cold exterior creates persistent condensation zones inside wall assemblies that have insufficient vapour barriers or air barriers. This condensation wets insulation and wood framing over months and years — with no visible sign until mold is well established and drywall begins to discolour.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Bathroom and Kitchen Exhaust Fans Vented Incorrectly</h3>
+      <p class="mb-4">One of the most consistent findings in GTA attic mold inspections is exhaust fans that terminate in the attic space rather than exhausting to the exterior. A bathroom fan dumps warm, moisture-laden air directly onto cold roof sheathing. In a typical Toronto bathroom, a fan runs for 15–20 minutes per shower. Multiply that by daily use across years, and the attic sheathing becomes persistently damp — a perfect mold substrate — with no pipe to break and no stain on any ceiling.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Inadequate Crawlspace Vapour Barriers</h3>
+      <p class="mb-4">Ground moisture continuously evaporates from exposed soil in crawlspaces. Without an adequate vapour barrier (minimum 6-mil polyethylene), this moisture loads the crawlspace air and wets floor joists, subfloor, and insulation from below. The living area above shows no sign of water damage — but the floor structure can sustain significant mold and rot damage over time.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">HVAC System Moisture</h3>
+      <p class="mb-4">Central air conditioning systems produce condensate — the AC is essentially a dehumidifier for your home. If the condensate drain pan is partially blocked, or if the evaporator coil accumulates biological growth, mold colonizes the air handler and distributes spores through every duct in the home every time the system runs. The living area may show no signs of moisture damage anywhere — yet air sampling reveals dramatically elevated spore counts throughout the home.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">High Indoor Relative Humidity</h3>
+      <p class="mb-4">Homes that are consistently maintained above 60% relative humidity — due to poor ventilation, over-use of humidifiers, or high occupancy — provide enough ambient moisture for mold to grow on virtually any organic surface: drywall paper, wood trim, fabric, leather, and stored paper. No leak or event is required. Common in tightly sealed modern homes, basements without dehumidification, and homes with large numbers of occupants and cooking/showering without exhaust ventilation.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Visual Inspection Is Not Enough</h2>
+      <p class="mb-4">Mold behind walls, inside HVAC systems, inside attic assemblies, and within crawlspace framing is not visible from the living area. A visual inspection will not find it. Even an inspector who opens the attic hatch may see only a portion of the roof assembly — mold often concentrates near the eaves where ice dam water intrudes, or in corners and low-ventilation zones away from the access hatch.</p>
+      <p class="mb-4">Air sampling is the only way to objectively determine whether elevated mold spore concentrations exist in a home's interior air. A properly conducted air test compares indoor spore counts (by species) to an outdoor control sample. If indoor counts exceed outdoor counts, particularly for water-damage-indicator species like Chaetomium, Stachybotrys, or Ulocladium, a hidden moisture and mold problem is indicated even if no visible mold is present.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Thermal Imaging: Finding Hidden Moisture Before It Becomes Visible Mold</h2>
+      <p class="mb-4">ASADS inspectors use FLIR® infrared thermal cameras to detect wet insulation, condensation zones, and moisture infiltration behind walls and ceilings. A cold anomaly on an interior wall during a Toronto winter often marks a condensation zone — the exact location where mold will eventually appear. Catching these zones before visible mold develops allows targeted remediation at a fraction of the cost of waiting for the problem to manifest.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What to Do If You Suspect Hidden Mold</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Book a professional mold inspection with air sampling — do not rely on visual checks alone</li>
+        <li>Ensure the inspector checks the attic, crawlspace, and HVAC system in addition to living areas</li>
+        <li>Request a thermal imaging scan as part of the inspection to identify hidden moisture zones</li>
+        <li>If elevated spore counts are confirmed, engage a licensed mold remediation contractor with a detailed scope of work before proceeding</li>
+        <li>Address the moisture source — air sealing, exhaust fan routing, vapour barriers, HVAC maintenance — not just the visible mold</li>
+      </ul>
+      <p class="mb-4">Book a certified mold inspection with ASADS across Toronto, Mississauga, Brampton, Markham, Oshawa, and all GTA cities. Call (647) 801-9311 or book online.</p>
+    `,
+  },
+  {
+    id: 25,
+    slug: "designated-substance-survey-ontario-renovations",
+    title: "What Is a Designated Substance Survey (DSS) and When Do You Need One in Ontario?",
+    metaTitle: "Designated Substance Survey Ontario | Before Renovation | ASADS",
+    metaDescription: "A Designated Substance Survey (DSS) is legally required before demolition or major renovation of pre-1990 buildings in Ontario. Learn what's covered, who needs one, and what it costs.",
+    excerpt: "Ontario's Occupational Health and Safety Act requires a Designated Substance Survey before renovation or demolition of pre-1990 buildings. Learn what's involved and when it applies to you.",
+    category: "Asbestos & Hazardous Materials",
+    author: "ASADS Team",
+    date: "2025-02-05",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is a Designated Substance Survey?</h2>
+      <p class="mb-4">A Designated Substance Survey (DSS) is a systematic inspection of a building to identify the presence and location of hazardous materials — known as "designated substances" — before any renovation, demolition, or construction work is carried out. In Ontario, the requirement for a DSS is established under the <strong>Occupational Health and Safety Act (OHSA)</strong> and Ontario Regulation 278/05 (Designated Substance — Asbestos on Construction Projects and in Buildings and Repair Operations).</p>
+      <p class="mb-4">The survey must be completed by a qualified person — in practice, a WSIB-certified inspector with training in designated substance assessment — before the work begins. The results must be provided to contractors, sub-contractors, and workers who will be involved in the project.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Substances Are Covered?</h2>
+      <p class="mb-4">Ontario's OHSA designates 11 substances as requiring special handling due to their health risks. All are assessed in a comprehensive DSS:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Asbestos</strong> — the most commonly found designated substance in pre-1990 buildings</li>
+        <li><strong>Lead</strong> — in paint, solder, pipes, and building materials</li>
+        <li><strong>Silica</strong> — in concrete, masonry, sand, and stone</li>
+        <li><strong>Acrylonitrile</strong></li>
+        <li><strong>Arsenic</strong></li>
+        <li><strong>Benzene</strong></li>
+        <li><strong>Coke oven emissions</strong></li>
+        <li><strong>Ethylene oxide</strong></li>
+        <li><strong>Isocyanates</strong></li>
+        <li><strong>Mercury</strong></li>
+        <li><strong>Vinyl chloride</strong></li>
+      </ul>
+      <p class="mb-4">In residential and light commercial pre-purchase contexts, asbestos and lead are by far the most common findings. The DSS documents their locations, extent, condition (friable vs. non-friable for asbestos), and the recommended handling method for each area of work.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When Is a DSS Legally Required in Ontario?</h2>
+      <p class="mb-4">Under O.Reg 278/05, an asbestos survey (a component of a full DSS) is mandatory before:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Any demolition of a building or structure constructed before 1990</li>
+        <li>Any renovation, alteration, or repair that will disturb materials that may contain asbestos in a pre-1990 building</li>
+        <li>Any work on pipes, insulation, floor tiles, ceiling materials, or other building components that could contain designated substances</li>
+      </ul>
+      <p class="mb-4">This applies to owners, contractors, and sub-contractors. A contractor who begins demolition or renovation work without a DSS being provided to them by the building owner is in violation of OHSA. Fines under OHSA can reach $100,000 for individuals and $1.5 million for corporations.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">DSS vs. Pre-Purchase Asbestos Testing: What's the Difference?</h2>
+      <p class="mb-4">These are related but distinct services:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Pre-purchase asbestos inspection:</strong> identifies suspect materials and collects samples for lab analysis to confirm presence/absence of asbestos. Used for buyer due diligence before purchasing a property. Informs purchase decision and price negotiation.</li>
+        <li><strong>Designated Substance Survey:</strong> a more comprehensive document that lists all designated substances throughout the building by location, material type, condition, and recommended handling. This is the document contractors need before beginning work. Required by law before renovation or demolition.</li>
+      </ul>
+      <p class="mb-4">If you are buying a pre-1990 building and planning renovations, you will need both: the pre-purchase inspection to inform your buying decision, and a full DSS before your contractor begins any work that disturbs building materials.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a DSS Include?</h2>
+      <p class="mb-4">A complete Designated Substance Survey report contains:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Building information and survey scope</li>
+        <li>Identification and location of all suspect materials, with photos</li>
+        <li>Sampling results from an accredited laboratory for each material type</li>
+        <li>Assessment of material condition (intact, damaged, deteriorated)</li>
+        <li>Recommendations for each area: leave in place, encapsulate, or remove under Type 1/2/3 asbestos work procedures</li>
+        <li>O.Reg 278/05 compliance summary for contractor distribution</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does a DSS Cost in Ontario?</h2>
+      <p class="mb-4">Cost depends on building size, age, and complexity. For a typical GTA pre-1990 detached or semi-detached home:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Asbestos sampling and report (residential): from $299 (ASADS starting price)</li>
+        <li>Full DSS covering all 11 designated substances: $500–$1,500 for residential; $1,500–$5,000+ for commercial properties</li>
+      </ul>
+      <p class="mb-4">The cost of a DSS is trivial relative to the fines, liability, and worker compensation claims that can result from proceeding without one. Contact ASADS at (647) 801-9311 to arrange a designated substance assessment for your renovation or demolition project anywhere in the GTA.</p>
+    `,
+  },
+  {
+    id: 26,
+    slug: "home-inspection-cost-ontario",
+    title: "How Much Does a Home Inspection Cost in Ontario? (2025 Complete Guide)",
+    metaTitle: "Home Inspection Cost Ontario 2025 | What Affects Price | ASADS",
+    metaDescription: "Home inspections in Ontario cost $400–$800+ depending on property size, age, and services included. Learn exactly what affects pricing and what to look for beyond price.",
+    excerpt: "Home inspections in Ontario range from $400 to $800+ depending on property type and what's included. Here's a complete breakdown of inspection pricing across the GTA.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2025-03-01",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a Home Inspection Cost in Ontario?</h2>
+      <p class="mb-4">In 2025, the typical cost of a standard residential home inspection in Ontario ranges from <strong>$400 to $650</strong> for a detached or semi-detached home. The most important factor is not finding the cheapest inspection — it's finding an inspector qualified to protect your largest investment. Here's what drives pricing and what you should expect for your money.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Factors That Affect Home Inspection Cost</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Property Size</h3>
+      <p class="mb-4">Larger homes require more time. A 1,000 sq ft condominium takes 1.5–2 hours; a 3,500 sq ft detached two-storey requires 3–4+ hours. Most inspectors price by square footage or property type. Expect a base rate for the first 1,500 sq ft and additional charges for square footage above that threshold.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Property Age</h3>
+      <p class="mb-4">Pre-1980 homes require more inspection time and expertise. Older homes are more likely to have complex issues — aging electrical systems, multiple layers of roofing, foundation types that require careful assessment, and potential hazardous materials (asbestos, lead paint, knob and tube wiring). Many inspectors charge a premium for older properties, and with good reason.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. Property Type</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condominium:</strong> $350–$500 — common element areas are not inspected; scope limited to the unit interior</li>
+        <li><strong>Townhouse:</strong> $400–$550 — depends on whether it's freehold or part of a condo corporation</li>
+        <li><strong>Semi-detached:</strong> $425–$575</li>
+        <li><strong>Detached bungalow:</strong> $450–$600</li>
+        <li><strong>Detached two-storey (2,000–3,000 sq ft):</strong> $500–$700</li>
+        <li><strong>Detached (3,500+ sq ft):</strong> $650–$900+</li>
+        <li><strong>Commercial property:</strong> $700–$2,500+ depending on building type and size</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. Add-On Services</h3>
+      <p class="mb-4">The base inspection covers the structure, systems, and components of the home. Additional specialized services add cost but often provide significant value:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Radon testing:</strong> $150–$250 for a 48-hour electronic monitor (required by many buyers of pre-2000 homes)</li>
+        <li><strong>Mold inspection and air sampling:</strong> $300–$450 including lab analysis</li>
+        <li><strong>Asbestos sampling:</strong> $299+ (1–3 samples with lab results)</li>
+        <li><strong>Sewer scope inspection:</strong> $299–$400 for CCTV camera inspection</li>
+        <li><strong>WETT inspection (wood stove/fireplace):</strong> $200–$300</li>
+        <li><strong>Thermal imaging:</strong> often included by better inspectors; standalone $150–$300</li>
+        <li><strong>Well water testing:</strong> $250–$450 depending on number of parameters tested</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What's Included in an ASADS Inspection</h2>
+      <p class="mb-4">ASADS pre-purchase inspections include thermal imaging as standard — not as an add-on. This means every inspection uses a FLIR® infrared camera to check for hidden moisture, insulation voids, and electrical hotspots at no additional cost. Our inspectors are OAHI (Ontario Association of Home Inspectors) aligned and carry E&O insurance. Same-day digital reports with photographs are standard.</p>
+      <p class="mb-4">Starting from $450 for a standard detached home in Toronto and the GTA. Call (647) 801-9311 or book online.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What to Look for Beyond Price</h2>
+      <p class="mb-4">The cheapest inspection is rarely the best value. Consider:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Credentials:</strong> look for membership in OAHI (Ontario Association of Home Inspectors) or equivalent. Ontario introduced mandatory licensing for home inspectors in 2023 — verify your inspector is HCRA-licensed.</li>
+        <li><strong>Insurance:</strong> errors & omissions (E&O) insurance protects you if the inspector misses something significant. Ask for proof.</li>
+        <li><strong>Report quality:</strong> ask to see a sample report. A good report includes detailed photos, clear deficiency descriptions, and prioritized recommendations — not a checklist of checkboxes.</li>
+        <li><strong>Thermal imaging:</strong> inspectors who include thermal imaging find issues that visual-only inspectors miss. Ask if it's included or what the add-on cost is.</li>
+        <li><strong>Availability for questions after the report:</strong> an inspector who won't answer follow-up questions after delivering the report is providing limited value.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is a Home Inspection Worth the Cost?</h2>
+      <p class="mb-4">In short: almost always. A home inspection that identifies $5,000 in needed repairs on a $900,000 purchase has paid for itself 10 times over. More importantly, an inspection that reveals a major issue — foundation movement, extensive mold, failed sewer line — may save you from a catastrophic purchase that would cost far more than the inspection fee to resolve. The question is not whether to get an inspection — it's whether to get a good one.</p>
+    `,
+  },
+  {
+    id: 27,
+    slug: "how-to-choose-home-inspector-ontario",
+    title: "How to Choose a Home Inspector in Ontario: 11 Questions to Ask Before You Book",
+    metaTitle: "How to Choose a Home Inspector Ontario | HCRA Licensed | ASADS",
+    metaDescription: "Ontario home inspectors must now be HCRA licensed. Learn the 11 questions every buyer should ask before booking an inspection, and what red flags to watch for.",
+    excerpt: "Ontario introduced mandatory home inspector licensing in 2023. Here's how to verify your inspector is qualified, insured, and equipped to protect your investment.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2025-01-15",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Ontario's New Home Inspector Licensing Requirement</h2>
+      <p class="mb-4">As of August 1, 2023, Ontario requires all home inspectors to be licensed through the <strong>Home Construction Regulatory Authority (HCRA)</strong>. Before this change, anyone could call themselves a home inspector in Ontario with no training or credentials required. Licensing now requires education, a qualifying exam, and ongoing professional development.</p>
+      <p class="mb-4">This change protects buyers — but it also means you should verify your inspector's license status. The HCRA maintains a public registry of licensed home inspectors in Ontario at hcraontario.ca. Always check before booking.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">11 Questions to Ask Before Booking a Home Inspector</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Are you HCRA licensed in Ontario?</h3>
+      <p class="mb-4">This is non-negotiable. Ask for their license number and verify it on the HCRA registry. An unlicensed inspector is operating illegally and has no accountability to a regulatory body.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Do you carry Errors & Omissions (E&O) insurance?</h3>
+      <p class="mb-4">E&O insurance protects you if the inspector misses a significant deficiency that results in financial loss. Ask for proof of coverage and check the coverage amount. Minimum $1 million E&O is standard for reputable inspectors.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. How long have you been performing home inspections?</h3>
+      <p class="mb-4">Experience matters. An inspector who has performed 500+ inspections of GTA homes has seen the common failure modes of Toronto's housing stock — aging electrical panels, Toronto clay soil foundation issues, flat roof drainage problems — that a new inspector may miss.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. How long will the inspection take?</h3>
+      <p class="mb-4">A thorough inspection of a typical GTA home takes 2.5–4 hours. Be cautious of inspectors who advertise 90-minute inspections. Comprehensive evaluations of structure, electrical, plumbing, HVAC, roofing, insulation, and all interior systems require time.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">5. Do you use thermal imaging?</h3>
+      <p class="mb-4">Thermal imaging (infrared) detects hidden moisture, insulation voids, and electrical hotspots that visual inspection misses. The best inspectors include thermal imaging as standard. If it's an add-on, ask the cost — it is almost always worth the investment.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">6. Can I attend the inspection?</h3>
+      <p class="mb-4">The answer should always be yes. Walking through findings with your inspector in real time is far more valuable than reading a report after the fact. An inspector who discourages client attendance is a red flag.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">7. When do I receive the report, and what format is it in?</h3>
+      <p class="mb-4">Same-day digital reports with photographs are the current standard. Ask to see a sample report before booking. Reports should identify deficiencies clearly, distinguish between safety issues and maintenance items, and include photos of every significant finding.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">8. Do you inspect the roof from the surface?</h3>
+      <p class="mb-4">Where safe and accessible, inspectors should walk the roof or use a drone. Inspectors who only observe the roof from the ground or through binoculars from an attic hatch will miss surface defects in shingles, flashing, and chimney capping.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">9. Are you independent from the real estate transaction?</h3>
+      <p class="mb-4">Your inspector should have no financial relationship with your real estate agent, the seller, or any contractors who might benefit from findings. An inspector recommended by your agent is not automatically conflicted — but the question is worth asking. You want an inspector whose only obligation is to you.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">10. What do you not inspect?</h3>
+      <p class="mb-4">Understanding the scope limitations matters. Standard home inspections do not test for radon, mold, asbestos, or lead paint; do not inspect behind walls or under flooring; and do not evaluate swimming pools or outbuildings unless specifically scoped. Ask what add-ons are available and whether any are recommended given the property's age or characteristics.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">11. Are you available for questions after the report is delivered?</h3>
+      <p class="mb-4">A good inspector answers follow-up questions after you've had time to review the report. If an inspector delivers the report and is unreachable afterward, you're not getting full value. ASADS inspectors are available by phone and email for report clarification and to help you discuss findings with your real estate agent or lawyer.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Red Flags to Avoid</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Inspectors who cannot provide proof of HCRA licensing</li>
+        <li>No E&O insurance or unwillingness to provide proof</li>
+        <li>Inspection times under 2 hours for a detached home</li>
+        <li>Reports delivered immediately at the end of the inspection (suggests pre-filled or template reports, not property-specific documentation)</li>
+        <li>Pressure from a real estate agent to use their "preferred" inspector without explanation</li>
+        <li>Inspectors who do not welcome client attendance</li>
+      </ul>
+      <p class="mb-4">ASADS home inspectors are HCRA licensed, fully insured, and include thermal imaging with every pre-purchase inspection. Same-day reports and bilingual service available across Toronto, Mississauga, Brampton, Markham, Oshawa, Vaughan, and the entire GTA. Book at (647) 801-9311.</p>
+    `,
+  },
+  {
+    id: 28,
+    slug: "lead-paint-pre-1980-toronto-homes",
+    title: "Lead Paint in Pre-1980 Toronto Homes: Testing, Health Risks & Your Legal Rights",
+    metaTitle: "Lead Paint Testing Toronto | Pre-1980 Homes | XRF Testing | ASADS",
+    metaDescription: "Lead paint was banned in Canada in 1976 but remains in thousands of pre-1980 GTA homes. Learn the health risks, how XRF testing works, and seller disclosure obligations in Ontario.",
+    excerpt: "Lead paint was banned in Canada in 1976 but it still exists in thousands of older Toronto and GTA homes. Learn the health risks, how to test for it, and what your rights are as a buyer.",
+    category: "Asbestos & Hazardous Materials",
+    author: "ASADS Team",
+    date: "2025-01-29",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Lead Paint Problem in Toronto's Housing Stock</h2>
+      <p class="mb-4">Lead paint was used extensively in Canadian residential construction before its restriction in 1976. In Toronto and across the GTA, this means any home built or painted before approximately 1980 is a candidate for lead-containing paint — both on interior surfaces (walls, trim, windows, doors) and exterior (siding, porches, window frames). In older neighbourhoods with Victorian and Edwardian housing stock — The Annex, Cabbagetown, Rosedale, East York, and Riverdale — lead paint prevalence is very high in original materials.</p>
+      <p class="mb-4">Lead paint that is intact, well-adhered, and not disturbed poses minimal immediate risk. The hazard arises during disturbance — sanding, cutting, demolition, or the natural deterioration of paint into chips and dust — which releases lead particles into the air and onto surfaces where they can be ingested, particularly by young children.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Health Risks of Lead Exposure</h2>
+      <p class="mb-4">Lead is a cumulative neurotoxin with no safe level of exposure for children. The health effects of childhood lead poisoning include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Reduced IQ and cognitive development impairment</li>
+        <li>Learning disabilities and attention deficit issues</li>
+        <li>Delayed development and behavioural problems</li>
+        <li>Hearing and speech impairment at high exposure levels</li>
+      </ul>
+      <p class="mb-4">For adults, lead exposure at elevated levels is associated with hypertension, kidney damage, and reproductive effects. The critical exposure risk in homes is lead dust generated by deteriorating paint or renovation activities — not intact, well-sealed paint on walls.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When Is Lead Paint Testing Recommended?</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Before purchasing any pre-1980 home, especially if children under 6 will be residents</li>
+        <li>Before any renovation, sanding, or demolition of surfaces in a pre-1980 home — lead paint testing determines whether lead-safe work practices or full hazmat abatement are required</li>
+        <li>If paint is chipping, flaking, or peeling in a home built before 1980</li>
+        <li>If a child has received an elevated blood lead level from their physician</li>
+        <li>Before selling a pre-1980 home, to document lead paint status for disclosure</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Lead Paint Is Tested: XRF vs. Lab Analysis</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">XRF (X-Ray Fluorescence) Testing</h3>
+      <p class="mb-4">XRF is the gold standard for lead paint testing. A handheld XRF analyzer uses X-ray technology to measure the lead content in paint layers without damaging the surface. Results are immediate and can test through multiple paint layers — critical because lead paint is often buried under layers of subsequent repainting. XRF is non-destructive and can test dozens of surfaces in a single inspection.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Paint Chip (Laboratory) Analysis</h3>
+      <p class="mb-4">Small paint chip samples are collected from various surfaces and sent to an accredited laboratory for chemical analysis. This method is destructive (small areas of paint are removed) but provides quantitative results with low detection limits. It is appropriate for confirming XRF readings or for surfaces where XRF cannot be accurately deployed.</p>
+      <p class="mb-4">ASADS uses XRF testing for residential lead paint assessments across Toronto and the GTA. Results are available immediately on-site, with a written report documenting all tested surfaces, lead levels detected, and risk assessment for each area.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Seller Disclosure Obligations in Ontario</h2>
+      <p class="mb-4">Ontario's Seller Property Information Statement (SPIS) — if completed — includes questions about known environmental hazards including lead paint. However, completion of the SPIS is voluntary in Ontario. Sellers are not required to complete it.</p>
+      <p class="mb-4">Where sellers are aware of lead paint and fail to disclose it, they may be liable for misrepresentation — but proving knowledge after the fact is difficult. This is why buyer-initiated lead paint testing as a condition of purchase is the most reliable protection.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Happens If Lead Paint Is Found</h2>
+      <p class="mb-4">The presence of lead paint does not automatically require removal. The risk assessment determines action:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Intact lead paint</strong> on walls and ceilings in good condition: encapsulation (painting over with encapsulant) or leave in place with monitoring — relatively low risk</li>
+        <li><strong>Lead paint on friction surfaces</strong> (windows, doors) that generate dust through use: priority for abatement or encapsulation</li>
+        <li><strong>Deteriorating lead paint</strong> (chipping, peeling): requires remediation before occupancy with children</li>
+        <li><strong>Lead paint in areas of planned renovation:</strong> requires lead-safe work practices (wet methods, HEPA vacuum, containment) and proper disposal under Ontario regulations</li>
+      </ul>
+      <p class="mb-4">Book a lead paint XRF assessment with ASADS across Toronto, Mississauga, Brampton, Etobicoke, and the GTA. Call (647) 801-9311.</p>
+    `,
+  },
+  {
+    id: 29,
+    slug: "why-mold-comes-back-after-remediation",
+    title: "Why Mold Keeps Coming Back After Remediation (And How to Stop It)",
+    metaTitle: "Why Mold Comes Back After Remediation | Toronto | ASADS",
+    metaDescription: "Mold recurrence after remediation is common in Toronto homes when the moisture source isn't fixed. Learn the real causes of repeat mold and how post-remediation testing confirms success.",
+    excerpt: "If mold has been 'remediated' but keeps returning, the moisture source was never properly fixed. Learn the most common reasons mold recurs and how to end the cycle for good.",
+    category: "Mold & Air Quality",
+    author: "ASADS Team",
+    date: "2025-02-20",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Mold Cycle: Why Cleaning Isn't Enough</h2>
+      <p class="mb-4">One of the most common calls ASADS inspectors receive is from homeowners or buyers who say: "We already had the mold removed — but it's back." Recurring mold after remediation is extremely common, and the reason is almost always the same: the mold was removed from surfaces without eliminating the moisture source that allowed it to grow in the first place. Mold is a symptom. Moisture is the disease. Unless the disease is treated, the symptom returns.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Most Common Reasons Mold Recurs</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. The Moisture Source Was Not Identified or Fixed</h3>
+      <p class="mb-4">Surface mold remediation — wiping, painting over, or removing visibly affected drywall — addresses the visible manifestation of the problem. If the water infiltration, condensation zone, or high-humidity condition that caused the mold is not corrected, mold will re-colonize the same area within weeks to months. This is the single most common cause of mold recurrence.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. The Remediation Was Not Complete</h3>
+      <p class="mb-4">Mold grows on and inside porous materials — drywall, OSB, wood framing, insulation. Surface cleaning (bleach wiping) kills surface mold but does not remove mold that has penetrated into the material. If affected materials are not physically removed, mold will continue to grow inward and re-emerge on the surface. Proper remediation of significantly affected porous materials requires removal, not cleaning.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. No Post-Remediation Clearance Test Was Performed</h3>
+      <p class="mb-4">Without a post-remediation air test, there is no objective evidence that the remediation was successful. Contractors may report the work as complete, but airborne spore counts may still be elevated — particularly if the containment was inadequate or if adjacent areas were cross-contaminated. A clearance test compares post-remediation air samples to outdoor controls and pre-remediation baselines to confirm the work is genuinely done.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. Cross-Contamination During Remediation</h3>
+      <p class="mb-4">Improperly contained remediation can spread mold spores throughout the home via HVAC systems, air movement, or workers tracking spore-laden debris through uncontained areas. Proper remediation requires physical containment (polyethylene sheeting and negative air pressure) and HEPA filtration. When spores are distributed throughout the HVAC system, they settle on new surfaces and begin growing anywhere moisture conditions are adequate.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">5. The HVAC System Was Not Treated</h3>
+      <p class="mb-4">If the mold problem was associated with HVAC moisture (condensate drain, evaporator coil, duct liner) and only the visible surface mold was remediated without addressing the HVAC system, the system will continue redistributing spores. HVAC-associated mold requires cleaning or replacement of contaminated components and correction of the underlying moisture condition (drainage, coil cleaning, duct insulation).</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to End the Mold Cycle</h2>
+      <ol class="list-decimal pl-6 mb-4 space-y-2">
+        <li><strong>Identify the moisture source accurately:</strong> Before any remediation, commission a mold inspection with thermal imaging to locate moisture sources — not just visible mold. Thermal cameras find wet insulation and condensation zones that visual inspection misses.</li>
+        <li><strong>Fix the moisture problem first:</strong> Repair roof leaks, seal foundation cracks, correct bath fan routing, install vapour barriers, reduce indoor humidity with dehumidification and ventilation.</li>
+        <li><strong>Remove, don't clean, significantly affected porous materials:</strong> Drywall, insulation, and wood framing with more than superficial mold growth should be removed to clean material.</li>
+        <li><strong>Use proper containment and HEPA filtration during remediation:</strong> Ensure the remediation contractor follows established protocols (IICRC S520) for containment.</li>
+        <li><strong>Perform a post-remediation clearance test:</strong> An independent air test (from a different company than the remediator) confirms the work is complete.</li>
+      </ol>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Post-Remediation Testing: Why It Matters</h2>
+      <p class="mb-4">ASADS offers post-remediation clearance testing using AIHA-accredited laboratory air analysis. We collect air samples in the remediated area and compare results to outdoor baseline samples. A successful clearance confirms:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Indoor spore counts are comparable to or lower than outdoor counts</li>
+        <li>No water-damage-indicator species (Chaetomium, Stachybotrys, Ulocladium) are elevated indoors relative to outdoors</li>
+        <li>The remediation area is safe for re-occupancy and reconstruction</li>
+      </ul>
+      <p class="mb-4">For real estate transactions, a clearance certificate is essential documentation confirming the remediation was successful — and that you won't face recurrence after closing. Call (647) 801-9311 to book a post-remediation clearance test across the GTA.</p>
+    `,
+  },
+  {
+    id: 30,
+    slug: "radon-gas-ontario-buyers-guide",
+    title: "Radon Gas in Ontario Homes: A Buyer's Complete Guide",
+    metaTitle: "Radon Gas Ontario Homes | Testing & Mitigation | ASADS Toronto",
+    metaDescription: "Radon is the #1 cause of lung cancer in non-smokers. Ontario has pockets of elevated radon across the GTA. Learn how to test, what levels are dangerous, and mitigation costs.",
+    excerpt: "Radon gas is the leading cause of lung cancer among non-smokers in Canada. Ontario has areas of elevated radon risk, and many GTA homes have never been tested. Here's what buyers need to know.",
+    category: "Mold & Air Quality",
+    author: "ASADS Team",
+    date: "2025-01-05",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is Radon and Why Does It Matter in Ontario?</h2>
+      <p class="mb-4">Radon is a naturally occurring radioactive gas produced by the decay of uranium in soil and rock. It is colourless, odourless, and tasteless — completely undetectable without a test. Radon enters homes through cracks in foundations, sump pits, floor drains, and construction joints, then accumulates in basements and lower floors.</p>
+      <p class="mb-4">Radon is the <strong>leading cause of lung cancer in non-smokers in Canada</strong>, responsible for an estimated 3,200 deaths annually. Health Canada estimates that approximately 7% of Canadian homes exceed the national guideline of 200 Bq/m³. In certain geological areas of Ontario — including parts of the Canadian Shield north of Toronto, and some areas within the GTA itself — radon concentrations can be significantly elevated.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Ontario Radon Risk: What the Data Shows</h2>
+      <p class="mb-4">Health Canada's national radon survey identified elevated readings in multiple Ontario communities. While Toronto proper has a moderate geological risk profile, areas in Durham Region, York Region, and communities north of the GTA (Barrie, Orillia, Collingwood) have documented elevated radon levels due to granite-rich geology. Importantly, radon varies significantly from house to house even within the same neighbourhood — a neighbour's low result does not predict your home's reading.</p>
+      <p class="mb-4">The only way to know whether a specific home has elevated radon is to test it.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Radon Testing Works</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Short-Term Testing (48-Hour Electronic Monitor)</h3>
+      <p class="mb-4">For real estate transactions, a 48-hour electronic radon monitor is the most practical option. A calibrated electronic device is placed in the lowest livable area of the home (typically the basement) for a minimum of 48 hours with windows and doors closed. Results are available immediately at the end of the test period. This method meets Health Canada's guidelines for short-term measurement and is accepted by most lenders and buyers as a condition of purchase result.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Long-Term Testing (90-Day Alpha Track)</h3>
+      <p class="mb-4">A small alpha track detector is placed in the basement for 90 days to 1 year. Long-term testing provides the most accurate representation of annual average radon exposure because radon levels fluctuate significantly with weather, soil conditions, and seasonal air pressure changes. Health Canada recommends long-term testing for the most definitive results. This method is ideal for existing homeowners who are not under time pressure.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Understanding Your Radon Results</h2>
+      <p class="mb-4">Health Canada's Radon Guideline thresholds for action:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Below 100 Bq/m³:</strong> Low risk — no action required</li>
+        <li><strong>100–200 Bq/m³:</strong> Moderate — consider mitigation within 2 years</li>
+        <li><strong>Above 200 Bq/m³:</strong> Elevated — Health Canada recommends mitigation within 1 year. This is the national guideline threshold.</li>
+        <li><strong>Above 600 Bq/m³:</strong> High — consider mitigation within several months; limit time spent in affected areas</li>
+      </ul>
+      <p class="mb-4">The World Health Organization (WHO) recommends a lower threshold of 100 Bq/m³ — stricter than Canada's current guideline. Many health advocates and real estate professionals in Canada now recommend addressing readings above 100 Bq/m³.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Radon Mitigation: What It Involves and What It Costs</h2>
+      <p class="mb-4">The most effective and widely used radon mitigation method is <strong>Active Soil Depressurization (ASD)</strong> — also called sub-slab depressurization. A licensed radon mitigator drills through the concrete floor slab, inserts a pipe, and runs it to the exterior where a continuously running fan creates negative pressure under the slab, drawing radon out before it can enter the home.</p>
+      <p class="mb-4">This system is:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Highly effective — typically reduces radon levels by 80–99%</li>
+        <li>Professionally installed in a single day</li>
+        <li>Running cost of approximately $30–$60/year in electricity</li>
+        <li>Cost in Ontario: typically <strong>$1,500–$3,000</strong> for a standard installation</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Radon Testing in Real Estate Transactions</h2>
+      <p class="mb-4">As awareness of radon grows, radon testing is increasingly being requested as a condition in Ontario real estate offers. If radon is found above 200 Bq/m³:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Request a seller concession to fund mitigation installation before closing</li>
+        <li>Negotiate a holdback of $2,500–$3,500 to cover installation costs</li>
+        <li>Book a post-mitigation retest 30 days after installation to confirm effectiveness before releasing any holdback</li>
+      </ul>
+      <p class="mb-4">ASADS provides 48-hour electronic radon testing as a standalone service or add-on to any pre-purchase inspection across Toronto and the GTA. Results are included in the inspection report with Health Canada guideline comparisons. Call (647) 801-9311 to book.</p>
+    `,
+  },
+  {
+    id: 31,
+    slug: "asbestos-insurance-ontario",
+    title: "How Insurance Companies Handle Asbestos Discovery in Ontario Homes",
+    metaTitle: "Asbestos & Home Insurance Ontario | What to Disclose | ASADS",
+    metaDescription: "Discovering asbestos during a home purchase affects insurance coverage in Ontario. Learn what insurers require, what must be disclosed, and how a certified report protects you.",
+    excerpt: "Asbestos discovery during a home purchase or renovation can affect insurance coverage and legal liability in Ontario. Here's what insurers require and how certified testing protects you.",
+    category: "Asbestos & Hazardous Materials",
+    author: "ASADS Team",
+    date: "2025-02-12",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Asbestos and Home Insurance: The Connection</h2>
+      <p class="mb-4">The relationship between asbestos and home insurance in Ontario is nuanced — and misunderstood by many buyers, sellers, and even real estate professionals. The presence of asbestos in a home does not, by itself, typically void homeowner insurance coverage. What matters is the condition of the asbestos-containing materials, how they are managed, and what activities are conducted in the home that might disturb them.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Insurers Actually Ask About</h2>
+      <p class="mb-4">Most Ontario home insurance applications include questions about known environmental hazards. The specific questions vary by insurer, but typically include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Are there any known asbestos-containing materials in the home?</li>
+        <li>Are there any materials requiring environmental remediation?</li>
+        <li>Has any environmental testing been conducted on the property?</li>
+      </ul>
+      <p class="mb-4">Answering "yes" to these questions does not automatically result in coverage denial. But failure to disclose known asbestos can be treated as material misrepresentation — grounds for claim denial or policy cancellation after the fact.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Intact vs. Disturbed Asbestos: What Matters to Insurers</h2>
+      <p class="mb-4">Ontario insurers generally distinguish between:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Non-friable, intact ACMs (asbestos-containing materials):</strong> Asbestos floor tiles, transite siding, or drywall joint compound in good condition — not releasing fibres — are generally insurable as-is. Many pre-1980 Ontario homes have these materials and are fully insured.</li>
+        <li><strong>Friable or deteriorating ACMs:</strong> Pipe insulation, spray-applied fireproofing, or acoustic ceiling texture that is crumbling and releasing fibres represents an active health hazard. Insurers may require remediation as a condition of coverage, add exclusions for asbestos-related claims, or decline coverage entirely.</li>
+        <li><strong>ACMs with planned disturbance:</strong> If you plan to renovate a pre-1990 home, your insurer needs to know. Renovation activities that disturb asbestos without O.Reg 278/05 compliance could void coverage for any resulting claim.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Role of Certified Asbestos Testing in Insurance</h2>
+      <p class="mb-4">A certified asbestos inspection and lab report serves several functions from an insurance perspective:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Documentation for disclosure:</strong> A written report from a WSIB-certified inspector showing what materials were tested, what was found, and the condition assessment provides the documentation insurers need to underwrite accurately.</li>
+        <li><strong>Renovation compliance documentation:</strong> Before beginning renovation work on a pre-1990 home, having an asbestos inventory report demonstrates O.Reg 278/05 compliance intent and may be required by your contractor's insurer before they will begin work.</li>
+        <li><strong>Claims documentation:</strong> If a claim arises related to asbestos (e.g., during a renovation gone wrong), having a pre-existing certified report establishes baseline conditions and demonstrates due diligence.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Seller Disclosure of Asbestos in Ontario Real Estate</h2>
+      <p class="mb-4">Ontario's Seller Property Information Statement (SPIS) includes a question about known environmental hazards including asbestos. However, the SPIS is voluntary — sellers are not required to complete it. Where a SPIS is not provided, buyers must rely on their own due diligence — including pre-purchase asbestos testing — to identify ACMs before closing.</p>
+      <p class="mb-4">Where a seller is aware of asbestos and fails to disclose it, they may have liability for misrepresentation. However, "aware" is difficult to prove — particularly in an estate sale or sale by an owner who lived in the home for many years without knowing what materials were in the walls. Buyer-side testing eliminates this uncertainty.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What to Do When Buying a Pre-1990 Home</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Include asbestos testing as a condition of purchase for any pre-1990 home, particularly if renovation is planned</li>
+        <li>Disclose identified ACMs to your insurance broker before binding coverage</li>
+        <li>If ACMs are found in deteriorating condition, negotiate remediation as a condition of closing or obtain a price concession</li>
+        <li>Obtain a written asbestos inventory report for your insurer's files — this documentation is your protection</li>
+      </ul>
+      <p class="mb-4">ASADS provides WSIB-certified asbestos inspections and lab reports accepted by all major Ontario insurance providers. Book at (647) 801-9311 or online. Service across Toronto, Mississauga, Brampton, Markham, Oshawa, and all GTA cities.</p>
+    `,
+  },
+  {
+    id: 32,
+    slug: "pre-listing-inspection-seller-guide",
+    title: "Pre-Listing Inspection: Why Smart Toronto Sellers Order One Before Listing",
+    metaTitle: "Pre-Listing Home Inspection Toronto | Sell Faster & For More | ASADS",
+    metaDescription: "A pre-listing inspection identifies problems before buyers find them, giving Toronto sellers control over repairs, pricing, and negotiations. Learn why it's one of the best investments a seller can make.",
+    excerpt: "A pre-listing inspection gives Toronto sellers the power to address issues on their terms before buyers and their inspectors find them. Here's how it translates to faster sales and stronger prices.",
+    category: "Selling Tips",
+    author: "ASADS Team",
+    date: "2025-03-01",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is a Pre-Listing Inspection?</h2>
+      <p class="mb-4">A pre-listing inspection — also called a seller's inspection or pre-sale inspection — is a comprehensive home inspection ordered by the seller before the property is listed on MLS. The same inspector, same methodology, and same report standards that buyers use are applied — but you get the results first, and you get to decide what to do with them before any buyer sees the property.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Toronto Sellers Are Increasingly Choosing Pre-Listing Inspections</h2>
+      <p class="mb-4">Toronto's real estate market has evolved significantly. In the post-2022 environment with normalized conditions and buyers less frequently waiving inspection conditions, a pre-listing inspection gives sellers several distinct advantages:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. No Last-Minute Surprises</h3>
+      <p class="mb-4">In a conditional offer, a buyer's inspection that reveals significant issues — a cracked heat exchanger, evidence of past water infiltration, an aging electrical panel — creates immediate leverage for price renegotiation or deal collapse. A seller who already knows about these issues has had time to address them before listing or has priced the home with full knowledge of its condition.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Seller Controls the Repair Process</h3>
+      <p class="mb-4">When a buyer discovers a problem, they have enormous leverage: they choose the contractor, often prefer conservative (expensive) estimates, and the urgency of closing creates pressure for the seller to capitulate to inflated repair cost demands. A seller who identifies and repairs an issue before listing chooses their own contractor, takes competitive quotes, and completes the repair on their timeline — often at significantly lower cost than the hold-back a buyer would demand.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. Stronger Buyer Confidence</h3>
+      <p class="mb-4">Providing a completed pre-listing inspection report to prospective buyers signals transparency and gives buyers confidence that there are no hidden problems. In competitive multiple-offer situations, some buyers waive their own inspection when a credible pre-listing report is provided — particularly when it's accompanied by receipts for any repairs that were made.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. Accurate Pricing</h3>
+      <p class="mb-4">A seller who knows the exact condition of their home — including what systems are aging, what deferred maintenance exists, and what capital expenditures a buyer will face in the near term — can price with precision. Overpricing due to unknown issues creates extended market time; underpricing due to fear of hidden problems leaves money on the table. The inspection eliminates guesswork.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a Pre-Listing Inspection Cover?</h2>
+      <p class="mb-4">The scope is identical to a buyer's pre-purchase inspection: structure, roofing, exterior, electrical, plumbing, HVAC, insulation, all interior systems and components, and thermal imaging for moisture and electrical anomalies. The report is comprehensive, photographed, and delivered same-day.</p>
+      <p class="mb-4">Optional add-ons that high-value Toronto sellers commonly pair with a pre-listing inspection:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Radon testing (particularly important for older homes with basements)</li>
+        <li>WETT inspection if the home has a wood-burning fireplace or insert (required by most buyers' insurers)</li>
+        <li>Asbestos sampling if pre-1990 construction</li>
+        <li>Sewer scope if a clay tile or older cast iron sewer is suspected</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Use the Pre-Listing Report</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Review findings with your real estate agent to prioritize which items to address before listing</li>
+        <li>Address safety items and items with high buyer concern value (electrical issues, roof, HVAC) for maximum return</li>
+        <li>Retain receipts for all repairs — provide them alongside the inspection report to buyers</li>
+        <li>Consider having minor items noted in the report repaired and re-inspected for clearance documentation</li>
+        <li>Price the home with full knowledge of its condition — neither discounting unnecessarily nor setting up for renegotiation</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is a Pre-Listing Inspection Required to Be Disclosed?</h2>
+      <p class="mb-4">In Ontario, once a seller possesses a home inspection report, they are aware of any deficiencies documented in it. Sellers should discuss disclosure obligations with their real estate lawyer and agent. The general principle is that material latent defects (hidden defects that are not apparent on reasonable inspection and that affect the home's habitability or value significantly) must be disclosed. A pre-listing inspection that identifies such defects means the seller is now aware of them.</p>
+      <p class="mb-4">This is not a reason to avoid a pre-listing inspection — it is a reason to address the issues found. Proactive disclosure of a known, repaired problem is far better from a legal risk standpoint than concealment of an unknown problem that a buyer discovers post-closing.</p>
+      <p class="mb-4">Book your pre-listing inspection with ASADS at (647) 801-9311. Thermal imaging included. Same-day report. Serving all GTA cities.</p>
+    `,
+  },
+  {
+    id: 33,
+    slug: "condo-inspection-toronto-what-to-check",
+    title: "Condo Inspection in Toronto: What to Check Before You Buy",
+    metaTitle: "Condo Inspection Toronto | What's Covered & Status Certificate | ASADS",
+    metaDescription: "A condo inspection in Toronto covers the unit interior but not common elements. Learn what to inspect, what to look for in the status certificate, and what add-ons matter most.",
+    excerpt: "A condo inspection in Toronto is different from a house inspection — and the status certificate can matter more than the inspection itself. Here's what smart condo buyers check before closing.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2025-02-25",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: true,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why a Condo Inspection Is Different</h2>
+      <p class="mb-4">Buying a condominium in Toronto is fundamentally different from buying a house — and the inspection reflects this. In a condo purchase, you own the unit interior (from the drywall inward, in most standard condo declarations) and a share of the common elements: the building envelope, hallways, mechanical systems, elevators, parking structure, and amenities. The inspection covers only the former; the latter is the domain of the condominium corporation, disclosed through the status certificate.</p>
+      <p class="mb-4">This means a condo inspection has a narrower scope than a house inspection — but the status certificate review can be more consequential than the physical inspection itself for a high-rise or mid-rise unit.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What a Condo Inspection Covers</h2>
+      <p class="mb-4">A pre-purchase condo inspection by ASADS covers all accessible components of the unit:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Electrical:</strong> panel capacity, breaker condition, outlet and GFCI functionality, light switches and fixtures</li>
+        <li><strong>Plumbing:</strong> supply and drain connections under sinks, toilet function and sealing, water pressure and temperature, bathtub and shower enclosures</li>
+        <li><strong>HVAC:</strong> fan coil unit condition, thermostat function, in-suite heat pump or electric baseboard if applicable, ventilation and exhaust adequacy</li>
+        <li><strong>Windows and doors:</strong> seal condition (fogging between panes indicates failed IGU seal), hardware function, balcony door sealing</li>
+        <li><strong>Balcony:</strong> surface condition, railing security and height, drainage</li>
+        <li><strong>Interior:</strong> floor condition, ceiling and wall surfaces, cabinet function, appliance operation (if present)</li>
+        <li><strong>Moisture:</strong> bathroom tiling and grout, under-sink cabinet conditions, laundry connections, evidence of past water infiltration from above or through exterior walls</li>
+      </ul>
+      <p class="mb-4">Thermal imaging is included in all ASADS condo inspections. This is particularly valuable for detecting moisture infiltration through exterior walls or from units above — a frequent source of hidden damage in high-rise buildings.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Common Issues Found in Toronto Condo Inspections</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>KITEC plumbing in buildings constructed 1995–2007:</strong> particularly prevalent in Liberty Village, King West, Cityplace, and Entertainment District buildings. Check unit plumbing under all sinks.</li>
+        <li><strong>Failed window IGU seals:</strong> fogging or condensation between glass panes indicates seal failure; replacement is typically the unit owner's responsibility and costs $200–$600+ per sash.</li>
+        <li><strong>Inadequate bathroom exhaust:</strong> bath fans that exhaust into the ceiling plenum (rather than directly to the exterior through the building) cause chronic humidity and mold at the ceiling-wall junction.</li>
+        <li><strong>Balcony door and window sealing:</strong> aging caulking and weather stripping on exterior openings are a leading cause of winter heat loss and occasional water infiltration during wind-driven rain events.</li>
+        <li><strong>Fan coil unit condition:</strong> in-suite fan coils serving as both heat and cooling sources require periodic maintenance; clogged filters, deteriorated coil fins, and condensate drain issues are common findings.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Status Certificate: What to Look For</h2>
+      <p class="mb-4">The status certificate is a package of documents the condo corporation must provide within 10 days of request. It contains the information you need to evaluate the financial health and governance of the corporation you are buying into. Have your real estate lawyer review it, and specifically look for:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Reserve Fund Adequacy</h3>
+      <p class="mb-4">The reserve fund pays for major capital repairs: roof replacement, garage membrane, elevator modernization, window replacement, and mechanical system upgrades. A reserve fund study (included in the status certificate) shows the projected funding adequacy. An underfunded reserve fund is a major red flag — it means current owners have been paying artificially low common element fees, and a future owner will fund the gap through special assessments.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Pending or Approved Special Assessments</h3>
+      <p class="mb-4">A special assessment is a one-time charge levied on unit owners to cover expenses the reserve fund cannot. If a special assessment has been approved but not yet collected, it may pass to you as the new owner at closing. Check the status certificate for any disclosed pending assessments — and ask your lawyer about who is responsible for paying them if the deal closes before collection.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Ongoing Litigation</h3>
+      <p class="mb-4">The status certificate discloses any material legal proceedings involving the corporation. Active litigation — particularly against the builder for construction deficiencies — can be positive (the corporation is fighting for resolution) or negative (large legal expenses and uncertain outcomes). Understand the nature of any litigation before closing.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Known Deficiencies and Capital Projects</h3>
+      <p class="mb-4">The most recent engineer's report and reserve fund study often identify major capital projects on the horizon. A balcony restoration project affecting 200 units, or an underground garage membrane replacement, represents tens of millions of dollars in future expenditure that will flow through your monthly maintenance fees or special assessments.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Recommended Add-Ons for Condo Buyers</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>KITEC plumbing check:</strong> ask ASADS to specifically document whether KITEC is present and whether the building's common plumbing has been addressed</li>
+        <li><strong>Air quality testing:</strong> useful if the previous occupant had pets, smoked, or if there is any mold or odour concern</li>
+        <li><strong>Radon testing:</strong> primarily relevant for ground-floor and lower-floor units</li>
+      </ul>
+      <p class="mb-4">ASADS performs pre-purchase condo inspections across all Toronto neighbourhoods and GTA municipalities including Mississauga, Brampton, Vaughan, Richmond Hill, Markham, and Oshawa. Call (647) 801-9311 or book online. Same-day reports delivered in PDF format with full photographic documentation.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
