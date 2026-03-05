@@ -55,9 +55,122 @@ export default function MoldInspection() {
           </div>
 
           <p>
-            Whether it's a water-damaged basement, attic mold, or a home being prepped for sale, our reports provide <strong>species identification</strong> and <strong>spore quantification</strong> to guide safe remediation. 
+            Whether it's a water-damaged basement, attic mold, or a home being prepped for sale, our reports provide <strong>species identification</strong> and <strong>spore quantification</strong> to guide safe remediation.
             We prioritize urgent, local cases with "mold inspection near me" and "emergency mold testing" options for fast bookings.
           </p>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">When Should You Get a Mold Inspection?</h3>
+            <ul className="space-y-2">
+              {[
+                "Visible mold or mildew anywhere in the home",
+                "Musty odours especially in basement or HVAC",
+                "After any water damage or flooding",
+                "If occupants have unexplained respiratory symptoms",
+                "Buying a home with evidence of past water intrusion",
+                "After remediation work to confirm clearance",
+                "Homes with finished basements and history of humidity problems",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <ShieldAlert className="text-red-500 flex-shrink-0 mt-0.5" size={18} />
+                  <span className="text-slate-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Common Mold Problems in GTA Homes</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                {
+                  title: "Basement Rim Joist Mold",
+                  body: "Condensation and air leakage causes mold behind insulation in the band joist. Very common in Toronto semi-detached homes.",
+                },
+                {
+                  title: "HVAC & Air Handler Contamination",
+                  body: "Mold colonizes drain pans, evaporator coils, and duct liner, spreading spores throughout the home.",
+                },
+                {
+                  title: "Attic Mold",
+                  body: "Inadequate ventilation or bath fan vented into the attic causes mold on roof sheathing, potentially affecting the entire roof structure.",
+                },
+                {
+                  title: "Bathroom & Kitchen Caulking",
+                  body: "Chronic moisture allows Cladosporium and Penicillium growth in grout and around tubs.",
+                },
+                {
+                  title: "Window Frame Condensation Mold",
+                  body: "Single-pane or poorly sealed windows in Toronto winters create perfect mold growth conditions.",
+                },
+                {
+                  title: "Crawl Space Moisture",
+                  body: "Ground moisture and lack of vapour barrier creates a high-RH environment conducive to mold on floor joists.",
+                },
+              ].map((card) => (
+                <div key={card.title} className="p-4 bg-red-50 border border-red-100 rounded-xl">
+                  <h4 className="font-bold text-slate-900 mb-1">{card.title}</h4>
+                  <p className="text-sm text-slate-700">{card.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Mold Inspection Process</h3>
+            <ol className="space-y-4">
+              {[
+                {
+                  step: "1",
+                  title: "Visual Assessment & Moisture Mapping",
+                  body: "We use a FLIR thermal camera and calibrated moisture meters to find hidden wet areas without opening walls.",
+                },
+                {
+                  step: "2",
+                  title: "Air Cassette Sampling",
+                  body: "A calibrated pump draws air through cassette filters. Samples are taken inside the home and outside as a control baseline.",
+                },
+                {
+                  step: "3",
+                  title: "AIHA-Accredited Lab Analysis",
+                  body: "Samples are analyzed using Spore Trap or PCR/DNA method depending on requirements. Results in 24–72 hours.",
+                },
+                {
+                  step: "4",
+                  title: "Written Report & Remediation Scope",
+                  body: "Results are compared to the outdoor baseline. If elevated, we provide a written remediation scope of work for contractor tender.",
+                },
+              ].map((item) => (
+                <li key={item.step} className="flex items-start gap-4">
+                  <span className="flex-shrink-0 h-8 w-8 rounded-full bg-purple-600 text-white text-sm font-bold flex items-center justify-center">
+                    {item.step}
+                  </span>
+                  <div>
+                    <h4 className="font-bold text-slate-900">{item.title}</h4>
+                    <p className="text-sm text-slate-700">{item.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">What If Mold Is Found?</h3>
+            <ul className="space-y-2">
+              {[
+                "Minor mold (under 1 m²) can often be cleaned by a homeowner following Health Canada guidelines.",
+                "Larger infestations require a licensed remediation contractor.",
+                "We provide the scope of work document contractors need to quote.",
+                "In real estate, a mold report is grounds for price reduction or seller-paid remediation.",
+                "We offer post-remediation clearance testing to confirm the job is complete.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <Droplets className="text-blue-500 flex-shrink-0 mt-0.5" size={18} />
+                  <span className="text-slate-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       }
       whatWeInspect={[
@@ -122,6 +235,18 @@ export default function MoldInspection() {
         {
           question: "How much does mold inspection cost in Toronto?",
           answer: "Professional mold inspection in Toronto starts from $349, which includes air sampling and lab analysis. Emergency and same-day services are available for urgent concerns."
+        },
+        {
+          question: "How is mold testing different from a visual mold inspection?",
+          answer: "A visual inspection identifies visible mold growth. Air sampling goes further — it quantifies airborne spore concentrations even when mold is hidden behind walls, in HVAC systems, or in insulation. A property can have hidden mold colonies with no visible signs. Lab-confirmed air sampling is the only way to know if spore counts are elevated."
+        },
+        {
+          question: "What mold species are most dangerous?",
+          answer: "Stachybotrys chartarum (black mold) produces mycotoxins and is associated with serious health effects. However, common species like Aspergillus, Penicillium, and Cladosporium are far more prevalent in GTA homes and can cause respiratory irritation, allergies, and asthma at elevated concentrations. Our lab report identifies species and spore counts for each."
+        },
+        {
+          question: "Do I need a post-remediation test after mold removal?",
+          answer: "Yes — a clearance test after remediation is the only way to confirm the work was successful. We take post-remediation air samples and compare them to pre-remediation baselines and outdoor control samples. Without a clearance test, you have no documented proof the mold problem was resolved — which can cause issues when reselling the property."
         },
       ]}
       relatedServices={[

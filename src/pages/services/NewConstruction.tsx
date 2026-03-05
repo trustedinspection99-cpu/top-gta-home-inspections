@@ -100,6 +100,22 @@ const faqs = [
   {
     question: "Can you help with my Tarion warranty claim?",
     answer: "Yes. Our reports are specifically formatted to meet Tarion's documentation requirements, making it easier to file successful warranty claims and harder for builders to deny responsibility."
+  },
+  {
+    question: "What is included in a PDI inspection with ASADS?",
+    answer: "We attend your PDI as your independent inspector. We systematically check all finishes, appliances, mechanical systems, windows, doors, and exterior. We help you document deficiencies on your Tarion PDI form, take timestamped photos as evidence, and provide a written report you can reference throughout the warranty period."
+  },
+  {
+    question: "When should I schedule my 1-Year Tarion inspection?",
+    answer: "Book your inspection 45–60 days before your 1-year possession anniversary. This gives you time to receive the report, review all deficiencies, and submit the Tarion 1-Year Form before the deadline. Missing the Tarion deadline means losing your warranty coverage for those items permanently."
+  },
+  {
+    question: "Do you find issues that the builder's own trades missed?",
+    answer: "Yes — consistently. New construction inspections typically identify 15–40 deficiencies beyond what was noted at PDI. Common findings include missing attic insulation, improperly vented bath fans, incomplete caulking at penetrations, and grading issues. Builders correct these at no cost when submitted through proper Tarion channels."
+  },
+  {
+    question: "Can ASADS help me if Tarion denies my claim?",
+    answer: "While we can't provide legal advice, our detailed inspection reports — with timestamped photos and technical descriptions — serve as independent evidence if you need to escalate a Tarion denial to the Licence Appeal Tribunal (LAT). Many clients find that presenting a professional third-party inspection report is enough to get the builder to address the issue without formal dispute."
   }
 ];
 
@@ -190,6 +206,86 @@ export default function NewConstruction() {
                   <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-4">Structural & Mechanical Deep-Dive</h3>
                   <p>We don't just look for paint chips. We climb into the attic to verify <strong>insulation R-values</strong> and check the mechanical room for proper <strong>HRV (Heat Recovery Ventilator)</strong> balancing—two items builders frequently get wrong, leading to mold and high energy costs.</p>
                 </div>
+              </div>
+
+              {/* Tarion Warranty Timeline */}
+              <div className="space-y-4">
+                <h3 className="font-heading text-xl font-bold text-foreground">Understanding the Tarion Warranty Timeline</h3>
+                <ol className="space-y-4">
+                  {[
+                    {
+                      step: "1",
+                      title: "PDI (Pre-Delivery Inspection)",
+                      body: "Done before you take possession. The builder walks you through the home and you note deficiencies on the PDI form. Tip: having an independent inspector present gives you a second set of trained eyes before you sign.",
+                    },
+                    {
+                      step: "2",
+                      title: "30-Day Form",
+                      body: "Submitted within 30 days of possession. Covers items missed at PDI plus new issues that appeared. This is your final chance to address cosmetic defects under Tarion.",
+                    },
+                    {
+                      step: "3",
+                      title: "1-Year Form",
+                      body: "Covers workmanship, material, and Ontario Building Code violations that appear within the first year. Deadline is 30 days before the 1-year anniversary of possession. This is the most important deadline for structural and system deficiencies.",
+                    },
+                  ].map((item) => (
+                    <li key={item.step} className="flex items-start gap-4">
+                      <span className="flex-shrink-0 h-8 w-8 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center justify-center">
+                        {item.step}
+                      </span>
+                      <div>
+                        <h4 className="font-bold text-foreground">{item.title}</h4>
+                        <p className="text-sm text-muted-foreground">{item.body}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              {/* Common Defects Grid */}
+              <div className="space-y-4">
+                <h3 className="font-heading text-xl font-bold text-foreground">Common Defects Found in GTA New Construction</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    {
+                      title: "Improper Attic Insulation & Air Sealing",
+                      body: "Missing insulation, bypasses around pot lights, and incomplete air barrier cause energy loss and ice dams in Ontario winters.",
+                    },
+                    {
+                      title: "Grading & Drainage Issues",
+                      body: "Improper lot grading directs water toward the foundation. Extremely common in new subdivisions where grading settles post-construction.",
+                    },
+                    {
+                      title: "HVAC Sizing & Commissioning",
+                      body: "Undersized or oversized furnaces and A/C units. Ducts not balanced for room-by-room airflow.",
+                    },
+                    {
+                      title: "Window & Door Flashing Defects",
+                      body: "Improper flashing installation leads to water infiltration behind brick veneer. May not be visible for 1–2 years.",
+                    },
+                    {
+                      title: "Concrete Slab Cracks",
+                      body: "Shrinkage cracks in garage and basement slabs. Structural vs non-structural determination requires inspection.",
+                    },
+                    {
+                      title: "Electrical & Plumbing Rough-In Errors",
+                      body: "Wrong wire gauge, missing bonding, incorrect trap configurations that pass the city inspection but violate code.",
+                    },
+                  ].map((card) => (
+                    <div key={card.title} className="p-4 bg-amber-50 border border-amber-100 rounded-xl">
+                      <h4 className="font-bold text-foreground mb-1">{card.title}</h4>
+                      <p className="text-sm text-muted-foreground">{card.body}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Why City Inspection Isn't Enough */}
+              <div className="p-5 bg-blue-50 border-l-4 border-blue-500 rounded-r-xl">
+                <h3 className="font-heading text-lg font-bold text-foreground mb-2">Why a City Inspection Isn't Enough</h3>
+                <p className="text-sm text-muted-foreground">
+                  Municipal building inspectors check for code compliance at rough-in stages only — they are not there to catch workmanship quality, specification compliance, or builder shortcuts. Tarion's mandate is dispute resolution, not pre-emptive inspection. An independent inspector catches what falls between the cracks.
+                </p>
               </div>
 
               {/* Icon Grid */}

@@ -36,7 +36,7 @@
  ];
 
  const title = "Pre-Purchase Home Inspection";
- const metaTitle = "Pre-Purchase Home Inspection Ontario | ASADS";
+ const metaTitle = "Pre-Purchase Home Inspection Ontario | From $450 | Same-Day Reports";
  const metaDescription = "Professional pre-purchase home inspections in Ontario. Detailed property assessments before you buy. Licensed inspectors, same-day reports. Book today.";
  const price = "$450-$750";
  const duration = "2-4 Hours";

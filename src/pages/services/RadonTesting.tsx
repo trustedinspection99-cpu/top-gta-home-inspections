@@ -42,6 +42,68 @@ export default function RadonTesting() {
           <p>
             Health Canada has established an action level of <strong>200 Bq/m³</strong>. Our reports provide clear guidance on whether your home requires a <em>Sub-Slab Depressurization</em> system to vent this gas safely outdoors.
           </p>
+
+          <div className="p-5 bg-amber-50 border border-amber-200 rounded-xl">
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-3">Why Radon Is a Serious Risk in Ontario</h3>
+            <p className="text-slate-700 mb-3">
+              Health Canada estimates radon causes approximately <strong>3,200 lung cancer deaths per year</strong> in Canada — more than impaired driving. Ontario has significant radon variability: the Canadian Shield geology in Northern and Central Ontario releases high concentrations. The Canadian average is 96 Bq/m³ but many GTA basements exceed the 200 Bq/m³ action level. Health Canada recommends all homes be tested.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">When Should You Test for Radon?</h3>
+            <ul className="space-y-2">
+              {[
+                "Buying any home (especially with basement living space)",
+                "If you spend significant time in the basement or lower levels",
+                "After any major renovations that may have changed air pathways",
+                "If you live near Canadian Shield geology (Barrie, Peterborough, Hamilton area)",
+                "If a neighbouring property tested high",
+                "As part of an annual home health audit",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <ShieldAlert className="text-amber-500 flex-shrink-0 mt-0.5" size={18} />
+                  <span className="text-slate-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm text-slate-600 mt-3 italic">
+              Note: radon cannot be smelled or seen — testing is the only way to know.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">What Happens If Your Radon Level Is High?</h3>
+            <ol className="space-y-4">
+              {[
+                {
+                  step: "1",
+                  title: "200–600 Bq/m³",
+                  body: "Health Canada recommends mitigation within 2 years. A sub-slab depressurization (SSD) system is the most effective solution. Typical cost $1,500–$3,000.",
+                },
+                {
+                  step: "2",
+                  title: "Over 600 Bq/m³",
+                  body: "Mitigation recommended within 1 year. Priority remediation.",
+                },
+                {
+                  step: "3",
+                  title: "After Mitigation",
+                  body: "A follow-up test confirms the system worked. A properly installed SSD system typically reduces radon by 80–99%.",
+                },
+              ].map((item) => (
+                <li key={item.step} className="flex items-start gap-4">
+                  <span className="flex-shrink-0 h-8 w-8 rounded-full bg-amber-500 text-white text-sm font-bold flex items-center justify-center">
+                    {item.step}
+                  </span>
+                  <div>
+                    <h4 className="font-bold text-slate-900">If {item.title}</h4>
+                    <p className="text-sm text-slate-700">{item.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       }
       whatWeInspect={[
@@ -106,6 +168,18 @@ export default function RadonTesting() {
         {
           question: "How much does radon testing cost in Toronto?",
           answer: "Professional radon testing in Toronto starts from $199 for a 48-hour digital test. Long-term 91-day alpha track testing is also available for comprehensive seasonal analysis."
+        },
+        {
+          question: "How long does radon testing take?",
+          answer: "Health Canada recommends long-term testing of at least 3 months using a certified passive alpha-track detector for the most accurate results. We also offer short-term digital monitoring (48–96 hours) using C-NRPP certified instruments — ideal for real estate transactions where you need results quickly. Digital results are available within 24 hours of monitor retrieval."
+        },
+        {
+          question: "What is a 'short-term' vs 'long-term' radon test?",
+          answer: "Long-term tests (90+ days using alpha-track devices) are more accurate because radon levels fluctuate daily and seasonally. Short-term digital tests (48–96 hours) are used when time is limited — such as in real estate transactions. Health Canada accepts both methods. For real estate closings, we typically use digital monitors and can provide results within a 5-day conditional period."
+        },
+        {
+          question: "Does radon mitigation really work?",
+          answer: "Yes — sub-slab depressurization (SSD) is a proven, reliable technology. A pipe is installed through the basement floor slab and a small fan draws radon from below the foundation and vents it above the roofline before it can enter the home. Most SSD systems reduce radon by 80–99% and cost $1,500–$3,000 installed. We recommend retesting 30 days after installation to confirm effectiveness."
         },
       ]}
       relatedServices={[

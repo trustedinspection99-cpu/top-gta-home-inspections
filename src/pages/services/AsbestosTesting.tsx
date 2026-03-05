@@ -52,6 +52,100 @@ export default function AsbestosTesting() {
           <p>
             Our inspectors identify suspect materials and perform <strong>wet-sampling</strong> techniques to ensure zero fiber release. From <strong>Zonolite vermiculite</strong> in attics to <strong>vinyl floor tiles</strong>, we provide comprehensive documentation for pre-purchase buyers, renovations, or commercial compliance. Same-day reporting is available for urgent inspections across Toronto, Mississauga, Brampton, Markham, Oshawa, and North York.
           </p>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">When Is Asbestos Testing Required in Ontario?</h3>
+            <ul className="space-y-2">
+              {[
+                "Before any renovation or demolition in a building built before 1990 (O.Reg 278/05 requires it)",
+                "When buying a pre-1990 home as part of due diligence",
+                "If popcorn ceilings, floor tiles, or pipe insulation are deteriorating",
+                "Before insurance renewals on older buildings",
+                "Pre-demolition environmental assessment",
+                "When workers will disturb suspect materials (legally required to protect workers under WSIB)",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <ShieldCheck className="text-orange-500 flex-shrink-0 mt-0.5" size={18} />
+                  <span className="text-slate-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Common Asbestos-Containing Materials in GTA Homes</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                {
+                  title: "Popcorn / Acoustic Ceiling Texture",
+                  body: "Used extensively 1950s–1990s. Friable when disturbed. Common in Toronto apartment buildings and bungalows.",
+                },
+                {
+                  title: "Vermiculite Insulation (Zonolite)",
+                  body: "Attic insulation common 1940s–1990s. Most sourced from Libby, Montana mine which was contaminated with amphibole asbestos.",
+                },
+                {
+                  title: "Vinyl Floor Tiles",
+                  body: "9\"×9\" and 12\"×12\" floor tiles and their backing adhesives often contain chrysotile asbestos.",
+                },
+                {
+                  title: "Pipe Insulation (Pipe Wrap)",
+                  body: "White or grey fibrous wrap on old heating pipes and duct tape on HVAC systems.",
+                },
+                {
+                  title: "Drywall Joint Compound",
+                  body: "Pre-1980s joint compound (mud) contained asbestos fibres. Sanding creates hazardous dust.",
+                },
+                {
+                  title: "Exterior Siding (Transite)",
+                  body: "Flat or corrugated fibre-cement panels containing asbestos used on garages, sheds, and house exteriors.",
+                },
+              ].map((card) => (
+                <div key={card.title} className="p-4 bg-orange-50 border border-orange-100 rounded-xl">
+                  <h4 className="font-bold text-slate-900 mb-1">{card.title}</h4>
+                  <p className="text-sm text-slate-700">{card.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Asbestos Testing Process</h3>
+            <ol className="space-y-4">
+              {[
+                {
+                  step: "1",
+                  title: "Visual Assessment",
+                  body: "Our WSIB-certified inspector identifies suspect materials and documents their location, condition (friable vs non-friable), and extent.",
+                },
+                {
+                  step: "2",
+                  title: "Safe Sample Collection",
+                  body: "Using O.Reg 278/05 protocols, we collect small samples using proper PPE. The area is HEPA-vacuumed and sealed after sampling.",
+                },
+                {
+                  step: "3",
+                  title: "Accredited Lab Analysis",
+                  body: "Samples are analyzed by PLM (Polarized Light Microscopy) or TEM (Transmission Electron Microscopy) at an accredited laboratory. Results in 24–72 hours.",
+                },
+                {
+                  step: "4",
+                  title: "Written Report",
+                  body: "Lab results, material locations, condition assessment, and remediation recommendations compliant with O.Reg 278/05.",
+                },
+              ].map((item) => (
+                <li key={item.step} className="flex items-start gap-4">
+                  <span className="flex-shrink-0 h-8 w-8 rounded-full bg-orange-600 text-white text-sm font-bold flex items-center justify-center">
+                    {item.step}
+                  </span>
+                  <div>
+                    <h4 className="font-bold text-slate-900">{item.title}</h4>
+                    <p className="text-sm text-slate-700">{item.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       }
       whatWeInspect={[
@@ -112,6 +206,22 @@ export default function AsbestosTesting() {
         {
           question: "Can I sample asbestos myself?",
           answer: "No. Disturbing asbestos without containment can contaminate your home. Certified inspectors use wet-sampling and HEPA protocols to keep the environment safe."
+        },
+        {
+          question: "How dangerous is asbestos in good condition?",
+          answer: "Non-friable asbestos (intact, not crumbling) poses minimal risk if left undisturbed. The hazard arises when fibres become airborne — during sanding, demolition, or deterioration. Our report identifies both the presence and condition of asbestos-containing materials, so you know exactly what requires action and what can be safely left in place."
+        },
+        {
+          question: "What is the difference between friable and non-friable asbestos?",
+          answer: "Friable asbestos can be crumbled, pulverized, or reduced to powder by hand pressure — and therefore releases fibres easily. Popcorn ceilings and pipe insulation are often friable. Non-friable materials like asbestos floor tiles or transite siding are bound in a matrix and don't release fibres unless cut, drilled, or abraded. Ontario Regulation 278/05 has different handling requirements for each category."
+        },
+        {
+          question: "Can I do asbestos abatement myself?",
+          answer: "In Ontario, Type 1 asbestos work (minor, low-risk operations like removing undamaged floor tiles) can be done by trained workers without a licensed contractor. However, Type 2 and Type 3 work — which includes disturbing friable asbestos like pipe insulation or spray-applied ceiling texture — must be done by a licensed asbestos abatement contractor following O.Reg 278/05 procedures including air monitoring and disposal."
+        },
+        {
+          question: "How do I use an asbestos report in a real estate transaction?",
+          answer: "If testing confirms asbestos-containing materials, you can request the seller perform abatement before closing, provide a price reduction to cover remediation costs, or use the report to walk away if the scope is beyond acceptable limits. We're available to explain findings to realtors and lawyers and can provide cost estimates for remediation tender."
         },
       ]}
       relatedServices={[
