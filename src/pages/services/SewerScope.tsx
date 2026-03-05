@@ -1,9 +1,9 @@
-import { Video, Search, Map, AlertCircle, ShieldCheck, Clock } from "lucide-react";
+import { Video, Search, Map, AlertCircle, ShieldCheck, Clock, DollarSign, ListChecks, HardHat, TriangleAlert } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function SewerScope() {
-  const pageTitle = "Sewer Camera Inspection Toronto | HD Drain Scope | ASADS";
-  const metaDescription = "Professional CCTV sewer camera inspections in Toronto. Detect root intrusion, bellied pipes, and hidden cracks with same-day HD video reports.";
+  const pageTitle = "Sewer Scope Inspection Toronto | CCTV Camera | From $299 | ASADS";
+  const metaDescription = "Sewer scope inspection in Toronto from $299. Same-day 1080p HD video, GPS pipe mapping & written report. Detect root intrusion, bellied pipes & cracks before you buy.";
 
   return (
     <ServicePageTemplate
@@ -37,11 +37,140 @@ export default function SewerScope() {
           </div>
 
           <p>
-            Our inspection is critical for Toronto's older neighborhoods where 
-            <strong> clay tiles, cast iron, or "Orangeburg" bituminized fiber pipes</strong> are common. 
-            We provide a narrated video file the same day, giving you the immediate 
+            Our inspection is critical for Toronto's older neighborhoods where
+            <strong> clay tiles, cast iron, or "Orangeburg" bituminized fiber pipes</strong> are common.
+            We provide a narrated video file the same day, giving you the immediate
             leverage needed for real estate negotiations.
           </p>
+
+          {/* When do you need a sewer scope */}
+          <div className="mt-6">
+            <h3 className="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+              <TriangleAlert className="text-amber-500" size={22} />
+              When Should You Get a Sewer Scope Inspection?
+            </h3>
+            <p className="text-slate-700 mb-3">
+              A sewer scope inspection is strongly recommended in any of the following situations:
+            </p>
+            <ul className="space-y-2 text-slate-700">
+              {[
+                "Buying a home built before 2000 — older clay tile and cast iron pipes degrade over time",
+                "The property has mature trees close to the house or along the lot line — roots are the #1 cause of blockages",
+                "You've noticed slow drains, gurgling sounds, or recurring basement backups",
+                "The home has never had a sewer inspection in its history",
+                "You're buying in Toronto neighbourhoods with original 1950s–1980s infrastructure (East York, Scarborough, North York, Etobicoke)",
+                "The listing disclosure mentions past plumbing or water damage",
+                "You are purchasing a home with Orangeburg, clay tile, or cast iron sewer laterals",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <ShieldCheck className="text-green-500 mt-0.5 shrink-0" size={18} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Common GTA pipe problems */}
+          <div className="mt-6">
+            <h3 className="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+              <AlertCircle className="text-red-500" size={22} />
+              Most Common Sewer Problems Found in GTA Homes
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                { problem: "Tree Root Intrusion", detail: "Roots from oak, maple and willow trees enter pipe joints and grow until they cause full blockage. Estimated repair: $3,000–$8,000." },
+                { problem: "Pipe Bellies (Sags)", detail: "Ground settling creates low spots where wastewater pools and solids accumulate, leading to chronic backups. Repair often requires excavation: $6,000–$15,000." },
+                { problem: "Orangeburg Pipe Failure", detail: "Bituminized fibre pipe installed 1940s–1970s deteriorates into a soft, collapsing tube. Common in Etobicoke, Scarborough, and North York. Full replacement typically $8,000–$20,000." },
+                { problem: "Offset or Separated Joints", detail: "Soil shifting causes pipe sections to separate. Sewage leaks into the ground. Repair cost: $4,000–$12,000 depending on depth and access." },
+                { problem: "Corrosion in Cast Iron", detail: "Cast iron pipes corrode from the inside out. Scaling narrows the pipe and flaking causes blockages. Common in Toronto homes from the 1960s–1980s." },
+                { problem: "Cracks and Fractures", detail: "Ground movement, frost, and vehicle loading cause pipe fractures. Small cracks can often be repaired with pipe lining ($3,000–$7,000) rather than full replacement." },
+              ].map(({ problem, detail }, i) => (
+                <div key={i} className="bg-red-50 border border-red-100 rounded-lg p-4">
+                  <p className="font-semibold text-red-800 mb-1">{problem}</p>
+                  <p className="text-sm text-slate-600">{detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Step-by-step process */}
+          <div className="mt-6">
+            <h3 className="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+              <ListChecks className="text-blue-600" size={22} />
+              What Happens During a Sewer Scope Inspection
+            </h3>
+            <ol className="space-y-3 text-slate-700">
+              {[
+                { step: "Camera Access", detail: "We access the sewer line through the cleanout, a basement toilet, or in some cases a roof vent stack. No digging required." },
+                { step: "HD Camera Inspection", detail: "Our 200ft industrial push-rod camera with self-leveling head travels the full length of the lateral, recording 1080p narrated video of every pipe condition." },
+                { step: "Defect Identification & GPS Mapping", detail: "When we spot a problem, we note the distance from the access point. If required, we use a Sonde radio transmitter to locate and GPS-map the defect above ground — giving contractors the exact dig location." },
+                { step: "Same-Day Report Delivery", detail: "Within hours of the inspection, you receive a private cloud link with the full narrated video, a written condition summary, and flagged timestamps for any defects found." },
+                { step: "Negotiation Support", detail: "We're available by phone to explain findings to your real estate agent, lawyer, or the listing agent — helping you convert our report into a price reduction or repair credit." },
+              ].map(({ step, detail }, i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">{i + 1}</span>
+                  <div>
+                    <span className="font-semibold text-slate-800">{step}: </span>
+                    <span>{detail}</span>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          {/* Cost section */}
+          <div className="mt-6 bg-green-50 border border-green-100 rounded-xl p-5">
+            <h3 className="text-xl font-bold text-slate-800 mb-2 flex items-center gap-2">
+              <DollarSign className="text-green-600" size={22} />
+              Sewer Scope Inspection Cost in Toronto
+            </h3>
+            <p className="text-slate-700 mb-3">
+              Our sewer camera inspection starts at <strong>$299</strong> and includes:
+            </p>
+            <ul className="space-y-1 text-slate-700">
+              {[
+                "200ft HD camera inspection of the full lateral line",
+                "GPS / Sonde pipe mapping if a defect is found",
+                "Same-day private cloud video delivery (narrated)",
+                "Written condition report with defect timestamps",
+                "Phone consultation with your realtor or lawyer",
+                "Impartial 3rd-party assessment — we do not perform repairs",
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-2">
+                  <ShieldCheck className="text-green-500 shrink-0" size={16} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm text-slate-500 mt-3">
+              Note: Homes without a dedicated cleanout may incur an additional access fee. Contact us for a quote specific to your property.
+            </p>
+          </div>
+
+          {/* What if we find something */}
+          <div className="mt-6">
+            <h3 className="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+              <HardHat className="text-orange-500" size={22} />
+              What Happens If We Find a Problem?
+            </h3>
+            <p className="text-slate-700">
+              Finding a sewer defect before closing is actually good news — it puts you in control. Here's what typically happens:
+            </p>
+            <ul className="mt-3 space-y-2 text-slate-700">
+              {[
+                "Your realtor uses our report to request a repair credit or price reduction from the seller",
+                "You can get 2–3 plumber quotes before closing to understand the true repair cost",
+                "If the defect is minor (small crack, partial root intrusion), pipe lining may be a cost-effective alternative to full replacement",
+                "If the defect is severe (collapsed Orangeburg, major belly), you can walk away from the deal or renegotiate significantly",
+                "We're available to explain findings directly to the listing agent or seller's lawyer to support your negotiation",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <Map className="text-blue-500 mt-0.5 shrink-0" size={16} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       }
       whatWeInspect={[
@@ -106,6 +235,22 @@ export default function SewerScope() {
         {
           question: "How much does a sewer scope inspection cost in Toronto?",
           answer: "Sewer camera inspection in Toronto starts from $299. This includes HD video recording, same-day cloud delivery, and a detailed condition report for real estate negotiations."
+        },
+        {
+          question: "What is Orangeburg pipe and why is it a problem?",
+          answer: "Orangeburg is a bituminized fibre pipe used from the 1940s through the 1970s. It was cheap to produce post-WWII and was used extensively in Toronto's postwar suburban expansion — particularly in Etobicoke, Scarborough, and North York. Over decades, it absorbs water and collapses into an oval or irregular shape. By 50–60 years old, most Orangeburg pipe requires full replacement costing $8,000–$20,000 or more."
+        },
+        {
+          question: "Can a sewer scope inspection be done on new construction?",
+          answer: "Yes, and it's often overlooked. Construction debris like cement, gravel, and wood can be lodged in new lateral lines during the build. We also check that pipe grade (slope) was installed correctly, as improper slope causes chronic backups even in brand-new homes."
+        },
+        {
+          question: "How do I use the sewer scope report to negotiate?",
+          answer: "Your report includes a narrated HD video, written defect summary, and GPS-marked pipe locations. Your realtor can share this with the seller to request a repair credit, price reduction, or seller-paid repair before closing. We are also available to speak directly with listing agents or lawyers to explain findings. Many clients recover 2–5x the cost of the inspection in negotiated credits."
+        },
+        {
+          question: "Is a sewer scope included in a standard home inspection with ASADS?",
+          answer: "No — sewer scoping requires a separate CCTV camera system and expertise beyond a standard home inspection. We offer it as a standalone service or as an add-on to any home inspection booking. When booked together, we can often schedule both inspections on the same visit."
         },
       ]}
       relatedServices={[

@@ -148,6 +148,8 @@ const localBusinessSchema = {
   url: `${SITE_URL}/`,
   telephone: "(647) 801-9311",
   priceRange: "$$",
+  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "163", bestRating: "5", worstRating: "1" },
+  openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "07:00", closes: "21:00" },
   address: { "@type": "PostalAddress", addressLocality: "Toronto", addressRegion: "ON", addressCountry: "CA" },
   geo: { "@type": "GeoCoordinates", latitude: 43.7, longitude: -79.42 },
   areaServed: ontarioCities,

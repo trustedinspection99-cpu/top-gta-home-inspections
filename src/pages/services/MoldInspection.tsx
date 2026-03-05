@@ -3,8 +3,8 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import { Link } from "react-router-dom";
 
 export default function MoldInspection() {
-  const pageTitle = "Mold Inspection Toronto | Certified Mold Testing & Remediation | ASADS";
-  const schemaDescription = "Urgent mold inspection and air quality testing in Toronto. Certified analysis for black mold, water-damaged areas, and indoor air safety. Same-day and emergency services available.";
+  const pageTitle = "Mold Inspection Toronto | Certified Air Sampling & Testing | ASADS";
+  const schemaDescription = "Certified mold inspection & air sampling in Toronto. CFIA-accredited lab analysis for black mold, basement & HVAC contamination. Same-day service with written remediation scope.";
 
   return (
     <ServicePageTemplate

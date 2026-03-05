@@ -2,8 +2,8 @@ import { Thermometer, Zap, Droplets, Home, ShieldCheck, Search } from "lucide-re
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function ThermalImaging() {
-  const pageTitle = "Infrared Thermal Imaging Toronto | Advanced Leak Detection | ASADS";
-  const schemaDescription = "Professional infrared thermal imaging inspections in Toronto & GTA. Pinpoint hidden leaks, insulation gaps, and electrical hotspots using FLIR military-grade technology. Book certified thermal scan now for urgent pre-purchase or home inspection add-ons.";
+  const pageTitle = "Thermal Imaging Inspection Toronto | Infrared Leak Detection | ASADS";
+  const schemaDescription = "Certified infrared thermal imaging in Toronto & GTA. Detect hidden moisture, heat loss & electrical hotspots behind walls without damage. FLIR technology, same-day results. Book online.";
 
   return (
     <ServicePageTemplate

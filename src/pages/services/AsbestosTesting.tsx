@@ -2,8 +2,8 @@ import { AlertTriangle, Microscope, ShieldCheck, Factory, HardHat, ClipboardList
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function AsbestosTesting() {
-  const pageTitle = "Asbestos Testing Toronto | WSIB Certified & O.Reg 278/05 | ASADS";
-  const schemaDescription = "Certified asbestos testing in Toronto & GTA. Fully compliant with Ontario Regulation 278/05. Safe sampling and lab analysis for pre-1990 homes, popcorn ceilings, insulation, and pipe wrap. Book same-day asbestos inspection now.";
+  const pageTitle = "Asbestos Testing Toronto & GTA | WSIB Certified | From $299 | ASADS";
+  const schemaDescription = "WSIB-certified asbestos testing in Toronto & GTA from $299. O.Reg 278/05 compliant lab analysis for popcorn ceilings, insulation & pipe wrap in pre-1990 homes. Same-day sampling.";
 
   return (
     <ServicePageTemplate
