@@ -367,37 +367,6 @@ const Index = () => {
       </section>
 
 
-      {/* 6. ONTARIO SERVICE AREAS */}
-      <section className="py-20 bg-gray-900 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Home Inspector Near Me — Toronto, GTA & Ontario</h2>
-            <p className="text-gray-300 text-lg">
-              Certified home inspector serving Toronto, the GTA, and communities across Ontario
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-12">
-            {ontarioCities.map((city) => (
-              <a key={city.slug} href={`/locations/${city.slug}`} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center hover:bg-white/10 transition-all group">
-                <MapPin className="h-5 w-5 text-blue-400 mx-auto mb-2 group-hover:text-blue-300" />
-                <span className="font-medium group-hover:text-blue-300 transition-colors">{city.name}</span>
-              </a>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <p className="text-gray-300 mb-6">
-              Plus all other Ontario cities and towns - call to confirm service in your area
-            </p>
-            <a href="tel:6478019311" className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all">
-              <Phone size={20} />
-              Check Your Ontario Area
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* 7. HOME INSPECTOR NEAR ME */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -651,7 +620,36 @@ const Index = () => {
       {/* 8. SOCIAL PROOF & TESTIMONIALS */}
       <TestimonialsSection />
 
-      {/* 9. ONTARIO BOOKING CTA */}
+      {/* ONTARIO SERVICE AREAS */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Home Inspector Near Me — Toronto, GTA & Ontario</h2>
+            <p className="text-gray-300 text-lg">
+              Certified home inspector serving Toronto, the GTA, and communities across Ontario
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-12">
+            {ontarioCities.map((city) => (
+              <a key={city.slug} href={`/locations/${city.slug}`} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center hover:bg-white/10 transition-all group">
+                <MapPin className="h-5 w-5 text-blue-400 mx-auto mb-2 group-hover:text-blue-300" />
+                <span className="font-medium group-hover:text-blue-300 transition-colors">{city.name}</span>
+              </a>
+            ))}
+          </div>
+          <div className="text-center">
+            <p className="text-gray-300 mb-6">
+              Plus all other Ontario cities and towns - call to confirm service in your area
+            </p>
+            <a href="tel:6478019311" className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all">
+              <Phone size={20} />
+              Check Your Ontario Area
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* BOOKING CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
