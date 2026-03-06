@@ -94,10 +94,26 @@ const ontarioRedFlags = [
 
 // --- ONTARIO CITIES SERVED ---
 const ontarioCities = [
-  "Toronto", "Mississauga", "Brampton", "Vaughan", "Markham",
-  "Oakville", "Richmond Hill", "Burlington", "Pickering", "Oshawa",
-  "Hamilton", "Kitchener", "Waterloo", "London", "Ottawa",
-  "Windsor", "Barrie", "Guelph", "Cambridge", "Whitby"
+  { name: "Toronto", slug: "home-inspection-toronto" },
+  { name: "Mississauga", slug: "home-inspection-mississauga" },
+  { name: "Brampton", slug: "home-inspection-brampton" },
+  { name: "Vaughan", slug: "home-inspection-vaughan" },
+  { name: "Markham", slug: "home-inspection-markham" },
+  { name: "Oakville", slug: "home-inspection-oakville" },
+  { name: "Richmond Hill", slug: "home-inspection-richmond-hill" },
+  { name: "Burlington", slug: "home-inspection-burlington" },
+  { name: "Pickering", slug: "home-inspection-pickering" },
+  { name: "Oshawa", slug: "home-inspection-oshawa" },
+  { name: "Hamilton", slug: "home-inspection-hamilton" },
+  { name: "Kitchener", slug: "home-inspection-kitchener" },
+  { name: "Waterloo", slug: "home-inspection-waterloo" },
+  { name: "Guelph", slug: "home-inspection-guelph" },
+  { name: "Cambridge", slug: "home-inspection-cambridge" },
+  { name: "Barrie", slug: "home-inspection-barrie" },
+  { name: "Whitby", slug: "home-inspection-whitby" },
+  { name: "Aurora", slug: "home-inspection-aurora" },
+  { name: "Newmarket", slug: "home-inspection-newmarket" },
+  { name: "Brantford", slug: "home-inspection-brantford" },
 ];
 
 const breadcrumbSchema = {
@@ -123,15 +139,47 @@ const faqSchema = {
   })),
 };
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "ASADS Home Inspection",
+  "image": `${SITE_URL}/images/og-default.jpg`,
+  "url": SITE_URL,
+  "telephone": "+16478019311",
+  "priceRange": "$400-$600",
+  "description": "Certified home inspector serving Toronto, GTA & Ontario with 14 specialty inspection services including radon, mold, WETT & asbestos testing.",
+  "areaServed": {
+    "@type": "State",
+    "name": "Ontario",
+    "addressCountry": "CA"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "501",
+    "bestRating": "5"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "08:00",
+    "closes": "20:00"
+  },
+  "sameAs": [
+    "https://www.instagram.com/asadsinspection",
+    "https://www.facebook.com/asadsinspection"
+  ]
+};
+
 const Index = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Ontario Home Inspection | Certified Services & Pricing | ASADS</title>
-        <meta name="description" content="Ontario home inspection cost: $400-$600. Certified OAHI inspections with 14 specialty services. Learn Ontario-specific red flags & book online. (647) 801-9311" />
+        <title>Home Inspection Cost Ontario | Certified Home Inspector | ASADS</title>
+        <meta name="description" content="Home inspection cost in Ontario: $400–$600. OAHI-certified home inspector serving Toronto & GTA with 14 specialty services. Same-day reports. Call (647) 801-9311." />
         {/* Open Graph */}
-        <meta property="og:title" content="Ontario Home Inspection | Complete Services & Cost Guide | ASADS" />
-        <meta property="og:description" content="How much does a home inspection cost in Ontario? $400-$600. Certified OAHI inspectors with 14 specialty services including radon, mold, WETT & asbestos testing." />
+        <meta property="og:title" content="Home Inspection Cost Ontario | Certified Home Inspector | ASADS" />
+        <meta property="og:description" content="How much does a home inspection cost in Ontario? $400–$600 for a certified OAHI inspection. 14 specialty services including radon, mold, WETT & asbestos. Book online." />
         <meta property="og:url" content={SITE_URL} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_CA" />
@@ -144,8 +192,8 @@ const Index = () => {
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@AsadsInspection" />
-        <meta name="twitter:title" content="Ontario Home Inspection Cost & Services | ASADS" />
-        <meta name="twitter:description" content="Home inspection cost in Ontario: $400-$600. Certified OAHI inspectors with 14 specialty services. Book online for Toronto & GTA." />
+        <meta name="twitter:title" content="Home Inspection Cost Ontario | Certified Inspector | ASADS" />
+        <meta name="twitter:description" content="Home inspection cost in Ontario: $400–$600. OAHI-certified inspector serving Toronto & GTA. 14 specialty services. Book online." />
         <meta name="twitter:image" content={`${SITE_URL}/images/og-default.jpg`} />
         
         {/* Additional Meta Tags */}
@@ -153,6 +201,7 @@ const Index = () => {
         
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
       </Helmet>
 
       {/* 1. ONTARIO-FOCUSED HERO */}
@@ -165,12 +214,12 @@ const Index = () => {
               <span className="text-sm font-medium">OAHI Certified • Serving Ontario Since 2009</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
-              Ontario Home Inspection Experts
+              Certified Home Inspector Ontario
             </h1>
             <p className="text-xl mb-10 opacity-95 leading-relaxed">
-              Get <strong className="text-white">certified home inspections</strong> across Ontario with 
-              <strong className="text-white"> 14 specialty services</strong> including radon testing, mold inspection, 
-              and WETT certification. <strong className="text-white">Same-day digital reports</strong> for peace of mind.
+              Home inspection cost in Ontario starts at <strong className="text-white">$400–$600</strong>. Get a
+              <strong className="text-white"> certified home inspection</strong> across Toronto & GTA with
+              <strong className="text-white"> 14 specialty services</strong> including radon, mold & WETT. <strong className="text-white">Same-day digital reports.</strong>
             </p>
             
             {/* Quick Ontario Cost Info */}
@@ -305,7 +354,7 @@ const Index = () => {
                 ))}
               </div>
               
-              <a href="/blog/ontario-red-flags" className="inline-flex items-center gap-2 text-blue-700 font-bold mt-8 hover:text-blue-800">
+              <a href="/blog/common-issues-toronto-homes" className="inline-flex items-center gap-2 text-blue-700 font-bold mt-8 hover:text-blue-800">
                 Read Ontario Red Flag Guide
                 <ArrowRight size={16} />
               </a>
@@ -399,18 +448,18 @@ const Index = () => {
       <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Serving All Ontario</h2>
+            <h2 className="text-4xl font-bold mb-4">Home Inspector Near Me — Toronto, GTA & Ontario</h2>
             <p className="text-gray-300 text-lg">
-              Certified home inspection services available across Ontario
+              Certified home inspector serving Toronto, the GTA, and communities across Ontario
             </p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-12">
             {ontarioCities.map((city) => (
-              <div key={city} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center hover:bg-white/10 transition-all">
-                <MapPin className="h-5 w-5 text-blue-400 mx-auto mb-2" />
-                <span className="font-medium">{city}</span>
-              </div>
+              <a key={city.slug} href={`/locations/${city.slug}`} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center hover:bg-white/10 transition-all group">
+                <MapPin className="h-5 w-5 text-blue-400 mx-auto mb-2 group-hover:text-blue-300" />
+                <span className="font-medium group-hover:text-blue-300 transition-colors">{city.name}</span>
+              </a>
             ))}
           </div>
           
