@@ -141,7 +141,7 @@ const faqSchema = {
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
+  "@type": "LocalBusiness",
   "name": "ASADS Home Inspection",
   "image": `${SITE_URL}/images/og-default.jpg`,
   "url": SITE_URL,
