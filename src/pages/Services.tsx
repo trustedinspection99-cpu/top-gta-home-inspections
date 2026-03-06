@@ -238,6 +238,18 @@ export default function Services() {
     ]
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How long does a home inspection take in Ontario?", "acceptedAnswer": { "@type": "Answer", "text": "A standard pre-purchase home inspection takes 2–4 hours depending on the size and age of the property. Larger detached homes or properties with complex systems take longer. Condo inspections are typically 1.5–2 hours. You will receive your digital report within 24 hours of the inspection." } },
+      { "@type": "Question", "name": "What is the difference between a home inspector and a building inspector?", "acceptedAnswer": { "@type": "Answer", "text": "A municipal building inspector checks that construction meets the Ontario Building Code at specific stages of construction. A certified home inspector is hired privately to assess the overall condition of a completed home — providing broader assessments of workmanship quality, maintenance issues, and system performance." } },
+      { "@type": "Question", "name": "Do I need a home inspection if the house is brand new?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Municipal inspectors only verify minimum code compliance. They do not check insulation R-values, HVAC balancing, grading drainage, or workmanship quality. New construction inspections timed to Tarion warranty deadlines (PDI, 30-Day, and 1-Year) ensure defects are documented before your coverage lapses." } },
+      { "@type": "Question", "name": "Is a home inspection required to buy a house in Ontario?", "acceptedAnswer": { "@type": "Answer", "text": "A home inspection is not legally required in Ontario, but it is strongly recommended. An inspection condition in your Agreement of Purchase and Sale gives you the right to cancel if the report reveals serious issues." } },
+      { "@type": "Question", "name": "How much does a home inspection cost in Ontario?", "acceptedAnswer": { "@type": "Answer", "text": "Home inspection costs in Ontario typically range from $399–$750 for a standard residential property, depending on size, age, and location. Condo inspections start from $299. Specialty add-ons such as radon testing, mold inspection, or sewer scope are priced separately." } },
+    ]
+  };
+
   return (
     <Layout>
       <Helmet>
@@ -257,6 +269,7 @@ export default function Services() {
         <meta name="twitter:image" content="https://www.asads.ca/images/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(servicesSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}
@@ -278,6 +291,23 @@ export default function Services() {
                 <Link to="/pricing">View Pricing</Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Intro Content */}
+      <section className="py-12 bg-background border-b border-border/50">
+        <div className="container">
+          <div className="max-w-4xl mx-auto prose prose-lg">
+            <p className="text-muted-foreground leading-relaxed">
+              A home inspection is the most important step in any Ontario real estate transaction. Whether you are buying, selling, or taking possession of a newly built home, an independent inspection by a certified professional gives you the factual information you need to make confident decisions. In Ontario, home inspectors are licensed under the <strong>Home Inspection Act, 2017</strong> — meaning your inspector must carry mandatory errors and omissions insurance and follow a regulated standard of practice.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mt-4">
+              ASADS inspectors are members of the <strong>Ontario Association of Home Inspectors (OAHI)</strong> and hold RHI (Registered Home Inspector) designations. Every inspection follows a systematic, 200+ point evaluation covering the structure, roof, electrical, plumbing, HVAC, insulation, windows, and more. You receive a same-day digital report with photographs, severity ratings, and clear explanations — written for homeowners, not engineers.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mt-4">
+              We serve buyers across the GTA and Ontario — from <Link to="/locations/home-inspection-toronto" className="text-primary underline">Toronto</Link> and <Link to="/locations/home-inspection-mississauga" className="text-primary underline">Mississauga</Link> to <Link to="/locations/home-inspection-barrie" className="text-primary underline">Barrie</Link>, <Link to="/locations/home-inspection-hamilton" className="text-primary underline">Hamilton</Link>, <Link to="/locations/home-inspection-kitchener" className="text-primary underline">Kitchener</Link>, and <Link to="/locations/home-inspection-peterborough" className="text-primary underline">Peterborough</Link>. Our specialty testing services — including radon testing, mold inspection, and asbestos sampling — can be bundled with any standard inspection for comprehensive property due diligence.
+            </p>
           </div>
         </div>
       </section>
@@ -500,6 +530,50 @@ export default function Services() {
             <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link>
             <span className="text-border">•</span>
             <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              {[
+                {
+                  q: "How long does a home inspection take in Ontario?",
+                  a: "A standard pre-purchase home inspection takes 2–4 hours depending on the size and age of the property. Larger detached homes or properties with complex systems (in-ground pools, multiple HVAC units, crawl spaces) take longer. Condo inspections are typically 1.5–2 hours. You will receive your digital report within 24 hours of the inspection."
+                },
+                {
+                  q: "What is the difference between a home inspector and a building inspector?",
+                  a: "A municipal building inspector checks that construction meets the Ontario Building Code at specific stages of construction — they are employed by the city, not the buyer. A certified home inspector is hired privately to assess the overall condition of a completed home. Home inspectors provide much broader assessments of workmanship quality, maintenance issues, and system performance that building inspectors do not cover."
+                },
+                {
+                  q: "Do I need a home inspection if the house is brand new?",
+                  a: "Yes — new construction inspections are especially important. Municipal inspectors only verify minimum code compliance at rough-in stages. They do not check insulation R-values, HVAC balancing, grading drainage, or workmanship quality. Our new construction inspections are timed to Tarion warranty deadlines (PDI, 30-Day, and 1-Year forms) to ensure defects are documented before your coverage lapses."
+                },
+                {
+                  q: "Is a home inspection required to buy a house in Ontario?",
+                  a: "A home inspection is not legally required in Ontario, but it is strongly recommended. In competitive markets, buyers sometimes waive the inspection condition to strengthen offers — however, this removes your ability to negotiate defects or walk away from a problematic property. An inspection condition in your Agreement of Purchase and Sale gives you the right to cancel if the report reveals serious issues."
+                },
+                {
+                  q: "What does a home inspection NOT cover?",
+                  a: "Standard home inspections are visual, non-invasive assessments. Inspectors do not open walls, lift flooring, or test for substances such as radon, mold, asbestos, or lead paint. If any of these are a concern, they require separate add-on tests. Inspectors also do not assess the value of the property, predict future failures with certainty, or provide contractor cost estimates — though we explain severity clearly so you can obtain accurate quotes."
+                },
+                {
+                  q: "How much does a home inspection cost in Ontario?",
+                  a: "Home inspection costs in Ontario typically range from $399–$750 for a standard residential property, depending on size, age, and location. Condo inspections start from $299. Specialty add-ons such as radon testing, mold inspection, or sewer scope are priced separately. See our full pricing page for transparent, itemized rates — no hidden fees."
+                },
+              ].map((item, i) => (
+                <div key={i} className="border border-border rounded-lg p-6">
+                  <h3 className="font-heading font-semibold text-foreground mb-2">{item.q}</h3>
+                  <p className="text-muted-foreground">{item.a}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
