@@ -75,6 +75,7 @@ export const blogPostsData: BlogPost[] = [
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p class="mb-4">A home inspection is not just a formality—it's essential protection for one of life's biggest purchases. Don't skip this crucial step, even in a competitive market. The peace of mind and potential savings far outweigh the cost of the inspection.</p>
+      <p class="mb-4">Ready to book? Learn more about our <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase home inspection service</a>, or view our <a href="/pricing" class="text-primary underline font-medium">home inspection pricing</a> and <a href="/booking" class="text-primary underline font-medium">book online</a>.</p>
     `,
   },
   {
@@ -173,6 +174,7 @@ export const blogPostsData: BlogPost[] = [
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p class="mb-4">In a competitive real estate market, every advantage counts. A pre-listing inspection demonstrates professionalism, builds trust with buyers, and puts you in the driver's seat of your home sale.</p>
+      <p class="mb-4">Learn more about our <a href="/services/pre-listing" class="text-primary underline font-medium">pre-listing inspection service</a> or <a href="/booking" class="text-primary underline font-medium">book your seller's inspection online</a>.</p>
     `,
   },
   {
@@ -307,6 +309,7 @@ export const blogPostsData: BlogPost[] = [
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p class="mb-4">A few hours of preparation now can prevent major headaches during winter. If you're unsure about your home's readiness for winter, consider scheduling a seasonal maintenance inspection.</p>
+      <p class="mb-4">Book a <a href="/services/pre-purchase" class="text-primary underline font-medium">home inspection</a> or explore our <a href="/services/radon-testing" class="text-primary underline font-medium">radon testing</a> and <a href="/services/mold-inspection" class="text-primary underline font-medium">mold inspection</a> services for complete winter peace of mind.</p>
     `,
   },
   {
@@ -628,6 +631,7 @@ export const blogPostsData: BlogPost[] = [
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p class="mb-4">A condo inspection provides peace of mind and helps you understand exactly what you're buying. Combined with a thorough status certificate review, you'll have the complete picture of your potential new home.</p>
+      <p class="mb-4">Learn more about our <a href="/services/condo" class="text-primary underline font-medium">condo inspection service</a>, view our <a href="/pricing" class="text-primary underline font-medium">condo inspection pricing</a>, or <a href="/booking" class="text-primary underline font-medium">book your inspection online</a>.</p>
     `,
   },
   {
@@ -837,6 +841,7 @@ export const blogPostsData: BlogPost[] = [
         <li>Before selling your home</li>
         <li>If you haven't had one in several years</li>
       </ul>
+      <p class="mb-4">Book a certified <a href="/services/wett" class="text-primary underline font-medium">WETT inspection in Ontario</a> with ASADS, or add it to your <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase home inspection</a>. <a href="/booking" class="text-primary underline font-medium">Schedule online today.</a></p>
     `,
   },
   {
@@ -982,6 +987,7 @@ export const blogPostsData: BlogPost[] = [
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p class="mb-4">A sewer scope is a small investment that can reveal expensive hidden problems. For older homes especially, it's one of the smartest add-on inspections you can get.</p>
+      <p class="mb-4">Learn more about our <a href="/services/sewer-scope" class="text-primary underline font-medium">sewer scope inspection service</a>, or add it to your <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase home inspection</a> at a bundled rate. <a href="/booking" class="text-primary underline font-medium">Book online today.</a></p>
     `,
   },
   {

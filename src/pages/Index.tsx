@@ -199,6 +199,7 @@ const Index = () => {
   return (
     <Layout>
       <Helmet>
+        <link rel="canonical" href="https://www.asads.ca/" />
         <title>Home Inspection Cost Ontario | Certified Home Inspector | ASADS</title>
         <meta name="description" content="Home inspection cost in Ontario: $400–$600. OAHI-certified home inspector serving Toronto & GTA with 14 specialty services. Same-day reports. Call (647) 801-9311." />
         {/* Open Graph */}
