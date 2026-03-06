@@ -10,7 +10,7 @@ const NotFound = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+    // 404 tracking: location.pathname
   }, [location.pathname]);
 
   const handleSearch = (e: React.FormEvent) => {

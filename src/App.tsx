@@ -61,7 +61,7 @@ const App = () => (
             <Route path="/faq" element={<FAQ />} />
             <Route path="/booking" element={<Booking />} />
             <Route path="/pricing" element={<Pricing />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />
 
             {/* Service Area Index Page */}
