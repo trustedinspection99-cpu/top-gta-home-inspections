@@ -196,13 +196,13 @@ const Breadcrumbs = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: `${SITE_URL}/`,
+        item: SITE_URL,
       },
       ...breadcrumbItems.map((item, index) => ({
         "@type": "ListItem",
         position: index + 2,
         name: item.label,
-        item: `${SITE_URL}${item.path}/`,
+        item: `${SITE_URL}${item.path}`,
       })),
     ],
   };
