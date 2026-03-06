@@ -1,12 +1,11 @@
 import React, { lazy, Suspense } from 'react';
-import type { RouteRecord } from 'vite-react-ssg';
+import type { RouteObject } from 'react-router-dom';
 import { blogPostsData } from './data/blogPosts';
 import { locationData } from './data/locationData';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { HelmetProvider } from "react-helmet-async";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Outlet } from 'react-router-dom';
 
@@ -14,19 +13,16 @@ function RootLayout() {
   const [queryClient] = React.useState(() => new QueryClient());
 
   return (
-    <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <ScrollToTop />
-          <Suspense fallback={null}>
-           <Outlet />
-          </Suspense>
-
-        </TooltipProvider>
-      </QueryClientProvider>
-    </HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <ScrollToTop />
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
+      </TooltipProvider>
+    </QueryClientProvider>
   );
 }
 
@@ -64,7 +60,7 @@ const WellWaterTesting = lazy(() => import('./pages/services/WellWaterTesting'))
 const SewerScope = lazy(() => import('./pages/services/SewerScope'));
 const AirQuality = lazy(() => import('./pages/services/AirQuality'));
 
-export const routes: RouteRecord[] = [
+export const routes: RouteObject[] = [
   {
     path: '/',
     element: <RootLayout />,
@@ -74,19 +70,11 @@ export const routes: RouteRecord[] = [
       { path: 'contact', element: <Contact /> },
       { path: 'services', element: <Services /> },
       { path: 'blog', element: <Blog /> },
-      {
-        path: 'blog/:slug',
-        element: <BlogPost />,
-        getStaticPaths: () => blogPostsData.map(p => `blog/${p.slug}`)
-      },
+      { path: 'blog/:slug', element: <BlogPost /> },
       { path: 'testimonials', element: <Testimonials /> },
       { path: 'faq', element: <FAQ /> },
       { path: 'locations', element: <Locations /> },
-      {
-        path: 'locations/:slug',
-        element: <LocationDetail />,
-        getStaticPaths: () => locationData.map(loc => `locations/${loc.slug}`),
-      },
+      { path: 'locations/:slug', element: <LocationDetail /> },
       { path: 'booking', element: <Booking /> },
       { path: 'pricing', element: <Pricing /> },
       { path: 'privacy-policy', element: <PrivacyPolicy /> },
