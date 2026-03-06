@@ -294,41 +294,40 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 3. COMPLETE ONTARIO SERVICES */}
+      {/* 3. CORE SERVICES */}
       <section id="services" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              14+ Certified Home Inspection Services in Ontario
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Certified Home Inspection Services in Ontario
             </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Comprehensive inspection solutions for every Ontario property type and concern
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              From standard pre-purchase inspections to 14 specialty services — all under one roof
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
-            {ontarioServices.map((service, index) => {
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            {[
+              { name: "Pre-Purchase Inspection", icon: Home, href: "/services/pre-purchase", description: "Complete evaluation before buying — covers 200+ points across every major system." },
+              { name: "Pre-Listing Inspection", icon: FileText, href: "/services/pre-listing", description: "Sellers: find and fix issues before buyers do. Price confidently, close faster." },
+              { name: "New Construction", icon: Construction, href: "/services/new-construction", description: "Phase and final inspections for new builds — builders miss things, we find them." },
+              { name: "Condo Inspection", icon: Building, href: "/services/condo", description: "Unit-level inspection covering everything inside your condo or apartment." },
+              { name: "Radon Testing", icon: Radio, href: "/services/radon-testing", description: "Long-term radon detection for Ontario basements. Health Canada compliant reports." },
+              { name: "Mold Inspection", icon: Droplets, href: "/services/mold-inspection", description: "Air quality and surface sampling — especially important in Ontario's humid climate." },
+            ].map((service, index) => {
               const Icon = service.icon;
               return (
-                <a 
-                  key={index} 
+                <a
+                  key={index}
                   href={service.href}
-                  className="bg-white rounded-xl shadow-sm border hover:shadow-md transition-all duration-300 p-6 group hover:border-blue-300"
+                  className="bg-white rounded-xl border hover:shadow-md transition-all duration-300 p-6 group hover:border-blue-300 flex gap-4"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="bg-blue-50 text-blue-600 p-3 rounded-lg group-hover:bg-blue-100 transition-colors">
-                      <Icon className="h-6 w-6" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-lg text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
-                        {service.name}
-                      </h3>
-                      <p className="text-gray-600 text-sm">{service.description}</p>
-                      <div className="mt-4 flex items-center gap-1 text-blue-600 text-sm font-medium">
-                        Learn More
-                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    </div>
+                  <div className="bg-blue-50 text-blue-600 p-3 rounded-lg group-hover:bg-blue-100 transition-colors h-fit">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1 group-hover:text-blue-700 transition-colors">{service.name}</h3>
+                    <p className="text-gray-600 text-sm">{service.description}</p>
                   </div>
                 </a>
               );
@@ -337,7 +336,7 @@ const Index = () => {
 
           <div className="text-center">
             <a href="/services" className="inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-800 transition-all">
-              Explore All Services
+              See All 14 Inspection Services
               <ChevronRight size={20} />
             </a>
           </div>
