@@ -72,18 +72,6 @@ const homepageFaqs = [
   },
 ];
 
-// --- ONTARIO PRICING ---
-const ontarioPricing = [
-  { service: "Pre-Purchase Inspection", price: "$450-$650", details: "Single Family Home" },
-  { service: "Condo Inspection", price: "$350-$475", details: "Apartment/Condo Unit" },
-  { service: "Pre-Listing Inspection", price: "$400-$550", details: "Seller's Package" },
-  { service: "New Construction", price: "$500-$700", details: "Phase & Final Inspections" },
-  { service: "Commercial Inspection", price: "$600+", details: "Price per square foot" },
-  { service: "Radon Testing", price: "$200-$300", details: "Add-on service" },
-  { service: "Mold Testing", price: "$250-$400", details: "Air & surface samples" },
-  { service: "WETT Inspection", price: "$200-$350", details: "Wood stove/fireplace" },
-];
-
 // --- YOUR ONTARIO SERVICES ---
 const ontarioServices = [
   { name: "Pre-Purchase", icon: Home, href: "/services/pre-purchase", description: "Complete evaluation before buying" },
@@ -343,70 +331,38 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 4. RED FLAGS + PRICING */}
+      {/* 4. RED FLAGS */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-
-            {/* Red Flags */}
-            <div>
-              <div className="inline-flex items-center gap-2 bg-red-50 text-red-700 px-4 py-2 rounded-full mb-5">
-                <AlertTriangle className="h-4 w-4" />
-                <span className="text-sm font-bold">Ontario Home Buyers Alert</span>
-              </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-3">
-                Top Red Flags in Ontario Home Inspections
-              </h2>
-              <p className="text-gray-600 mb-6 text-sm">
-                Ontario's climate and aging housing stock create unique risks. These are the most common costly issues we find.
-              </p>
-              <div className="grid grid-cols-2 gap-3">
-                {[
-                  "Foundation Cracks (Freeze-Thaw)",
-                  "Knob & Tube Wiring",
-                  "Aluminum Wiring Hazards",
-                  "Asbestos in Pre-1990 Homes",
-                  "Basement Moisture & Mold",
-                  "Roof Ice Dam Damage",
-                ].map((flag, i) => (
-                  <div key={i} className="flex items-center gap-2 bg-red-50 rounded-lg px-3 py-2">
-                    <AlertTriangle className="h-4 w-4 text-red-500 shrink-0" />
-                    <span className="text-gray-700 text-sm font-medium">{flag}</span>
-                  </div>
-                ))}
-              </div>
-              <a href="/blog/common-issues-toronto-homes" className="inline-flex items-center gap-2 text-blue-700 font-bold mt-5 hover:text-blue-800 text-sm">
-                See all red flags + what they cost to fix
-                <ArrowRight size={14} />
-              </a>
-            </div>
-
-            {/* Pricing */}
-            <div className="bg-gray-50 rounded-2xl p-7 flex flex-col justify-between">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Ontario Home Inspection Pricing</h3>
-                <div className="space-y-3 mb-5">
-                  {[
-                    { service: "Pre-Purchase Inspection", price: "$450–$650" },
-                    { service: "Condo Inspection", price: "$350–$475" },
-                    { service: "Pre-Listing Inspection", price: "$400–$550" },
-                    { service: "New Construction", price: "$500–$700" },
-                  ].map((item, i) => (
-                    <div key={i} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-0">
-                      <span className="text-gray-700 font-medium text-sm">{item.service}</span>
-                      <span className="font-bold text-blue-700">{item.price}</span>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-xs text-gray-500">Prices vary by property size, age & location. Specialty add-ons available.</p>
-              </div>
-              <a href="/pricing" className="mt-5 inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition-all text-sm">
-                See Full Pricing & Add-Ons
-                <ArrowRight size={16} />
-              </a>
-            </div>
-
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="inline-flex items-center gap-2 bg-red-50 text-red-700 px-4 py-2 rounded-full mb-5">
+            <AlertTriangle className="h-4 w-4" />
+            <span className="text-sm font-bold">Ontario Home Buyers Alert</span>
           </div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-3">
+            Top Red Flags in Ontario Home Inspections
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Ontario's climate and aging housing stock create unique risks. These are the most common costly issues our inspectors find.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+            {[
+              "Foundation Cracks (Freeze-Thaw)",
+              "Knob & Tube Wiring",
+              "Aluminum Wiring Hazards",
+              "Asbestos in Pre-1990 Homes",
+              "Basement Moisture & Mold",
+              "Roof Ice Dam Damage",
+            ].map((flag, i) => (
+              <div key={i} className="flex items-center gap-2 bg-red-50 rounded-lg px-3 py-2">
+                <AlertTriangle className="h-4 w-4 text-red-500 shrink-0" />
+                <span className="text-gray-700 text-sm font-medium">{flag}</span>
+              </div>
+            ))}
+          </div>
+          <a href="/blog/common-issues-toronto-homes" className="inline-flex items-center gap-2 text-blue-700 font-bold hover:text-blue-800 text-sm">
+            See all red flags + what they cost to fix
+            <ArrowRight size={14} />
+          </a>
         </div>
       </section>
 
