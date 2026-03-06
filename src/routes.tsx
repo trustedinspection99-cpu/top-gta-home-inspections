@@ -20,7 +20,9 @@ function RootLayout() {
           <Toaster />
           <Sonner />
           <ScrollToTop />
+          <Suspense fallback={null}>
            <Outlet />
+          </Suspense>
 
         </TooltipProvider>
       </QueryClientProvider>
