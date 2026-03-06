@@ -241,28 +241,20 @@ const Index = () => {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
               Home Inspection Ontario
             </h1>
-            <p className="text-xl mb-10 opacity-95 leading-relaxed">
-              Home inspection cost in Ontario starts at <strong className="text-white">$400–$600</strong>. Get a
-              <strong className="text-white"> certified home inspection</strong> across Toronto & GTA with
-              <strong className="text-white"> 14 specialty services</strong> including radon, mold & WETT. <strong className="text-white">Same-day digital reports.</strong>
+            <p className="text-xl mb-8 opacity-95 leading-relaxed">
+              Ontario's trusted certified home inspection service. OAHI-certified inspectors covering
+              <strong className="text-white"> 100+ cities</strong> across the GTA and Ontario with
+              <strong className="text-white"> 14 specialty services</strong> including radon, mold & WETT.
+              <strong className="text-white"> Same-day digital reports.</strong>
             </p>
-            
-            {/* Quick Ontario Cost Info */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/20">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="text-center p-4">
-                  <div className="text-3xl font-bold text-white">$400-$600</div>
-                  <div className="text-sm opacity-90">Standard Home Inspection</div>
+
+            <div className="flex flex-wrap gap-4 mb-8">
+              {["OAHI Certified", "100+ Ontario Cities", "2,000+ Inspections", "Same-Day Reports"].map((badge) => (
+                <div key={badge} className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm font-medium">
+                  <CheckCircle2 className="h-4 w-4 text-green-400" />
+                  {badge}
                 </div>
-                <div className="text-center p-4 border-l border-r border-white/20">
-                  <div className="text-3xl font-bold text-white">$350-$475</div>
-                  <div className="text-sm opacity-90">Condo Inspection</div>
-                </div>
-                <div className="text-center p-4">
-                  <div className="text-3xl font-bold text-white">14+</div>
-                  <div className="text-sm opacity-90">Specialty Services</div>
-                </div>
-              </div>
+              ))}
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -279,27 +271,28 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 2. ONTARIO STATS */}
-      <section className="py-12 bg-white border-b">
+      {/* 2. STATS + TRUST BAR */}
+      <section className="py-8 bg-white border-b">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 items-center divide-x divide-gray-100">
             {[
-              { value: "2,000+", label: "Ontario Inspections", icon: <FileCheck className="h-8 w-8" /> },
-              { value: "15+", label: "Years in Ontario", icon: <Award className="h-8 w-8" /> },
-              { value: "98%", label: "Ontario Client Satisfaction", icon: <Star className="h-8 w-8" /> },
-              { value: "24hr", label: "Report Delivery in Ontario", icon: <Clock className="h-8 w-8" /> },
-            ].map((stat, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div className="text-blue-600 mb-3">{stat.icon}</div>
-                <p className="text-4xl font-extrabold text-gray-900 mb-2">{stat.value}</p>
-                <p className="text-gray-600 font-medium">{stat.label}</p>
+              { value: "2,000+", label: "Inspections Done" },
+              { value: "15+", label: "Years in Ontario" },
+              { value: "4.9★", label: "Google Rating" },
+              { value: "24hr", label: "Report Delivery" },
+              { value: "OAHI", label: "Certified" },
+              { value: "InterNACHI", label: "Member" },
+              { value: "E&O", label: "Fully Insured" },
+              { value: "100+", label: "Cities Served" },
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-center text-center px-2 py-2">
+                <div className="text-xl font-extrabold text-blue-700">{item.value}</div>
+                <div className="text-xs text-gray-500 font-medium mt-0.5">{item.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      <TrustBadges />
 
       {/* 3. COMPLETE ONTARIO SERVICES */}
       <section id="services" className="py-20 bg-gray-50">
@@ -385,89 +378,33 @@ const Index = () => {
               </a>
             </div>
             
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Ontario Home Inspection Pricing</h3>
-              <div className="space-y-4">
-                {ontarioPricing.map((item, index) => (
-                  <div key={index} className="flex justify-between items-center p-4 bg-white rounded-lg border">
-                    <div>
-                      <div className="font-bold text-gray-900">{item.service}</div>
-                      <div className="text-sm text-gray-500">{item.details}</div>
+            <div className="bg-gray-50 rounded-2xl p-8 flex flex-col justify-between">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Ontario Home Inspection Pricing</h3>
+                <div className="space-y-3 mb-6">
+                  {[
+                    { service: "Pre-Purchase Inspection", price: "$450–$650" },
+                    { service: "Condo Inspection", price: "$350–$475" },
+                    { service: "Pre-Listing Inspection", price: "$400–$550" },
+                    { service: "New Construction", price: "$500–$700" },
+                  ].map((item, i) => (
+                    <div key={i} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-0">
+                      <span className="text-gray-700 font-medium">{item.service}</span>
+                      <span className="font-bold text-blue-700">{item.price}</span>
                     </div>
-                    <div className="text-xl font-bold text-blue-700">{item.price}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
-                <div className="flex items-center gap-3">
-                  <Info className="h-5 w-5 text-blue-600" />
-                  <p className="text-sm text-gray-700">
-                    <strong>Note:</strong> Final pricing depends on property size, age, and location. 
-                    Contact us for exact quotes for your Ontario property.
-                  </p>
+                  ))}
                 </div>
+                <p className="text-sm text-gray-500">Prices vary by property size, age & location. Specialty add-ons available.</p>
               </div>
+              <a href="/pricing" className="mt-6 inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition-all">
+                See Full Pricing & Add-Ons
+                <ArrowRight size={16} />
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5. SPECIALTY SERVICES HIGHLIGHT */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Ontario-Specific Specialty Inspections
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Address Ontario's unique property concerns with our certified specialty services
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: <Radio className="h-8 w-8" />,
-                title: "Radon Testing",
-                description: "Essential for Ontario basements. Long-term testing with Health Canada compliance.",
-                link: "/services/radon-testing"
-              },
-              {
-                icon: <Droplets className="h-8 w-8" />,
-                title: "Mold Inspection",
-                description: "Common in Ontario's humid summers. Air quality and surface testing.",
-                link: "/services/mold-inspection"
-              },
-              {
-                icon: <ShieldAlert className="h-8 w-8" />,
-                title: "Asbestos Testing",
-                description: "Critical for pre-1990 Ontario homes. Material sampling and analysis.",
-                link: "/services/asbestos-testing"
-              },
-              {
-                icon: <Zap className="h-8 w-8" />,
-                title: "WETT Inspection",
-                description: "Required for wood stove insurance in rural Ontario properties.",
-                link: "/services/wett"
-              },
-            ].map((service, index) => (
-              <a 
-                key={index} 
-                href={service.link}
-                className="bg-white p-6 rounded-xl shadow-sm border hover:shadow-md transition-all group"
-              >
-                <div className="bg-blue-100 text-blue-600 p-3 rounded-lg w-fit mb-4 group-hover:bg-blue-200 transition-colors">
-                  {service.icon}
-                </div>
-                <h3 className="font-bold text-lg text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{service.description}</p>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* 6. ONTARIO SERVICE AREAS */}
       <section className="py-20 bg-gray-900 text-white">
