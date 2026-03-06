@@ -2827,6 +2827,86 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">ASADS certified home inspectors serve all Newmarket communities including the heritage Main Street area, Stonehaven, Summerhill Estates, Glenway, Armitage, and the Bayview Avenue corridor. We provide same-day digital reports, thermal imaging as standard equipment, and a full suite of add-on testing services. Call (647) 801-9311 to book your certified home inspection in Newmarket today.</p>
     `,
   },
+  {
+    id: 49,
+    slug: "commercial-building-inspection-ontario",
+    title: "Commercial Building Inspection in Ontario: What Investors and Buyers Need to Know",
+    metaTitle: "Commercial Building Inspection Ontario | PCA & Property Condition Assessment | ASADS",
+    metaDescription: "Planning to buy or lease commercial property in Ontario? A commercial building inspection and Property Condition Assessment (PCA) protects your investment. Learn what's covered, costs, and what inspectors look for.",
+    excerpt: "Commercial real estate transactions involve much larger stakes than residential purchases. A thorough commercial building inspection — often called a Property Condition Assessment (PCA) — is essential due diligence before committing to any office, retail, industrial, or multi-unit investment.",
+    category: "Commercial",
+    author: "ASADS Team",
+    date: "2026-03-06",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is a Commercial Building Inspection?</h2>
+      <p class="mb-4">A commercial building inspection — formally known as a <strong>Property Condition Assessment (PCA)</strong> — is a systematic evaluation of a commercial property's physical condition. Unlike a residential home inspection, which follows a standardized checklist, commercial inspections are tailored to the specific property type: office buildings, retail plazas, industrial warehouses, mixed-use developments, and multi-unit residential buildings all have different systems, risks, and regulatory requirements.</p>
+      <p class="mb-4">In Ontario, commercial PCAs are commonly performed to the <strong>ASTM E2018-15 standard</strong> — the benchmark methodology required by most institutional lenders and commercial real estate investors. This standard covers structural systems, building envelope, roofing, mechanical/electrical/plumbing (MEP) systems, life safety, and environmental concerns.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Commercial Inspections Are Essential in Ontario</h2>
+      <p class="mb-4">Ontario's commercial real estate market — particularly in the GTA — involves properties that range from 1950s industrial buildings in Etobicoke to modern glass office towers in Mississauga's Airport Corporate Centre. Older buildings carry significant deferred maintenance risks. Newer buildings may have envelope deficiencies or mechanical systems that are underpowered for their tenant loads.</p>
+      <p class="mb-4">Common findings in Ontario commercial properties include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Flat roof deterioration:</strong> The most common and expensive deficiency in Ontario commercial buildings. Membrane failure, blocked drains, and inadequate slope cause water infiltration that damages ceiling structures and electrical systems.</li>
+        <li><strong>Asbestos-containing materials (ACMs):</strong> Buildings constructed before 1990 frequently contain asbestos in pipe insulation, floor tiles, drywall joint compound, and roofing materials. Ontario's O.Reg 278/05 mandates a Designated Substance Survey (DSS) before any renovation or demolition work.</li>
+        <li><strong>Electrical distribution deficiencies:</strong> Older switchgear, undersized panels, and inadequate grounding are common in pre-1980 industrial properties. Thermal imaging identifies hotspots before they become fire hazards.</li>
+        <li><strong>HVAC system end-of-life:</strong> Commercial HVAC systems — chillers, cooling towers, rooftop units — have 15–25 year service lives. A PCA documents remaining useful life (RUL) to inform capital expenditure planning.</li>
+        <li><strong>Accessibility compliance gaps:</strong> Ontario's AODA (Accessibility for Ontarians with Disabilities Act) sets requirements for commercial properties. Non-compliant properties carry legal and reputational risk for new owners.</li>
+        <li><strong>Environmental liabilities:</strong> Former gas stations, dry cleaners, and automotive repair sites are common in Ontario's older commercial corridors. A Phase 1 Environmental Site Assessment (ESA) screens for historical contamination before a purchase closes.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a Commercial PCA Cover?</h2>
+      <p class="mb-4">A full ASTM E2018-15 Property Condition Assessment includes:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Structural systems:</strong> Foundation, slab, framing, and load-bearing elements — including assessment of settlement, cracking, and corrosion in steel structures</li>
+        <li><strong>Building envelope:</strong> Exterior cladding, curtain walls, glazing, sealants, and weather barriers — evaluated for water infiltration, thermal performance, and air leakage</li>
+        <li><strong>Roofing systems:</strong> Flat, low-slope, and pitched roofs — membrane condition, drainage adequacy, flashings, penetrations, and remaining useful life</li>
+        <li><strong>Mechanical systems:</strong> Central heating and cooling plants, building automation systems (BAS), domestic hot water, and fire suppression systems</li>
+        <li><strong>Electrical systems:</strong> Main switchgear, distribution panels, emergency power, and life safety electrical — often combined with thermal imaging for hotspot detection</li>
+        <li><strong>Plumbing:</strong> Commercial water supply, backflow prevention, sanitary drainage, and grease interceptors for food service tenancies</li>
+        <li><strong>Life safety systems:</strong> Fire alarm panels, sprinkler systems, emergency egress, exit signage, and Ontario Fire Code compliance</li>
+        <li><strong>Site improvements:</strong> Parking lots, retaining walls, stormwater management, loading dock equipment, and landscaping</li>
+      </ul>
+      <p class="mb-4">The final PCA report includes a <strong>Capital Expenditure (CapEx) forecast</strong> — typically a 10-year projection of expected repair and replacement costs for all major systems. Lenders, investors, and property managers rely on this data for underwriting, due diligence, and long-term asset planning.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Commercial Inspection vs. Residential Inspection: Key Differences</h2>
+      <p class="mb-4">While both types of inspections evaluate physical property conditions, there are fundamental differences:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Scope:</strong> Commercial PCAs are broader, covering tenant improvements, common areas, parking structures, and mechanical systems that don't exist in residential properties</li>
+        <li><strong>Standards:</strong> Residential inspections follow Ontario's Home Inspection Act standards. Commercial PCAs follow ASTM E2018-15 and are often customized per lender or institutional buyer requirements</li>
+        <li><strong>Timeline:</strong> A residential inspection takes 2–4 hours. A commercial PCA for a 20,000 sq ft retail plaza typically takes a full day, with the report delivered within 5–7 business days</li>
+        <li><strong>Team:</strong> Complex commercial properties may require specialist sub-consultants — structural engineers, environmental scientists, MEP engineers — coordinated by the lead inspector</li>
+        <li><strong>Cost:</strong> Commercial inspection costs are quoted per engagement based on property size, type, and complexity. A retail strip mall PCA typically starts from $2,500–$5,000; large industrial or office properties may require $8,000–$15,000+ depending on scope</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When to Order a Commercial Building Inspection</h2>
+      <p class="mb-4">The most critical time for a commercial PCA is <strong>before you firm up a purchase agreement</strong> — ideally as a condition of the Agreement of Purchase and Sale. Unlike residential transactions where conditional periods are measured in days, commercial deal timelines allow more flexibility, and a 10–15 business day inspection condition is standard.</p>
+      <p class="mb-4">Other situations that warrant a commercial building inspection include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Refinancing — lenders often require a current PCA for commercial mortgage renewals</li>
+        <li>Portfolio acquisitions — buying multiple commercial properties simultaneously</li>
+        <li>Before signing a long-term commercial lease — particularly if the tenant will be responsible for maintaining building systems</li>
+        <li>Capital planning — existing owners commissioning periodic assessments to forecast maintenance budgets</li>
+        <li>Dispute resolution — when landlord/tenant disputes involve building condition claims</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Commercial Inspection in the GTA: What We See Most</h2>
+      <p class="mb-4">ASADS has conducted commercial property condition assessments across Toronto, Mississauga, Brampton, Vaughan, Markham, Hamilton, and Oakville. The most consistent findings across Ontario commercial stock include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Flat roof failures</strong> in 1970s–1990s retail and industrial buildings — often the single largest capital expenditure item, with full replacement costs ranging from $15–$40 per square foot</li>
+        <li><strong>Deferred HVAC maintenance</strong> — rooftop units running well beyond their design life in older strip malls and small office buildings, with no maintenance records available</li>
+        <li><strong>Electrical panel capacity issues</strong> in buildings where tenant loads have increased significantly since original construction — particularly relevant in properties being converted to restaurant, healthcare, or data-intensive uses</li>
+        <li><strong>Site drainage deficiencies</strong> — parking lots without adequate slope toward catch basins, causing ponding that accelerates pavement and curb deterioration</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Commercial Building Inspection in Ontario</h2>
+      <p class="mb-4">ASADS provides <a href="/services/commercial" class="text-primary underline font-medium">commercial building inspections</a> across Ontario — from individual retail units to large industrial complexes. Our inspectors are experienced with ASTM E2018-15 methodology, Ontario Building Code requirements, and the GTA's specific commercial property stock. We provide CapEx forecasts, thermal imaging for electrical and envelope systems, and coordinated specialist reports when required.</p>
+      <p class="mb-4">We also offer add-on services frequently required alongside commercial PCAs: <a href="/services/asbestos-testing" class="text-primary underline font-medium">asbestos inspection and designated substance surveys</a>, <a href="/services/thermal-imaging" class="text-primary underline font-medium">infrared thermography</a> for electrical and envelope systems, and <a href="/services/air-quality" class="text-primary underline font-medium">indoor air quality testing</a> for tenant-occupied buildings with occupancy health complaints.</p>
+      <p class="mb-4">Contact ASADS to discuss your commercial property inspection requirements. We provide detailed proposals within 24 hours and can accommodate expedited timelines for time-sensitive transactions. Call (647) 801-9311 or <a href="/booking" class="text-primary underline font-medium">submit a request online</a>.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
