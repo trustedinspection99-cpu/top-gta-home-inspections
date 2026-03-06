@@ -150,7 +150,9 @@ export default function NewConstruction() {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={serviceUrl} />
-        <script type="application/ld+json">{JSON.stringify(schemas)}</script>
+        {schemas.map((schema, i) => (
+          <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
+        ))}
       </Helmet>
 
       {/* Hero Section */}
@@ -353,6 +355,23 @@ export default function NewConstruction() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas */}
+      <section className="py-12 bg-muted/30">
+        <div className="container">
+          <div className="text-center mb-8">
+            <h2 className="font-heading text-2xl font-bold text-foreground mb-2">New Construction Inspections Across Ontario</h2>
+            <p className="text-muted-foreground">Serving new subdivisions and condos across the GTA and beyond.</p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            {featuredLocations.map((loc) => (
+              <Link key={loc.slug} to={`/locations/${loc.slug}`} className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 transition-colors text-sm text-foreground">
+                <MapPin className="h-4 w-4 text-primary flex-shrink-0" />{loc.name}
+              </Link>
+            ))}
           </div>
         </div>
       </section>
