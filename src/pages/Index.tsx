@@ -343,44 +343,49 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 4. ONTARIO-SPECIFIC RED FLAGS */}
-      <section className="py-20 bg-white">
+      {/* 4. RED FLAGS + PRICING */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+
+            {/* Red Flags */}
             <div>
-              <div className="inline-flex items-center gap-2 bg-red-50 text-red-700 px-4 py-2 rounded-full mb-6">
+              <div className="inline-flex items-center gap-2 bg-red-50 text-red-700 px-4 py-2 rounded-full mb-5">
                 <AlertTriangle className="h-4 w-4" />
                 <span className="text-sm font-bold">Ontario Home Buyers Alert</span>
               </div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Top 10 Red Flags in Ontario Home Inspections
+              <h2 className="text-3xl font-bold text-gray-900 mb-3">
+                Top Red Flags in Ontario Home Inspections
               </h2>
-              <p className="text-gray-600 mb-8">
-                Ontario's climate and aging housing stock present unique challenges. 
-                Here are the most common and costly issues we find in properties across the province.
+              <p className="text-gray-600 mb-6 text-sm">
+                Ontario's climate and aging housing stock create unique risks. These are the most common costly issues we find.
               </p>
-              
-              <div className="space-y-4">
-                {ontarioRedFlags.map((flag, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="bg-red-100 text-red-600 p-1 rounded">
-                      <AlertTriangle className="h-4 w-4" />
-                    </div>
-                    <span className="text-gray-700">{flag}</span>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  "Foundation Cracks (Freeze-Thaw)",
+                  "Knob & Tube Wiring",
+                  "Aluminum Wiring Hazards",
+                  "Asbestos in Pre-1990 Homes",
+                  "Basement Moisture & Mold",
+                  "Roof Ice Dam Damage",
+                ].map((flag, i) => (
+                  <div key={i} className="flex items-center gap-2 bg-red-50 rounded-lg px-3 py-2">
+                    <AlertTriangle className="h-4 w-4 text-red-500 shrink-0" />
+                    <span className="text-gray-700 text-sm font-medium">{flag}</span>
                   </div>
                 ))}
               </div>
-              
-              <a href="/blog/common-issues-toronto-homes" className="inline-flex items-center gap-2 text-blue-700 font-bold mt-8 hover:text-blue-800">
-                Read Ontario Red Flag Guide
-                <ArrowRight size={16} />
+              <a href="/blog/common-issues-toronto-homes" className="inline-flex items-center gap-2 text-blue-700 font-bold mt-5 hover:text-blue-800 text-sm">
+                See all red flags + what they cost to fix
+                <ArrowRight size={14} />
               </a>
             </div>
-            
-            <div className="bg-gray-50 rounded-2xl p-8 flex flex-col justify-between">
+
+            {/* Pricing */}
+            <div className="bg-gray-50 rounded-2xl p-7 flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Ontario Home Inspection Pricing</h3>
-                <div className="space-y-3 mb-6">
+                <div className="space-y-3 mb-5">
                   {[
                     { service: "Pre-Purchase Inspection", price: "$450–$650" },
                     { service: "Condo Inspection", price: "$350–$475" },
@@ -388,18 +393,19 @@ const Index = () => {
                     { service: "New Construction", price: "$500–$700" },
                   ].map((item, i) => (
                     <div key={i} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-0">
-                      <span className="text-gray-700 font-medium">{item.service}</span>
+                      <span className="text-gray-700 font-medium text-sm">{item.service}</span>
                       <span className="font-bold text-blue-700">{item.price}</span>
                     </div>
                   ))}
                 </div>
-                <p className="text-sm text-gray-500">Prices vary by property size, age & location. Specialty add-ons available.</p>
+                <p className="text-xs text-gray-500">Prices vary by property size, age & location. Specialty add-ons available.</p>
               </div>
-              <a href="/pricing" className="mt-6 inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition-all">
+              <a href="/pricing" className="mt-5 inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition-all text-sm">
                 See Full Pricing & Add-Ons
                 <ArrowRight size={16} />
               </a>
             </div>
+
           </div>
         </div>
       </section>
