@@ -2,16 +2,16 @@ import { Flame, ShieldCheck, Thermometer, FileText, CheckCircle2, AlertTriangle 
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function WETT() {
-  const pageTitle = "WETT Inspection Toronto | Insurance-Approved Certificate | From $200";
-  const metaDescription = "Certified WETT inspection in Toronto & GTA from $200. Insurance-approved wood stove & fireplace certificates. Same-day report, thermal imaging included. Book online.";
+  const pageTitle = "WETT Inspection & Chimney Inspection Toronto | Insurance Certificate | ASADS";
+  const metaDescription = "Certified WETT inspection and chimney inspection in Toronto & GTA. Insurance-approved wood stove & fireplace certificates. Thermal imaging included. Same-day digital report. Book online.";
 
   return (
     <ServicePageTemplate
       title="WETT Inspection"
       metaTitle={pageTitle}
       metaDescription={metaDescription}
-      heroTitle="Certified WETT Inspection Toronto & GTA"
-      heroSubtitle="Insurance-Approved Safety Certification for Wood-Burning Appliances. Same-Day Reports and Thermal Imaging included with every inspection."
+      heroTitle="Certified WETT Inspection & Chimney Inspection — Toronto & GTA"
+      heroSubtitle="Insurance-Approved Safety Certification for Wood-Burning Appliances. Our WETT and chimney inspection includes thermal imaging and same-day digital reports accepted by all major Ontario insurers."
       icon={Flame}
       price="From $249"
       duration="1-2 Hours"

@@ -2,16 +2,16 @@ import { AlertTriangle, Microscope, ShieldCheck, Factory, HardHat, ClipboardList
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function AsbestosTesting() {
-  const pageTitle = "Asbestos Testing Toronto & GTA | WSIB Certified | From $299 | ASADS";
-  const schemaDescription = "WSIB-certified asbestos testing in Toronto & GTA from $299. O.Reg 278/05 compliant lab analysis for popcorn ceilings, insulation & pipe wrap in pre-1990 homes. Same-day sampling.";
+  const pageTitle = "Asbestos Testing, Survey & Assessment Ontario | WSIB Certified | From $299 | ASADS";
+  const schemaDescription = "WSIB-certified asbestos testing, asbestos survey, and asbestos assessment in Toronto & GTA from $299. O.Reg 278/05 compliant lab analysis for popcorn ceilings, insulation & pipe wrap in pre-1990 homes. Same-day sampling.";
 
   return (
     <ServicePageTemplate
-      title="Asbestos Testing & Analysis"
+      title="Asbestos Testing, Survey & Assessment"
       metaTitle={pageTitle}
       metaDescription={schemaDescription}
-      heroTitle="WSIB Certified Asbestos Inspection"
-      heroSubtitle="Protect your family and contractors. Safe, O.Reg 278/05 compliant sampling for pre-1990 homes, renovations, and commercial sites. Book your certified asbestos inspector in Toronto or GTA today."
+      heroTitle="WSIB Certified Asbestos Testing, Survey & Assessment"
+      heroSubtitle="Protect your family and contractors. Safe, O.Reg 278/05 compliant asbestos inspection, survey, and assessment for pre-1990 homes, renovations, and commercial sites across Toronto and Ontario."
       icon={AlertTriangle}
       price="From $299"
       duration="1-2 Hours + Lab Time"

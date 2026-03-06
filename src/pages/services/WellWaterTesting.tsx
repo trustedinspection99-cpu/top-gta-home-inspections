@@ -2,16 +2,16 @@ import { Droplets, TestTube, Beaker, ShieldCheck, Microscope, AlertTriangle } fr
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function WellWaterTesting() {
-  const pageTitle = "Well Water Testing Toronto | Certified Lab Analysis | ASADS";
-  const metaDescription = "Certified well water testing in Toronto and GTA. MOH accredited laboratory analysis for E.coli, nitrates, and chemicals. Same-day lab courier service.";
+  const pageTitle = "Well Water Testing Ontario | Water Quality Testing | MOH Accredited Lab | ASADS";
+  const metaDescription = "Certified well water testing and water quality testing across Ontario. MOH accredited laboratory analysis for E.coli, bacteria, nitrates, arsenic, and lead. Same-day lab courier. From $149.";
 
   return (
     <ServicePageTemplate
       title="Well Water Testing"
       metaTitle={pageTitle}
       metaDescription={metaDescription}
-      heroTitle="MOH Accredited Well Water Analysis"
-      heroSubtitle="Protect your family from hidden contaminants. We provide clinical-grade sampling and accredited laboratory testing for rural properties across the GTA."
+      heroTitle="Well Water & Water Quality Testing — MOH Accredited Lab Analysis"
+      heroSubtitle="Protect your family from hidden contaminants. We provide clinical-grade sampling and accredited water quality testing for private wells across Ontario — from the GTA to rural and cottage properties."
       icon={Droplets}
       price="From $149"
       duration="Sample Collection + Lab Time"

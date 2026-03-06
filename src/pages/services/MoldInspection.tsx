@@ -3,15 +3,15 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import { Link } from "react-router-dom";
 
 export default function MoldInspection() {
-  const pageTitle = "Mold Inspection Toronto | Certified Air Sampling & Testing | ASADS";
-  const schemaDescription = "Certified mold inspection & air sampling in Toronto. CFIA-accredited lab analysis for black mold, basement & HVAC contamination. Same-day service with written remediation scope.";
+  const pageTitle = "Mold Inspection, Testing & Assessment Toronto | Black Mold | AIHA Lab | ASADS";
+  const schemaDescription = "Certified mold inspection, mold testing, and mold assessment in Toronto & GTA. AIHA-accredited lab analysis for black mold, basement & HVAC contamination. Same-day service with written remediation scope.";
 
   return (
     <ServicePageTemplate
-      title="Mold Inspection & Testing Services"
+      title="Mold Inspection, Testing & Assessment"
       metaTitle={pageTitle}
       metaDescription={schemaDescription}
-      heroTitle="Certified Mold Inspection Near You – Fast, Accurate, and Lab-Certified"
+      heroTitle="Certified Mold Inspection, Testing & Assessment — Lab-Certified Results"
       heroSubtitle={
         <>
           Protect your home and health with AIHA-certified lab testing. We detect toxic black mold, hidden moisture, and water-damage-related spores with 99.9% accuracy.  

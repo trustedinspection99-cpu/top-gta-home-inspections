@@ -2,16 +2,16 @@ import { Wind, Thermometer, ShieldAlert, Microscope, Leaf } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function AirQuality() {
-  const pageTitle = "Air Quality Testing Toronto & GTA | VOC, Mold & Allergens | ASADS";
-  const schemaDescription = "Certified indoor air quality testing in Toronto & GTA. Lab analysis for VOCs, mold spores, allergens & particulates. Same-day sampling with 48-hr lab results. Protect your family's health.";
+  const pageTitle = "Air Quality Testing & Indoor Air Quality Testing Toronto | VOC, Mold & Allergens | ASADS";
+  const schemaDescription = "Certified air quality testing and indoor air quality testing in Toronto & GTA. Lab analysis for VOCs, mold spores, allergens & particulates. Same-day sampling with 48-hr lab results. From $249.";
 
   return (
     <ServicePageTemplate
       title="Indoor Air Quality Testing"
       metaTitle={pageTitle}
       metaDescription={schemaDescription}
-      heroTitle="Breathe Easier: Certified Air Quality Analysis"
-      heroSubtitle="Comprehensive indoor air quality assessment for VOCs, allergens, particulates, and airborne contaminants. Protect your family's health with professional testing."
+      heroTitle="Certified Air Quality Testing & Indoor Air Quality Assessment"
+      heroSubtitle="Comprehensive indoor air quality testing for VOCs, allergens, particulates, mold spores, and airborne contaminants. Professional air quality testing across Toronto, Hamilton, Brampton, and the GTA."
       icon={Wind}
       price="From $249"
       duration="2-4 Hours"

@@ -2,16 +2,16 @@ import { Thermometer, Zap, Droplets, Home, ShieldCheck, Search } from "lucide-re
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function ThermalImaging() {
-  const pageTitle = "Thermal Imaging Inspection Toronto | Infrared Leak Detection | ASADS";
-  const schemaDescription = "Certified infrared thermal imaging in Toronto & GTA. Detect hidden moisture, heat loss & electrical hotspots behind walls without damage. FLIR technology, same-day results. Book online.";
+  const pageTitle = "Thermal Imaging & Thermographic Inspection Toronto | Infrared Inspection | ASADS";
+  const schemaDescription = "Certified thermal imaging, thermographic inspection, and infrared inspection in Toronto & GTA. Detect hidden moisture, heat loss & electrical hotspots behind walls without damage. FLIR technology, same-day results.";
 
   return (
     <ServicePageTemplate
-      title="Infrared Thermal Imaging"
+      title="Thermal Imaging & Thermographic Inspection"
       metaTitle={pageTitle}
       metaDescription={schemaDescription}
-      heroTitle="See the Invisible: Advanced Thermal Leak Detection"
-      heroSubtitle="Book a certified thermographer now. Visualize hidden moisture, energy loss, and electrical hazards without invasive testing."
+      heroTitle="Thermal Imaging, Thermographic & Infrared Inspection"
+      heroSubtitle="See what standard inspections miss. Our certified thermographers use FLIR® technology for thermal imaging, thermographic inspection, and infrared inspection — detecting hidden moisture, energy loss, and electrical hazards without opening walls."
       icon={Search}
       price="Add-on or Standalone"
       duration="1-2 Hours"

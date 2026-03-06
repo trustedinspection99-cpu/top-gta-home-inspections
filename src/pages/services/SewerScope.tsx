@@ -2,16 +2,16 @@ import { Video, Search, Map, AlertCircle, ShieldCheck, Clock, DollarSign, ListCh
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function SewerScope() {
-  const pageTitle = "Sewer Scope Inspection Toronto | CCTV Camera | From $299 | ASADS";
-  const metaDescription = "Sewer scope inspection in Toronto from $299. Same-day 1080p HD video, GPS pipe mapping & written report. Detect root intrusion, bellied pipes & cracks before you buy.";
+  const pageTitle = "Sewer Camera Inspection & Drain Scope Toronto | CCTV | From $299 | ASADS";
+  const metaDescription = "Sewer camera inspection and drain scope in Toronto from $299. Same-day 1080p HD video, GPS pipe mapping & written report. Detect root intrusion, bellied pipes & cracks before you buy.";
 
   return (
     <ServicePageTemplate
       title="Sewer Camera Inspection"
       metaTitle={pageTitle}
       metaDescription={metaDescription}
-      heroTitle="HD Sewer Scope & Drain Line Inspection"
-      heroSubtitle="Don't inherit a $20,000 plumbing disaster. Our 1080p HD camera systems reveal the true condition of your underground lateral lines before you close."
+      heroTitle="HD Sewer Camera Inspection & Drain Scope"
+      heroSubtitle="Don't inherit a $20,000 plumbing disaster. Our sewer camera inspection and drain scope service uses 1080p HD CCTV to reveal the true condition of your underground lateral lines before you close."
       icon={Video}
       price="From $299"
       duration="1-2 Hours"
