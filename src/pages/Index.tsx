@@ -46,6 +46,30 @@ const homepageFaqs = [
     question: "What specialty inspections are most common in Ontario?",
     answer: "Most requested Ontario specialty inspections: mold testing (especially in basements), asbestos testing (pre-1990 homes), radon testing, WETT certifications, and well water testing for rural properties.",
   },
+  {
+    question: "How long does a home inspection take in Ontario?",
+    answer: "A typical home inspection takes 2.5 to 4 hours depending on the size, age, and condition of the property. A small condo may take 90 minutes while a large older home in Toronto's East York or Etobicoke could take 4+ hours. Add-on services like radon or mold testing add additional time.",
+  },
+  {
+    question: "Can a home inspection be used to negotiate the purchase price?",
+    answer: "Yes — this is one of the most valuable uses of an inspection report. Significant deficiencies like a failing furnace, roof leaks, or knob-and-tube wiring can be used to request a price reduction, seller repairs before closing, or a credit at closing. Your realtor can guide you through the negotiation using our report.",
+  },
+  {
+    question: "Is a home inspection worth it for a newer home in Ontario?",
+    answer: "Absolutely. Even homes built in the last 10 years can have construction deficiencies, improperly installed systems, moisture issues, or code violations. Many builders in Vaughan, Brampton, and Mississauga make shortcuts that only become apparent after a few years. An inspection on a newer home is just as important as on an older one.",
+  },
+  {
+    question: "Do home inspectors check for mold in Ontario?",
+    answer: "Standard home inspectors look for visible signs of mold and moisture damage during the inspection. If mold is suspected, we recommend a dedicated mold inspection with air and surface sampling. Ontario's humid summers make basement mold especially common — particularly in older Toronto-area homes with inadequate ventilation.",
+  },
+  {
+    question: "What is a pre-listing inspection and do I need one as a seller?",
+    answer: "A pre-listing inspection is a home inspection ordered by the seller before listing the property. It lets you identify and fix issues before buyers find them, price your home accurately, and provide transparency that builds buyer confidence. In Ontario's market, a pre-listing inspection can reduce conditional offers and speed up closing.",
+  },
+  {
+    question: "Do you offer same-day home inspection reports?",
+    answer: "Yes. ASADS delivers detailed digital inspection reports within 24 hours and in most cases the same day. Reports are emailed in an easy-to-read format with photographs, categorized findings, and maintenance recommendations you can share directly with your realtor or lawyer.",
+  },
 ];
 
 // --- ONTARIO PRICING ---
@@ -483,7 +507,7 @@ const Index = () => {
               Ontario Home Inspection FAQs
             </h2>
             <p className="text-gray-600 text-lg">
-              Answers to common questions about home inspections in Ontario
+              Answers to common questions about home inspections in Ontario — <a href="/faq" className="text-blue-700 hover:underline font-medium">see all 100+ questions</a>
             </p>
           </div>
           
@@ -502,8 +526,8 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-12">
-            <a href="/faq" className="inline-flex items-center gap-2 text-blue-700 font-bold hover:text-blue-800">
-              View All Ontario FAQs
+            <a href="/faq" className="inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition-all">
+              View All 100+ Ontario Home Inspection FAQs
               <ArrowRight size={16} />
             </a>
           </div>
