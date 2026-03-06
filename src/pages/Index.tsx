@@ -171,7 +171,7 @@ const localBusinessSchema = {
   "url": SITE_URL,
   "telephone": "+16478019311",
   "priceRange": "$400-$600",
-  "description": "Certified home inspector serving Toronto, GTA & Ontario with 14 specialty inspection services including radon, mold, WETT & asbestos testing.",
+  "description": "Certified home inspector in Toronto, GTA & Ontario. OAHI-certified with 14 specialty inspection services including radon, mold, WETT & asbestos testing. Same-day digital reports.",
   "areaServed": {
     "@type": "State",
     "name": "Ontario",
@@ -200,11 +200,11 @@ const Index = () => {
     <Layout>
       <Helmet>
         <link rel="canonical" href="https://www.asads.ca/" />
-        <title>Home Inspection Cost Ontario | Certified Home Inspector | ASADS</title>
-        <meta name="description" content="Home inspection cost in Ontario: $400–$600. OAHI-certified home inspector serving Toronto & GTA with 14 specialty services. Same-day reports. Call (647) 801-9311." />
+        <title>Home Inspection Ontario | Certified Home Inspector | ASADS</title>
+        <meta name="description" content="Home inspection across Ontario by OAHI-certified inspectors. Serving 100+ cities in the GTA & beyond with 14 specialty services — radon, mold, WETT & asbestos. Same-day reports. Call (647) 801-9311." />
         {/* Open Graph */}
-        <meta property="og:title" content="Home Inspection Cost Ontario | Certified Home Inspector | ASADS" />
-        <meta property="og:description" content="How much does a home inspection cost in Ontario? $400–$600 for a certified OAHI inspection. 14 specialty services including radon, mold, WETT & asbestos. Book online." />
+        <meta property="og:title" content="Home Inspection Ontario | Certified Home Inspector | ASADS" />
+        <meta property="og:description" content="Trusted home inspection services across Ontario. OAHI-certified inspectors serving 100+ cities with 14 specialty services including radon, mold, WETT & asbestos testing. Book online today." />
         <meta property="og:url" content={SITE_URL} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_CA" />
@@ -217,12 +217,12 @@ const Index = () => {
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@AsadsInspection" />
-        <meta name="twitter:title" content="Home Inspection Cost Ontario | Certified Inspector | ASADS" />
-        <meta name="twitter:description" content="Home inspection cost in Ontario: $400–$600. OAHI-certified inspector serving Toronto & GTA. 14 specialty services. Book online." />
+        <meta name="twitter:title" content="Home Inspection Ontario | Certified Home Inspector | ASADS" />
+        <meta name="twitter:description" content="Home inspection across Ontario. OAHI-certified with 14 specialty services. Same-day reports. Book online." />
         <meta name="twitter:image" content={`${SITE_URL}/images/og-default.jpg`} />
         
         {/* Additional Meta Tags */}
-        <meta name="keywords" content="home inspection ontario, home inspection toronto, home inspection cost ontario, home inspection checklist, home inspection course ontario, radon testing ontario, mold inspection ontario, wett inspection ontario" />
+        <meta name="keywords" content="home inspector toronto, home inspection toronto, certified home inspector ontario, home inspection ontario, home inspector near me, home inspection GTA, home inspection cost ontario, radon testing ontario, mold inspection ontario, wett inspection ontario" />
         
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
@@ -239,7 +239,7 @@ const Index = () => {
               <span className="text-sm font-medium">OAHI Certified • Serving Ontario Since 2009</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
-              Certified Home Inspector Ontario
+              Home Inspection Ontario
             </h1>
             <p className="text-xl mb-10 opacity-95 leading-relaxed">
               Home inspection cost in Ontario starts at <strong className="text-white">$400–$600</strong>. Get a
