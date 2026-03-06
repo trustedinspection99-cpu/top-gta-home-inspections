@@ -14,8 +14,24 @@ import {
   Clock,
   AlertTriangle,
   FileText,
-  Shield
+  Shield,
+  MapPin
 } from "lucide-react";
+
+const featuredLocations = [
+  { name: "Toronto", slug: "home-inspection-toronto" },
+  { name: "Mississauga", slug: "home-inspection-mississauga" },
+  { name: "Vaughan", slug: "home-inspection-vaughan" },
+  { name: "Markham", slug: "home-inspection-markham" },
+  { name: "Richmond Hill", slug: "home-inspection-richmond-hill" },
+  { name: "Oakville", slug: "home-inspection-oakville" },
+  { name: "Burlington", slug: "home-inspection-burlington" },
+  { name: "Brampton", slug: "home-inspection-brampton" },
+  { name: "Newmarket", slug: "home-inspection-newmarket" },
+  { name: "Hamilton", slug: "home-inspection-hamilton" },
+  { name: "Barrie", slug: "home-inspection-barrie" },
+  { name: "Oshawa", slug: "home-inspection-oshawa" },
+];
 
 const metaTitle =
   "Condo Inspection & Townhome Inspection Toronto | Kitec Plumbing | ASADS";
@@ -136,13 +152,13 @@ export default function CondoInspection() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://asads.ca/"
+          "item": "https://www.asads.ca/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Services",
-          "item": "https://asads.ca/services"
+          "item": "https://www.asads.ca/services"
         },
         {
           "@type": "ListItem",
@@ -167,9 +183,9 @@ export default function CondoInspection() {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonical} />
-        <script type="application/ld+json">
-          {JSON.stringify(schemas)}
-        </script>
+        {schemas.map((schema, i) => (
+          <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
+        ))}
       </Helmet>
 
       {/* HERO */}
@@ -303,25 +319,21 @@ export default function CondoInspection() {
                 </Link>.
               </p>
 
-              {/* PATCH 3: Service Areas */}
+              {/* Service Areas */}
               <div>
                 <h2 className="font-heading text-3xl mb-6">
                   Condo & Townhome Inspections Across Toronto & the GTA
                 </h2>
-
                 <p className="text-muted-foreground mb-4">
-                  ASADS provides condo and townhome inspections throughout Toronto and the
-                  Greater Toronto Area, including:
+                  ASADS provides condo and townhome inspections throughout Toronto and the Greater Toronto Area.
                 </p>
-
-                <ul className="grid sm:grid-cols-2 gap-2 text-muted-foreground">
-                  <li>Toronto (Downtown, North York, Etobicoke, Scarborough)</li>
-                  <li>Mississauga</li>
-                  <li>Vaughan</li>
-                  <li>Markham</li>
-                  <li>Richmond Hill</li>
-                  <li>Oakville & Burlington</li>
-                </ul>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                  {featuredLocations.map((loc) => (
+                    <Link key={loc.slug} to={`/locations/${loc.slug}`} className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 transition-colors text-sm text-foreground">
+                      <MapPin className="h-4 w-4 text-primary flex-shrink-0" />{loc.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
 

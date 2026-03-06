@@ -865,7 +865,7 @@
              {featuredLocations.map((loc) => (
                <Link
                  key={loc.slug}
-                 to={`/locations/home-inspection-${loc.slug}`}
+                 to={`/locations/${loc.slug}`}
                  className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
                >
                  <MapPin className="h-4 w-4 text-primary flex-shrink-0" aria-hidden="true" />
