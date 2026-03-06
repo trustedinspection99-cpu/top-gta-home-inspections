@@ -67,6 +67,24 @@
     
     <div id="root"></div>
 
+    <script>
+      window.onerror = function(msg, src, line, col, err) {
+        document.getElementById('root').innerHTML =
+          '<div style="padding:40px;font-family:monospace;color:red">' +
+          '<h2>JS Error (send to support):</h2><pre>' +
+          (msg || '') + '\n' + (src || '') + ':' + line +
+          '\n\n' + ((err && err.stack) || '') +
+          '</pre></div>';
+      };
+      window.addEventListener('unhandledrejection', function(e) {
+        document.getElementById('root').innerHTML =
+          '<div style="padding:40px;font-family:monospace;color:red">' +
+          '<h2>Unhandled Promise (send to support):</h2><pre>' +
+          (e.reason || '') + '\n' + ((e.reason && e.reason.stack) || '') +
+          '</pre></div>';
+      });
+    </script>
+
     <script type="module" src="/src/main.tsx"></script>
 
     <!-- Noscript Fallback Navigation for Crawlers -->
