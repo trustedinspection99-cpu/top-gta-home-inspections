@@ -127,6 +127,7 @@ export const blogPostsData: BlogPost[] = [
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What This Means for Buyers</h2>
       <p class="mb-4">Finding issues during an inspection doesn't mean you shouldn't buy the home. It means you can make an informed decision, budget for repairs, and negotiate with the seller. Knowledge is power in real estate transactions.</p>
+      <p class="mb-4">Concerned about these issues in your Toronto home? Book a <a href="/services/pre-purchase" class="text-primary underline font-medium">certified pre-purchase home inspection</a>. Our inspectors know Toronto's housing stock inside out. <a href="/booking" class="text-primary underline font-medium">Schedule online today.</a></p>
     `,
   },
   {
@@ -227,6 +228,7 @@ export const blogPostsData: BlogPost[] = [
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When to Test</h2>
       <p class="mb-4">Health Canada recommends testing every home. Consider testing when buying or selling, after major renovations, or if you've never tested before. Regular testing every few years is also advisable as radon levels can change over time.</p>
+      <p class="mb-4">Protect your family — book <a href="/services/radon-testing" class="text-primary underline font-medium">certified radon testing in Ontario</a> with ASADS. Long-term Health Canada-compliant lab reports. <a href="/booking" class="text-primary underline font-medium">Book online today.</a></p>
     `,
   },
   {
@@ -367,6 +369,7 @@ export const blogPostsData: BlogPost[] = [
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p class="mb-4">Thermal imaging adds significant value to home inspections by revealing problems that would be impossible to detect visually. This technology helps protect buyers from hidden issues and provides valuable information for maintenance and energy improvements.</p>
+      <p class="mb-4">Add <a href="/services/thermal-imaging" class="text-primary underline font-medium">thermal imaging to your home inspection</a> for complete coverage. Available standalone or combined with any <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase inspection</a>. <a href="/booking" class="text-primary underline font-medium">Book today.</a></p>
     `,
   },
   {
@@ -436,6 +439,7 @@ export const blogPostsData: BlogPost[] = [
         <li>Reference when selling</li>
         <li>Insurance claims documentation</li>
       </ul>
+      <p class="mb-4">Ready for your inspection? Book a <a href="/services/pre-purchase" class="text-primary underline font-medium">certified pre-purchase home inspection</a> with ASADS and receive your same-day digital report. <a href="/pricing" class="text-primary underline font-medium">View pricing</a> or <a href="/booking" class="text-primary underline font-medium">book online.</a></p>
     `,
   },
   {
@@ -506,6 +510,7 @@ export const blogPostsData: BlogPost[] = [
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When to Call Professionals</h2>
       <p class="mb-4">If you find mold covering more than about 10 square feet, or if mold returns after cleaning, it's time to call in professionals. A mold inspection can identify the source of moisture and the extent of contamination.</p>
+      <p class="mb-4">Suspect mold in your home? Our <a href="/services/mold-inspection" class="text-primary underline font-medium">mold inspection service</a> includes air and surface sampling with accredited lab analysis. <a href="/booking" class="text-primary underline font-medium">Book a mold inspection today.</a></p>
     `,
   },
   {
@@ -569,6 +574,7 @@ export const blogPostsData: BlogPost[] = [
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p class="mb-4">A professional inspection of your new home is an investment that can save you thousands in repairs that should be covered by your builder's warranty. Don't assume new means perfect.</p>
+      <p class="mb-4">Don't skip the inspection on your new build. Book a <a href="/services/new-construction" class="text-primary underline font-medium">new construction home inspection</a> with ASADS — phase and final walkthroughs across Ontario. <a href="/booking" class="text-primary underline font-medium">Schedule today.</a></p>
     `,
   },
   {
@@ -694,6 +700,7 @@ export const blogPostsData: BlogPost[] = [
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p class="mb-4">If you own or are buying an older Toronto home, understanding asbestos risks is important. Testing before renovations protects your health and ensures proper handling of hazardous materials.</p>
+      <p class="mb-4">Buying or renovating a pre-1990 home? Book a certified <a href="/services/asbestos-testing" class="text-primary underline font-medium">asbestos inspection and testing</a> in Ontario. O.Reg 278/05 compliant sampling and accredited lab analysis. <a href="/booking" class="text-primary underline font-medium">Book today.</a></p>
     `,
   },
   {
@@ -780,6 +787,7 @@ export const blogPostsData: BlogPost[] = [
         <li>Power wash deck and siding</li>
         <li>Apply deck sealant if needed</li>
       </ul>
+      <p class="mb-4">Spring is the ideal time for a home inspection. Book a <a href="/services/pre-purchase" class="text-primary underline font-medium">certified home inspection</a> or explore our <a href="/services/mold-inspection" class="text-primary underline font-medium">mold inspection</a> and <a href="/services/air-quality" class="text-primary underline font-medium">air quality testing</a> services. <a href="/booking" class="text-primary underline font-medium">Schedule today.</a></p>
     `,
   },
   {
@@ -915,6 +923,7 @@ export const blogPostsData: BlogPost[] = [
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Know When to Walk Away</h2>
       <p class="mb-4">Sometimes the inspection reveals problems that make the home a bad investment. Major structural issues, environmental contamination, or problems the seller won't address may be deal-breakers. Don't let emotions override good judgment.</p>
+      <p class="mb-4">Get the report you need to negotiate with confidence. Book a <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase home inspection</a> with same-day digital reports. <a href="/pricing" class="text-primary underline font-medium">View pricing</a> or <a href="/booking" class="text-primary underline font-medium">book online today.</a></p>
     `,
   },
   {
@@ -1062,6 +1071,7 @@ export const blogPostsData: BlogPost[] = [
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Add Thermal Imaging to Your Inspection</h2>
       <p class="mb-4">At ASADS Home Inspection, we offer thermal imaging as an add-on service to any of our standard inspections. For new construction homes, we strongly recommend it to verify insulation installation and identify any thermal bypasses before they become long-term energy drains.</p>
       <p class="mb-4">Contact us at (647) 801-9311 to add thermal imaging to your next home inspection.</p>
+      <p class="mb-4">Book <a href="/services/thermal-imaging" class="text-primary underline font-medium">infrared thermal imaging</a> standalone or add it to any <a href="/services/pre-purchase" class="text-primary underline font-medium">home inspection</a>. <a href="/pricing" class="text-primary underline font-medium">See pricing</a> or <a href="/booking" class="text-primary underline font-medium">book today.</a></p>
     `,
   },
   {
@@ -1183,6 +1193,7 @@ export const blogPostsData: BlogPost[] = [
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your Inspection Today</h2>
       <p class="mb-4">Ready to get your home inspection scheduled? Contact ASADS Home Inspection at (647) 801-9311 or book online. We serve the entire Greater Toronto Area with same-day reporting and flexible scheduling.</p>
+      <p class="mb-4">Ready to book? Learn about our <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase inspection service</a>, <a href="/pricing" class="text-primary underline font-medium">view transparent pricing</a>, or <a href="/booking" class="text-primary underline font-medium">book your inspection online today.</a></p>
     `,
   },
   {
@@ -1254,6 +1265,7 @@ export const blogPostsData: BlogPost[] = [
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Bottom Line</h2>
       <p class="mb-4">Aluminum wiring is common, manageable, and not a reason to automatically walk away from a home — but it must be identified, understood, and properly remediated. A home inspection that includes thermal imaging of the electrical system is the best way to assess the current condition of aluminum wiring connections and determine the scope of remediation needed before you commit to a purchase. Contact ASADS at (647) 801-9311 to book a pre-purchase inspection with thermal imaging included.</p>
+      <p class="mb-4">Buying an older Toronto home? Our <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase inspection</a> includes electrical panel evaluation and <a href="/services/thermal-imaging" class="text-primary underline font-medium">thermal imaging</a> to detect aluminum wiring arc faults. <a href="/booking" class="text-primary underline font-medium">Book today.</a></p>
     `,
   },
   {
@@ -1319,6 +1331,7 @@ export const blogPostsData: BlogPost[] = [
         <li>Do not proceed without confirming your insurer will bind full coverage including water damage</li>
       </ul>
       <p class="mb-4">ASADS inspectors document KITEC findings with photos and provide you with a written report you can use in negotiations. Book your pre-purchase inspection today at (647) 801-9311.</p>
+      <p class="mb-4">Worried about Kitec plumbing? Our <a href="/services/pre-purchase" class="text-primary underline font-medium">home inspection</a> identifies Kitec pipe materials before you buy. <a href="/booking" class="text-primary underline font-medium">Book a certified inspection today.</a></p>
     `,
   },
   {
@@ -1392,6 +1405,7 @@ export const blogPostsData: BlogPost[] = [
         <li>Address the root cause (air sealing and insulation) as a condition of the remediation scope — otherwise mold will return</li>
       </ul>
       <p class="mb-4">Call ASADS at (647) 801-9311 to book an attic mold inspection with thermal imaging anywhere in the GTA. Same-day service available.</p>
+      <p class="mb-4">Ice dams and attic moisture are serious in Ontario winters. Book a <a href="/services/thermal-imaging" class="text-primary underline font-medium">thermal imaging inspection</a> to detect hidden moisture, or a <a href="/services/mold-inspection" class="text-primary underline font-medium">mold inspection</a> if you suspect growth. <a href="/booking" class="text-primary underline font-medium">Schedule today.</a></p>
     `,
   },
   {
@@ -1444,6 +1458,7 @@ export const blogPostsData: BlogPost[] = [
         <li>Factor ongoing risk: if you proceed without immediate re-wire, you are living with a known hazard — ensure your smoke detectors are current and interconnected</li>
       </ul>
       <p class="mb-4">ASADS inspectors document all visible knob and tube wiring with photos and provide a written assessment of condition and extent. Book your inspection at (647) 801-9311.</p>
+      <p class="mb-4">Buying an older Ontario home? Our <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase inspection</a> identifies knob-and-tube wiring, aluminum wiring, and other electrical hazards. <a href="/booking" class="text-primary underline font-medium">Book today.</a></p>
     `,
   },
   {
@@ -1508,6 +1523,7 @@ export const blogPostsData: BlogPost[] = [
         <li>In all cases, do not rely solely on a seller-provided contractor's assessment — get independent engineering and contractor quotes</li>
       </ul>
       <p class="mb-4">Book a pre-purchase inspection with ASADS at (647) 801-9311 to get a thorough foundation evaluation with photos and clear written recommendations before you commit to a purchase.</p>
+      <p class="mb-4">Concerned about foundation cracks? Our <a href="/services/pre-purchase" class="text-primary underline font-medium">certified home inspection</a> includes a thorough structural assessment. <a href="/booking" class="text-primary underline font-medium">Book today</a> or <a href="/contact" class="text-primary underline font-medium">contact us</a> with questions.</p>
     `,
   },
   {
@@ -1560,6 +1576,7 @@ export const blogPostsData: BlogPost[] = [
         <li>Address the moisture source — air sealing, exhaust fan routing, vapour barriers, HVAC maintenance — not just the visible mold</li>
       </ul>
       <p class="mb-4">Book a certified mold inspection with ASADS across Toronto, Mississauga, Brampton, Markham, Oshawa, and all GTA cities. Call (647) 801-9311 or book online.</p>
+      <p class="mb-4">Hidden mold is more common than you think. Book a <a href="/services/mold-inspection" class="text-primary underline font-medium">professional mold inspection</a> with air sampling and accredited lab analysis. Also consider <a href="/services/air-quality" class="text-primary underline font-medium">indoor air quality testing</a>. <a href="/booking" class="text-primary underline font-medium">Book today.</a></p>
     `,
   },
   {
@@ -1632,6 +1649,7 @@ export const blogPostsData: BlogPost[] = [
         <li>Full DSS covering all 11 designated substances: $500–$1,500 for residential; $1,500–$5,000+ for commercial properties</li>
       </ul>
       <p class="mb-4">The cost of a DSS is trivial relative to the fines, liability, and worker compensation claims that can result from proceeding without one. Contact ASADS at (647) 801-9311 to arrange a designated substance assessment for your renovation or demolition project anywhere in the GTA.</p>
+      <p class="mb-4">Planning a renovation? Book a certified <a href="/services/asbestos-testing" class="text-primary underline font-medium">asbestos inspection and designated substance survey</a> before work begins. O.Reg 278/05 compliant reports across Ontario. <a href="/booking" class="text-primary underline font-medium">Schedule today.</a></p>
     `,
   },
   {
@@ -1698,6 +1716,7 @@ export const blogPostsData: BlogPost[] = [
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is a Home Inspection Worth the Cost?</h2>
       <p class="mb-4">In short: almost always. A home inspection that identifies $5,000 in needed repairs on a $900,000 purchase has paid for itself 10 times over. More importantly, an inspection that reveals a major issue — foundation movement, extensive mold, failed sewer line — may save you from a catastrophic purchase that would cost far more than the inspection fee to resolve. The question is not whether to get an inspection — it's whether to get a good one.</p>
+      <p class="mb-4">See exact pricing at our <a href="/pricing" class="text-primary underline font-medium">home inspection pricing page</a>, or <a href="/booking" class="text-primary underline font-medium">book your inspection online</a>. Questions? <a href="/contact" class="text-primary underline font-medium">Contact us</a> for a custom quote.</p>
     `,
   },
   {
@@ -1763,6 +1782,7 @@ export const blogPostsData: BlogPost[] = [
         <li>Inspectors who do not welcome client attendance</li>
       </ul>
       <p class="mb-4">ASADS home inspectors are HCRA licensed, fully insured, and include thermal imaging with every pre-purchase inspection. Same-day reports and bilingual service available across Toronto, Mississauga, Brampton, Markham, Oshawa, Vaughan, and the entire GTA. Book at (647) 801-9311.</p>
+      <p class="mb-4">ASADS inspectors are OAHI-certified and licensed under Ontario's Home Inspection Act. <a href="/about" class="text-primary underline font-medium">Learn about our team</a>, read our <a href="/testimonials" class="text-primary underline font-medium">500+ verified reviews</a>, or <a href="/booking" class="text-primary underline font-medium">book your inspection today.</a></p>
     `,
   },
   {
@@ -1824,6 +1844,7 @@ export const blogPostsData: BlogPost[] = [
         <li><strong>Lead paint in areas of planned renovation:</strong> requires lead-safe work practices (wet methods, HEPA vacuum, containment) and proper disposal under Ontario regulations</li>
       </ul>
       <p class="mb-4">Book a lead paint XRF assessment with ASADS across Toronto, Mississauga, Brampton, Etobicoke, and the GTA. Call (647) 801-9311.</p>
+      <p class="mb-4">Buying a pre-1980 Toronto home? Book certified <a href="/services/lead-paint-testing" class="text-primary underline font-medium">lead paint testing</a> with accredited lab analysis. Add it to any <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase inspection</a>. <a href="/booking" class="text-primary underline font-medium">Book today.</a></p>
     `,
   },
   {
@@ -1877,6 +1898,7 @@ export const blogPostsData: BlogPost[] = [
         <li>The remediation area is safe for re-occupancy and reconstruction</li>
       </ul>
       <p class="mb-4">For real estate transactions, a clearance certificate is essential documentation confirming the remediation was successful — and that you won't face recurrence after closing. Call (647) 801-9311 to book a post-remediation clearance test across the GTA.</p>
+      <p class="mb-4">Stop mold from returning. Book a <a href="/services/mold-inspection" class="text-primary underline font-medium">post-remediation mold inspection</a> or <a href="/services/air-quality" class="text-primary underline font-medium">indoor air quality test</a> to confirm the problem is resolved. <a href="/booking" class="text-primary underline font-medium">Schedule today.</a></p>
     `,
   },
   {
@@ -1937,6 +1959,7 @@ export const blogPostsData: BlogPost[] = [
         <li>Book a post-mitigation retest 30 days after installation to confirm effectiveness before releasing any holdback</li>
       </ul>
       <p class="mb-4">ASADS provides 48-hour electronic radon testing as a standalone service or add-on to any pre-purchase inspection across Toronto and the GTA. Results are included in the inspection report with Health Canada guideline comparisons. Call (647) 801-9311 to book.</p>
+      <p class="mb-4">Protect your family from radon. Book <a href="/services/radon-testing" class="text-primary underline font-medium">certified radon testing in Ontario</a> — long-term Health Canada compliant testing available standalone or as an add-on. <a href="/booking" class="text-primary underline font-medium">Book today.</a></p>
     `,
   },
   {
@@ -1993,6 +2016,7 @@ export const blogPostsData: BlogPost[] = [
         <li>Obtain a written asbestos inventory report for your insurer's files — this documentation is your protection</li>
       </ul>
       <p class="mb-4">ASADS provides WSIB-certified asbestos inspections and lab reports accepted by all major Ontario insurance providers. Book at (647) 801-9311 or online. Service across Toronto, Mississauga, Brampton, Markham, Oshawa, and all GTA cities.</p>
+      <p class="mb-4">Get the documentation your insurer requires. Book a certified <a href="/services/asbestos-testing" class="text-primary underline font-medium">asbestos inspection and survey</a> — O.Reg 278/05 compliant reports accepted by Ontario insurers. <a href="/booking" class="text-primary underline font-medium">Schedule today.</a></p>
     `,
   },
   {
@@ -2050,6 +2074,7 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">In Ontario, once a seller possesses a home inspection report, they are aware of any deficiencies documented in it. Sellers should discuss disclosure obligations with their real estate lawyer and agent. The general principle is that material latent defects (hidden defects that are not apparent on reasonable inspection and that affect the home's habitability or value significantly) must be disclosed. A pre-listing inspection that identifies such defects means the seller is now aware of them.</p>
       <p class="mb-4">This is not a reason to avoid a pre-listing inspection — it is a reason to address the issues found. Proactive disclosure of a known, repaired problem is far better from a legal risk standpoint than concealment of an unknown problem that a buyer discovers post-closing.</p>
       <p class="mb-4">Book your pre-listing inspection with ASADS at (647) 801-9311. Thermal imaging included. Same-day report. Serving all GTA cities.</p>
+      <p class="mb-4">Ready to list with confidence? Book a <a href="/services/pre-listing" class="text-primary underline font-medium">pre-listing home inspection</a> with ASADS. Same-day reports and seller support across Ontario. <a href="/booking" class="text-primary underline font-medium">Book today.</a></p>
     `,
   },
   {
@@ -2114,6 +2139,7 @@ export const blogPostsData: BlogPost[] = [
         <li><strong>Radon testing:</strong> primarily relevant for ground-floor and lower-floor units</li>
       </ul>
       <p class="mb-4">ASADS performs pre-purchase condo inspections across all Toronto neighbourhoods and GTA municipalities including Mississauga, Brampton, Vaughan, Richmond Hill, Markham, and Oshawa. Call (647) 801-9311 or book online. Same-day reports delivered in PDF format with full photographic documentation.</p>
+      <p class="mb-4">Book a <a href="/services/condo" class="text-primary underline font-medium">condo inspection in Toronto</a> with ASADS. Specialist knowledge of fan coil units, balcony membranes, and common element issues. <a href="/pricing" class="text-primary underline font-medium">View pricing</a> or <a href="/booking" class="text-primary underline font-medium">book online.</a></p>
     `,
   },
   {
