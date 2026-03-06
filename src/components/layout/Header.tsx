@@ -28,6 +28,18 @@ export function Header() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
+              <Link to="/services" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", location.pathname.startsWith("/services") && "bg-accent/50")}>Services</Link>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <Link to="/locations" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", location.pathname.startsWith("/locations") && "bg-accent/50")}>Locations</Link>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <Link to="/pricing" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", location.pathname === "/pricing" && "bg-accent/50")}>Pricing</Link>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
               <Link to="/about" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", location.pathname === "/about" && "bg-accent/50")}>About</Link>
             </NavigationMenuItem>
 
@@ -70,6 +82,7 @@ export function Header() {
             <Link to="/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
             <Link to="/services" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
             <Link to="/locations" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Locations</Link>
+            <Link to="/pricing" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
             <Link to="/about" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
             <Link to="/blog" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
             <Link to="/testimonials" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Reviews</Link>

@@ -292,13 +292,13 @@ export default function CondoInspection() {
               <p>
                 For buyers concerned about specific risks, you may also want to review our
                 related inspection services, including{" "}
-                <Link to="/services/kitec-plumbing-inspection" className="text-primary underline">
-                  Kitec plumbing inspections
+                <Link to="/blog/kitec-plumbing-toronto-guide" className="text-primary underline">
+                  Kitec plumbing guide
                 </Link>,{" "}
-                <Link to="/services/thermal-imaging-inspection" className="text-primary underline">
+                <Link to="/services/thermal-imaging" className="text-primary underline">
                   thermal imaging inspections
                 </Link>, and{" "}
-                <Link to="/services/hvac-inspection" className="text-primary underline">
+                <Link to="/services/pre-purchase" className="text-primary underline">
                   HVAC system inspections
                 </Link>.
               </p>
