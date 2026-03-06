@@ -42,8 +42,8 @@ const featuredLocations = [
 ];
 
 const title = "Pre-Listing Home Inspection";
-const metaTitle = "Pre-Listing Home Inspection Ontario | Sell for More | ASADS";
-const metaDescription = "Maximize your GTA home sale price with a professional Pre-Listing Audit. Identify defects early, provide accurate SPIS disclosures, and secure firm offers. Same-day reports.";
+const metaTitle = "Pre-Listing Inspection & Pre-Sale Home Inspection Ontario | Seller Inspection | ASADS";
+const metaDescription = "Maximize your GTA home sale with a certified pre-listing inspection and pre-sale home inspection. Seller inspection identifies defects before buyers do — accurate SPIS disclosures, firm offers, same-day reports.";
 const price = "$450-$750";
 const duration = "2-4 Hours";
 
@@ -234,11 +234,11 @@ export default function PreListing() {
               </div>
               <div>
                 <p className="text-primary-foreground/80 text-sm font-medium uppercase tracking-wider">Equity Protection Audit</p>
-                <h1 className="font-heading text-3xl md:text-5xl font-bold">Pre-Listing Home Inspection</h1>
+                <h1 className="font-heading text-3xl md:text-5xl font-bold">Pre-Listing Inspection & Pre-Sale Home Inspection</h1>
               </div>
             </div>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl">
-              Don't let a buyer's inspector control your price. Our Pre-Listing Audit identifies "deal-breakers" early, allowing you to control the narrative and secure higher offers.
+              Don't let a buyer's inspector control your price. Our pre-listing inspection and pre-sale home inspection identifies "deal-breakers" early, allowing sellers to control the narrative and secure higher offers.
             </p>
             <div className="flex flex-wrap gap-6 mb-8">
               <div className="flex items-center gap-2"><Clock className="h-5 w-5" /><span>{duration}</span></div>

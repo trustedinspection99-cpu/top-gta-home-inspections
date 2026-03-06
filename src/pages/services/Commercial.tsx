@@ -46,8 +46,8 @@ const featuredLocations = [
 ];
 
 const title = "Commercial Building Inspection";
-const metaTitle = "Commercial Building Inspection Toronto | PCA & Phase 1 ESA Specialists | ASADS";
-const metaDescription = "Expert Property Condition Assessments (PCA) and Phase 1 ESA in Toronto & GTA. ASTM E2018-15 compliant, detailed CapEx forecasting, MEP audits, structural evaluations, and environmental site assessments for commercial real estate.";
+const metaTitle = "Commercial Building Inspection Toronto | Building Inspection & PCA | ASADS";
+const metaDescription = "Expert commercial building inspection and Property Condition Assessments (PCA) in Toronto & GTA. Commercial inspection for offices, retail, and industrial — ASTM E2018-15 compliant. CapEx forecasting, MEP audits, Phase 1 ESA, and structural evaluations.";
 const price = "Quote Based";
 const duration = "Expedited Reporting Available";
 
@@ -524,12 +524,12 @@ export default function Commercial() {
                   ASADS Commercial Inspection Services
                 </p>
                 <h1 className="font-heading text-3xl md:text-5xl font-bold">
-                  Commercial Property Condition Assessment & Phase 1 ESA
+                  Commercial Building Inspection & Property Condition Assessment
                 </h1>
               </div>
             </div>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl">
-              Institutional-grade due diligence for commercial properties in Toronto & GTA. Identify structural, MEP, environmental, and lifecycle risks before you invest.
+              Institutional-grade commercial building inspection and due diligence for Toronto & GTA. Identify structural, MEP, environmental, and lifecycle risks before you invest. Serving Toronto, Mississauga, Hamilton, Kitchener-Waterloo, Guelph, and Cambridge.
             </p>
             <div className="flex flex-wrap gap-6 mb-8">
               <div className="flex items-center gap-2">

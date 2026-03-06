@@ -38,8 +38,8 @@ const featuredLocations = [
 ];
 
 const title = "New Construction & Tarion Warranty Inspection";
-const metaTitle = "Tarion Warranty & New Construction Inspection Toronto | ASADS";
-const metaDescription = "Professional PDI, 30-Day, and 1-Year Tarion Warranty inspections for new GTA homes. We identify builder shortcuts and structural defects before deadlines pass.";
+const metaTitle = "New Home Inspection & New Construction Inspection Toronto | Tarion Warranty | ASADS";
+const metaDescription = "Certified new home inspection and new construction inspection in Toronto & GTA. New build inspection covers PDI, 30-Day, and 1-Year Tarion Warranty deadlines. Identify builder defects before they pass.";
 const price = "Contact for Quote";
 const duration = "3-5 Hours";
 
@@ -163,11 +163,11 @@ export default function NewConstruction() {
               </div>
               <div>
                 <p className="text-primary-foreground/80 text-sm font-medium uppercase tracking-wider">Builder Quality Control</p>
-                <h1 className="font-heading text-3xl md:text-5xl font-bold">New Construction & Tarion Warranty</h1>
+                <h1 className="font-heading text-3xl md:text-5xl font-bold">New Home Inspection & New Construction Inspection</h1>
               </div>
             </div>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl">
-              New doesn't mean perfect. From PDI walkthroughs to 1-Year Tarion deadlines, we identify builder shortcuts before they become your financial burden.
+              New doesn't mean perfect. Our new build inspection covers PDI walkthroughs through to 1-Year Tarion deadlines — identifying builder shortcuts before they become your financial burden.
             </p>
             <div className="flex flex-wrap gap-6 mb-8">
               <div className="flex items-center gap-2"><Clock className="h-5 w-5" /><span>{duration}</span></div>

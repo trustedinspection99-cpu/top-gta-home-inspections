@@ -18,10 +18,10 @@ import {
 } from "lucide-react";
 
 const metaTitle =
-  "Condo & Townhome Inspection Toronto | Kitec, Fan Coil & HVAC Specialists | ASADS";
+  "Condo Inspection & Townhome Inspection Toronto | Kitec Plumbing | ASADS";
 
 const metaDescription =
-  "Certified condo & townhome inspections in Toronto and the GTA. We identify Kitec plumbing, fan coil failures, moisture intrusion, and in-suite liabilities before you buy.";
+  "Certified condo inspection and townhouse inspection in Toronto & GTA. We identify Kitec plumbing, fan coil failures, moisture intrusion, and in-suite liabilities before you buy. From $350.";
 
 const duration = "1.5 – 2.5 Hours";
 
@@ -180,14 +180,12 @@ export default function CondoInspection() {
               <Building />
             </div>
             <h1 className="font-heading text-4xl md:text-5xl font-bold">
-              Condo & Townhome Inspection
+              Condo Inspection & Townhouse Inspection Toronto
             </h1>
           </div>
 
           <p className="text-xl opacity-90 mb-8">
-            Condo ownership comes with hidden in-suite liabilities. We identify
-            plumbing failures, HVAC risks, moisture intrusion, and safety issues
-            before they become expensive surprises.
+            Condo and townhome ownership comes with hidden in-suite liabilities. Our certified condo inspection identifies Kitec plumbing, fan coil failures, moisture intrusion, and safety issues before they become expensive surprises.
           </p>
 
           <div className="flex flex-wrap gap-6 mb-10">
