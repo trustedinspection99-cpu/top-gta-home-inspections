@@ -1,140 +1,49 @@
+import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { Helmet } from "react-helmet-async";
 import { Star, Quote, MapPin, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { testimonialsData } from "@/data/testimonials";
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Sarah M.",
-    location: "Toronto",
-    rating: 5,
-    text: "ASADS was incredibly thorough with our pre-purchase inspection. They found issues we never would have noticed. The detailed report helped us negotiate $15,000 off the asking price!",
-    service: "Pre-Purchase Inspection",
-    date: "January 2024",
-    verified: true,
-  },
-  {
-    id: 2,
-    name: "Michael T.",
-    location: "Mississauga",
-    rating: 5,
-    text: "As a first-time home buyer, I was nervous about the process. The inspector took time to explain everything and even walked me through the house pointing out maintenance tips. Exceptional service!",
-    service: "Pre-Purchase Inspection",
-    date: "January 2024",
-    verified: true,
-  },
-  {
-    id: 3,
-    name: "Jennifer L.",
-    location: "Brampton",
-    rating: 5,
-    text: "Got my report within 24 hours with photos and clear explanations. Very professional service. The report was so detailed and easy to understand. Highly recommend to anyone buying a home in the GTA.",
-    service: "Pre-Purchase Inspection",
-    date: "December 2023",
-    verified: true,
-  },
-  {
-    id: 4,
-    name: "David K.",
-    location: "Vaughan",
-    rating: 5,
-    text: "Used ASADS for a pre-listing inspection. It helped me address issues before listing and my house sold in 5 days! The investment paid for itself many times over. Worth every penny.",
-    service: "Pre-Listing Inspection",
-    date: "December 2023",
-    verified: true,
-  },
-  {
-    id: 5,
-    name: "Amanda R.",
-    location: "Markham",
-    rating: 5,
-    text: "The thermal imaging inspection found a hidden water leak behind our bathroom wall. Saved us thousands in potential damage. Thank you ASADS! The technology they use is impressive.",
-    service: "Thermal Imaging",
-    date: "November 2023",
-    verified: true,
-  },
-  {
-    id: 6,
-    name: "Robert C.",
-    location: "Richmond Hill",
-    rating: 5,
-    text: "Professional, punctual, and incredibly knowledgeable. The inspector answered all my questions and helped me understand the condition of my potential new home. Would use again without hesitation.",
-    service: "Pre-Purchase Inspection",
-    date: "November 2023",
-    verified: true,
-  },
-  {
-    id: 7,
-    name: "Emily W.",
-    location: "Oakville",
-    rating: 5,
-    text: "We hired ASADS for a new construction inspection and they found several deficiencies that the builder had missed. Their attention to detail saved us from major headaches down the road.",
-    service: "New Construction Inspection",
-    date: "October 2023",
-    verified: true,
-  },
-  {
-    id: 8,
-    name: "James P.",
-    location: "Burlington",
-    rating: 5,
-    text: "The radon testing service was quick and informative. They explained the results clearly and provided recommendations. Very happy with the service and professionalism.",
-    service: "Radon Testing",
-    date: "October 2023",
-    verified: true,
-  },
-  {
-    id: 9,
-    name: "Lisa H.",
-    location: "Ajax",
-    rating: 5,
-    text: "ASADS inspected our condo before purchase. They were thorough and found HVAC issues that weren't disclosed. Their expertise in condo inspections is unmatched in the GTA.",
-    service: "Condo Inspection",
-    date: "September 2023",
-    verified: true,
-  },
-  {
-    id: 10,
-    name: "Thomas B.",
-    location: "Pickering",
-    rating: 5,
-    text: "Excellent commercial property inspection. The detailed report was exactly what we needed for our due diligence. Professional team with great communication throughout.",
-    service: "Commercial Inspection",
-    date: "September 2023",
-    verified: true,
-  },
-  {
-    id: 11,
-    name: "Nancy G.",
-    location: "Whitby",
-    rating: 5,
-    text: "Had ASADS do a mold inspection after noticing a musty smell. They identified the source and provided clear remediation recommendations. Fast, professional, and thorough.",
-    service: "Mold Inspection",
-    date: "August 2023",
-    verified: true,
-  },
-  {
-    id: 12,
-    name: "Kevin S.",
-    location: "Milton",
-    rating: 5,
-    text: "Best investment we made during our home buying process. The inspector was friendly, knowledgeable, and patient with all our questions. The report was delivered same day!",
-    service: "Pre-Purchase Inspection",
-    date: "August 2023",
-    verified: true,
-  },
+const PAGE_SIZE = 24;
+
+const SERVICE_FILTERS = [
+  "All Reviews",
+  "Pre-Purchase Inspection",
+  "Pre-Listing Inspection",
+  "New Construction Inspection",
+  "Condo Inspection",
+  "Mold Inspection",
+  "Radon Testing",
+  "WETT Inspection",
+  "Thermal Imaging",
+  "Asbestos Testing",
+  "Lead Paint Testing",
+  "Sewer Scope Inspection",
+  "Air Quality Testing",
 ];
 
 const stats = [
-  { value: "2,000+", label: "Inspections Completed" },
+  { value: "2,500+", label: "Inspections Completed" },
   { value: "4.9", label: "Average Rating" },
   { value: "98%", label: "Would Recommend" },
   { value: "24hr", label: "Report Delivery" },
 ];
 
 export default function Testimonials() {
+  const [activeFilter, setActiveFilter] = useState("All Reviews");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+
+  const filtered = activeFilter === "All Reviews"
+    ? testimonialsData
+    : testimonialsData.filter(t => t.service === activeFilter);
+
+  const visible = filtered.slice(0, visibleCount);
+  const hasMore = visibleCount < filtered.length;
+
+  const schemaReviews = testimonialsData.slice(0, 50);
+
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -143,17 +52,17 @@ export default function Testimonials() {
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": testimonials.length.toString(),
+      "reviewCount": testimonialsData.length.toString(),
       "bestRating": "5",
       "worstRating": "1"
     },
-    "review": testimonials.map(t => ({
+    "review": schemaReviews.map(t => ({
       "@type": "Review",
       "author": {
         "@type": "Person",
         "name": t.name
       },
-      "datePublished": new Date(Date.parse(t.date)).toISOString().split('T')[0],
+      "datePublished": new Date(Date.parse(t.date + " 1")).toISOString().split("T")[0],
       "reviewBody": t.text,
       "reviewRating": {
         "@type": "Rating",
@@ -194,19 +103,19 @@ export default function Testimonials() {
   return (
     <Layout>
       <Helmet>
-        <title>Customer Testimonials | ASADS Home Inspection Reviews</title>
-        <meta name="description" content="Read verified customer reviews from GTA homeowners who trusted ASADS for home inspections. 4.9 stars from 163+ Ontario clients. See what buyers & sellers say." />
+        <title>Customer Testimonials | 500+ ASADS Home Inspection Reviews</title>
+        <meta name="description" content="Read 500+ verified customer reviews from GTA homeowners who trusted ASADS for home inspections. 4.9 stars across Toronto, Mississauga, Brampton, Hamilton & Ontario." />
         <link rel="canonical" href="https://www.asads.ca/testimonials" />
-        <meta property="og:title" content="Customer Testimonials | ASADS Home Inspection Reviews" />
-        <meta property="og:description" content="Read verified customer reviews from GTA homeowners who trusted ASADS for home inspections. 4.9 stars from 163+ Ontario clients." />
+        <meta property="og:title" content="Customer Testimonials | 500+ ASADS Home Inspection Reviews" />
+        <meta property="og:description" content="Read 500+ verified customer reviews from GTA homeowners who trusted ASADS for home inspections. 4.9 stars across Ontario." />
         <meta property="og:url" content="https://www.asads.ca/testimonials" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.asads.ca/images/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Customer Testimonials | ASADS Home Inspection Reviews" />
-        <meta name="twitter:description" content="Read verified customer reviews from GTA homeowners. 4.9 stars from 163+ clients across Ontario." />
+        <meta name="twitter:title" content="Customer Testimonials | 500+ ASADS Home Inspection Reviews" />
+        <meta name="twitter:description" content="Read 500+ verified customer reviews from GTA homeowners. 4.9 stars across Ontario." />
         <meta name="twitter:image" content="https://www.asads.ca/images/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify(reviewSchema)}
@@ -215,6 +124,7 @@ export default function Testimonials() {
           {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16 md:py-24">
         <div className="container">
@@ -223,7 +133,7 @@ export default function Testimonials() {
               Customer Testimonials
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Don't just take our word for it. See what our clients say about their experience with ASADS Home Inspection.
+              Over 500 verified reviews from homeowners and buyers across the GTA and Ontario who trusted ASADS for their property decisions.
             </p>
             <div className="flex items-center justify-center gap-2 mb-4">
               {[...Array(5)].map((_, i) => (
@@ -231,7 +141,7 @@ export default function Testimonials() {
               ))}
             </div>
             <p className="text-muted-foreground">
-              Based on 500+ verified reviews
+              4.9 stars based on 500+ verified reviews
             </p>
           </div>
         </div>
@@ -253,21 +163,52 @@ export default function Testimonials() {
         </div>
       </section>
 
+      {/* Filter Buttons */}
+      <section className="py-8 border-b border-border/50">
+        <div className="container">
+          <div className="flex flex-wrap gap-2 justify-center">
+            {SERVICE_FILTERS.map((filter) => (
+              <button
+                key={filter}
+                onClick={() => {
+                  setActiveFilter(filter);
+                  setVisibleCount(PAGE_SIZE);
+                }}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  activeFilter === filter
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                }`}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+          <p className="text-center text-sm text-muted-foreground mt-4">
+            Showing {visible.length} of {filtered.length} reviews
+            {activeFilter !== "All Reviews" && ` for ${activeFilter}`}
+          </p>
+        </div>
+      </section>
+
       {/* Testimonials Grid */}
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
+            {visible.map((testimonial) => (
               <div
                 key={testimonial.id}
                 className="bg-background rounded-xl p-6 shadow-sm border hover:shadow-lg transition-shadow relative"
               >
                 <Quote className="absolute top-4 right-4 h-8 w-8 text-primary/10" />
-                
+
                 {/* Rating */}
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+                  ))}
+                  {testimonial.rating < 5 && [...Array(5 - testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 text-muted-foreground/30" />
                   ))}
                 </div>
 
@@ -304,6 +245,19 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
+
+          {/* Load More */}
+          {hasMore && (
+            <div className="mt-12 text-center">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => setVisibleCount(prev => prev + PAGE_SIZE)}
+              >
+                Load More Reviews ({filtered.length - visibleCount} remaining)
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -332,7 +286,7 @@ export default function Testimonials() {
               Ready to Experience the Difference?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Join thousands of satisfied homeowners who trusted ASADS for their home inspection needs.
+              Join 500+ satisfied homeowners who trusted ASADS for their home inspection needs across Ontario.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
