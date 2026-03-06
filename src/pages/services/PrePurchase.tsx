@@ -21,18 +21,18 @@
 
  // Featured locations for service pages internal linking
  const featuredLocations = [
-   { name: "Toronto", slug: "toronto" },
-   { name: "Mississauga", slug: "mississauga" },
-   { name: "Brampton", slug: "brampton" },
-   { name: "Vaughan", slug: "vaughan" },
-   { name: "Markham", slug: "markham" },
-   { name: "Oakville", slug: "oakville" },
-   { name: "Hamilton", slug: "hamilton" },
-   { name: "Burlington", slug: "burlington" },
-   { name: "Richmond Hill", slug: "richmond-hill" },
-   { name: "Oshawa", slug: "oshawa" },
-   { name: "Barrie", slug: "barrie" },
-   { name: "Newmarket", slug: "newmarket" },
+   { name: "Toronto", slug: "home-inspection-toronto" },
+   { name: "Mississauga", slug: "home-inspection-mississauga" },
+   { name: "Brampton", slug: "home-inspection-brampton" },
+   { name: "Vaughan", slug: "home-inspection-vaughan" },
+   { name: "Markham", slug: "home-inspection-markham" },
+   { name: "Oakville", slug: "home-inspection-oakville" },
+   { name: "Hamilton", slug: "home-inspection-hamilton" },
+   { name: "Burlington", slug: "home-inspection-burlington" },
+   { name: "Richmond Hill", slug: "home-inspection-richmond-hill" },
+   { name: "Oshawa", slug: "home-inspection-oshawa" },
+   { name: "Barrie", slug: "home-inspection-barrie" },
+   { name: "Newmarket", slug: "home-inspection-newmarket" },
  ];
 
  const title = "Pre-Purchase Home Inspection";

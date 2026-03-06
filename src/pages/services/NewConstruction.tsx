@@ -27,14 +27,14 @@ import {
 } from "lucide-react";
 
 const featuredLocations = [
-  { name: "Toronto", slug: "toronto" },
-  { name: "Mississauga", slug: "mississauga" },
-  { name: "Brampton", slug: "brampton" },
-  { name: "Vaughan", slug: "vaughan" },
-  { name: "Markham", slug: "markham" },
-  { name: "Oakville", slug: "oakville" },
-  { name: "Milton", slug: "milton" },
-  { name: "Whitby", slug: "whitby" },
+  { name: "Toronto", slug: "home-inspection-toronto" },
+  { name: "Mississauga", slug: "home-inspection-mississauga" },
+  { name: "Brampton", slug: "home-inspection-brampton" },
+  { name: "Vaughan", slug: "home-inspection-vaughan" },
+  { name: "Markham", slug: "home-inspection-markham" },
+  { name: "Oakville", slug: "home-inspection-oakville" },
+  { name: "Milton", slug: "home-inspection-milton" },
+  { name: "Whitby", slug: "home-inspection-whitby" },
 ];
 
 const title = "New Construction & Tarion Warranty Inspection";

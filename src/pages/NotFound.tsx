@@ -37,12 +37,12 @@ const NotFound = () => {
   ];
 
   const topLocations = [
-    { name: "Toronto", href: "/locations/toronto" },
-    { name: "Mississauga", href: "/locations/mississauga" },
-    { name: "Brampton", href: "/locations/brampton" },
-    { name: "Markham", href: "/locations/markham" },
-    { name: "Vaughan", href: "/locations/vaughan" },
-    { name: "Oakville", href: "/locations/oakville" },
+    { name: "Toronto", href: "/locations/home-inspection-toronto" },
+    { name: "Mississauga", href: "/locations/home-inspection-mississauga" },
+    { name: "Brampton", href: "/locations/home-inspection-brampton" },
+    { name: "Markham", href: "/locations/home-inspection-markham" },
+    { name: "Vaughan", href: "/locations/home-inspection-vaughan" },
+    { name: "Oakville", href: "/locations/home-inspection-oakville" },
   ];
 
   return (
