@@ -110,6 +110,38 @@ export default function AsbestosTesting() {
           </div>
 
           <div>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Asbestos Inspection by City</h3>
+            <p className="text-slate-700 mb-4">
+              Asbestos risk varies significantly by era of construction and neighbourhood. Here is what our inspectors commonly find in the GTA's major cities.
+            </p>
+            <div className="space-y-4">
+              {[
+                {
+                  city: "Asbestos Inspection — Brampton",
+                  body: "Brampton experienced explosive residential growth from the 1960s through the 1990s. The older areas of downtown Brampton, Bramalea, and early Springdale developments are full of homes with popcorn ceilings, vinyl floor tiles, and pipe insulation from the asbestos era. Pre-1985 bungalows in Brampton commonly have Zonolite vermiculite in attics. O.Reg 278/05 requires testing before any renovation — and Brampton's active renovation and resale market means demand for certified inspections is high.",
+                },
+                {
+                  city: "Asbestos Inspection — Markham",
+                  body: "Markham's heritage areas — Unionville, Old Markham Village, and Thornhill — include pre-1980 homes where asbestos-containing materials are common. The older bungalow stock east of Warden Avenue and in the Cornell and Milliken Park areas often contains stipple ceiling texture, vinyl floor tile adhesive, and pipe lagging. Buyers of pre-1985 Markham homes should always include asbestos sampling as part of their due diligence.",
+                },
+                {
+                  city: "Asbestos Inspection — Mississauga",
+                  body: "Mississauga's Port Credit, Lakeview, Cooksville, and Malton neighbourhoods have significant stocks of pre-1985 housing. Asbestos was used extensively in floor tiles, acoustic ceiling coatings, and HVAC duct insulation in this era. The city's rapid 1970s development boom means a large proportion of detached and semi-detached homes in these areas require pre-renovation testing.",
+                },
+                {
+                  city: "Asbestos Inspection — Toronto",
+                  body: "Toronto's older boroughs — Etobicoke, North York, Scarborough, and East York — contain some of the GTA's highest concentrations of asbestos-era construction. Post-war bungalows from the 1950s and 1960s, apartment towers from the 1970s, and commercial properties throughout the core frequently test positive for asbestos in ceiling textures, floor underlayment, and insulation systems. Our Toronto inspectors are specialists in navigating pre-demolition asbestos surveys for both residential and light commercial properties.",
+                },
+              ].map((item) => (
+                <div key={item.city} className="p-4 bg-orange-50 border border-orange-100 rounded-xl">
+                  <h4 className="font-bold text-slate-900 mb-1">{item.city}</h4>
+                  <p className="text-sm text-slate-700">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
             <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Asbestos Testing Process</h3>
             <ol className="space-y-4">
               {[

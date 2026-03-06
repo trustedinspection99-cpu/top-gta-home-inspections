@@ -3,8 +3,8 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import { Link } from "react-router-dom";
 
 export default function MoldInspection() {
-  const pageTitle = "Mold Inspection, Testing & Assessment Toronto | Black Mold | AIHA Lab | ASADS";
-  const schemaDescription = "Certified mold inspection, mold testing, and mold assessment in Toronto & GTA. AIHA-accredited lab analysis for black mold, basement & HVAC contamination. Same-day service with written remediation scope.";
+  const pageTitle = "Mold Inspection & Mold Testing Toronto | AIHA Certified Lab | Not Remediation | ASADS";
+  const schemaDescription = "Certified mold inspection and mold testing in Toronto & GTA — independent third-party assessment, not remediation. AIHA-accredited lab analysis for black mold, basement & HVAC contamination. Air sampling, species ID, and written scope for remediation contractors.";
 
   return (
     <ServicePageTemplate
@@ -31,9 +31,13 @@ export default function MoldInspection() {
       duration="2-3 Hours + Lab Analysis"
       description={
         <div className="space-y-6">
+          <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl mb-2">
+            <p className="text-blue-900 text-sm font-medium">
+              <strong>Inspection & testing only — not remediation.</strong> ASADS is an independent third-party inspector. We do not perform mold removal, which means our assessments are fully unbiased. We provide the written scope of work that licensed remediation contractors use to quote your job.
+            </p>
+          </div>
           <p className="text-lg leading-relaxed text-slate-700">
-            Mold isn't just a property issue—it's a health risk. Our Toronto specialists go beyond visual checks, providing <strong>AIHA-accredited lab analysis</strong> and <strong>PCR DNA testing</strong> for 36+ species, including toxigenic <em>Stachybotrys</em> (Black Mold).  
-            Emergency mold inspections and same-day services are available for urgent concerns.
+            Mold isn't just a property issue — it's a health risk. Our Toronto specialists go beyond visual checks, providing <strong>AIHA-accredited lab analysis</strong> and <strong>PCR DNA testing</strong> for 36+ species, including toxigenic <em>Stachybotrys</em> (Black Mold). Emergency mold inspections and same-day services are available for urgent concerns.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
