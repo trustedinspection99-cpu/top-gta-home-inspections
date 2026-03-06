@@ -500,8 +500,223 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 7. ONTARIO FAQS */}
+      {/* 7. HOME INSPECTOR NEAR ME */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full mb-6">
+              <MapPin className="h-4 w-4" />
+              <span className="text-sm font-bold">Home Inspector Near Me</span>
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Find the Best Home Inspector Near Me in Ontario
+            </h2>
+            <div className="prose prose-lg max-w-none text-gray-600 space-y-4">
+              <p>
+                When you search for a <strong>home inspector near me</strong> in Ontario, you need more than just the closest available inspector — you need a certified professional who knows your local housing stock, understands Ontario building codes, and delivers a report you can actually act on. ASADS Home Inspection is one of Ontario's top-rated home inspection companies, serving over 100 cities and towns across the GTA and beyond.
+              </p>
+              <p>
+                Whether you're buying a pre-war bungalow in East York, a new build in Vaughan, a century home in Cobourg, or a condo in downtown Mississauga, our certified inspectors have seen it all. We bring local knowledge to every inspection — understanding that a 1950s home in Scarborough has very different concerns than a 2015 townhouse in Brampton. That local expertise is what separates a great home inspector from a generic one.
+              </p>
+              <p>
+                As one of the <strong>best home inspection companies near me</strong> for GTA residents, ASADS offers same-day bookings 7 days a week, comprehensive digital reports delivered within 24 hours, and 14 specialty services under one roof. No matter which Ontario city you're in, you can reach us at <a href="tel:6478019311" className="text-blue-700 font-semibold hover:underline">(647) 801-9311</a> or <a href="/booking" className="text-blue-700 font-semibold hover:underline">book online instantly</a>.
+              </p>
+              <p>
+                Looking for a <strong>top home inspection company near me</strong> with verified reviews? ASADS has completed over 2,000 inspections across Ontario with a 4.9-star rating and 500+ verified client reviews. Our OAHI-certified inspectors carry full E&O insurance and use professional-grade equipment including thermal imaging cameras, moisture meters, and gas detectors on every inspection — not just on request.
+              </p>
+            </div>
+            <div className="mt-8 grid sm:grid-cols-3 gap-4">
+              {[
+                { label: "Same-Day Booking", desc: "Available 7 days a week across Ontario" },
+                { label: "24-Hr Digital Report", desc: "Detailed photos, findings & recommendations" },
+                { label: "OAHI Certified", desc: "Fully insured with E&O coverage" },
+              ].map((item, i) => (
+                <div key={i} className="bg-blue-50 rounded-xl p-5 border border-blue-100">
+                  <div className="font-bold text-gray-900 mb-1">{item.label}</div>
+                  <div className="text-sm text-gray-600">{item.desc}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. WHY CHOOSE A CERTIFIED HOME INSPECTOR */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full mb-6">
+              <BadgeCheck className="h-4 w-4" />
+              <span className="text-sm font-bold">Why Certification Matters</span>
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Why Choose a Certified Home Inspector in Ontario?
+            </h2>
+            <div className="prose prose-lg max-w-none text-gray-600 space-y-4 mb-10">
+              <p>
+                In Ontario, anyone can legally call themselves a home inspector — there is no mandatory provincial licensing. That means the difference between the <strong>best home inspector</strong> and an unqualified one comes down to their certifications, training, and track record. ASADS inspectors hold OAHI (Ontario Association of Home Inspectors) certification, which requires rigorous training, field experience, and ongoing education to maintain.
+              </p>
+              <p>
+                A certified inspector follows a standardized methodology, carries Errors & Omissions (E&O) insurance, and provides legally defensible reports. This matters enormously if deficiencies are discovered after closing — a certified inspection report is your documentation. An uncertified inspection from a non-credentialed individual offers you no such protection.
+              </p>
+              <p>
+                ASADS has served Ontario homebuyers and sellers since 2009. In that time, we have developed deep expertise in Ontario's most common housing issues: knob and tube wiring in pre-1960 homes, aluminum wiring in 1970s properties, Kitec plumbing failures, ice dam damage in older attics, UFFI insulation, and foundation cracking from Ontario's freeze-thaw cycles. We find what other inspectors miss — and we explain it in plain language so you can make an informed decision.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                { title: "OAHI Certified Inspectors", desc: "Ontario's highest professional standard for home inspectors, requiring rigorous training and ongoing education." },
+                { title: "Errors & Omissions Insurance", desc: "Full E&O and liability coverage protects you if something is missed or misidentified during the inspection." },
+                { title: "15+ Years in Ontario", desc: "Over a decade of inspecting Ontario homes means we know exactly what to look for in every property type and era." },
+                { title: "200+ Point Inspection", desc: "Comprehensive evaluation of every major system and component including structure, electrical, plumbing, HVAC, and envelope." },
+                { title: "Thermal Imaging Included", desc: "We include infrared scanning on every inspection at no extra charge — revealing hidden moisture, insulation gaps, and electrical hot spots." },
+                { title: "Same-Day Reports", desc: "Receive your full digital report with photos, findings, and recommendations within 24 hours — often the same day." },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-4">
+                  <div className="bg-green-100 text-green-700 p-2 rounded-lg h-fit">
+                    <CheckCircle2 className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900 mb-1">{item.title}</div>
+                    <div className="text-gray-600 text-sm">{item.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. HOW A HOME INSPECTION WORKS */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">How a Home Inspection Works in Ontario</h2>
+              <p className="text-gray-600 text-lg">From booking to report — here's exactly what to expect</p>
+            </div>
+            <div className="space-y-6 mb-10">
+              {[
+                {
+                  step: "01",
+                  title: "Book Online or By Phone",
+                  desc: "Schedule your inspection instantly online at asads.ca/booking or call (647) 801-9311. We offer same-day and next-day appointments 7 days a week across Ontario. Tell us the property address, type, and approximate square footage — that's all we need to get you booked."
+                },
+                {
+                  step: "02",
+                  title: "The Inspection Day (2.5 – 4 Hours)",
+                  desc: "Your OAHI-certified inspector arrives on time and conducts a thorough top-to-bottom evaluation of the property. We inspect the roof, attic, foundation, structure, electrical panel, plumbing, HVAC, insulation, windows, doors, and all accessible areas. Thermal imaging and moisture scanning are included on every inspection. We encourage clients to attend — it's the best way to understand your future home."
+                },
+                {
+                  step: "03",
+                  title: "Digital Report Within 24 Hours",
+                  desc: "Your detailed report is delivered by email — typically the same day or within 24 hours of inspection completion. Reports include categorized findings (major defects, safety issues, maintenance items), photographs of every concern, and plain-language explanations. Reports are formatted to share directly with your realtor, lawyer, or contractor."
+                },
+                {
+                  step: "04",
+                  title: "Post-Inspection Support",
+                  desc: "Have questions after reading your report? Call or email us — we're happy to clarify findings, explain severity, or help you understand what a repair might involve. Our goal is to make sure you walk away fully informed, not just handed a document."
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-6 p-6 bg-gray-50 rounded-xl border">
+                  <div className="text-4xl font-black text-blue-200 leading-none min-w-[3rem]">{item.step}</div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                    <p className="text-gray-600">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="text-center">
+              <a href="/booking" className="inline-flex items-center gap-2 bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition-all">
+                Book Your Inspection Now
+                <ArrowRight size={20} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 10. ONTARIO CITIES WE SERVE — TEXT */}
+      <section className="py-20 bg-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Home Inspection Services Across Ontario
+            </h2>
+            <div className="prose prose-lg max-w-none text-gray-600 space-y-4 mb-10">
+              <p>
+                ASADS provides certified home inspections across the Greater Toronto Area and throughout Ontario. Our primary service areas include <a href="/locations/home-inspection-toronto" className="text-blue-700 hover:underline font-medium">Toronto</a>, <a href="/locations/home-inspection-mississauga" className="text-blue-700 hover:underline font-medium">Mississauga</a>, <a href="/locations/home-inspection-brampton" className="text-blue-700 hover:underline font-medium">Brampton</a>, <a href="/locations/home-inspection-vaughan" className="text-blue-700 hover:underline font-medium">Vaughan</a>, <a href="/locations/home-inspection-markham" className="text-blue-700 hover:underline font-medium">Markham</a>, <a href="/locations/home-inspection-richmond-hill" className="text-blue-700 hover:underline font-medium">Richmond Hill</a>, <a href="/locations/home-inspection-pickering" className="text-blue-700 hover:underline font-medium">Pickering</a>, <a href="/locations/home-inspection-ajax" className="text-blue-700 hover:underline font-medium">Ajax</a>, <a href="/locations/home-inspection-whitby" className="text-blue-700 hover:underline font-medium">Whitby</a>, and <a href="/locations/home-inspection-oshawa" className="text-blue-700 hover:underline font-medium">Oshawa</a> across Durham Region.
+              </p>
+              <p>
+                We also serve York Region communities including <a href="/locations/home-inspection-aurora" className="text-blue-700 hover:underline font-medium">Aurora</a>, <a href="/locations/home-inspection-newmarket" className="text-blue-700 hover:underline font-medium">Newmarket</a>, <a href="/locations/home-inspection-king-city" className="text-blue-700 hover:underline font-medium">King City</a>, <a href="/locations/home-inspection-stouffville" className="text-blue-700 hover:underline font-medium">Stouffville</a>, <a href="/locations/home-inspection-thornhill" className="text-blue-700 hover:underline font-medium">Thornhill</a>, <a href="/locations/home-inspection-kleinburg" className="text-blue-700 hover:underline font-medium">Kleinburg</a>, <a href="/locations/home-inspection-maple" className="text-blue-700 hover:underline font-medium">Maple</a>, and <a href="/locations/home-inspection-woodbridge" className="text-blue-700 hover:underline font-medium">Woodbridge</a>. Our coverage extends north to <a href="/locations/home-inspection-barrie" className="text-blue-700 hover:underline font-medium">Barrie</a>, <a href="/locations/home-inspection-orillia" className="text-blue-700 hover:underline font-medium">Orillia</a>, and <a href="/locations/home-inspection-peterborough" className="text-blue-700 hover:underline font-medium">Peterborough</a>, west to <a href="/locations/home-inspection-guelph" className="text-blue-700 hover:underline font-medium">Guelph</a>, <a href="/locations/home-inspection-kitchener" className="text-blue-700 hover:underline font-medium">Kitchener</a>, <a href="/locations/home-inspection-cambridge" className="text-blue-700 hover:underline font-medium">Cambridge</a>, and <a href="/locations/home-inspection-hamilton" className="text-blue-700 hover:underline font-medium">Hamilton</a>, and east to <a href="/locations/home-inspection-cobourg" className="text-blue-700 hover:underline font-medium">Cobourg</a> and beyond.
+              </p>
+              <p>
+                Every city presents its own unique housing challenges. Older Peel Region homes often have aluminum wiring and aging HVAC systems. Durham Region properties frequently show foundation movement from clay soil. York Region new builds can have envelope and insulation deficiencies from rushed construction. No matter where your property is in Ontario, our inspectors bring city-specific knowledge backed by 15+ years of inspecting Ontario homes.
+              </p>
+              <p>
+                Don't see your city listed? We serve over 100 Ontario communities. Call <a href="tel:6478019311" className="text-blue-700 font-semibold hover:underline">(647) 801-9311</a> to confirm coverage in your area or <a href="/locations" className="text-blue-700 font-semibold hover:underline">browse our full service area list</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 11. RECENT BLOG POSTS */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Ontario Home Inspection Resources</h2>
+            <p className="text-gray-600 text-lg">Expert guides written by our certified inspectors</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 mb-10">
+            {[
+              {
+                title: "First-Time Home Buyer's Complete Inspection Guide",
+                excerpt: "Everything first-time buyers need to know about home inspections before purchasing in the GTA.",
+                slug: "first-time-home-buyer-inspection-guide",
+                category: "Buying Tips"
+              },
+              {
+                title: "10 Common Issues Found in Toronto Homes",
+                excerpt: "The most frequent deficiencies our inspectors find in Toronto and GTA properties — and what they cost to fix.",
+                slug: "common-issues-toronto-homes",
+                category: "Ontario Homes"
+              },
+              {
+                title: "How to Negotiate After a Home Inspection",
+                excerpt: "Use your inspection report to negotiate price reductions, credits, or repairs before closing.",
+                slug: "negotiating-after-inspection",
+                category: "Buying Tips"
+              },
+            ].map((post, i) => (
+              <a key={i} href={`/blog/${post.slug}`} className="group border rounded-xl overflow-hidden hover:shadow-md transition-all">
+                <div className="p-6">
+                  <div className="inline-block bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-4">
+                    {post.category}
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-700 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4">{post.excerpt}</p>
+                  <div className="flex items-center gap-1 text-blue-600 text-sm font-medium">
+                    Read Article <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+          <div className="text-center">
+            <a href="/blog" className="inline-flex items-center gap-2 border-2 border-gray-900 text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-900 hover:text-white transition-all">
+              View All Inspection Guides
+              <ArrowRight size={16} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 13. ONTARIO FAQS */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
