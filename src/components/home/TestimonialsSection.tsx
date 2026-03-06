@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const testimonials = [
@@ -66,9 +66,13 @@ export function TestimonialsSection() {
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
             What Our Clients Say
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground mb-4">
             Join thousands of satisfied homeowners who trusted ASADS for their inspection needs.
           </p>
+          <a href="/testimonials" className="inline-flex items-center gap-1 text-primary font-semibold hover:underline text-sm">
+            Read all 500+ client reviews
+            <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
 
         {/* Testimonial Card */}
@@ -127,18 +131,28 @@ export function TestimonialsSection() {
           </div>
 
           {/* Dots */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-2 mt-6 mb-8">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`h-2 rounded-full transition-all ${
-                  index === currentIndex 
-                    ? "w-8 bg-primary" 
+                  index === currentIndex
+                    ? "w-8 bg-primary"
                     : "w-2 bg-primary/30 hover:bg-primary/50"
                 }`}
               />
             ))}
+          </div>
+
+          <div className="text-center">
+            <a
+              href="/testimonials"
+              className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary/90 transition-all"
+            >
+              View All Client Reviews
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </div>
