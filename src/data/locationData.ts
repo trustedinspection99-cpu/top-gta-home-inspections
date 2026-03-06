@@ -46,10 +46,10 @@ export const locationData: LocationData[] = [
   // GREATER TORONTO AREA (GTA)
   // ============================================
   {
-    slug: "toronto",
+    slug: "home-inspection-toronto",
     city: "Toronto",
     region: "Greater Toronto Area",
-    metaTitle: "Toronto Home Inspector | Buyer & Pre-Listing Certified",
+    metaTitle: "Home Inspection Toronto | Certified Inspector | ASADS",
     metaDescription: "Certified Toronto home inspector for buyers & sellers. Thermal imaging, mold testing, same-day reports. Condo, house & century home inspections across GTA.",
     description: "Toronto's trusted certified home inspector specializing in pre-purchase buyer inspections, pre-listing seller inspections, thermal imaging, mold & asbestos testing. Same-day digital reports for downtown condos to High Park century homes.",
     neighborhoods: [
@@ -88,10 +88,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "north-york",
+    slug: "home-inspection-north-york",
     city: "North York",
     region: "Greater Toronto Area",
-    metaTitle: "North York Home Inspector | Thermal & Buyer Specialist",
+    metaTitle: "Home Inspection North York | Certified Inspector | ASADS",
     metaDescription: "Certified North York home inspector. Pre-purchase buyer inspections, thermal imaging, high-rise condo specialist. Same-day reports for Willowdale & York Mills.",
     description: "North York certified inspector specializing in high-rise condo fan coil inspections, ravine lot stability assessments, buyer pre-purchase inspections with thermal imaging technology.",
     neighborhoods: [
@@ -129,7 +129,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "scarborough",
+    slug: "home-inspection-scarborough",
     city: "Scarborough",
     region: "Greater Toronto Area",
     metaTitle: "Scarborough Home Inspector | Buyer & Thermal Certified",
@@ -170,10 +170,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "etobicoke",
+    slug: "home-inspection-etobicoke",
     city: "Etobicoke",
     region: "Greater Toronto Area",
-    metaTitle: "Etobicoke Home Inspector | Certified Buyer Specialist",
+    metaTitle: "Home Inspection Etobicoke | Certified Inspector | ASADS",
     metaDescription: "Certified Etobicoke home inspector serving Humber Bay to Kingsway. Pre-purchase buyer inspections, thermal imaging, mold testing. Same-day digital reports.",
     description: "Etobicoke certified home inspector specializing in waterfront condo inspections, century home structural assessments, buyer pre-purchase & seller pre-listing services.",
     neighborhoods: [
@@ -211,10 +211,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "mississauga",
+    slug: "home-inspection-mississauga",
     city: "Mississauga",
     region: "Peel Region",
-    metaTitle: "Mississauga Home Inspector | Buyer & Pre-Listing Expert",
+    metaTitle: "Home Inspection Mississauga | Certified Inspector | ASADS",
     metaDescription: "Certified Mississauga home inspector. Pre-purchase buyer inspections, thermal imaging, mold & asbestos testing for Square One condos & Erin Mills homes. Same-day reports.",
     description: "Mississauga's premier certified inspector for buyer pre-purchase inspections, seller pre-listing services, thermal imaging diagnostics, mold & asbestos testing throughout Peel Region.",
     neighborhoods: [
@@ -252,10 +252,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "brampton",
+    slug: "home-inspection-brampton",
     city: "Brampton",
     region: "Peel Region",
-    metaTitle: "Brampton Home Inspector | Certified Thermal Specialist",
+    metaTitle: "Home Inspection Brampton | Certified Inspector | ASADS",
     metaDescription: "Certified Brampton home inspector for pre-purchase buyer inspections, thermal imaging & pre-listing seller services. Serving all Brampton neighborhoods. Same-day reports.",
     description: "Brampton's trusted certified home inspector providing comprehensive buyer inspections, thermal imaging diagnostics, mold testing and pre-listing seller services.",
     neighborhoods: [
@@ -293,10 +293,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "markham",
+    slug: "home-inspection-markham",
     city: "Markham",
     region: "York Region",
-    metaTitle: "Markham Home Inspector | Luxury Buyer Specialist",
+    metaTitle: "Home Inspection Markham | Certified Inspector | ASADS",
     metaDescription: "Certified Markham home inspector for luxury estates & new construction. Pre-purchase buyer inspections, thermal imaging, warranty inspections. Unionville to Cornell.",
     description: "Markham's premier certified inspector specializing in luxury estate pre-purchase inspections, new construction warranty inspections, thermal imaging & engineering referrals.",
     neighborhoods: [
@@ -334,7 +334,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "vaughan",
+    slug: "home-inspection-vaughan",
     city: "Vaughan",
     region: "York Region",
     metaTitle: "Vaughan Home Inspector | New Build Certified",
@@ -375,7 +375,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "richmond-hill",
+    slug: "home-inspection-richmond-hill",
     city: "Richmond Hill",
     region: "York Region",
     metaTitle: "Richmond Hill Home Inspector | Buyer Certified",
@@ -416,7 +416,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "aurora",
+    slug: "home-inspection-aurora",
     city: "Aurora",
     region: "York Region",
     metaTitle: "Aurora Home Inspector | Heritage Buyer Expert",
@@ -457,10 +457,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "bolton",
+    slug: "home-inspection-bolton",
     city: "Bolton",
     region: "Peel Region",
-    metaTitle: "Bolton Home Inspector | Rural Estate Certified",
+    metaTitle: "Home Inspection Bolton | Certified Inspector | ASADS",
     metaDescription: "Certified Bolton home inspector for rural estates, hobby farms & new construction. Well/septic testing, thermal imaging. Same-day reports.",
     description: "Bolton's trusted certified home inspector for rural estate pre-purchase inspections, new construction warranty reviews & thermal imaging diagnostics throughout Caledon.",
     neighborhoods: [
@@ -498,10 +498,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "halton-hills",
+    slug: "home-inspection-halton-hills",
     city: "Halton Hills",
     region: "Halton Region",
-    metaTitle: "Halton Hills Home Inspector | Certified | ASADS",
+    metaTitle: "Home Inspection Halton Hills | Certified Inspector | ASADS",
     metaDescription: "Certified Halton Hills inspector for Georgetown century homes, Acton heritage, knob-and-tube wiring & well/septic properties. Call (647) 801-9311.",
     description: "Halton Hills' premier certified inspector for Georgetown heritage homes, Acton family properties, knob-and-tube wiring assessment & rural estate well/septic inspections.",
     neighborhoods: [
@@ -541,7 +541,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "caledon",
+    slug: "home-inspection-caledon",
     city: "Caledon",
     region: "Peel Region",
     metaTitle: "Caledon Home Inspector | Rural Estate Specialist",
@@ -582,7 +582,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "oakville",
+    slug: "home-inspection-oakville",
     city: "Oakville",
     region: "Halton Region",
     metaTitle: "Oakville Home Inspector | Luxury & KITEC Expert | ASADS",
@@ -625,7 +625,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "oshawa",
+    slug: "home-inspection-oshawa",
     city: "Oshawa",
     region: "Durham Region",
     metaTitle: "Oshawa Home Inspector | Buyer Thermal Specialist",
@@ -666,7 +666,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "barrie",
+    slug: "home-inspection-barrie",
     city: "Barrie",
     region: "Simcoe County",
     metaTitle: "Barrie Home Inspector | Radon & Waterfront | ASADS",
@@ -709,7 +709,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "whitby",
+    slug: "home-inspection-whitby",
     city: "Whitby",
     region: "Durham Region",
     metaTitle: "Whitby Home Inspector | Waterfront Certified",
@@ -747,7 +747,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "peterborough",
+    slug: "home-inspection-peterborough",
     city: "Peterborough",
     region: "Peterborough County",
     metaTitle: "Peterborough Home Inspector | Kawarthas Expert",
@@ -785,7 +785,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "newmarket",
+    slug: "home-inspection-newmarket",
     city: "Newmarket",
     region: "York Region",
     metaTitle: "Newmarket Home Inspector | Certified Buyer Expert",
@@ -826,10 +826,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "burlington",
+    slug: "home-inspection-burlington",
     city: "Burlington",
     region: "Halton Region",
-    metaTitle: "Burlington Home Inspector | KITEC & Lakefront | ASADS",
+    metaTitle: "Home Inspection Burlington | Certified Inspector | ASADS",
     metaDescription: "Certified Burlington home inspector for lakefront estates, KITEC plumbing detection & condo inspections. Tyandaga to Aldershot GO corridor. Call (647) 801-9311.",
     description: "Burlington's trusted waterfront property inspector specializing in Lake Ontario lakefront pre-purchase inspections, KITEC plumbing identification & thermal imaging diagnostics.",
     neighborhoods: [
@@ -869,7 +869,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "ajax",
+    slug: "home-inspection-ajax",
     city: "Ajax",
     region: "Durham Region",
     metaTitle: "Ajax Home Inspector | Waterfront Certified",
@@ -910,7 +910,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "collingwood",
+    slug: "home-inspection-collingwood",
     city: "Collingwood",
     region: "Simcoe County",
     metaTitle: "Collingwood Home Inspector | Ski Chalet Certified | ASADS",
@@ -953,7 +953,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "stouffville",
+    slug: "home-inspection-stouffville",
     city: "Stouffville",
     region: "York Region",
     metaTitle: "Stouffville Home Inspector | Rural Certified",
@@ -991,7 +991,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "thornhill",
+    slug: "home-inspection-thornhill",
     city: "Thornhill",
     region: "York Region",
     metaTitle: "Thornhill Home Inspector | Certified Buyer Specialist",
@@ -1032,7 +1032,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "milton",
+    slug: "home-inspection-milton",
     city: "Milton",
     region: "Halton Region",
     metaTitle: "Milton Home Inspector | New Build Specialist | ASADS",
@@ -1075,7 +1075,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "pickering",
+    slug: "home-inspection-pickering",
     city: "Pickering",
     region: "Durham Region",
     metaTitle: "Pickering Home Inspector | Certified Buyer",
@@ -1116,7 +1116,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "clarington",
+    slug: "home-inspection-clarington",
     city: "Clarington",
     region: "Durham Region",
     metaTitle: "Clarington Home Inspector | Rural Specialist",
@@ -1157,7 +1157,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "orillia",
+    slug: "home-inspection-orillia",
     city: "Orillia",
     region: "Simcoe County",
     metaTitle: "Orillia Home Inspector | Waterfront Certified",
@@ -1198,7 +1198,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "innisfil",
+    slug: "home-inspection-innisfil",
     city: "Innisfil",
     region: "Simcoe County",
     metaTitle: "Innisfil Home Inspector | Lakefront Specialist",
@@ -1239,7 +1239,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "uxbridge",
+    slug: "home-inspection-uxbridge",
     city: "Uxbridge",
     region: "Durham Region",
     metaTitle: "Uxbridge Home Inspector | Rural Certified",
@@ -1280,7 +1280,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "beaverton",
+    slug: "home-inspection-beaverton",
     city: "Beaverton",
     region: "Durham Region",
     metaTitle: "Beaverton Home Inspector | Lake Simcoe Expert",
@@ -1320,10 +1320,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "cannington",
+    slug: "home-inspection-cannington",
     city: "Cannington",
     region: "Durham Region",
-    metaTitle: "Cannington Home Inspector | Rural Specialist",
+    metaTitle: "Home Inspection Cannington | Certified Inspector | ASADS",
     metaDescription: "Certified Cannington home inspector for rural properties, farms & acreages. Well, septic & thermal imaging expertise for Brock Township.",
     description: "Cannington's premier certified rural property inspector for private systems assessment, farm inspections & thermal imaging diagnostics.",
     neighborhoods: [
@@ -1360,7 +1360,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "cobourg",
+    slug: "home-inspection-cobourg",
     city: "Cobourg",
     region: "Northumberland County",
     metaTitle: "Cobourg Home Inspector | Waterfront Certified",
@@ -1400,10 +1400,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "east-york",
+    slug: "home-inspection-east-york",
     city: "East York",
     region: "Greater Toronto Area",
-    metaTitle: "East York Home Inspector | Bungalow Certified",
+    metaTitle: "Home Inspection East York | Certified Inspector | ASADS",
     metaDescription: "Certified East York home inspector for post-war bungalows & pre-purchase inspections. Thermal imaging specialist. Leaside to Danforth.",
     description: "East York's trusted certified inspector specializing in bungalow pre-purchase inspections, thermal imaging & century home assessments.",
     neighborhoods: ["Danforth Village", "Leaside", "Broadview North", "Pape Village", "Woodbine Heights", "Thorncliffe Park", "O'Connor-Parkview", "Flemingdon Park"],
@@ -1438,7 +1438,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "king-city",
+    slug: "home-inspection-king-city",
     city: "King City",
     region: "York Region",
     metaTitle: "King City Home Inspector | Estate Specialist",
@@ -1476,7 +1476,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "georgina",
+    slug: "home-inspection-georgina",
     city: "Georgina",
     region: "York Region",
     metaTitle: "Georgina Home Inspector | Lakefront Certified",
@@ -1514,7 +1514,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "keswick",
+    slug: "home-inspection-keswick",
     city: "Keswick",
     region: "York Region",
     metaTitle: "Keswick Home Inspector | Waterfront Specialist",
@@ -1552,7 +1552,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "sutton",
+    slug: "home-inspection-sutton",
     city: "Sutton",
     region: "York Region",
     metaTitle: "Sutton Home Inspector | Lake Simcoe Expert",
@@ -1590,7 +1590,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "east-gwillimbury",
+    slug: "home-inspection-east-gwillimbury",
     city: "East Gwillimbury",
     region: "York Region",
     metaTitle: "East Gwillimbury Home Inspector | Rural Certified",
@@ -1628,7 +1628,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "unionville",
+    slug: "home-inspection-unionville",
     city: "Unionville",
     region: "York Region",
     metaTitle: "Unionville Home Inspector | Heritage Certified",
@@ -1666,7 +1666,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "kleinburg",
+    slug: "home-inspection-kleinburg",
     city: "Kleinburg",
     region: "York Region",
     metaTitle: "Kleinburg Home Inspector | Estate Specialist",
@@ -1704,7 +1704,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "maple",
+    slug: "home-inspection-maple",
     city: "Maple",
     region: "York Region",
     metaTitle: "Maple Home Inspector | Family Certified",
@@ -1742,7 +1742,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "woodbridge",
+    slug: "home-inspection-woodbridge",
     city: "Woodbridge",
     region: "York Region",
     metaTitle: "Woodbridge Home Inspector | Family Certified",
@@ -1782,7 +1782,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "concord",
+    slug: "home-inspection-concord",
     city: "Concord",
     region: "York Region",
     metaTitle: "Concord Home Inspector | Townhouse Certified",
@@ -1822,7 +1822,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "georgetown",
+    slug: "home-inspection-georgetown",
     city: "Georgetown",
     region: "Halton Region",
     metaTitle: "Georgetown Home Inspector | Heritage Certified | ASADS",
@@ -1862,7 +1862,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "acton",
+    slug: "home-inspection-acton",
     city: "Acton",
     region: "Halton Region",
     metaTitle: "Acton Home Inspector | Rural & Heritage | ASADS",
@@ -1902,7 +1902,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "scugog",
+    slug: "home-inspection-scugog",
     city: "Scugog",
     region: "Durham Region",
     metaTitle: "Scugog Home Inspector | Port Perry Lakefront Certified",
@@ -1942,7 +1942,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "port-perry",
+    slug: "home-inspection-port-perry",
     city: "Port Perry",
     region: "Durham Region", 
     metaTitle: "Port Perry Home Inspector | Waterfront Specialist",
@@ -1982,10 +1982,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "brock",
+    slug: "home-inspection-brock",
     city: "Brock",
     region: "Durham Region",
-    metaTitle: "Brock Home Inspector | Cannington Rural Expert",
+    metaTitle: "Home Inspection Brock Township | Certified Inspector | ASADS",
     metaDescription: "Certified Brock Township home inspector serving Cannington, Beaverton & rural Lake Simcoe properties. Well, septic & thermal imaging specialist.",
     description: "Brock Township's certified rural property inspector for private systems assessment, waterfront cottage inspections & thermal imaging diagnostics.",
     neighborhoods: ["Cannington", "Beaverton", "Sunderland", "Pinnacle", "Villanova"],
@@ -2022,7 +2022,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "bowmanville",
+    slug: "home-inspection-bowmanville",
     city: "Bowmanville",
     region: "Durham Region",
     metaTitle: "Bowmanville Home Inspector | Heritage Certified",
@@ -2062,7 +2062,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "innisfil",
+    slug: "home-inspection-innisfil",
     city: "Innisfil",
     region: "Simcoe County",
     metaTitle: "Innisfil Home Inspector | Lake Simcoe Waterfront",
@@ -2102,7 +2102,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "wasaga-beach",
+    slug: "home-inspection-wasaga-beach",
     city: "Wasaga Beach",
     region: "Simcoe County",
     metaTitle: "Wasaga Beach Home Inspector | Cottage & Slab | ASADS",
@@ -2142,7 +2142,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "midland",
+    slug: "home-inspection-midland",
     city: "Midland",
     region: "Simcoe County",
     metaTitle: "Midland Home Inspector | Georgian Bay Certified | ASADS",
@@ -2182,7 +2182,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "hamilton",
+    slug: "home-inspection-hamilton",
     city: "Hamilton",
     region: "Hamilton-Niagara Region",
     metaTitle: "Hamilton Home Inspector | Century Home & Escarpment | ASADS",
@@ -2222,7 +2222,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "stoney-creek",
+    slug: "home-inspection-stoney-creek",
     city: "Stoney Creek",
     region: "Hamilton-Niagara Region",
     metaTitle: "Stoney Creek Home Inspector | Heritage Certified | ASADS",
@@ -2262,7 +2262,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "ancaster",
+    slug: "home-inspection-ancaster",
     city: "Ancaster",
     region: "Hamilton-Niagara Region",
     metaTitle: "Ancaster Home Inspector | Luxury Estate Expert | ASADS",
@@ -2302,7 +2302,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "niagara-falls",
+    slug: "home-inspection-niagara-falls",
     city: "Niagara Falls",
     region: "Hamilton-Niagara Region",
     metaTitle: "Niagara Falls Home Inspector | Certified | ASADS",
@@ -2342,7 +2342,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "st-catharines",
+    slug: "home-inspection-st-catharines",
     city: "St. Catharines",
     region: "Hamilton-Niagara Region",
     metaTitle: "St. Catharines Home Inspector | Heritage Certified | ASADS",
@@ -2382,10 +2382,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "kitchener",
+    slug: "home-inspection-kitchener",
     city: "Kitchener",
     region: "Waterloo Region",
-    metaTitle: "Kitchener Home Inspector | Smart Home Certified",
+    metaTitle: "Home Inspection Kitchener | Certified Inspector | ASADS",
     metaDescription: "Certified Kitchener home inspector for smart homes, new construction & century properties. Thermal imaging, automation systems specialist. Same-day reports.",
     description: "Kitchener's premier certified inspector specializing in smart home pre-purchase inspections, new construction warranty reviews & thermal imaging diagnostics.",
     neighborhoods: ["Downtown Kitchener", "Doon", "Forest Hill", "Laurelwood", "Huron Park"],
@@ -2422,10 +2422,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "waterloo",
+    slug: "home-inspection-waterloo",
     city: "Waterloo",
     region: "Waterloo Region",
-    metaTitle: "Waterloo Home Inspector | University District Expert",
+    metaTitle: "Home Inspection Waterloo | Certified Inspector | ASADS",
     metaDescription: "Certified Waterloo home inspector serving university district investment properties & tech executive homes. Thermal imaging specialist. Same-day reports.",
     description: "Waterloo's trusted certified inspector for student rental property inspections, tech executive estate assessments & thermal imaging diagnostics.",
     neighborhoods: ["University District", "Uptown Waterloo", "Lincoln Heights", "Westmount", "Beechwood"],
@@ -2462,10 +2462,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "guelph",
+    slug: "home-inspection-guelph",
     city: "Guelph",
     region: "Waterloo Region",
-    metaTitle: "Guelph Home Inspector | University & Rural Certified",
+    metaTitle: "Home Inspection Guelph | Certified Inspector | ASADS",
     metaDescription: "Certified Guelph home inspector for university district rentals & rural estates. Thermal imaging, student housing specialist. Same-day digital reports.",
     description: "Guelph's premier certified inspector specializing in student rental property inspections, rural estate pre-purchase assessments & thermal imaging diagnostics.",
     neighborhoods: ["Old University", "Grange Hill East", "West Acres", "Short Hills", "Arkell"],
@@ -2502,7 +2502,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "penetanguishene",
+    slug: "home-inspection-penetanguishene",
     city: "Penetanguishene",
     region: "Simcoe County",
     metaTitle: "Penetanguishene Home Inspector | Georgian Bay | ASADS",
@@ -2542,7 +2542,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "springwater",
+    slug: "home-inspection-springwater",
     city: "Springwater",
     region: "Simcoe County",
     metaTitle: "Springwater Home Inspector | Equestrian Estates",
@@ -2582,7 +2582,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "new-tecumseth",
+    slug: "home-inspection-new-tecumseth",
     city: "New Tecumseth",
     region: "Simcoe County",
     metaTitle: "New Tecumseth Home Inspector | Alliston Certified",
@@ -2622,7 +2622,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "alliston",
+    slug: "home-inspection-alliston",
     city: "Alliston",
     region: "Simcoe County",
     metaTitle: "Alliston Home Inspector | New Construction Expert",
@@ -2662,10 +2662,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "bradford",
+    slug: "home-inspection-bradford",
     city: "Bradford West Gwillimbury",
     region: "Simcoe County",
-    metaTitle: "Bradford Home Inspector | Rural Family Specialist",
+    metaTitle: "Home Inspection Bradford | Certified Inspector | ASADS",
     metaDescription: "Certified Bradford home inspector for rural family homes & new subdivisions. Well/septic testing, thermal imaging expert. Same-day reports.",
     description: "Bradford West Gwillimbury's certified inspector for rural properties, new subdivision pre-purchase inspections & thermal imaging diagnostics.",
     neighborhoods: ["Bradford", "Bond Head", "Newton Robinson", "Lisbon"],
@@ -2702,7 +2702,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "essa",
+    slug: "home-inspection-essa",
     city: "Essa",
     region: "Simcoe County",
     metaTitle: "Essa Home Inspector | Angus Military Relocation",
@@ -2742,7 +2742,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "clearview",
+    slug: "home-inspection-clearview",
     city: "Clearview",
     region: "Simcoe County",
     metaTitle: "Clearview Home Inspector | Stayner Equestrian",
@@ -2782,7 +2782,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "stayner",
+    slug: "home-inspection-stayner",
     city: "Stayner",
     region: "Simcoe County",
     metaTitle: "Stayner Home Inspector | Clearview Rural Certified",
@@ -2822,7 +2822,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "dundas",
+    slug: "home-inspection-dundas",
     city: "Dundas",
     region: "Hamilton-Niagara Region",
     metaTitle: "Dundas Home Inspector | Heritage Stone Certified | ASADS",
@@ -2862,7 +2862,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "flamborough",
+    slug: "home-inspection-flamborough",
     city: "Flamborough",
     region: "Hamilton-Niagara Region",
     metaTitle: "Flamborough Home Inspector | Rural Certified | ASADS",
@@ -2902,7 +2902,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "grimsby",
+    slug: "home-inspection-grimsby",
     city: "Grimsby",
     region: "Hamilton-Niagara Region",
     metaTitle: "Grimsby Home Inspector | Escarpment & Lakefront | ASADS",
@@ -2942,7 +2942,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "niagara-on-the-lake",
+    slug: "home-inspection-niagara-on-the-lake",
     city: "Niagara-on-the-Lake",
     region: "Hamilton-Niagara Region",
     metaTitle: "Niagara-on-the-Lake Home Inspector | Certified | ASADS",
@@ -2982,7 +2982,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "welland",
+    slug: "home-inspection-welland",
     city: "Welland",
     region: "Hamilton-Niagara Region",
     metaTitle: "Welland Home Inspector | Canal City Certified | ASADS",
@@ -3024,7 +3024,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "thorold",
+    slug: "home-inspection-thorold",
     city: "Thorold",
     region: "Hamilton-Niagara Region",
     metaTitle: "Thorold Home Inspector | Canal Heritage Certified | ASADS",
@@ -3064,7 +3064,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "fort-erie",
+    slug: "home-inspection-fort-erie",
     city: "Fort Erie",
     region: "Hamilton-Niagara Region",
     metaTitle: "Fort Erie Home Inspector | Crystal Beach Certified | ASADS",
@@ -3104,7 +3104,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "port-colborne",
+    slug: "home-inspection-port-colborne",
     city: "Port Colborne",
     region: "Hamilton-Niagara Region",
     metaTitle: "Port Colborne Home Inspector | Lake Erie Certified | ASADS",
@@ -3144,7 +3144,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "lincoln",
+    slug: "home-inspection-lincoln",
     city: "Lincoln",
     region: "Hamilton-Niagara Region",
     metaTitle: "Lincoln Home Inspector | Wine Country Certified | ASADS",
@@ -3184,7 +3184,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "beamsville",
+    slug: "home-inspection-beamsville",
     city: "Beamsville",
     region: "Hamilton-Niagara Region",
     metaTitle: "Beamsville Home Inspector | Wine Country Expert | ASADS",
@@ -3224,10 +3224,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "cambridge",
+    slug: "home-inspection-cambridge",
     city: "Cambridge",
     region: "Waterloo Region",
-    metaTitle: "Cambridge Home Inspector | New Construction Certified",
+    metaTitle: "Home Inspection Cambridge | Certified Inspector | ASADS",
     metaDescription: "Certified Cambridge home inspector for new subdivisions, family homes & industrial properties. Thermal imaging, Tarion warranty expert. Same-day reports.",
     description: "Cambridge's premier new construction inspector specializing in subdivision warranty inspections, family home pre-purchase & thermal imaging diagnostics.",
     neighborhoods: ["Galt West", "Preston Heights", "Hespeler", "North Dumfries", "Furnivall"],
@@ -3264,10 +3264,10 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "brantford",
+    slug: "home-inspection-brantford",
     city: "Brantford",
     region: "Waterloo Region",
-    metaTitle: "Brantford Home Inspector | Grand River Certified",
+    metaTitle: "Home Inspection Brantford | Certified Inspector | ASADS",
     metaDescription: "Certified Brantford home inspector for Grand River waterfront, heritage downtown & new construction. Thermal imaging, flood specialist. Same-day reports.",
     description: "Brantford's trusted certified inspector for Grand River waterfront properties, heritage home structural assessments & thermal imaging diagnostics.",
     neighborhoods: ["Eagle Place", "Dufferin North", "West Brant", "Old Towne", "Tutela Heights"],
@@ -3304,7 +3304,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "orangeville",
+    slug: "home-inspection-orangeville",
     city: "Orangeville",
     region: "Dufferin County",
     metaTitle: "Orangeville Home Inspector | Equestrian Estates Expert",
@@ -3344,7 +3344,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "pelham",
+    slug: "home-inspection-pelham",
     city: "Pelham",
     region: "Niagara Region",
     metaTitle: "Pelham Home Inspector | Fonthill Rural Certified",
@@ -3382,7 +3382,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "wainfleet",
+    slug: "home-inspection-wainfleet",
     city: "Wainfleet",
     region: "Niagara Region",
     metaTitle: "Wainfleet Home Inspector | Lake Erie Rural",
@@ -3420,7 +3420,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "west-lincoln",
+    slug: "home-inspection-west-lincoln",
     city: "West Lincoln",
     region: "Niagara Region",
     metaTitle: "West Lincoln Home Inspector | Smithville Rural",
@@ -3458,7 +3458,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "woolwich",
+    slug: "home-inspection-woolwich",
     city: "Woolwich",
     region: "Waterloo Region",
     metaTitle: "Woolwich Home Inspector | Elmira Mennonite Certified",
@@ -3496,7 +3496,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "wilmot",
+    slug: "home-inspection-wilmot",
     city: "Wilmot",
     region: "Waterloo Region",
     metaTitle: "Wilmot Home Inspector | Baden Rural Expert",
@@ -3534,7 +3534,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "north-dumfries",
+    slug: "home-inspection-north-dumfries",
     city: "North Dumfries",
     region: "Waterloo Region",
     metaTitle: "North Dumfries Home Inspector | Ayr Rural Certified",
@@ -3572,7 +3572,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "wellesley",
+    slug: "home-inspection-wellesley",
     city: "Wellesley",
     region: "Waterloo Region",
     metaTitle: "Wellesley Home Inspector | Mennonite Rural Expert",
@@ -3610,7 +3610,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "centre-wellington",
+    slug: "home-inspection-centre-wellington",
     city: "Centre Wellington",
     region: "Wellington County",
     metaTitle: "Centre Wellington Home Inspector | Fergus Elora",
@@ -3648,7 +3648,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "erin",
+    slug: "home-inspection-erin",
     city: "Erin",
     region: "Wellington County",
     metaTitle: "Erin Home Inspector | Rural Equestrian Certified",
@@ -3686,7 +3686,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "guelph-eramosa",
+    slug: "home-inspection-guelph-eramosa",
     city: "Guelph/Eramosa",
     region: "Wellington County",
     metaTitle: "Guelph Eramosa Home Inspector | Rockwood Rural",
@@ -3724,7 +3724,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "mapleton",
+    slug: "home-inspection-mapleton",
     city: "Mapleton",
     region: "Wellington County",
     metaTitle: "Mapleton Home Inspector | Rural Agricultural",
@@ -3762,7 +3762,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "puslinch",
+    slug: "home-inspection-puslinch",
     city: "Puslinch",
     region: "Wellington County",
     metaTitle: "Puslinch Home Inspector | Rural Estate Certified",
@@ -3800,7 +3800,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "wellington-north",
+    slug: "home-inspection-wellington-north",
     city: "Wellington North",
     region: "Wellington County",
     metaTitle: "Wellington North Home Inspector | Mount Forest Rural",
@@ -3838,7 +3838,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "minto",
+    slug: "home-inspection-minto",
     city: "Minto",
     region: "Wellington County",
     metaTitle: "Minto Home Inspector | Palmerston Rural Certified",
@@ -3876,7 +3876,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "adelaide-metcalfe",
+    slug: "home-inspection-adelaide-metcalfe",
     city: "Adelaide Metcalfe",
     region: "Middlesex County",
     metaTitle: "Adelaide Metcalfe Home Inspector | Rural Certified",
@@ -3914,7 +3914,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "severn",
+    slug: "home-inspection-severn",
     city: "Severn",
     region: "Simcoe County",
     metaTitle: "Severn Home Inspector | Rural Waterfront Certified",
@@ -3952,7 +3952,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "tiny-township",
+    slug: "home-inspection-tiny-township",
     city: "Tiny Township",
     region: "Simcoe County",
     metaTitle: "Tiny Township Home Inspector | Georgian Bay Rural",
@@ -3990,7 +3990,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "tay-township",
+    slug: "home-inspection-tay-township",
     city: "Tay Township",
     region: "Simcoe County",
     metaTitle: "Tay Township Home Inspector | Rural Georgian Bay",
@@ -4028,7 +4028,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "shelburne",
+    slug: "home-inspection-shelburne",
     city: "Shelburne",
     region: "Dufferin County",
     metaTitle: "Shelburne Home Inspector | Rural Equestrian",
@@ -4066,7 +4066,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "mono",
+    slug: "home-inspection-mono",
     city: "Mono",
     region: "Dufferin County",
     metaTitle: "Mono Home Inspector | Rural Luxury Estates",
@@ -4104,7 +4104,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "woodstock",
+    slug: "home-inspection-woodstock",
     city: "Woodstock",
     region: "Oxford County",
     metaTitle: "Woodstock Home Inspector | Rural Agricultural",
@@ -4142,7 +4142,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "ingersoll",
+    slug: "home-inspection-ingersoll",
     city: "Ingersoll",
     region: "Oxford County",
     metaTitle: "Ingersoll Home Inspector | Rural Family Certified",
@@ -4180,7 +4180,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "tillsonburg",
+    slug: "home-inspection-tillsonburg",
     city: "Tillsonburg",
     region: "Oxford County",
     metaTitle: "Tillsonburg Home Inspector | Rural Agricultural",
@@ -4218,7 +4218,7 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "paris",
+    slug: "home-inspection-paris",
     city: "Paris",
     region: "County of Brant",
     metaTitle: "Paris Home Inspector | Grand River Rural Certified",
