@@ -72,6 +72,8 @@ export default function Booking() {
     const inspectionLabel = inspectionTypes.find(t => t.value === formData.inspectionType)?.label || formData.inspectionType;
 
     const submitData = new FormData();
+    submitData.append("_replyto", formData.email);
+    submitData.append("_subject", `New Booking: ${inspectionLabel} — ${formData.firstName} ${formData.lastName}`);
     submitData.append("Inspection Type", inspectionLabel);
     submitData.append("Preferred Date", date ? format(date, "PPP") : "Not specified");
     submitData.append("Preferred Time", formData.timeSlot);
@@ -185,20 +187,32 @@ export default function Booking() {
       <section className="py-16 md:py-24 hero-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-primary-foreground/20 backdrop-blur px-4 py-2 rounded-full mb-6">
-              <Phone className="h-4 w-4" />
-              <span className="text-sm font-medium">100% Free Online Booking</span>
-            </div>
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">
               Schedule a Home Inspection in Ontario
             </h1>
-            <p className="text-xl text-primary-foreground/90 mb-4">
-              Schedule your professional home inspection in minutes. Same-day appointments available.
+            <p className="text-xl text-primary-foreground/90 mb-8">
+              Pick your own date and time below — or call us directly for same-day booking.
             </p>
-            <p className="text-lg text-primary-foreground/80 flex items-center justify-center gap-2">
-              <CheckCircle className="h-5 w-5" />
-              You'll receive a confirmation call shortly after booking
-            </p>
+            {/* Two booking options */}
+            <div className="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto">
+              <a
+                href="tel:+16478019311"
+                className="flex items-center justify-center gap-3 bg-white text-primary font-semibold px-6 py-4 rounded-xl shadow hover:bg-white/90 transition-colors"
+              >
+                <Phone className="h-5 w-5 shrink-0" />
+                <div className="text-left">
+                  <div className="text-xs text-primary/60 font-normal">Call us now</div>
+                  <div>(647) 801-9311</div>
+                </div>
+              </a>
+              <div className="flex items-center justify-center gap-3 bg-primary-foreground/20 border border-primary-foreground/30 font-semibold px-6 py-4 rounded-xl">
+                <CalendarIcon className="h-5 w-5 shrink-0" />
+                <div className="text-left">
+                  <div className="text-xs text-primary-foreground/60 font-normal">Book online below</div>
+                  <div>Pick your date & time</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -353,24 +367,56 @@ export default function Booking() {
               </CardContent>
             </Card>
           ) : (
-            <Card className="text-center py-12">
+            <Card className="py-10">
               <CardContent>
-                <div className="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="h-10 w-10 text-accent" />
-                </div>
-                <h2 className="font-heading text-2xl font-bold mb-4">Booking Request Received!</h2>
-                <p className="text-muted-foreground mb-4">Thank you for choosing ASADS Home Inspection!</p>
-                <div className="bg-primary/10 rounded-lg p-4 mb-8 max-w-md mx-auto">
-                  <div className="flex items-center justify-center gap-2 text-primary font-medium">
-                    <Phone className="h-5 w-5" />
-                    <span>You'll receive a confirmation call shortly</span>
+                <div className="text-center mb-8">
+                  <div className="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="h-10 w-10 text-accent" />
                   </div>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    We'll call you within the next 30 minutes to confirm your appointment details.
-                  </p>
+                  <h2 className="font-heading text-2xl font-bold mb-2">Booking Request Received!</h2>
+                  <p className="text-muted-foreground">Thank you, {formData.firstName}! Here's a summary of your booking:</p>
                 </div>
+
+                {/* Booking Summary */}
+                <div className="bg-muted/50 rounded-xl p-6 max-w-md mx-auto mb-6 space-y-3 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Service</span>
+                    <span className="font-medium">{inspectionTypes.find(t => t.value === formData.inspectionType)?.label}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Date</span>
+                    <span className="font-medium">{date ? format(date, "PPP") : "—"}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Time</span>
+                    <span className="font-medium">{formData.timeSlot}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Address</span>
+                    <span className="font-medium text-right">{formData.address}, {formData.city}</span>
+                  </div>
+                  <div className="border-t pt-3 flex justify-between">
+                    <span className="text-muted-foreground">Confirmation sent to</span>
+                    <span className="font-medium text-primary">{formData.email}</span>
+                  </div>
+                </div>
+
+                {/* Next steps */}
+                <div className="grid sm:grid-cols-2 gap-4 max-w-md mx-auto mb-8">
+                  <div className="bg-primary/10 rounded-lg p-4 text-center">
+                    <Phone className="h-5 w-5 text-primary mx-auto mb-2" />
+                    <p className="text-sm font-medium text-primary">Confirmation Call</p>
+                    <p className="text-xs text-muted-foreground mt-1">We'll call within 30 min to confirm</p>
+                  </div>
+                  <div className="bg-primary/10 rounded-lg p-4 text-center">
+                    <FileText className="h-5 w-5 text-primary mx-auto mb-2" />
+                    <p className="text-sm font-medium text-primary">Email Confirmation</p>
+                    <p className="text-xs text-muted-foreground mt-1">Check your inbox for details</p>
+                  </div>
+                </div>
+
                 <div className="flex justify-center gap-4">
-                  <Button asChild><a href="tel:+16478019311"><Phone className="mr-2 h-4 w-4" />Call Now</a></Button>
+                  <Button asChild><a href="tel:+16478019311"><Phone className="mr-2 h-4 w-4" />Call Us Now</a></Button>
                   <Button variant="outline" onClick={() => { setStep(1); setFormData({ inspectionType: "", timeSlot: "", propertyType: "", squareFootage: "", propertyAge: "", address: "", city: "", postalCode: "", firstName: "", lastName: "", email: "", phone: "", notes: "" }); setDate(undefined); }}>Book Another</Button>
                 </div>
               </CardContent>
