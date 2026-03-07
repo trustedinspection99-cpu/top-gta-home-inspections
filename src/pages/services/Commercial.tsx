@@ -46,8 +46,8 @@ const featuredLocations = [
 ];
 
 const title = "Commercial Building Inspection";
-const metaTitle = "Commercial Building Inspection Toronto | Building Inspection & PCA | ASADS";
-const metaDescription = "Expert commercial building inspection and Property Condition Assessments (PCA) in Toronto & GTA. Commercial inspection for offices, retail, and industrial — ASTM E2018-15 compliant. CapEx forecasting, MEP audits, Phase 1 ESA, and structural evaluations.";
+const metaTitle = "Commercial Building Inspection Toronto | PCA | ASADS";
+const metaDescription = "Commercial building inspection & PCA in Toronto & GTA. ASTM E2018-15 compliant. Offices, retail & industrial. CapEx forecasting, MEP audits & Phase 1 ESA.";
 const price = "Quote Based";
 const duration = "Expedited Reporting Available";
 

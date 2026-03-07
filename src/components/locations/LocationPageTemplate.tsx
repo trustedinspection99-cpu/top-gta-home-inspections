@@ -88,7 +88,7 @@ export function LocationPageTemplate({
   metaDescription,
   neighborhoods = [],
   phoneNumber,
-  address = "Ontario, Canada",
+  address = "45 Duckworth Rd",
   postalCode = "",
   latitude,
   longitude,
@@ -123,8 +123,8 @@ export function LocationPageTemplate({
   allCities = [],
   slug,
 }: LocationPageTemplateProps) {
-  // Always use home-inspection- prefix for canonical URLs
-  const locationSlug = slug ? `home-inspection-${slug}` : `home-inspection-${city.toLowerCase().replace(/\s+/g, "-")}`;
+  // Use slug from data directly (already has home-inspection- prefix), fallback to derived
+  const locationSlug = slug ?? `home-inspection-${city.toLowerCase().replace(/\s+/g, "-")}`;
   const url = getCanonicalUrl(`/locations/${locationSlug}`);
   const pageTitle = metaTitle || `${city} Home Inspection | Certified Home Inspector`;
   const pageDescription =

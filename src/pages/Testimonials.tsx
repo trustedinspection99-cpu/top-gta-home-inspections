@@ -104,7 +104,7 @@ export default function Testimonials() {
     <Layout>
       <Helmet>
         <title>Customer Testimonials | 500+ ASADS Home Inspection Reviews</title>
-        <meta name="description" content="Read 500+ verified customer reviews from GTA homeowners who trusted ASADS for home inspections. 4.9 stars across Toronto, Mississauga, Brampton, Hamilton & Ontario." />
+        <meta name="description" content="Read 500+ verified customer reviews from GTA homeowners who trusted ASADS. 4.9 stars across Toronto, Mississauga, Brampton, Hamilton & Ontario." />
         <link rel="canonical" href="https://www.asads.ca/testimonials" />
         <meta property="og:title" content="Customer Testimonials | 500+ ASADS Home Inspection Reviews" />
         <meta property="og:description" content="Read 500+ verified customer reviews from GTA homeowners who trusted ASADS for home inspections. 4.9 stars across Ontario." />

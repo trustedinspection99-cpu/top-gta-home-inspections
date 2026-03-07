@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
@@ -78,6 +78,7 @@ const App = () => (
             <Route path="/services/commercial" element={<Commercial />} />
             <Route path="/services/radon-testing" element={<RadonTesting />} />
             <Route path="/services/mold-inspection" element={<MoldInspection />} />
+            <Route path="/services/mould-inspection" element={<Navigate to="/services/mold-inspection" replace />} />
             <Route path="/services/asbestos-testing" element={<AsbestosTesting />} />
             <Route path="/services/wett" element={<WETT />} />
             <Route path="/services/thermal-imaging" element={<ThermalImaging />} />

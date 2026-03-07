@@ -1201,7 +1201,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "aluminum-wiring-toronto-homes",
     title: "Aluminum Wiring in Toronto Homes: What Every Buyer Needs to Know",
     metaTitle: "Aluminum Wiring Toronto Homes | Safety Risks & Insurance | ASADS",
-    metaDescription: "Aluminum wiring was installed in thousands of GTA homes built between 1965–1978. Learn the fire risks, insurance implications, and what to do if your home has it.",
+    metaDescription: "Aluminum wiring was installed in thousands of GTA homes 1965–1978. Learn the fire risks, insurance implications, and what to do if your home has it.",
     excerpt: "Aluminum wiring was installed in thousands of GTA homes during the 1960s and 70s. Here's what buyers need to know about insurance, fire risk, and remediation options.",
     category: "Electrical Safety",
     author: "ASADS Team",
@@ -1339,13 +1339,13 @@ export const blogPostsData: BlogPost[] = [
     slug: "ice-dams-attic-mold-toronto",
     title: "How Ice Dams Cause Attic Mold in Toronto Homes",
     metaTitle: "Ice Dams & Attic Mold Toronto | Prevention & Inspection | ASADS",
-    metaDescription: "Ice dams are a leading cause of attic mold in Toronto and GTA homes. Learn how they form, what damage they cause, and how to prevent and detect mold before it spreads.",
+    metaDescription: "Ice dams are a leading cause of attic mold in Toronto homes. Learn how they form, what damage they cause, and how to prevent and detect mold.",
     excerpt: "Ice dams cause hidden water intrusion that leads to attic mold in thousands of GTA homes every winter. Learn how to identify and prevent this costly problem.",
     category: "Mold & Air Quality",
     author: "ASADS Team",
     date: "2025-01-22",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1608818379960-e3dbedb5f5f8?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1547050605346-7c52f6a17b7e?w=800&h=500&fit=crop",
     featured: false,
     content: `
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is an Ice Dam and Why Should You Care?</h2>
@@ -1419,7 +1419,7 @@ export const blogPostsData: BlogPost[] = [
     author: "ASADS Team",
     date: "2025-01-08",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=500&fit=crop",
     featured: false,
     content: `
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is Knob and Tube Wiring?</h2>
@@ -1466,7 +1466,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "foundation-cracks-toronto-what-they-mean",
     title: "Foundation Cracks in Toronto Homes: What's Serious and What's Not",
     metaTitle: "Foundation Cracks Toronto | Structural vs Cosmetic | ASADS Inspector",
-    metaDescription: "Not all foundation cracks are equal. Learn how Toronto home inspectors assess horizontal, vertical, and diagonal cracks, and when a crack signals a serious structural problem.",
+    metaDescription: "Not all foundation cracks are equal. Learn how Toronto inspectors assess horizontal, vertical & diagonal cracks, and when one signals a structural problem.",
     excerpt: "Foundation cracks are one of the most common and misunderstood findings in GTA home inspections. Learn which cracks are cosmetic and which demand urgent attention.",
     category: "Structural",
     author: "ASADS Team",
@@ -1531,7 +1531,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "mold-without-visible-water-damage",
     title: "Can Mold Grow Without Visible Water Damage? What GTA Homeowners Need to Know",
     metaTitle: "Mold Without Visible Water Damage Toronto | Hidden Mold Signs | ASADS",
-    metaDescription: "Mold can thrive in Toronto homes with no visible leaks or staining. Learn the hidden sources of moisture that cause mold growth and how professional air testing detects it.",
+    metaDescription: "Mold can thrive in Toronto homes with no visible leaks. Learn hidden moisture sources that cause mold growth and how professional air testing detects it.",
     excerpt: "Mold can grow in a home with no visible leaks, staining, or flooding. Learn the hidden moisture sources that allow mold to colonize walls, attics, and HVAC systems undetected.",
     category: "Mold & Air Quality",
     author: "ASADS Team",
@@ -1584,7 +1584,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "designated-substance-survey-ontario-renovations",
     title: "What Is a Designated Substance Survey (DSS) and When Do You Need One in Ontario?",
     metaTitle: "Designated Substance Survey Ontario | Before Renovation | ASADS",
-    metaDescription: "A Designated Substance Survey (DSS) is legally required before demolition or major renovation of pre-1990 buildings in Ontario. Learn what's covered, who needs one, and what it costs.",
+    metaDescription: "A Designated Substance Survey is legally required before demolition of pre-1990 Ontario buildings. Learn what's covered, who needs one, and what it costs.",
     excerpt: "Ontario's Occupational Health and Safety Act requires a Designated Substance Survey before renovation or demolition of pre-1990 buildings. Learn what's involved and when it applies to you.",
     category: "Asbestos & Hazardous Materials",
     author: "ASADS Team",
@@ -1657,7 +1657,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "home-inspection-cost-ontario",
     title: "How Much Does a Home Inspection Cost in Ontario? (2025 Complete Guide)",
     metaTitle: "Home Inspection Cost Ontario 2025 | What Affects Price | ASADS",
-    metaDescription: "Home inspections in Ontario cost $400–$800+ depending on property size, age, and services included. Learn exactly what affects pricing and what to look for beyond price.",
+    metaDescription: "Home inspections in Ontario cost $400–$800+ depending on property size, age, and services included. Learn what affects pricing and what to look for.",
     excerpt: "Home inspections in Ontario range from $400 to $800+ depending on property type and what's included. Here's a complete breakdown of inspection pricing across the GTA.",
     category: "Buying Tips",
     author: "ASADS Team",
@@ -1790,13 +1790,13 @@ export const blogPostsData: BlogPost[] = [
     slug: "lead-paint-pre-1980-toronto-homes",
     title: "Lead Paint in Pre-1980 Toronto Homes: Testing, Health Risks & Your Legal Rights",
     metaTitle: "Lead Paint Testing Toronto | Pre-1980 Homes | XRF Testing | ASADS",
-    metaDescription: "Lead paint was banned in Canada in 1976 but remains in thousands of pre-1980 GTA homes. Learn the health risks, how XRF testing works, and seller disclosure obligations in Ontario.",
+    metaDescription: "Lead paint was banned in 1976 but remains in thousands of pre-1980 GTA homes. Learn health risks, how XRF testing works, and seller disclosure obligations.",
     excerpt: "Lead paint was banned in Canada in 1976 but it still exists in thousands of older Toronto and GTA homes. Learn the health risks, how to test for it, and what your rights are as a buyer.",
     category: "Asbestos & Hazardous Materials",
     author: "ASADS Team",
     date: "2025-01-29",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&h=500&fit=crop",
     featured: false,
     content: `
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Lead Paint Problem in Toronto's Housing Stock</h2>
@@ -1852,7 +1852,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "why-mold-comes-back-after-remediation",
     title: "Why Mold Keeps Coming Back After Remediation (And How to Stop It)",
     metaTitle: "Why Mold Comes Back After Remediation | Toronto | ASADS",
-    metaDescription: "Mold recurrence after remediation is common in Toronto homes when the moisture source isn't fixed. Learn the real causes of repeat mold and how post-remediation testing confirms success.",
+    metaDescription: "Mold recurrence is common when the moisture source isn't fixed. Learn causes of repeat mold in Toronto homes and how post-remediation testing confirms it.",
     excerpt: "If mold has been 'remediated' but keeps returning, the moisture source was never properly fixed. Learn the most common reasons mold recurs and how to end the cycle for good.",
     category: "Mold & Air Quality",
     author: "ASADS Team",
@@ -1906,7 +1906,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "radon-gas-ontario-buyers-guide",
     title: "Radon Gas in Ontario Homes: A Buyer's Complete Guide",
     metaTitle: "Radon Gas Ontario Homes | Testing & Mitigation | ASADS Toronto",
-    metaDescription: "Radon is the #1 cause of lung cancer in non-smokers. Ontario has pockets of elevated radon across the GTA. Learn how to test, what levels are dangerous, and mitigation costs.",
+    metaDescription: "Radon is the #1 cause of lung cancer in non-smokers. Ontario has pockets of elevated radon across the GTA. Learn how to test and what mitigation costs.",
     excerpt: "Radon gas is the leading cause of lung cancer among non-smokers in Canada. Ontario has areas of elevated radon risk, and many GTA homes have never been tested. Here's what buyers need to know.",
     category: "Mold & Air Quality",
     author: "ASADS Team",
@@ -1967,7 +1967,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "asbestos-insurance-ontario",
     title: "How Insurance Companies Handle Asbestos Discovery in Ontario Homes",
     metaTitle: "Asbestos & Home Insurance Ontario | What to Disclose | ASADS",
-    metaDescription: "Discovering asbestos during a home purchase affects insurance coverage in Ontario. Learn what insurers require, what must be disclosed, and how a certified report protects you.",
+    metaDescription: "Asbestos affects insurance coverage in Ontario home purchases. Learn what insurers require, what to disclose, and how a certified report protects you.",
     excerpt: "Asbestos discovery during a home purchase or renovation can affect insurance coverage and legal liability in Ontario. Here's what insurers require and how certified testing protects you.",
     category: "Asbestos & Hazardous Materials",
     author: "ASADS Team",
@@ -2024,7 +2024,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "pre-listing-inspection-seller-guide",
     title: "Pre-Listing Inspection: Why Smart Toronto Sellers Order One Before Listing",
     metaTitle: "Pre-Listing Home Inspection Toronto | Sell Faster & For More | ASADS",
-    metaDescription: "A pre-listing inspection identifies problems before buyers find them, giving Toronto sellers control over repairs, pricing, and negotiations. Learn why it's one of the best investments a seller can make.",
+    metaDescription: "A pre-listing inspection gives Toronto sellers control over repairs, pricing, and negotiations. Learn why it's one of the best investments a seller can make.",
     excerpt: "A pre-listing inspection gives Toronto sellers the power to address issues on their terms before buyers and their inspectors find them. Here's how it translates to faster sales and stronger prices.",
     category: "Selling Tips",
     author: "ASADS Team",
@@ -2082,7 +2082,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "condo-inspection-toronto-what-to-check",
     title: "Condo Inspection in Toronto: What to Check Before You Buy",
     metaTitle: "Condo Inspection Toronto | What's Covered & Status Certificate | ASADS",
-    metaDescription: "A condo inspection in Toronto covers the unit interior but not common elements. Learn what to inspect, what to look for in the status certificate, and what add-ons matter most.",
+    metaDescription: "A condo inspection in Toronto covers the unit interior. Learn what to inspect, what to look for in the status certificate, and which add-ons matter most.",
     excerpt: "A condo inspection in Toronto is different from a house inspection — and the status certificate can matter more than the inspection itself. Here's what smart condo buyers check before closing.",
     category: "Buying Tips",
     author: "ASADS Team",
@@ -2201,7 +2201,7 @@ export const blogPostsData: BlogPost[] = [
     author: "ASADS Team",
     date: "2025-03-02",
     readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=500&fit=crop",
     featured: false,
     content: `
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Brampton: One of Ontario's Fastest-Growing Cities</h2>
@@ -2229,7 +2229,7 @@ export const blogPostsData: BlogPost[] = [
         <li><strong>Basement moisture:</strong> Finished basements often conceal older water infiltration or ongoing seepage</li>
         <li><strong>KITEC plumbing:</strong> Found in homes built 1995–2007 throughout Brampton's growth corridors</li>
         <li><strong>Reverse-slope grading:</strong> Lot grading that has settled toward the house over time, directing water to the foundation</li>
-        <li><strong>Bathroom exhaust venting into attics:</strong> Extremely common in 1990s–2000s builds, causing condensation and mould</li>
+        <li><strong>Bathroom exhaust venting into attics:</strong> Extremely common in 1990s–2000s builds, causing condensation and mold</li>
       </ul>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Thermal Imaging and Brampton Homes</h2>
@@ -2273,7 +2273,7 @@ export const blogPostsData: BlogPost[] = [
         <li><strong>KITEC plumbing:</strong> Found in Cornell and other 1995–2007 builds</li>
         <li><strong>Roof end-of-life:</strong> Many 1980s homes are on second or third shingle layers approaching their limit</li>
         <li><strong>Stucco cladding failures:</strong> Common in 1990s–2000s Markham homes, often allowing water infiltration behind the surface</li>
-        <li><strong>Attic moisture and mould:</strong> Inadequate ventilation in sealed soffits of 2000s townhomes</li>
+        <li><strong>Attic moisture and mold:</strong> Inadequate ventilation in sealed soffits of 2000s townhomes</li>
       </ul>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Specialized Testing in Markham</h2>
@@ -2320,8 +2320,8 @@ export const blogPostsData: BlogPost[] = [
         <li><strong>Oversized HVAC equipment:</strong> Custom homes often have oversized heating systems that short-cycle and reduce efficiency</li>
       </ul>
 
-      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Air Quality and Mould in Vaughan Homes</h2>
-      <p class="mb-4">Vaughan's many large, tightly sealed newer homes can accumulate indoor air quality issues quickly when ventilation systems are not maintained. We recommend <a href="/services/air-quality">air quality testing</a> for any Vaughan home where musty odours are present, where the previous occupants had pets or smoked indoors, or where a finished basement shows any history of moisture. Early mould detection protects your family and prevents a minor remediation from becoming a major gut-and-rebuild situation.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Air Quality and Mold in Vaughan Homes</h2>
+      <p class="mb-4">Vaughan's many large, tightly sealed newer homes can accumulate indoor air quality issues quickly when ventilation systems are not maintained. We recommend <a href="/services/air-quality">air quality testing</a> for any Vaughan home where musty odours are present, where the previous occupants had pets or smoked indoors, or where a finished basement shows any history of moisture. Early mold detection protects your family and prevents a minor remediation from becoming a major gut-and-rebuild situation.</p>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Schedule Your Vaughan Home Inspection</h2>
       <p class="mb-4">ASADS certified home inspectors serve all of Vaughan including Woodbridge, Maple, Kleinburg, Thornhill (Vaughan), Concord, and the Vaughan Metropolitan Centre. We provide evening and weekend appointments, same-day digital reports, and direct access to your inspector for questions after the inspection. Call (647) 801-9311 to book your certified home inspection in Vaughan.</p>
@@ -2332,7 +2332,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "home-inspection-oakville-guide",
     title: "Home Inspection Oakville: Premium Properties, Real Risks",
     metaTitle: "Home Inspection Oakville | Certified Home Inspector | ASADS",
-    metaDescription: "Oakville home inspection experts. From Glen Abbey to Kerr Village heritage homes, ASADS certified inspectors know Oakville's KITEC risk and ravine drainage issues.",
+    metaDescription: "Oakville home inspection by ASADS. From Glen Abbey to Kerr Village, our certified inspectors know Oakville's KITEC risk and ravine drainage issues.",
     excerpt: "Oakville's premium real estate market includes everything from lakefront heritage homes to Glen Abbey estates—each with specific inspection concerns buyers must understand.",
     category: "City Guides",
     author: "ASADS Team",
@@ -2409,8 +2409,8 @@ export const blogPostsData: BlogPost[] = [
         <li><strong>Basement moisture in older stock:</strong> Stone and early concrete foundations throughout older Burlington communities</li>
       </ul>
 
-      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mould and Air Quality in Burlington Homes</h2>
-      <p class="mb-4">Burlington's proximity to Lake Ontario means elevated humidity levels, particularly in basements. Older homes with imperfect foundation waterproofing accumulate moisture over decades, creating conditions favourable to mould growth. If you notice musty odours or see discolouration on basement walls during a showing, request our <a href="/services/mould-inspection">mould inspection service</a> as an add-on to your standard home inspection. Early detection is far less expensive than discovering an active mould problem after closing.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mold and Air Quality in Burlington Homes</h2>
+      <p class="mb-4">Burlington's proximity to Lake Ontario means elevated humidity levels, particularly in basements. Older homes with imperfect foundation waterproofing accumulate moisture over decades, creating conditions favourable to mold growth. If you notice musty odours or see discolouration on basement walls during a showing, request our <a href="/services/mold-inspection">mold inspection service</a> as an add-on to your standard home inspection. Early detection is far less expensive than discovering an active mold problem after closing.</p>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your Burlington Home Inspection</h2>
       <p class="mb-4">ASADS certified home inspectors serve all Burlington neighbourhoods including Aldershot, downtown Burlington, Tyandaga, Millcroft, Brant Hills, Headon Forest, and the lakefront communities. Call (647) 801-9311 to schedule a Burlington home inspection with a certified inspector who understands your neighbourhood.</p>
@@ -2427,7 +2427,7 @@ export const blogPostsData: BlogPost[] = [
     author: "ASADS Team",
     date: "2025-03-07",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=500&fit=crop",
     featured: false,
     content: `
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Hamilton: Canada's Most Underrated Heritage City</h2>
@@ -2468,7 +2468,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "home-inspection-barrie-guide",
     title: "Home Inspection Barrie: Growing City, Hidden Risks",
     metaTitle: "Home Inspection Barrie | Certified Home Inspector | ASADS",
-    metaDescription: "Need a home inspection in Barrie? ASADS certified inspectors cover radon risks, newer north-end builds, and older Allandale homes. Book your Barrie inspection today.",
+    metaDescription: "Need a home inspection in Barrie? ASADS covers radon risks, newer north-end builds, and older Allandale homes. Book your Barrie inspection today.",
     excerpt: "Barrie is growing fast along the GO corridor, but new homes have issues too. Radon gas, Allandale's older stock, and north-end subdivision defects require a certified Barrie home inspector.",
     category: "City Guides",
     author: "ASADS Team",
@@ -2556,7 +2556,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "home-inspection-guelph-guide",
     title: "Home Inspection Guelph: Heritage Limestone and University-City Challenges",
     metaTitle: "Home Inspection Guelph | Certified Home Inspector | ASADS",
-    metaDescription: "Guelph home inspection by ASADS. Heritage limestone homes, century homes in the Ward, clay soil, and student rental stock—our certified inspectors know Guelph inside out.",
+    metaDescription: "Guelph home inspection by ASADS. Heritage limestone homes, century homes, clay soil & student rental stock — certified inspectors with local knowledge.",
     excerpt: "Guelph's limestone heritage buildings, century homes in the Ward neighbourhood, and rapid university-driven growth each present distinct inspection challenges for buyers.",
     category: "City Guides",
     author: "ASADS Team",
@@ -2591,8 +2591,8 @@ export const blogPostsData: BlogPost[] = [
         <li><strong>Unpermitted basement apartments:</strong> Illegal secondary units are common and create safety and insurance concerns</li>
       </ul>
 
-      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mould Risk in Guelph Homes</h2>
-      <p class="mb-4">Guelph's older housing stock, combined with high-occupancy rental use and clay soil drainage challenges, creates conditions where mould is a realistic concern. Our <a href="/services/mould-inspection">mould inspection service</a> uses moisture meters, thermal imaging, and air sampling to identify mould growth and moisture conditions before they become a costly post-purchase discovery. This service is particularly recommended for any Guelph home that has been a student rental or shows any evidence of basement moisture.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mold Risk in Guelph Homes</h2>
+      <p class="mb-4">Guelph's older housing stock, combined with high-occupancy rental use and clay soil drainage challenges, creates conditions where mold is a realistic concern. Our <a href="/services/mold-inspection">mold inspection service</a> uses moisture meters, thermal imaging, and air sampling to identify mold growth and moisture conditions before they become a costly post-purchase discovery. This service is particularly recommended for any Guelph home that has been a student rental or shows any evidence of basement moisture.</p>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Certified Home Inspector in Guelph</h2>
       <p class="mb-4">ASADS certified home inspectors serve all Guelph communities including the Ward, St. George's Park, Exhibition Park, Kortright Hills, Pineridge, and the growing south-end subdivisions. Call (647) 801-9311 to book your Guelph home inspection with a certified inspector who understands Guelph's unique housing challenges.</p>
@@ -2654,7 +2654,7 @@ export const blogPostsData: BlogPost[] = [
     author: "ASADS Team",
     date: "2025-03-12",
     readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
     featured: false,
     content: `
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection in Ajax: What Every Buyer Should Know</h2>
@@ -2699,7 +2699,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "home-inspection-whitby-guide",
     title: "Home Inspection Whitby: Heritage Downtown to Suburban Growth Corridors",
     metaTitle: "Home Inspection Whitby | Certified Home Inspector | ASADS",
-    metaDescription: "Whitby home inspection by ASADS. Downtown heritage core, Blue Grass Meadows, Pringle Creek, and suburban growth—certified Whitby home inspectors with local expertise.",
+    metaDescription: "Whitby home inspection by ASADS. Downtown heritage, Blue Grass Meadows, Pringle Creek & suburban growth — certified inspectors with local expertise.",
     excerpt: "Whitby spans a heritage downtown core and rapidly growing suburban neighbourhoods. Each area has distinct inspection concerns that every Whitby buyer should understand.",
     category: "City Guides",
     author: "ASADS Team",
@@ -2741,7 +2741,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "home-inspection-richmond-hill-guide",
     title: "Home Inspection Richmond Hill: Mill Pond Heritage to Bayview Hill Estates",
     metaTitle: "Home Inspection Richmond Hill | Certified Home Inspector | ASADS",
-    metaDescription: "Richmond Hill home inspection by ASADS. Mill Pond older homes, Bayview Hill estates, 1990s–2000s builds, and growing condo market—certified inspectors with local knowledge.",
+    metaDescription: "Richmond Hill home inspection by ASADS. Mill Pond older homes, Bayview Hill estates, 1990s–2000s builds & growing condo market — certified inspectors.",
     excerpt: "Richmond Hill's housing ranges from Mill Pond heritage properties to Bayview Hill luxury estates and a growing condo market. Each era requires a different inspection approach.",
     category: "City Guides",
     author: "ASADS Team",
@@ -2775,7 +2775,7 @@ export const blogPostsData: BlogPost[] = [
       </ul>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Radon and Air Quality in Richmond Hill</h2>
-      <p class="mb-4">While Richmond Hill is not in a high-radon geology zone like Barrie, Health Canada recommends radon testing for all homes in Canada. Our <a href="/services/radon-testing">radon testing service</a> provides both short-term options suitable for conditional periods and long-term tests for the most accurate results. We also offer air quality testing for Richmond Hill buyers concerned about VOCs, mould spores, or allergens in homes with visible moisture histories or strong odours.</p>
+      <p class="mb-4">While Richmond Hill is not in a high-radon geology zone like Barrie, Health Canada recommends radon testing for all homes in Canada. Our <a href="/services/radon-testing">radon testing service</a> provides both short-term options suitable for conditional periods and long-term tests for the most accurate results. We also offer air quality testing for Richmond Hill buyers concerned about VOCs, mold spores, or allergens in homes with visible moisture histories or strong odours.</p>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Certified Home Inspector in Richmond Hill</h2>
       <p class="mb-4">ASADS certified home inspectors serve all Richmond Hill communities including Mill Pond, Bayview Hill, Jefferson, Elgin Mills, Crosby, Westbrook, and the Yonge Street condo corridor. Call (647) 801-9311 to schedule your Richmond Hill home inspection with an experienced, certified inspector.</p>
@@ -2786,7 +2786,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "home-inspection-newmarket-guide",
     title: "Home Inspection Newmarket: Main Street Heritage to Summerhill Estates",
     metaTitle: "Home Inspection Newmarket | Certified Home Inspector | ASADS",
-    metaDescription: "Newmarket home inspection by ASADS. Heritage Main Street, Stonehaven, Summerhill Estates, and older downtown asbestos risk—certified inspectors with deep local knowledge.",
+    metaDescription: "Newmarket home inspection by ASADS. Heritage Main Street, Stonehaven, Summerhill Estates & older downtown asbestos risk — certified inspectors.",
     excerpt: "Newmarket's revitalized heritage Main Street district, established Stonehaven community, and upscale Summerhill Estates each require a distinct inspection approach.",
     category: "City Guides",
     author: "ASADS Team",
@@ -2832,7 +2832,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "commercial-building-inspection-ontario",
     title: "Commercial Building Inspection in Ontario: What Investors and Buyers Need to Know",
     metaTitle: "Commercial Building Inspection Ontario | PCA & Property Condition Assessment | ASADS",
-    metaDescription: "Planning to buy or lease commercial property in Ontario? A commercial building inspection and Property Condition Assessment (PCA) protects your investment. Learn what's covered, costs, and what inspectors look for.",
+    metaDescription: "Buying or leasing commercial property in Ontario? A commercial inspection and PCA protects your investment. Learn what's covered and what inspectors look for.",
     excerpt: "Commercial real estate transactions involve much larger stakes than residential purchases. A thorough commercial building inspection — often called a Property Condition Assessment (PCA) — is essential due diligence before committing to any office, retail, industrial, or multi-unit investment.",
     category: "Commercial",
     author: "ASADS Team",

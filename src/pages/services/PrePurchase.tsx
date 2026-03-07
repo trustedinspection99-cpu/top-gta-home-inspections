@@ -36,8 +36,8 @@
  ];
 
  const title = "Pre-Purchase Home Inspection";
- const metaTitle = "Pre-Purchase Home Inspection Ontario | Home Inspection Cost From $450 | ASADS";
- const metaDescription = "Certified pre-purchase home inspection in Ontario. Know your home inspection cost upfront — from $450 with same-day reports. Home inspection checklist included. Licensed inspectors, how much is a home inspection? Call (647) 801-9311.";
+ const metaTitle = "Pre-Purchase Home Inspection Ontario | From $450 | ASADS";
+ const metaDescription = "Certified pre-purchase home inspection in Ontario from $450. Same-day reports, 400-point checklist. Licensed inspectors for GTA & Ontario. Call (647) 801-9311.";
  const price = "$450-$750";
  const duration = "2-4 Hours";
 

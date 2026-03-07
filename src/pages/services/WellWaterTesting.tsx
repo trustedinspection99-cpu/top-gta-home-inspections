@@ -2,8 +2,8 @@ import { Droplets, TestTube, Beaker, ShieldCheck, Microscope, AlertTriangle } fr
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function WellWaterTesting() {
-  const pageTitle = "Well Water Testing Ontario | Drinking Water Quality Test | MOH Lab | ASADS";
-  const metaDescription = "Well water testing and drinking water quality test across Ontario. MOH accredited lab analysis for E.coli, bacteria, nitrates, arsenic & lead. Rural, GTA & cottage properties. Same-day courier. From $149.";
+  const pageTitle = "Well Water Testing Ontario | MOH Lab Certified | ASADS";
+  const metaDescription = "Well water testing Ontario. MOH accredited lab for E.coli, bacteria, nitrates, arsenic & lead. Rural, GTA & cottage properties. Same-day courier. From $149.";
 
   return (
     <ServicePageTemplate

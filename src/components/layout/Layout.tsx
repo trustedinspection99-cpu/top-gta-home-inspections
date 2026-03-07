@@ -55,16 +55,16 @@ const localBusinessSchema = {
   paymentAccepted: "Cash, Credit Card, Debit Card, E-Transfer",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Toronto",
-    addressLocality: "Toronto",
+    streetAddress: "45 Duckworth Rd",
+    addressLocality: "Cambridge",
     addressRegion: "ON",
-    postalCode: "M5V",
+    postalCode: "N3H 0C1",
     addressCountry: "CA"
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 43.653226,
-    longitude: -79.383184
+    latitude: 43.3990,
+    longitude: -80.3271
   },
   openingHoursSpecification: [
     {
@@ -81,6 +81,29 @@ const localBusinessSchema = {
       opens: "07:00",
       closes: "22:00"
     }
+  ],
+  areaServed: [
+    "Toronto", "North York", "Scarborough", "Etobicoke", "Mississauga",
+    "Brampton", "Markham", "Vaughan", "Richmond Hill", "Aurora",
+    "Bolton", "Halton Hills", "Caledon", "Oakville", "Oshawa",
+    "Barrie", "Whitby", "Peterborough", "Newmarket", "Burlington",
+    "Ajax", "Collingwood", "Stouffville", "Thornhill", "Milton",
+    "Pickering", "Clarington", "Orillia", "Innisfil", "Uxbridge",
+    "Beaverton", "Cannington", "Cobourg", "East York", "King City",
+    "Georgina", "Keswick", "Sutton", "East Gwillimbury", "Unionville",
+    "Kleinburg", "Maple", "Woodbridge", "Concord", "Georgetown",
+    "Acton", "Scugog", "Port Perry", "Brock", "Bowmanville",
+    "Wasaga Beach", "Midland", "Hamilton", "Stoney Creek", "Ancaster",
+    "Niagara Falls", "St. Catharines", "Kitchener", "Waterloo", "Guelph",
+    "Penetanguishene", "Springwater", "New Tecumseth", "Alliston",
+    "Bradford West Gwillimbury", "Essa", "Clearview", "Stayner",
+    "Dundas", "Flamborough", "Grimsby", "Niagara-on-the-Lake", "Welland",
+    "Thorold", "Fort Erie", "Port Colborne", "Lincoln", "Beamsville",
+    "Cambridge", "Brantford", "Orangeville", "Pelham", "Wainfleet",
+    "West Lincoln", "Woolwich", "Wilmot", "North Dumfries", "Wellesley",
+    "Centre Wellington", "Erin", "Guelph/Eramosa", "Mapleton", "Puslinch",
+    "Wellington North", "Minto", "Severn", "Tiny Township", "Tay Township",
+    "Shelburne", "Mono", "Woodstock", "Ingersoll", "Tillsonburg", "Paris"
   ],
   sameAs: [
     "https://www.facebook.com/share/1ZhWQk97YY/",

@@ -38,8 +38,8 @@ const featuredLocations = [
 ];
 
 const title = "New Construction & Tarion Warranty Inspection";
-const metaTitle = "New Home Inspection & New Construction Inspection Toronto | Tarion Warranty | ASADS";
-const metaDescription = "Certified new home inspection and new construction inspection in Toronto & GTA. New build inspection covers PDI, 30-Day, and 1-Year Tarion Warranty deadlines. Identify builder defects before they pass.";
+const metaTitle = "New Construction Inspection Toronto | Tarion | ASADS";
+const metaDescription = "Certified new construction inspection in Toronto & GTA. Covers PDI, 30-Day, and 1-Year Tarion Warranty deadlines. Identify builder defects before they pass.";
 const price = "Contact for Quote";
 const duration = "3-5 Hours";
 

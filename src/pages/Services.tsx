@@ -254,7 +254,7 @@ export default function Services() {
     <Layout>
       <Helmet>
         <title>Home Inspection Services Ontario | ASADS</title>
-        <meta name="description" content="14 certified home inspection services for Ontario buyers, sellers & investors. Pre-purchase, condo, commercial, radon, mold, asbestos & more. Certified inspectors." />
+        <meta name="description" content="14 certified home inspection services for Ontario buyers, sellers & investors. Pre-purchase, condo, commercial, radon, mold & asbestos. Certified inspectors." />
         <link rel="canonical" href="https://www.asads.ca/services" />
         <meta property="og:title" content="Home Inspection Services Ontario | ASADS" />
         <meta property="og:description" content="14 certified home inspection services for Ontario buyers, sellers & investors. Pre-purchase, condo, commercial, radon, mold, asbestos & more." />

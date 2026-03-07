@@ -2,8 +2,8 @@ import { Thermometer, Zap, Droplets, Home, ShieldCheck, Search } from "lucide-re
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function ThermalImaging() {
-  const pageTitle = "Thermal Imaging & Thermographic Inspection Toronto | Infrared Inspection | ASADS";
-  const schemaDescription = "Certified thermal imaging, thermographic inspection, and infrared inspection in Toronto & GTA. Detect hidden moisture, heat loss & electrical hotspots behind walls without damage. FLIR technology, same-day results.";
+  const pageTitle = "Thermal Imaging Toronto | Infrared Inspection | ASADS";
+  const schemaDescription = "Thermal imaging & infrared inspection Toronto & GTA. Detect hidden moisture, heat loss & electrical hotspots without damage. FLIR technology, same-day results.";
 
   return (
     <ServicePageTemplate

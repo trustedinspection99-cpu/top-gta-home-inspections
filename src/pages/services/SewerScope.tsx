@@ -2,8 +2,8 @@ import { Video, Search, Map, AlertCircle, ShieldCheck, Clock, DollarSign, ListCh
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function SewerScope() {
-  const pageTitle = "Sewer Camera Inspection & Drain Scope Toronto | CCTV | From $299 | ASADS";
-  const metaDescription = "Sewer camera inspection and drain scope in Toronto from $299. Same-day 1080p HD video, GPS pipe mapping & written report. Detect root intrusion, bellied pipes & cracks before you buy.";
+  const pageTitle = "Sewer Scope Inspection Toronto | CCTV Drain Camera | ASADS";
+  const metaDescription = "Sewer camera inspection Toronto from $299. Same-day HD video, GPS pipe mapping & written report. Detect root intrusion, bellied pipes & cracks before you buy.";
 
   return (
     <ServicePageTemplate

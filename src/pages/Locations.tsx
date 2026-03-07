@@ -99,7 +99,7 @@ export default function Locations() {
         <title>Service Areas | Home Inspection Across the GTA | ASADS</title>
         <meta
           name="description"
-          content="ASADS provides professional home inspection services across the Greater Toronto Area. Certified inspectors in Toronto, Mississauga, Brampton, Vaughan, Markham & 80+ more cities."
+          content="Professional home inspection services across Ontario. Certified inspectors in Toronto, Mississauga, Brampton, Vaughan, Markham & 80+ cities."
         />
         <link rel="canonical" href="https://www.asads.ca/locations" />
         

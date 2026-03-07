@@ -28,7 +28,7 @@ export default function Blog() {
     <Layout>
       <Helmet>
         <title>Home Inspection Blog | Expert Tips & Guides | ASADS</title>
-        <meta name="description" content="Expert home inspection tips, buying guides, and maintenance advice for GTA homeowners. Learn about common issues, inspection processes, and how to protect your investment." />
+        <meta name="description" content="Expert home inspection tips, buying guides & maintenance advice for GTA homeowners. Common issues, inspection processes & protecting your investment." />
         <link rel="canonical" href={`${SITE_URL}/blog`} />
         
         {/* Open Graph */}

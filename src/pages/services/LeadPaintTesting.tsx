@@ -2,8 +2,8 @@ import { Pipette, ShieldAlert, FileSearch, HardHat, AlertTriangle, Thermometer }
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function LeadPaintTesting() {
-  const pageTitle = "Lead Paint Testing & Lead Testing Toronto | XRF Certified | From $349 | ASADS";
-  const metaDescription = "Professional lead paint testing and lead testing in Toronto & GTA. XRF certified lead paint inspection for homes built before 1990. Ontario Regulation 278/05 compliant reports. From $349.";
+  const pageTitle = "Lead Paint Testing Toronto | XRF Certified | ASADS";
+  const metaDescription = "Professional lead paint testing in Toronto & GTA. XRF certified inspection for homes built before 1990. O.Reg 278/05 compliant reports. From $349.";
 
   return (
     <ServicePageTemplate

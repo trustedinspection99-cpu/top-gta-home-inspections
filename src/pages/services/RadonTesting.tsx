@@ -2,8 +2,8 @@ import { Radio, ShieldAlert, Activity, ClipboardCheck, LayoutList, GraduationCap
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function RadonTesting() {
-  const pageTitle = "Radon Testing & Radon Measurement Toronto | C-NRPP Certified | ASADS";
-  const schemaDescription = "C-NRPP certified radon testing and radon measurement in Toronto & GTA. Health Canada compliant long-term alpha track and 48-hour digital monitoring. Protect your family from Canada's #1 cause of lung cancer in non-smokers.";
+  const pageTitle = "Radon Testing Toronto | C-NRPP Certified | ASADS";
+  const schemaDescription = "C-NRPP certified radon testing Toronto & GTA. Health Canada compliant monitoring. Protect your family from Canada's top cause of lung cancer in non-smokers.";
 
   return (
     <ServicePageTemplate
