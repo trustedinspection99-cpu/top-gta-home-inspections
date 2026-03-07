@@ -1345,7 +1345,7 @@ export const blogPostsData: BlogPost[] = [
     author: "ASADS Team",
     date: "2025-01-22",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1547050605346-7c52f6a17b7e?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1612528443702-f6741f70a049?w=800&h=500&fit=crop",
     featured: false,
     content: `
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is an Ice Dam and Why Should You Care?</h2>
