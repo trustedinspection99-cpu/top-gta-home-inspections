@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { getCanonicalUrl } from "@/lib/seo";
+import { getCanonicalUrl, SITE_URL } from "@/lib/seo";
 import {
   Building,
   Thermometer,
@@ -183,6 +183,21 @@ export default function CondoInspection() {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonical} />
+        <meta property="og:site_name" content="ASADS Home Inspection" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:image" content={`${SITE_URL}/images/og-default.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="ASADS Home Inspection - Professional Home Inspectors in Toronto & GTA" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AsadsInspection" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={`${SITE_URL}/images/og-default.jpg`} />
         {schemas.map((schema, i) => (
           <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
         ))}

@@ -150,6 +150,21 @@ export default function NewConstruction() {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={serviceUrl} />
+        <meta property="og:site_name" content="ASADS Home Inspection" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={serviceUrl} />
+        <meta property="og:image" content={`${SITE_URL}/images/og-default.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="ASADS Home Inspection - Professional Home Inspectors in Toronto & GTA" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AsadsInspection" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={`${SITE_URL}/images/og-default.jpg`} />
         {schemas.map((schema, i) => (
           <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
         ))}
