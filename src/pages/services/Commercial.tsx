@@ -302,8 +302,10 @@ export default function Commercial() {
     ],
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Toronto",
+      "streetAddress": "45 Duckworth Rd",
+      "addressLocality": "Cambridge",
       "addressRegion": "ON",
+      "postalCode": "N3H 0C1",
       "addressCountry": "CA"
     },
     "description": "ASADS Home Inspection provides professional commercial and residential inspection services across Ontario. Certified inspectors specializing in pre-purchase, commercial PCA, Phase 1 ESA, and specialized property assessments."

@@ -128,6 +128,14 @@ export default function Locations() {
           "name": "ASADS Home Inspection",
           "url": "https://www.asads.ca",
           "telephone": "+16478019311",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "45 Duckworth Rd",
+            "addressLocality": "Cambridge",
+            "addressRegion": "ON",
+            "postalCode": "N3H 0C1",
+            "addressCountry": "CA"
+          },
           "areaServed": allLocations.map(loc => ({ "@type": "City", "name": loc.city }))
         })}</script>
         <script type="application/ld+json">{JSON.stringify({

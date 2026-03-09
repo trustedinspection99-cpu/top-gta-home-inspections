@@ -175,8 +175,10 @@
        "telephone": "+16478019311",
        "address": {
          "@type": "PostalAddress",
-         "addressLocality": "Toronto",
+         "streetAddress": "45 Duckworth Rd",
+         "addressLocality": "Cambridge",
          "addressRegion": "ON",
+         "postalCode": "N3H 0C1",
          "addressCountry": "CA"
        },
        "areaServed": {
@@ -279,8 +281,10 @@
      ],
      "address": {
        "@type": "PostalAddress",
-       "addressLocality": "Toronto",
+       "streetAddress": "45 Duckworth Rd",
+       "addressLocality": "Cambridge",
        "addressRegion": "ON",
+       "postalCode": "N3H 0C1",
        "addressCountry": "CA"
      },
      "description": "ASADS Home Inspection provides professional home inspection services across Ontario. Certified inspectors specializing in pre-purchase, new construction, and specialized property assessments."

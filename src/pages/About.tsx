@@ -57,8 +57,10 @@ const organizationSchema = {
   },
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Toronto",
+    "streetAddress": "45 Duckworth Rd",
+    "addressLocality": "Cambridge",
     "addressRegion": "ON",
+    "postalCode": "N3H 0C1",
     "addressCountry": "CA"
   },
   "contactPoint": [

@@ -49,6 +49,14 @@ export default function Testimonials() {
     "@type": "LocalBusiness",
     "@id": "https://www.asads.ca/#localbusiness",
     "name": "ASADS Home Inspection",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "45 Duckworth Rd",
+      "addressLocality": "Cambridge",
+      "addressRegion": "ON",
+      "postalCode": "N3H 0C1",
+      "addressCountry": "CA"
+    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",

@@ -160,6 +160,14 @@ const localBusinessSchema = {
   "telephone": "+16478019311",
   "priceRange": "$400-$600",
   "description": "Certified home inspector in Toronto, GTA & Ontario. OAHI-certified with 14 specialty inspection services including radon, mold, WETT & asbestos testing. Same-day digital reports.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "45 Duckworth Rd",
+    "addressLocality": "Cambridge",
+    "addressRegion": "ON",
+    "postalCode": "N3H 0C1",
+    "addressCountry": "CA"
+  },
   "areaServed": {
     "@type": "State",
     "name": "Ontario",
