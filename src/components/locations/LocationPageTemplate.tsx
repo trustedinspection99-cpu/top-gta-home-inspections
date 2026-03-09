@@ -149,7 +149,7 @@ export function LocationPageTemplate({
         addressLocality: city,
         addressRegion: region,
         postalCode,
-        addressCountry: "Canada",
+        addressCountry: "CA",
       },
       geo: latitude && longitude ? { "@type": "GeoCoordinates", latitude, longitude } : undefined,
       areaServed: {
