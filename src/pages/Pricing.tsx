@@ -228,27 +228,27 @@ export default function Pricing() {
   return (
     <Layout>
       <Helmet>
-        <title>Home Inspection Price Ontario | Transparent Rates & Packages | ASADS</title>
+        <title>How Much Does a Home Inspection Cost? Ontario | ASADS</title>
         <meta
           name="description"
-          content="Home inspection pricing in Ontario. No hidden fees. Pre-purchase from $399, condos from $349. Packages for houses, condos & specialty services."
+          content="How much does a home inspection cost in Ontario? Pre-purchase from $399, condos from $299. No hidden fees. View all packages for houses, condos & specialty services."
         />
         <link rel="canonical" href="https://www.asads.ca/pricing" />
         
         {/* Open Graph */}
         <meta property="og:site_name" content="ASADS Home Inspection" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Home Inspection Cost Ontario | Clear Rates & Packages" />
-        <meta property="og:description" content="Transparent home inspection pricing in Ontario. No hidden fees. View our packages for houses, condos, and multi-unit properties." />
+        <meta property="og:title" content="How Much Does a Home Inspection Cost? Ontario | ASADS" />
+        <meta property="og:description" content="How much does a home inspection cost in Ontario? Pre-purchase from $399, condos from $299. No hidden fees. View all packages." />
         <meta property="og:url" content="https://www.asads.ca/pricing" />
         <meta property="og:image" content="https://www.asads.ca/images/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        
+
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Home Inspection Cost Ontario | Clear Rates & Packages" />
-        <meta name="twitter:description" content="Transparent home inspection pricing in Ontario. No hidden fees. View our packages for houses, condos, and multi-unit properties." />
+        <meta name="twitter:title" content="How Much Does a Home Inspection Cost? Ontario | ASADS" />
+        <meta name="twitter:description" content="How much does a home inspection cost in Ontario? Pre-purchase from $399, condos from $299. No hidden fees. View all packages." />
         <meta name="twitter:image" content="https://www.asads.ca/images/og-default.jpg" />
         
         <script type="application/ld+json">{JSON.stringify(pricingSchema)}</script>
@@ -260,10 +260,10 @@ export default function Pricing() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center text-primary-foreground">
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">
-              Home Inspection Cost in Ontario
+              How Much Does a Home Inspection Cost in Ontario?
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
-              No hidden fees. Get a detailed quote instantly based on your property size. 
+              No hidden fees. Transparent home inspection pricing based on your property size and type.
               All inspections include same-day digital reports.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

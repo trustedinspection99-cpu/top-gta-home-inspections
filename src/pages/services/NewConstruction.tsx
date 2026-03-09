@@ -38,8 +38,8 @@ const featuredLocations = [
 ];
 
 const title = "New Construction & Tarion Warranty Inspection";
-const metaTitle = "New Construction Inspection Toronto | Tarion | ASADS";
-const metaDescription = "Certified new construction inspection in Toronto & GTA. Covers PDI, 30-Day, and 1-Year Tarion Warranty deadlines. Identify builder defects before they pass.";
+const metaTitle = "PDI Inspection Toronto | New Construction | Tarion | ASADS";
+const metaDescription = "Certified PDI inspection & new construction inspection in Toronto & GTA. Covers Pre-Delivery, 30-Day, and 1-Year Tarion Warranty deadlines. From $449.";
 const price = "Contact for Quote";
 const duration = "3-5 Hours";
 
@@ -128,7 +128,7 @@ export default function NewConstruction() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "New Construction Inspection",
+      "serviceType": "PDI Inspection & New Construction Inspection",
       "provider": { "@type": "LocalBusiness", "name": "ASADS Home Inspection" },
       "description": metaDescription,
       "areaServed": "Ontario"
@@ -180,7 +180,7 @@ export default function NewConstruction() {
               </div>
               <div>
                 <p className="text-primary-foreground/80 text-sm font-medium uppercase tracking-wider">Builder Quality Control</p>
-                <h1 className="font-heading text-3xl md:text-5xl font-bold">New Home Inspection & New Construction Inspection</h1>
+                <h1 className="font-heading text-3xl md:text-5xl font-bold">PDI Inspection & New Construction Home Inspection</h1>
               </div>
             </div>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl">

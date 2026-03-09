@@ -46,8 +46,8 @@ const featuredLocations = [
 ];
 
 const title = "Commercial Building Inspection";
-const metaTitle = "Commercial Building Inspection Toronto | PCA | ASADS";
-const metaDescription = "Commercial building inspection & PCA in Toronto & GTA. ASTM E2018-15 compliant. Offices, retail & industrial. CapEx forecasting, MEP audits & Phase 1 ESA.";
+const metaTitle = "Commercial Property Inspection Toronto | PCA | ASADS";
+const metaDescription = "Commercial property inspection & PCA in Toronto & GTA. ASTM E2018-15 compliant. Offices, retail & industrial. CapEx forecasting, MEP audits & Phase 1 ESA.";
 const price = "Quote Based";
 const duration = "Expedited Reporting Available";
 
@@ -524,7 +524,7 @@ export default function Commercial() {
                   ASADS Commercial Inspection Services
                 </p>
                 <h1 className="font-heading text-3xl md:text-5xl font-bold">
-                  Commercial Building Inspection & Property Condition Assessment
+                  Commercial Property Inspection & Building Condition Assessment
                 </h1>
               </div>
             </div>
