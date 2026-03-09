@@ -37,7 +37,7 @@ const metaTitle =
   "Condo Inspection Toronto | Kitec Plumbing | ASADS";
 
 const metaDescription =
-  "Certified condo & townhouse inspection in Toronto & GTA. Identify Kitec plumbing, fan coil failures, moisture intrusion & in-suite liabilities. From $350.";
+  "Certified condo & townhouse inspection in Toronto & GTA. Identify Kitec plumbing, fan coil failures, moisture intrusion & in-suite liabilities. From $299.";
 
 const duration = "1.5 – 2.5 Hours";
 
@@ -128,7 +128,7 @@ export default function CondoInspection() {
       "offers": {
         "@type": "Offer",
         "priceCurrency": "CAD",
-        "price": "350",
+        "price": "299",
         "availability": "https://schema.org/InStock"
       }
     },

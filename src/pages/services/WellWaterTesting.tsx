@@ -3,7 +3,7 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function WellWaterTesting() {
   const pageTitle = "Well Water Testing Ontario | MOH Lab Certified | ASADS";
-  const metaDescription = "Well water testing Ontario. MOH accredited lab for E.coli, bacteria, nitrates, arsenic & lead. Rural, GTA & cottage properties. Same-day courier. From $149.";
+  const metaDescription = "Well water testing Ontario. MOH accredited lab for E.coli, bacteria, nitrates, arsenic & lead. Rural, GTA & cottage properties. Same-day courier. From $199.";
 
   return (
     <ServicePageTemplate
@@ -13,7 +13,7 @@ export default function WellWaterTesting() {
       heroTitle="Well Water Testing & Drinking Water Quality Test — MOH Accredited Lab"
       heroSubtitle="Protect your family from invisible contaminants. Certified well water testing and drinking water quality analysis for private wells across Ontario — GTA, rural, and cottage properties. MOH accredited lab results."
       icon={Droplets}
-      price="From $149"
+      price="From $199"
       duration="Sample Collection + Lab Time"
       description={
         <div className="space-y-6">
@@ -164,7 +164,7 @@ export default function WellWaterTesting() {
         },
         {
           question: "How much does well water testing cost in the GTA?",
-          answer: "Well water testing starts from $149 for basic bacteria analysis. Our comprehensive 'Real Estate Full Analysis' package is priced higher and meets all lender requirements. Contact us at (647) 801-9311."
+          answer: "Well water testing starts from $199 for basic bacteria analysis. Our comprehensive 'Real Estate Full Analysis' package is priced higher and meets all lender requirements. Contact us at (647) 801-9311."
         },
         {
           question: "What happens if my well water fails the test?",

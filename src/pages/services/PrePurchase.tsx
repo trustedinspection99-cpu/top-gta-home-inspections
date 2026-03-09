@@ -36,9 +36,9 @@
  ];
 
  const title = "Pre-Purchase Home Inspection";
- const metaTitle = "Pre-Purchase Home Inspection Ontario | From $450 | ASADS";
- const metaDescription = "Certified pre-purchase home inspection in Ontario from $450. Same-day reports, 400-point checklist. Licensed inspectors for GTA & Ontario. Call (647) 801-9311.";
- const price = "$450-$750";
+ const metaTitle = "Pre-Purchase Home Inspection Ontario | From $399 | ASADS";
+ const metaDescription = "Certified pre-purchase home inspection in Ontario from $399. Same-day reports, 400-point checklist. Licensed inspectors for GTA & Ontario. Call (647) 801-9311.";
+ const price = "$399-$749";
  const duration = "2-4 Hours";
 
  const whatWeInspect = [
@@ -189,7 +189,7 @@
        "@type": "Offer",
        "availability": "https://schema.org/InStock",
        "priceCurrency": "CAD",
-       "priceRange": "$450-$750"
+       "priceRange": "$399-$749"
      },
      "category": "Home Inspection Services",
      "hasOfferCatalog": {
@@ -318,7 +318,7 @@
      "@type": "ProfessionalService",
      "name": "ASADS Home Inspection - Pre-Purchase Services",
      "image": `${SITE_URL}/images/services/pre-purchase-inspection.jpg`,
-     "priceRange": "$450-$750",
+     "priceRange": "$399-$749",
      "telephone": "+16478019311",
      "address": {
        "@type": "PostalAddress",
@@ -388,7 +388,7 @@
                  "name": "Complete Home Inspection (up to 2000 sq ft)",
                  "description": "Comprehensive evaluation of all major systems and components"
                },
-               "price": "450",
+               "price": "399",
                "priceCurrency": "CAD"
              },
              {
@@ -502,7 +502,7 @@
                </div>
              </div>
              <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl">
-               Know exactly what you're buying before you sign. Comprehensive pre-purchase home inspection with a full home inspection checklist — transparent home inspection cost from $450, same-day digital reports.
+               Know exactly what you're buying before you sign. Comprehensive pre-purchase home inspection with a full home inspection checklist — transparent home inspection cost from $399, same-day digital reports.
              </p>
              <div className="flex flex-wrap gap-6 mb-8">
                <div className="flex items-center gap-2">

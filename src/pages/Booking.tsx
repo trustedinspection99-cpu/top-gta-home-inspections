@@ -24,10 +24,15 @@ const inspectionTypes = [
   { value: "new-construction", label: "New Construction Inspection", price: "$449+" },
   { value: "condo", label: "Condo Inspection", price: "$299+" },
   { value: "commercial", label: "Commercial Inspection", price: "Custom" },
-  { value: "radon", label: "Radon Testing", price: "$149+" },
+  { value: "radon", label: "Radon Testing", price: "$199+" },
   { value: "mold", label: "Mold Inspection", price: "$299+" },
-  { value: "wett", label: "WETT Inspection", price: "$199+" },
-  { value: "thermal", label: "Thermal Imaging", price: "$99+" },
+  { value: "wett", label: "WETT Inspection", price: "$249+" },
+  { value: "thermal", label: "Thermal Imaging", price: "$149+" },
+  { value: "asbestos", label: "Asbestos Testing", price: "$299+" },
+  { value: "lead-paint", label: "Lead Paint Testing", price: "$349+" },
+  { value: "sewer-scope", label: "Sewer Scope Inspection", price: "$299+" },
+  { value: "air-quality", label: "Air Quality Testing", price: "$249+" },
+  { value: "well-water", label: "Well Water Testing", price: "$199+" },
 ];
 
 const timeSlots = [

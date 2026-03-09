@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function MoldInspection() {
   const pageTitle = "Mold Inspection & Testing Toronto | AIHA Lab | ASADS";
-  const schemaDescription = "Mold inspection & testing Toronto & GTA. AIHA lab, air sampling & species ID. Third-party only — not remediation. Written scope for contractors. From $349.";
+  const schemaDescription = "Mold inspection & testing Toronto & GTA. AIHA lab, air sampling & species ID. Third-party only — not remediation. Written scope for contractors. From $299.";
 
   return (
     <ServicePageTemplate
@@ -27,7 +27,7 @@ export default function MoldInspection() {
         </>
       }
       icon={Microscope}
-      price="From $349"
+      price="From $299"
       duration="2-3 Hours + Lab Analysis"
       description={
         <div className="space-y-6">
@@ -238,7 +238,7 @@ export default function MoldInspection() {
         },
         {
           question: "How much does mold inspection cost in Toronto?",
-          answer: "Professional mold inspection in Toronto starts from $349, which includes air sampling and lab analysis. Emergency and same-day services are available for urgent concerns."
+          answer: "Professional mold inspection in Toronto starts from $299, which includes air sampling and lab analysis. Emergency and same-day services are available for urgent concerns."
         },
         {
           question: "How is mold testing different from a visual mold inspection?",

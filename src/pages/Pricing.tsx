@@ -108,7 +108,7 @@ const mainInspections = [
 const specialtyServices = [
   {
     title: "Radon Testing",
-    price: "$149",
+    price: "$199",
     duration: "48-hour test",
     description: "Detect harmful radon gas in your home",
     href: "/services/radon-testing",
@@ -122,7 +122,7 @@ const specialtyServices = [
   },
   {
     title: "Asbestos Testing",
-    price: "$99/sample",
+    price: "$299",
     duration: "Lab results in 3-5 days",
     description: "Safe identification of asbestos materials",
     href: "/services/asbestos-testing",
@@ -143,7 +143,7 @@ const specialtyServices = [
   },
   {
     title: "Lead Paint Testing",
-    price: "$79/sample",
+    price: "$349",
     duration: "Lab results in 5-7 days",
     description: "Protect your family from lead hazards",
     href: "/services/lead-paint-testing",
@@ -157,7 +157,7 @@ const specialtyServices = [
   },
   {
     title: "Sewer Scope",
-    price: "$199",
+    price: "$299",
     duration: "Video inspection",
     description: "Camera inspection of sewer lines",
     href: "/services/sewer-scope",
