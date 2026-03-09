@@ -97,23 +97,20 @@ export default function CondoInspection() {
   const schemas = [
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "ASADS Home Inspection",
-      "url": canonical,
-      "telephone": "+1-647-801-9311",
-      "areaServed": "Ontario, Canada"
-    },
-    {
-      "@context": "https://schema.org",
       "@type": "LocalBusiness",
+      "@id": "https://www.asads.ca/#localbusiness",
       "name": "ASADS Home Inspection",
-      "url": canonical,
-      "telephone": "+1-647-801-9311",
+      "url": "https://www.asads.ca",
+      "telephone": "+16478019311",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "45 Duckworth Rd",
+        "addressLocality": "Cambridge",
         "addressRegion": "ON",
+        "postalCode": "N3H 0C1",
         "addressCountry": "CA"
-      }
+      },
+      "areaServed": "Ontario, Canada"
     },
     {
       "@context": "https://schema.org",

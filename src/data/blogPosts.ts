@@ -235,7 +235,7 @@ export const blogPostsData: BlogPost[] = [
     id: 5,
     slug: "winter-home-maintenance-checklist",
     title: "Winter Home Maintenance Checklist for GTA Homeowners",
-    metaTitle: "Winter Home Maintenance Checklist | Ontario Guide",
+    metaTitle: "Winter Home Maintenance Checklist | Ontario Guide | ASADS",
     metaDescription: "Prepare your home for winter. Prevent freezing pipes, roof leaks, and heating failures with our expert maintenance checklist.",
     excerpt: "Prepare your home for harsh Canadian winters with our comprehensive maintenance checklist. Prevent costly repairs and stay warm.",
     category: "Maintenance",

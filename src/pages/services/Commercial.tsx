@@ -146,10 +146,10 @@ export default function Commercial() {
     "email": "info@asads.ca",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "",
-      "addressLocality": "Toronto",
+      "streetAddress": "45 Duckworth Rd",
+      "addressLocality": "Cambridge",
       "addressRegion": "ON",
-      "postalCode": "M5V",
+      "postalCode": "N3H 0C1",
       "addressCountry": "CA"
     },
     "geo": {
@@ -189,8 +189,10 @@ export default function Commercial() {
       "telephone": "+16478019311",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Toronto",
+        "streetAddress": "45 Duckworth Rd",
+        "addressLocality": "Cambridge",
         "addressRegion": "ON",
+        "postalCode": "N3H 0C1",
         "addressCountry": "CA"
       },
       "areaServed": {
@@ -343,10 +345,10 @@ export default function Commercial() {
     "telephone": "+16478019311",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "",
-      "addressLocality": "Toronto",
+      "streetAddress": "45 Duckworth Rd",
+      "addressLocality": "Cambridge",
       "addressRegion": "ON",
-      "postalCode": "M5V",
+      "postalCode": "N3H 0C1",
       "addressCountry": "CA"
     },
     "geo": {

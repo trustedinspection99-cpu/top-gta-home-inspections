@@ -394,7 +394,7 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-richmond-hill",
     city: "Richmond Hill",
     region: "York Region",
-    metaTitle: "Richmond Hill Home Inspector | Buyer Certified",
+    metaTitle: "Home Inspection Richmond Hill | Certified Inspector | ASADS",
     metaDescription: "Certified Richmond Hill home inspector for pre-purchase buyer inspections, thermal imaging & pre-listing seller services. Oak Ridges to Bayview Hill.",
     description: "Richmond Hill's trusted certified inspector specializing in luxury estate buyer inspections, new construction warranty reviews & thermal imaging diagnostics.",
     neighborhoods: [
@@ -2701,7 +2701,7 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-alliston",
     city: "Alliston",
     region: "Simcoe County",
-    metaTitle: "Alliston Home Inspector | New Construction Expert",
+    metaTitle: "Home Inspection Alliston | Certified Inspector | ASADS",
     metaDescription: "Certified Alliston home inspector for new subdivisions & family homes. Thermal imaging, Tarion warranty specialist serving New Tecumseth.",
     description: "Alliston's premier new construction inspector specializing in Tarion warranty inspections, family home pre-purchase & thermal imaging diagnostics.",
     neighborhoods: ["Downtown Alliston", "Banting", "Riverdale", "Westside", "McMullen"],

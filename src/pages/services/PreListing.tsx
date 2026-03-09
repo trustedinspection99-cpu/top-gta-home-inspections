@@ -138,11 +138,13 @@ export default function PreListing() {
     "email": "info@asads.ca",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Toronto",
+      "streetAddress": "45 Duckworth Rd",
+      "addressLocality": "Cambridge",
       "addressRegion": "ON",
+      "postalCode": "N3H 0C1",
       "addressCountry": "CA"
     },
-    "geo": { " @type": "GeoCoordinates", "latitude": 43.653226, "longitude": -79.383184 },
+    "geo": { "@type": "GeoCoordinates", "latitude": 43.3990, "longitude": -80.3271 },
     "areaServed": featuredLocations.map(loc => ({ "@type": "City", "name": loc.name })),
     "priceRange": "$$",
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "158" }

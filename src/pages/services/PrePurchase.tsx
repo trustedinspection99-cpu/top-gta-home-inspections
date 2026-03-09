@@ -132,16 +132,16 @@
      "email": "info@asads.ca",
      "address": {
        "@type": "PostalAddress",
-       "streetAddress": "",
-       "addressLocality": "Toronto",
+       "streetAddress": "45 Duckworth Rd",
+       "addressLocality": "Cambridge",
        "addressRegion": "ON",
-       "postalCode": "M5V",
+       "postalCode": "N3H 0C1",
        "addressCountry": "CA"
      },
      "geo": {
        "@type": "GeoCoordinates",
-       "latitude": 43.653226,
-       "longitude": -79.383184
+       "latitude": 43.3990,
+       "longitude": -80.3271
      },
      "areaServed": [
        { "@type": "State", "name": "Ontario" },
@@ -322,16 +322,16 @@
      "telephone": "+16478019311",
      "address": {
        "@type": "PostalAddress",
-       "streetAddress": "",
-       "addressLocality": "Toronto",
+       "streetAddress": "45 Duckworth Rd",
+       "addressLocality": "Cambridge",
        "addressRegion": "ON",
-       "postalCode": "M5V",
+       "postalCode": "N3H 0C1",
        "addressCountry": "CA"
      },
      "geo": {
        "@type": "GeoCoordinates",
-       "latitude": 43.653226,
-       "longitude": -79.383184
+       "latitude": 43.3990,
+       "longitude": -80.3271
      },
      "url": serviceUrl,
      "paymentAccepted": "Cash, Credit Card, Debit, E-Transfer",
