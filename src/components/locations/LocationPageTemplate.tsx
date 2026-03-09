@@ -268,7 +268,15 @@ export function LocationPageTemplate({
         "@type": "LocalBusiness",
         name: siteName,
         telephone: phoneNumber,
-        url
+        url,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "45 Duckworth Rd",
+          addressLocality: "Cambridge",
+          addressRegion: "ON",
+          postalCode: "N3H 0C1",
+          addressCountry: "CA"
+        }
       },
       areaServed: {
         "@type": "City",
