@@ -42,8 +42,8 @@ const featuredLocations = [
 ];
 
 const title = "Pre-Listing Home Inspection";
-const metaTitle = "Pre-Listing Home Inspection Ontario | Seller | ASADS";
-const metaDescription = "Maximize your GTA sale with a certified pre-listing home inspection. Identify defects before buyers do — SPIS disclosures, firm offers, same-day reports.";
+const metaTitle = "Pre-Listing Home Inspection Ontario | Sell Faster | ASADS";
+const metaDescription = "Certified pre-listing home inspection across Ontario. Find defects before buyers do — SPIS disclosures, firm offers, faster closing & same-day reports.";
 const price = "$450-$750";
 const duration = "2-4 Hours";
 

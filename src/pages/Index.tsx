@@ -196,10 +196,10 @@ const Index = () => {
     <Layout>
       <Helmet>
         <link rel="canonical" href="https://www.asads.ca/" />
-        <title>Home Inspection Ontario | Certified Home Inspector | ASADS</title>
-        <meta name="description" content="Home inspection across Ontario. OAHI-certified inspectors covering 100+ cities. 14 specialty services — radon, mold, WETT & asbestos. Same-day reports." />
+        <title>Home Inspector Ontario | House & Home Inspection | ASADS</title>
+        <meta name="description" content="Certified home inspector for house & home inspections across Ontario. Same-day reports, 106 cities, 14 specialty services — radon, mold, WETT & asbestos. Book 24/7." />
         {/* Open Graph */}
-        <meta property="og:title" content="Home Inspection Ontario | Certified Home Inspector | ASADS" />
+        <meta property="og:title" content="Home Inspector Ontario | House & Home Inspection | ASADS" />
         <meta property="og:description" content="Trusted home inspection services across Ontario. OAHI-certified inspectors serving 100+ cities with 14 specialty services including radon, mold, WETT & asbestos testing. Book online today." />
         <meta property="og:url" content={SITE_URL} />
         <meta property="og:type" content="website" />
@@ -218,7 +218,7 @@ const Index = () => {
         <meta name="twitter:image" content={`${SITE_URL}/images/og-default.jpg`} />
         
         {/* Additional Meta Tags */}
-        <meta name="keywords" content="home inspector toronto, home inspection toronto, certified home inspector ontario, home inspection ontario, home inspector near me, home inspection GTA, home inspection cost ontario, radon testing ontario, mold inspection ontario, wett inspection ontario" />
+        <meta name="keywords" content="home inspector ontario, house inspection ontario, home inspection ontario, certified home inspector, home inspector near me, same day home inspection, home inspection GTA, home inspector toronto, mold inspection ontario, mold testing ontario, pre-listing home inspection ontario, home inspection cost ontario, WETT inspection ontario, PDI inspection ontario, asbestos testing ontario, radon testing ontario, commercial inspection ontario" />
         
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
