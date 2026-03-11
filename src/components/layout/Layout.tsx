@@ -137,7 +137,9 @@ export function Layout({ children }: LayoutProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@AsadsInspection" />
         <meta name="twitter:image" content={`${SITE_URL}/images/og-default.jpg`} />
-    
+
+        <link rel="canonical" href={canonicalUrl} />
+
         <script type="application/ld+json">
           {JSON.stringify(websiteSchema)}
         </script>
