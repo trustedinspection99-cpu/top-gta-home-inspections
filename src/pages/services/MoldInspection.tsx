@@ -3,8 +3,8 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import { Link } from "react-router-dom";
 
 export default function MoldInspection() {
-  const pageTitle = "Mold Inspection & Testing Toronto | AIHA Lab | ASADS";
-  const schemaDescription = "Mold inspection & testing Toronto & GTA. AIHA lab, air sampling & species ID. Third-party only — not remediation. Written scope for contractors. From $299.";
+  const pageTitle = "Mold Inspection & Testing Ontario | AIHA Lab | ASADS";
+  const schemaDescription = "Mold inspection & mold testing across Ontario & GTA. AIHA lab, air sampling, black mold & species ID. Independent third-party. Written remediation scope. From $299.";
 
   return (
     <ServicePageTemplate
@@ -14,7 +14,7 @@ export default function MoldInspection() {
       heroTitle="Certified Mold Inspection, Testing & Assessment — Lab-Certified Results"
       heroSubtitle={
         <>
-          Protect your home and health with AIHA-certified lab testing. We detect toxic black mold, hidden moisture, and water-damage-related spores with 99.9% accuracy.  
+          Protect your home and health with AIHA-certified lab testing across Ontario. We detect toxic black mold, hidden moisture, and water-damage-related spores with 99.9% accuracy.
           <br />
           <Link to="/services/pre-purchase" className="text-blue-600 underline">
             Pre-Purchase Home Inspections
@@ -37,7 +37,7 @@ export default function MoldInspection() {
             </p>
           </div>
           <p className="text-lg leading-relaxed text-slate-700">
-            Mold isn't just a property issue — it's a health risk. Our Toronto specialists go beyond visual checks, providing <strong>AIHA-accredited lab analysis</strong> and <strong>PCR DNA testing</strong> for 36+ species, including toxigenic <em>Stachybotrys</em> (Black Mold). Emergency mold inspections and same-day services are available for urgent concerns.
+            Mold isn't just a property issue — it's a health risk. Our Ontario-wide specialists go beyond visual checks, providing <strong>AIHA-accredited lab analysis</strong> and <strong>PCR DNA testing</strong> for 36+ species, including toxigenic <em>Stachybotrys</em> (Black Mold). Emergency mold inspections and same-day services are available for urgent concerns.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
@@ -84,7 +84,7 @@ export default function MoldInspection() {
           </div>
 
           <div>
-            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Common Mold Problems in GTA Homes</h3>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Common Mold Problems in Ontario & GTA Homes</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 {
@@ -156,6 +156,33 @@ export default function MoldInspection() {
                 </li>
               ))}
             </ol>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Mold Inspection Pricing in Ontario</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
+              {[
+                { tier: "Basic Air Test", price: "From $299", detail: "2 air samples + outdoor control, AIHA lab, written report. Ideal for single concern (one room / basement)." },
+                { tier: "Full Home Assessment", price: "From $449", detail: "4–6 air samples + thermal scan + moisture mapping. Covers whole home. Most popular for buyers & sellers." },
+                { tier: "Post-Remediation Clearance", price: "From $249", detail: "Confirms mold removal was successful. Required documentation for real estate closings and insurance." },
+              ].map((p) => (
+                <div key={p.tier} className="p-4 bg-purple-50 border border-purple-100 rounded-xl">
+                  <p className="font-bold text-purple-900">{p.tier}</p>
+                  <p className="text-xl font-bold text-purple-700 my-1">{p.price}</p>
+                  <p className="text-xs text-slate-600">{p.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Mold Inspection Across Ontario</h3>
+            <p className="text-slate-700 mb-4">We provide certified mold inspection and mold testing services across Ontario including Toronto, Mississauga, Brampton, Hamilton, Oakville, Burlington, Vaughan, Markham, Richmond Hill, Kitchener, Waterloo, Cambridge, Guelph, Barrie, Oshawa, Whitby, Ajax, Pickering, and 80+ more cities.</p>
+            <div className="flex flex-wrap gap-2">
+              {["Toronto","Mississauga","Brampton","Hamilton","Oakville","Burlington","Vaughan","Markham","Richmond Hill","Kitchener","Waterloo","Cambridge","Guelph","Barrie","Oshawa","Whitby","Ajax","Pickering","Milton","Newmarket"].map((c) => (
+                <span key={c} className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">{c}</span>
+              ))}
+            </div>
           </div>
 
           <div>
@@ -237,8 +264,8 @@ export default function MoldInspection() {
           answer: "Yes, if mold results from a sudden water event. Certified reports help with claims."
         },
         {
-          question: "How much does mold inspection cost in Toronto?",
-          answer: "Professional mold inspection in Toronto starts from $299, which includes air sampling and lab analysis. Emergency and same-day services are available for urgent concerns."
+          question: "How much does mold inspection cost in Ontario?",
+          answer: "Professional mold inspection in Ontario starts from $299, which includes air sampling and lab analysis. Prices vary by property size and number of samples required. Emergency and same-day services are available across Toronto, Mississauga, Brampton, Hamilton, Kitchener, and all GTA cities."
         },
         {
           question: "How is mold testing different from a visual mold inspection?",
