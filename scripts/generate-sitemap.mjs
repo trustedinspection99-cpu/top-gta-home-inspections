@@ -1,0 +1,102 @@
+/**
+ * generate-sitemap.mjs
+ * Generates a complete sitemap.xml in /public covering all pages including
+ * service×city cross-pages (14 services × 106 cities = 1,484 pages).
+ * Run: node scripts/generate-sitemap.mjs
+ */
+
+import { readFileSync, writeFileSync } from 'fs';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = resolve(__dirname, '..');
+const BASE_URL = 'https://www.asads.ca';
+const TODAY = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+
+// ─── Read source files ────────────────────────────────────────────────────────
+
+const locationRaw = readFileSync(resolve(ROOT, 'src/data/locationData.ts'), 'utf8');
+const blogRaw     = readFileSync(resolve(ROOT, 'src/data/blogPosts.ts'), 'utf8');
+
+// ─── Extract helpers ──────────────────────────────────────────────────────────
+
+function extractField(content, key) {
+  const dq = new RegExp(`${key}:\\s*"([^"]+)"`, 'g');
+  const sq = new RegExp(`${key}:\\s*'([^']+)'`, 'g');
+  const dqM = [...content.matchAll(dq)].map(m => m[1]);
+  if (dqM.length > 0) return dqM;
+  return [...content.matchAll(sq)].map(m => m[1]);
+}
+
+const locationSlugs = [...locationRaw.matchAll(/slug:\s*"(home-inspection-[^"]+)"/g)].map(m => m[1]);
+const blogSlugs     = extractField(blogRaw, 'slug');
+
+// Service slugs — hardcoded list matching serviceDefinitions in serviceCityData.ts
+const serviceSlugs = [
+  'pre-purchase', 'pre-listing', 'condo', 'new-construction', 'commercial',
+  'thermal-imaging', 'mold-inspection', 'asbestos-testing', 'radon-testing',
+  'sewer-scope', 'well-water-testing', 'lead-paint-testing', 'air-quality', 'wett',
+];
+
+// ─── URL builder ──────────────────────────────────────────────────────────────
+
+function url(path, priority = '0.7', changefreq = 'monthly', lastmod = TODAY) {
+  return `  <url><loc>${BASE_URL}${path}</loc><lastmod>${lastmod}</lastmod><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>`;
+}
+
+// ─── Collect all URLs ─────────────────────────────────────────────────────────
+
+const lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
+
+// Static pages
+lines.push(url('/', '1.0', 'weekly'));
+lines.push(url('/about', '0.8'));
+lines.push(url('/services', '0.9'));
+lines.push(url('/locations', '0.9'));
+lines.push(url('/blog', '0.7', 'weekly'));
+lines.push(url('/testimonials', '0.7'));
+lines.push(url('/faq', '0.6'));
+lines.push(url('/pricing', '0.8'));
+lines.push(url('/booking', '0.9'));
+lines.push(url('/contact', '0.8'));
+lines.push(url('/sitemap', '0.4'));
+lines.push(url('/privacy-policy', '0.3', 'yearly'));
+lines.push(url('/terms', '0.3', 'yearly'));
+lines.push('');
+
+// Service pages
+const servicePages = [
+  'pre-purchase', 'pre-listing', 'new-construction', 'condo', 'commercial',
+  'radon-testing', 'mold-inspection', 'asbestos-testing', 'thermal-imaging',
+  'wett', 'lead-paint-testing', 'well-water-testing', 'sewer-scope', 'air-quality'
+];
+servicePages.forEach(s => lines.push(url(`/services/${s}`, '0.9')));
+lines.push('');
+
+// Location pages
+locationSlugs.forEach(s => lines.push(url(`/locations/${s}`, '0.8')));
+lines.push('');
+
+// Blog posts
+blogSlugs.forEach(s => lines.push(url(`/blog/${s}`, '0.7', 'monthly')));
+lines.push('');
+
+// Service × City cross-pages
+serviceSlugs.forEach(svc => {
+  locationSlugs.forEach(loc => {
+    lines.push(url(`/services/${svc}/${loc}`, '0.6'));
+  });
+  lines.push('');
+});
+
+lines.push('</urlset>');
+
+// ─── Write sitemap ────────────────────────────────────────────────────────────
+
+const sitemap = lines.join('\n');
+writeFileSync(resolve(ROOT, 'public/sitemap.xml'), sitemap, 'utf8');
+
+const total = 13 + servicePages.length + locationSlugs.length + blogSlugs.length + (serviceSlugs.length * locationSlugs.length);
+console.log(`✓ Sitemap generated: ${total} URLs → public/sitemap.xml`);
+console.log(`  Static: 13 | Services: ${servicePages.length} | Locations: ${locationSlugs.length} | Blog: ${blogSlugs.length} | Service×City: ${serviceSlugs.length * locationSlugs.length}`);

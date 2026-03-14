@@ -38,6 +38,7 @@ import LeadPaintTesting from "./pages/services/LeadPaintTesting";
 import WellWaterTesting from "./pages/services/WellWaterTesting";
 import SewerScope from "./pages/services/SewerScope";
 import AirQuality from "./pages/services/AirQuality";
+import ServiceCityPage from "./pages/services/ServiceCityPage";
 
 const queryClient = new QueryClient();
 
@@ -86,6 +87,9 @@ const App = () => (
             <Route path="/services/well-water-testing" element={<WellWaterTesting />} />
             <Route path="/services/sewer-scope" element={<SewerScope />} />
             <Route path="/services/air-quality" element={<AirQuality />} />
+
+            {/* Service × City cross-pages */}
+            <Route path="/services/:serviceSlug/:citySlug" element={<ServiceCityPage />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>

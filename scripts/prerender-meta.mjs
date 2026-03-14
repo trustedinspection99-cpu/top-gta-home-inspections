@@ -16,8 +16,9 @@ const BASE_URL = 'https://www.asads.ca';
 
 // ─── Read source data ────────────────────────────────────────────────────────
 
-const locationRaw = readFileSync(resolve(ROOT, 'src/data/locationData.ts'), 'utf8');
-const blogRaw = readFileSync(resolve(ROOT, 'src/data/blogPosts.ts'), 'utf8');
+const locationRaw      = readFileSync(resolve(ROOT, 'src/data/locationData.ts'), 'utf8');
+const blogRaw          = readFileSync(resolve(ROOT, 'src/data/blogPosts.ts'), 'utf8');
+const serviceCityRaw   = readFileSync(resolve(ROOT, 'src/data/serviceCityData.ts'), 'utf8');
 
 function extractField(content, key) {
   // Match double-quoted strings first (handles apostrophes), then single-quoted
@@ -97,6 +98,53 @@ blogs.forEach(b => pages.push({
   title: b.title,
   desc: b.desc,
 }));
+
+// ─── Service × City cross-pages ───────────────────────────────────────────────
+
+// Extract service definitions from serviceCityData.ts
+function extractServiceDefs(content) {
+  const results = [];
+  // Match each service block by slug, metaTitleTemplate, metaDescTemplate
+  const slugMatches   = [...content.matchAll(/slug:\s*"([^"]+)"/g)].map(m => m[1]);
+  const titleMatches  = [...content.matchAll(/metaTitleTemplate:\s*"([^"]+)"/g)].map(m => m[1]);
+  const descMatches   = [...content.matchAll(/metaDescTemplate:\s*"([^"]+)"/g)].map(m => m[1]);
+  for (let i = 0; i < slugMatches.length && i < titleMatches.length && i < descMatches.length; i++) {
+    results.push({
+      slug:  slugMatches[i],
+      title: titleMatches[i],
+      desc:  descMatches[i],
+    });
+  }
+  return results;
+}
+
+const serviceDefs = extractServiceDefs(serviceCityRaw);
+
+// Extract location slugs and city names from locationData.ts
+function extractLocationSlugs(content) {
+  const results = [];
+  const slugs  = [...content.matchAll(/slug:\s*"(home-inspection-[^"]+)"/g)].map(m => m[1]);
+  const cities = [...content.matchAll(/city:\s*"([^"]+)"/g)].map(m => m[1]);
+  for (let i = 0; i < slugs.length; i++) {
+    results.push({ slug: slugs[i], city: cities[i] || slugs[i] });
+  }
+  return results;
+}
+
+const locationSlugs = extractLocationSlugs(locationRaw);
+
+serviceDefs.forEach(svc => {
+  locationSlugs.forEach(loc => {
+    const city = loc.city;
+    const title = svc.title.replace(/\{city\}/g, city);
+    const desc  = svc.desc.replace(/\{city\}/g, city);
+    pages.push({
+      path: `/services/${svc.slug}/${loc.slug}`,
+      title,
+      desc,
+    });
+  });
+});
 
 // ─── Read base HTML ───────────────────────────────────────────────────────────
 
