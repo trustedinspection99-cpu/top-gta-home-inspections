@@ -27,14 +27,15 @@ export default function ServiceCityPage() {
   }>();
 
   const service = serviceSlug ? serviceBySlug[serviceSlug] : undefined;
-  const location = locationData.find((l) => l.slug === citySlug);
+  // citySlug is the clean slug (e.g. "brampton"), location slug is "home-inspection-brampton"
+  const location = locationData.find((l) => l.slug === `home-inspection-${citySlug}`);
 
   if (!service || !location) {
     return <Navigate to="/services" replace />;
   }
 
   const city = location.city;
-  const canonical = getCanonicalUrl(`/services/${service.slug}/${location.slug}`);
+  const canonical = getCanonicalUrl(`/services/${service.slug}/${citySlug}`);
   const metaTitle = fill(service.metaTitleTemplate, city);
   const metaDesc = fill(service.metaDescTemplate, city);
   const heroTitle = fill(service.heroTitle, city);
@@ -243,7 +244,7 @@ export default function ServiceCityPage() {
             {service.relatedServices.map((rel) => (
               <Link
                 key={rel.slug}
-                to={`/services/${rel.slug}/${location.slug}`}
+                to={`/services/${rel.slug}/${citySlug}`}
                 className="flex items-center gap-2 p-3 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:border-blue-400 hover:text-blue-600 transition-colors"
               >
                 <ArrowRight size={14} className="text-blue-500 flex-shrink-0" />

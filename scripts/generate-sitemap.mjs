@@ -29,7 +29,10 @@ function extractField(content, key) {
   return [...content.matchAll(sq)].map(m => m[1]);
 }
 
-const locationSlugs = [...locationRaw.matchAll(/slug:\s*"(home-inspection-[^"]+)"/g)].map(m => m[1]);
+const locationFullSlugs = [...locationRaw.matchAll(/slug:\s*"(home-inspection-[^"]+)"/g)].map(m => m[1]);
+// Clean slugs for service×city and blog×city URLs (e.g. "brampton" not "home-inspection-brampton")
+const locationSlugs = locationFullSlugs; // keep full for /locations/ pages
+const citySlugs = locationFullSlugs.map(s => s.replace(/^home-inspection-/, ''));
 const blogSlugs     = extractField(blogRaw, 'slug');
 
 // Service slugs — hardcoded list matching serviceDefinitions in serviceCityData.ts
@@ -82,18 +85,18 @@ lines.push('');
 blogSlugs.forEach(s => lines.push(url(`/blog/${s}`, '0.7', 'monthly')));
 lines.push('');
 
-// Service × City cross-pages
+// Service × City cross-pages (clean city slug: /services/mold-inspection/brampton)
 serviceSlugs.forEach(svc => {
-  locationSlugs.forEach(loc => {
-    lines.push(url(`/services/${svc}/${loc}`, '0.6'));
+  citySlugs.forEach(city => {
+    lines.push(url(`/services/${svc}/${city}`, '0.6'));
   });
   lines.push('');
 });
 
-// Blog × City cross-pages
+// Blog × City cross-pages (clean city slug: /blog/mold-prevention-tips/brampton)
 blogSlugs.forEach(blog => {
-  locationSlugs.forEach(loc => {
-    lines.push(url(`/blog/${blog}/${loc}`, '0.5'));
+  citySlugs.forEach(city => {
+    lines.push(url(`/blog/${blog}/${city}`, '0.5'));
   });
   lines.push('');
 });
@@ -105,8 +108,8 @@ lines.push('</urlset>');
 const sitemap = lines.join('\n');
 writeFileSync(resolve(ROOT, 'public/sitemap.xml'), sitemap, 'utf8');
 
-const svcCity = serviceSlugs.length * locationSlugs.length;
-const blogCity = blogSlugs.length * locationSlugs.length;
+const svcCity = serviceSlugs.length * citySlugs.length;
+const blogCity = blogSlugs.length * citySlugs.length;
 const total = 13 + servicePages.length + locationSlugs.length + blogSlugs.length + svcCity + blogCity;
 console.log(`✓ Sitemap generated: ${total} URLs → public/sitemap.xml`);
 console.log(`  Static: 13 | Services: ${servicePages.length} | Locations: ${locationSlugs.length} | Blog: ${blogSlugs.length} | Service×City: ${svcCity} | Blog×City: ${blogCity}`);

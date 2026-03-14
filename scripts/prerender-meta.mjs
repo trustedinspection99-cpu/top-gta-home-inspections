@@ -123,10 +123,14 @@ const serviceDefs = extractServiceDefs(serviceCityRaw);
 // Extract location slugs and city names from locationData.ts
 function extractLocationSlugs(content) {
   const results = [];
-  const slugs  = [...content.matchAll(/slug:\s*"(home-inspection-[^"]+)"/g)].map(m => m[1]);
-  const cities = [...content.matchAll(/city:\s*"([^"]+)"/g)].map(m => m[1]);
-  for (let i = 0; i < slugs.length; i++) {
-    results.push({ slug: slugs[i], city: cities[i] || slugs[i] });
+  const fullSlugs = [...content.matchAll(/slug:\s*"(home-inspection-[^"]+)"/g)].map(m => m[1]);
+  const cities    = [...content.matchAll(/city:\s*"([^"]+)"/g)].map(m => m[1]);
+  for (let i = 0; i < fullSlugs.length; i++) {
+    results.push({
+      fullSlug: fullSlugs[i],
+      citySlug: fullSlugs[i].replace(/^home-inspection-/, ''), // e.g. "brampton"
+      city: cities[i] || fullSlugs[i],
+    });
   }
   return results;
 }
@@ -139,7 +143,7 @@ serviceDefs.forEach(svc => {
     const title = svc.title.replace(/\{city\}/g, city);
     const desc  = svc.desc.replace(/\{city\}/g, city);
     pages.push({
-      path: `/services/${svc.slug}/${loc.slug}`,
+      path: `/services/${svc.slug}/${loc.citySlug}`,
       title,
       desc,
     });
@@ -151,14 +155,12 @@ serviceDefs.forEach(svc => {
 blogs.forEach(b => {
   locationSlugs.forEach(loc => {
     const city = loc.city;
-    // Title: append city to blog meta title (truncate to ~70 chars)
     const rawTitle = `${b.title} | ${city}, Ontario`;
     const title = rawTitle.length > 70 ? rawTitle.slice(0, 67) + '...' : rawTitle;
-    // Desc: append city context (truncate to 160)
     const rawDesc = `${b.desc} Serving ${city} homeowners & buyers.`;
     const desc = rawDesc.length > 160 ? rawDesc.slice(0, 157) + '...' : rawDesc;
     pages.push({
-      path: `/blog/${b.slug}/${loc.slug}`,
+      path: `/blog/${b.slug}/${loc.citySlug}`,
       title,
       desc,
     });

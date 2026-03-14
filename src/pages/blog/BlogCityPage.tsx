@@ -116,13 +116,14 @@ export default function BlogCityPage() {
   const { blogSlug, citySlug } = useParams<{ blogSlug: string; citySlug: string }>();
 
   const post = blogPostsData.find((p) => p.slug === blogSlug);
-  const location = locationData.find((l) => l.slug === citySlug);
+  // citySlug is the clean slug (e.g. "brampton"), location slug is "home-inspection-brampton"
+  const location = locationData.find((l) => l.slug === `home-inspection-${citySlug}`);
 
   if (!post || !location) return <Navigate to="/blog" replace />;
 
   const city = location.city;
   const cityIntro = getCityIntro(post.category, city, post.title);
-  const canonical = getCanonicalUrl(`/blog/${post.slug}/${location.slug}`);
+  const canonical = getCanonicalUrl(`/blog/${post.slug}/${citySlug}`);
 
   // Localized meta — inject city into title and desc
   const metaTitle = `${post.metaTitle} | ${city}, Ontario`;
@@ -257,7 +258,7 @@ export default function BlogCityPage() {
                     {relatedPosts.map((rp) => (
                       <Link
                         key={rp.slug}
-                        to={`/blog/${rp.slug}/${location.slug}`}
+                        to={`/blog/${rp.slug}/${citySlug}`}
                         className="p-4 rounded-xl border border-border hover:border-primary transition-colors group"
                       >
                         <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors line-clamp-2 mb-1">
