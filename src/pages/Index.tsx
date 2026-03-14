@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { TrustBadges } from "@/components/home/TrustBadges";
@@ -191,7 +192,31 @@ const localBusinessSchema = {
   ]
 };
 
+const WEB3FORMS_KEY = '0eb09446-78d7-4fb3-b831-e5ab4ce88a9b';
+
 const Index = () => {
+  const [formData, setFormData] = useState({ name: '', phone: '', city: '', service: '' });
+  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+
+  const handleQuoteSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus('sending');
+    try {
+      const data = new FormData();
+      data.append('access_key', WEB3FORMS_KEY);
+      data.append('subject', `Homepage Quote Request — ${formData.service || 'Home Inspection'} in ${formData.city}`);
+      data.append('name', formData.name);
+      data.append('phone', formData.phone);
+      data.append('city', formData.city);
+      data.append('service', formData.service || 'Not specified');
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+      const json = await res.json();
+      setFormStatus(json.success ? 'sent' : 'error');
+    } catch {
+      setFormStatus('error');
+    }
+  };
+
   return (
     <Layout>
       <Helmet>
@@ -226,64 +251,177 @@ const Index = () => {
       </Helmet>
 
       {/* 1. ONTARIO-FOCUSED HERO */}
-      <section className="relative bg-gradient-to-br from-blue-800 to-blue-900 py-24 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-blue-800 to-blue-900 py-20 text-white overflow-hidden">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid opacity-10"></div>
         <div className="container relative z-10 mx-auto px-4">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-blue-700/30 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-blue-600">
-              <Award className="h-4 w-4" />
-              <span className="text-sm font-medium">OAHI Certified • Serving Ontario Since 2009</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
-              Home Inspection Ontario
-            </h1>
-            <p className="text-xl mb-8 opacity-95 leading-relaxed">
-              Ontario's trusted certified home inspection service. OAHI-certified inspectors covering
-              <strong className="text-white"> 100+ cities</strong> across the GTA and Ontario with
-              <strong className="text-white"> 14 specialty services</strong> including radon, mold & WETT.
-              <strong className="text-white"> Same-day digital reports.</strong>
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: copy */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-blue-700/30 backdrop-blur-sm px-4 py-2 rounded-full mb-5 border border-blue-600">
+                <Award className="h-4 w-4" />
+                <span className="text-sm font-medium">OAHI Certified • Serving Ontario Since 2009</span>
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-5 tracking-tight leading-tight">
+                Home Inspection Ontario
+              </h1>
 
-            <div className="flex flex-wrap gap-4 mb-8">
-              {["OAHI Certified", "100+ Ontario Cities", "2,000+ Inspections", "Same-Day Reports"].map((badge) => (
-                <div key={badge} className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm font-medium">
-                  <CheckCircle2 className="h-4 w-4 text-green-400" />
-                  {badge}
+              {/* Stars — prominent, early */}
+              <div className="flex items-center gap-3 mb-5">
+                <div className="flex items-center gap-0.5">
+                  {[1,2,3,4,5].map(i => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
                 </div>
-              ))}
+                <span className="font-bold text-white text-lg">4.9</span>
+                <span className="text-blue-200 text-sm">· 500+ verified client reviews · InterNACHI & OAHI certified</span>
+              </div>
+
+              <p className="text-lg mb-7 opacity-95 leading-relaxed">
+                Certified home inspectors covering <strong className="text-white">106 cities</strong> across
+                the GTA and Ontario. <strong className="text-white">14 specialty services</strong> including
+                radon, mold & WETT. <strong className="text-white">Same-day digital reports.</strong>
+              </p>
+
+              {/* Price callout */}
+              <div className="flex flex-wrap gap-3 mb-7">
+                {[
+                  { label: "Pre-Purchase", price: "From $399" },
+                  { label: "Mold Inspection", price: "From $299" },
+                  { label: "Sewer Scope", price: "From $299" },
+                  { label: "Radon Testing", price: "From $149" },
+                ].map(s => (
+                  <div key={s.label} className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-sm">
+                    <span className="text-blue-200">{s.label} — </span>
+                    <span className="font-bold text-green-300">{s.price}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="/booking" className="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group">
+                  Book Your Inspection
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+                </a>
+                <a href="tel:6478019311" className="bg-transparent border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+                  <Phone size={20} />
+                  (647) 801-9311
+                </a>
+              </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="/booking" className="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group">
-                Book Ontario Inspection
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-              </a>
-              <a href="tel:6478019311" className="bg-transparent border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2">
-                <Phone size={20} />
-                Call (647) 801-9311
-              </a>
+            {/* Right: inline quote form */}
+            <div className="bg-white rounded-2xl p-6 text-gray-900 shadow-2xl">
+              <h2 className="text-xl font-extrabold text-slate-900 mb-1">Get a Free Quote</h2>
+              <p className="text-sm text-gray-500 mb-5">We respond within 30 minutes during business hours.</p>
+
+              {formStatus === 'sent' ? (
+                <div className="text-center py-8">
+                  <CheckCircle2 className="h-12 w-12 text-green-500 mx-auto mb-3" />
+                  <p className="font-bold text-lg text-gray-900">Quote request received!</p>
+                  <p className="text-gray-500 text-sm mt-1">We'll call you within 30 minutes.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleQuoteSubmit} className="space-y-3">
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">Your Name *</label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="John Smith"
+                      value={formData.name}
+                      onChange={e => setFormData(p => ({ ...p, name: e.target.value }))}
+                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">Phone Number *</label>
+                    <input
+                      type="tel"
+                      required
+                      placeholder="(647) 555-0100"
+                      value={formData.phone}
+                      onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))}
+                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">City / Area *</label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="Toronto, Brampton, Mississauga…"
+                      value={formData.city}
+                      onChange={e => setFormData(p => ({ ...p, city: e.target.value }))}
+                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">Service Needed</label>
+                    <select
+                      value={formData.service}
+                      onChange={e => setFormData(p => ({ ...p, service: e.target.value }))}
+                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                    >
+                      <option value="">Select a service…</option>
+                      <option>Pre-Purchase Home Inspection</option>
+                      <option>Pre-Listing Inspection</option>
+                      <option>Mold Inspection & Testing</option>
+                      <option>Radon Testing</option>
+                      <option>Thermal Imaging</option>
+                      <option>Sewer Scope</option>
+                      <option>Asbestos Testing</option>
+                      <option>WETT Inspection</option>
+                      <option>Condo Inspection</option>
+                      <option>New Construction Inspection</option>
+                      <option>Air Quality Testing</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={formStatus === 'sending'}
+                    className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition-colors text-sm disabled:opacity-60"
+                  >
+                    {formStatus === 'sending' ? 'Sending…' : 'Get My Free Quote →'}
+                  </button>
+                  {formStatus === 'error' && (
+                    <p className="text-red-500 text-xs text-center">Something went wrong. Call us at (647) 801-9311.</p>
+                  )}
+                  <p className="text-xs text-gray-400 text-center">No spam. We'll call you to confirm availability.</p>
+                </form>
+              )}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. STATS + TRUST BAR */}
-      <section className="py-8 bg-white border-b">
+      {/* 2. SOCIAL PROOF BAR */}
+      <section className="py-5 bg-slate-900 border-b border-slate-800">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 items-center divide-x divide-gray-100">
+          <div className="flex flex-wrap justify-center md:justify-between items-center gap-6">
+            {/* Rating block */}
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-0.5">
+                {[1,2,3,4,5].map(i => (
+                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <div>
+                <span className="font-extrabold text-white text-sm">4.9/5</span>
+                <span className="text-slate-400 text-xs ml-1">· 500+ reviews</span>
+              </div>
+            </div>
+            {/* Stats */}
             {[
-              { value: "2,000+", label: "Inspections Done" },
+              { value: "2,000+", label: "Inspections Completed" },
               { value: "15+", label: "Years in Ontario" },
-              { value: "4.9★", label: "Google Rating" },
-              { value: "24hr", label: "Report Delivery" },
-              { value: "OAHI", label: "Certified" },
-              { value: "InterNACHI", label: "Member" },
-              { value: "E&O", label: "Fully Insured" },
-              { value: "100+", label: "Cities Served" },
+              { value: "106", label: "Cities Served" },
+              { value: "OAHI & InterNACHI", label: "Certified" },
+              { value: "E&O Insured", label: "Fully Covered" },
             ].map((item, i) => (
-              <div key={i} className="flex flex-col items-center text-center px-2 py-2">
-                <div className="text-xl font-extrabold text-blue-700">{item.value}</div>
-                <div className="text-xs text-gray-500 font-medium mt-0.5">{item.label}</div>
+              <div key={i} className="text-center">
+                <div className="text-sm font-extrabold text-white">{item.value}</div>
+                <div className="text-xs text-slate-400">{item.label}</div>
               </div>
             ))}
           </div>
