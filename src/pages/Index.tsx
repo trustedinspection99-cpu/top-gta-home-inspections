@@ -205,7 +205,7 @@ const Index = () => {
       data.append('phone', formData.phone);
       data.append('city', formData.city);
       data.append('service', formData.service || 'Not specified');
-      const res = await fetch('https://formspree.io/f/xjgaoeer', { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+      const res = await fetch('https://formspree.io/f/mnjnzzoz', { method: 'POST', body: data, headers: { Accept: 'application/json' } });
       const json = await res.json();
       setFormStatus(json.ok ? 'sent' : 'error');
     } catch {
