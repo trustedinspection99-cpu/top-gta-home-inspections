@@ -6,6 +6,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SITE_URL, getCanonicalUrl } from "@/lib/seo";
+import { InlineBookingForm } from "@/components/InlineBookingForm";
 import {
   MapPin,
   CheckCircle,
@@ -519,13 +520,11 @@ export function LocationPageTemplate({
             {/* Sidebar */}
             <div className="space-y-6">
               <Card className="border-none shadow-xl bg-slate-50 sticky top-24">
-                <CardContent className="p-8 text-center">
-                  <h3 className="text-xl font-bold mb-4">Book Your Inspection</h3>
-                  <p className="text-sm text-slate-600 mb-6">Same-day digital reports with every {city} property audit.</p>
-                  <Button asChild className="w-full bg-primary text-white py-6 shadow-lg shadow-primary/20">
-                    <Link to="/booking">Check Availability</Link>
-                  </Button>
-                  <p className="mt-4 text-sm text-slate-500">Or call <a href={`tel:${phoneNumber}`} className="text-primary font-bold">{phoneNumber}</a></p>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-1">Book in {city}</h3>
+                  <p className="text-sm text-slate-600 mb-4">Same-day availability · 7 days a week</p>
+                  <InlineBookingForm city={city} />
+                  <p className="mt-3 text-center text-sm text-slate-500">Or call <a href={`tel:${phoneNumber}`} className="text-primary font-bold">{phoneNumber}</a></p>
                 </CardContent>
               </Card>
             </div>

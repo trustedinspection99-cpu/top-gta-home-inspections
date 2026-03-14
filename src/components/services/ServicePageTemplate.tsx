@@ -5,9 +5,10 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SITE_URL, getCanonicalUrl, normalizePath } from "@/lib/seo";
-import { 
-  CheckCircle, 
-  Phone, 
+import { InlineBookingForm } from "@/components/InlineBookingForm";
+import {
+  CheckCircle,
+  Phone,
   Calendar,
   Clock,
   FileText,
@@ -344,8 +345,22 @@ export function ServicePageTemplate({
 
             {/* Sidebar */}
             <div className="space-y-6">
-              {/* Benefits Card */}
+              {/* Booking Form Card */}
               <Card className="border-border/50 sticky top-24">
+                <CardContent className="p-6">
+                  <h3 className="font-heading font-semibold text-lg text-foreground mb-1">
+                    Book This Inspection
+                  </h3>
+                  <p className="text-xs text-muted-foreground mb-4">Same-day availability · 7 days a week</p>
+                  <InlineBookingForm defaultService={title} />
+                  <p className="text-center text-xs text-muted-foreground mt-3">
+                    Or call <a href="tel:+16478019311" className="text-primary hover:underline font-medium">(647) 801-9311</a>
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Benefits Card */}
+              <Card className="border-border/50">
                 <CardContent className="p-6">
                   <h3 className="font-heading font-semibold text-lg text-foreground mb-4">
                     Why Choose ASADS?
@@ -358,14 +373,6 @@ export function ServicePageTemplate({
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-6 pt-6 border-t border-border">
-                    <Button asChild className="w-full" size="lg">
-                      <Link to="/booking">Book Now</Link>
-                    </Button>
-                    <p className="text-center text-sm text-muted-foreground mt-3">
-                      or call <a href="tel:+16478019311" className="text-primary hover:underline">(647) 801-9311</a>
-                    </p>
-                  </div>
                 </CardContent>
               </Card>
 
