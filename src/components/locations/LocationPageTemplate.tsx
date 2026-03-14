@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SITE_URL, getCanonicalUrl } from "@/lib/seo";
 import { InlineBookingForm } from "@/components/InlineBookingForm";
+import { HeroBookingSection } from "@/components/HeroBookingSection";
 import {
   MapPin,
   CheckCircle,
@@ -14,7 +15,6 @@ import {
   Thermometer,
   Leaf,
   Shield,
-  Calendar,
   Clock,
   FileText,
   ArrowRight,
@@ -368,45 +368,29 @@ export function LocationPageTemplate({
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-2 mb-6 text-amber-300">
-               <Star className="fill-current w-5 h-5" aria-hidden="true" />
-               <span className="font-bold tracking-widest uppercase text-sm">Top Rated in {city}</span>
-            </div>
-            <h1 className="font-heading text-4xl md:text-6xl font-bold mb-6">
-              {city} Home Inspector
-            </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl">
-              {description}
-            </p>
-            <div className="flex flex-wrap gap-6 mb-8">
-              <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5 text-blue-200" aria-hidden="true" />
-                <span>2-4 Hour Inspections</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FileText className="h-5 w-5 text-blue-200" aria-hidden="true" />
-                <span>Same-Day Report</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-blue-200" aria-hidden="true" />
-                <span>$2M Liability Insured</span>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" variant="secondary" className="bg-white hover:bg-gray-100 text-blue-700 border-none font-bold">
-                <Link to="/booking">Book Inspection in {city}</Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                <a href={`tel:${phoneNumber.replace(/[^0-9+]/g, '')}`} aria-label={`Call ${phoneNumber}`}>{phoneNumber}</a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero with inline booking form */}
+      <HeroBookingSection
+        badge={`Top Rated Home Inspector in ${city} · OAHI & InterNACHI Certified`}
+        title={`${city} Home Inspector`}
+        subtitle={
+          <>
+            {description}
+            <span className="block mt-3 text-blue-200 text-sm">
+              <Clock className="inline h-4 w-4 mr-1" />2–4 Hour Inspections &nbsp;·&nbsp;
+              <FileText className="inline h-4 w-4 mr-1" />Same-Day Report &nbsp;·&nbsp;
+              <Shield className="inline h-4 w-4 mr-1" />$2M Liability Insured
+            </span>
+          </>
+        }
+        priceCards={[
+          { label: "Pre-Purchase", price: "From $399" },
+          { label: "Condo", price: "From $299" },
+          { label: "New Construction", price: "From $449" },
+        ]}
+        city={city}
+        formTitle={`Book in ${city}`}
+        ctaPrimary={{ text: `Book Inspection in ${city}`, href: "/booking" }}
+      />
 
       {/* Local Expertise Section */}
       {localExpertise && (
