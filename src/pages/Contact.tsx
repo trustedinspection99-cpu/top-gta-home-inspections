@@ -6,55 +6,26 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { 
+import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
   Send,
-  CheckCircle
+  CheckCircle,
+  ArrowRight,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { HeroBookingSection } from "@/components/HeroBookingSection";
 
-// TODO: Replace with your Formspree form ID from https://formspree.io
 const FORMSPREE_CONTACT_ID = "mnjnzzoz";
-
-const contactInfo = [
-  {
-    icon: Phone,
-    title: "Phone",
-    primary: "(647) 801-9311",
-    secondary: "Call or text anytime",
-    action: "tel:+16478019311",
-  },
-  {
-    icon: Mail,
-    title: "Email",
-    primary: "info@asads.ca",
-    secondary: "We reply within 24 hours",
-    action: "mailto:info@asads.ca",
-  },
-  {
-    icon: MapPin,
-    title: "Service Area",
-    primary: "Greater Toronto Area",
-    secondary: "30+ communities served",
-  },
-  {
-    icon: Clock,
-    title: "Hours",
-    primary: "Mon-Fri: 8am - 6pm",
-    secondary: "Sat: 9am - 4pm",
-  },
-];
 
 const serviceOptions = [
   "Pre-Purchase Inspection",
@@ -88,21 +59,16 @@ export default function Contact() {
       const response = await fetch(`https://formspree.io/f/${FORMSPREE_CONTACT_ID}`, {
         method: "POST",
         body: formData,
-        headers: {
-          Accept: "application/json",
-        },
+        headers: { Accept: "application/json" },
       });
 
       if (response.ok) {
         setIsSubmitted(true);
-        toast({
-          title: "Message sent!",
-          description: "We'll get back to you within 24 hours.",
-        });
+        toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
       } else {
         throw new Error("Form submission failed");
       }
-    } catch (error) {
+    } catch {
       toast({
         title: "Error",
         description: "Failed to send message. Please try again or call us directly.",
@@ -113,7 +79,6 @@ export default function Contact() {
     }
   };
 
-  // Contact Page Schema
   const contactPageSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
@@ -136,15 +101,9 @@ export default function Contact() {
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
           "opens": "08:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "09:00",
-          "closes": "16:00"
+          "closes": "20:00"
         }
       ]
     }
@@ -154,7 +113,7 @@ export default function Contact() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.asads.ca" },
+      { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://www.asads.ca" },
       { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.asads.ca/contact" }
     ]
   };
@@ -179,244 +138,225 @@ export default function Contact() {
         <script type="application/ld+json">{JSON.stringify(contactPageSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Contact ASADS Home Inspectors in Ontario
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Have questions about our services? Ready to book an inspection? 
-              We're here to help. Reach out today and we'll respond within 24 hours.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      {/* Contact Section */}
+      <HeroBookingSection
+        badge="Fast Scheduling · 7 Days a Week · 106 Cities in Ontario"
+        title="Contact ASADS Home Inspectors in Ontario"
+        subtitle="Ready to book or have a question? Call, email, or send a message below. We respond within 24 hours and confirm bookings instantly."
+        priceCards={[
+          { label: "Pre-Purchase", price: "From $399" },
+          { label: "Condo",        price: "From $299" },
+          { label: "Available",    price: "7 Days/Week" },
+          { label: "Same-Day",     price: "Digital Report" },
+        ]}
+        formTitle="Send Us a Message"
+        ctaPrimary={{ text: "Book Online Now", href: "/booking" }}
+        defaultService="Pre-Purchase Home Inspection"
+      />
+
+      {/* Main Contact Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-12">
-            {/* Contact Info */}
-            <div className="lg:col-span-1">
-            <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
-                Book a Certified Home Inspector
+
+            {/* Left: Contact info + Book CTA */}
+            <div className="lg:col-span-1 space-y-6">
+              <h2 className="font-heading text-2xl font-bold text-foreground">
+                Get in Touch
               </h2>
-              <div className="space-y-6">
-                {contactInfo.map((item) => (
-                  <div key={item.title} className="flex gap-4">
-                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <item.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">{item.title}</h3>
-                      {item.action ? (
-                        <a 
-                          href={item.action}
-                          className="text-primary hover:underline"
-                        >
-                          {item.primary}
-                        </a>
-                      ) : (
-                        <p className="text-foreground">{item.primary}</p>
-                      )}
-                      <p className="text-sm text-muted-foreground">{item.secondary}</p>
-                    </div>
-                  </div>
-                ))}
+
+              {/* Book Now — primary CTA */}
+              <div className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl p-6 text-white">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
+                  <span className="text-xs font-semibold text-green-300 uppercase tracking-wide">Same-Day Availability</span>
+                </div>
+                <h3 className="font-bold text-lg mb-1">Ready to Book?</h3>
+                <p className="text-blue-100 text-sm mb-4">
+                  Use our full booking form for fastest confirmation — pick your service, date, and property address.
+                </p>
+                <a
+                  href="/booking"
+                  className="flex items-center justify-center gap-2 w-full bg-white text-blue-700 font-bold py-3 rounded-lg hover:bg-gray-100 transition-colors text-sm"
+                >
+                  Open Full Booking Form
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+                <p className="text-center text-xs text-blue-200 mt-3">
+                  or call <a href="tel:6478019311" className="font-semibold text-white">(647) 801-9311</a>
+                </p>
               </div>
 
-              {/* Quick Action Card */}
-              <Card className="mt-8 bg-primary text-primary-foreground">
-                <CardContent className="p-6">
-                  <h3 className="font-heading font-semibold text-lg mb-2">
-                    Need an Inspection Fast?
-                  </h3>
-                  <p className="text-primary-foreground/80 text-sm mb-4">
-                    Call us now to check availability for same-day or next-day inspections.
-                  </p>
-                  <Button asChild variant="secondary" className="w-full">
-                    <a href="tel:+16478019311">
-                      <Phone className="mr-2 h-4 w-4" />
-                      (647) 801-9311
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+              {/* Contact info cards */}
+              {[
+                {
+                  icon: Phone,
+                  title: "Phone",
+                  primary: "(647) 801-9311",
+                  secondary: "Call or text anytime",
+                  action: "tel:+16478019311",
+                },
+                {
+                  icon: Mail,
+                  title: "Email",
+                  primary: "info@asads.ca",
+                  secondary: "Response within 24 hours",
+                  action: "mailto:info@asads.ca",
+                },
+                {
+                  icon: MapPin,
+                  title: "Service Area",
+                  primary: "GTA & Ontario",
+                  secondary: "106 cities across Ontario",
+                  action: null,
+                },
+                {
+                  icon: Clock,
+                  title: "Hours",
+                  primary: "7 Days a Week",
+                  secondary: "8am – 8pm",
+                  action: null,
+                },
+              ].map((item) => (
+                <div key={item.title} className="flex gap-4">
+                  <div className="h-11 w-11 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground text-sm">{item.title}</h3>
+                    {item.action ? (
+                      <a href={item.action} className="text-primary hover:underline text-sm">{item.primary}</a>
+                    ) : (
+                      <p className="text-foreground text-sm">{item.primary}</p>
+                    )}
+                    <p className="text-xs text-muted-foreground">{item.secondary}</p>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            {/* Contact Form */}
+            {/* Right: Contact form */}
             <div className="lg:col-span-2">
-              <Card className="border-border/50">
-                <CardContent className="p-6 md:p-8">
-                  {isSubmitted ? (
-                    <div className="text-center py-12">
-                      <div className="h-16 w-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-6">
-                        <CheckCircle className="h-8 w-8 text-secondary" />
-                      </div>
-                      <h3 className="font-heading text-2xl font-bold text-foreground mb-2">
-                        Thank You!
-                      </h3>
-                      <p className="text-muted-foreground mb-6">
-                        Your message has been sent. We'll get back to you within 24 hours.
-                      </p>
-                      <Button onClick={() => setIsSubmitted(false)}>
-                        Send Another Message
+              <div className="border border-border/50 rounded-2xl p-6 md:p-8 bg-background">
+                {isSubmitted ? (
+                  <div className="text-center py-12">
+                    <div className="h-16 w-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
+                      <CheckCircle className="h-8 w-8 text-green-600" />
+                    </div>
+                    <h3 className="font-heading text-2xl font-bold text-foreground mb-2">Message Sent!</h3>
+                    <p className="text-muted-foreground mb-6">We'll get back to you within 24 hours.</p>
+                    <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                      <Button onClick={() => setIsSubmitted(false)} variant="outline">Send Another Message</Button>
+                      <Button asChild>
+                        <Link to="/booking">Book an Inspection <ArrowRight className="ml-2 h-4 w-4" /></Link>
                       </Button>
                     </div>
-                  ) : (
-                    <>
-                      <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
-                        Fast Scheduling Across Ontario
-                      </h2>
-                      <form onSubmit={handleSubmit} className="space-y-6">
-                        <div className="grid sm:grid-cols-2 gap-4">
-                          <div className="space-y-2">
-                            <Label htmlFor="firstName">First Name *</Label>
-                            <Input 
-                              id="firstName" 
-                              placeholder="John" 
-                              required 
-                            />
-                          </div>
-                          <div className="space-y-2">
-                            <Label htmlFor="lastName">Last Name *</Label>
-                            <Input 
-                              id="lastName" 
-                              placeholder="Smith" 
-                              required 
-                            />
-                          </div>
+                  </div>
+                ) : (
+                  <>
+                    <h2 className="font-heading text-2xl font-bold text-foreground mb-2">
+                      Send Us a Message
+                    </h2>
+                    <p className="text-muted-foreground text-sm mb-6">
+                      For fastest response, call <a href="tel:6478019311" className="text-primary font-semibold">(647) 801-9311</a> or use the <Link to="/booking" className="text-primary font-semibold">booking form</Link>.
+                    </p>
+                    <form onSubmit={handleSubmit} className="space-y-5">
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <div className="space-y-1.5">
+                          <Label htmlFor="firstName">First Name *</Label>
+                          <Input id="firstName" name="firstName" placeholder="John" required />
                         </div>
-
-                        <div className="grid sm:grid-cols-2 gap-4">
-                          <div className="space-y-2">
-                            <Label htmlFor="email">Email *</Label>
-                            <Input 
-                              id="email" 
-                              type="email" 
-                              placeholder="john@example.com" 
-                              required 
-                            />
-                          </div>
-                          <div className="space-y-2">
-                            <Label htmlFor="phone">Phone</Label>
-                            <Input 
-                              id="phone" 
-                              type="tel" 
-                              placeholder="(647) 801-9311" 
-                            />
-                          </div>
+                        <div className="space-y-1.5">
+                          <Label htmlFor="lastName">Last Name *</Label>
+                          <Input id="lastName" name="lastName" placeholder="Smith" required />
                         </div>
-
-                        <div className="space-y-2">
-                          <Label htmlFor="service">Service Interested In</Label>
-                          <Select value={selectedService} onValueChange={setSelectedService}>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select a service" />
-                            </SelectTrigger>
-                            <SelectContent>
-                              {serviceOptions.map((service) => (
-                                <SelectItem key={service} value={service}>
-                                  {service}
-                                </SelectItem>
-                              ))}
-                            </SelectContent>
-                          </Select>
+                      </div>
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <div className="space-y-1.5">
+                          <Label htmlFor="email">Email *</Label>
+                          <Input id="email" name="email" type="email" placeholder="john@example.com" required />
                         </div>
-
-                        <div className="space-y-2">
-                          <Label htmlFor="propertyAddress">Property Address (Optional)</Label>
-                          <Input 
-                            id="propertyAddress" 
-                            placeholder="123 Main St, Toronto, ON" 
-                          />
+                        <div className="space-y-1.5">
+                          <Label htmlFor="phone">Phone</Label>
+                          <Input id="phone" name="phone" type="tel" placeholder="(647) 000-0000" />
                         </div>
-
-                        <div className="space-y-2">
-                          <Label htmlFor="message">Message *</Label>
-                          <Textarea 
-                            id="message" 
-                            placeholder="Tell us about your inspection needs..."
-                            rows={5}
-                            required
-                          />
-                        </div>
-
-                        <Button 
-                          type="submit" 
-                          size="lg" 
-                          className="w-full"
-                          disabled={isSubmitting}
-                        >
-                          {isSubmitting ? (
-                            "Sending..."
-                          ) : (
-                            <>
-                              <Send className="mr-2 h-5 w-5" />
-                              Send Message
-                            </>
-                          )}
-                        </Button>
-
-                        <p className="text-sm text-muted-foreground text-center">
-                          By submitting this form, you agree to our{" "}
-                          <a href="/privacy-policy" className="text-primary hover:underline">
-                            Privacy Policy
-                          </a>
-                          .
-                        </p>
-                      </form>
-                    </>
-                  )}
-                </CardContent>
-              </Card>
+                      </div>
+                      <div className="space-y-1.5">
+                        <Label htmlFor="service">Service Interested In</Label>
+                        <Select value={selectedService} onValueChange={setSelectedService}>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select a service" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {serviceOptions.map((service) => (
+                              <SelectItem key={service} value={service}>{service}</SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      <div className="space-y-1.5">
+                        <Label htmlFor="propertyAddress">Property Address (Optional)</Label>
+                        <Input id="propertyAddress" name="propertyAddress" placeholder="123 Main St, Toronto, ON" />
+                      </div>
+                      <div className="space-y-1.5">
+                        <Label htmlFor="message">Message *</Label>
+                        <Textarea id="message" name="message" placeholder="Tell us about your inspection needs..." rows={4} required />
+                      </div>
+                      <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                        {isSubmitting ? "Sending…" : <><Send className="mr-2 h-5 w-5" />Send Message</>}
+                      </Button>
+                      <p className="text-xs text-muted-foreground text-center">
+                        By submitting this form, you agree to our{" "}
+                        <a href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</a>.
+                      </p>
+                    </form>
+                  </>
+                )}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      {/* Service Areas */}
+      <section className="py-16 bg-muted/30">
         <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Speak Directly With an Inspector
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <h2 className="font-heading text-3xl font-bold text-foreground mb-3">
+              106 Cities Across Ontario
             </h2>
-            <p className="text-lg text-muted-foreground">
-              We provide home inspection services throughout the Greater Toronto Area, 
-              from downtown Toronto to the surrounding suburbs.
+            <p className="text-muted-foreground">
+              Mobile inspectors — we come to you, anywhere across the GTA and Ontario.
             </p>
           </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-6">
             {[
-              { name: "Toronto", slug: "toronto" },
-              { name: "Mississauga", slug: "mississauga" },
-              { name: "Brampton", slug: "brampton" },
-              { name: "Vaughan", slug: "vaughan" },
-              { name: "Markham", slug: "markham" },
+              { name: "Toronto",       slug: "toronto" },
+              { name: "Mississauga",   slug: "mississauga" },
+              { name: "Brampton",      slug: "brampton" },
+              { name: "Vaughan",       slug: "vaughan" },
+              { name: "Markham",       slug: "markham" },
               { name: "Richmond Hill", slug: "richmond-hill" },
-              { name: "Scarborough", slug: "scarborough" },
-              { name: "North York", slug: "north-york" },
-              { name: "Oakville", slug: "oakville" },
-              { name: "Burlington", slug: "burlington" },
-              { name: "Hamilton", slug: "hamilton" },
-              { name: "Barrie", slug: "barrie" },
-            ].map((location) => (
+              { name: "Oakville",      slug: "oakville" },
+              { name: "Burlington",    slug: "burlington" },
+              { name: "Hamilton",      slug: "hamilton" },
+              { name: "Barrie",        slug: "barrie" },
+              { name: "Kitchener",     slug: "kitchener" },
+              { name: "Oshawa",        slug: "oshawa" },
+            ].map((loc) => (
               <Link
-                key={location.slug}
-                to={`/locations/home-inspection-${location.slug}`}
+                key={loc.slug}
+                to={`/locations/home-inspection-${loc.slug}`}
                 className="flex items-center justify-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
               >
-                <MapPin className="h-4 w-4 text-primary" />
-                {location.name}
+                <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
+                {loc.name}
               </Link>
             ))}
           </div>
           <div className="text-center">
             <Link to="/locations" className="text-primary hover:underline text-sm font-medium">
-              View all 80+ service areas →
+              View all 106 service areas →
             </Link>
           </div>
         </div>
@@ -426,15 +366,15 @@ export default function Contact() {
       <section className="py-8 bg-background border-t border-border/50">
         <div className="container">
           <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link>
+            <Link to="/services"  className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link>
             <span className="text-border">•</span>
-            <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link>
+            <Link to="/pricing"   className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link>
             <span className="text-border">•</span>
-            <Link to="/faq" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
+            <Link to="/faq"       className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
             <span className="text-border">•</span>
-            <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link>
+            <Link to="/about"     className="text-muted-foreground hover:text-primary transition-colors">About Us</Link>
             <span className="text-border">•</span>
-            <Link to="/booking" className="text-muted-foreground hover:text-primary transition-colors">Book Online</Link>
+            <Link to="/booking"   className="text-muted-foreground hover:text-primary transition-colors">Book Online</Link>
           </div>
         </div>
       </section>
