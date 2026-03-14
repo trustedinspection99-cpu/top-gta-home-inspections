@@ -6,7 +6,7 @@ import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { CTASection } from "@/components/home/CTASection";
 import { SITE_URL } from "@/lib/seo";
 import { 
-  CheckCircle2, Shield, Clock, MapPin, Search, 
+  CheckCircle2, Shield, Clock, MapPin, Search, Calendar,
   Home, Zap, Droplets, Thermometer, Construction, 
   AlertTriangle, BadgeCheck, FileText, BarChart, Info,
   ChevronRight, Phone, Instagram, Facebook, Youtube, Twitter, Video,
