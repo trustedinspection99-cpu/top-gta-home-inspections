@@ -4,6 +4,7 @@ import { Check, ArrowRight, Phone } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { HeroBookingSection } from "@/components/HeroBookingSection";
 
 const mainInspections = [
   {
@@ -171,17 +172,7 @@ const specialtyServices = [
   },
 ];
 
-const addOns = [
-  { title: "Thermal Imaging Scan", price: "$149", description: "Add to any inspection" },
-  { title: "Pool & Spa Inspection", price: "$149", description: "Equipment and safety check" },
-  { title: "Detached Structure", price: "$99+", description: "Garage, shed, workshop" },
-  { title: "Wood-Destroying Insects", price: "$99", description: "Termite and pest inspection" },
-  { title: "Septic System Inspection", price: "$249", description: "Tank and drain field check" },
-  { title: "Rush Report (2-hour)", price: "$99", description: "Priority report delivery" },
-];
-
 export default function Pricing() {
-  // Pricing Page Schema - PriceSpecification
   const pricingSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -199,7 +190,7 @@ export default function Pricing() {
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Home Inspection Pricing",
-      "itemListElement": mainInspections.map((inspection, index) => ({
+      "itemListElement": mainInspections.map((inspection) => ({
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
@@ -234,8 +225,6 @@ export default function Pricing() {
           content="Home inspection cost in Ontario: pre-purchase from $399, condos from $299. Transparent pricing, no hidden fees. How much does a home inspection cost? Compare all packages."
         />
         <link rel="canonical" href="https://www.asads.ca/pricing" />
-        
-        {/* Open Graph */}
         <meta property="og:site_name" content="ASADS Home Inspection" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="How Much Does a Home Inspection Cost? Ontario | ASADS" />
@@ -244,67 +233,45 @@ export default function Pricing() {
         <meta property="og:image" content="https://www.asads.ca/images/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-
-        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="How Much Does a Home Inspection Cost? Ontario | ASADS" />
         <meta name="twitter:description" content="How much does a home inspection cost in Ontario? Pre-purchase from $399, condos from $299. No hidden fees. View all packages." />
         <meta name="twitter:image" content="https://www.asads.ca/images/og-default.jpg" />
-        
         <script type="application/ld+json">{JSON.stringify(pricingSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="py-16 md:py-24 hero-gradient">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center text-primary-foreground">
-            <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">
-              How Much Does a Home Inspection Cost in Ontario?
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
-              No hidden fees. Transparent home inspection pricing based on your property size and type.
-              All inspections include same-day digital reports.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <Link to="/booking">
-                  Book Your Inspection
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                asChild
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-              >
-                <a href="tel:+16478019311">
-                  <Phone className="mr-2 h-5 w-5" />
-                  (647) 801-9311
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroBookingSection
+        badge="Transparent Pricing · No Hidden Fees · OAHI & InterNACHI Certified"
+        title="Home Inspection Cost in Ontario"
+        subtitle="Pre-purchase from $399. Condos from $299. All inspections include same-day digital reports with photos, severity ratings, and repair guidance."
+        priceCards={[
+          { label: "Pre-Purchase", price: "From $399" },
+          { label: "Condo", price: "From $299" },
+          { label: "New Construction", price: "From $399" },
+          { label: "Same-Day", price: "Digital Report" },
+        ]}
+        defaultService="Pre-Purchase Home Inspection"
+        formTitle="Get a Quote"
+        ctaPrimary={{ text: "Book Your Inspection", href: "/booking" }}
+      />
 
       {/* Main Inspection Packages */}
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-              Clear Rates & Packages
+              Inspection Packages & Pricing
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive inspections for every type of property. Prices vary by property size and complexity.
+              Prices vary by property size and complexity. All packages include a same-day digital report.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mainInspections.map((inspection) => (
-              <Card 
-                key={inspection.title} 
+              <Card
+                key={inspection.title}
                 className={`relative ${inspection.popular ? 'border-primary shadow-lg' : ''}`}
               >
                 {inspection.popular && (
@@ -335,9 +302,14 @@ export default function Pricing() {
                       </div>
                     ))}
                   </div>
-                  <Button asChild className="w-full mt-6">
-                    <Link to={inspection.href}>Learn More</Link>
-                  </Button>
+                  <div className="flex gap-3 mt-6">
+                    <Button asChild className="flex-1">
+                      <Link to="/booking">Book Now</Link>
+                    </Button>
+                    <Button asChild variant="outline" className="flex-1">
+                      <Link to={inspection.href}>Learn More</Link>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -353,7 +325,7 @@ export default function Pricing() {
               Specialty Testing & Add-Ons
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Add-on services or standalone testing for specific concerns. Protect your family's health and safety.
+              Standalone or bundled with any inspection. Protect your family's health and safety.
             </p>
           </div>
 
@@ -379,39 +351,6 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* Add-On Services */}
-      <section className="py-16 md:py-24">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-              Additional Add-On Services
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Enhance your inspection with these optional add-on services.
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            <div className="grid sm:grid-cols-2 gap-4">
-              {addOns.map((addon) => (
-                <div 
-                  key={addon.title} 
-                  className="flex justify-between items-center p-4 bg-muted/50 rounded-lg"
-                >
-                  <div>
-                    <h3 className="font-semibold">{addon.title}</h3>
-                    <p className="text-sm text-muted-foreground">{addon.description}</p>
-                  </div>
-                  <span className="text-lg font-bold text-primary whitespace-nowrap ml-4">
-                    {addon.price}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Related Links */}
       <section className="py-12 bg-background border-t border-border/50">
         <div className="container">
@@ -431,7 +370,7 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA */}
       <section className="py-16 md:py-24 hero-gradient">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center text-primary-foreground">
@@ -439,8 +378,7 @@ export default function Pricing() {
               Ready to Book Your Inspection?
             </h2>
             <p className="text-lg text-primary-foreground/90 mb-8">
-              Get a custom quote based on your property. Same-day reports available.
-              Flexible scheduling to meet your closing deadlines.
+              Same-day reports available. Flexible scheduling to meet your closing deadlines.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
@@ -449,9 +387,9 @@ export default function Pricing() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 asChild
                 className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
               >
