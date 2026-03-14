@@ -314,13 +314,13 @@ const Index = () => {
                 <span className="text-xs font-semibold text-green-600 uppercase tracking-wide">Same-Day Availability</span>
               </div>
               <h2 className="text-xl font-extrabold text-slate-900 mb-1">Book Your Inspection</h2>
-              <p className="text-sm text-gray-500 mb-5">We'll call to confirm within 30 minutes.</p>
+              <p className="text-sm text-gray-500 mb-5">Confirmed instantly. We may call if a time adjustment is needed.</p>
 
               {formStatus === 'sent' ? (
                 <div className="text-center py-8">
                   <CheckCircle2 className="h-12 w-12 text-green-500 mx-auto mb-3" />
-                  <p className="font-bold text-lg text-gray-900">Booking request received!</p>
-                  <p className="text-gray-500 text-sm mt-1">We'll call you within 30 minutes to confirm.</p>
+                  <p className="font-bold text-lg text-gray-900">Booking confirmed!</p>
+                  <p className="text-gray-500 text-sm mt-1">You're booked. We may call if a time adjustment is needed.</p>
                 </div>
               ) : (
                 <form onSubmit={handleQuoteSubmit} className="space-y-3">
@@ -405,7 +405,7 @@ const Index = () => {
                   {formStatus === 'error' && (
                     <p className="text-red-500 text-xs text-center">Something went wrong. Call us at (647) 801-9311.</p>
                   )}
-                  <p className="text-xs text-gray-400 text-center">7 days a week · No obligation · We confirm by phone</p>
+                  <p className="text-xs text-gray-400 text-center">7 days a week · Confirmed instantly · We call only if adjustment needed</p>
                 </form>
               )}
             </div>
