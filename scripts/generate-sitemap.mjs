@@ -1,7 +1,7 @@
 /**
  * generate-sitemap.mjs
  * Generates a complete sitemap.xml in /public covering all pages including
- * service×city cross-pages (14 services × 106 cities = 1,484 pages).
+ * service×city (14 × 106 = 1,484) and blog×city (48 × 106 = 5,088) cross-pages.
  * Run: node scripts/generate-sitemap.mjs
  */
 
@@ -90,6 +90,14 @@ serviceSlugs.forEach(svc => {
   lines.push('');
 });
 
+// Blog × City cross-pages
+blogSlugs.forEach(blog => {
+  locationSlugs.forEach(loc => {
+    lines.push(url(`/blog/${blog}/${loc}`, '0.5'));
+  });
+  lines.push('');
+});
+
 lines.push('</urlset>');
 
 // ─── Write sitemap ────────────────────────────────────────────────────────────
@@ -97,6 +105,8 @@ lines.push('</urlset>');
 const sitemap = lines.join('\n');
 writeFileSync(resolve(ROOT, 'public/sitemap.xml'), sitemap, 'utf8');
 
-const total = 13 + servicePages.length + locationSlugs.length + blogSlugs.length + (serviceSlugs.length * locationSlugs.length);
+const svcCity = serviceSlugs.length * locationSlugs.length;
+const blogCity = blogSlugs.length * locationSlugs.length;
+const total = 13 + servicePages.length + locationSlugs.length + blogSlugs.length + svcCity + blogCity;
 console.log(`✓ Sitemap generated: ${total} URLs → public/sitemap.xml`);
-console.log(`  Static: 13 | Services: ${servicePages.length} | Locations: ${locationSlugs.length} | Blog: ${blogSlugs.length} | Service×City: ${serviceSlugs.length * locationSlugs.length}`);
+console.log(`  Static: 13 | Services: ${servicePages.length} | Locations: ${locationSlugs.length} | Blog: ${blogSlugs.length} | Service×City: ${svcCity} | Blog×City: ${blogCity}`);

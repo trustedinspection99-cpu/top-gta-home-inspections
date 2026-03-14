@@ -39,6 +39,7 @@ import WellWaterTesting from "./pages/services/WellWaterTesting";
 import SewerScope from "./pages/services/SewerScope";
 import AirQuality from "./pages/services/AirQuality";
 import ServiceCityPage from "./pages/services/ServiceCityPage";
+import BlogCityPage from "./pages/blog/BlogCityPage";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => (
             <Route path="/services" element={<Services />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/blog/:blogSlug/:citySlug" element={<BlogCityPage />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/booking" element={<Booking />} />

@@ -146,6 +146,25 @@ serviceDefs.forEach(svc => {
   });
 });
 
+// ─── Blog × City cross-pages ──────────────────────────────────────────────────
+
+blogs.forEach(b => {
+  locationSlugs.forEach(loc => {
+    const city = loc.city;
+    // Title: append city to blog meta title (truncate to ~70 chars)
+    const rawTitle = `${b.title} | ${city}, Ontario`;
+    const title = rawTitle.length > 70 ? rawTitle.slice(0, 67) + '...' : rawTitle;
+    // Desc: append city context (truncate to 160)
+    const rawDesc = `${b.desc} Serving ${city} homeowners & buyers.`;
+    const desc = rawDesc.length > 160 ? rawDesc.slice(0, 157) + '...' : rawDesc;
+    pages.push({
+      path: `/blog/${b.slug}/${loc.slug}`,
+      title,
+      desc,
+    });
+  });
+});
+
 // ─── Read base HTML ───────────────────────────────────────────────────────────
 
 const baseHtml = readFileSync(resolve(DIST, 'index.html'), 'utf8');
