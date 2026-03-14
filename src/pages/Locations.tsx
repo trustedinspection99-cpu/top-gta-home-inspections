@@ -4,11 +4,9 @@ import { Link } from "react-router-dom";
 import {
   MapPin,
   Phone,
-  ArrowRight,
   Clock,
   Shield,
   Star,
-  ChevronDown,
   Search as SearchIcon,
   CheckCircle,
   FileText,
@@ -16,11 +14,6 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useState, useMemo } from "react";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
 import { OrphanLocationLinks } from "@/components/seo/OrphanLocationLinks";
 import { locationData } from "@/data/locationData";
 import { HeroBookingSection } from "@/components/HeroBookingSection";
@@ -37,7 +30,6 @@ const getRegionList = () => {
       slug: loc.slug,
       href: `/locations/${loc.slug}`,
       popular: (loc as any).popular || false,
-      region: regionName,
     });
     return acc;
   }, {} as Record<string, any[]>);
@@ -46,6 +38,13 @@ const getRegionList = () => {
 
 const regionList = getRegionList();
 const allLocations = locationData || [];
+const allCityList = allLocations.map(loc => ({
+  city: loc.city,
+  slug: loc.slug,
+  href: `/locations/${loc.slug}`,
+  popular: (loc as any).popular || false,
+  region: loc.region || "Other Areas",
+}));
 
 const featuredCities = [
   { name: "Toronto",       slug: "home-inspection-toronto",       tag: "Most Popular" },
@@ -66,28 +65,14 @@ const featuredCities = [
 
 export default function Locations() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [openRegions, setOpenRegions] = useState<string[]>(regionList.map((r) => r.name));
 
-  const filteredRegions = useMemo(() => {
-    if (!searchQuery.trim()) return regionList;
+  const filteredCities = useMemo(() => {
+    if (!searchQuery.trim()) return allCityList;
     const query = searchQuery.toLowerCase();
-    return regionList
-      .map((region) => ({
-        ...region,
-        locations: region.locations.filter((loc) =>
-          loc.city.toLowerCase().includes(query)
-        ),
-      }))
-      .filter((region) => region.locations.length > 0);
+    return allCityList.filter(loc => loc.city.toLowerCase().includes(query));
   }, [searchQuery]);
 
   const totalLocations = allLocations.length;
-  const matchedLocations = filteredRegions.reduce((sum, r) => sum + r.locations.length, 0);
-
-  const toggleRegion = (name: string) =>
-    setOpenRegions((prev) =>
-      prev.includes(name) ? prev.filter((r) => r !== name) : [...prev, name]
-    );
 
   return (
     <Layout>
@@ -257,7 +242,7 @@ export default function Locations() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">All {totalLocations} Service Areas</h2>
-            <p className="text-gray-500 text-sm">Search below or browse by region</p>
+            <p className="text-gray-500 text-sm">Search your city or browse the full list</p>
           </div>
 
           {/* Search bar */}
@@ -273,72 +258,37 @@ export default function Locations() {
             </div>
             {searchQuery && (
               <p className="text-sm text-gray-500 mt-2 text-center">
-                {matchedLocations} result{matchedLocations !== 1 ? "s" : ""} for "{searchQuery}"
+                {filteredCities.length} result{filteredCities.length !== 1 ? "s" : ""} for "{searchQuery}"
               </p>
             )}
           </div>
 
-          {/* Expand / Collapse controls */}
-          <div className="flex justify-center gap-3 mb-8">
-            <button
-              onClick={() => setOpenRegions(regionList.map((r) => r.name))}
-              className="text-xs font-semibold text-blue-600 hover:text-blue-700 px-4 py-1.5 border border-blue-200 rounded-full hover:bg-blue-50 transition-colors"
-            >
-              Expand All
-            </button>
-            <button
-              onClick={() => setOpenRegions([])}
-              className="text-xs font-semibold text-gray-500 hover:text-gray-700 px-4 py-1.5 border border-gray-200 rounded-full hover:bg-gray-100 transition-colors"
-            >
-              Collapse All
-            </button>
-          </div>
-
-          {/* Region accordions */}
-          <div className="space-y-4 max-w-5xl mx-auto">
-            {filteredRegions.map((region) => (
-              <Collapsible
-                key={region.name}
-                open={openRegions.includes(region.name)}
-                onOpenChange={() => toggleRegion(region.name)}
+          {/* Flat city grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2.5 max-w-6xl mx-auto">
+            {filteredCities.map((loc) => (
+              <Link
+                key={loc.slug}
+                to={loc.href}
+                className="flex items-center gap-2 px-3 py-2.5 bg-white border border-gray-100 hover:border-blue-300 hover:bg-blue-50 rounded-lg transition-all group text-sm"
               >
-                <CollapsibleTrigger asChild>
-                  <button className="w-full flex justify-between items-center bg-white border border-gray-100 hover:border-blue-200 px-6 py-4 rounded-xl hover:bg-blue-50/30 transition-colors shadow-sm">
-                    <div className="flex items-center gap-3">
-                      <MapPin className="h-4 w-4 text-blue-500" />
-                      <h2 className="text-base font-bold text-gray-900">{region.name}</h2>
-                      <span className="text-xs text-gray-400 font-normal">{region.locations.length} cities</span>
-                    </div>
-                    <ChevronDown
-                      className={`h-5 w-5 text-gray-400 transition-transform duration-200 ${
-                        openRegions.includes(region.name) ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                </CollapsibleTrigger>
-
-                <CollapsibleContent>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2.5 mt-3 px-1">
-                    {region.locations.map((loc) => (
-                      <Link
-                        key={loc.slug}
-                        to={loc.href}
-                        className="flex items-center gap-2 px-3 py-2.5 bg-white border border-gray-100 hover:border-blue-300 hover:bg-blue-50 rounded-lg transition-all group text-sm"
-                      >
-                        <MapPin className="h-3.5 w-3.5 text-blue-400 flex-shrink-0 group-hover:text-blue-600" />
-                        <span className="flex-1 truncate text-gray-700 group-hover:text-blue-700 font-medium">{loc.city}</span>
-                        {loc.popular && (
-                          <span className="text-[9px] uppercase tracking-wider bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-bold flex-shrink-0">
-                            Top
-                          </span>
-                        )}
-                      </Link>
-                    ))}
-                  </div>
-                </CollapsibleContent>
-              </Collapsible>
+                <MapPin className="h-3.5 w-3.5 text-blue-400 flex-shrink-0 group-hover:text-blue-600" />
+                <span className="flex-1 truncate text-gray-700 group-hover:text-blue-700 font-medium">{loc.city}</span>
+                {loc.popular && (
+                  <span className="text-[9px] uppercase tracking-wider bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-bold flex-shrink-0">
+                    Top
+                  </span>
+                )}
+              </Link>
             ))}
           </div>
+
+          {filteredCities.length === 0 && (
+            <p className="text-center text-gray-500 mt-8">
+              No cities match "{searchQuery}". Call{" "}
+              <a href="tel:6478019311" className="text-blue-600 font-semibold">(647) 801-9311</a>
+              {" "}— we may still serve your area.
+            </p>
+          )}
 
           {!searchQuery && (
             <p className="text-center text-gray-400 text-sm mt-8">
