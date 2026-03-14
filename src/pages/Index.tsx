@@ -177,7 +177,7 @@ const localBusinessSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "501",
+    "reviewCount": "1500",
     "bestRating": "5"
   },
   "openingHoursSpecification": {
@@ -273,7 +273,7 @@ const Index = () => {
                   ))}
                 </div>
                 <span className="font-bold text-white text-lg">4.9</span>
-                <span className="text-blue-200 text-sm">· 500+ verified client reviews · InterNACHI & OAHI certified</span>
+                <span className="text-blue-200 text-sm">· 1,500+ verified client reviews · InterNACHI & OAHI certified</span>
               </div>
 
               <p className="text-lg mb-7 opacity-95 leading-relaxed">
@@ -408,7 +408,7 @@ const Index = () => {
               </div>
               <div>
                 <span className="font-extrabold text-white text-sm">4.9/5</span>
-                <span className="text-slate-400 text-xs ml-1">· 500+ reviews</span>
+                <span className="text-slate-400 text-xs ml-1">· 1,500+ reviews</span>
               </div>
             </div>
             {/* Stats */}
@@ -535,7 +535,7 @@ const Index = () => {
                 As one of the <strong>best home inspection companies near me</strong> for GTA residents, ASADS offers same-day bookings 7 days a week, comprehensive digital reports delivered within 24 hours, and 14 specialty services under one roof. No matter which Ontario city you're in, you can reach us at <a href="tel:6478019311" className="text-blue-700 font-semibold hover:underline">(647) 801-9311</a> or <a href="/booking" className="text-blue-700 font-semibold hover:underline">book online instantly</a>.
               </p>
               <p>
-                Looking for a <strong>top home inspection company near me</strong> with verified reviews? ASADS has completed over 2,000 inspections across Ontario with a 4.9-star rating and 500+ verified client reviews. Our OAHI-certified inspectors carry full E&O insurance and use professional-grade equipment including thermal imaging cameras, moisture meters, and gas detectors on every inspection — not just on request.
+                Looking for a <strong>top home inspection company near me</strong> with verified reviews? ASADS has completed over 2,000 inspections across Ontario with a 4.9-star rating and 1,500+ verified client reviews. Our OAHI-certified inspectors carry full E&O insurance and use professional-grade equipment including thermal imaging cameras, moisture meters, and gas detectors on every inspection — not just on request.
               </p>
             </div>
             <div className="mt-8 grid sm:grid-cols-3 gap-4">
