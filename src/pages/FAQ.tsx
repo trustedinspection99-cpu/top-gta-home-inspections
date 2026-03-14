@@ -1,5 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Accordion,
   AccordionContent,
@@ -7,8 +8,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
-import { Phone, Mail, MessageCircle } from "lucide-react";
+import { Phone, Mail, MessageCircle, Search, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { useState, useMemo } from "react";
+import { HeroBookingSection } from "@/components/HeroBookingSection";
 
 const faqCategories = [
   {
@@ -1128,6 +1131,25 @@ const faqCategories = [
 ];
 
 export default function FAQ() {
+  const [search, setSearch] = useState("");
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredCategories = useMemo(() => {
+    const q = search.toLowerCase();
+    if (!q && activeCategory === "All") return faqCategories;
+    return faqCategories
+      .map(cat => ({
+        ...cat,
+        questions: cat.questions.filter(faq =>
+          (activeCategory === "All" || cat.category === activeCategory) &&
+          (!q || faq.question.toLowerCase().includes(q) || faq.answer.toLowerCase().includes(q))
+        ),
+      }))
+      .filter(cat => cat.questions.length > 0);
+  }, [search, activeCategory]);
+
+  const totalFiltered = filteredCategories.reduce((sum, c) => sum + c.questions.length, 0);
+
   // Generate FAQ schema from all categories
   const allFaqs = faqCategories.flatMap(category => category.questions);
 
@@ -1174,16 +1196,51 @@ export default function FAQ() {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16 md:py-24">
+      <HeroBookingSection
+        badge="100+ Questions Answered · Ontario Home Inspection FAQ"
+        title="Home Inspection FAQ: Ontario Questions Answered"
+        subtitle="Find answers to common questions about inspections, costs, radon, mold, electrical, HVAC, and more. Can't find what you need? Call us directly."
+        priceCards={[
+          { label: "Questions", price: "100+" },
+          { label: "Categories", price: `${faqCategories.length}` },
+          { label: "Pre-Purchase", price: "From $399" },
+          { label: "Same-Day", price: "Digital Report" },
+        ]}
+        formTitle="Book Your Inspection"
+        ctaPrimary={{ text: "Browse Questions Below", href: "#faq-content" }}
+        defaultService="Pre-Purchase Home Inspection"
+      />
+
+      {/* Search + Category Filter */}
+      <section id="faq-content" className="py-6 border-b bg-gray-50 sticky top-0 z-10 shadow-sm">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Home Inspection FAQ: Ontario Questions Answered
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Find answers to common questions about our home inspection services. Can't find what you're looking for? Contact us directly.
-            </p>
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-between max-w-5xl mx-auto">
+            <div className="relative w-full sm:w-80">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                placeholder="Search questions…"
+                className="pl-9 h-10 bg-white"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-wrap gap-2 justify-center sm:justify-end">
+              <button
+                onClick={() => setActiveCategory("All")}
+                className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors whitespace-nowrap ${activeCategory === "All" ? "bg-primary text-primary-foreground border-primary" : "bg-white text-gray-600 border-gray-200 hover:border-primary hover:text-primary"}`}
+              >
+                All ({faqCategories.reduce((s, c) => s + c.questions.length, 0)})
+              </button>
+              {faqCategories.map(cat => (
+                <button
+                  key={cat.category}
+                  onClick={() => setActiveCategory(cat.category)}
+                  className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors whitespace-nowrap ${activeCategory === cat.category ? "bg-primary text-primary-foreground border-primary" : "bg-white text-gray-600 border-gray-200 hover:border-primary hover:text-primary"}`}
+                >
+                  {cat.category} ({cat.questions.length})
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -1192,7 +1249,19 @@ export default function FAQ() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            {faqCategories.map((category, categoryIndex) => (
+            {search && (
+              <div className="mb-8 flex items-center justify-between">
+                <p className="text-muted-foreground text-sm">{totalFiltered} result{totalFiltered !== 1 ? "s" : ""} for "<strong>{search}</strong>"</p>
+                <button onClick={() => setSearch("")} className="text-sm text-primary hover:underline">Clear</button>
+              </div>
+            )}
+            {filteredCategories.length === 0 && (
+              <div className="text-center py-16 text-muted-foreground">
+                <p className="text-lg mb-2">No questions match "{search}"</p>
+                <button onClick={() => { setSearch(""); setActiveCategory("All"); }} className="text-primary hover:underline text-sm">Clear filters</button>
+              </div>
+            )}
+            {filteredCategories.map((category, categoryIndex) => (
               <div key={category.category} className="mb-12">
                 <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
                   {category.category}
@@ -1219,6 +1288,7 @@ export default function FAQ() {
         </div>
       </section>
 
+
       {/* Still Have Questions */}
       <section className="py-16 bg-muted/30">
         <div className="container">
@@ -1242,7 +1312,7 @@ export default function FAQ() {
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Call Us</h3>
                 <p className="text-muted-foreground">(647) 801-9311</p>
-                <p className="text-sm text-muted-foreground mt-1">Mon-Sat 8am-6pm</p>
+                <p className="text-sm text-muted-foreground mt-1">7 days a week</p>
               </a>
 
               <a
@@ -1308,22 +1378,45 @@ export default function FAQ() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      <section className="py-20 bg-gradient-to-br from-blue-800 to-blue-900 text-white">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-heading text-3xl font-bold mb-6">
-              Ready to Book Your Inspection?
-            </h2>
-            <p className="text-primary-foreground/80 mb-8">
-              Get peace of mind with a thorough home inspection from our certified professionals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <Link to="/booking">Book Now</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground/20 hover:bg-primary-foreground/10" asChild>
-                <Link to="/services">View Services</Link>
-              </Button>
+          <div className="max-w-4xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Book Your Inspection?</h2>
+              <p className="text-blue-100 text-lg mb-6 leading-relaxed">
+                Get peace of mind with a thorough inspection from our certified professionals.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "OAHI & InterNACHI certified inspectors",
+                  "Same-day digital reports with photos",
+                  "Available 7 days a week",
+                  "Fully insured — E&O + $2M liability",
+                ].map(item => (
+                  <li key={item} className="flex items-center gap-3 text-blue-100 text-sm">
+                    <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a href="tel:6478019311" className="inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+                <Phone className="h-5 w-5" />
+                (647) 801-9311
+              </a>
+            </div>
+            <div className="bg-white rounded-2xl p-6 text-gray-900 shadow-2xl">
+              <div className="flex items-center gap-2 mb-1">
+                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-xs font-semibold text-green-600 uppercase tracking-wide">Same-Day Availability</span>
+              </div>
+              <h3 className="text-xl font-extrabold text-slate-900 mb-1">Book Your Inspection</h3>
+              <p className="text-sm text-gray-500 mb-5">Confirmed instantly. We may call if a time adjustment is needed.</p>
+              <a href="/booking" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg text-center transition-colors text-sm">
+                Open Full Booking Form →
+              </a>
+              <p className="text-center text-xs text-gray-400 mt-3">
+                or call <a href="tel:6478019311" className="text-blue-600 font-semibold">(647) 801-9311</a> — 7 days a week
+              </p>
             </div>
           </div>
         </div>
