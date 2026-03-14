@@ -5,15 +5,16 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SITE_URL, getCanonicalUrl, normalizePath } from "@/lib/seo";
-import { 
-  Hammer, 
-  ShieldAlert, 
-  FileCheck, 
-  HardHat, 
-  Ruler, 
+import { HeroBookingSection } from "@/components/HeroBookingSection";
+import {
+  Hammer,
+  ShieldAlert,
+  FileCheck,
+  HardHat,
+  Ruler,
   Search,
-  CheckCircle, 
-  Phone, 
+  CheckCircle,
+  Phone,
   Calendar,
   Clock,
   FileText,
@@ -170,34 +171,19 @@ export default function NewConstruction() {
         ))}
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="py-16 md:py-24 hero-gradient text-primary-foreground">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-16 w-16 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
-                <HardHat className="h-8 w-8" />
-              </div>
-              <div>
-                <p className="text-primary-foreground/80 text-sm font-medium uppercase tracking-wider">Builder Quality Control</p>
-                <h1 className="font-heading text-3xl md:text-5xl font-bold">PDI Inspection & New Construction Home Inspection</h1>
-              </div>
-            </div>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl">
-              New doesn't mean perfect. Our new build inspection covers PDI walkthroughs through to 1-Year Tarion deadlines — identifying builder shortcuts before they become your financial burden.
-            </p>
-            <div className="flex flex-wrap gap-6 mb-8">
-              <div className="flex items-center gap-2"><Clock className="h-5 w-5" /><span>{duration}</span></div>
-              <div className="flex items-center gap-2"><ShieldAlert className="h-5 w-5" /><span>Tarion Experts</span></div>
-              <div className="flex items-center gap-2"><Thermometer className="h-5 w-5" /><span>Infrared Scanning</span></div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" variant="secondary"><Link to="/booking">Book New Build Audit</Link></Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"><a href="tel:+16478019311"><Phone className="mr-2 h-5 w-5" />(647) 801-9311</a></Button>
-            </div>
-          </div>
-        </div>
-      </section>
+            <HeroBookingSection
+        badge="ASADS New Construction · PDI & Tarion Specialists"
+        title="PDI Inspection & New Construction Home Inspection"
+        subtitle="New doesn't mean perfect. Our new build inspection covers PDI walkthroughs through to 1-Year Tarion deadlines — identifying builder shortcuts before they become your financial burden."
+        priceCards={[
+          { label: "New Construction / PDI", price: "From $449" },
+          { label: "Tarion Experts", price: "All 3 Stages" },
+          { label: "Duration", price: duration },
+        ]}
+        defaultService="New Construction / PDI"
+        formTitle="Book New Build Audit"
+        ctaPrimary={{ text: "Book New Build Audit", href: "/booking" }}
+      />
 
       {/* Main Content */}
       <section className="py-16 md:py-24 bg-background">

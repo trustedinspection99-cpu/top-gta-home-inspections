@@ -5,10 +5,11 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SITE_URL, getCanonicalUrl, normalizePath } from "@/lib/seo";
-import { 
+import { HeroBookingSection } from "@/components/HeroBookingSection";
+import {
   Home,
-  CheckCircle, 
-  Phone, 
+  CheckCircle,
+  Phone,
   Calendar,
   Clock,
   FileText,
@@ -241,46 +242,19 @@ export default function PreListing() {
         <script type="application/ld+json">{JSON.stringify(professionalServiceSchema)}</script>
       </Helmet>
 
-      {/* --- HERO SECTION --- */}
-      <section className="py-16 md:py-24 hero-gradient text-primary-foreground">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-16 w-16 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
-                <TrendingUp className="h-8 w-8" />
-              </div>
-              <div>
-                <p className="text-primary-foreground/80 text-sm font-medium uppercase tracking-wider">Equity Protection Audit</p>
-                <h1 className="font-heading text-3xl md:text-5xl font-bold">Pre-Listing Inspection & Pre-Sale Home Inspection</h1>
-              </div>
-            </div>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl">
-              Don't let a buyer's inspector control your price. Our pre-listing inspection and pre-sale home inspection identifies "deal-breakers" early, allowing sellers to control the narrative and secure higher offers.
-            </p>
-            <div className="flex flex-wrap gap-6 mb-8">
-              <div className="flex items-center gap-2"><Clock className="h-5 w-5" /><span>{duration}</span></div>
-              <div className="flex items-center gap-2"><FileText className="h-5 w-5" /><span>Marketing-Ready Report</span></div>
-              <div className="flex items-center gap-2"><Shield className="h-5 w-5" /><span>Liability Protection</span></div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" variant="secondary"><Link to="/booking"><Calendar className="mr-2 h-5 w-5" />Book Listing Audit</Link></Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"><a href="tel:+16478019311"><Phone className="mr-2 h-5 w-5" />(647) 801-9311</a></Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* --- PRICING BANNER --- */}
-      <section className="py-6 bg-accent text-accent-foreground">
-        <div className="container flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-center sm:text-left">
-            <p className="text-sm opacity-90">Starting at</p>
-            <p className="font-heading text-3xl font-bold">{price}</p>
-          </div>
-          <div className="flex items-center gap-4"><CheckCircle className="h-5 w-5" /><span>Thermal Imaging Included • Fast 24Hr Delivery</span></div>
-          <Button asChild variant="secondary"><Link to="/booking">Get Started</Link></Button>
-        </div>
-      </section>
+            <HeroBookingSection
+        badge="ASADS Inspection Services · Seller Inspection Specialists"
+        title="Pre-Listing Inspection & Pre-Sale Home Inspection"
+        subtitle="Don't let a buyer's inspector control your price. Our pre-listing inspection identifies deal-breakers early, allowing sellers to control the narrative and secure higher offers."
+        priceCards={[
+          { label: "Pre-Listing Inspection", price: "From $399" },
+          { label: "Thermal Imaging", price: "Included" },
+          { label: "Duration", price: duration },
+        ]}
+        defaultService="Pre-Listing Inspection"
+        formTitle="Book Listing Audit"
+        ctaPrimary={{ text: "Book Listing Audit", href: "/booking" }}
+      />
 
       {/* --- MAIN CONTENT: MATCHED DEPTH --- */}
       <section className="py-16 md:py-24 bg-background">

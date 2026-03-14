@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SITE_URL, getCanonicalUrl, normalizePath } from "@/lib/seo";
+import { HeroBookingSection } from "@/components/HeroBookingSection";
 import {
   Factory,
   ShieldCheck,
@@ -515,83 +516,20 @@ export default function Commercial() {
         </script>
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="py-16 md:py-24 hero-gradient text-primary-foreground">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-16 w-16 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
-                <Factory className="h-8 w-8" />
-              </div>
-              <div>
-                <p className="text-primary-foreground/80 text-sm font-medium uppercase tracking-wider">
-                  ASADS Commercial Inspection Services
-                </p>
-                <h1 className="font-heading text-3xl md:text-5xl font-bold">
-                  Commercial Property Inspection & Building Condition Assessment
-                </h1>
-              </div>
-            </div>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl">
-              Institutional-grade commercial building inspection and due diligence for Toronto & GTA. Identify structural, MEP, environmental, and lifecycle risks before you invest. Serving Toronto, Mississauga, Hamilton, Kitchener-Waterloo, Guelph, and Cambridge.
-            </p>
-            <div className="flex flex-wrap gap-6 mb-8">
-              <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5" />
-                <span>{duration}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FileText className="h-5 w-5" />
-                <span>Detailed CapEx Forecasting</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5" />
-                <span>ASTM E2018-15 Compliant</span>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" variant="secondary">
-                <Link to="/booking">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Request Commercial Quote
-                </Link>
-              </Button>
-              <Button 
-                asChild 
-                size="lg" 
-                variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-              >
-                <a href="tel:+16478019311">
-                  <Phone className="mr-2 h-5 w-5" />
-                  (647) 801-9311
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+            <HeroBookingSection
+        badge="ASADS Commercial Inspection · ASTM E2018-15 Compliant"
+        title="Commercial Property Inspection & Building Condition Assessment"
+        subtitle="Institutional-grade commercial building inspection and due diligence for Toronto & GTA. Identify structural, MEP, environmental, and lifecycle risks before you invest."
+        priceCards={[
+          { label: "Commercial Inspection", price: "Quote Based" },
+          { label: "CapEx Forecasting", price: "Included" },
+          { label: "ASTM E2018-15", price: "Compliant" },
+        ]}
+        defaultService="Commercial Inspection"
+        formTitle="Request Commercial Quote"
+        ctaPrimary={{ text: "Request Commercial Quote", href: "/booking" }}
+      />
 
-      {/* Pricing Banner */}
-      <section className="py-6 bg-accent text-accent-foreground">
-        <div className="container">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-center sm:text-left">
-              <p className="text-sm opacity-90">Commercial Inspection Pricing</p>
-              <p className="font-heading text-3xl font-bold">{price}</p>
-            </div>
-            <div className="flex items-center gap-4">
-              <CheckCircle className="h-5 w-5" />
-              <span>Custom quotes • Volume discounts available</span>
-            </div>
-            <Button asChild variant="secondary">
-              <Link to="/booking">Get Commercial Quote</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Content */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-12">

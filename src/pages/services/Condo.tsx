@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getCanonicalUrl, SITE_URL } from "@/lib/seo";
+import { HeroBookingSection } from "@/components/HeroBookingSection";
 import {
   Building,
   Thermometer,
@@ -200,47 +201,19 @@ export default function CondoInspection() {
         ))}
       </Helmet>
 
-      {/* HERO */}
-      <section className="py-20 hero-gradient text-primary-foreground">
-        <div className="container max-w-4xl">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="h-14 w-14 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
-              <Building />
-            </div>
-            <h1 className="font-heading text-4xl md:text-5xl font-bold">
-              Condo Inspection & Townhouse Inspection Toronto
-            </h1>
-          </div>
-
-          <p className="text-xl opacity-90 mb-8">
-            Condo and townhome ownership comes with hidden in-suite liabilities. Our certified condo inspection identifies Kitec plumbing, fan coil failures, moisture intrusion, and safety issues before they become expensive surprises.
-          </p>
-
-          <div className="flex flex-wrap gap-6 mb-10">
-            <div className="flex items-center gap-2">
-              <Clock /> {duration}
-            </div>
-            <div className="flex items-center gap-2">
-              <Droplets /> Kitec Plumbing Audit
-            </div>
-            <div className="flex items-center gap-2">
-              <Thermometer /> HVAC & Fan Coil Inspection
-            </div>
-          </div>
-
-          <div className="flex gap-4 flex-wrap">
-            <Button asChild size="lg" variant="secondary">
-              <Link to="/booking">Book Condo Inspection</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <a href="tel:+16478019311">
-                <Phone className="mr-2 h-5 w-5" />
-                (647) 801-9311
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+            <HeroBookingSection
+        badge="ASADS Condo Inspection · Toronto & GTA Specialists"
+        title="Condo Inspection & Townhouse Inspection Toronto"
+        subtitle="Condo ownership comes with hidden in-suite liabilities. Our certified condo inspection identifies Kitec plumbing, fan coil failures, moisture intrusion, and safety issues before they become expensive surprises."
+        priceCards={[
+          { label: "Condo Inspection", price: "From $299" },
+          { label: "Kitec Plumbing", price: "Audit Included" },
+          { label: "Duration", price: duration },
+        ]}
+        defaultService="Condo Inspection"
+        formTitle="Book Condo Inspection"
+        ctaPrimary={{ text: "Book Condo Inspection", href: "/booking" }}
+      />
 
       {/* CONTENT */}
       <section className="py-20 bg-background">
