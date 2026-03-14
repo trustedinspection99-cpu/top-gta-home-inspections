@@ -193,7 +193,7 @@ const localBusinessSchema = {
 };
 
 const Index = () => {
-  const [formData, setFormData] = useState({ name: '', phone: '', city: '', service: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', city: '', service: '', preferred_date: '' });
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
   const handleQuoteSubmit = async (e: React.FormEvent) => {
@@ -201,10 +201,12 @@ const Index = () => {
     setFormStatus('sending');
     try {
       const data = new FormData();
+      data.append('_subject', `Booking Request — ${formData.service || 'Home Inspection'}`);
       data.append('name', formData.name);
       data.append('phone', formData.phone);
-      data.append('city', formData.city);
+      data.append('address', formData.city);
       data.append('service', formData.service || 'Not specified');
+      data.append('preferred_date', formData.preferred_date || 'Flexible');
       const res = await fetch('https://formspree.io/f/mnjnzzoz', { method: 'POST', body: data, headers: { Accept: 'application/json' } });
       const json = await res.json();
       setFormStatus(json.ok ? 'sent' : 'error');
@@ -305,85 +307,105 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Right: inline quote form */}
+            {/* Right: inline booking form */}
             <div className="bg-white rounded-2xl p-6 text-gray-900 shadow-2xl">
-              <h2 className="text-xl font-extrabold text-slate-900 mb-1">Get a Free Quote</h2>
-              <p className="text-sm text-gray-500 mb-5">We respond within 30 minutes during business hours.</p>
+              <div className="flex items-center gap-2 mb-1">
+                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-xs font-semibold text-green-600 uppercase tracking-wide">Same-Day Availability</span>
+              </div>
+              <h2 className="text-xl font-extrabold text-slate-900 mb-1">Book Your Inspection</h2>
+              <p className="text-sm text-gray-500 mb-5">We'll call to confirm within 30 minutes.</p>
 
               {formStatus === 'sent' ? (
                 <div className="text-center py-8">
                   <CheckCircle2 className="h-12 w-12 text-green-500 mx-auto mb-3" />
-                  <p className="font-bold text-lg text-gray-900">Quote request received!</p>
-                  <p className="text-gray-500 text-sm mt-1">We'll call you within 30 minutes.</p>
+                  <p className="font-bold text-lg text-gray-900">Booking request received!</p>
+                  <p className="text-gray-500 text-sm mt-1">We'll call you within 30 minutes to confirm.</p>
                 </div>
               ) : (
                 <form onSubmit={handleQuoteSubmit} className="space-y-3">
                   <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Your Name *</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="John Smith"
-                      value={formData.name}
-                      onChange={e => setFormData(p => ({ ...p, name: e.target.value }))}
-                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Phone Number *</label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="(647) 555-0100"
-                      value={formData.phone}
-                      onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))}
-                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">City / Area *</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Toronto, Brampton, Mississauga…"
-                      value={formData.city}
-                      onChange={e => setFormData(p => ({ ...p, city: e.target.value }))}
-                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Service Needed</label>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">Inspection Type *</label>
                     <select
+                      required
                       value={formData.service}
                       onChange={e => setFormData(p => ({ ...p, service: e.target.value }))}
                       className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
                     >
                       <option value="">Select a service…</option>
-                      <option>Pre-Purchase Home Inspection</option>
-                      <option>Pre-Listing Inspection</option>
-                      <option>Mold Inspection & Testing</option>
-                      <option>Radon Testing</option>
-                      <option>Thermal Imaging</option>
-                      <option>Sewer Scope</option>
-                      <option>Asbestos Testing</option>
-                      <option>WETT Inspection</option>
-                      <option>Condo Inspection</option>
-                      <option>New Construction Inspection</option>
-                      <option>Air Quality Testing</option>
-                      <option>Other</option>
+                      <option>Pre-Purchase Home Inspection — From $399</option>
+                      <option>Pre-Listing Inspection — From $399</option>
+                      <option>Condo Inspection — From $299</option>
+                      <option>New Construction / PDI — From $449</option>
+                      <option>Mold Inspection & Testing — From $299</option>
+                      <option>Radon Testing — From $149</option>
+                      <option>Thermal Imaging — From $199</option>
+                      <option>Sewer Scope — From $299</option>
+                      <option>Asbestos Testing — From $299</option>
+                      <option>WETT Inspection — From $199</option>
+                      <option>Commercial Inspection</option>
+                      <option>Air Quality Testing — From $299</option>
+                      <option>Other / Not Sure</option>
                     </select>
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">Property Address *</label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="123 Main St, Toronto, ON"
+                      value={formData.city}
+                      onChange={e => setFormData(p => ({ ...p, city: e.target.value }))}
+                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-xs font-semibold text-gray-600 mb-1">Your Name *</label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="John Smith"
+                        value={formData.name}
+                        onChange={e => setFormData(p => ({ ...p, name: e.target.value }))}
+                        className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-gray-600 mb-1">Phone *</label>
+                      <input
+                        type="tel"
+                        required
+                        placeholder="(647) 555-0100"
+                        value={formData.phone}
+                        onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))}
+                        className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">Preferred Date</label>
+                    <input
+                      type="date"
+                      value={formData.preferred_date}
+                      min={new Date().toISOString().split('T')[0]}
+                      onChange={e => setFormData(p => ({ ...p, preferred_date: e.target.value }))}
+                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
                   </div>
                   <button
                     type="submit"
                     disabled={formStatus === 'sending'}
-                    className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition-colors text-sm disabled:opacity-60"
+                    className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3.5 rounded-lg transition-colors text-sm disabled:opacity-60 flex items-center justify-center gap-2"
                   >
-                    {formStatus === 'sending' ? 'Sending…' : 'Get My Free Quote →'}
+                    {formStatus === 'sending' ? 'Submitting…' : (
+                      <><Calendar className="h-4 w-4" /> Book My Inspection</>
+                    )}
                   </button>
                   {formStatus === 'error' && (
                     <p className="text-red-500 text-xs text-center">Something went wrong. Call us at (647) 801-9311.</p>
                   )}
-                  <p className="text-xs text-gray-400 text-center">No spam. We'll call you to confirm availability.</p>
+                  <p className="text-xs text-gray-400 text-center">7 days a week · No obligation · We confirm by phone</p>
                 </form>
               )}
             </div>
