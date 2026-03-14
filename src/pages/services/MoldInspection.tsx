@@ -3,8 +3,8 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import { Link } from "react-router-dom";
 
 export default function MoldInspection() {
-  const pageTitle = "Mold Inspection & Testing Ontario | AIHA Lab | ASADS";
-  const schemaDescription = "Mold inspection & mold testing across Ontario & GTA. AIHA lab, air sampling, black mold & species ID. Independent third-party. Written remediation scope. From $299.";
+  const pageTitle = "Mold Inspection & Testing Toronto | AIHA Lab Results | ASADS";
+  const schemaDescription = "Certified mold testing in Toronto & GTA from $299. Air sampling, black mold ID, AIHA-accredited lab. Independent — we don't do remediation. Fast written results.";
 
   return (
     <ServicePageTemplate

@@ -37,7 +37,7 @@
 
  const title = "Pre-Purchase Home Inspection";
  const metaTitle = "Pre-Purchase Home Inspection Ontario | From $399 | ASADS";
- const metaDescription = "Certified pre-purchase home inspection in Ontario from $399. Same-day reports, 400-point checklist. Licensed inspectors for GTA & Ontario. Call (647) 801-9311.";
+ const metaDescription = "Licensed home inspector from $399. 400-point checklist, thermal imaging option, same-day digital report. GTA & Ontario. Book online — results same day.";
  const price = "$399-$749";
  const duration = "2-4 Hours";
 
