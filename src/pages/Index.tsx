@@ -192,8 +192,6 @@ const localBusinessSchema = {
   ]
 };
 
-const WEB3FORMS_KEY = '0eb09446-78d7-4fb3-b831-e5ab4ce88a9b';
-
 const Index = () => {
   const [formData, setFormData] = useState({ name: '', phone: '', city: '', service: '' });
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
@@ -203,15 +201,13 @@ const Index = () => {
     setFormStatus('sending');
     try {
       const data = new FormData();
-      data.append('access_key', WEB3FORMS_KEY);
-      data.append('subject', `Homepage Quote Request — ${formData.service || 'Home Inspection'} in ${formData.city}`);
       data.append('name', formData.name);
       data.append('phone', formData.phone);
       data.append('city', formData.city);
       data.append('service', formData.service || 'Not specified');
-      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+      const res = await fetch('https://formspree.io/f/xjgaoeer', { method: 'POST', body: data, headers: { Accept: 'application/json' } });
       const json = await res.json();
-      setFormStatus(json.success ? 'sent' : 'error');
+      setFormStatus(json.ok ? 'sent' : 'error');
     } catch {
       setFormStatus('error');
     }
