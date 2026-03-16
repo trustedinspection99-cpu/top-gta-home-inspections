@@ -127,10 +127,12 @@ export function LocationPageTemplate({
   // Use slug from data directly (already has home-inspection- prefix), fallback to derived
   const locationSlug = slug ?? `home-inspection-${city.toLowerCase().replace(/\s+/g, "-")}`;
   const url = getCanonicalUrl(`/locations/${locationSlug}`);
-  const pageTitle = metaTitle || `${city} Home Inspection | Certified Home Inspector`;
-  const pageDescription =
+  const rawPageTitle = metaTitle || `Home Inspection ${city} | Certified Inspector | ASADS`;
+  const pageTitle = rawPageTitle.length > 60 ? rawPageTitle.slice(0, 57) + "..." : rawPageTitle;
+  const rawPageDescription =
     metaDescription ||
     `Professional home inspection services in ${city}. Certified inspectors, same-day reports, and comprehensive inspections. Call ${phoneNumber}.`;
+  const pageDescription = rawPageDescription.length > 160 ? rawPageDescription.slice(0, 157) + "..." : rawPageDescription;
 
   // LocalBusiness Schema
   const localBusinessSchema = useMemo(

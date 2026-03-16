@@ -88,16 +88,20 @@ const pages = [];
 
 staticPages.forEach(p => pages.push({ path: p.path, title: p.title, desc: p.desc }));
 servicePages.forEach(p => pages.push({ path: p.path, title: p.title, desc: p.desc }));
-locations.forEach(loc => pages.push({
-  path: `/locations/${loc.slug}`,
-  title: loc.title,
-  desc: loc.desc,
-}));
-blogs.forEach(b => pages.push({
-  path: `/blog/${b.slug}`,
-  title: b.title,
-  desc: b.desc,
-}));
+locations.forEach(loc => {
+  const rawTitle = loc.title;
+  const title = rawTitle.length > 60 ? rawTitle.slice(0, 57) + '...' : rawTitle;
+  const rawDesc = loc.desc;
+  const desc = rawDesc.length > 160 ? rawDesc.slice(0, 157) + '...' : rawDesc;
+  pages.push({ path: `/locations/${loc.slug}`, title, desc });
+});
+blogs.forEach(b => {
+  const rawTitle = b.title;
+  const title = rawTitle.length > 60 ? rawTitle.slice(0, 57) + '...' : rawTitle;
+  const rawDesc = b.desc;
+  const desc = rawDesc.length > 160 ? rawDesc.slice(0, 157) + '...' : rawDesc;
+  pages.push({ path: `/blog/${b.slug}`, title, desc });
+});
 
 // ─── Service × City cross-pages ───────────────────────────────────────────────
 
