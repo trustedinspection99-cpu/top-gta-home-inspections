@@ -601,11 +601,6 @@
       "permanent": true
     },
     {
-      "source": "/blog/thermal-imaging-inspection-benefits",
-      "destination": "/blog/thermal-imaging-benefits",
-      "permanent": true
-    },
-    {
       "source": "/home-inspection",
       "destination": "/services/pre-purchase",
       "permanent": true

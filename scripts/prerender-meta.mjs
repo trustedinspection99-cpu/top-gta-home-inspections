@@ -102,18 +102,25 @@ blogs.forEach(b => pages.push({
 // ─── Service × City cross-pages ───────────────────────────────────────────────
 
 // Extract service definitions from serviceCityData.ts
+// Anchors on metaTitleTemplate (only in top-level service defs, never in relatedServices)
+// then backtracks to find the slug that owns that template.
 function extractServiceDefs(content) {
   const results = [];
-  // Match each service block by slug, metaTitleTemplate, metaDescTemplate
-  const slugMatches   = [...content.matchAll(/slug:\s*"([^"]+)"/g)].map(m => m[1]);
-  const titleMatches  = [...content.matchAll(/metaTitleTemplate:\s*"([^"]+)"/g)].map(m => m[1]);
-  const descMatches   = [...content.matchAll(/metaDescTemplate:\s*"([^"]+)"/g)].map(m => m[1]);
-  for (let i = 0; i < slugMatches.length && i < titleMatches.length && i < descMatches.length; i++) {
-    results.push({
-      slug:  slugMatches[i],
-      title: titleMatches[i],
-      desc:  descMatches[i],
-    });
+  const titleRe = /metaTitleTemplate:\s*"([^"]+)"/g;
+  const descRe  = /metaDescTemplate:\s*"([^"]+)"/g;
+  const titleMatches = [...content.matchAll(titleRe)];
+  const descMatches  = [...content.matchAll(descRe)];
+  for (let i = 0; i < titleMatches.length; i++) {
+    // Find the slug: "..." that immediately precedes this metaTitleTemplate
+    const before = content.substring(0, titleMatches[i].index);
+    const slugMatch = before.match(/slug:\s*"([^"]+)"\s*,?[^{]*$/);
+    if (slugMatch && descMatches[i]) {
+      results.push({
+        slug:  slugMatch[1],
+        title: titleMatches[i][1],
+        desc:  descMatches[i][1],
+      });
+    }
   }
   return results;
 }
