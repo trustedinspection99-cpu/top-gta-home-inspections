@@ -105,6 +105,13 @@ const localBusinessSchema = {
     "Wellington North", "Minto", "Severn", "Tiny Township", "Tay Township",
     "Shelburne", "Mono", "Woodstock", "Ingersoll", "Tillsonburg", "Paris"
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "247",
+    bestRating: "5",
+    worstRating: "1"
+  },
   sameAs: [
     "https://www.facebook.com/share/1ZhWQk97YY/",
     "https://www.instagram.com/asads_home_inspection",

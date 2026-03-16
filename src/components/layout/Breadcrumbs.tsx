@@ -160,9 +160,6 @@ const formatLabel = (segment: string, isBlogPost: boolean): string => {
   return toTitleCase(segment);
 };
 
-// Pages that already have their own BreadcrumbList schema (to avoid duplication)
-const PAGES_WITH_OWN_SCHEMA = new Set(["/blog"]);
-
 const Breadcrumbs = () => {
   const location = useLocation();
   const pathSegments = location.pathname.split("/").filter(Boolean);
@@ -182,10 +179,13 @@ const Breadcrumbs = () => {
     return { path, label, isLast };
   });
 
-  // Check if this page already has its own breadcrumb schema
-  const hasOwnSchema = Array.from(PAGES_WITH_OWN_SCHEMA).some((prefix) =>
-    location.pathname.startsWith(prefix)
-  );
+  // Only generate schema for pages that don't have their own BreadcrumbList:
+  // - Location city pages: /locations/home-inspection-*
+  // - Cross-pages with 3 segments: /services/{svc}/{city}, /blog/{slug}/{city}
+  // All other pages (main pages, service landing pages, blog posts) have their own schemas.
+  const isLocationPage = location.pathname.startsWith("/locations/home-inspection-");
+  const isCrossPage = pathSegments.length >= 3;
+  const hasOwnSchema = !isLocationPage && !isCrossPage;
 
   // Generate BreadcrumbList JSON-LD schema
   const breadcrumbSchema = {
