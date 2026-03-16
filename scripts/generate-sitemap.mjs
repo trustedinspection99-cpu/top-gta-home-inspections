@@ -64,8 +64,7 @@ lines.push(url('/pricing', '0.8'));
 lines.push(url('/booking', '0.9'));
 lines.push(url('/contact', '0.8'));
 lines.push(url('/sitemap', '0.4'));
-lines.push(url('/privacy-policy', '0.3', 'yearly'));
-lines.push(url('/terms', '0.3', 'yearly'));
+// /privacy-policy and /terms are noindex — excluded from sitemap intentionally
 lines.push('');
 
 // Service pages

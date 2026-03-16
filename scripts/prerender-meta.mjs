@@ -182,7 +182,7 @@ const baseHtml = readFileSync(resolve(DIST, 'index.html'), 'utf8');
 if (!baseHtml.includes('<meta name="description"')) {
   const withDesc = baseHtml.replace(
     '<meta name="robots"',
-    '<meta name="description" content="ASADS certified home inspectors serving Toronto, GTA &amp; Ontario. Pre-purchase, thermal imaging, mold, asbestos &amp; radon testing. Same-day reports." />\n    <meta name="robots"'
+    '<meta data-rh="true" name="description" content="ASADS certified home inspectors serving Toronto, GTA &amp; Ontario. Pre-purchase, thermal imaging, mold, asbestos &amp; radon testing. Same-day reports." />\n    <meta name="robots"'
   );
   writeFileSync(resolve(DIST, 'index.html'), withDesc, 'utf8');
   console.log('✓ Injected default meta description into index.html');
@@ -210,11 +210,12 @@ for (const page of pages) {
     `<link rel="canonical" href="${canonical}" />`
   );
 
-  // Inject meta description (remove any existing one first, then add)
-  html = html.replace(/<meta name="description"[^>]*\/?>/, '');
+  // Inject meta description — use data-rh="true" so React-Helmet-Async
+  // recognises this as its own managed tag and replaces rather than duplicates it
+  html = html.replace(/<meta name="description"[^>]*\/?>/g, '');
   html = html.replace(
     '<meta name="robots"',
-    `<meta name="description" content="${safeDesc}" />\n    <meta name="robots"`
+    `<meta data-rh="true" name="description" content="${safeDesc}" />\n    <meta name="robots"`
   );
 
   // Write file
