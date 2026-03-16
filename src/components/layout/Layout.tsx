@@ -21,7 +21,7 @@ const websiteSchema = {
   description: "Professional home inspection services in the Greater Toronto Area",
   publisher: {
     "@type": "Organization",
-    "@id": `${SITE_URL}/#organization`
+    "@id": `${SITE_URL}/#localbusiness`
   },
   potentialAction: {
     "@type": "SearchAction",
@@ -107,10 +107,10 @@ const localBusinessSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "247",
-    bestRating: "5",
-    worstRating: "1"
+    ratingValue: 4.9,
+    reviewCount: 247,
+    bestRating: 5,
+    worstRating: 1
   },
   sameAs: [
     "https://www.facebook.com/share/1ZhWQk97YY/",

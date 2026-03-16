@@ -60,7 +60,7 @@ export default function ServiceCityPage() {
     },
     offers: {
       "@type": "Offer",
-      price: service.price.replace(/[^0-9]/g, ""),
+      price: parseInt(service.price.replace(/[^0-9]/g, ""), 10),
       priceCurrency: "CAD",
       description: service.price,
     },
