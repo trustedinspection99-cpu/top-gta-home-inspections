@@ -36,8 +36,10 @@ export default function ServiceCityPage() {
 
   const city = location.city;
   const canonical = getCanonicalUrl(`/services/${service.slug}/${citySlug}`);
-  const metaTitle = fill(service.metaTitleTemplate, city);
-  const metaDesc = fill(service.metaDescTemplate, city);
+  const rawTitle = fill(service.metaTitleTemplate, city);
+  const metaTitle = rawTitle.length > 60 ? rawTitle.slice(0, 57) + "..." : rawTitle;
+  const rawDesc = fill(service.metaDescTemplate, city);
+  const metaDesc = rawDesc.length > 160 ? rawDesc.slice(0, 157) + "..." : rawDesc;
   const heroTitle = fill(service.heroTitle, city);
   const whyItMatters = fill(service.whyItMatters, city);
 
@@ -255,6 +257,32 @@ export default function ServiceCityPage() {
               >
                 <ArrowRight size={14} className="text-blue-500 flex-shrink-0" />
                 {rel.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Also Serving — links to same service in top cities */}
+      <section className="py-10 px-4 bg-white border-t border-slate-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-base font-semibold text-slate-500 mb-4 uppercase tracking-wide">
+            {service.shortName} Across Ontario
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {[
+              ["Toronto","toronto"],["Mississauga","mississauga"],["Brampton","brampton"],
+              ["Vaughan","vaughan"],["Markham","markham"],["Richmond Hill","richmond-hill"],
+              ["Oakville","oakville"],["Burlington","burlington"],["Hamilton","hamilton"],
+              ["Kitchener","kitchener"],["Waterloo","waterloo"],["Guelph","guelph"],
+              ["Oshawa","oshawa"],["Barrie","barrie"],["Pickering","pickering"],
+            ].filter(([,c]) => c !== citySlug).map(([name, slug]) => (
+              <Link
+                key={slug}
+                to={`/services/${service.slug}/${slug}`}
+                className="text-xs px-3 py-1.5 rounded-full border border-slate-200 text-slate-600 hover:border-blue-400 hover:text-blue-600 transition-colors"
+              >
+                {name}
               </Link>
             ))}
           </div>

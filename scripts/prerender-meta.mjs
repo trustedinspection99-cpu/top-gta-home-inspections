@@ -147,8 +147,10 @@ const locationSlugs = extractLocationSlugs(locationRaw);
 serviceDefs.forEach(svc => {
   locationSlugs.forEach(loc => {
     const city = loc.city;
-    const title = svc.title.replace(/\{city\}/g, city);
-    const desc  = svc.desc.replace(/\{city\}/g, city);
+    const rawTitle = svc.title.replace(/\{city\}/g, city);
+    const title = rawTitle.length > 60 ? rawTitle.slice(0, 57) + '...' : rawTitle;
+    const rawDesc = svc.desc.replace(/\{city\}/g, city);
+    const desc  = rawDesc.length > 160 ? rawDesc.slice(0, 157) + '...' : rawDesc;
     pages.push({
       path: `/services/${svc.slug}/${loc.citySlug}`,
       title,

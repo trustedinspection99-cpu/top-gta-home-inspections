@@ -344,6 +344,30 @@ export default function BlogPost() {
         </div>
       </section>
 
+      {/* Reading this guide for your city */}
+      <section className="py-8 bg-muted/30 border-t border-border/50">
+        <div className="container">
+          <p className="text-sm text-muted-foreground mb-3 font-medium">Reading this guide for your city?</p>
+          <div className="flex flex-wrap gap-2">
+            {[
+              ["Toronto","toronto"],["Mississauga","mississauga"],["Brampton","brampton"],
+              ["Vaughan","vaughan"],["Markham","markham"],["Richmond Hill","richmond-hill"],
+              ["Oakville","oakville"],["Burlington","burlington"],["Hamilton","hamilton"],
+              ["Kitchener","kitchener"],["Waterloo","waterloo"],["Guelph","guelph"],
+              ["Oshawa","oshawa"],["Barrie","barrie"],["Pickering","pickering"],
+            ].map(([name, citySlug]) => (
+              <Link
+                key={citySlug}
+                to={`/blog/${slug}/${citySlug}`}
+                className="text-xs px-3 py-1.5 rounded-full border border-border text-muted-foreground hover:border-primary/50 hover:text-primary transition-colors"
+              >
+                {name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container">
