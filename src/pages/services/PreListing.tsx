@@ -148,7 +148,7 @@ export default function PreListing() {
     "geo": { "@type": "GeoCoordinates", "latitude": 43.3990, "longitude": -80.3271 },
     "areaServed": featuredLocations.map(loc => ({ "@type": "City", "name": loc.name })),
     "priceRange": "$$",
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "158" }
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 158 }
   };
 
   const serviceSchema = {
@@ -209,7 +209,7 @@ export default function PreListing() {
     "priceRange": price,
     "telephone": "+16478019311",
     "url": serviceUrl,
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "158" }
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 158 }
   };
 
   return (

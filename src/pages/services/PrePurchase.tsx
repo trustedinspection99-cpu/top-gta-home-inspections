@@ -160,8 +160,8 @@
      "priceRange": "$$",
      "aggregateRating": {
        "@type": "AggregateRating",
-       "ratingValue": "4.9",
-       "reviewCount": "247"
+       "ratingValue": 4.9,
+       "reviewCount": 247
      }
    };
  
@@ -343,10 +343,10 @@
      "openingHours": "Mo-Su 07:00-22:00",
      "aggregateRating": {
        "@type": "AggregateRating",
-       "ratingValue": "4.9",
+       "ratingValue": 4.9,
        "bestRating": "5",
        "worstRating": "1",
-       "ratingCount": "247"
+       "reviewCount": 247
      },
      "review": [
        {
@@ -359,7 +359,7 @@
          "reviewBody": "Extremely thorough inspection saved us from buying a home with major foundation issues. The inspector spent over 3 hours examining every detail and provided a comprehensive report same day.",
          "reviewRating": {
            "@type": "Rating",
-           "ratingValue": "5",
+           "ratingValue": 5,
            "bestRating": "5"
          }
        },
@@ -373,7 +373,7 @@
          "reviewBody": "Professional service from start to finish. The inspector was patient with all my questions and explained everything in terms I could understand. Report was detailed with clear photos.",
          "reviewRating": {
            "@type": "Rating",
-           "ratingValue": "5",
+           "ratingValue": 5,
            "bestRating": "5"
          }
        }

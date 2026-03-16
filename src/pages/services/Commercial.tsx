@@ -32,23 +32,27 @@ import {
 
 // Featured locations for service pages internal linking
 const featuredLocations = [
-  { name: "Toronto", slug: "home-inspection-toronto" },
-  { name: "Mississauga", slug: "home-inspection-mississauga" },
-  { name: "Brampton", slug: "home-inspection-brampton" },
-  { name: "Vaughan", slug: "home-inspection-vaughan" },
-  { name: "Markham", slug: "home-inspection-markham" },
-  { name: "Oakville", slug: "home-inspection-oakville" },
-  { name: "Hamilton", slug: "home-inspection-hamilton" },
-  { name: "Burlington", slug: "home-inspection-burlington" },
-  { name: "Richmond Hill", slug: "home-inspection-richmond-hill" },
-  { name: "Oshawa", slug: "home-inspection-oshawa" },
-  { name: "Barrie", slug: "home-inspection-barrie" },
-  { name: "Newmarket", slug: "home-inspection-newmarket" },
+  { name: "Toronto", citySlug: "toronto" },
+  { name: "Mississauga", citySlug: "mississauga" },
+  { name: "Brampton", citySlug: "brampton" },
+  { name: "Cambridge", citySlug: "cambridge" },
+  { name: "Guelph", citySlug: "guelph" },
+  { name: "Kitchener", citySlug: "kitchener" },
+  { name: "Waterloo", citySlug: "waterloo" },
+  { name: "Hamilton", citySlug: "hamilton" },
+  { name: "Vaughan", citySlug: "vaughan" },
+  { name: "Markham", citySlug: "markham" },
+  { name: "Oakville", citySlug: "oakville" },
+  { name: "Burlington", citySlug: "burlington" },
+  { name: "Richmond Hill", citySlug: "richmond-hill" },
+  { name: "Oshawa", citySlug: "oshawa" },
+  { name: "Barrie", citySlug: "barrie" },
+  { name: "Newmarket", citySlug: "newmarket" },
 ];
 
 const title = "Commercial Building Inspection";
-const metaTitle = "Commercial Property Inspection Toronto | PCA | ASADS";
-const metaDescription = "Commercial property inspection & PCA in Toronto & GTA. ASTM E2018-15 compliant. Offices, retail & industrial. CapEx forecasting, MEP audits & Phase 1 ESA.";
+const metaTitle = "Commercial Inspection Ontario | Certified PCA | ASADS";
+const metaDescription = "Commercial inspection across Ontario: Cambridge, Guelph, Kitchener, Toronto & GTA. ASTM E2018-15. Retail, office & industrial. CapEx report. Call (647) 801-9311.";
 const price = "Quote Based";
 const duration = "Expedited Reporting Available";
 
@@ -174,8 +178,8 @@ export default function Commercial() {
     "priceRange": "$$$",
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "247"
+      "ratingValue": 4.9,
+      "reviewCount": 247
     }
   };
 
@@ -364,10 +368,10 @@ export default function Commercial() {
     "openingHours": "Mo-Su 07:00-22:00",
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "bestRating": "5",
-      "worstRating": "1",
-      "ratingCount": "247"
+      "ratingValue": 4.9,
+      "bestRating": 5,
+      "worstRating": 1,
+      "reviewCount": 247
     },
     "review": [
       {
@@ -380,8 +384,8 @@ export default function Commercial() {
         "reviewBody": "Exceptional commercial PCA service. The detailed capital expenditure forecast saved us from overpaying on a retail plaza. The thermal imaging identified hidden electrical issues that would have cost thousands to repair.",
         "reviewRating": {
           "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
+          "ratingValue": 5,
+          "bestRating": 5
         }
       },
       {
@@ -394,8 +398,8 @@ export default function Commercial() {
         "reviewBody": "Professional commercial inspection team that understands investor needs. Their combined PCA and Phase 1 ESA report was comprehensive and helped secure financing. The 20-year CapEx forecast is invaluable for portfolio planning.",
         "reviewRating": {
           "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
+          "ratingValue": 5,
+          "bestRating": 5
         }
       }
     ],
@@ -766,8 +770,8 @@ export default function Commercial() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {featuredLocations.map((loc) => (
               <Link
-                key={loc.slug}
-                to={`/locations/${loc.slug}`}
+                key={loc.citySlug}
+                to={`/services/commercial/${loc.citySlug}`}
                 className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
               >
                 <MapPin className="h-4 w-4 text-primary flex-shrink-0" aria-hidden="true" />

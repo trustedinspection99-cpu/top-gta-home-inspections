@@ -59,7 +59,7 @@ export default function Testimonials() {
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.9",
+      "ratingValue": 4.9,
       "reviewCount": testimonialsData.length.toString(),
       "bestRating": "5",
       "worstRating": "1"

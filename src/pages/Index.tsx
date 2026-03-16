@@ -176,8 +176,8 @@ const localBusinessSchema = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "1500",
+    "ratingValue": 4.9,
+    "reviewCount": 1500,
     "bestRating": "5"
   },
   "openingHoursSpecification": {

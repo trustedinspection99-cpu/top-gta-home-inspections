@@ -198,10 +198,10 @@ export const serviceDefinitions: ServiceDef[] = [
     shortName: "Commercial Inspection",
     price: "From $699",
     duration: "3–6 Hours",
-    metaTitleTemplate: "Commercial Building Inspection {city} | Certified | ASADS",
+    metaTitleTemplate: "Commercial Inspection {city} | Certified Inspector | ASADS",
     metaDescTemplate:
-      "Commercial property inspection in {city}. Retail, office, industrial & multi-unit assessments by certified inspectors. Same-day report. Call (647) 801-9311.",
-    heroTitle: "Commercial Building Inspection in {city}",
+      "Commercial inspection in {city} for retail, office, industrial & multi-unit buildings. Certified inspector, CapEx report, same-day availability. Call (647) 801-9311.",
+    heroTitle: "Commercial Inspection in {city}",
     whatWeCheck: [
       "Roof system & drainage",
       "Foundation & structural components",
@@ -213,20 +213,24 @@ export const serviceDefinitions: ServiceDef[] = [
       "Exterior cladding & windows",
       "ADA/AODA accessibility compliance observations",
       "Environmental concerns — visible mold & asbestos",
+      "Life safety systems & emergency egress",
+      "Capital expenditure forecasting (20-year)",
     ],
     whyItMatters:
-      "Commercial properties in {city} carry significant due diligence requirements. Our commercial inspectors understand rooftop HVAC units, three-phase electrical, commercial plumbing, and the unique systems in retail, office, and industrial buildings. Protect your investment before you sign.",
+      "Commercial inspection in {city} requires deep knowledge of rooftop HVAC units, three-phase electrical systems, commercial plumbing, and fire suppression — none of which appear in a standard home inspection. Buyers and investors in {city} need a certified commercial inspector who understands retail plazas, industrial warehouses, and multi-unit residential buildings, each with distinct risk profiles. Our commercial inspection reports include capital expenditure forecasting, immediate repair priorities, and compliance observations so you can negotiate with confidence and plan your budget accurately.",
     processSteps: [
-      { title: "Scope the Property", body: "Share building size, age, and use type so we can allocate the right inspection time." },
-      { title: "Full Commercial Assessment", body: "Certified inspector reviews all accessible systems inside and out." },
-      { title: "Detailed Report", body: "Comprehensive findings with photos, priority ratings, and repair cost context." },
-      { title: "Due Diligence Support", body: "Report supports your purchase negotiation, financing, and insurance requirements." },
+      { title: "Scope the Property", body: "Share building size, age, and use type so we can allocate the right inspection time and resources." },
+      { title: "Full Commercial Assessment", body: "Certified inspector reviews all accessible structural, mechanical, electrical, and life safety systems inside and out." },
+      { title: "Detailed Report with CapEx", body: "Comprehensive findings with photos, priority ratings, and 20-year capital expenditure forecasting." },
+      { title: "Due Diligence Support", body: "Report supports your purchase negotiation, financing approval, and insurance requirements." },
     ],
     faqs: [
-      { q: "Do you inspect multi-unit residential buildings in {city}?", a: "Yes — we inspect duplexes, triplexes, and larger multi-unit residential properties in {city}." },
+      { q: "What does a commercial inspection in {city} include?", a: "Our commercial inspection in {city} covers structural components, roof, HVAC, electrical, plumbing, fire safety, parking, accessibility, and environmental concerns. You receive a detailed written report with photos and capital expenditure forecasts." },
+      { q: "Do you inspect multi-unit residential buildings in {city}?", a: "Yes — we inspect duplexes, triplexes, and larger multi-unit residential properties in {city}, including common areas, mechanical rooms, and shared systems." },
       { q: "What types of commercial properties do you inspect?", a: "Retail plazas, office buildings, industrial/warehouse units, mixed-use buildings, and multi-residential properties across {city} and Ontario." },
-      { q: "How long does a commercial inspection take?", a: "3–6 hours depending on size and complexity. Larger properties may require a second visit." },
-      { q: "Do you provide environmental assessments?", a: "Our inspectors note visible environmental concerns (mold, asbestos indicators). Phase I/II ESA services can be arranged through our partner network." },
+      { q: "How long does a commercial inspection take?", a: "Most commercial inspections in {city} take 3–6 hours depending on building size and complexity. Larger properties may require a second visit or additional inspectors." },
+      { q: "Do you provide environmental assessments with commercial inspections?", a: "Our inspectors note all visible environmental concerns including mold indicators and suspected asbestos-containing materials. Full Phase I/II ESA and asbestos testing can be arranged as add-ons." },
+      { q: "How much does a commercial inspection cost in {city}?", a: "Commercial inspection pricing in {city} starts from $699 and varies based on property size, type, and scope. Contact us for a custom quote — we typically respond within a few hours." },
     ],
     relatedServices: [
       { name: "Asbestos Testing", slug: "asbestos-testing" },
@@ -327,9 +331,9 @@ export const serviceDefinitions: ServiceDef[] = [
     shortName: "Asbestos Testing",
     price: "From $299",
     duration: "1–2 Hours + Lab Analysis",
-    metaTitleTemplate: "Asbestos Testing {city} | Accredited Lab | ASADS",
+    metaTitleTemplate: "Asbestos Testing {city} | O.Reg 278/05 | ASADS",
     metaDescTemplate:
-      "Accredited asbestos testing in {city}. Bulk sampling, O.Reg 278/05 compliance, lab-certified results. Residential & commercial. Call (647) 801-9311.",
+      "Certified asbestos testing in {city} from $299. Bulk sampling, accredited lab, O.Reg 278/05 report. Pre-1990 homes & commercial. Call (647) 801-9311.",
     heroTitle: "Asbestos Testing in {city}",
     whatWeCheck: [
       "Textured ceiling materials (stipple/popcorn)",
@@ -344,7 +348,7 @@ export const serviceDefinitions: ServiceDef[] = [
       "Window glazing compound",
     ],
     whyItMatters:
-      "Asbestos-containing materials (ACM) are found in the majority of Ontario homes built before 1990. In {city}, pre-war and post-war homes frequently contain multiple ACM types. Disturbing these materials during renovation without proper testing and O.Reg 278/05 compliance exposes workers and occupants to serious health risk.",
+      "Asbestos-containing materials (ACM) are found in the majority of Ontario homes built before 1990. In {city}, pre-war bungalows and post-war split-levels frequently contain multiple ACM types including stipple ceilings, vinyl floor tiles, pipe wrap insulation, and drywall compound. Disturbing any of these materials during renovation without prior asbestos testing and O.Reg 278/05 compliance exposes workers and occupants to serious long-term health risk and significant legal liability. Our accredited asbestos testing service in {city} provides the written documentation you need to renovate safely, satisfy your insurer, and meet Ontario's regulatory requirements.",
     processSteps: [
       { title: "Identify Suspect Materials", body: "Inspector visually identifies materials likely to contain asbestos based on construction era and type." },
       { title: "Bulk Sampling", body: "Small samples are carefully collected using proper containment procedures to prevent fibre release." },
@@ -352,10 +356,12 @@ export const serviceDefinitions: ServiceDef[] = [
       { title: "Written Report & Compliance", body: "Report documents ACM presence, fibre type, percentage, and O.Reg 278/05 compliance requirements." },
     ],
     faqs: [
-      { q: "Does my {city} home have asbestos?", a: "If your home was built before 1990, it very likely contains some asbestos-containing materials. Homes built before 1980 frequently contain multiple types." },
-      { q: "Is asbestos dangerous?", a: "Asbestos is only dangerous when disturbed and fibres become airborne. Intact materials in good condition are generally safe. Testing before renovation is essential." },
-      { q: "What is O.Reg 278/05?", a: "Ontario Regulation 278/05 governs asbestos work on construction sites. It requires testing, worker training, and specific procedures before disturbing ACM. Non-compliance results in heavy fines." },
-      { q: "How much does asbestos testing cost in {city}?", a: "Asbestos testing in {city} starts from $299 including sampling and lab analysis. Additional samples may be required for larger properties or multiple material types." },
+      { q: "Does my {city} home have asbestos?", a: "If your {city} home was built before 1990, it very likely contains some asbestos-containing materials. Homes built before 1980 frequently contain multiple ACM types across ceilings, floors, insulation, and drywall." },
+      { q: "Is asbestos dangerous in a {city} home?", a: "Asbestos is only dangerous when disturbed and fibres become airborne. Intact, undamaged materials are generally safe to leave in place. Testing before any renovation in {city} is essential to know what you're dealing with." },
+      { q: "What is O.Reg 278/05 and does it apply in {city}?", a: "Ontario Regulation 278/05 governs all asbestos work on Ontario construction sites including {city}. It requires testing before disturbance, worker training, and specific abatement procedures. Non-compliance results in significant fines and stop-work orders." },
+      { q: "How much does asbestos testing cost in {city}?", a: "Asbestos testing in {city} starts from $299 including on-site sampling and accredited lab analysis. Additional samples may be required for larger properties or multiple suspect materials. Contact us for a quote." },
+      { q: "How long does asbestos testing take in {city}?", a: "The on-site sampling in {city} takes 1–2 hours. Lab results are returned within 3–5 business days. Rush 24-hour lab processing is available for time-sensitive transactions." },
+      { q: "Do I need asbestos testing before renovating in {city}?", a: "Yes — Ontario law requires asbestos testing before any renovation work that could disturb suspect materials in {city}. This applies to both residential and commercial properties and protects both workers and occupants." },
     ],
     relatedServices: [
       { name: "Mold Inspection", slug: "mold-inspection" },
