@@ -39,8 +39,8 @@ const featuredLocations = [
 ];
 
 const title = "New Construction & Tarion Warranty Inspection";
-const metaTitle = "PDI Inspection Toronto | New Construction | Tarion | ASADS";
-const metaDescription = "Certified PDI inspection & new construction inspection in Toronto & GTA. Covers Pre-Delivery, 30-Day, and 1-Year Tarion Warranty deadlines. From $449.";
+const metaTitle = "PDI Inspection Ontario | New Construction & Tarion | ASADS";
+const metaDescription = "Certified PDI & new construction inspection across Ontario. Pre-Delivery, 30-Day & 1-Year Tarion deadlines. Same-day report. From $449. (647) 801-9311.";
 const price = "Contact for Quote";
 const duration = "3-5 Hours";
 
@@ -191,9 +191,9 @@ export default function NewConstruction() {
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-12">
               <div className="prose prose-lg max-w-none">
-                <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">Independent Audit for New GTA Homes</h2>
+                <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">Independent Audit for New Ontario Homes</h2>
                 <div className="text-muted-foreground space-y-4">
-                  <p>In the rush to meet closing deadlines, builders often overlook critical details. Our **New Construction Audit** acts as your independent quality control, ensuring your new GTA home meets professional standards—not just the bare minimum code.</p>
+                  <p>In the rush to meet closing deadlines, builders often overlook critical details. Our **New Construction Audit** acts as your independent quality control, ensuring your new Ontario home meets professional standards—not just the bare minimum code.</p>
                   
                   
 
@@ -247,7 +247,7 @@ export default function NewConstruction() {
 
               {/* Common Defects Grid */}
               <div className="space-y-4">
-                <h3 className="font-heading text-xl font-bold text-foreground">Common Defects Found in GTA New Construction</h3>
+                <h3 className="font-heading text-xl font-bold text-foreground">Common Defects Found in Ontario New Construction</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
                     {
@@ -365,7 +365,7 @@ export default function NewConstruction() {
         <div className="container">
           <div className="text-center mb-8">
             <h2 className="font-heading text-2xl font-bold text-foreground mb-2">New Construction Inspections Across Ontario</h2>
-            <p className="text-muted-foreground">Serving new subdivisions and condos across the GTA and beyond.</p>
+            <p className="text-muted-foreground">Serving new subdivisions and condos across Ontario and the GTA.</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {featuredLocations.map((loc) => (

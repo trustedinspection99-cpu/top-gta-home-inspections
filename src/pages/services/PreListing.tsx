@@ -44,7 +44,7 @@ const featuredLocations = [
 
 const title = "Pre-Listing Home Inspection";
 const metaTitle = "Pre-Listing Home Inspection Ontario | From $450 | ASADS";
-const metaDescription = "Certified pre-listing home inspection across Ontario from $450. Find defects before buyers do — firm offers, faster closing & same-day digital report. Call (647) 801-9311.";
+const metaDescription = "Certified pre-listing inspection Ontario from $450. Find defects before buyers do — firm offers, faster closing & same-day digital report. (647) 801-9311.";
 const price = "$450-$750";
 const duration = "2-4 Hours";
 
@@ -156,7 +156,7 @@ export default function PreListing() {
     "@type": "Service",
     "serviceType": "Pre-Listing Home Inspection",
     "provider": { "@type": "LocalBusiness", "name": "ASADS Home Inspection" },
-    "description": "Comprehensive seller-side technical audits in the GTA to maximize resale value, provide SPIS data, and ensure smooth real estate transactions.",
+    "description": "Comprehensive seller-side technical audits across Ontario to maximize resale value, provide SPIS data, and ensure smooth real estate transactions.",
     "offers": { "@type": "Offer", "priceCurrency": "CAD", "priceRange": price }
   };
 
@@ -264,7 +264,7 @@ export default function PreListing() {
               <div className="prose prose-lg max-w-none">
                 <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">Strategic Value of Pre-Listing Audits</h2>
                 <div className="text-muted-foreground space-y-4">
-                  <p>In the competitive Greater Toronto Area real estate market, a <strong>Pre-Listing Home Inspection</strong> is the ultimate offensive tool. By commissioning a technical audit before your property hits the MLS, you eliminate the "fear of the unknown" that often derails deals during the buyer's conditional period.</p>
+                  <p>In Ontario's competitive real estate market, a <strong>Pre-Listing Home Inspection</strong> is the ultimate offensive tool. By commissioning a technical audit before your property hits the MLS, you eliminate the "fear of the unknown" that often derails deals during the buyer's conditional period.</p>
                   
                   <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-4">Foundation & Structural Integrity</h3>
                   <img src="/images/1000041112.jpg" alt="Foundation Inspection" className="rounded-xl shadow-lg my-6 border border-slate-200" />
@@ -280,7 +280,7 @@ export default function PreListing() {
 
                   <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-4">The Attic, Roof & Envelope</h3>
                   <img src="/images/1000041109.jpg" alt="Attic Inspection" className="rounded-xl shadow-lg my-6 border border-slate-200" />
-                  <p>We evaluate your roof's remaining service life, identifying damaged flashing and inadequate <strong>attic ventilation</strong> that leads to ice damming and mold growth. Ensuring your building envelope is sound allows you to market your home as "maintenance-free," a high-value selling point in the Toronto market.</p>
+                  <p>We evaluate your roof's remaining service life, identifying damaged flashing and inadequate <strong>attic ventilation</strong> that leads to ice damming and mold growth. Ensuring your building envelope is sound allows you to market your home as "maintenance-free," a high-value selling point in the Ontario market.</p>
                 </div>
               </div>
 
@@ -352,7 +352,7 @@ export default function PreListing() {
       <section className="py-12 bg-muted/30">
         <div className="container">
           <div className="text-center mb-8">
-            <h2 className="font-heading text-2xl font-bold text-foreground mb-2">Seller Audits Available GTA-Wide</h2>
+            <h2 className="font-heading text-2xl font-bold text-foreground mb-2">Seller Audits Available Ontario-Wide</h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {featuredLocations.map((loc) => (

@@ -35,10 +35,10 @@ const featuredLocations = [
 ];
 
 const metaTitle =
-  "Condo Inspection Toronto | From $299 | Certified | ASADS";
+  "Condo Inspection Ontario | From $299 | Certified | ASADS";
 
 const metaDescription =
-  "Certified condo inspection in Toronto & GTA from $299. Kitec plumbing, fan coil, moisture & electrical — full in-suite assessment. Same-day report. Call (647) 801-9311.";
+  "Certified condo inspection Ontario from $299. Kitec plumbing, fan coil, moisture & electrical — full in-suite assessment. Same-day report. (647) 801-9311.";
 
 const duration = "1.5 – 2.5 Hours";
 
@@ -121,7 +121,7 @@ export default function CondoInspection() {
         "@type": "LocalBusiness",
         "name": "ASADS Home Inspection"
       },
-      "areaServed": "Toronto & Greater Toronto Area",
+      "areaServed": "Ontario, Canada",
       "description": metaDescription,
       "offers": {
         "@type": "Offer",
@@ -202,8 +202,8 @@ export default function CondoInspection() {
       </Helmet>
 
             <HeroBookingSection
-        badge="ASADS Condo Inspection · Toronto & GTA Specialists"
-        title="Condo Inspection & Townhouse Inspection Toronto"
+        badge="ASADS Condo Inspection · Ontario Specialists"
+        title="Condo Inspection & Townhouse Inspection Ontario"
         subtitle="Condo ownership comes with hidden in-suite liabilities. Our certified condo inspection identifies Kitec plumbing, fan coil failures, moisture intrusion, and safety issues before they become expensive surprises."
         priceCards={[
           { label: "Condo Inspection", price: "From $299" },
@@ -307,10 +307,10 @@ export default function CondoInspection() {
               {/* Service Areas */}
               <div>
                 <h2 className="font-heading text-3xl mb-6">
-                  Condo & Townhome Inspections Across Toronto & the GTA
+                  Condo & Townhome Inspections Across Ontario
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  ASADS provides condo and townhome inspections throughout Toronto and the Greater Toronto Area.
+                  ASADS provides condo and townhome inspections throughout Ontario — Toronto, GTA, Waterloo Region, Hamilton, Barrie and beyond.
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                   {featuredLocations.map((loc) => (
