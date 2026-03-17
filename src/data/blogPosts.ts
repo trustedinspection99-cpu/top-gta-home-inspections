@@ -1655,8 +1655,8 @@ export const blogPostsData: BlogPost[] = [
   {
     id: 26,
     slug: "home-inspection-cost-ontario",
-    title: "How Much Does a Home Inspection Cost in Ontario? (2025 Complete Guide)",
-    metaTitle: "Home Inspection Cost Ontario 2025 | What Affects Price | ASADS",
+    title: "How Much Does a Home Inspection Cost in Ontario? (2026 Complete Guide)",
+    metaTitle: "Ontario Home Inspection Cost 2026 | Pricing Guide | ASADS",
     metaDescription: "Home inspections in Ontario cost $400–$800+ depending on property size, age, and services included. Learn what affects pricing and what to look for.",
     excerpt: "Home inspections in Ontario range from $400 to $800+ depending on property type and what's included. Here's a complete breakdown of inspection pricing across the GTA.",
     category: "Buying Tips",
