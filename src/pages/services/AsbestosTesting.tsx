@@ -2,8 +2,8 @@ import { AlertTriangle, Microscope, ShieldCheck, Factory, HardHat, ClipboardList
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function AsbestosTesting() {
-  const pageTitle = "Asbestos Testing Ontario | O.Reg 278/05 Certified | ASADS";
-  const schemaDescription = "Asbestos testing Ontario from $299. O.Reg 278/05 compliant, bulk sampling & accredited lab for pre-1990 homes. WSIB certified inspectors. Same-day service.";
+  const pageTitle = "Asbestos Testing Toronto & Ontario | From $299 | ASADS";
+  const schemaDescription = "Certified asbestos testing in Toronto & Ontario from $299. O.Reg 278/05 compliant, bulk sampling & accredited lab. Pre-renovation & demolition. Call (647) 801-9311.";
 
   return (
     <ServicePageTemplate

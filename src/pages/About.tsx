@@ -147,20 +147,20 @@ export default function About() {
   return (
     <Layout>
       <Helmet>
-        <title>Expert Home Inspectors in Ontario | ASADS Certified</title>
-        <meta name="description" content="ASADS — Ontario's trusted home inspector since 2009. OAHI & InterNACHI certified. 2,000+ inspections completed. Book online or call (647) 801-9311." />
+        <title>Home Inspector Ontario | OAHI &amp; InterNACHI Certified | ASADS</title>
+        <meta name="description" content="Certified home inspector in Ontario — ASADS. OAHI & InterNACHI certified, 2,000+ inspections across 106 cities. Same-day digital reports. Call (647) 801-9311." />
         <link rel="canonical" href="https://www.asads.ca/about" />
         <meta property="og:site_name" content="ASADS Home Inspection" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Expert Home Inspectors in Ontario | ASADS Certified" />
-        <meta property="og:description" content="Trusted Ontario home inspectors since 2009. Learn about our rigorous standards, honest reporting, and commitment to your home safety." />
+        <meta property="og:title" content="Home Inspector Ontario | OAHI &amp; InterNACHI Certified | ASADS" />
+        <meta property="og:description" content="Certified home inspector in Ontario — ASADS. OAHI & InterNACHI certified, 2,000+ inspections across 106 cities. Same-day digital reports." />
         <meta property="og:url" content="https://www.asads.ca/about" />
         <meta property="og:image" content="https://www.asads.ca/images/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Expert Home Inspectors in Ontario | ASADS Certified" />
-        <meta name="twitter:description" content="Trusted Ontario home inspectors since 2009. Learn about our rigorous standards, honest reporting, and commitment to your home safety." />
+        <meta name="twitter:title" content="Home Inspector Ontario | OAHI &amp; InterNACHI Certified | ASADS" />
+        <meta name="twitter:description" content="Certified home inspector in Ontario — ASADS. OAHI & InterNACHI certified, 2,000+ inspections across 106 cities. Same-day digital reports." />
         <meta name="twitter:image" content="https://www.asads.ca/images/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
@@ -169,8 +169,8 @@ export default function About() {
 
       <HeroBookingSection
         badge="OAHI & InterNACHI Certified · Since 2009 · 2,000+ Inspections"
-        title="Expert Home Inspectors in Ontario"
-        subtitle="Since 2009, ASADS has been the GTA's trusted partner for comprehensive home inspections. Our mission is simple: protect your investment and give you peace of mind."
+        title="Certified Home Inspector in Ontario"
+        subtitle="Looking for a certified home inspector in Ontario? ASADS has served buyers, sellers, and investors across 106 cities since 2009. OAHI & InterNACHI certified, same-day reports."
         priceCards={[
           { label: "Experience", price: "15+ Years" },
           { label: "Inspections", price: "2,000+" },
@@ -368,6 +368,56 @@ export default function About() {
               <Link to="/testimonials" className="text-primary hover:underline">Customer Reviews</Link>
               <span className="text-border">•</span>
               <Link to="/faq"          className="text-primary hover:underline">FAQ</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Home Inspector Ontario — SEO Section */}
+      <section className="py-16 md:py-20 bg-background border-t border-border/50">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
+              What Makes a Certified Home Inspector in Ontario?
+            </h2>
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
+              <p>
+                Hiring a certified home inspector in Ontario is one of the most important steps in any real estate transaction. Under Ontario's <strong>Home Inspection Act, 2017</strong>, home inspectors must be licensed through <strong>TICO-regulated associations</strong> such as the <strong>Ontario Association of Home Inspectors (OAHI)</strong> and follow a strict Code of Ethics. ASADS inspectors hold active OAHI and <strong>InterNACHI</strong> certifications — the two most recognized credentials for home inspectors in Ontario.
+              </p>
+              <p>
+                A qualified <strong>home inspector Ontario</strong> property buyers rely on should cover all major systems: <strong>roof</strong>, <strong>foundation</strong>, <strong>HVAC</strong>, <strong>electrical</strong>, <strong>plumbing</strong>, <strong>attic</strong>, <strong>basement</strong>, and <strong>exterior envelope</strong>. At ASADS, our 400-point checklist ensures nothing is overlooked. Every inspection comes with a <strong>same-day digital report</strong> — photo-rich, easy to read, and actionable.
+              </p>
+              <p>
+                Ontario's diverse housing stock — from <strong>Toronto</strong> Victorian rowhouses and <strong>Mississauga</strong> condos to <strong>Barrie</strong> new builds and <strong>Hamilton</strong> century homes — means your home inspector needs localized knowledge. Our inspectors have completed thousands of assessments across the province and understand the specific failure patterns in each region's housing stock.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4 my-6 not-prose">
+                {[
+                  { title: "Licensed & Certified", body: "OAHI member + InterNACHI certified. Fully compliant with Ontario's Home Inspection Act, 2017." },
+                  { title: "400-Point Checklist", body: "Every major system and structure assessed — structural, MEP, envelope, and environmental." },
+                  { title: "Same-Day Reports", body: "Photo-rich digital reports delivered the same day as the inspection, every time." },
+                  { title: "106 Cities Served", body: "From Toronto and the GTA to Kitchener, Hamilton, Barrie, and all of Southern Ontario." },
+                ].map(item => (
+                  <div key={item.title} className="p-5 rounded-xl border border-border bg-muted/30">
+                    <div className="flex items-center gap-2 mb-2">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                      <h3 className="font-bold text-foreground text-base">{item.title}</h3>
+                    </div>
+                    <p className="text-sm text-muted-foreground">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+              <p>
+                When searching for a <strong>home inspector in Ontario</strong>, look for clear reporting standards, liability insurance (E&O + $2M general liability), and availability for same-day or next-day bookings. ASADS checks every box — and our <strong>4.9-star average</strong> across hundreds of verified reviews reflects the standard we hold ourselves to.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4 mt-8">
+              <Link to="/services/pre-purchase" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+                <ArrowRight className="h-4 w-4" />
+                View All Services
+              </Link>
+              <Link to="/locations" className="inline-flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-lg font-semibold hover:bg-primary/5 transition-colors">
+                Our Service Areas
+              </Link>
             </div>
           </div>
         </div>
