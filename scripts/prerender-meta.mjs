@@ -77,8 +77,8 @@ const staticPages = [
   { path: '/contact',       title: 'Contact ASADS Home Inspection | (647) 801-9311',                     desc: 'Contact ASADS Home Inspection for questions or to book your inspection. Call (647) 801-9311, email info@asads.ca, or use our online form.' },
   { path: '/faq',           title: 'Home Inspection FAQ Ontario | Common Questions | ASADS',             desc: 'Answers to the most common home inspection questions from Ontario buyers and sellers. What\'s included, how long it takes, and what to do with the report.' },
   { path: '/testimonials',  title: 'Home Inspection Reviews | ASADS Client Testimonials',                desc: 'Read reviews from ASADS home inspection clients across Toronto, GTA & Ontario. Verified testimonials from buyers and sellers we\'ve helped.' },
-  { path: '/privacy-policy',title: 'Privacy Policy | ASADS Home Inspection',                            desc: 'ASADS Home Inspection privacy policy. Learn how we collect, use, and protect your personal information.' },
-  { path: '/terms',         title: 'Terms of Service | ASADS Home Inspection',                          desc: 'ASADS Home Inspection terms of service and conditions for booking and using our inspection services.' },
+  { path: '/privacy-policy',title: 'Privacy Policy | ASADS Home Inspection',                            desc: 'ASADS Home Inspection privacy policy. Learn how we collect, use, store, and protect your personal information when booking an inspection.' },
+  { path: '/terms',         title: 'Terms of Service | ASADS Home Inspection',                          desc: 'ASADS Home Inspection terms of service and booking conditions for Ontario homeowners and property buyers. Read before scheduling an inspection.' },
   { path: '/sitemap',       title: 'Site Map | ASADS Home Inspection',                                  desc: 'Full site map for ASADS Home Inspection. Find all pages including service areas, inspection services, blog, and contact information.' },
 ];
 
@@ -180,6 +180,25 @@ blogs.forEach(b => {
   });
 });
 
+// ─── HTML helpers ─────────────────────────────────────────────────────────────
+
+function esc(s) {
+  return String(s)
+    .replace(/&/g, '&amp;').replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function nav(sections) {
+  const inner = sections
+    .map(([label, links]) => `<p style="margin-bottom:0.35rem"><strong>${label}:</strong> ${links}</p>`)
+    .join('');
+  return `<nav aria-label="Related pages" style="padding:0.75rem 1rem;font-size:0.8rem;color:#475569">${inner}</nav>`;
+}
+
+function aLinks(items) {
+  return items.map(([href, text]) => `<a href="${href}">${esc(text)}</a>`).join(' · ');
+}
+
 // ─── Read base HTML ───────────────────────────────────────────────────────────
 
 const baseHtml = readFileSync(resolve(DIST, 'index.html'), 'utf8');
@@ -194,35 +213,145 @@ if (!baseHtml.includes('<meta name="description"')) {
   console.log('✓ Injected default meta description into index.html');
 }
 
+// ─── Cross-link data ──────────────────────────────────────────────────────────
+
+// All city slugs (strip "home-inspection-" prefix)
+const allCitySlugs = locationSlugs.map(l => l.citySlug);
+const allCityNames = Object.fromEntries(locationSlugs.map(l => [l.citySlug, l.city]));
+
+// Service slugs + names
+const allServiceSlugs = serviceDefs.map(s => s.slug);
+const serviceNames = Object.fromEntries(serviceDefs.map(s => [s.slug, s.title.replace(/ \{city\}.*/i, '').replace(/ \|.*/,'').trim()]));
+
+// Blog slugs + titles
+const allBlogSlugs  = blogs.map(b => b.slug);
+const blogTitles    = Object.fromEntries(blogs.map(b => [b.slug, b.title]));
+
+// Links for static hub pages
+const staticNavLinks = {
+  '/': nav([
+    ['Our services', aLinks(allServiceSlugs.slice(0, 8).map(s => [`/services/${s}`, serviceNames[s]]))],
+    ['Service areas', aLinks(allCitySlugs.slice(0, 8).map(c => [`/locations/home-inspection-${c}`, allCityNames[c]]))],
+    ['Pages', aLinks([['/services','Services'],['/locations','Locations'],['/blog','Blog'],['/pricing','Pricing'],['/booking','Book Now'],['/about','About'],['/contact','Contact'],['/faq','FAQ']])],
+  ]),
+  '/services': nav([
+    ['All services', aLinks(allServiceSlugs.map(s => [`/services/${s}`, serviceNames[s]]))],
+  ]),
+  '/locations': nav([
+    ['All service areas', aLinks(allCitySlugs.map(c => [`/locations/home-inspection-${c}`, allCityNames[c]]))],
+  ]),
+  '/blog': nav([
+    ['Articles', aLinks(allBlogSlugs.map(s => [`/blog/${s}`, (blogTitles[s] || s).slice(0, 40) + '...']))],
+  ]),
+};
+
+const defaultNav = nav([
+  ['Pages', aLinks([['/', 'Home'],['/services','Services'],['/locations','Locations'],['/blog','Blog'],['/pricing','Pricing'],['/booking','Book Now'],['/about','About'],['/contact','Contact'],['/faq','FAQ']])],
+]);
+
 // ─── Generate per-page HTML files ─────────────────────────────────────────────
 
 let count = 0;
 
 for (const page of pages) {
   const canonical = `${BASE_URL}${page.path}`;
-  const safeTitle = page.title.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
-  const safeDesc  = page.desc.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+  const t = esc(page.title);
+  const d = esc(page.desc);
 
-  let html = baseHtml;
+  // Build cross-links for this page
+  let linksHtml = staticNavLinks[page.path] || defaultNav;
 
-  // Replace/inject <title>
-  if (html.includes('<title>')) {
-    html = html.replace(/<title>[^<]*<\/title>/, `<title>${safeTitle}</title>`);
+  const parts = page.path.split('/').filter(Boolean);
+
+  if (parts[0] === 'services' && parts.length === 2) {
+    // /services/:slug — link to top cities + related services
+    const sSlug = parts[1];
+    const si = allServiceSlugs.indexOf(sSlug);
+    const related = allServiceSlugs.filter(s => s !== sSlug).slice(0, 4);
+    linksHtml = nav([
+      [`${serviceNames[sSlug] || sSlug} near you`, aLinks(allCitySlugs.slice(0, 12).map(c => [`/services/${sSlug}/${c}`, allCityNames[c]]))],
+      ['Related services', aLinks(related.map(s => [`/services/${s}`, serviceNames[s]]))],
+      ['Home', aLinks([['/', 'Home'],['/services','All Services'],['/locations','All Cities']])],
+    ]);
+
+  } else if (parts[0] === 'services' && parts.length === 3) {
+    // /services/:svc/:city — nearby cities + related services
+    const sSlug = parts[1];
+    const cSlug = parts[2];
+    const ci = allCitySlugs.indexOf(cSlug);
+    const nearby = [];
+    for (let d = 1; d <= 3; d++) {
+      nearby.push(allCitySlugs[(ci - d + allCitySlugs.length) % allCitySlugs.length]);
+      nearby.push(allCitySlugs[(ci + d) % allCitySlugs.length]);
+    }
+    const si = allServiceSlugs.indexOf(sSlug);
+    const relSvcs = [];
+    for (let d = 1; d <= 2; d++) {
+      relSvcs.push(allServiceSlugs[(si - d + allServiceSlugs.length) % allServiceSlugs.length]);
+      relSvcs.push(allServiceSlugs[(si + d) % allServiceSlugs.length]);
+    }
+    linksHtml = nav([
+      ['Also serving', aLinks(nearby.map(c => [`/services/${sSlug}/${c}`, allCityNames[c]]))],
+      ['Related services', aLinks(relSvcs.map(s => [`/services/${s}/${cSlug}`, serviceNames[s]]))],
+      ['Home', aLinks([['/', 'Home'],['/services','All Services'],['/locations','All Cities']])],
+    ]);
+
+  } else if (parts[0] === 'locations' && parts.length === 2) {
+    // /locations/home-inspection-:city — services in this city + nearby
+    const fullSlug = parts[1];
+    const cSlug = fullSlug.replace(/^home-inspection-/, '');
+    const ci = allCitySlugs.indexOf(cSlug);
+    const nearby = [];
+    for (let d = 1; d <= 3; d++) {
+      nearby.push(allCitySlugs[(ci - d + allCitySlugs.length) % allCitySlugs.length]);
+      nearby.push(allCitySlugs[(ci + d) % allCitySlugs.length]);
+    }
+    linksHtml = nav([
+      [`Services in ${allCityNames[cSlug] || cSlug}`, aLinks(allServiceSlugs.map(s => [`/services/${s}/${cSlug}`, serviceNames[s]]))],
+      ['Nearby cities', aLinks(nearby.map(c => [`/locations/home-inspection-${c}`, allCityNames[c]]))],
+      ['Home', aLinks([['/', 'Home'],['/services','All Services'],['/locations','All Cities']])],
+    ]);
+
+  } else if (parts[0] === 'blog' && parts.length === 2) {
+    // /blog/:slug — city versions + related posts
+    const bSlug = parts[1];
+    const bi = allBlogSlugs.indexOf(bSlug);
+    const relPosts = [1, 2, 3].map(d => allBlogSlugs[(bi + d) % allBlogSlugs.length]);
+    linksHtml = nav([
+      ['Read in your city', aLinks(allCitySlugs.slice(0, 12).map(c => [`/blog/${bSlug}/${c}`, allCityNames[c]]))],
+      ['Related articles', aLinks(relPosts.map(s => [`/blog/${s}`, (blogTitles[s] || s).slice(0, 35) + '...']))],
+      ['Home', aLinks([['/', 'Home'],['/blog','All Articles'],['/services','Services']])],
+    ]);
+
+  } else if (parts[0] === 'blog' && parts.length === 3) {
+    // /blog/:slug/:city — nearby cities + related posts
+    const bSlug = parts[1];
+    const cSlug = parts[2];
+    const ci = allCitySlugs.indexOf(cSlug);
+    const nearby = [];
+    for (let d = 1; d <= 3; d++) {
+      nearby.push(allCitySlugs[(ci - d + allCitySlugs.length) % allCitySlugs.length]);
+      nearby.push(allCitySlugs[(ci + d) % allCitySlugs.length]);
+    }
+    const bi = allBlogSlugs.indexOf(bSlug);
+    const relPosts = [1, 2].map(d => allBlogSlugs[(bi + d) % allBlogSlugs.length]);
+    linksHtml = nav([
+      ['Also reading in', aLinks(nearby.map(c => [`/blog/${bSlug}/${c}`, allCityNames[c]]))],
+      ['Related articles', aLinks(relPosts.map(s => [`/blog/${s}/${cSlug}`, (blogTitles[s] || s).slice(0, 35) + '...']))],
+      ['Home', aLinks([['/', 'Home'],['/blog','All Articles'],['/services','Services']])],
+    ]);
   }
 
-  // Replace/inject canonical
-  html = html.replace(
-    /<link rel="canonical"[^>]*>/,
-    `<link rel="canonical" href="${canonical}" />`
-  );
+  const h1 = esc(page.title);
+  let html = baseHtml;
 
-  // Inject meta description — use data-rh="true" so React-Helmet-Async
-  // recognises this as its own managed tag and replaces rather than duplicates it
+  // Use function replacements throughout — prevents $ in dynamic content
+  // (prices like $399, $149) being misread as regex backreferences
+  html = html.replace(/<title>[^<]*<\/title>/, () => `<title>${t}</title>`);
+  html = html.replace(/<link rel="canonical"[^>]*>/, () => `<link rel="canonical" href="${canonical}" />`);
   html = html.replace(/<meta name="description"[^>]*\/?>/g, '');
-  html = html.replace(
-    '<meta name="robots"',
-    `<meta data-rh="true" name="description" content="${safeDesc}" />\n    <meta name="robots"`
-  );
+  html = html.replace('<meta name="robots"', () => `<meta data-rh="true" name="description" content="${d}" />\n    <meta name="robots"`);
+  html = html.replace(/<div id="root">[\s\S]*?<\/div>/, () => `<div id="root"><h1 style="font-size:1.5rem;font-weight:700;padding:1rem">${h1}</h1>${linksHtml}</div>`);
 
   // Write file
   const dir = resolve(DIST, ...page.path.split('/').filter(Boolean));
