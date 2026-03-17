@@ -3,17 +3,22 @@ import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { InlineBookingForm } from "@/components/InlineBookingForm";
 import { blogPostsData } from "@/data/blogPosts";
 import { locationData } from "@/data/locationData";
-import { getCanonicalUrl } from "@/lib/seo";
+import { getCanonicalUrl, SITE_URL } from "@/lib/seo";
 import {
   MapPin,
   Calendar,
   Clock,
   User,
   ArrowLeft,
-  Phone,
   ArrowRight,
+  Phone,
+  Share2,
+  Facebook,
+  Twitter,
+  Linkedin,
 } from "lucide-react";
 
 /** Deterministic hash for content variation */
@@ -112,11 +117,28 @@ function getCityIntro(category: string, city: string, blogTitle: string): string
   return pick(pool, `${blogTitle}-${city}`);
 }
 
+const ALSO_READING: [string, string][] = [
+  ["Toronto", "toronto"],
+  ["Mississauga", "mississauga"],
+  ["Brampton", "brampton"],
+  ["Vaughan", "vaughan"],
+  ["Markham", "markham"],
+  ["Richmond Hill", "richmond-hill"],
+  ["Oakville", "oakville"],
+  ["Burlington", "burlington"],
+  ["Hamilton", "hamilton"],
+  ["Kitchener", "kitchener"],
+  ["Waterloo", "waterloo"],
+  ["Guelph", "guelph"],
+  ["Oshawa", "oshawa"],
+  ["Barrie", "barrie"],
+  ["Pickering", "pickering"],
+];
+
 export default function BlogCityPage() {
   const { blogSlug, citySlug } = useParams<{ blogSlug: string; citySlug: string }>();
 
   const post = blogPostsData.find((p) => p.slug === blogSlug);
-  // citySlug is the clean slug (e.g. "brampton"), location slug is "home-inspection-brampton"
   const location = locationData.find((l) => l.slug === `home-inspection-${citySlug}`);
 
   if (!post || !location) return <Navigate to="/blog" replace />;
@@ -125,13 +147,28 @@ export default function BlogCityPage() {
   const cityIntro = getCityIntro(post.category, city, post.title);
   const canonical = getCanonicalUrl(`/blog/${post.slug}/${citySlug}`);
 
-  // Localized meta — inject city into title and desc
-  const metaTitle = `${post.metaTitle} | ${city}, Ontario`;
+  const rawTitle = `${post.metaTitle} | ${city}, Ontario`;
+  const metaTitle = rawTitle.length > 60 ? rawTitle.slice(0, 57) + "…" : rawTitle;
   const metaDesc = `${post.metaDescription} Serving ${city} homeowners & buyers.`.slice(0, 160);
 
   const relatedPosts = blogPostsData
     .filter((p) => p.category === post.category && p.slug !== post.slug)
     .slice(0, 3);
+
+  const currentIndex = blogPostsData.findIndex((p) => p.slug === blogSlug);
+  const prevPost = currentIndex > 0 ? blogPostsData[currentIndex - 1] : null;
+  const nextPost = currentIndex < blogPostsData.length - 1 ? blogPostsData[currentIndex + 1] : null;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: getCanonicalUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Blog", item: getCanonicalUrl("/blog") },
+      { "@type": "ListItem", position: 3, name: post.title, item: getCanonicalUrl(`/blog/${post.slug}`) },
+      { "@type": "ListItem", position: 4, name: city, item: canonical },
+    ],
+  };
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -141,14 +178,16 @@ export default function BlogCityPage() {
     image: { "@type": "ImageObject", url: post.image, width: 800, height: 500 },
     datePublished: post.date,
     dateModified: post.date,
-    author: { "@type": "Person", name: post.author, url: "https://www.asads.ca/about" },
+    author: { "@type": "Person", name: post.author, url: `${SITE_URL}/about` },
     publisher: {
       "@type": "Organization",
       name: "ASADS Home Inspection",
-      logo: { "@type": "ImageObject", url: "https://www.asads.ca/logo.png" },
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
     articleSection: post.category,
+    wordCount: post.content.split(/\s+/).length,
+    timeRequired: post.readTime,
     areaServed: city,
   };
 
@@ -158,31 +197,52 @@ export default function BlogCityPage() {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDesc} />
         <link rel="canonical" href={canonical} />
+        <meta property="og:site_name" content="ASADS Home Inspection" />
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDesc} />
         <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:image" content={post.image || `${SITE_URL}/images/og-default.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={post.title} />
+        <meta property="article:published_time" content={post.date} />
+        <meta property="article:author" content={post.author} />
+        <meta property="article:section" content={post.category} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AsadsInspection" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDesc} />
+        <meta name="twitter:image" content={post.image || `${SITE_URL}/images/og-default.jpg`} />
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
 
       {/* Hero */}
-      <section className="py-10 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <section className="py-12 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <Link
-              to={`/blog/${post.slug}`}
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-4 transition-colors text-sm"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              View original article
-            </Link>
+            <div className="flex items-center gap-4 mb-5">
+              <Link
+                to="/blog"
+                className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                Back to Blog
+              </Link>
+              <Link
+                to={`/blog/${post.slug}`}
+                className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
+              >
+                Ontario-wide edition
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
 
-            {/* City badge */}
-            <div className="flex items-center gap-2 mb-3">
+            <div className="flex flex-wrap items-center gap-2 mb-4">
               <span className="inline-flex items-center gap-1.5 bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
-                <MapPin size={13} />
+                <MapPin className="h-3.5 w-3.5" />
                 {city}, Ontario
               </span>
               <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
@@ -190,9 +250,10 @@ export default function BlogCityPage() {
               </span>
             </div>
 
-            <h1 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-5">
+            <h1 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-6">
               {post.title}
             </h1>
+
             <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
               <span className="flex items-center gap-2">
                 <User className="h-4 w-4" />
@@ -216,7 +277,7 @@ export default function BlogCityPage() {
       </section>
 
       {/* Featured Image */}
-      <section className="py-6">
+      <section className="py-8">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
@@ -234,21 +295,23 @@ export default function BlogCityPage() {
       </section>
 
       {/* Article + Sidebar */}
-      <section className="py-10">
+      <section className="py-12">
         <div className="container">
           <div className="grid lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
-            {/* Main Content */}
+
+            {/* ── Main Content ── */}
             <div className="lg:col-span-3">
-              {/* City intro block */}
+
+              {/* City intro callout */}
               <div className="bg-blue-50 border-l-4 border-blue-500 rounded-r-xl p-5 mb-8">
                 <p className="text-sm font-semibold text-blue-700 mb-1 flex items-center gap-1.5">
-                  <MapPin size={14} />
+                  <MapPin className="h-3.5 w-3.5" />
                   Reading this in {city}?
                 </p>
                 <p className="text-blue-900 text-sm leading-relaxed">{cityIntro}</p>
               </div>
 
-              {/* Blog content */}
+              {/* Article content */}
               <article className="prose prose-lg max-w-none">
                 <div
                   className="text-foreground"
@@ -256,10 +319,86 @@ export default function BlogCityPage() {
                 />
               </article>
 
-              {/* Related posts */}
+              {/* Share */}
+              <div className="mt-12 pt-8 border-t border-border">
+                <div className="flex items-center justify-between flex-wrap gap-4">
+                  <div className="flex items-center gap-2">
+                    <Share2 className="h-5 w-5 text-muted-foreground" />
+                    <span className="font-medium">Share this article:</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <Button variant="outline" size="icon" asChild>
+                      <a
+                        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(canonical)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Share on Facebook"
+                      >
+                        <Facebook className="h-4 w-4" />
+                      </a>
+                    </Button>
+                    <Button variant="outline" size="icon" asChild>
+                      <a
+                        href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(canonical)}&text=${encodeURIComponent(post.title)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Share on Twitter"
+                      >
+                        <Twitter className="h-4 w-4" />
+                      </a>
+                    </Button>
+                    <Button variant="outline" size="icon" asChild>
+                      <a
+                        href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(canonical)}&title=${encodeURIComponent(post.title)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Share on LinkedIn"
+                      >
+                        <Linkedin className="h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Prev / Next navigation — city editions */}
+              <div className="mt-8 grid md:grid-cols-2 gap-4">
+                {prevPost && (
+                  <Link
+                    to={`/blog/${prevPost.slug}/${citySlug}`}
+                    className="p-6 rounded-xl border border-border hover:border-primary transition-colors group"
+                  >
+                    <div className="flex items-center gap-2 text-muted-foreground mb-2">
+                      <ArrowLeft className="h-4 w-4" />
+                      <span className="text-sm">Previous Article</span>
+                    </div>
+                    <p className="font-heading font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                      {prevPost.title}
+                    </p>
+                  </Link>
+                )}
+                {nextPost && (
+                  <Link
+                    to={`/blog/${nextPost.slug}/${citySlug}`}
+                    className="p-6 rounded-xl border border-border hover:border-primary transition-colors group md:text-right"
+                  >
+                    <div className="flex items-center justify-end gap-2 text-muted-foreground mb-2">
+                      <span className="text-sm">Next Article</span>
+                      <ArrowRight className="h-4 w-4" />
+                    </div>
+                    <p className="font-heading font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                      {nextPost.title}
+                    </p>
+                  </Link>
+                )}
+              </div>
+
+              {/* Related articles — city editions */}
               {relatedPosts.length > 0 && (
                 <div className="mt-10 pt-8 border-t border-border">
-                  <h3 className="font-heading font-semibold text-lg mb-4">Related Articles</h3>
+                  <h3 className="font-heading font-semibold text-lg mb-4">
+                    Related Articles — {city} Edition
+                  </h3>
                   <div className="grid sm:grid-cols-3 gap-4">
                     {relatedPosts.map((rp) => (
                       <Link
@@ -271,8 +410,8 @@ export default function BlogCityPage() {
                           {rp.title}
                         </p>
                         <p className="text-xs text-muted-foreground flex items-center gap-1">
-                          <ArrowRight size={11} />
-                          {city} edition
+                          <MapPin className="h-3 w-3" />
+                          {city} edition · {rp.readTime}
                         </p>
                       </Link>
                     ))}
@@ -281,39 +420,43 @@ export default function BlogCityPage() {
               )}
             </div>
 
-            {/* Sidebar */}
+            {/* ── Sidebar ── */}
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-5">
-                {/* City CTA card */}
-                <Card className="border-blue-100 bg-blue-50">
-                  <CardContent className="p-5">
-                    <p className="text-xs font-semibold text-blue-600 mb-1 flex items-center gap-1">
-                      <MapPin size={12} />
-                      Serving {city}
-                    </p>
-                    <h3 className="font-heading font-semibold text-base mb-3">
-                      Need a Home Inspection in {city}?
+
+                {/* Booking form */}
+                <Card className="border-border/50">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+                      <span className="text-xs font-semibold text-green-600 uppercase tracking-wide">
+                        Serving {city}
+                      </span>
+                    </div>
+                    <h3 className="font-heading font-semibold text-base mb-1">
+                      Book an Inspection in {city}
                     </h3>
-                    <p className="text-muted-foreground text-xs mb-4">
-                      ASADS certified inspectors serve {city} with same-day availability and digital reports.
+                    <p className="text-xs text-muted-foreground mb-4">
+                      Same-day availability · Certified inspectors · Digital report same day
                     </p>
-                    <Button asChild className="w-full mb-2" size="sm">
-                      <Link to="/booking">Book in {city}</Link>
-                    </Button>
-                    <Button variant="outline" className="w-full" size="sm" asChild>
-                      <a href="tel:+16478019311">
-                        <Phone className="mr-2 h-3 w-3" />
+                    <InlineBookingForm />
+                    <p className="text-center text-xs text-muted-foreground mt-3">
+                      Or call{" "}
+                      <a
+                        href="tel:+16478019311"
+                        className="text-primary hover:underline font-medium"
+                      >
                         (647) 801-9311
                       </a>
-                    </Button>
+                    </p>
                   </CardContent>
                 </Card>
 
                 {/* Location page link */}
                 <Card className="border-border/50">
                   <CardContent className="p-5">
-                    <h3 className="font-heading font-semibold text-sm mb-3">
-                      {city} Home Inspection Services
+                    <h3 className="font-heading font-semibold text-sm mb-2">
+                      {city} Inspection Services
                     </h3>
                     <p className="text-xs text-muted-foreground mb-3">
                       See all inspection services available in {city}.
@@ -322,24 +465,49 @@ export default function BlogCityPage() {
                       to={`/locations/${location.slug}`}
                       className="flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
                     >
-                      <ArrowRight size={13} />
+                      <ArrowRight className="h-3.5 w-3.5" />
                       View {city} service area
                     </Link>
                   </CardContent>
                 </Card>
 
-                {/* Original article link */}
-                <Card className="border-border/50">
+                {/* Related articles */}
+                {relatedPosts.length > 0 && (
+                  <Card className="border-border/50">
+                    <CardContent className="p-5">
+                      <h3 className="font-heading font-semibold text-sm mb-3">
+                        Related Articles
+                      </h3>
+                      <div className="space-y-3">
+                        {relatedPosts.map((rp) => (
+                          <Link
+                            key={rp.slug}
+                            to={`/blog/${rp.slug}/${citySlug}`}
+                            className="block group"
+                          >
+                            <p className="text-sm text-foreground group-hover:text-primary transition-colors line-clamp-2 font-medium">
+                              {rp.title}
+                            </p>
+                            <p className="text-xs text-muted-foreground mt-0.5">{rp.readTime}</p>
+                          </Link>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
+
+                {/* Ontario-wide edition link */}
+                <Card className="border-blue-100 bg-blue-50/50">
                   <CardContent className="p-5">
-                    <h3 className="font-heading font-semibold text-sm mb-2">
-                      Ontario-Wide Edition
-                    </h3>
+                    <p className="text-sm text-slate-600 mb-2">
+                      Reading the Ontario-wide edition?
+                    </p>
                     <Link
                       to={`/blog/${post.slug}`}
-                      className="flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
+                      className="flex items-center gap-1.5 text-sm font-medium text-blue-700 hover:text-blue-800 transition-colors"
                     >
-                      <ArrowRight size={13} />
-                      Read the original article
+                      <ArrowRight className="h-3.5 w-3.5" />
+                      View original article
                     </Link>
                   </CardContent>
                 </Card>
@@ -349,19 +517,39 @@ export default function BlogCityPage() {
         </div>
       </section>
 
+      {/* Reading this guide for your city */}
+      <section className="py-8 bg-muted/30 border-t border-border/50">
+        <div className="container">
+          <p className="text-sm text-muted-foreground mb-3 font-medium">
+            Reading this guide for your city?
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {ALSO_READING.filter(([, c]) => c !== citySlug).map(([name, slug]) => (
+              <Link
+                key={slug}
+                to={`/blog/${post.slug}/${slug}`}
+                className="text-xs px-3 py-1.5 rounded-full border border-border text-muted-foreground hover:border-primary/50 hover:text-primary transition-colors"
+              >
+                {name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="py-14 bg-primary text-primary-foreground">
+      <section className="py-16 bg-primary text-primary-foreground">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-heading text-2xl font-bold mb-3">
+            <h2 className="font-heading text-3xl font-bold mb-4">
               Book a Home Inspection in {city} Today
             </h2>
-            <p className="text-primary-foreground/80 mb-7">
+            <p className="text-primary-foreground/80 text-lg mb-8">
               Same-day availability · Certified inspectors · Digital report same day
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
-                <Link to="/booking">Book Online</Link>
+                <Link to="/booking">Book Online Now</Link>
               </Button>
               <Button
                 asChild
@@ -369,7 +557,10 @@ export default function BlogCityPage() {
                 variant="outline"
                 className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
               >
-                <a href="tel:+16478019311">(647) 801-9311</a>
+                <a href="tel:+16478019311">
+                  <Phone className="mr-2 h-5 w-5" />
+                  (647) 801-9311
+                </a>
               </Button>
             </div>
           </div>
