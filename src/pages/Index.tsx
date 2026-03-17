@@ -69,7 +69,7 @@ const homepageFaqs = [
   },
   {
     question: "Do you offer same-day home inspection reports?",
-    answer: "Yes. ASADS delivers detailed digital inspection reports within 24 hours and in most cases the same day. Reports are emailed in an easy-to-read format with photographs, categorized findings, and maintenance recommendations you can share directly with your realtor or lawyer.",
+    answer: "Yes — same-day home inspection reports are standard at ASADS. We deliver detailed digital reports the same day as the inspection in the vast majority of cases. Reports include photographs, categorized findings, and maintenance recommendations formatted for sharing directly with your realtor or lawyer. Same-day inspection bookings are available 7 days a week across the GTA and Southern Ontario.",
   },
 ];
 

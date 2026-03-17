@@ -3,15 +3,15 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import { Link } from "react-router-dom";
 
 export default function MoldInspection() {
-  const pageTitle = "Mold Inspection & Testing Toronto | From $299 | ASADS";
-  const schemaDescription = "Certified mold inspection & testing in Toronto and GTA from $299. Air sampling, black mold identification, AIHA lab results. Independent inspector — not remediation.";
+  const pageTitle = "Mold Inspection & Testing Ontario | From $299 | ASADS";
+  const schemaDescription = "Certified mold inspection & testing in Ontario from $299. Air sampling, black mold identification, AIHA lab results. Serving Toronto, GTA & all of Ontario. Independent inspector — not remediation.";
 
   return (
     <ServicePageTemplate
       title="Mold Inspection, Testing & Assessment"
       metaTitle={pageTitle}
       metaDescription={schemaDescription}
-      heroTitle="Mold Inspection & Mold Testing Toronto — Certified, Independent, Lab-Confirmed"
+      heroTitle="Mold Inspection & Mold Testing Ontario — Certified, Independent, Lab-Confirmed"
       heroSubtitle={
         <>
           Protect your home and health with AIHA-certified lab testing across Ontario. We detect toxic black mold, hidden moisture, and water-damage-related spores with 99.9% accuracy.

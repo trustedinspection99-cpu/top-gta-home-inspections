@@ -351,6 +351,75 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* What Affects Home Inspection Cost */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-heading text-3xl font-bold mb-4">
+              What Affects Home Inspection Cost in Ontario?
+            </h2>
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              Home inspection prices in Ontario vary based on several factors. Understanding what drives cost helps you budget accurately and compare quotes.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-6 mb-10">
+              {[
+                { factor: "Property size", detail: "Square footage is the primary driver. A 500 sq ft condo costs less than a 4,000 sq ft detached home because the inspector covers more area, systems, and components." },
+                { factor: "Age of the home", detail: "Older homes (pre-1980) take longer to inspect due to complex plumbing, knob-and-tube wiring, and aging systems that require more documentation." },
+                { factor: "Property type", detail: "Condos, townhouses, semi-detached, and detached homes each have different scope. Commercial properties are priced separately based on size and system complexity." },
+                { factor: "Add-on services", detail: "Radon testing ($149+), mold inspection ($299+), thermal imaging ($149 add-on), and sewer scope ($299+) extend the inspection and increase total cost." },
+                { factor: "Location", detail: "Travel time to rural properties in Ontario may add a small surcharge. Most GTA and Southern Ontario locations are covered at the base rate." },
+                { factor: "Urgency", detail: "Same-day and rush inspections for tight closing deadlines are accommodated at no extra charge when availability allows." },
+              ].map(({ factor, detail }) => (
+                <div key={factor} className="flex gap-3">
+                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-foreground">{factor}</p>
+                    <p className="text-sm text-muted-foreground mt-0.5">{detail}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <h2 className="font-heading text-2xl font-bold mb-6">
+              Home Inspection Cost Ontario — FAQs
+            </h2>
+            <div className="space-y-5">
+              {[
+                {
+                  q: "How much does a home inspection cost in Ontario in 2026?",
+                  a: "In Ontario, a standard pre-purchase home inspection costs between $399 and $549 for most residential properties. Condos start from $299. Prices are based on size: condos and small homes (under 1,500 sq ft) start at $349–$399; larger detached homes (2,500–3,500 sq ft) run $499–$549. Commercial inspections are priced by quote."
+                },
+                {
+                  q: "Is a home inspection worth the cost in Ontario?",
+                  a: "Yes. A $399–$549 inspection routinely uncovers deficiencies that cost thousands to repair — aging electrical panels ($3,000–$8,000), roof replacement ($10,000–$25,000), or failing sewer laterals ($5,000–$20,000). Ontario buyers frequently negotiate credits 5–10x the inspection cost based on our findings."
+                },
+                {
+                  q: "What is the cheapest home inspection in Ontario?",
+                  a: "Condo inspections start at $299 for a studio or 1-bedroom unit. For detached homes, base pricing starts at $399 for properties under 1,500 sq ft. Be cautious of very low quotes — inspectors below $250 for houses typically use abbreviated checklists and offer minimal liability protection."
+                },
+                {
+                  q: "Do home inspection prices include a written report?",
+                  a: "Yes — all ASADS inspections include a same-day digital report with photographs, severity ratings (Safety/Monitor/Improvement), and repair recommendations. Reports are delivered by secure cloud link and are formatted for sharing directly with your realtor or lawyer."
+                },
+                {
+                  q: "Can I get a same-day home inspection in Ontario?",
+                  a: "Yes. ASADS offers same-day booking and same-day report delivery across the GTA and Southern Ontario. Call (647) 801-9311 or book online — we accommodate urgent inspection requests for tight closing deadlines 7 days a week."
+                },
+                {
+                  q: "How much does a mold inspection cost in Ontario?",
+                  a: "Mold inspection and testing in Ontario starts from $299 for a visual assessment with air sampling. Pricing depends on the number of samples required and the size of the affected area. Results from our AIHA-accredited lab are typically returned within 3–5 business days."
+                },
+              ].map(({ q, a }) => (
+                <div key={q} className="border border-border rounded-xl p-6">
+                  <h3 className="font-heading font-semibold text-foreground mb-2">{q}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Related Links */}
       <section className="py-12 bg-background border-t border-border/50">
         <div className="container">
