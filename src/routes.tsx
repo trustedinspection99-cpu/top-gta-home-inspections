@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import type { RouteObject } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { blogPostsData } from './data/blogPosts';
 import { locationData } from './data/locationData';
 import { Toaster } from "@/components/ui/toaster";
@@ -59,6 +60,8 @@ const LeadPaintTesting = lazy(() => import('./pages/services/LeadPaintTesting'))
 const WellWaterTesting = lazy(() => import('./pages/services/WellWaterTesting'));
 const SewerScope = lazy(() => import('./pages/services/SewerScope'));
 const AirQuality = lazy(() => import('./pages/services/AirQuality'));
+const ServiceCityPage = lazy(() => import('./pages/services/ServiceCityPage'));
+const BlogCityPage = lazy(() => import('./pages/blog/BlogCityPage'));
 
 export const routes: RouteObject[] = [
   {
@@ -71,6 +74,7 @@ export const routes: RouteObject[] = [
       { path: 'services', element: <Services /> },
       { path: 'blog', element: <Blog /> },
       { path: 'blog/:slug', element: <BlogPost /> },
+      { path: 'blog/:blogSlug/:citySlug', element: <BlogCityPage /> },
       { path: 'testimonials', element: <Testimonials /> },
       { path: 'faq', element: <FAQ /> },
       { path: 'locations', element: <Locations /> },
@@ -89,6 +93,7 @@ export const routes: RouteObject[] = [
       { path: 'services/commercial', element: <Commercial /> },
       { path: 'services/radon-testing', element: <RadonTesting /> },
       { path: 'services/mold-inspection', element: <MoldInspection /> },
+      { path: 'services/mould-inspection', element: <Navigate to="/services/mold-inspection" replace /> },
       { path: 'services/asbestos-testing', element: <AsbestosTesting /> },
       { path: 'services/wett', element: <WETT /> },
       { path: 'services/thermal-imaging', element: <ThermalImaging /> },
@@ -96,6 +101,7 @@ export const routes: RouteObject[] = [
       { path: 'services/well-water-testing', element: <WellWaterTesting /> },
       { path: 'services/sewer-scope', element: <SewerScope /> },
       { path: 'services/air-quality', element: <AirQuality /> },
+      { path: 'services/:serviceSlug/:citySlug', element: <ServiceCityPage /> },
 
       { path: '*', element: <NotFound /> },
     ],

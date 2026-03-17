@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate, Outlet } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
@@ -16,7 +16,7 @@ import BlogPost from "./pages/BlogPost";
 import Testimonials from "./pages/Testimonials";
 import FAQ from "./pages/FAQ";
 import Locations from "./pages/Locations";
-import LocationDetail from "./pages/LocationDetail"; // The new dynamic component
+import LocationDetail from "./pages/LocationDetail";
 import Booking from "./pages/Booking";
 import Pricing from "./pages/Pricing";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -41,6 +41,53 @@ import AirQuality from "./pages/services/AirQuality";
 import ServiceCityPage from "./pages/services/ServiceCityPage";
 import BlogCityPage from "./pages/blog/BlogCityPage";
 
+const RootLayout = () => (
+  <>
+    <ScrollToTop />
+    <Outlet />
+  </>
+);
+
+const router = createBrowserRouter([
+  {
+    element: <RootLayout />,
+    children: [
+      { path: "/", element: <Index /> },
+      { path: "/about", element: <About /> },
+      { path: "/contact", element: <Contact /> },
+      { path: "/services", element: <Services /> },
+      { path: "/blog", element: <Blog /> },
+      { path: "/blog/:slug", element: <BlogPost /> },
+      { path: "/blog/:blogSlug/:citySlug", element: <BlogCityPage /> },
+      { path: "/testimonials", element: <Testimonials /> },
+      { path: "/faq", element: <FAQ /> },
+      { path: "/booking", element: <Booking /> },
+      { path: "/pricing", element: <Pricing /> },
+      { path: "/privacy-policy", element: <PrivacyPolicy /> },
+      { path: "/terms", element: <Terms /> },
+      { path: "/locations", element: <Locations /> },
+      { path: "/locations/:slug", element: <LocationDetail /> },
+      { path: "/services/pre-purchase", element: <PrePurchase /> },
+      { path: "/services/pre-listing", element: <PreListing /> },
+      { path: "/services/new-construction", element: <NewConstruction /> },
+      { path: "/services/condo", element: <Condo /> },
+      { path: "/services/commercial", element: <Commercial /> },
+      { path: "/services/radon-testing", element: <RadonTesting /> },
+      { path: "/services/mold-inspection", element: <MoldInspection /> },
+      { path: "/services/mould-inspection", element: <Navigate to="/services/mold-inspection" replace /> },
+      { path: "/services/asbestos-testing", element: <AsbestosTesting /> },
+      { path: "/services/wett", element: <WETT /> },
+      { path: "/services/thermal-imaging", element: <ThermalImaging /> },
+      { path: "/services/lead-paint-testing", element: <LeadPaintTesting /> },
+      { path: "/services/well-water-testing", element: <WellWaterTesting /> },
+      { path: "/services/sewer-scope", element: <SewerScope /> },
+      { path: "/services/air-quality", element: <AirQuality /> },
+      { path: "/services/:serviceSlug/:citySlug", element: <ServiceCityPage /> },
+      { path: "*", element: <NotFound /> },
+    ],
+  },
+]);
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -49,53 +96,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
-            {/* Core Pages */}
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/blog/:blogSlug/:citySlug" element={<BlogCityPage />} />
-            <Route path="/testimonials" element={<Testimonials />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/booking" element={<Booking />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms" element={<Terms />} />
-
-            {/* Service Area Index Page */}
-            <Route path="/locations" element={<Locations />} />
-            
-            {/* DYNAMIC LOCATION ROUTE - Handles all cities in your data file */}
-            <Route path="/locations/:slug" element={<LocationDetail />} />
-
-            {/* Service Pages */}
-            <Route path="/services/pre-purchase" element={<PrePurchase />} />
-            <Route path="/services/pre-listing" element={<PreListing />} />
-            <Route path="/services/new-construction" element={<NewConstruction />} />
-            <Route path="/services/condo" element={<Condo />} />
-            <Route path="/services/commercial" element={<Commercial />} />
-            <Route path="/services/radon-testing" element={<RadonTesting />} />
-            <Route path="/services/mold-inspection" element={<MoldInspection />} />
-            <Route path="/services/mould-inspection" element={<Navigate to="/services/mold-inspection" replace />} />
-            <Route path="/services/asbestos-testing" element={<AsbestosTesting />} />
-            <Route path="/services/wett" element={<WETT />} />
-            <Route path="/services/thermal-imaging" element={<ThermalImaging />} />
-            <Route path="/services/lead-paint-testing" element={<LeadPaintTesting />} />
-            <Route path="/services/well-water-testing" element={<WellWaterTesting />} />
-            <Route path="/services/sewer-scope" element={<SewerScope />} />
-            <Route path="/services/air-quality" element={<AirQuality />} />
-
-            {/* Service × City cross-pages */}
-            <Route path="/services/:serviceSlug/:citySlug" element={<ServiceCityPage />} />
-
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+        <RouterProvider router={router} />
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
