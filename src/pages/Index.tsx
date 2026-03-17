@@ -219,11 +219,11 @@ const Index = () => {
     <Layout>
       <Helmet>
         <link rel="canonical" href="https://www.asads.ca/" />
-        <title>Home Inspector Ontario | House & Home Inspection | ASADS</title>
-        <meta name="description" content="Certified home inspector for house & home inspections across Ontario. Same-day reports, 106 cities, 14 specialty services — radon, mold, WETT & asbestos. Book 24/7." />
+        <title>Home Inspection Ontario | Certified Inspector | ASADS</title>
+        <meta name="description" content="Certified home inspection across Ontario from $399. OAHI & InterNACHI certified inspectors, same-day digital reports, 106 cities. Radon, mold, WETT & asbestos. Book online 24/7." />
         {/* Open Graph */}
-        <meta property="og:title" content="Home Inspector Ontario | House & Home Inspection | ASADS" />
-        <meta property="og:description" content="Trusted home inspection services across Ontario. OAHI-certified inspectors serving 100+ cities with 14 specialty services including radon, mold, WETT & asbestos testing. Book online today." />
+        <meta property="og:title" content="Home Inspection Ontario | Certified Inspector | ASADS" />
+        <meta property="og:description" content="Certified home inspection across Ontario from $399. OAHI & InterNACHI certified, same-day reports, 106 cities. Radon, mold, WETT & asbestos. Book online 24/7." />
         <meta property="og:url" content={SITE_URL} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_CA" />
@@ -236,8 +236,8 @@ const Index = () => {
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@AsadsInspection" />
-        <meta name="twitter:title" content="Home Inspection Ontario | Certified Home Inspector | ASADS" />
-        <meta name="twitter:description" content="Home inspection across Ontario. OAHI-certified with 14 specialty services. Same-day reports. Book online." />
+        <meta name="twitter:title" content="Home Inspection Ontario | Certified Inspector | ASADS" />
+        <meta name="twitter:description" content="Certified home inspection across Ontario from $399. OAHI certified, same-day reports, 106 cities. Radon, mold, WETT & asbestos. Book 24/7." />
         <meta name="twitter:image" content={`${SITE_URL}/images/og-default.jpg`} />
         
         {/* Additional Meta Tags */}
