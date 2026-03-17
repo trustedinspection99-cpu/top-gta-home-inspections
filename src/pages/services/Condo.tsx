@@ -35,10 +35,10 @@ const featuredLocations = [
 ];
 
 const metaTitle =
-  "Condo Inspection Toronto | Kitec Plumbing | ASADS";
+  "Condo Inspection Toronto | From $299 | Certified | ASADS";
 
 const metaDescription =
-  "Certified condo & townhouse inspection in Toronto & GTA. Identify Kitec plumbing, fan coil failures, moisture intrusion & in-suite liabilities. From $299.";
+  "Certified condo inspection in Toronto & GTA from $299. Kitec plumbing, fan coil, moisture & electrical — full in-suite assessment. Same-day report. Call (647) 801-9311.";
 
 const duration = "1.5 – 2.5 Hours";
 

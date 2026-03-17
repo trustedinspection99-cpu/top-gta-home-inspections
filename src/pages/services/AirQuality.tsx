@@ -2,8 +2,8 @@ import { Wind, Thermometer, ShieldAlert, Microscope, Leaf } from "lucide-react";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function AirQuality() {
-  const pageTitle = "Air Quality Testing Toronto | VOC, Mold & Allergens | ASADS";
-  const schemaDescription = "Certified air quality testing in Toronto & GTA. Lab analysis for VOCs, mold spores, allergens & particulates. Same-day sampling, 48-hr lab results. From $249.";
+  const pageTitle = "Indoor Air Quality Testing Toronto | VOC & Mold | ASADS";
+  const schemaDescription = "Indoor air quality testing in Toronto & GTA from $249. Lab analysis for VOCs, mold spores, allergens & CO2. AIHA accredited. Same-day sampling. Call (647) 801-9311.";
 
   return (
     <ServicePageTemplate

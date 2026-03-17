@@ -43,8 +43,8 @@ const featuredLocations = [
 ];
 
 const title = "Pre-Listing Home Inspection";
-const metaTitle = "Pre-Listing Home Inspection Ontario | Sell Faster | ASADS";
-const metaDescription = "Certified pre-listing home inspection across Ontario. Find defects before buyers do — SPIS disclosures, firm offers, faster closing & same-day reports.";
+const metaTitle = "Pre-Listing Home Inspection Ontario | From $450 | ASADS";
+const metaDescription = "Certified pre-listing home inspection across Ontario from $450. Find defects before buyers do — firm offers, faster closing & same-day digital report. Call (647) 801-9311.";
 const price = "$450-$750";
 const duration = "2-4 Hours";
 
