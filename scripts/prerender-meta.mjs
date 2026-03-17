@@ -308,6 +308,7 @@ for (const page of pages) {
     }
     linksHtml = nav([
       [`Services in ${allCityNames[cSlug] || cSlug}`, aLinks(allServiceSlugs.map(s => [`/services/${s}/${cSlug}`, serviceNames[s]]))],
+      [`Inspection guides for ${allCityNames[cSlug] || cSlug}`, aLinks(allBlogSlugs.slice(0, 8).map(s => [`/blog/${s}/${cSlug}`, (blogTitles[s] || s).slice(0, 35) + '...']))],
       ['Nearby cities', aLinks(nearby.map(c => [`/locations/home-inspection-${c}`, allCityNames[c]]))],
       ['Home', aLinks([['/', 'Home'],['/services','All Services'],['/locations','All Cities']])],
     ]);
