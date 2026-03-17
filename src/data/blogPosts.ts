@@ -1200,7 +1200,7 @@ export const blogPostsData: BlogPost[] = [
     id: 19,
     slug: "aluminum-wiring-toronto-homes",
     title: "Aluminum Wiring in Toronto Homes: What Every Buyer Needs to Know",
-    metaTitle: "Aluminum Wiring in Toronto Homes: Risks, Insurance & What To Do",
+    metaTitle: "Aluminum Wiring Toronto Homes | Risks & Insurance | ASADS",
     metaDescription: "Aluminum wiring (1965–1978) is a fire risk many Ontario insurers won't cover. Learn the dangers, cost to fix, and what to ask your inspector.",
     excerpt: "Aluminum wiring was installed in thousands of GTA homes during the 1960s and 70s. Here's what buyers need to know about insurance, fire risk, and remediation options.",
     category: "Electrical Safety",
