@@ -3,15 +3,15 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import { Link } from "react-router-dom";
 
 export default function MoldInspection() {
-  const pageTitle = "Mold Inspection & Testing Toronto | AIHA Lab Results | ASADS";
-  const schemaDescription = "Certified mold testing in Toronto & GTA from $299. Air sampling, black mold ID, AIHA-accredited lab. Independent — we don't do remediation. Fast written results.";
+  const pageTitle = "Mold Inspection & Testing Toronto | From $299 | ASADS";
+  const schemaDescription = "Certified mold inspection & testing in Toronto and GTA from $299. Air sampling, black mold identification, AIHA lab results. Independent inspector — not remediation.";
 
   return (
     <ServicePageTemplate
       title="Mold Inspection, Testing & Assessment"
       metaTitle={pageTitle}
       metaDescription={schemaDescription}
-      heroTitle="Certified Mold Inspection, Testing & Assessment — Lab-Certified Results"
+      heroTitle="Mold Inspection & Mold Testing Toronto — Certified, Independent, Lab-Confirmed"
       heroSubtitle={
         <>
           Protect your home and health with AIHA-certified lab testing across Ontario. We detect toxic black mold, hidden moisture, and water-damage-related spores with 99.9% accuracy.
@@ -33,7 +33,7 @@ export default function MoldInspection() {
         <div className="space-y-6">
           <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl mb-2">
             <p className="text-blue-900 text-sm font-medium">
-              <strong>Inspection & testing only — not remediation.</strong> ASADS is an independent third-party inspector. We do not perform mold removal, which means our assessments are fully unbiased. We provide the written scope of work that licensed remediation contractors use to quote your job.
+              <strong>Mold inspection & testing only — we do not do remediation or removal.</strong> ASADS is a certified independent third-party inspector. Because we have no financial interest in finding mold or recommending removal, our assessments are 100% unbiased. We provide the written scope of work that licensed remediation contractors use to quote your job.
             </p>
           </div>
           <p className="text-lg leading-relaxed text-slate-700">
@@ -173,6 +173,55 @@ export default function MoldInspection() {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Mold Testing vs Mold Inspection — What's the Difference?</h3>
+            <div className="overflow-x-auto mb-4">
+              <table className="w-full text-sm text-left border-collapse">
+                <thead>
+                  <tr className="bg-purple-100 text-slate-800">
+                    <th className="p-3 font-semibold border border-purple-200">Service</th>
+                    <th className="p-3 font-semibold border border-purple-200">What It Covers</th>
+                    <th className="p-3 font-semibold border border-purple-200">Best For</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { svc: "Visual Mold Inspection", covers: "Inspector identifies visible mold, moisture damage, and conditions favourable to mold growth", best: "Initial assessment, landlord disputes, quick check" },
+                    { svc: "Mold Air Testing", covers: "Calibrated pump captures airborne spores; AIHA lab counts and identifies species", best: "Hidden mold, health concerns, pre/post remediation" },
+                    { svc: "Surface Swab / Tape-Lift", covers: "Direct sample from a suspect surface confirms species and concentration", best: "Visible growth that needs species ID for remediation scope" },
+                    { svc: "Post-Remediation Clearance Test", covers: "Air samples after removal confirm spore levels returned to baseline", best: "Real estate closings, insurance documentation, tenant-landlord resolution" },
+                  ].map(({ svc, covers, best }) => (
+                    <tr key={svc} className="border-b border-purple-100 even:bg-purple-50/40">
+                      <td className="p-3 border border-purple-100 font-medium text-slate-800">{svc}</td>
+                      <td className="p-3 border border-purple-100 text-slate-600">{covers}</td>
+                      <td className="p-3 border border-purple-100 text-slate-600">{best}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-slate-700">Most clients book a <strong>combined inspection + air test</strong> — the inspector visually identifies risk areas, then takes targeted air samples in the highest-concern zones rather than sampling blindly.</p>
+          </div>
+
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-2">Same-Day Mold Inspection Near Me — Toronto & GTA</h3>
+            <p className="text-slate-700 mb-2">Searching for <em>mold inspection near me</em> or need same-day service? ASADS inspectors are available across Toronto, Mississauga, Brampton, Hamilton, Oakville, Etobicoke, North York, Scarborough, and 100+ Ontario cities. Emergency mold inspection is available when you can't wait:</p>
+            <ul className="space-y-1 text-slate-700">
+              {[
+                "Tenant or landlord requiring documented evidence within 24 hours",
+                "Real estate conditional period expiring — inspection needed same day",
+                "Health symptoms requiring immediate investigation",
+                "Water damage or flooding within the last 48 hours",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <ShieldAlert className="text-amber-500 flex-shrink-0 mt-0.5" size={16} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-3 font-semibold text-slate-800">Call <a href="tel:6478019311" className="text-blue-700 underline">(647) 801-9311</a> for same-day mold inspection booking.</p>
           </div>
 
           <div>

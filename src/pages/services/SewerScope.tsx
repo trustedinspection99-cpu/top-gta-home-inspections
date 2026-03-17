@@ -2,16 +2,16 @@ import { Video, Search, Map, AlertCircle, ShieldCheck, Clock, DollarSign, ListCh
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function SewerScope() {
-  const pageTitle = "Sewer Scope Inspection Toronto | $299 | CCTV Drain Camera | ASADS";
-  const metaDescription = "HD sewer camera inspection from $299. Detects root intrusion, bellied pipes & cracks before you buy. GPS mapping, same-day video report. Don't skip this.";
+  const pageTitle = "Sewer Scope Inspection Toronto | From $299 | ASADS";
+  const metaDescription = "Sewer scope inspection from $299. CCTV drain camera finds root intrusion, pipe bellies & cracks before you buy. GPS mapping, same-day video report. GTA & Ontario.";
 
   return (
     <ServicePageTemplate
       title="Sewer Camera Inspection"
       metaTitle={pageTitle}
       metaDescription={metaDescription}
-      heroTitle="HD Sewer Camera Inspection & Drain Scope"
-      heroSubtitle="Don't inherit a $20,000 plumbing disaster. Our sewer camera inspection and drain scope service uses 1080p HD CCTV to reveal the true condition of your underground lateral lines before you close."
+      heroTitle="Sewer Scope Inspection & CCTV Drain Camera — Toronto & Ontario"
+      heroSubtitle="Don't inherit a $20,000 plumbing disaster. Our sewer scope inspection uses 1080p HD CCTV to reveal the true condition of your underground lateral lines before you close. From $299 — same-day video report."
       icon={Video}
       price="From $299"
       duration="1-2 Hours"
@@ -42,6 +42,43 @@ export default function SewerScope() {
             We provide a narrated video file the same day, giving you the immediate
             leverage needed for real estate negotiations.
           </p>
+
+          {/* Cost table */}
+          <div className="mt-6 bg-green-50 border border-green-200 rounded-xl p-5">
+            <h3 className="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+              <DollarSign className="text-green-600" size={22} />
+              Sewer Scope Inspection Cost Ontario 2026
+            </h3>
+            <p className="text-slate-700 mb-4">
+              The cost of a sewer scope (CCTV drain camera) inspection in Ontario depends on property type and access. Here is what to expect:
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm text-left border-collapse">
+                <thead>
+                  <tr className="bg-green-100 text-slate-800">
+                    <th className="p-3 font-semibold border border-green-200">Service</th>
+                    <th className="p-3 font-semibold border border-green-200">Cost</th>
+                    <th className="p-3 font-semibold border border-green-200">Includes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { svc: "Standard sewer scope", cost: "From $299", inc: "HD video, written report, same-day cloud delivery" },
+                    { svc: "Sewer scope + GPS Sonde mapping", cost: "From $349", inc: "Above + exact defect location marked above ground" },
+                    { svc: "Add-on to home inspection", cost: "From $199", inc: "Discounted when booked with pre-purchase inspection" },
+                    { svc: "Commercial property", cost: "Quote", inc: "Larger laterals, multiple access points" },
+                  ].map(({ svc, cost, inc }) => (
+                    <tr key={svc} className="border-b border-green-100 even:bg-green-50/50">
+                      <td className="p-3 border border-green-100 font-medium text-slate-800">{svc}</td>
+                      <td className="p-3 border border-green-100 font-bold text-green-700">{cost}</td>
+                      <td className="p-3 border border-green-100 text-slate-600">{inc}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-slate-500 mt-3">Prices listed are for residential properties in the Greater Toronto Area. Rates may vary for properties without a dedicated cleanout. We serve all of Ontario — call (647) 801-9311 for a quote.</p>
+          </div>
 
           {/* When do you need a sewer scope */}
           <div className="mt-6">
@@ -118,11 +155,11 @@ export default function SewerScope() {
             </ol>
           </div>
 
-          {/* Cost section */}
+          {/* What's included */}
           <div className="mt-6 bg-green-50 border border-green-100 rounded-xl p-5">
             <h3 className="text-xl font-bold text-slate-800 mb-2 flex items-center gap-2">
               <DollarSign className="text-green-600" size={22} />
-              Sewer Scope Inspection Cost in Toronto
+              What's Included in Every Sewer Scope
             </h3>
             <p className="text-slate-700 mb-3">
               Our sewer camera inspection starts at <strong>$299</strong> and includes:
