@@ -1373,8 +1373,8 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-cannington",
     city: "Cannington",
     region: "Durham Region",
-    metaTitle: "Home Inspection Cannington | Certified Inspector | ASADS",
-    metaDescription: "Certified Cannington home inspector. Roof, foundation & structural inspection for rural properties & farms. Well, septic & thermal imaging expertise.",
+    metaTitle: "Home Inspection Cannington | Rural Property Specialist | ASADS",
+    metaDescription: "Certified home inspector in Cannington. Rural specialist — roof, foundation, well & septic inspection. From $399, same-day digital report. Call (647) 801-9311.",
     description: "Cannington's premier certified rural property inspector for private systems assessment, farm inspections & thermal imaging diagnostics.",
     neighborhoods: [
       "Downtown Cannington", "West Cannington", "East Cannington", "Rural Brock"
@@ -1777,8 +1777,8 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-maple",
     city: "Maple",
     region: "York Region",
-    metaTitle: "Home Inspection Maple | Certified Inspector | ASADS",
-    metaDescription: "Certified Maple home inspector. Roof, PDI & electrical inspection for family homes & new construction. Thermal imaging, Vaughan specialist. Same-day.",
+    metaTitle: "Home Inspection Maple ON | PDI & New Construction | ASADS",
+    metaDescription: "Certified home inspector in Maple, ON. Pre-purchase, PDI & new construction specialist. From $399, same-day digital report. Vaughan & York Region. Call (647) 801-9311.",
     description: "Maple's trusted certified inspector for family home pre-purchase inspections & new construction warranty reviews.",
     neighborhoods: ["Maple Village", "Carrville", "Vellore", "Beverley Glen"],
     phoneNumber: "(647) 801-9311",

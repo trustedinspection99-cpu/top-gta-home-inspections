@@ -171,8 +171,8 @@ export default function Booking() {
   return (
     <Layout>
       <Helmet>
-        <title>Book a Certified Home Inspector in Ontario | ASADS</title>
-        <meta name="description" content="Book your certified Ontario home inspection in minutes. Same-day appointments available. Pre-purchase, condo, radon, mold & more. Call (647) 801-9311." />
+        <title>Book a Home Inspection Toronto &amp; Ontario | ASADS</title>
+        <meta name="description" content="Book a certified home inspection in Toronto online — same-day appointments available. Pre-purchase, condo, mold, radon & more. OAHI certified. Call (647) 801-9311." />
         <link rel="canonical" href="https://www.asads.ca/booking" />
         <meta property="og:title" content="Book a Home Inspection Online in Ontario | ASADS" />
         <meta property="og:description" content="Book your certified Ontario home inspection in minutes. Same-day appointments available. Pre-purchase, condo, radon, mold & more. Call (647) 801-9311." />

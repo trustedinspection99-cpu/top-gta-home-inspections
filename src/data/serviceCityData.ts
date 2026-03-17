@@ -245,10 +245,10 @@ export const serviceDefinitions: ServiceDef[] = [
     shortName: "Thermal Imaging",
     price: "From $199",
     duration: "Add-On or 1–2 Hours Standalone",
-    metaTitleTemplate: "Thermal Imaging Inspection {city} | Infrared | ASADS",
+    metaTitleTemplate: "Thermographic & Thermal Imaging {city} | Infrared | ASADS",
     metaDescTemplate:
-      "FLIR thermal imaging in {city} finds hidden moisture, missing insulation & electrical hotspots without opening walls. Same-day results. Call (647) 801-9311.",
-    heroTitle: "Thermal Imaging Inspection in {city}",
+      "Certified thermographic inspection in {city}. FLIR infrared finds hidden moisture, insulation gaps & electrical faults. From $199. Same-day. (647) 801-9311.",
+    heroTitle: "Thermographic & Thermal Imaging Inspection in {city}",
     whatWeCheck: [
       "Hidden moisture behind walls & ceilings",
       "Missing or insufficient insulation",
