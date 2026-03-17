@@ -78,6 +78,8 @@ export function ServicePageTemplate({
 }: ServicePageTemplateProps) {
   const location = useLocation();
   const serviceUrl = getCanonicalUrl(location.pathname);
+  // Extract service slug from URL e.g. /services/mold-inspection → "mold-inspection"
+  const serviceSlug = location.pathname.replace('/services/', '').split('/')[0];
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -364,14 +366,14 @@ export function ServicePageTemplate({
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-            {featuredLocations.map((location) => (
+            {featuredLocations.map((loc) => (
               <Link
-                key={location.slug}
-                to={`/locations/${location.slug}`}
+                key={loc.slug}
+                to={`/services/${serviceSlug}/${loc.slug.replace('home-inspection-', '')}`}
                 className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
               >
                 <MapPin className="h-4 w-4 text-primary flex-shrink-0" aria-hidden="true" />
-                {location.name}
+                {loc.name}
               </Link>
             ))}
           </div>
