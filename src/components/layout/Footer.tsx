@@ -130,6 +130,24 @@ export function Footer() {
         </div>
       </div>
 
+      {/* Partner callout */}
+      <div className="border-t border-primary-foreground/10 py-6">
+        <div className="container">
+          <p className="text-primary-foreground/50 text-xs uppercase tracking-wider font-semibold mb-2">Trusted Partner</p>
+          <p className="text-primary-foreground/70 text-sm">
+            Need repairs or maintenance after your inspection?{' '}
+            <a
+              href="https://www.protasker.ca"
+              target="_blank"
+              rel="noopener"
+              className="text-accent hover:text-accent/80 font-semibold transition-colors"
+            >
+              Pro Tasker — Ontario's certified home service network →
+            </a>
+          </p>
+        </div>
+      </div>
+
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
         <div className="container py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
