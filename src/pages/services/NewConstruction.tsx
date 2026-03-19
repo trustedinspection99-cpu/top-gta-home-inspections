@@ -116,26 +116,106 @@ export default function NewConstruction() {
   const location = useLocation();
   const serviceUrl = getCanonicalUrl(location.pathname);
 
-  // --- FULL 7-SCHEMA SUITE ---
-  const schemas = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "PDI Inspection & New Construction Inspection",
-      "provider": { "@type": "LocalBusiness", "name": "ASADS Home Inspection" },
-      "description": metaDescription,
-      "areaServed": "Ontario"
+  // Schema 1: LocalBusiness
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ASADS Home Inspection",
+    "image": `${SITE_URL}/images/logo.png`,
+    "@id": SITE_URL,
+    "url": SITE_URL,
+    "telephone": "+16478019311",
+    "email": "info@asads.ca",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "45 Duckworth Rd",
+      "addressLocality": "Cambridge",
+      "addressRegion": "ON",
+      "postalCode": "N3H 0C1",
+      "addressCountry": "CA"
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-      }))
-    }
-  ];
+    "geo": { "@type": "GeoCoordinates", "latitude": 43.3990, "longitude": -80.3271 },
+    "areaServed": featuredLocations.map(loc => ({ "@type": "City", "name": loc.name })),
+    "priceRange": "$$",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 247 }
+  };
+
+  // Schema 2: Service
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "PDI Inspection & New Construction Inspection",
+    "provider": { "@type": "LocalBusiness", "name": "ASADS Home Inspection" },
+    "description": metaDescription,
+    "offers": { "@type": "Offer", "priceCurrency": "CAD", "priceRange": price },
+    "areaServed": { "@type": "State", "name": "Ontario" }
+  };
+
+  // Schema 3: FAQPage
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+    }))
+  };
+
+  // Schema 4: BreadcrumbList
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": getCanonicalUrl("/") },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": getCanonicalUrl("/services") },
+      { "@type": "ListItem", "position": 3, "name": "New Construction Inspection", "item": serviceUrl }
+    ]
+  };
+
+  // Schema 5: Organization
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ASADS Home Inspection",
+    "url": SITE_URL,
+    "logo": `${SITE_URL}/images/logo.png`,
+    "sameAs": [
+      "https://www.facebook.com/share/1ZhWQk97YY/",
+      "https://www.instagram.com/asads_home_inspection"
+    ]
+  };
+
+  // Schema 6: WebPage
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": metaTitle,
+    "description": metaDescription,
+    "url": serviceUrl,
+    "inLanguage": "en-CA",
+    "isPartOf": { "@type": "WebSite", "name": "ASADS Home Inspection", "url": SITE_URL }
+  };
+
+  // Schema 7: ProfessionalService
+  const professionalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "ASADS Home Inspection - New Construction & PDI",
+    "image": `${SITE_URL}/images/og-default.jpg`,
+    "priceRange": "$$",
+    "telephone": "+16478019311",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "45 Duckworth Rd",
+      "addressLocality": "Cambridge",
+      "addressRegion": "ON",
+      "postalCode": "N3H 0C1",
+      "addressCountry": "CA"
+    },
+    "url": serviceUrl,
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.9, "bestRating": 5, "worstRating": 1, "reviewCount": 247 }
+  };
 
   return (
     <Layout>
@@ -158,9 +238,13 @@ export default function NewConstruction() {
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={`${SITE_URL}/images/og-default.jpg`} />
-        {schemas.map((schema, i) => (
-          <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
-        ))}
+        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(professionalServiceSchema)}</script>
       </Helmet>
 
             <HeroBookingSection
@@ -185,7 +269,7 @@ export default function NewConstruction() {
               <div className="prose prose-lg max-w-none">
                 <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">Independent Audit for New Ontario Homes</h2>
                 <div className="text-muted-foreground space-y-4">
-                  <p>In the rush to meet closing deadlines, builders often overlook critical details. Our **New Construction Audit** acts as your independent quality control, ensuring your new Ontario home meets professional standards—not just the bare minimum code.</p>
+                  <p>In the rush to meet closing deadlines, builders often overlook critical details. Our <strong>New Construction Audit</strong> acts as your independent quality control, ensuring your new Ontario home meets professional standards—not just the bare minimum code.</p>
                   
                   
 
@@ -361,7 +445,7 @@ export default function NewConstruction() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {featuredLocations.map((loc) => (
-              <Link key={loc.slug} to={`/locations/${loc.slug}`} className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 transition-colors text-sm text-foreground">
+              <Link key={loc.slug} to={`/services/new-construction/${loc.slug.replace('home-inspection-', '')}`} className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 transition-colors text-sm text-foreground">
                 <MapPin className="h-4 w-4 text-primary flex-shrink-0" />{loc.name}
               </Link>
             ))}

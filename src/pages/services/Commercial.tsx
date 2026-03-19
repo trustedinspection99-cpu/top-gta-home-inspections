@@ -143,16 +143,10 @@ export default function Commercial() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 43.653226,
-      "longitude": -79.383184
+      "latitude": 43.3990,
+      "longitude": -80.3271
     },
-    "areaServed": [
-      { "@type": "State", "name": "Ontario" },
-      { "@type": "City", "name": "Toronto" },
-      { "@type": "City", "name": "Mississauga" },
-      { "@type": "City", "name": "Brampton" },
-      { "@type": "City", "name": "Vaughan" }
-    ],
+    "areaServed": featuredLocations.map(loc => ({ "@type": "City", "name": loc.name })),
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -343,8 +337,8 @@ export default function Commercial() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 43.653226,
-      "longitude": -79.383184
+      "latitude": 43.3990,
+      "longitude": -80.3271
     },
     "url": serviceUrl,
     "paymentAccepted": "Cash, Credit Card, Debit, E-Transfer, Corporate Billing",
@@ -356,36 +350,6 @@ export default function Commercial() {
       "worstRating": 1,
       "reviewCount": 247
     },
-    "review": [
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Commercial Real Estate Investor"
-        },
-        "datePublished": "2025-01-20",
-        "reviewBody": "Exceptional commercial PCA service. The detailed capital expenditure forecast saved us from overpaying on a retail plaza. The thermal imaging identified hidden electrical issues that would have cost thousands to repair.",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": 5,
-          "bestRating": 5
-        }
-      },
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Property Management Firm"
-        },
-        "datePublished": "2025-01-10",
-        "reviewBody": "Professional commercial inspection team that understands investor needs. Their combined PCA and Phase 1 ESA report was comprehensive and helped secure financing. The 20-year CapEx forecast is invaluable for portfolio planning.",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": 5,
-          "bestRating": 5
-        }
-      }
-    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Commercial Inspection Services",
