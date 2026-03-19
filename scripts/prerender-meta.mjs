@@ -249,6 +249,55 @@ const defaultNav = nav([
   ['Pages', aLinks([['/', 'Home'],['/services','Services'],['/locations','Locations'],['/blog','Blog'],['/pricing','Pricing'],['/booking','Book Now'],['/about','About'],['/contact','Contact'],['/faq','FAQ']])],
 ]);
 
+// ─── Breadcrumb schema builder ────────────────────────────────────────────────
+
+function buildBreadcrumbSchema(pagePath, parts) {
+  const items = [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL + "/" }
+  ];
+
+  if (parts[0] === 'services') {
+    items.push({ "@type": "ListItem", "position": 2, "name": "Services", "item": BASE_URL + "/services" });
+    if (parts.length >= 2) {
+      const sName = serviceNames[parts[1]] || parts[1];
+      items.push({ "@type": "ListItem", "position": 3, "name": sName, "item": `${BASE_URL}/services/${parts[1]}` });
+      if (parts.length === 3) {
+        const cName = allCityNames[parts[2]] || parts[2];
+        items.push({ "@type": "ListItem", "position": 4, "name": cName, "item": BASE_URL + pagePath });
+      }
+    }
+  } else if (parts[0] === 'locations') {
+    items.push({ "@type": "ListItem", "position": 2, "name": "Service Areas", "item": BASE_URL + "/locations" });
+    if (parts.length === 2) {
+      const cSlug = parts[1].replace(/^home-inspection-/, '');
+      const cName = allCityNames[cSlug] || cSlug;
+      items.push({ "@type": "ListItem", "position": 3, "name": cName, "item": BASE_URL + pagePath });
+    }
+  } else if (parts[0] === 'blog') {
+    items.push({ "@type": "ListItem", "position": 2, "name": "Blog", "item": BASE_URL + "/blog" });
+    if (parts.length >= 2) {
+      const bTitle = (blogTitles[parts[1]] || parts[1]).replace(/ \|.*$/, '').trim();
+      items.push({ "@type": "ListItem", "position": 3, "name": bTitle, "item": `${BASE_URL}/blog/${parts[1]}` });
+      if (parts.length === 3) {
+        const cName = allCityNames[parts[2]] || parts[2];
+        items.push({ "@type": "ListItem", "position": 4, "name": cName, "item": BASE_URL + pagePath });
+      }
+    }
+  } else {
+    return null; // homepage + static pages — no breadcrumb needed
+  }
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items
+  };
+
+  // Escape </script> inside JSON to prevent HTML parsing issues
+  const json = JSON.stringify(schema).replace(/<\/script>/gi, '<\\/script>');
+  return `<script type="application/ld+json">${json}</script>`;
+}
+
 // ─── Generate per-page HTML files ─────────────────────────────────────────────
 
 let count = 0;
@@ -353,6 +402,12 @@ for (const page of pages) {
   html = html.replace(/<meta name="description"[^>]*\/?>/g, '');
   html = html.replace('<meta name="robots"', () => `<meta data-rh="true" name="description" content="${d}" />\n    <meta name="robots"`);
   html = html.replace(/<div id="root">[\s\S]*?<\/div>/, () => `<div id="root"><h1 style="font-size:1.5rem;font-weight:700;padding:1rem">${h1}</h1>${linksHtml}</div>`);
+
+  // Inject breadcrumb JSON-LD into <head> so Googlebot sees it without JS
+  const breadcrumbSchema = buildBreadcrumbSchema(page.path, parts);
+  if (breadcrumbSchema) {
+    html = html.replace('</head>', () => `${breadcrumbSchema}\n</head>`);
+  }
 
   // Write file
   const dir = resolve(DIST, ...page.path.split('/').filter(Boolean));
