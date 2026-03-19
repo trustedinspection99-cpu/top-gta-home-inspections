@@ -194,22 +194,8 @@ serviceDefs.forEach(svc => {
   });
 });
 
-// ─── Blog × City cross-pages ──────────────────────────────────────────────────
-
-blogs.forEach(b => {
-  locationSlugs.forEach(loc => {
-    const city = loc.city;
-    const rawTitle = `${b.title} | ${city}, Ontario`;
-    const title = rawTitle.length > 70 ? rawTitle.slice(0, 67) + '...' : rawTitle;
-    const rawDesc = `${b.desc} Serving ${city} homeowners & buyers.`;
-    const desc = rawDesc.length > 160 ? rawDesc.slice(0, 157) + '...' : rawDesc;
-    pages.push({
-      path: `/blog/${b.slug}/${loc.citySlug}`,
-      title,
-      desc,
-    });
-  });
-});
+// Blog × City cross-pages are noindex — excluded from prerender to save build time
+// Crawl budget should be focused on service×city pages instead
 
 // ─── HTML helpers ─────────────────────────────────────────────────────────────
 
@@ -428,37 +414,19 @@ for (const page of pages) {
     }
     linksHtml = nav([
       [`Services in ${allCityNames[cSlug] || cSlug}`, aLinks(allServiceSlugs.map(s => [`/services/${s}/${cSlug}`, serviceNames[s]]))],
-      [`Inspection guides for ${allCityNames[cSlug] || cSlug}`, aLinks(allBlogSlugs.slice(0, 8).map(s => [`/blog/${s}/${cSlug}`, (blogTitles[s] || s).slice(0, 35) + '...']))],
+      ['Inspection guides', aLinks(allBlogSlugs.slice(0, 8).map(s => [`/blog/${s}`, (blogTitles[s] || s).slice(0, 35) + '...']))],
       ['Nearby cities', aLinks(nearby.map(c => [`/locations/home-inspection-${c}`, allCityNames[c]]))],
       ['Home', aLinks([['/', 'Home'],['/services','All Services'],['/locations','All Cities']])],
     ]);
 
   } else if (parts[0] === 'blog' && parts.length === 2) {
-    // /blog/:slug — city versions + related posts
+    // /blog/:slug — related posts + service links
     const bSlug = parts[1];
     const bi = allBlogSlugs.indexOf(bSlug);
     const relPosts = [1, 2, 3].map(d => allBlogSlugs[(bi + d) % allBlogSlugs.length]);
     linksHtml = nav([
-      ['Read in your city', aLinks(allCitySlugs.slice(0, 12).map(c => [`/blog/${bSlug}/${c}`, allCityNames[c]]))],
       ['Related articles', aLinks(relPosts.map(s => [`/blog/${s}`, (blogTitles[s] || s).slice(0, 35) + '...']))],
-      ['Home', aLinks([['/', 'Home'],['/blog','All Articles'],['/services','Services']])],
-    ]);
-
-  } else if (parts[0] === 'blog' && parts.length === 3) {
-    // /blog/:slug/:city — nearby cities + related posts
-    const bSlug = parts[1];
-    const cSlug = parts[2];
-    const ci = allCitySlugs.indexOf(cSlug);
-    const nearby = [];
-    for (let d = 1; d <= 3; d++) {
-      nearby.push(allCitySlugs[(ci - d + allCitySlugs.length) % allCitySlugs.length]);
-      nearby.push(allCitySlugs[(ci + d) % allCitySlugs.length]);
-    }
-    const bi = allBlogSlugs.indexOf(bSlug);
-    const relPosts = [1, 2].map(d => allBlogSlugs[(bi + d) % allBlogSlugs.length]);
-    linksHtml = nav([
-      ['Also reading in', aLinks(nearby.map(c => [`/blog/${bSlug}/${c}`, allCityNames[c]]))],
-      ['Related articles', aLinks(relPosts.map(s => [`/blog/${s}/${cSlug}`, (blogTitles[s] || s).slice(0, 35) + '...']))],
+      ['Our services', aLinks(allServiceSlugs.slice(0, 6).map(s => [`/services/${s}`, serviceNames[s]]))],
       ['Home', aLinks([['/', 'Home'],['/blog','All Articles'],['/services','Services']])],
     ]);
   }

@@ -92,13 +92,8 @@ serviceSlugs.forEach(svc => {
   lines.push('');
 });
 
-// Blog × City cross-pages (clean city slug: /blog/mold-prevention-tips/brampton)
-blogSlugs.forEach(blog => {
-  citySlugs.forEach(city => {
-    lines.push(url(`/blog/${blog}/${city}`, '0.5'));
-  });
-  lines.push('');
-});
+// Blog × City cross-pages are noindex — excluded from sitemap to protect crawl budget
+// Google should focus on the 1,484 service×city pages instead
 
 lines.push('</urlset>');
 
@@ -108,7 +103,6 @@ const sitemap = lines.join('\n');
 writeFileSync(resolve(ROOT, 'public/sitemap.xml'), sitemap, 'utf8');
 
 const svcCity = serviceSlugs.length * citySlugs.length;
-const blogCity = blogSlugs.length * citySlugs.length;
-const total = 13 + servicePages.length + locationSlugs.length + blogSlugs.length + svcCity + blogCity;
+const total = 13 + servicePages.length + locationSlugs.length + blogSlugs.length + svcCity;
 console.log(`✓ Sitemap generated: ${total} URLs → public/sitemap.xml`);
-console.log(`  Static: 13 | Services: ${servicePages.length} | Locations: ${locationSlugs.length} | Blog: ${blogSlugs.length} | Service×City: ${svcCity} | Blog×City: ${blogCity}`);
+console.log(`  Static: 13 | Services: ${servicePages.length} | Locations: ${locationSlugs.length} | Blog: ${blogSlugs.length} | Service×City: ${svcCity} | Blog×City: excluded (noindex)`);

@@ -197,6 +197,7 @@ export default function BlogCityPage() {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDesc} />
         <link rel="canonical" href={canonical} />
+        <meta name="robots" content="noindex, follow" />
         <meta property="og:site_name" content="ASADS Home Inspection" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={metaTitle} />
