@@ -129,19 +129,6 @@ const ontarioCities = [
   { name: "Brantford", slug: "home-inspection-brantford" },
 ];
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": SITE_URL
-    }
-  ]
-};
-
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -244,7 +231,6 @@ const Index = () => {
         <meta name="keywords" content="home inspector ontario, house inspection ontario, home inspection ontario, certified home inspector, home inspector near me, same day home inspection, home inspection GTA, home inspector toronto, mold inspection ontario, mold testing ontario, pre-listing home inspection ontario, home inspection cost ontario, WETT inspection ontario, PDI inspection ontario, asbestos testing ontario, radon testing ontario, commercial inspection ontario" />
         
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
       </Helmet>
 

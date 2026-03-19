@@ -273,35 +273,16 @@ function buildBreadcrumbSchema(pagePath, parts) {
     { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL + "/" }
   ];
 
-  if (parts[0] === 'services') {
-    items.push({ "@type": "ListItem", "position": 2, "name": "Services", "item": BASE_URL + "/services" });
-    if (parts.length >= 2) {
-      const sName = serviceNames[parts[1]] || parts[1];
-      items.push({ "@type": "ListItem", "position": 3, "name": sName, "item": `${BASE_URL}/services/${parts[1]}` });
-      if (parts.length === 3) {
-        const cName = allCityNames[parts[2]] || parts[2];
-        items.push({ "@type": "ListItem", "position": 4, "name": cName, "item": BASE_URL + pagePath });
-      }
-    }
-  } else if (parts[0] === 'locations') {
+  if (parts[0] === 'locations') {
     items.push({ "@type": "ListItem", "position": 2, "name": "Service Areas", "item": BASE_URL + "/locations" });
     if (parts.length === 2) {
       const cSlug = parts[1].replace(/^home-inspection-/, '');
       const cName = allCityNames[cSlug] || cSlug;
       items.push({ "@type": "ListItem", "position": 3, "name": cName, "item": BASE_URL + pagePath });
     }
-  } else if (parts[0] === 'blog') {
-    items.push({ "@type": "ListItem", "position": 2, "name": "Blog", "item": BASE_URL + "/blog" });
-    if (parts.length >= 2) {
-      const bTitle = (blogTitles[parts[1]] || parts[1]).replace(/ \|.*$/, '').trim();
-      items.push({ "@type": "ListItem", "position": 3, "name": bTitle, "item": `${BASE_URL}/blog/${parts[1]}` });
-      if (parts.length === 3) {
-        const cName = allCityNames[parts[2]] || parts[2];
-        items.push({ "@type": "ListItem", "position": 4, "name": cName, "item": BASE_URL + pagePath });
-      }
-    }
   } else {
-    return null; // homepage + static pages — no breadcrumb needed
+    return null; // All other pages (services, blog, homepage, static) have their own
+                 // BreadcrumbList in their React page components via Helmet.
   }
 
   const schema = {

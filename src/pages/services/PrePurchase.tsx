@@ -304,7 +304,6 @@
        "name": "ASADS Home Inspection",
        "url": SITE_URL
      },
-     "breadcrumb": breadcrumbSchema,
      "mainEntity": {
        "@type": "Service",
        "serviceType": "Pre-Purchase Home Inspection"

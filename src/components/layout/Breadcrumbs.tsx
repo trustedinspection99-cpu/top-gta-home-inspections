@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -10,7 +9,6 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Home } from "lucide-react";
 import { blogPostsData } from "@/data/blogPosts";
-import { SITE_URL } from "@/lib/seo";
 
 const routeLabels: Record<string, string> = {
   services: "Services",
@@ -179,43 +177,12 @@ const Breadcrumbs = () => {
     return { path, label, isLast };
   });
 
-  // Generate BreadcrumbList schema only for cross-pages (/services/svc/city, /blog/slug/city).
-  // Location pages (/locations/home-inspection-*) have their BreadcrumbList injected by
-  // prerender-meta.mjs into the static HTML, so we skip it here to avoid duplicates.
-  // All other pages (main pages, service landing pages, blog posts) have their own schemas.
-  const isLocationPage = location.pathname.startsWith("/locations/home-inspection-");
-  const isCrossPage = pathSegments.length >= 3;
-  const hasOwnSchema = !isCrossPage || isLocationPage;
-
-  // Generate BreadcrumbList JSON-LD schema
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: SITE_URL,
-      },
-      ...breadcrumbItems.map((item, index) => ({
-        "@type": "ListItem",
-        position: index + 2,
-        name: item.label,
-        item: `${SITE_URL}${item.path}`,
-      })),
-    ],
-  };
+  // All page components emit their own BreadcrumbList via Helmet.
+  // Location pages get theirs from prerender-meta.mjs.
+  // This component only renders the visual breadcrumb nav — no schema.
 
   return (
     <>
-      {!hasOwnSchema && (
-        <Helmet>
-          <script type="application/ld+json">
-            {JSON.stringify(breadcrumbSchema)}
-          </script>
-        </Helmet>
-      )}
       <nav aria-label="Breadcrumb" className="bg-muted/50 border-b border-border">
         <div className="container mx-auto px-4 py-3">
           <Breadcrumb>

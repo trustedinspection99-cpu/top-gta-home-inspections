@@ -329,7 +329,6 @@ export default function Commercial() {
       "name": "ASADS Home Inspection",
       "url": SITE_URL
     },
-    "breadcrumb": breadcrumbSchema,
     "mainEntity": {
       "@type": "Service",
       "serviceType": "Commercial Property Condition Assessment & Phase 1 ESA"
