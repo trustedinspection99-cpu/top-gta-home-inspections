@@ -25,22 +25,10 @@ import {
   HardHat,
   Search
 } from "lucide-react";
+import { locationData } from "@/data/locationData";
 
 // Featured locations for service pages internal linking
-const featuredLocations = [
-  { name: "Toronto", slug: "home-inspection-toronto" },
-  { name: "Mississauga", slug: "home-inspection-mississauga" },
-  { name: "Brampton", slug: "home-inspection-brampton" },
-  { name: "Vaughan", slug: "home-inspection-vaughan" },
-  { name: "Markham", slug: "home-inspection-markham" },
-  { name: "Oakville", slug: "home-inspection-oakville" },
-  { name: "Hamilton", slug: "home-inspection-hamilton" },
-  { name: "Burlington", slug: "home-inspection-burlington" },
-  { name: "Richmond Hill", slug: "home-inspection-richmond-hill" },
-  { name: "Oshawa", slug: "home-inspection-oshawa" },
-  { name: "Barrie", slug: "home-inspection-barrie" },
-  { name: "Newmarket", slug: "home-inspection-newmarket" },
-];
+const featuredLocations = locationData.map(loc => ({ name: loc.city, slug: loc.slug }));
 
 const title = "Pre-Listing Home Inspection";
 const metaTitle = "Pre-Listing Home Inspection Ontario | From $450 | ASADS";

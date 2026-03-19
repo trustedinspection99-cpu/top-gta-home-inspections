@@ -18,21 +18,9 @@ import {
   Shield,
   MapPin
 } from "lucide-react";
+import { locationData } from "@/data/locationData";
 
-const featuredLocations = [
-  { name: "Toronto", slug: "home-inspection-toronto" },
-  { name: "Mississauga", slug: "home-inspection-mississauga" },
-  { name: "Vaughan", slug: "home-inspection-vaughan" },
-  { name: "Markham", slug: "home-inspection-markham" },
-  { name: "Richmond Hill", slug: "home-inspection-richmond-hill" },
-  { name: "Oakville", slug: "home-inspection-oakville" },
-  { name: "Burlington", slug: "home-inspection-burlington" },
-  { name: "Brampton", slug: "home-inspection-brampton" },
-  { name: "Newmarket", slug: "home-inspection-newmarket" },
-  { name: "Hamilton", slug: "home-inspection-hamilton" },
-  { name: "Barrie", slug: "home-inspection-barrie" },
-  { name: "Oshawa", slug: "home-inspection-oshawa" },
-];
+const featuredLocations = locationData.map(loc => ({ name: loc.city, slug: loc.slug }));
 
 const metaTitle =
   "Condo Inspection Ontario | From $299 | Certified | ASADS";

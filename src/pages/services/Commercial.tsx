@@ -29,26 +29,10 @@ import {
   Users,
   TrendingUp
 } from "lucide-react";
+import { locationData } from "@/data/locationData";
 
 // Featured locations for service pages internal linking
-const featuredLocations = [
-  { name: "Toronto", citySlug: "toronto" },
-  { name: "Mississauga", citySlug: "mississauga" },
-  { name: "Brampton", citySlug: "brampton" },
-  { name: "Cambridge", citySlug: "cambridge" },
-  { name: "Guelph", citySlug: "guelph" },
-  { name: "Kitchener", citySlug: "kitchener" },
-  { name: "Waterloo", citySlug: "waterloo" },
-  { name: "Hamilton", citySlug: "hamilton" },
-  { name: "Vaughan", citySlug: "vaughan" },
-  { name: "Markham", citySlug: "markham" },
-  { name: "Oakville", citySlug: "oakville" },
-  { name: "Burlington", citySlug: "burlington" },
-  { name: "Richmond Hill", citySlug: "richmond-hill" },
-  { name: "Oshawa", citySlug: "oshawa" },
-  { name: "Barrie", citySlug: "barrie" },
-  { name: "Newmarket", citySlug: "newmarket" },
-];
+const featuredLocations = locationData.map(loc => ({ name: loc.city, slug: loc.slug }));
 
 const title = "Commercial Building Inspection";
 const metaTitle = "Commercial Inspection Ontario | Certified PCA | ASADS";
@@ -769,8 +753,8 @@ export default function Commercial() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {featuredLocations.map((loc) => (
               <Link
-                key={loc.citySlug}
-                to={`/services/commercial/${loc.citySlug}`}
+                key={loc.slug}
+                to={`/services/commercial/${loc.slug.replace('home-inspection-', '')}`}
                 className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
               >
                 <MapPin className="h-4 w-4 text-primary flex-shrink-0" aria-hidden="true" />

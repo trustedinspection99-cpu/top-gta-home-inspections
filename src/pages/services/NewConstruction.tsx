@@ -26,17 +26,9 @@ import {
   Droplets,
   AlertTriangle
 } from "lucide-react";
+import { locationData } from "@/data/locationData";
 
-const featuredLocations = [
-  { name: "Toronto", slug: "home-inspection-toronto" },
-  { name: "Mississauga", slug: "home-inspection-mississauga" },
-  { name: "Brampton", slug: "home-inspection-brampton" },
-  { name: "Vaughan", slug: "home-inspection-vaughan" },
-  { name: "Markham", slug: "home-inspection-markham" },
-  { name: "Oakville", slug: "home-inspection-oakville" },
-  { name: "Milton", slug: "home-inspection-milton" },
-  { name: "Whitby", slug: "home-inspection-whitby" },
-];
+const featuredLocations = locationData.map(loc => ({ name: loc.city, slug: loc.slug }));
 
 const title = "New Construction & Tarion Warranty Inspection";
 const metaTitle = "PDI Inspection Ontario | New Construction & Tarion | ASADS";

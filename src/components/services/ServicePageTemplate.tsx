@@ -16,40 +16,10 @@ import {
   MapPin,
   LucideIcon
 } from "lucide-react";
+import { locationData } from "@/data/locationData";
 
 // Featured locations for service pages internal linking
-const featuredLocations = [
-  { name: "Toronto", slug: "home-inspection-toronto" },
-  { name: "Mississauga", slug: "home-inspection-mississauga" },
-  { name: "Brampton", slug: "home-inspection-brampton" },
-  { name: "Vaughan", slug: "home-inspection-vaughan" },
-  { name: "Markham", slug: "home-inspection-markham" },
-  { name: "Oakville", slug: "home-inspection-oakville" },
-  { name: "Hamilton", slug: "home-inspection-hamilton" },
-  { name: "Burlington", slug: "home-inspection-burlington" },
-  { name: "Richmond Hill", slug: "home-inspection-richmond-hill" },
-  { name: "Oshawa", slug: "home-inspection-oshawa" },
-  { name: "Barrie", slug: "home-inspection-barrie" },
-  { name: "Newmarket", slug: "home-inspection-newmarket" },
-  { name: "Ajax", slug: "home-inspection-ajax" },
-  { name: "Whitby", slug: "home-inspection-whitby" },
-  { name: "Pickering", slug: "home-inspection-pickering" },
-  { name: "Milton", slug: "home-inspection-milton" },
-  { name: "Guelph", slug: "home-inspection-guelph" },
-  { name: "Kitchener", slug: "home-inspection-kitchener" },
-  { name: "Cambridge", slug: "home-inspection-cambridge" },
-  { name: "Waterloo", slug: "home-inspection-waterloo" },
-  { name: "St. Catharines", slug: "home-inspection-st-catharines" },
-  { name: "Niagara Falls", slug: "home-inspection-niagara-falls" },
-  { name: "Scarborough", slug: "home-inspection-scarborough" },
-  { name: "North York", slug: "home-inspection-north-york" },
-  { name: "Etobicoke", slug: "home-inspection-etobicoke" },
-  { name: "Thornhill", slug: "home-inspection-thornhill" },
-  { name: "Stouffville", slug: "home-inspection-stouffville" },
-  { name: "Aurora", slug: "home-inspection-aurora" },
-  { name: "Caledon", slug: "home-inspection-caledon" },
-  { name: "Halton Hills", slug: "home-inspection-halton-hills" },
-];
+const featuredLocations = locationData.map(loc => ({ name: loc.city, slug: loc.slug }));
 
 interface ServiceFeature {
   title: string;
