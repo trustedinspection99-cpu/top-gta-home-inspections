@@ -487,6 +487,9 @@ for (const page of pages) {
     const sSlug = parts[1];
     const cName = allCityNames[parts[2]] || parts[2];
     faqSchema = buildFaqSchema(serviceFaqsMap[sSlug], cName);
+  } else if (parts[0] === 'services' && parts.length === 2) {
+    // /services/:svc — use same FAQs with "Ontario" substituted for {city}
+    faqSchema = buildFaqSchema(serviceFaqsMap[parts[1]], 'Ontario');
   } else if (parts[0] === 'locations' && parts.length === 2) {
     // /locations/home-inspection-:city — inject standard location FAQs
     const cSlug = parts[1].replace(/^home-inspection-/, '');
