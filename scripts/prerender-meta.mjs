@@ -131,6 +131,37 @@ function extractServiceDefs(content) {
 
 const serviceDefs = extractServiceDefs(serviceCityRaw);
 
+// Extract FAQ arrays per service slug from serviceCityData.ts
+function extractServiceFaqsMap(content) {
+  const results = {};
+  // Anchor on metaTitleTemplate — same strategy as extractServiceDefs
+  const titleRe = /metaTitleTemplate:\s*"([^"]+)"/g;
+  const titleMatches = [...content.matchAll(titleRe)];
+
+  for (let i = 0; i < titleMatches.length; i++) {
+    const before = content.substring(0, titleMatches[i].index);
+    const slugMatch = before.match(/slug:\s*"([^"]+)"\s*,?[^{]*$/);
+    if (!slugMatch) continue;
+    const slug = slugMatch[1];
+
+    const sectionStart = titleMatches[i].index;
+    const sectionEnd = i + 1 < titleMatches.length ? titleMatches[i + 1].index : content.length;
+    const section = content.substring(sectionStart, sectionEnd);
+
+    // Match { q: "...", a: "..." } pairs — handles prices with $ correctly
+    const faqRe = /\{\s*q:\s*"([^"]+)"\s*,\s*a:\s*"([^"]+)"\s*\}/g;
+    const faqs = [];
+    let m;
+    while ((m = faqRe.exec(section)) !== null) {
+      faqs.push({ q: m[1], a: m[2] });
+    }
+    if (faqs.length > 0) results[slug] = faqs;
+  }
+  return results;
+}
+
+const serviceFaqsMap = extractServiceFaqsMap(serviceCityRaw);
+
 // Extract location slugs and city names from locationData.ts
 function extractLocationSlugs(content) {
   const results = [];
@@ -298,6 +329,46 @@ function buildBreadcrumbSchema(pagePath, parts) {
   return `<script type="application/ld+json">${json}</script>`;
 }
 
+// ─── FAQ schema builder ───────────────────────────────────────────────────────
+
+// Standard FAQs for location pages — {city} placeholder replaced at runtime
+const locationPageFaqs = [
+  {
+    q: "How much does a home inspection cost in {city}?",
+    a: "Home inspections in {city} start from $399 for pre-purchase and $299 for condo inspections. Pricing depends on home size, age, and additional services like thermal imaging or mold testing. Call (647) 801-9311 for a quote."
+  },
+  {
+    q: "How long does a home inspection take in {city}?",
+    a: "A standard detached home inspection in {city} takes 2–3 hours. Condos typically take 1.5–2.5 hours. Larger or older properties may take longer. You are welcome and encouraged to attend."
+  },
+  {
+    q: "Are ASADS home inspectors certified in {city}?",
+    a: "Yes. ASADS inspectors are InterNACHI-certified and serve {city} and all surrounding areas across the GTA and Ontario. We carry full E&O insurance and deliver same-day digital reports."
+  },
+  {
+    q: "Do you provide same-day inspection reports in {city}?",
+    a: "Yes — every home inspection in {city} includes a photo-rich digital PDF report delivered the same day as the inspection, readable on any device."
+  },
+];
+
+function buildFaqSchema(faqs, city) {
+  if (!faqs || faqs.length === 0) return null;
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.slice(0, 5).map(faq => ({
+      "@type": "Question",
+      "name": city ? faq.q.replace(/\{city\}/g, city) : faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": city ? faq.a.replace(/\{city\}/g, city) : faq.a
+      }
+    }))
+  };
+  const json = JSON.stringify(schema).replace(/<\/script>/gi, '<\\/script>');
+  return `<script type="application/ld+json">${json}</script>`;
+}
+
 // ─── Generate per-page HTML files ─────────────────────────────────────────────
 
 let count = 0;
@@ -407,6 +478,23 @@ for (const page of pages) {
   const breadcrumbSchema = buildBreadcrumbSchema(page.path, parts);
   if (breadcrumbSchema) {
     html = html.replace('</head>', () => `${breadcrumbSchema}\n</head>`);
+  }
+
+  // Inject FAQPage JSON-LD into <head> so Googlebot sees it without JS
+  let faqSchema = null;
+  if (parts[0] === 'services' && parts.length === 3) {
+    // /services/:svc/:city — use serviceCityData FAQs with city substitution
+    const sSlug = parts[1];
+    const cName = allCityNames[parts[2]] || parts[2];
+    faqSchema = buildFaqSchema(serviceFaqsMap[sSlug], cName);
+  } else if (parts[0] === 'locations' && parts.length === 2) {
+    // /locations/home-inspection-:city — inject standard location FAQs
+    const cSlug = parts[1].replace(/^home-inspection-/, '');
+    const cName = allCityNames[cSlug] || cSlug;
+    faqSchema = buildFaqSchema(locationPageFaqs, cName);
+  }
+  if (faqSchema) {
+    html = html.replace('</head>', () => `${faqSchema}\n</head>`);
   }
 
   // Write file
