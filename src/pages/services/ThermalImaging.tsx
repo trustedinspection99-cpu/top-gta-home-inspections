@@ -2,16 +2,16 @@ import { Thermometer, Zap, Droplets, Home, ShieldCheck, Search } from "lucide-re
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function ThermalImaging() {
-  const pageTitle = "Thermal Imaging & Thermographic Inspection Toronto | ASADS";
-  const schemaDescription = "FLIR infrared inspection finds hidden moisture, missing insulation, electrical hotspots & heat loss without opening walls. Same-day results. GTA & Ontario.";
+  const pageTitle = "Thermal Imaging & Infrared Roof Inspection Ontario | ASADS";
+  const schemaDescription = "Thermal imaging & infrared roof inspection across Ontario. FLIR® certified thermographers detect hidden moisture, roof leaks & electrical faults. Brampton, Markham, Toronto, GTA.";
 
   return (
     <ServicePageTemplate
       title="Thermal Imaging & Thermographic Inspection"
       metaTitle={pageTitle}
       metaDescription={schemaDescription}
-      heroTitle="Thermal Imaging, Thermographic & Infrared Inspection"
-      heroSubtitle="See what standard inspections miss. Our certified thermographers use FLIR® technology for thermal imaging, thermographic inspection, and infrared inspection — detecting hidden moisture, energy loss, and electrical hazards without opening walls."
+      heroTitle="Thermal Imaging, Infrared Roof Inspection & Thermographic Scan"
+      heroSubtitle="See what standard inspections miss. FLIR®-certified thermographers perform thermal imaging, infrared roof inspection, infrared roof scans, and thermographic scanning across Brampton, Markham, Vaughan, Toronto, Burlington, Oakville, and all of Ontario — detecting hidden moisture, roof leaks, and electrical hazards without opening walls."
       icon={Search}
       price="Add-on or Standalone"
       duration="1-2 Hours"
@@ -82,6 +82,68 @@ export default function ThermalImaging() {
           </div>
 
           <div className="mt-8">
+            <h3 className="text-xl font-bold text-slate-800 mb-4">Thermal Roof Inspection & Infrared Roof Scan</h3>
+            <p className="text-slate-700 mb-4">
+              A <strong>thermal roof inspection</strong> (also called an <strong>infrared roof scan</strong>) uses temperature differences to locate moisture trapped beneath your roofing membrane — completely non-destructively and without removing any material. Water-saturated roofing insulation retains heat longer than dry material after sunset, making it clearly visible as a warm anomaly on our FLIR® cameras.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              {[
+                { title: "Flat & Low-Slope Roofs", body: "The most common application for infrared roof scanning — ponding water trapped under EPDM, TPO, or built-up roofing is undetectable visually but clearly visible via thermal imaging." },
+                { title: "Sloped Residential Roofs", body: "Ice dam damage, missing or compressed attic insulation, and wind-driven rain intrusion all show distinct thermal signatures detectable from inside the attic or top-floor ceiling." },
+                { title: "Commercial Infrared Inspection", body: "Large commercial flat roofs in the GTA — Brampton, Markham, Vaughan, Mississauga — are routinely scanned to prioritize repair areas and prevent full roof replacement." },
+                { title: "Post-Leak Verification", body: "After a roof repair, an infrared roof scan confirms the repair was effective and no residual moisture remains trapped in the insulation or deck." },
+              ].map((card, i) => (
+                <div key={i} className="bg-blue-50 border border-blue-100 rounded-xl p-4">
+                  <h4 className="font-semibold text-slate-800 mb-1">{card.title}</h4>
+                  <p className="text-slate-700 text-sm">{card.body}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-slate-600 text-sm">
+              We perform thermal roof inspections across the GTA and Ontario including <strong>Brampton, Markham, Vaughan, Burlington, Oakville, Mississauga, Toronto, Richmond Hill</strong>, and surrounding areas. Scans are typically conducted near sunset when thermal contrast is greatest.
+            </p>
+          </div>
+
+          <div className="mt-8">
+            <h3 className="text-xl font-bold text-slate-800 mb-4">Why Are Thermal Imaging Inspections Important?</h3>
+            <p className="text-slate-700 mb-3">
+              Thermal imaging inspections are important because <strong>the most expensive home defects are invisible to the naked eye</strong>. A small roof leak, a missing section of attic insulation, or a failing electrical connection can cost thousands to repair — but only if they're found. Standard visual inspections cannot detect moisture inside finished walls, heat loss behind drywall, or overloaded wiring in a breaker panel.
+            </p>
+            <ul className="space-y-2 text-slate-700 text-sm">
+              {[
+                "Hidden moisture causes mold within 24–48 hours of a leak — thermal imaging finds it before the first spore grows",
+                "Electrical hotspots from loose connections and overloaded circuits are a leading cause of house fires — they show clearly as heat anomalies on infrared",
+                "Missing attic insulation can add $400–$900 per year in wasted heating costs in Ontario — an infrared inspection finds the gaps in 60 minutes",
+                "Insurers increasingly accept thermal imaging reports as documentation for claims, pre-purchase negotiations, and renovation planning",
+                "Thermal imaging inspections pay for themselves on virtually every job where a hidden defect is found",
+              ].map((point, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <ShieldCheck className="text-blue-600 mt-0.5 shrink-0" size={16} />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-8">
+            <h3 className="text-xl font-bold text-slate-800 mb-4">Thermal Imaging Services Across Ontario</h3>
+            <p className="text-slate-700 mb-3">
+              Our certified thermographers provide <strong>thermal imaging services</strong> and <strong>infrared inspection services</strong> throughout the Greater Toronto Area and Ontario. We are frequently booked for:
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {[
+                "Thermal imaging Brampton", "Thermal imaging Markham", "Thermal imaging Toronto",
+                "Infrared inspection Brampton", "Infrared inspection Markham", "Thermal imaging Vaughan",
+                "Thermal roof inspection Burlington", "Thermal roof inspection Oakville",
+                "Thermal imaging services Mississauga", "Infrared inspection Toronto",
+                "Thermal inspections Ontario", "Commercial infrared inspection GTA",
+              ].map((tag) => (
+                <span key={tag} className="px-3 py-1 bg-slate-100 text-slate-700 text-xs rounded-full border border-slate-200">{tag}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-8">
             <h3 className="text-xl font-bold text-slate-800 mb-4">The Thermal Imaging Process</h3>
             <ol className="space-y-4">
               {[
@@ -144,6 +206,10 @@ export default function ThermalImaging() {
         "Certified thermographers for accurate results",
       ]}
       faqs={[
+        {
+          question: "Why are thermal imaging inspections important?",
+          answer: "Thermal imaging inspections are important because the most costly home defects — hidden moisture, missing insulation, electrical hotspots — are completely invisible to the naked eye. A small roof leak trapped under insulation can cause structural rot; an overloaded circuit can start a fire. Thermal imaging finds these issues in 60 minutes without opening a single wall, making it one of the highest-ROI inspections available to Ontario homeowners."
+        },
         {
           question: "Can thermal imaging see 'through' walls?",
           answer: "Not exactly. It detects surface temperature variations. Changes caused by moisture, missing insulation, or hidden electrical faults allow us to visualize hidden issues behind walls, ceilings, and floors."
