@@ -1242,49 +1242,6 @@ export const locationData: LocationData[] = [
     }
   },
   {
-    slug: "home-inspection-innisfil",
-    city: "Innisfil",
-    region: "Simcoe County",
-    metaTitle: "Home Inspection Innisfil | Lakefront Specialist",
-    metaDescription: "Certified Innisfil home inspector. Roof, foundation & water damage inspection for Lake Simcoe waterfront & rural estates. Alcona to Lefroy.",
-    description: "Innisfil's trusted waterfront & rural property inspector providing lakefront pre-purchase inspections, private systems assessment & thermal diagnostics.",
-    neighborhoods: [
-      "Alcona", "Lefroy", "Gilford", "Stroud", "Big Bay Point",
-      "Belle Ewart", "Churchill", "Cookstown", "Innisfil Beach"
-    ],
-    phoneNumber: "(647) 801-9311",
-    latitude: 44.3005,
-    longitude: -79.5667,
-    localInsights: [
-      {
-        title: "Innisfil Lake Simcoe Waterfront: Seasonal-to-Year-Round Risk",
-        content: "Innisfil's Lake Simcoe shoreline communities — Belle Ewart, Big Bay Point, and Alcona Beach — include a large inventory of original seasonal cottages now marketed as year-round residences. These conversions require rigorous inspection of insulation levels in wall and floor assemblies, heating system capacity for Simcoe County winters, water supply line frost protection, and septic system adequacy for permanent versus seasonal occupancy. Dock structural condition, boathouse framing, and shoreline stabilization are additional assessment priorities for Innisfil waterfront buyers."
-      },
-      {
-        title: "Alcona New Subdivision Drainage & Builder Deficiencies",
-        content: "Alcona — Innisfil's fastest-growing community — has seen master-planned residential development replace agricultural land at rapid pace over the past decade. New construction in Alcona requires Tarion warranty inspections to document builder deficiencies within coverage windows. Common findings include exterior grading deficiencies that direct surface water toward foundations in Innisfil's sandy to clay-mix soil conditions, HRV commissioning gaps producing inadequate fresh air exchange, and insulation voids at framing connections revealed by thermal imaging."
-      },
-      {
-        title: "Rural Innisfil Private Well & Septic Inspections",
-        content: "Properties in Innisfil's rural communities — Churchill, Cookstown, Lefroy, and the concession roads between communities — rely on private drilled wells and septic systems rather than municipal services. Well yield flow testing, certified water quality laboratory analysis for bacteria, nitrates, and mineral parameters, and septic system condition assessment are essential pre-purchase steps for rural Innisfil buyers. Our inspectors assess pump condition, pressure tank performance, distribution field accessibility, and reserve area adequacy, giving buyers complete private infrastructure status before closing."
-      },
-      {
-        title: "Pre-Listing Inspections for Innisfil Waterfront & Residential Sellers",
-        content: "Innisfil's rapid growth and increasing desirability as a Barrie-adjacent and GTA commuter community make pre-listing inspections a valuable tool for sellers across all property types. Pre-listing reports document all material conditions with photographic evidence before listing day, allowing sellers to address deficiencies proactively or price with accurate disclosure. For waterfront property sellers, comprehensive condition documentation of dock structures, seasonal systems, and foundation drainage is particularly valuable for attracting informed buyers in Innisfil's competitive recreational and commuter markets."
-      }
-    ],
-    localExpertise: {
-      title: "Home Inspection Experience in Innisfil",
-      paragraphs: [
-        "Innisfil's housing ranges from Lake Simcoe waterfront cottages in Alcona to rural properties throughout the township. Lakefront homes require erosion control and flood risk assessment.",
-        "Rural properties commonly feature private wells, septic systems, and acreage infrastructure requiring specialized thermal imaging diagnostics.",
-        "Our inspectors understand Innisfil's unique waterfront and rural construction patterns in Simcoe County, ensuring buyers make confident purchasing decisions."
-      ,
-        "Innisfil's rapid growth — accelerated by its proximity to Barrie and its expanding waterfront communities along Lake Simcoe — presents buyers with a wide spectrum of property types. Older properties in the historic Alcona and Churchill communities carry typical small-town construction concerns, while newer planned communities require attention to drainage, lot grading, and developer-standard mechanical systems. Waterfront properties throughout Innisfil's Lake Simcoe shoreline require assessment of foundation drainage, seasonal plumbing, and boathouse or dock structure conditions.",
-        "ASADS Home Inspection provides thorough residential inspection services throughout Innisfil, covering both established communities and the newer developments that are transforming this growing municipality. Our certified inspectors deliver detailed written reports with prioritized findings and photographs. Call (647) 801-9311 to schedule your Innisfil home inspection with ASADS."]
-    }
-  },
-  {
     slug: "home-inspection-uxbridge",
     city: "Uxbridge",
     region: "Durham Region",
