@@ -179,13 +179,13 @@ const Breadcrumbs = () => {
     return { path, label, isLast };
   });
 
-  // Only generate schema for pages that don't have their own BreadcrumbList:
-  // - Location city pages: /locations/home-inspection-*
-  // - Cross-pages with 3 segments: /services/{svc}/{city}, /blog/{slug}/{city}
+  // Generate BreadcrumbList schema only for cross-pages (/services/svc/city, /blog/slug/city).
+  // Location pages (/locations/home-inspection-*) have their BreadcrumbList injected by
+  // prerender-meta.mjs into the static HTML, so we skip it here to avoid duplicates.
   // All other pages (main pages, service landing pages, blog posts) have their own schemas.
   const isLocationPage = location.pathname.startsWith("/locations/home-inspection-");
   const isCrossPage = pathSegments.length >= 3;
-  const hasOwnSchema = !isLocationPage && !isCrossPage;
+  const hasOwnSchema = !isCrossPage || isLocationPage;
 
   // Generate BreadcrumbList JSON-LD schema
   const breadcrumbSchema = {

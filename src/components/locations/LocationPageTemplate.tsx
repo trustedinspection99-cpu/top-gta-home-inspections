@@ -181,34 +181,6 @@ export function LocationPageTemplate({
     [city, region, pageDescription, phoneNumber, address, postalCode, url, siteName, latitude, longitude]
   );
 
-  // Breadcrumb Schema
-  const breadcrumbSchema = useMemo(
-    () => ({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: SITE_URL
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Locations",
-          item: `${SITE_URL}/locations`
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: city,
-          item: url
-        }
-      ]
-    }),
-    [city, url]
-  );
 
   // FAQ Schema - 5 questions for rich snippets
   const faqSchema = useMemo(
@@ -366,7 +338,6 @@ export function LocationPageTemplate({
         )}
         
         <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
       </Helmet>

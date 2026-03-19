@@ -458,12 +458,9 @@ for (const page of pages) {
   } else if (parts[0] === 'services' && parts.length === 2) {
     // /services/:svc — use same FAQs with "Ontario" substituted for {city}
     faqSchema = buildFaqSchema(serviceFaqsMap[parts[1]], 'Ontario');
-  } else if (parts[0] === 'locations' && parts.length === 2) {
-    // /locations/home-inspection-:city — inject standard location FAQs
-    const cSlug = parts[1].replace(/^home-inspection-/, '');
-    const cName = allCityNames[cSlug] || cSlug;
-    faqSchema = buildFaqSchema(locationPageFaqs, cName);
   }
+  // Note: /locations/home-inspection-:city FAQPage is handled by LocationPageTemplate.tsx
+  // via React Helmet (not prerendered) to avoid duplicate FAQPage schemas.
   if (faqSchema) {
     html = html.replace('</head>', () => `${faqSchema}\n</head>`);
   }
