@@ -142,7 +142,7 @@ export default function Booking() {
       "provider": {
         "@type": "LocalBusiness",
         "name": "ASADS Home Inspection",
-        "telephone": "+1-647-801-9311"
+        "telephone": "+16478019311"
       },
       "potentialAction": {
         "@type": "ReserveAction",

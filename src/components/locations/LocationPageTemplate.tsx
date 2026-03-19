@@ -127,6 +127,7 @@ export function LocationPageTemplate({
   // Use slug from data directly (already has home-inspection- prefix), fallback to derived
   const locationSlug = slug ?? `home-inspection-${city.toLowerCase().replace(/\s+/g, "-")}`;
   const url = getCanonicalUrl(`/locations/${locationSlug}`);
+  const schemaPhone = `+1${phoneNumber.replace(/\D/g, '')}`;
   const rawPageTitle = metaTitle || `Home Inspection ${city} | Certified Inspector | ASADS`;
   const pageTitle = rawPageTitle.length > 60 ? rawPageTitle.slice(0, 57) + "..." : rawPageTitle;
   const rawPageDescription =
@@ -143,7 +144,7 @@ export function LocationPageTemplate({
       name: `${siteName} ${city}`,
       description: pageDescription,
       url,
-      telephone: phoneNumber,
+      telephone: schemaPhone,
       priceRange: "$$",
       image: `${SITE_URL}/logo.png`,
       address: {
@@ -270,7 +271,7 @@ export function LocationPageTemplate({
       provider: {
         "@type": "LocalBusiness",
         name: siteName,
-        telephone: phoneNumber,
+        telephone: schemaPhone,
         url,
         address: {
           "@type": "PostalAddress",

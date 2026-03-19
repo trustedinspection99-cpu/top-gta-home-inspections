@@ -181,7 +181,7 @@ export default function Pricing() {
     "provider": {
       "@type": "LocalBusiness",
       "name": "ASADS Home Inspection",
-      "telephone": "+1-647-801-9311"
+      "telephone": "+16478019311"
     },
     "areaServed": {
       "@type": "State",

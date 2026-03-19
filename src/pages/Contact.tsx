@@ -88,7 +88,7 @@ export default function Contact() {
     "mainEntity": {
       "@type": "LocalBusiness",
       "name": "ASADS Home Inspection",
-      "telephone": "+1-647-801-9311",
+      "telephone": "+16478019311",
       "email": "info@asads.ca",
       "address": {
         "@type": "PostalAddress",
