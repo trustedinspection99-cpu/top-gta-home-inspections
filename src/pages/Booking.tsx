@@ -15,8 +15,6 @@ import { format } from "date-fns";
 import { Calendar as CalendarIcon, CheckCircle, Phone, Clock, Shield, FileText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-// Formspree form ID for booking submissions
-const FORMSPREE_BOOKING_ID = "mnjnzzoz";
 
 const inspectionTypes = [
   { value: "pre-purchase", label: "Pre-Purchase Home Inspection", price: "$399+" },
@@ -76,30 +74,23 @@ export default function Booking() {
 
     const inspectionLabel = inspectionTypes.find(t => t.value === formData.inspectionType)?.label || formData.inspectionType;
 
-    const submitData = new FormData();
-    submitData.append("_replyto", formData.email);
-    submitData.append("_subject", `New Booking: ${inspectionLabel} — ${formData.firstName} ${formData.lastName}`);
-    submitData.append("Inspection Type", inspectionLabel);
-    submitData.append("Preferred Date", date ? format(date, "PPP") : "Not specified");
-    submitData.append("Preferred Time", formData.timeSlot);
-    submitData.append("Property Type", formData.propertyType);
-    submitData.append("Square Footage", formData.squareFootage || "Not specified");
-    submitData.append("Address", formData.address);
-    submitData.append("City", formData.city);
-    submitData.append("Postal Code", formData.postalCode || "Not specified");
-    submitData.append("First Name", formData.firstName);
-    submitData.append("Last Name", formData.lastName);
-    submitData.append("email", formData.email);
-    submitData.append("Phone", formData.phone);
-    submitData.append("Notes", formData.notes || "None");
-
     try {
-      const response = await fetch(`https://formspree.io/f/${FORMSPREE_BOOKING_ID}`, {
-        method: "POST",
-        body: submitData,
-        headers: {
-          Accept: "application/json",
-        },
+      const response = await fetch('/api/notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'booking',
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone,
+          service: inspectionLabel,
+          address: `${formData.address}, ${formData.city}${formData.postalCode ? ' ' + formData.postalCode : ''}`,
+          preferred_date: date ? format(date, "PPP") : '',
+          preferred_time: formData.timeSlot,
+          property_type: formData.propertyType,
+          sq_footage: formData.squareFootage,
+          notes: formData.notes,
+        }),
       });
 
       if (response.ok) {

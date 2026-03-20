@@ -25,7 +25,6 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { HeroBookingSection } from "@/components/HeroBookingSection";
 
-const FORMSPREE_CONTACT_ID = "mnjnzzoz";
 
 const serviceOptions = [
   "Pre-Purchase Inspection",
@@ -53,13 +52,19 @@ export default function Contact() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    formData.append("service", selectedService);
 
     try {
-      const response = await fetch(`https://formspree.io/f/${FORMSPREE_CONTACT_ID}`, {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
+      const response = await fetch('/api/notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'contact',
+          name: `${formData.get('firstName')} ${formData.get('lastName')}`,
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          service: selectedService,
+          message: formData.get('message'),
+        }),
       });
 
       if (response.ok) {

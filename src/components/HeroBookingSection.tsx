@@ -69,16 +69,16 @@ export function HeroBookingSection({
     if (!form.service || !form.name || !form.phone) return;
     setStatus("sending");
     try {
-      const res = await fetch("https://formspree.io/f/mnjnzzoz", {
+      const res = await fetch("/api/notify", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          service: form.service,
-          address: form.address,
+          type: "booking",
           name: form.name,
           phone: form.phone,
+          service: form.service,
+          address: form.address,
           preferred_date: form.preferred_date,
-          _subject: `New Booking — ${form.service}${city ? ` (${city})` : ""}`,
         }),
       });
       setStatus(res.ok ? "sent" : "error");
