@@ -180,7 +180,7 @@ const localBusinessSchema = {
 };
 
 const Index = () => {
-  const [formData, setFormData] = useState({ name: '', phone: '', city: '', service: '', preferred_date: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', city: '', service: '', preferred_date: '', time_slot: '' });
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
   const handleQuoteSubmit = async (e: React.FormEvent) => {
@@ -193,10 +193,12 @@ const Index = () => {
         body: JSON.stringify({
           type: 'booking',
           name: formData.name,
+          email: formData.email,
           phone: formData.phone,
           service: formData.service || 'Not specified',
           address: formData.city,
           preferred_date: formData.preferred_date || 'Flexible',
+          preferred_time: formData.time_slot,
         }),
       });
       setFormStatus(res.ok ? 'sent' : 'error');
@@ -350,6 +352,37 @@ const Index = () => {
                   </div>
                   <div className="grid grid-cols-2 gap-3">
                     <div>
+                      <label className="block text-xs font-semibold text-gray-600 mb-1">Preferred Date</label>
+                      <input
+                        type="date"
+                        value={formData.preferred_date}
+                        min={new Date().toISOString().split('T')[0]}
+                        onChange={e => setFormData(p => ({ ...p, preferred_date: e.target.value }))}
+                        className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-gray-600 mb-1">Preferred Time</label>
+                      <select
+                        value={formData.time_slot}
+                        onChange={e => setFormData(p => ({ ...p, time_slot: e.target.value }))}
+                        className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                      >
+                        <option value="">Any time</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
                       <label className="block text-xs font-semibold text-gray-600 mb-1">Your Name *</label>
                       <input
                         type="text"
@@ -373,12 +406,12 @@ const Index = () => {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Preferred Date</label>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">Email</label>
                     <input
-                      type="date"
-                      value={formData.preferred_date}
-                      min={new Date().toISOString().split('T')[0]}
-                      onChange={e => setFormData(p => ({ ...p, preferred_date: e.target.value }))}
+                      type="email"
+                      placeholder="you@example.com"
+                      value={formData.email}
+                      onChange={e => setFormData(p => ({ ...p, email: e.target.value }))}
                       className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
