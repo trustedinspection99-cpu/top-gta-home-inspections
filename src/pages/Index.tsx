@@ -187,16 +187,19 @@ const Index = () => {
     e.preventDefault();
     setFormStatus('sending');
     try {
-      const data = new FormData();
-      data.append('_subject', `Booking Request — ${formData.service || 'Home Inspection'}`);
-      data.append('name', formData.name);
-      data.append('phone', formData.phone);
-      data.append('address', formData.city);
-      data.append('service', formData.service || 'Not specified');
-      data.append('preferred_date', formData.preferred_date || 'Flexible');
-      const res = await fetch('https://formspree.io/f/mnjnzzoz', { method: 'POST', body: data, headers: { Accept: 'application/json' } });
-      const json = await res.json();
-      setFormStatus(json.ok ? 'sent' : 'error');
+      const res = await fetch('/api/notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'booking',
+          name: formData.name,
+          phone: formData.phone,
+          service: formData.service || 'Not specified',
+          address: formData.city,
+          preferred_date: formData.preferred_date || 'Flexible',
+        }),
+      });
+      setFormStatus(res.ok ? 'sent' : 'error');
     } catch {
       setFormStatus('error');
     }
