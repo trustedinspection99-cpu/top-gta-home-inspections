@@ -165,7 +165,7 @@ export function HeroBookingSection({
             </div>
             <h2 className="text-xl font-extrabold text-slate-900 mb-1">{formTitle}</h2>
             <p className="text-sm text-gray-500 mb-4">
-              Consider it confirmed! We'll only call if a time adjustment is needed within 24 hours.
+              Your booking is confirmed. We'll only reach out if a scheduling change is required within 24 hours.
             </p>
 
             {status === "sent" ? (
@@ -277,7 +277,7 @@ export function HeroBookingSection({
                 </button>
 
                 <p className="text-xs text-gray-400 text-center">
-                  Consider it confirmed · We only call if a time adjustment is needed
+                  Booking confirmed · We'll reach out only if a scheduling change is required
                 </p>
               </form>
             )}
