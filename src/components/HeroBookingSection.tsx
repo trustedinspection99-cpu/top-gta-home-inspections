@@ -56,7 +56,9 @@ export function HeroBookingSection({
     address: city ? `, ${city}, ON` : "",
     name: "",
     phone: "",
+    email: "",
     preferred_date: "",
+    preferred_time: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
@@ -76,9 +78,11 @@ export function HeroBookingSection({
           type: "booking",
           name: form.name,
           phone: form.phone,
+          email: form.email,
           service: form.service,
           address: form.address,
           preferred_date: form.preferred_date,
+          preferred_time: form.preferred_time,
         }),
       });
       setStatus(res.ok ? "sent" : "error");
@@ -193,6 +197,18 @@ export function HeroBookingSection({
                       <span className="font-medium text-gray-900">{form.preferred_date}</span>
                     </div>
                   )}
+                  {form.preferred_time && (
+                    <div className="flex justify-between px-4 py-2.5">
+                      <span className="text-gray-500">Time</span>
+                      <span className="font-medium text-gray-900">{form.preferred_time}</span>
+                    </div>
+                  )}
+                  {form.email && (
+                    <div className="flex justify-between px-4 py-2.5">
+                      <span className="text-gray-500">Confirmation</span>
+                      <span className="font-medium text-gray-900 text-right max-w-[55%]">{form.email}</span>
+                    </div>
+                  )}
                 </div>
                 <p className="text-gray-500 text-xs text-center">Should any scheduling changes be required, we will contact you within 24 hours.</p>
               </div>
@@ -265,15 +281,53 @@ export function HeroBookingSection({
                   </div>
                 </div>
 
-                {/* Preferred date */}
+                {/* Preferred date + time */}
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">Preferred Date</label>
+                    <input
+                      type="date"
+                      name="preferred_date"
+                      value={form.preferred_date}
+                      onChange={handleChange}
+                      min={new Date().toISOString().split("T")[0]}
+                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">Preferred Time</label>
+                    <select
+                      name="preferred_time"
+                      value={form.preferred_time}
+                      onChange={handleChange}
+                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                    >
+                      <option value="">Any time</option>
+                      <option>8:00 AM</option>
+                      <option>9:00 AM</option>
+                      <option>10:00 AM</option>
+                      <option>11:00 AM</option>
+                      <option>12:00 PM</option>
+                      <option>1:00 PM</option>
+                      <option>2:00 PM</option>
+                      <option>3:00 PM</option>
+                      <option>4:00 PM</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Email */}
                 <div>
-                  <label className="block text-xs font-semibold text-gray-600 mb-1">Preferred Date</label>
+                  <label className="block text-xs font-semibold text-gray-600 mb-1">
+                    Email <span className="text-red-500">*</span> <span className="font-normal text-gray-400">(confirmation sent here)</span>
+                  </label>
                   <input
-                    type="date"
-                    name="preferred_date"
-                    value={form.preferred_date}
+                    type="email"
+                    name="email"
+                    value={form.email}
                     onChange={handleChange}
-                    min={new Date().toISOString().split("T")[0]}
+                    required
+                    placeholder="you@example.com"
                     className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
