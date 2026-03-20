@@ -357,9 +357,9 @@ export function LocationPageTemplate({
           </>
         }
         priceCards={[
-          { label: "Pre-Purchase", price: "From $399" },
-          { label: "Condo", price: "From $299" },
-          { label: "New Construction", price: "From $449" },
+          { label: "Pre-Purchase", price: "From $399", href: "/services/pre-purchase" },
+          { label: "Condo", price: "From $299", href: "/services/condo" },
+          { label: "New Construction", price: "From $449", href: "/services/new-construction" },
         ]}
         city={city}
         formTitle={`Book in ${city}`}

@@ -1203,7 +1203,7 @@ export default function FAQ() {
         priceCards={[
           { label: "Questions", price: "100+" },
           { label: "Categories", price: `${faqCategories.length}` },
-          { label: "Pre-Purchase", price: "From $399" },
+          { label: "Pre-Purchase", price: "From $399", href: "/services/pre-purchase" },
           { label: "Same-Day", price: "Digital Report" },
         ]}
         formTitle="Book Your Inspection"

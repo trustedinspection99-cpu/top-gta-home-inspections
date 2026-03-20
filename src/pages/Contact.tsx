@@ -149,8 +149,8 @@ export default function Contact() {
         title="Contact ASADS Home Inspectors in Ontario"
         subtitle="Ready to book or have a question? Call, email, or send a message below. We respond within 24 hours and confirm bookings instantly."
         priceCards={[
-          { label: "Pre-Purchase", price: "From $399" },
-          { label: "Condo",        price: "From $299" },
+          { label: "Pre-Purchase", price: "From $399", href: "/services/pre-purchase" },
+          { label: "Condo",        price: "From $299", href: "/services/condo" },
           { label: "Available",    price: "7 Days/Week" },
           { label: "Same-Day",     price: "Digital Report" },
         ]}

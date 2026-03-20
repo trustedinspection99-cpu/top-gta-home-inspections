@@ -29,7 +29,7 @@ interface HeroBookingSectionProps {
   /** Show 4.9★ social proof row (default true) */
   showStars?: boolean;
   /** Price callout chips below the subtitle */
-  priceCards?: { label: string; price: string }[];
+  priceCards?: { label: string; price: string; href?: string }[];
   /** Primary CTA button (defaults to Book Your Inspection → /booking) */
   ctaPrimary?: { text: string; href: string };
   /** Pre-select a service in the booking form dropdown */
@@ -130,12 +130,23 @@ export function HeroBookingSection({
             {/* Price cards */}
             {priceCards && priceCards.length > 0 && (
               <div className="flex flex-wrap gap-3 mb-7">
-                {priceCards.map((c) => (
-                  <div key={c.label} className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-sm">
-                    <span className="text-blue-200">{c.label} — </span>
-                    <span className="font-bold text-green-300">{c.price}</span>
-                  </div>
-                ))}
+                {priceCards.map((c) => {
+                  const inner = (
+                    <>
+                      <span className="text-blue-200">{c.label} — </span>
+                      <span className="font-bold text-green-300">{c.price}</span>
+                    </>
+                  );
+                  return c.href ? (
+                    <a key={c.label} href={c.href} className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-sm hover:bg-white/20 transition-colors">
+                      {inner}
+                    </a>
+                  ) : (
+                    <div key={c.label} className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-sm">
+                      {inner}
+                    </div>
+                  );
+                })}
               </div>
             )}
 

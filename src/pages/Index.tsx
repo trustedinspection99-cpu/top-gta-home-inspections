@@ -274,15 +274,15 @@ const Index = () => {
               {/* Price callout */}
               <div className="flex flex-wrap gap-3 mb-7">
                 {[
-                  { label: "Pre-Purchase Inspection", price: "From $399" },
-                  { label: "Pre-Listing Inspection", price: "From $399" },
-                  { label: "Condo Inspection", price: "From $299" },
-                  { label: "New Construction / PDI", price: "From $449" },
+                  { label: "Pre-Purchase Inspection", price: "From $399", href: "/services/pre-purchase" },
+                  { label: "Pre-Listing Inspection", price: "From $399", href: "/services/pre-listing" },
+                  { label: "Condo Inspection", price: "From $299", href: "/services/condo" },
+                  { label: "New Construction / PDI", price: "From $449", href: "/services/new-construction" },
                 ].map(s => (
-                  <div key={s.label} className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-sm">
+                  <a key={s.label} href={s.href} className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-sm hover:bg-white/20 transition-colors">
                     <span className="text-blue-200">{s.label} — </span>
                     <span className="font-bold text-green-300">{s.price}</span>
-                  </div>
+                  </a>
                 ))}
               </div>
 
