@@ -169,12 +169,32 @@ export function HeroBookingSection({
             </p>
 
             {status === "sent" ? (
-              <div className="text-center py-8">
-                <CheckCircle2 className="h-12 w-12 text-green-500 mx-auto mb-3" />
-                <p className="font-bold text-lg text-gray-900">Booking confirmed!</p>
-                <p className="text-gray-500 text-sm mt-1">
-                  You're booked. We may call if a time adjustment is needed.
-                </p>
+              <div className="py-4">
+                <div className="flex items-center gap-2 mb-4">
+                  <CheckCircle2 className="h-6 w-6 text-green-500 shrink-0" />
+                  <p className="font-bold text-lg text-gray-900">Booking Confirmed</p>
+                </div>
+                <div className="bg-gray-50 rounded-xl border border-gray-200 divide-y divide-gray-200 text-sm mb-4">
+                  {form.service && (
+                    <div className="flex justify-between px-4 py-2.5">
+                      <span className="text-gray-500">Service</span>
+                      <span className="font-medium text-gray-900 text-right max-w-[55%]">{form.service}</span>
+                    </div>
+                  )}
+                  {form.address && (
+                    <div className="flex justify-between px-4 py-2.5">
+                      <span className="text-gray-500">Address</span>
+                      <span className="font-medium text-gray-900 text-right max-w-[55%]">{form.address}</span>
+                    </div>
+                  )}
+                  {form.preferred_date && (
+                    <div className="flex justify-between px-4 py-2.5">
+                      <span className="text-gray-500">Date</span>
+                      <span className="font-medium text-gray-900">{form.preferred_date}</span>
+                    </div>
+                  )}
+                </div>
+                <p className="text-gray-500 text-xs text-center">Should any scheduling changes be required, we will contact you within 24 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-3">
