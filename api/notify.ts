@@ -50,8 +50,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             html: `
               <h2>Hi ${name},</h2>
               <p>Thanks for booking with ASADS Home Inspection! We've received your request for a <strong>${service}</strong>.</p>
-              <p>We'll review your request and follow up within <strong>24 hours</strong> to confirm your appointment details.</p>
-              <p>For urgent bookings, call us directly at <strong>(647) 801-9311</strong>.</p>
+              <p><strong>Consider it confirmed!</strong> If we need to adjust your time, we'll call you within 24 hours.</p>
               <br/>
               <p style="color:#64748b;font-size:13px">— ASADS Home Inspection<br/>asads.ca · (647) 801-9311</p>
             `,
