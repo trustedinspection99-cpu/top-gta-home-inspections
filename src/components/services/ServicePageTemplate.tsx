@@ -206,9 +206,10 @@ export function ServicePageTemplate({
           </>
         }
         priceCards={[
-          { label: "Starting at", price },
-          { label: "Same-Day", price: "Digital Report" },
-          { label: "No Hidden", price: "Fees" },
+          { label: "Pre-Purchase", price: "From $399", href: "/services/pre-purchase" },
+          { label: "Pre-Listing", price: "From $399", href: "/services/pre-listing" },
+          { label: "Condo", price: "From $299", href: "/services/condo" },
+          { label: "New Construction", price: "From $449", href: "/services/new-construction" },
         ]}
         defaultService={title}
         formTitle={`Book ${title}`}
