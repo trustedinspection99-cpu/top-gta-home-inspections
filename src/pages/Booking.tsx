@@ -402,7 +402,7 @@ export default function Booking() {
                   <div className="bg-primary/10 rounded-lg p-4 text-center">
                     <Phone className="h-5 w-5 text-primary mx-auto mb-2" />
                     <p className="text-sm font-medium text-primary">Confirmation Call</p>
-                    <p className="text-xs text-muted-foreground mt-1">We'll call within 30 min to confirm</p>
+                    <p className="text-xs text-muted-foreground mt-1">We'll follow up within 24 hours</p>
                   </div>
                   <div className="bg-primary/10 rounded-lg p-4 text-center">
                     <FileText className="h-5 w-5 text-primary mx-auto mb-2" />
@@ -421,7 +421,7 @@ export default function Booking() {
 
           <div className="grid md:grid-cols-4 gap-6 mt-12">
             {[
-              { icon: Phone, title: "Quick Confirmation", desc: "You'll receive a call within 30 minutes" },
+              { icon: Phone, title: "Email Confirmation", desc: "Check your inbox — we follow up within 24 hours" },
               { icon: Clock, title: "Same-Day Booking", desc: "Appointments often available same day" },
               { icon: FileText, title: "24-Hour Reports", desc: "Digital report within 24 hours" },
               { icon: Shield, title: "Certified Inspectors", desc: "InterNACHI certified professionals" },

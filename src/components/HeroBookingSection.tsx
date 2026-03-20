@@ -165,7 +165,7 @@ export function HeroBookingSection({
             </div>
             <h2 className="text-xl font-extrabold text-slate-900 mb-1">{formTitle}</h2>
             <p className="text-sm text-gray-500 mb-4">
-              Confirmed instantly. We may call if a time adjustment is needed.
+              We'll follow up within 24 hours. Urgent? Call (647) 801-9311.
             </p>
 
             {status === "sent" ? (
@@ -277,7 +277,7 @@ export function HeroBookingSection({
                 </button>
 
                 <p className="text-xs text-gray-400 text-center">
-                  7 days a week · Confirmed instantly · We call only if adjustment needed
+                  7 days a week · Response within 24 hours · Urgent? Call (647) 801-9311
                 </p>
               </form>
             )}

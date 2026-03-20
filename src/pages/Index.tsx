@@ -305,13 +305,13 @@ const Index = () => {
                 <span className="text-xs font-semibold text-green-600 uppercase tracking-wide">Same-Day Availability</span>
               </div>
               <h2 className="text-xl font-extrabold text-slate-900 mb-1">Book Your Inspection</h2>
-              <p className="text-sm text-gray-500 mb-5">Confirmed instantly. We may call if a time adjustment is needed.</p>
+              <p className="text-sm text-gray-500 mb-5">We'll review your request and follow up within 24 hours. For urgent bookings, call us directly.</p>
 
               {formStatus === 'sent' ? (
                 <div className="text-center py-8">
                   <CheckCircle2 className="h-12 w-12 text-green-500 mx-auto mb-3" />
                   <p className="font-bold text-lg text-gray-900">Booking confirmed!</p>
-                  <p className="text-gray-500 text-sm mt-1">You're booked. We may call if a time adjustment is needed.</p>
+                  <p className="text-gray-500 text-sm mt-1">We'll follow up within 24 hours to confirm your appointment.</p>
                 </div>
               ) : (
                 <form onSubmit={handleQuoteSubmit} className="space-y-3">
@@ -406,9 +406,10 @@ const Index = () => {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Email</label>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">Email * <span className="font-normal text-gray-400">(confirmation sent here)</span></label>
                     <input
                       type="email"
+                      required
                       placeholder="you@example.com"
                       value={formData.email}
                       onChange={e => setFormData(p => ({ ...p, email: e.target.value }))}
@@ -427,7 +428,7 @@ const Index = () => {
                   {formStatus === 'error' && (
                     <p className="text-red-500 text-xs text-center">Something went wrong. Call us at (647) 801-9311.</p>
                   )}
-                  <p className="text-xs text-gray-400 text-center">7 days a week · Confirmed instantly · We call only if adjustment needed</p>
+                  <p className="text-xs text-gray-400 text-center">7 days a week · Response within 24 hours · Urgent? Call (647) 801-9311</p>
                 </form>
               )}
             </div>
