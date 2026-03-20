@@ -95,8 +95,8 @@ export default function Booking() {
 
       if (response.ok) {
         toast({
-          title: "Booking Request Submitted!",
-          description: "We'll contact you within 2 hours to confirm your appointment.",
+          title: "Appointment Confirmed!",
+          description: "Should any scheduling changes be required, we will contact you within 24 hours.",
         });
         setStep(4);
       } else {
