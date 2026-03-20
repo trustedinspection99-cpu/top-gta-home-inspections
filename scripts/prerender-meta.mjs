@@ -280,9 +280,18 @@ function buildBreadcrumbSchema(pagePath, parts) {
       const cName = allCityNames[cSlug] || cSlug;
       items.push({ "@type": "ListItem", "position": 3, "name": cName, "item": BASE_URL + pagePath });
     }
+  } else if (parts[0] === 'services' && parts.length === 2) {
+    items.push({ "@type": "ListItem", "position": 2, "name": "Services", "item": BASE_URL + "/services" });
+    const sName = serviceNames[parts[1]] || parts[1];
+    items.push({ "@type": "ListItem", "position": 3, "name": sName, "item": BASE_URL + pagePath });
+  } else if (parts[0] === 'services' && parts.length === 3) {
+    items.push({ "@type": "ListItem", "position": 2, "name": "Services", "item": BASE_URL + "/services" });
+    const sName = serviceNames[parts[1]] || parts[1];
+    items.push({ "@type": "ListItem", "position": 3, "name": sName, "item": `${BASE_URL}/services/${parts[1]}` });
+    const cName = allCityNames[parts[2]] || parts[2];
+    items.push({ "@type": "ListItem", "position": 4, "name": cName, "item": BASE_URL + pagePath });
   } else {
-    return null; // All other pages (services, blog, homepage, static) have their own
-                 // BreadcrumbList in their React page components via Helmet.
+    return null;
   }
 
   const schema = {
@@ -439,9 +448,12 @@ for (const page of pages) {
   } else if (parts[0] === 'services' && parts.length === 2) {
     // /services/:svc — use same FAQs with "Ontario" substituted for {city}
     faqSchema = buildFaqSchema(serviceFaqsMap[parts[1]], 'Ontario');
+  } else if (parts[0] === 'locations' && parts.length === 2) {
+    // /locations/home-inspection-:city — inject location FAQs with city substitution
+    const cSlug = parts[1].replace(/^home-inspection-/, '');
+    const cName = allCityNames[cSlug] || cSlug;
+    faqSchema = buildFaqSchema(locationPageFaqs, cName);
   }
-  // Note: /locations/home-inspection-:city FAQPage is handled by LocationPageTemplate.tsx
-  // via React Helmet (not prerendered) to avoid duplicate FAQPage schemas.
   if (faqSchema) {
     html = html.replace('</head>', () => `${faqSchema}\n</head>`);
   }

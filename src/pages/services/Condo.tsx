@@ -26,7 +26,7 @@ const metaTitle =
   "Condo Inspection Ontario | From $299 | Certified | ASADS";
 
 const metaDescription =
-  "Certified condo inspection Ontario from $299. Kitec plumbing, fan coil, moisture & electrical — full in-suite assessment. Same-day report. (647) 801-9311.";
+  "Certified condo inspection across Ontario from $299. Kitec plumbing, fan coil, moisture & electrical — full in-suite assessment. Same-day report. (647) 801-9311.";
 
 const duration = "1.5 – 2.5 Hours";
 
@@ -52,7 +52,7 @@ const benefits = [
   "Protect against unit-to-unit liability",
   "Same-day digital inspection reports",
   "Licensed & Certified Master Inspector",
-  "Toronto condo specialist experience",
+  "Ontario-wide condo inspection coverage",
   "Evening & weekend availability"
 ];
 

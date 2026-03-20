@@ -11,7 +11,7 @@ export default function WellWaterTesting() {
       metaTitle={pageTitle}
       metaDescription={metaDescription}
       heroTitle="Well Water Testing & Drinking Water Quality Test — MOH Accredited Lab"
-      heroSubtitle="Protect your family from invisible contaminants. Certified well water testing and drinking water quality analysis for private wells across Ontario — GTA, rural, and cottage properties. MOH accredited lab results."
+      heroSubtitle="Protect your family from invisible contaminants. Certified well water testing for E.coli, bacteria, nitrates, and arsenic across Ontario — private wells, rural properties, and cottages. MOH-accredited lab, results within 5–7 business days."
       icon={Droplets}
       price="From $199"
       duration="Sample Collection + Lab Time"
