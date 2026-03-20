@@ -49,8 +49,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             subject: 'Your inspection booking was received — ASADS',
             html: `
               <h2>Hi ${name},</h2>
-              <p>Thanks for booking with ASADS Home Inspection! We've received your request for a <strong>${service}</strong>.</p>
-              <p>Your booking is <strong>confirmed</strong>. Should any scheduling changes be required, a member of our team will contact you within 24 hours.</p>
+              <p>Thanks for booking with ASADS Home Inspection! Your booking is <strong>confirmed</strong>. Should any scheduling changes be required, a member of our team will contact you within 24 hours.</p>
+              <table style="border-collapse:collapse;width:100%;max-width:520px;margin:16px 0;border:1px solid #e2e8f0">
+                <tr><td style="padding:10px 14px;font-weight:bold;background:#f8fafc;color:#475569;width:40%">Service</td><td style="padding:10px 14px;color:#0f172a">${service}</td></tr>
+                ${address ? `<tr><td style="padding:10px 14px;font-weight:bold;background:#f8fafc;color:#475569">Address</td><td style="padding:10px 14px;color:#0f172a">${address}</td></tr>` : ''}
+                ${preferred_date ? `<tr><td style="padding:10px 14px;font-weight:bold;background:#f8fafc;color:#475569">Date</td><td style="padding:10px 14px;color:#0f172a">${preferred_date}</td></tr>` : ''}
+                ${preferred_time ? `<tr><td style="padding:10px 14px;font-weight:bold;background:#f8fafc;color:#475569">Time</td><td style="padding:10px 14px;color:#0f172a">${preferred_time}</td></tr>` : ''}
+              </table>
               <br/>
               <p style="color:#64748b;font-size:13px">— ASADS Home Inspection<br/>asads.ca · (647) 801-9311</p>
             `,
