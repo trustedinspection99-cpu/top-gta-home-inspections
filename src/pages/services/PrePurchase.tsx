@@ -517,7 +517,7 @@
                      Every inspection follows the Standards of Practice established by the Ontario Association of Home Inspectors. Our evaluations examine all major home systems and structural components to give you a complete picture of the property's condition.
                    </p>
  
-                   <h4 className="font-heading text-lg font-semibold text-foreground mt-6 mb-3">Foundation Inspection — Structural Components & Basement</h4>
+                   <h4 className="font-heading text-lg font-semibold text-foreground mt-6 mb-3">Structural Components and Foundation</h4>
                    <p>
                      Foundation integrity directly affects your home's long-term stability and value. We examine basement walls for cracks, bowing, or water infiltration. Settlement patterns, support beam condition, and floor system integrity receive careful attention. In crawl spaces, we assess moisture levels, insulation, and vapor barriers that protect against rot and mold growth.
                    </p>
@@ -525,7 +525,7 @@
                      Load-bearing walls and posts must adequately support the structure above. We identify unauthorized modifications that compromise structural integrity, such as removed walls or cut joists that weaken floor systems. These issues often remain hidden behind finished surfaces until serious problems develop.
                    </p>
  
-                   <h4 className="font-heading text-lg font-semibold text-foreground mt-6 mb-3">Roof Inspection & Exterior Envelope</h4>
+                   <h4 className="font-heading text-lg font-semibold text-foreground mt-6 mb-3">Exterior Envelope and Roofing</h4>
                    <p>
                      Your home's exterior protects everything inside from Ontario's harsh weather conditions. We evaluate roofing materials for remaining service life, identifying worn shingles, damaged flashing, and inadequate ventilation that lead to premature failure. Attic inspections reveal insulation deficiencies and moisture problems that increase energy costs and promote mold growth.
                    </p>
@@ -533,7 +533,7 @@
                      Siding, trim, and window conditions tell us how well the home sheds water. Poor caulking, deteriorated wood, and improper installation allow moisture into wall cavities where it causes hidden damage. Grading around the foundation should slope away from the house to prevent water accumulation that damages basement walls and footings.
                    </p>
  
-                   <h4 className="font-heading text-lg font-semibold text-foreground mt-6 mb-3">Plumbing Inspection — Supply, Drainage & Water Heater</h4>
+                   <h4 className="font-heading text-lg font-semibold text-foreground mt-6 mb-3">Plumbing Systems and Water Heating</h4>
                    <p>
                      Water supply and drainage systems require proper installation and maintenance to function reliably. We test water pressure at multiple fixtures, checking for adequate flow and identifying pressure issues that indicate corroded pipes or undersized supply lines. Drainage performance reveals slow drains, improper venting, and fixture problems that require attention.
                    </p>
@@ -544,7 +544,7 @@
                      Water heater age and condition affect both safety and efficiency. We verify proper temperature settings, pressure relief valve operation, and venting adequacy for combustion appliances. Sediment buildup, corrosion, and exceeded service life indicate replacement needs you should factor into your purchase decision.
                    </p>
  
-                   <h4 className="font-heading text-lg font-semibold text-foreground mt-6 mb-3">Electrical Inspection — Panel, Circuits & Safety</h4>
+                   <h4 className="font-heading text-lg font-semibold text-foreground mt-6 mb-3">Electrical Systems and Safety</h4>
                    <p>
                      Electrical hazards present serious fire and shock risks that require immediate correction. Our inspectors evaluate service panel capacity, checking for overloaded circuits, double-tapped breakers, and improper modifications made by previous owners. Panel brands like Federal Pacific and Zinsco contain known defects that increase fire risk.
                    </p>
@@ -555,7 +555,7 @@
                      Older homes frequently contain outdated wiring that doesn't meet current safety standards. Knob and tube wiring, common in houses built before 1950, lacks grounding protection and cannot safely handle modern electrical loads. Aluminum branch wiring requires special connectors to prevent overheating and fires. We identify these conditions and recommend appropriate upgrades.
                    </p>
  
-                   <h4 className="font-heading text-lg font-semibold text-foreground mt-6 mb-3">HVAC Inspection — Heating, Cooling & Ductwork</h4>
+                   <h4 className="font-heading text-lg font-semibold text-foreground mt-6 mb-3">Heating, Cooling and Ventilation</h4>
                    <p>
                      HVAC equipment represents a major expense when replacement becomes necessary. We operate heating systems regardless of season, checking for adequate output, proper combustion, and safe venting. Cracked heat exchangers in furnaces leak carbon monoxide into living spaces, creating a deadly hazard that requires immediate furnace replacement.
                    </p>

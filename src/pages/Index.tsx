@@ -546,6 +546,28 @@ const Index = () => {
         </div>
       </section>
 
+      {/* PRE-PURCHASE FEATURED BANNER */}
+      <section className="py-10 bg-blue-900 text-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <p className="text-blue-300 text-sm font-semibold uppercase tracking-wide mb-1">Most Booked Service</p>
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">Pre-Purchase Home Inspection Ontario</h2>
+              <p className="text-blue-100 text-sm max-w-xl">
+                Our most requested inspection — 400-point assessment covering foundation, roof, electrical, plumbing, and HVAC. Same-day digital report. From $399 across Ontario.
+              </p>
+            </div>
+            <a
+              href="/services/pre-purchase"
+              className="shrink-0 bg-white text-blue-900 font-bold px-7 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center gap-2 text-sm"
+            >
+              Learn More & Book
+              <ChevronRight size={16} />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* 4. RED FLAGS */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
