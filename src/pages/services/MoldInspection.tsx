@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function MoldInspection() {
   const pageTitle = "Mold Inspection & Testing Ontario | From $299 | ASADS";
-  const schemaDescription = "Certified mold inspection & testing in Ontario from $299. Air sampling, black mold identification, AIHA lab results. Serving Toronto, GTA & all of Ontario. Independent inspector — not remediation.";
+  const schemaDescription = "Certified mold inspection & testing Ontario from $299. Air sampling, black mold ID, AIHA lab results. Toronto, GTA & Ontario. Independent — not remediation.";
 
   return (
     <ServicePageTemplate

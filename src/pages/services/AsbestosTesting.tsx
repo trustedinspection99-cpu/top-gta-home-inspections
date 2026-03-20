@@ -3,7 +3,7 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function AsbestosTesting() {
   const pageTitle = "Asbestos Testing Toronto & Ontario | From $299 | ASADS";
-  const schemaDescription = "Certified asbestos testing in Toronto & Ontario from $299. O.Reg 278/05 compliant, bulk sampling & accredited lab. Pre-renovation & demolition. Call (647) 801-9311.";
+  const schemaDescription = "Certified asbestos testing Ontario from $299. O.Reg 278/05 compliant, bulk sampling & accredited lab. Pre-renovation & demolition. Call (647) 801-9311.";
 
   return (
     <ServicePageTemplate
