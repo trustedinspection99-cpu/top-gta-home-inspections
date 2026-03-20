@@ -172,7 +172,7 @@ export function HeroBookingSection({
               <div className="py-4">
                 <div className="flex items-center gap-2 mb-4">
                   <CheckCircle2 className="h-6 w-6 text-green-500 shrink-0" />
-                  <p className="font-bold text-lg text-gray-900">Booking Confirmed</p>
+                  <p className="font-bold text-lg text-gray-900">Appointment Confirmed</p>
                 </div>
                 <div className="bg-gray-50 rounded-xl border border-gray-200 divide-y divide-gray-200 text-sm mb-4">
                   {form.service && (

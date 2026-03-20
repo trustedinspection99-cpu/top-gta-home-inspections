@@ -402,7 +402,7 @@ export default function Booking() {
                   <div className="bg-primary/10 rounded-lg p-4 text-center">
                     <Phone className="h-5 w-5 text-primary mx-auto mb-2" />
                     <p className="text-sm font-medium text-primary">Confirmation Call</p>
-                    <p className="text-xs text-muted-foreground mt-1">Your booking is confirmed. We'll be in touch only if a scheduling change is required.</p>
+                    <p className="text-xs text-muted-foreground mt-1">Your appointment is confirmed. Should any scheduling changes be required, we will contact you within 24 hours.</p>
                   </div>
                   <div className="bg-primary/10 rounded-lg p-4 text-center">
                     <FileText className="h-5 w-5 text-primary mx-auto mb-2" />

@@ -305,13 +305,13 @@ const Index = () => {
                 <span className="text-xs font-semibold text-green-600 uppercase tracking-wide">Same-Day Availability</span>
               </div>
               <h2 className="text-xl font-extrabold text-slate-900 mb-1">Book Your Inspection</h2>
-              <p className="text-sm text-gray-500 mb-5">Your booking is confirmed. Should any scheduling changes be required, we will contact you within 24 hours.</p>
+              <p className="text-sm text-gray-500 mb-5">Your appointment is confirmed. Should any scheduling changes be required, we will contact you within 24 hours.</p>
 
               {formStatus === 'sent' ? (
                 <div className="py-4">
                   <div className="flex items-center gap-2 mb-4">
                     <CheckCircle2 className="h-6 w-6 text-green-500 shrink-0" />
-                    <p className="font-bold text-lg text-gray-900">Booking Confirmed</p>
+                    <p className="font-bold text-lg text-gray-900">Appointment Confirmed</p>
                   </div>
                   <div className="bg-gray-50 rounded-xl border border-gray-200 divide-y divide-gray-200 text-sm mb-4">
                     {formData.service && (

@@ -69,9 +69,9 @@ export function InlineBookingForm({ defaultService = "", city }: InlineBookingFo
     return (
       <div className="text-center py-6">
         <CheckCircle className="h-12 w-12 text-green-500 mx-auto mb-3" />
-        <p className="font-bold text-lg text-foreground">Booking confirmed!</p>
+        <p className="font-bold text-lg text-foreground">Appointment Confirmed!</p>
         <p className="text-sm text-muted-foreground mt-1">
-          You're booked. We may call if a time adjustment is needed.
+          Your appointment is confirmed. Should any scheduling changes be required, we will contact you within 24 hours.
         </p>
       </div>
     );
@@ -165,7 +165,7 @@ export function InlineBookingForm({ defaultService = "", city }: InlineBookingFo
       </Button>
 
       <p className="text-center text-xs text-muted-foreground">
-        Confirmed instantly · We call only if adjustment needed
+        Appointment confirmed · We'll only reach out if a scheduling change is required
       </p>
     </form>
   );
