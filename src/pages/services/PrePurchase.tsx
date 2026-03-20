@@ -26,7 +26,7 @@
 
  const title = "Pre-Purchase Home Inspection";
  const metaTitle = "Pre-Purchase Home Inspection Ontario | From $399 | ASADS";
- const metaDescription = "Licensed home inspector from $399. 400-point checklist, thermal imaging option, same-day digital report. GTA & Ontario. Book online — results same day.";
+ const metaDescription = "Certified pre-purchase home inspection Ontario from $399. 400-point checklist, thermal imaging, same-day digital report. GTA & Ontario — book today.";
  const price = "$399-$749";
  const duration = "2-4 Hours";
 
@@ -675,6 +675,41 @@
                  </div>
                </div>
  
+               {/* City Links */}
+               <div>
+                 <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-3">
+                   Pre-Purchase Home Inspection by City
+                 </h2>
+                 <p className="text-muted-foreground mb-4">
+                   We serve buyers throughout Ontario. Select your city for local pricing and availability:
+                 </p>
+                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                   {[
+                     { name: 'Toronto', slug: 'toronto' },
+                     { name: 'Mississauga', slug: 'mississauga' },
+                     { name: 'Brampton', slug: 'brampton' },
+                     { name: 'Markham', slug: 'markham' },
+                     { name: 'Vaughan', slug: 'vaughan' },
+                     { name: 'Richmond Hill', slug: 'richmond-hill' },
+                     { name: 'Oakville', slug: 'oakville' },
+                     { name: 'Burlington', slug: 'burlington' },
+                     { name: 'Hamilton', slug: 'hamilton' },
+                     { name: 'Kitchener', slug: 'kitchener' },
+                     { name: 'Cambridge', slug: 'cambridge' },
+                     { name: 'Barrie', slug: 'barrie' },
+                   ].map((city) => (
+                     <Link
+                       key={city.slug}
+                       to={"/services/pre-purchase/" + city.slug}
+                       className="flex items-center gap-2 p-3 rounded-lg bg-muted/50 border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
+                     >
+                       <ArrowRight className="h-4 w-4 text-primary flex-shrink-0" />
+                       Pre-Purchase Inspection {city.name}
+                     </Link>
+                   ))}
+                 </div>
+               </div>
+
                {/* What We Inspect */}
                <div>
                  <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
@@ -785,17 +820,17 @@
          <div className="container">
            <div className="text-center mb-8">
              <h2 className="font-heading text-2xl font-bold text-foreground mb-2">
-               {title} Available Throughout Ontario
+               Pre-Purchase Home Inspection — Ontario Service Areas
              </h2>
              <p className="text-muted-foreground">
-               We provide pre-purchase home inspection services across Ontario
+               Licensed home inspectors for Toronto, GTA, and communities across Ontario
              </p>
            </div>
            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
              {featuredLocations.map((loc) => (
                <Link
                  key={loc.slug}
-                 to={`/locations/${loc.slug}`}
+                 to={`/services/pre-purchase/${loc.slug.replace('home-inspection-', '')}` }
                  className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
                >
                  <MapPin className="h-4 w-4 text-primary flex-shrink-0" aria-hidden="true" />
