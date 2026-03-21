@@ -6,6 +6,7 @@ import { Footer } from "./Footer";
 import Breadcrumbs from "./Breadcrumbs";
 import { SITE_URL, normalizePath } from "@/lib/seo";
 import FloatingCallButton from "@/components/FloatingCallButton";
+import SiteAssistant from "@/components/SiteAssistant";
 
 interface LayoutProps {
   children: ReactNode;
@@ -162,6 +163,7 @@ export function Layout({ children }: LayoutProps) {
         <main className="flex-1">{children}</main>
 
         <FloatingCallButton />
+        <SiteAssistant />
 
         <Footer />
       </div>
