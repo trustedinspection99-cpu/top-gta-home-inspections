@@ -290,214 +290,248 @@ const WELCOME_REPLIES: QuickReply[] = [
   { label: '📍 Service Areas', value: 'What cities do you serve?' },
 ];
 
-// ─── Scout SVG (blue inspector dragon) ───────────────────────────────────────
+// ─── Scout character image ────────────────────────────────────────────────────
 type ScoutMood = 'idle' | 'happy' | 'excited' | 'curious' | 'fire';
-interface ScoutProps {
-  mood?: ScoutMood; blinking?: boolean;
-  eyeX?: number; eyeY?: number;
-  wingsOpen?: boolean; mini?: boolean;
-}
 
-const ScoutSVG: React.FC<ScoutProps> = ({
-  mood = 'idle', blinking = false,
-  eyeX = 0, eyeY = 0,
-  wingsOpen = false, mini = false,
-}) => {
+interface ScoutProps { mood?: ScoutMood; blinking?: boolean; eyeX?: number; eyeY?: number; wingsOpen?: boolean; mini?: boolean; }
+
+const ScoutSVG: React.FC<ScoutProps> = ({ mood = 'idle', blinking = false, eyeX = 0, eyeY = 0, mini = false }) => {
   const happy = mood === 'happy' || mood === 'excited';
-  const fire = mood === 'fire';
-  const w = mini ? 48 : 100;
-  const h = mini ? 54 : 138;
-
+  const w = mini ? 44 : 100;
+  const h = mini ? 50 : 138;
   return (
-    <svg width={w} height={h} viewBox="0 0 160 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={w} height={h} viewBox="0 0 160 230" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <radialGradient id="sg-body" cx="36%" cy="28%" r="72%">
-          <stop offset="0%"   stopColor="#93c5fd"/>
-          <stop offset="20%"  stopColor="#3b82f6"/>
-          <stop offset="52%"  stopColor="#1d4ed8"/>
-          <stop offset="78%"  stopColor="#1e3a8a"/>
-          <stop offset="100%" stopColor="#0f172a"/>
+        <radialGradient id="sc-skin" cx="38%" cy="28%" r="70%">
+          <stop offset="0%" stopColor="#fde8d0"/>
+          <stop offset="55%" stopColor="#f9c49a"/>
+          <stop offset="100%" stopColor="#e8a06a"/>
         </radialGradient>
-        <radialGradient id="sg-head" cx="40%" cy="30%" r="68%">
-          <stop offset="0%"   stopColor="#bfdbfe"/>
-          <stop offset="28%"  stopColor="#60a5fa"/>
-          <stop offset="58%"  stopColor="#2563eb"/>
-          <stop offset="85%"  stopColor="#1e3a8a"/>
-          <stop offset="100%" stopColor="#0f172a"/>
+        <radialGradient id="sc-skin-d" cx="38%" cy="28%" r="70%">
+          <stop offset="0%" stopColor="#f9c49a"/>
+          <stop offset="100%" stopColor="#d4845a"/>
         </radialGradient>
-        <radialGradient id="sg-belly" cx="46%" cy="36%" r="62%">
-          <stop offset="0%"   stopColor="#f0f9ff"/>
-          <stop offset="40%"  stopColor="#e0f2fe"/>
-          <stop offset="80%"  stopColor="#bae6fd"/>
-          <stop offset="100%" stopColor="#7dd3fc"/>
+        <radialGradient id="sc-shirt" cx="40%" cy="25%" r="72%">
+          <stop offset="0%" stopColor="#f0d08a"/>
+          <stop offset="45%" stopColor="#d4a040"/>
+          <stop offset="100%" stopColor="#a87828"/>
         </radialGradient>
-        <radialGradient id="sg-teal" cx="38%" cy="30%" r="70%">
-          <stop offset="0%"   stopColor="#a5f3fc"/>
-          <stop offset="35%"  stopColor="#22d3ee"/>
-          <stop offset="68%"  stopColor="#0891b2"/>
-          <stop offset="100%" stopColor="#164e63"/>
+        <radialGradient id="sc-shorts" cx="40%" cy="25%" r="72%">
+          <stop offset="0%" stopColor="#4a9c5a"/>
+          <stop offset="55%" stopColor="#2d7a3a"/>
+          <stop offset="100%" stopColor="#1a5c28"/>
         </radialGradient>
-        <radialGradient id="sg-limb" cx="30%" cy="22%" r="75%">
-          <stop offset="0%"   stopColor="#60a5fa"/>
-          <stop offset="55%"  stopColor="#1d4ed8"/>
-          <stop offset="100%" stopColor="#0f172a"/>
+        <radialGradient id="sc-hair" cx="42%" cy="30%" r="68%">
+          <stop offset="0%" stopColor="#8b5c2a"/>
+          <stop offset="50%" stopColor="#5c3a18"/>
+          <stop offset="100%" stopColor="#3a2010"/>
         </radialGradient>
-        <radialGradient id="sg-iris" cx="34%" cy="27%" r="66%">
-          <stop offset="0%"   stopColor="#fef9c3"/>
-          <stop offset="18%"  stopColor="#fef08a"/>
-          <stop offset="40%"  stopColor="#f59e0b"/>
-          <stop offset="68%"  stopColor="#b45309"/>
-          <stop offset="100%" stopColor="#451a03"/>
+        <radialGradient id="sc-eye-l" cx="35%" cy="30%" r="65%">
+          <stop offset="0%" stopColor="#6ab0e8"/>
+          <stop offset="45%" stopColor="#2980c8"/>
+          <stop offset="100%" stopColor="#1a5c9a"/>
         </radialGradient>
-        <radialGradient id="sg-sclera" cx="42%" cy="34%" r="64%">
-          <stop offset="0%"   stopColor="#ffffff"/>
-          <stop offset="70%"  stopColor="#f0fdf4"/>
-          <stop offset="100%" stopColor="#dcfce7"/>
+        <radialGradient id="sc-eye-r" cx="35%" cy="30%" r="65%">
+          <stop offset="0%" stopColor="#6ab0e8"/>
+          <stop offset="45%" stopColor="#2980c8"/>
+          <stop offset="100%" stopColor="#1a5c9a"/>
         </radialGradient>
-        <linearGradient id="sg-wing-l" x1="100%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stopColor="#22d3ee" stopOpacity="0.85"/>
-          <stop offset="40%"  stopColor="#1d4ed8" stopOpacity="0.55"/>
-          <stop offset="100%" stopColor="#1e3a8a" stopOpacity="0.7"/>
-        </linearGradient>
-        <linearGradient id="sg-wing-r" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%"   stopColor="#22d3ee" stopOpacity="0.85"/>
-          <stop offset="40%"  stopColor="#1d4ed8" stopOpacity="0.55"/>
-          <stop offset="100%" stopColor="#1e3a8a" stopOpacity="0.7"/>
-        </linearGradient>
-        <radialGradient id="sg-snout" cx="40%" cy="30%" r="68%">
-          <stop offset="0%"   stopColor="#93c5fd"/>
-          <stop offset="55%"  stopColor="#3b82f6"/>
-          <stop offset="100%" stopColor="#1e3a8a"/>
+        <radialGradient id="sc-lens" cx="35%" cy="30%" r="70%">
+          <stop offset="0%" stopColor="#d4f0e8" stopOpacity="0.85"/>
+          <stop offset="60%" stopColor="#a8dfc8" stopOpacity="0.6"/>
+          <stop offset="100%" stopColor="#70c0a0" stopOpacity="0.4"/>
         </radialGradient>
-        <filter id="sf-drop" x="-25%" y="-25%" width="150%" height="150%">
-          <feDropShadow dx="0" dy="3" stdDeviation="5" floodColor="#1e3a8a" floodOpacity="0.28"/>
+        <filter id="sc-drop" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="#5c3a18" floodOpacity="0.22"/>
         </filter>
-        <filter id="sf-soft" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="2.5"/>
+        <filter id="sc-soft" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="3"/>
         </filter>
-        <filter id="sf-glow" x="-50%" y="-50%" width="200%" height="200%">
+        <filter id="sc-glow-blue" x="-40%" y="-40%" width="180%" height="180%">
           <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="b"/>
-          <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-        <filter id="sf-eye-glow" x="-40%" y="-40%" width="180%" height="180%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
           <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-        <filter id="sf-fire" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
-          <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
         </filter>
       </defs>
 
       {/* Ground shadow */}
-      <ellipse cx="80" cy="216" rx="52" ry="7" fill="#1e3a8a" opacity="0.13"/>
-      <ellipse cx="80" cy="214" rx="34" ry="4" fill="#1e3a8a" opacity="0.1"/>
+      <ellipse cx="72" cy="226" rx="44" ry="5" fill="#3a2010" opacity="0.14"/>
 
-      {/* TAIL */}
-      <path d="M 112,185 Q 148,192 152,210 Q 154,222 140,218" stroke="#0f172a" strokeWidth="16" strokeLinecap="round" fill="none" opacity="0.2" filter="url(#sf-soft)"/>
-      <path d="M 112,185 Q 148,192 152,210 Q 154,222 140,218" stroke="url(#sg-limb)" strokeWidth="13" strokeLinecap="round" fill="none"/>
-      <path d="M 113,183 Q 146,190 150,208" stroke="#22d3ee" strokeWidth="4" strokeLinecap="round" fill="none" opacity="0.45"/>
-      <path d="M 138,213 Q 144,205 148,212 Q 144,222 138,213 Z" fill="url(#sg-teal)" filter="url(#sf-drop)"/>
+      {/* ── LEGS ── */}
+      {/* Left leg skin */}
+      <path d="M 58,175 Q 55,195 54,215 Q 53,222 60,222 Q 66,222 67,215 Q 68,195 68,175 Z" fill="url(#sc-skin)"/>
+      {/* Right leg skin */}
+      <path d="M 78,175 Q 77,195 77,215 Q 76,222 83,222 Q 89,222 89,215 Q 88,195 86,175 Z" fill="url(#sc-skin)"/>
+      {/* Left shoe */}
+      <path d="M 52,216 Q 48,222 50,226 Q 55,229 64,228 Q 69,227 70,223 Q 68,218 60,218 Z" fill="#2a1a0e"/>
+      {/* Right shoe */}
+      <path d="M 75,216 Q 73,222 75,226 Q 80,229 89,228 Q 94,227 94,223 Q 91,218 83,218 Z" fill="#2a1a0e"/>
+      {/* Shoe shine */}
+      <path d="M 53,220 Q 57,218 62,219" stroke="white" strokeWidth="1" strokeLinecap="round" opacity="0.3"/>
+      <path d="M 77,220 Q 81,218 86,219" stroke="white" strokeWidth="1" strokeLinecap="round" opacity="0.3"/>
 
-      {/* WINGS (behind body) */}
-      <g className="scout-wing-l" style={{ transformBox: 'fill-box', transformOrigin: '58% 45%' } as React.CSSProperties}>
-        <path d={wingsOpen
-          ? "M 52,128 Q 10,95 6,62 Q 4,38 22,48 Q 36,56 46,78 Q 54,100 56,120 Z"
-          : "M 52,128 Q 24,108 18,88 Q 14,72 26,76 Q 38,80 46,100 Q 50,114 54,124 Z"}
-          fill="url(#sg-wing-l)" stroke="#1d4ed8" strokeWidth="1.2" opacity="0.9"/>
-        <path d={wingsOpen ? "M 52,126 Q 22,90 10,60" : "M 52,126 Q 30,104 20,80"}
-          stroke="#22d3ee" strokeWidth="1.2" fill="none" opacity="0.6"/>
-      </g>
-      <g className="scout-wing-r" style={{ transformBox: 'fill-box', transformOrigin: '42% 45%' } as React.CSSProperties}>
-        <path d={wingsOpen
-          ? "M 108,128 Q 150,95 154,62 Q 156,38 138,48 Q 124,56 114,78 Q 106,100 104,120 Z"
-          : "M 108,128 Q 136,108 142,88 Q 146,72 134,76 Q 122,80 114,100 Q 110,114 106,124 Z"}
-          fill="url(#sg-wing-r)" stroke="#1d4ed8" strokeWidth="1.2" opacity="0.9"/>
-        <path d={wingsOpen ? "M 108,126 Q 138,90 150,60" : "M 108,126 Q 130,104 140,80"}
-          stroke="#22d3ee" strokeWidth="1.2" fill="none" opacity="0.6"/>
-      </g>
+      {/* ── SHORTS - dark green ── */}
+      <path d="M 46,148 Q 44,170 50,178 Q 58,182 68,180 Q 72,170 72,148 Z" fill="url(#sc-shorts)"/>
+      <path d="M 90,148 Q 92,170 88,178 Q 80,182 72,180 Q 68,170 68,148 Z" fill="url(#sc-shorts)"/>
+      {/* Shorts waistband */}
+      <rect x="44" y="145" width="50" height="8" rx="3" fill="#1a5c28"/>
+      <rect x="44" y="145" width="50" height="4" rx="2" fill="#235c30" opacity="0.5"/>
 
-      {/* BODY */}
-      <path d="M 44,195 Q 36,165 38,140 Q 40,118 52,108 Q 66,98 80,98 Q 94,98 108,108 Q 120,118 122,140 Q 124,165 116,195 Q 100,210 80,212 Q 60,210 44,195 Z"
-        fill="url(#sg-body)" filter="url(#sf-drop)"/>
-      {/* Belly */}
-      <ellipse cx="80" cy="162" rx="24" ry="32" fill="url(#sg-belly)" opacity="0.82"/>
-      {/* Scale sheen */}
-      <ellipse cx="72" cy="130" rx="18" ry="12" fill="url(#sg-teal)" opacity="0.15" className="scout-shine"/>
+      {/* ── LEFT ARM (at side, slightly forward) ── */}
+      <path d="M 46,100 Q 34,120 30,148 Q 29,155 35,156 Q 40,157 43,150 Q 47,132 54,112 Z" fill="url(#sc-shirt)"/>
+      {/* Left hand */}
+      <ellipse cx="34" cy="157" rx="7" ry="8" fill="url(#sc-skin)" filter="url(#sc-drop)"/>
+      {/* Finger details */}
+      <path d="M 29,155 Q 28,162 31,164" stroke="#e8a06a" strokeWidth="1.5" strokeLinecap="round"/>
+      <path d="M 33,154 Q 31,162 33,165" stroke="#e8a06a" strokeWidth="1.5" strokeLinecap="round"/>
+      <path d="M 37,154 Q 36,162 38,164" stroke="#e8a06a" strokeWidth="1.5" strokeLinecap="round"/>
+      <path d="M 40,156 Q 40,162 41,163" stroke="#e8a06a" strokeWidth="1.5" strokeLinecap="round"/>
 
-      {/* FRONT LEGS */}
-      <path d="M 52,175 Q 40,185 36,196 Q 34,205 42,204 Q 46,198 50,192 Q 54,186 56,178 Z"
-        fill="url(#sg-limb)"/>
-      <path d="M 108,175 Q 120,185 124,196 Q 126,205 118,204 Q 114,198 110,192 Q 106,186 104,178 Z"
-        fill="url(#sg-limb)"/>
-      {/* Claws */}
-      {[36,41,46].map((x,i) => (
-        <path key={i} d={`M ${x+i*0.5},204 Q ${x-3+i*0.5},210 ${x+i*0.5},212`}
-          stroke="#22d3ee" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.7"/>
+      {/* ── RIGHT ARM (raised high, holding magnifying glass) ── */}
+      <path d="M 96,100 Q 112,80 122,55 Q 125,48 120,44 Q 115,41 112,48 Q 104,68 92,90 Z" fill="url(#sc-shirt)"/>
+      {/* Right hand holding glass */}
+      <ellipse cx="120" cy="42" rx="7" ry="8" fill="url(#sc-skin)" filter="url(#sc-drop)"/>
+
+      {/* ── MAGNIFYING GLASS ── */}
+      {/* Handle - green, angled */}
+      <path d="M 122,48 L 148,18" stroke="#2d7a3a" strokeWidth="8" strokeLinecap="round"/>
+      <path d="M 122,48 L 148,18" stroke="#3a9a4a" strokeWidth="4" strokeLinecap="round" opacity="0.5"/>
+      {/* Handle grip rings */}
+      <line x1="131" y1="40" x2="135" y2="36" stroke="#1a5c28" strokeWidth="2.5" opacity="0.6"/>
+      <line x1="136" y1="34" x2="140" y2="30" stroke="#1a5c28" strokeWidth="2.5" opacity="0.6"/>
+      {/* Lens outer ring */}
+      <circle cx="110" cy="52" r="22" fill="none" stroke="#2d7a3a" strokeWidth="5"/>
+      <circle cx="110" cy="52" r="22" fill="none" stroke="#4aaa5a" strokeWidth="2" opacity="0.5"/>
+      {/* Lens glass */}
+      <circle cx="110" cy="52" r="18" fill="url(#sc-lens)"/>
+      {/* Lens highlight */}
+      <ellipse cx="104" cy="44" rx="6" ry="4" fill="white" opacity="0.35" transform="rotate(-20,104,44)"/>
+      {/* Pine tree icon */}
+      <path d="M 110,42 L 103,57 L 117,57 Z" fill="#1a5c28" opacity="0.85"/>
+      <path d="M 110,46 L 104,58 L 116,58 Z" fill="#235c30" opacity="0.7"/>
+      <rect x="108" y="56" width="4" height="5" rx="1" fill="#5c3a18" opacity="0.8"/>
+      {/* Compass rose overlay */}
+      <path d="M 110,38 L 108,43 L 110,41 L 112,43 Z" fill="#1a5c28" opacity="0.7"/>
+      <path d="M 110,66 L 108,61 L 110,63 L 112,61 Z" fill="#1a5c28" opacity="0.7"/>
+      <path d="M 96,52 L 101,50 L 99,52 L 101,54 Z" fill="#1a5c28" opacity="0.7"/>
+      <path d="M 124,52 L 119,50 L 121,52 L 119,54 Z" fill="#1a5c28" opacity="0.7"/>
+      <circle cx="110" cy="52" r="2.5" fill="#2d7a3a" opacity="0.6"/>
+
+      {/* ── SHIRT BODY - tan/khaki ── */}
+      <path d="M 44,100 Q 40,125 42,148 L 94,148 Q 96,125 98,100 Q 88,88 72,86 Q 54,88 44,100 Z"
+        fill="url(#sc-shirt)" filter="url(#sc-drop)"/>
+      {/* Shirt button placket */}
+      <line x1="72" y1="90" x2="72" y2="148" stroke="#b88820" strokeWidth="1.5" opacity="0.5"/>
+      {[100,114,128,142].map((y, i) => (
+        <circle key={i} cx="72" cy={y} r="2" fill="#8a6010" opacity="0.6"/>
       ))}
-      {[118,123,128].map((x,i) => (
-        <path key={i} d={`M ${x+i*0.5},204 Q ${x-3+i*0.5},210 ${x+i*0.5},212`}
-          stroke="#22d3ee" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.7"/>
-      ))}
+      {/* Shirt collar */}
+      <path d="M 60,90 Q 66,98 72,94 Q 78,98 84,90 Q 78,84 72,82 Q 66,84 60,90 Z" fill="#e8c06a"/>
+      {/* Shirt sleeve cuffs */}
+      <path d="M 46,110 Q 38,114 36,120" stroke="#c89030" strokeWidth="4" strokeLinecap="round" fill="none"/>
+      <path d="M 96,108 Q 106,96 110,86" stroke="#c89030" strokeWidth="4" strokeLinecap="round" fill="none"/>
 
-      {/* NECK */}
-      <path d="M 62,108 Q 60,88 65,75 Q 72,62 80,60 Q 88,62 95,75 Q 100,88 98,108 Z"
-        fill="url(#sg-body)"/>
-
-      {/* HEAD */}
-      <ellipse cx="80" cy="56" rx="34" ry="30" fill="url(#sg-head)" filter="url(#sf-drop)"/>
-
-      {/* Horns */}
-      <path d="M 58,34 Q 52,18 56,12 Q 60,8 64,18 Q 66,26 63,34 Z" fill="url(#sg-teal)"/>
-      <path d="M 102,34 Q 108,18 104,12 Q 100,8 96,18 Q 94,26 97,34 Z" fill="url(#sg-teal)"/>
-      <path d="M 59,32 Q 54,18 57,13" stroke="#a5f3fc" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.6"/>
-      <path d="M 101,32 Q 106,18 103,13" stroke="#a5f3fc" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.6"/>
-
-      {/* Ear frills */}
-      <path d="M 48,48 Q 38,38 42,30 Q 46,24 52,34 Q 56,42 52,50 Z" fill="url(#sg-teal)" opacity="0.9"/>
-      <path d="M 112,48 Q 122,38 118,30 Q 114,24 108,34 Q 104,42 108,50 Z" fill="url(#sg-teal)" opacity="0.9"/>
-
-      {/* SNOUT */}
-      <ellipse cx="80" cy="70" rx="16" ry="12" fill="url(#sg-snout)"/>
-      <circle cx="75" cy="68" r="3" fill="#1e3a8a" opacity="0.5"/>
-      <circle cx="85" cy="68" r="3" fill="#1e3a8a" opacity="0.5"/>
-
-      {/* Mouth */}
-      <path d={happy
-        ? "M 70,77 Q 80,84 90,77"
-        : "M 72,77 Q 80,80 88,77"}
-        stroke="#1e3a8a" strokeWidth="2" strokeLinecap="round" fill="none"/>
-      {happy && <path d="M 75,80 Q 80,85 85,80" fill="#f87171" opacity="0.6"/>}
-
-      {/* Fire breath */}
-      {fire && <>
-        <ellipse cx="80" cy="90" rx="8" ry="14" fill="#fbbf24" opacity="0.7" filter="url(#sf-fire)"/>
-        <ellipse cx="80" cy="96" rx="5" ry="10" fill="#f97316" opacity="0.8" filter="url(#sf-fire)"/>
-        <ellipse cx="80" cy="100" rx="3" ry="7" fill="#ef4444" opacity="0.9"/>
-      </>}
-
-      {/* EYES */}
+      {/* ── MERIT BADGE SASH (diagonal, left shoulder to right hip) ── */}
+      <path d="M 50,95 Q 75,125 94,148" stroke="#8B4513" strokeWidth="11" strokeLinecap="round" fill="none" opacity="0.9"/>
+      <path d="M 50,95 Q 75,125 94,148" stroke="#a0522d" strokeWidth="7" strokeLinecap="round" fill="none" opacity="0.6"/>
+      {/* Merit badges - colorful rectangles/circles on sash */}
       {[
-        { cx: 66, side: -1 },
-        { cx: 94, side: 1 },
-      ].map(({ cx, side }) => {
-        const ex = cx + eyeX * side * 2.2;
-        const ey = 50 + eyeY * 2.2;
-        return (
-          <g key={cx} filter="url(#sf-eye-glow)">
-            <ellipse cx={cx} cy={50} rx={10} ry={blinking ? 1.5 : 10} fill="url(#sg-sclera)" stroke="#1d4ed8" strokeWidth="1"/>
-            {!blinking && <>
-              <circle cx={ex} cy={ey} r={6.5} fill="url(#sg-iris)"/>
-              <circle cx={ex} cy={ey} r={3.5} fill="#0f172a"/>
-              <circle cx={ex-1.5} cy={ey-1.5} r={1.5} fill="white" opacity="0.9"/>
-              <circle cx={ex+1} cy={ey+1} r={0.8} fill="white" opacity="0.5"/>
-            </>}
-          </g>
-        );
-      })}
+        { cx: 57, cy: 102, c: '#e74c3c' }, { cx: 63, cy: 110, c: '#f39c12' },
+        { cx: 69, cy: 118, c: '#27ae60' }, { cx: 75, cy: 126, c: '#3498db' },
+        { cx: 81, cy: 134, c: '#9b59b6' }, { cx: 87, cy: 142, c: '#e74c3c' },
+      ].map(({ cx, cy, c }, i) => (
+        <rect key={i} x={cx-4} y={cy-4} width="8" height="8" rx="1.5"
+          fill={c} stroke="white" strokeWidth="0.8" opacity="0.9"
+          transform={`rotate(-35,${cx},${cy})`}/>
+      ))}
 
-      {/* HEAD shine */}
-      <ellipse cx="70" cy="40" rx="14" ry="8" fill="white" opacity="0.07" className="scout-shine" transform="rotate(-20,70,40)"/>
+      {/* ── NECK ── */}
+      <path d="M 65,85 Q 63,76 65,68 Q 72,62 80,62 Q 88,62 79,68 Q 80,76 79,85 Z" fill="url(#sc-skin)"/>
+
+      {/* ── ORANGE NECKERCHIEF ── */}
+      <path d="M 58,90 Q 72,115 72,122 Q 72,115 86,90 Q 80,82 72,80 Q 64,82 58,90 Z"
+        fill="#f57c00" opacity="0.95"/>
+      <path d="M 58,90 Q 72,115 72,122 Q 72,115 86,90 Q 80,82 72,80 Q 64,82 58,90 Z"
+        fill="none" stroke="#e65c00" strokeWidth="1" opacity="0.4"/>
+      {/* Neckerchief fold sheen */}
+      <path d="M 62,88 Q 70,108 72,116" stroke="#ffaa44" strokeWidth="1.5" strokeLinecap="round" opacity="0.4"/>
+      {/* Woggle ring */}
+      <ellipse cx="72" cy="96" rx="6" ry="4" fill="none" stroke="#5c3a18" strokeWidth="3"/>
+      <ellipse cx="72" cy="96" rx="6" ry="4" fill="none" stroke="#8B6040" strokeWidth="1.5" opacity="0.5"/>
+
+      {/* ── HEAD ── */}
+      <ellipse cx="72" cy="50" rx="30" ry="32" fill="url(#sc-skin)" filter="url(#sc-drop)"/>
+      {/* Jaw highlight */}
+      <ellipse cx="72" cy="65" rx="18" ry="10" fill="white" opacity="0.08"/>
+
+      {/* ── EARS ── */}
+      <ellipse cx="42" cy="52" rx="7" ry="9" fill="url(#sc-skin)"/>
+      <ellipse cx="43" cy="52" rx="4" ry="6" fill="url(#sc-skin-d)" opacity="0.5"/>
+      <ellipse cx="102" cy="52" rx="7" ry="9" fill="url(#sc-skin)"/>
+      <ellipse cx="101" cy="52" rx="4" ry="6" fill="url(#sc-skin-d)" opacity="0.5"/>
+
+      {/* ── HAIR (short brown, styled) ── */}
+      {/* Back hair mass */}
+      <path d="M 43,44 Q 44,18 72,14 Q 100,18 101,44 Q 96,28 72,26 Q 48,28 43,44 Z"
+        fill="url(#sc-hair)"/>
+      {/* Side hair tufts */}
+      <path d="M 44,42 Q 40,50 43,58" stroke="#5c3a18" strokeWidth="5" strokeLinecap="round" fill="none"/>
+      <path d="M 100,42 Q 104,50 101,58" stroke="#5c3a18" strokeWidth="5" strokeLinecap="round" fill="none"/>
+      {/* Hair front part and styling */}
+      <path d="M 55,22 Q 65,18 72,20 Q 78,18 82,20 Q 88,22 92,28 Q 84,24 72,24 Q 60,24 55,22 Z"
+        fill="#5c3a18"/>
+      {/* Hair highlight */}
+      <path d="M 58,20 Q 68,17 76,19" stroke="#a07850" strokeWidth="2" strokeLinecap="round" opacity="0.5"/>
+
+      {/* ── EYES ── */}
+      {/* Eye whites */}
+      <ellipse cx="61" cy="46" rx="11" ry={blinking ? 2 : 12} fill="white" stroke="#d4a060" strokeWidth="0.5"/>
+      <ellipse cx="83" cy="46" rx="11" ry={blinking ? 2 : 12} fill="white" stroke="#d4a060" strokeWidth="0.5"/>
+      {!blinking && <>
+        {/* Blue irises */}
+        <circle cx={61 + eyeX * 2} cy={46 + eyeY * 2} r={7.5} fill="url(#sc-eye-l)" filter="url(#sc-glow-blue)"/>
+        <circle cx={83 + eyeX * 2} cy={46 + eyeY * 2} r={7.5} fill="url(#sc-eye-r)" filter="url(#sc-glow-blue)"/>
+        {/* Pupils */}
+        <circle cx={61 + eyeX * 2} cy={46 + eyeY * 2} r={4} fill="#0a1a2e"/>
+        <circle cx={83 + eyeX * 2} cy={46 + eyeY * 2} r={4} fill="#0a1a2e"/>
+        {/* Eye sparkles */}
+        <circle cx={58 + eyeX * 2} cy={43 + eyeY * 2} r={2.2} fill="white" opacity="0.95"/>
+        <circle cx={80 + eyeX * 2} cy={43 + eyeY * 2} r={2.2} fill="white" opacity="0.95"/>
+        <circle cx={63 + eyeX * 2} cy={48 + eyeY * 2} r={1} fill="white" opacity="0.5"/>
+        <circle cx={85 + eyeX * 2} cy={48 + eyeY * 2} r={1} fill="white" opacity="0.5"/>
+      </>}
+      {/* Eye lashes/outline */}
+      <ellipse cx="61" cy="46" rx="11" ry={blinking ? 2 : 12} fill="none" stroke="#5c3a18" strokeWidth="1.5"/>
+      <ellipse cx="83" cy="46" rx="11" ry={blinking ? 2 : 12} fill="none" stroke="#5c3a18" strokeWidth="1.5"/>
+
+      {/* ── EYEBROWS (expressive) ── */}
+      <path d={happy ? "M 51,33 Q 61,29 71,32" : "M 51,34 Q 61,31 71,33"}
+        stroke="#5c3a18" strokeWidth="2.8" strokeLinecap="round" fill="none"/>
+      <path d={happy ? "M 73,32 Q 83,29 93,33" : "M 73,33 Q 83,31 93,34"}
+        stroke="#5c3a18" strokeWidth="2.8" strokeLinecap="round" fill="none"/>
+
+      {/* ── NOSE ── */}
+      <path d="M 68,60 Q 72,64 76,60" stroke="#d4845a" strokeWidth="2" strokeLinecap="round" fill="none"/>
+      <circle cx="68" cy="60" r="2.5" fill="#d4845a" opacity="0.5"/>
+      <circle cx="76" cy="60" r="2.5" fill="#d4845a" opacity="0.5"/>
+
+      {/* ── SMILE ── */}
+      <path d={happy
+        ? "M 58,70 Q 72,82 86,70"
+        : "M 60,70 Q 72,78 84,70"}
+        stroke="#c47850" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+      {/* Teeth */}
+      <path d={happy
+        ? "M 60,71 Q 72,80 84,71 L 82,73 Q 72,82 62,73 Z"
+        : "M 62,70 Q 72,77 82,70 L 80,72 Q 72,78 64,72 Z"}
+        fill="white" opacity="0.9"/>
+      {/* Tooth line */}
+      {happy && <line x1="72" y1="71" x2="72" y2="79" stroke="#e0c0a0" strokeWidth="1" opacity="0.4"/>}
+      {/* Rosy cheeks */}
+      <ellipse cx="51" cy="64" rx="9" ry="6" fill="#ff8888" opacity="0.28"/>
+      <ellipse cx="93" cy="64" rx="9" ry="6" fill="#ff8888" opacity="0.28"/>
+
+      {/* Head shine */}
+      <ellipse cx="62" cy="36" rx="12" ry="7" fill="white" opacity="0.1" transform="rotate(-15,62,36)"/>
     </svg>
   );
 };
@@ -821,16 +855,7 @@ const SiteAssistant: React.FC = () => {
           25%      { transform: translateY(-6px) rotate(0.5deg); }
           75%      { transform: translateY(-3px) rotate(1.5deg); }
         }
-        @keyframes scout-wing-flap-l {
-          0%,100% { transform: rotate(0deg); }
-          40%     { transform: rotate(-25deg); }
-          70%     { transform: rotate(-10deg); }
-        }
-        @keyframes scout-wing-flap-r {
-          0%,100% { transform: rotate(0deg); }
-          40%     { transform: rotate(25deg); }
-          70%     { transform: rotate(10deg); }
-        }
+
         @keyframes scout-excited {
           0%,100% { transform: scale(1) rotate(0); }
           25%     { transform: scale(1.1) rotate(-6deg) translateY(-8px); }
@@ -853,8 +878,6 @@ const SiteAssistant: React.FC = () => {
         .scout-float   { animation: scout-float 3s ease-in-out infinite; }
         .scout-walk    { animation: scout-walk 0.4s ease-in-out infinite; }
         .scout-excited { animation: scout-excited 0.5s ease-in-out 3; }
-        .scout-wing-l  { animation: scout-wing-flap-l 1.8s ease-in-out infinite; }
-        .scout-wing-r  { animation: scout-wing-flap-r 1.8s ease-in-out infinite; }
         .scout-shine   { animation: scout-shine 3s ease-in-out infinite; }
         .scout-bubble-pop { animation: scout-bubble-pop 0.35s cubic-bezier(0.34,1.56,0.64,1) forwards; }
       `}</style>
