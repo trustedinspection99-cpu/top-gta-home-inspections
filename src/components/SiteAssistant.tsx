@@ -590,6 +590,7 @@ const SiteAssistant: React.FC = () => {
   interface BookingData { service: string; city: string; address: string; age: string; beds: string; baths: string; sqft: string; addons: string[]; name: string; phone: string; email: string; datetime: string; notes: string; }
   const [bookingStep, setBookingStep] = useState<BookingStep>(null);
   const [bookingData, setBookingData] = useState<BookingData>({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', addons: [], name: '', phone: '', email: '', datetime: '', notes: '' });
+  const [paymentUrl, setPaymentUrl] = useState<string | null>(null);
 
   const BOOKING_SERVICES: QuickReply[] = [
     { label: '🏠 Pre-Purchase', value: 'Pre-Purchase Inspection' },
@@ -754,6 +755,7 @@ const SiteAssistant: React.FC = () => {
         if (t === '__restart__') {
           setBookingStep(null);
           setBookingData({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', addons: [], name: '', phone: '', email: '', datetime: '', notes: '' });
+          setPaymentUrl(null);
           botSay("No problem! Let's start fresh. 🔍", WELCOME_REPLIES);
           return;
         }
@@ -783,15 +785,16 @@ const SiteAssistant: React.FC = () => {
               method: 'POST', headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ lineItems, customerName: bookingData.name, customerEmail: bookingData.email }),
             });
-            const { url } = await checkoutRes.json();
+            const checkoutData = await checkoutRes.json();
+            const url: string | null = checkoutData.url ?? null;
             setTyping(false);
             setBookingStep(null);
+            const total = calcTotal(bookingData.service, bookingData.sqft, bookingData.beds, bookingData.addons);
 
             if (url) {
-              botSay(`✅ **Booking request received!**\n\nRedirecting you to our secure payment portal...\n\nThank you, ${bookingData.name}! 🔍`, []);
-              setTimeout(() => { window.location.href = url; }, 1800);
+              setPaymentUrl(url);
+              botSay(`✅ **Booking confirmed, ${bookingData.name}!**\n\nYour **${bookingData.service}** in **${bookingData.city}** is booked.\n💰 **Total: ${total}**\n\nComplete your secure payment below to lock in your appointment. 👇`, []);
             } else {
-              // Stripe not configured — show success without payment
               botSay(`✅ **Booking Request Sent!**\n\nWe've received your request for a **${bookingData.service}** in **${bookingData.city}**.\n\n📞 We'll call **${bookingData.phone}** shortly to confirm your appointment.\n\nThank you, ${bookingData.name}! 🔍`,
                 [{ label: '🔍 View Services', value: 'show me all services' }, { label: '💰 View Pricing', value: 'show pricing page' }]);
             }
@@ -1168,6 +1171,27 @@ const SiteAssistant: React.FC = () => {
             )}
             <div ref={bottomRef}/>
           </div>
+
+          {/* Pay Now button */}
+          {paymentUrl && (
+            <div style={{ padding: '10px 12px', flexShrink: 0 }}>
+              <a
+                href={paymentUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setPaymentUrl(null)}
+                style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+                  background: 'linear-gradient(135deg, #16a34a, #15803d)',
+                  color: 'white', fontWeight: 700, fontSize: 15,
+                  padding: '12px 20px', borderRadius: 12, textDecoration: 'none',
+                  boxShadow: '0 3px 10px rgba(22,163,74,0.4)',
+                }}
+              >
+                💳 Pay Now — Secure Checkout
+              </a>
+            </div>
+          )}
 
           {/* Quick replies */}
           {quickReplies.length > 0 && (
