@@ -531,10 +531,10 @@ const SiteAssistant: React.FC = () => {
   const [greeted, setGreeted] = useState(false);
 
   // ── Booking flow ────────────────────────────────────────────────────────────
-  type BookingStep = null | 'service' | 'city' | 'address' | 'age' | 'beds' | 'baths' | 'sqft' | 'name' | 'phone' | 'datetime' | 'notes' | 'confirm' | 'submitting';
-  interface BookingData { service: string; city: string; address: string; age: string; beds: string; baths: string; sqft: string; name: string; phone: string; datetime: string; notes: string; }
+  type BookingStep = null | 'service' | 'city' | 'address' | 'age' | 'beds' | 'baths' | 'sqft' | 'name' | 'phone' | 'email' | 'datetime' | 'notes' | 'confirm' | 'submitting';
+  interface BookingData { service: string; city: string; address: string; age: string; beds: string; baths: string; sqft: string; name: string; phone: string; email: string; datetime: string; notes: string; }
   const [bookingStep, setBookingStep] = useState<BookingStep>(null);
-  const [bookingData, setBookingData] = useState<BookingData>({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', name: '', phone: '', datetime: '', notes: '' });
+  const [bookingData, setBookingData] = useState<BookingData>({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', name: '', phone: '', email: '', datetime: '', notes: '' });
 
   const BOOKING_SERVICES: QuickReply[] = [
     { label: '🏠 Pre-Purchase', value: 'Pre-Purchase Inspection' },
@@ -554,7 +554,7 @@ const SiteAssistant: React.FC = () => {
 
   const startBookingFlow = () => {
     setBookingStep('service');
-    setBookingData({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', name: '', phone: '', datetime: '', notes: '' });
+    setBookingData({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', name: '', phone: '', email: '', datetime: '', notes: '' });
     setTimeout(() => botSay("Let's book your inspection! 🔍\n\nWhat type of inspection do you need?", BOOKING_SERVICES), 300);
   };
 
@@ -631,6 +631,13 @@ const SiteAssistant: React.FC = () => {
       }
       case 'phone': {
         const d = { ...bookingData, phone: t };
+        setBookingData(d); setBookingStep('email');
+        botSay(`Got it! ✉️ What's your email address? (for your report and confirmation)`, [{ label: '⏭️ Skip', value: '__skip__' }]);
+        break;
+      }
+      case 'email': {
+        const email = t === '__skip__' ? '' : t;
+        const d = { ...bookingData, email };
         setBookingData(d); setBookingStep('datetime');
         botSay(`Got it! 📅 What's your preferred date and time for the inspection?`, [
           { label: '🌅 Tomorrow AM', value: 'Tomorrow morning' },
@@ -651,14 +658,14 @@ const SiteAssistant: React.FC = () => {
         const notes = t === '__skip__' ? '' : t;
         const d = { ...bookingData, notes };
         setBookingData(d); setBookingStep('confirm');
-        botSay(`Here's your booking request:\n\n🔍 **Service:** ${d.service}\n📍 **City:** ${d.city}${d.address ? `\n🏠 **Address:** ${d.address}` : ''}\n📅 **Property Age:** ${d.age}\n🛏️ **Bedrooms:** ${d.beds}\n🚿 **Bathrooms:** ${d.baths}\n📐 **Sq Ft:** ${d.sqft}\n👤 **Name:** ${d.name}\n📞 **Phone:** ${d.phone}${d.datetime ? `\n🗓️ **Preferred Date/Time:** ${d.datetime}` : ''}${d.notes ? `\n📝 **Notes:** ${d.notes}` : ''}\n\nShall I send this to our team?`,
+        botSay(`Here's your booking request:\n\n🔍 **Service:** ${d.service}\n📍 **City:** ${d.city}${d.address ? `\n🏠 **Address:** ${d.address}` : ''}\n📅 **Property Age:** ${d.age}\n🛏️ **Bedrooms:** ${d.beds}\n🚿 **Bathrooms:** ${d.baths}\n📐 **Sq Ft:** ${d.sqft}\n👤 **Name:** ${d.name}\n📞 **Phone:** ${d.phone}${d.email ? `\n✉️ **Email:** ${d.email}` : ''}${d.datetime ? `\n🗓️ **Preferred Date/Time:** ${d.datetime}` : ''}${d.notes ? `\n📝 **Notes:** ${d.notes}` : ''}\n\nShall I send this to our team?`,
           [{ label: '✅ Confirm Booking', value: '__confirm__' }, { label: '✏️ Start Over', value: '__restart__' }]);
         break;
       }
       case 'confirm': {
         if (t === '__restart__') {
           setBookingStep(null);
-          setBookingData({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', name: '', phone: '', datetime: '', notes: '' });
+          setBookingData({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', name: '', phone: '', email: '', datetime: '', notes: '' });
           botSay("No problem! Let's start fresh. 🔍", WELCOME_REPLIES);
           return;
         }
