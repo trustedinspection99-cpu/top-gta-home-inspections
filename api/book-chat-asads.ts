@@ -3,7 +3,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') return res.status(405).end();
 
-  const { service, city, address, age, beds, baths, sqft, name, phone, email, datetime, notes } = req.body;
+  const { service, city, address, age, beds, baths, sqft, addons, name, phone, email, datetime, notes } = req.body;
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) return res.status(500).json({ error: 'Missing Resend key' });
 
@@ -19,6 +19,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           <h2 style="color:#1d4ed8">New Booking via Scout (Chat Assistant)</h2>
           <table style="border-collapse:collapse;width:100%;max-width:520px;font-family:sans-serif">
             <tr><td style="padding:10px 14px;background:#eff6ff;font-weight:700;width:140px">Service</td><td style="padding:10px 14px;border-bottom:1px solid #dbeafe">${service}</td></tr>
+            ${addons?.length > 0 ? `<tr><td style="padding:10px 14px;background:#eff6ff;font-weight:700">Add-ons</td><td style="padding:10px 14px;border-bottom:1px solid #dbeafe">${addons.join(', ')}</td></tr>` : ''}
             <tr><td style="padding:10px 14px;background:#eff6ff;font-weight:700">City</td><td style="padding:10px 14px;border-bottom:1px solid #dbeafe">${city}</td></tr>
             ${address ? `<tr><td style="padding:10px 14px;background:#eff6ff;font-weight:700">Address</td><td style="padding:10px 14px;border-bottom:1px solid #dbeafe">${address}</td></tr>` : ''}
             <tr><td style="padding:10px 14px;background:#eff6ff;font-weight:700">Property Age</td><td style="padding:10px 14px;border-bottom:1px solid #dbeafe">${age}</td></tr>

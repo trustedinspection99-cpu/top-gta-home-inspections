@@ -519,6 +519,61 @@ const MagnifyIcon = () => (
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 type LifeState = 'hidden' | 'peek' | 'idle' | 'walk' | 'flap' | 'fire' | 'curious';
 
+// ─── Booking price helpers ────────────────────────────────────────────────────
+const ADDON_LIST = [
+  { label: '☢️ Radon Testing +$199',    value: 'Radon Testing ($199)',          key: 'radon',   cents: 19900 },
+  { label: '🌡️ Thermal Imaging +$149',  value: 'Thermal Imaging ($149)',         key: 'thermal', cents: 14900 },
+  { label: '🔥 WETT Inspection +$249',  value: 'WETT Inspection ($249)',         key: 'wett',    cents: 24900 },
+  { label: '🔧 Sewer Scope +$299',      value: 'Sewer Scope Inspection ($299)',  key: 'sewer',   cents: 29900 },
+  { label: '🔬 Mold Inspection +$299',  value: 'Mold Inspection ($299)',         key: 'mold',    cents: 29900 },
+];
+
+function getBasePrice(service: string, sqft: string, beds: string): { display: string; cents: number } {
+  const s = service.toLowerCase();
+  if (s.includes('pre-purchase')) {
+    if (sqft.includes('1,500–2,500')) return { display: '$449', cents: 44900 };
+    if (sqft.includes('2,500–3,500')) return { display: '$499', cents: 49900 };
+    if (sqft.includes('3,500+'))      return { display: '$549', cents: 54900 };
+    return { display: '$399', cents: 39900 };
+  }
+  if (s.includes('pre-listing')) {
+    if (sqft.includes('1,500–2,500')) return { display: '$399', cents: 39900 };
+    if (sqft.includes('2,500–3,500')) return { display: '$449', cents: 44900 };
+    if (sqft.includes('3,500+'))      return { display: '$499', cents: 49900 };
+    return { display: '$349', cents: 34900 };
+  }
+  if (s.includes('new construction') || s.includes('pdi')) return { display: '$399', cents: 39900 };
+  if (s.includes('condo')) {
+    if (beds === '2')                  return { display: '$349', cents: 34900 };
+    if (beds === '3' || beds === '4+') return { display: '$399', cents: 39900 };
+    return { display: '$299', cents: 29900 };
+  }
+  if (s.includes('commercial')) {
+    if (sqft.includes('2,500–3,500') || sqft.includes('3,500+')) return { display: '$899', cents: 89900 };
+    return { display: '$599', cents: 59900 };
+  }
+  if (s.includes('radon'))  return { display: '$199', cents: 19900 };
+  if (s.includes('mold'))   return { display: '$299', cents: 29900 };
+  if (s.includes('sewer'))  return { display: '$299', cents: 29900 };
+  return { display: 'Custom quote', cents: 0 };
+}
+
+function availableAddons(service: string, selectedVals: string[]): QuickReply[] {
+  const s = service.toLowerCase();
+  return ADDON_LIST
+    .filter(a => !s.includes(a.key))
+    .filter(a => !selectedVals.some(v => v.toLowerCase().includes(a.key)))
+    .map(a => ({ label: a.label, value: a.value }))
+    .slice(0, 3); // leave slot for "Done →" button
+}
+
+function calcTotal(service: string, sqft: string, beds: string, addons: string[]): string {
+  const base = getBasePrice(service, sqft, beds);
+  if (base.cents === 0) return base.display;
+  const extra = addons.reduce((sum, v) => { const m = v.match(/\$(\d+)/); return sum + (m ? parseInt(m[1]) : 0); }, 0);
+  return `$${base.cents / 100 + extra}`;
+}
+
 // ─── Main Component ───────────────────────────────────────────────────────────
 const SiteAssistant: React.FC = () => {
   const navigate = useNavigate();
@@ -531,10 +586,10 @@ const SiteAssistant: React.FC = () => {
   const [greeted, setGreeted] = useState(false);
 
   // ── Booking flow ────────────────────────────────────────────────────────────
-  type BookingStep = null | 'service' | 'city' | 'address' | 'age' | 'beds' | 'baths' | 'sqft' | 'name' | 'phone' | 'email' | 'datetime' | 'notes' | 'confirm' | 'submitting';
-  interface BookingData { service: string; city: string; address: string; age: string; beds: string; baths: string; sqft: string; name: string; phone: string; email: string; datetime: string; notes: string; }
+  type BookingStep = null | 'service' | 'city' | 'address' | 'age' | 'beds' | 'baths' | 'sqft' | 'addons' | 'name' | 'phone' | 'email' | 'datetime' | 'notes' | 'confirm' | 'submitting';
+  interface BookingData { service: string; city: string; address: string; age: string; beds: string; baths: string; sqft: string; addons: string[]; name: string; phone: string; email: string; datetime: string; notes: string; }
   const [bookingStep, setBookingStep] = useState<BookingStep>(null);
-  const [bookingData, setBookingData] = useState<BookingData>({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', name: '', phone: '', email: '', datetime: '', notes: '' });
+  const [bookingData, setBookingData] = useState<BookingData>({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', addons: [], name: '', phone: '', email: '', datetime: '', notes: '' });
 
   const BOOKING_SERVICES: QuickReply[] = [
     { label: '🏠 Pre-Purchase', value: 'Pre-Purchase Inspection' },
@@ -554,7 +609,7 @@ const SiteAssistant: React.FC = () => {
 
   const startBookingFlow = () => {
     setBookingStep('service');
-    setBookingData({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', name: '', phone: '', email: '', datetime: '', notes: '' });
+    setBookingData({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', addons: [], name: '', phone: '', email: '', datetime: '', notes: '' });
     setTimeout(() => botSay("Let's book your inspection! 🔍\n\nWhat type of inspection do you need?", BOOKING_SERVICES), 300);
   };
 
@@ -619,8 +674,40 @@ const SiteAssistant: React.FC = () => {
       }
       case 'sqft': {
         const d = { ...bookingData, sqft: t };
-        setBookingData(d); setBookingStep('name');
-        botSay(`Perfect! 👤\n\nWhat's your full name?`);
+        setBookingData(d); setBookingStep('addons');
+        const base = getBasePrice(d.service, t, d.beds);
+        const addons = availableAddons(d.service, []);
+        const hasAddons = addons.length > 0;
+        botSay(
+          `💰 **Your estimated price: ${base.display}**\n\nThat includes your full inspection + same-day digital report + 90-day warranty.` +
+          (hasAddons ? `\n\n🔥 **Boost your inspection with add-ons:**` : `\n\nLooks great! Let's get your contact details.`),
+          hasAddons
+            ? [...addons, { label: '✅ No add-ons, continue →', value: '__done_addons__' }]
+            : [{ label: '✅ Continue', value: '__done_addons__' }]
+        );
+        break;
+      }
+      case 'addons': {
+        if (t === '__done_addons__') {
+          setBookingStep('name');
+          const total = calcTotal(bookingData.service, bookingData.sqft, bookingData.beds, bookingData.addons);
+          botSay(`${bookingData.addons.length > 0 ? `✅ All set! **Total: ${total}**\n\n` : ''}👤 What's your full name?`);
+          return;
+        }
+        const updated = [...bookingData.addons, t];
+        const d = { ...bookingData, addons: updated };
+        setBookingData(d);
+        const remaining = availableAddons(d.service, updated);
+        const total = calcTotal(d.service, d.sqft, d.beds, updated);
+        if (remaining.length === 0) {
+          setBookingStep('name');
+          botSay(`✅ **${t.split(' ($')[0]}** added!\n\n💰 **Total: ${total}**\n\nLet's get your contact info. 👤 What's your full name?`);
+        } else {
+          botSay(
+            `✅ **${t.split(' ($')[0]}** added!\n\n💰 **Running total: ${total}**\n\nWant to add anything else?`,
+            [...remaining, { label: '✅ Done, continue →', value: '__done_addons__' }]
+          );
+        }
         break;
       }
       case 'name': {
@@ -658,31 +745,56 @@ const SiteAssistant: React.FC = () => {
         const notes = t === '__skip__' ? '' : t;
         const d = { ...bookingData, notes };
         setBookingData(d); setBookingStep('confirm');
-        botSay(`Here's your booking request:\n\n🔍 **Service:** ${d.service}\n📍 **City:** ${d.city}${d.address ? `\n🏠 **Address:** ${d.address}` : ''}\n📅 **Property Age:** ${d.age}\n🛏️ **Bedrooms:** ${d.beds}\n🚿 **Bathrooms:** ${d.baths}\n📐 **Sq Ft:** ${d.sqft}\n👤 **Name:** ${d.name}\n📞 **Phone:** ${d.phone}${d.email ? `\n✉️ **Email:** ${d.email}` : ''}${d.datetime ? `\n🗓️ **Preferred Date/Time:** ${d.datetime}` : ''}${d.notes ? `\n📝 **Notes:** ${d.notes}` : ''}\n\nShall I send this to our team?`,
+        const total = calcTotal(d.service, d.sqft, d.beds, d.addons);
+        botSay(`Here's your booking request:\n\n🔍 **Service:** ${d.service}${d.addons.length > 0 ? `\n➕ **Add-ons:** ${d.addons.map(a => a.split(' ($')[0]).join(', ')}` : ''}\n💰 **Total: ${total}**\n\n📍 **City:** ${d.city}${d.address ? `\n🏠 **Address:** ${d.address}` : ''}\n📅 **Property Age:** ${d.age}\n🛏️ **Bedrooms:** ${d.beds}\n🚿 **Bathrooms:** ${d.baths}\n📐 **Sq Ft:** ${d.sqft}\n👤 **Name:** ${d.name}\n📞 **Phone:** ${d.phone}${d.email ? `\n✉️ **Email:** ${d.email}` : ''}${d.datetime ? `\n🗓️ **Preferred Date/Time:** ${d.datetime}` : ''}${d.notes ? `\n📝 **Notes:** ${d.notes}` : ''}\n\nShall I send this to our team?`,
           [{ label: '✅ Confirm Booking', value: '__confirm__' }, { label: '✏️ Start Over', value: '__restart__' }]);
         break;
       }
       case 'confirm': {
         if (t === '__restart__') {
           setBookingStep(null);
-          setBookingData({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', name: '', phone: '', email: '', datetime: '', notes: '' });
+          setBookingData({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', addons: [], name: '', phone: '', email: '', datetime: '', notes: '' });
           botSay("No problem! Let's start fresh. 🔍", WELCOME_REPLIES);
           return;
         }
         if (t === '__confirm__') {
           setBookingStep('submitting'); setTyping(true);
           try {
+            // 1. Send booking email
             const res = await fetch('/api/book-chat-asads', {
               method: 'POST', headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify(bookingData),
             });
             const data = await res.json();
+            if (!data.ok) throw new Error('email failed');
+
+            // 2. Build Stripe line items
+            const base = getBasePrice(bookingData.service, bookingData.sqft, bookingData.beds);
+            const lineItems = [
+              ...(base.cents > 0 ? [{ name: bookingData.service, amount: base.cents }] : []),
+              ...bookingData.addons.map(a => {
+                const m = a.match(/\$(\d+)/);
+                return { name: a.split(' ($')[0], amount: m ? parseInt(m[1]) * 100 : 0 };
+              }).filter(i => i.amount > 0),
+            ];
+
+            // 3. Create Stripe checkout session
+            const checkoutRes = await fetch('/api/create-checkout-asads', {
+              method: 'POST', headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ lineItems, customerName: bookingData.name, customerEmail: bookingData.email }),
+            });
+            const { url } = await checkoutRes.json();
             setTyping(false);
-            if (data.ok) {
-              setBookingStep(null);
+            setBookingStep(null);
+
+            if (url) {
+              botSay(`✅ **Booking request received!**\n\nRedirecting you to our secure payment portal...\n\nThank you, ${bookingData.name}! 🔍`, []);
+              setTimeout(() => { window.location.href = url; }, 1800);
+            } else {
+              // Stripe not configured — show success without payment
               botSay(`✅ **Booking Request Sent!**\n\nWe've received your request for a **${bookingData.service}** in **${bookingData.city}**.\n\n📞 We'll call **${bookingData.phone}** shortly to confirm your appointment.\n\nThank you, ${bookingData.name}! 🔍`,
                 [{ label: '🔍 View Services', value: 'show me all services' }, { label: '💰 View Pricing', value: 'show pricing page' }]);
-            } else throw new Error('failed');
+            }
           } catch {
             setTyping(false); setBookingStep('confirm');
             botSay(`Something went wrong. Please try again or call us:\n\n📞 **(647) 801-9311**`,
