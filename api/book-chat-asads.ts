@@ -3,7 +3,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') return res.status(405).end();
 
-  const { service, city, address, age, beds, baths, sqft, name, phone, notes } = req.body;
+  const { service, city, address, age, beds, baths, sqft, name, phone, datetime, notes } = req.body;
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) return res.status(500).json({ error: 'Missing Resend key' });
 
@@ -27,6 +27,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             <tr><td style="padding:10px 14px;background:#eff6ff;font-weight:700">Square Footage</td><td style="padding:10px 14px;border-bottom:1px solid #dbeafe">${sqft}</td></tr>
             <tr><td style="padding:10px 14px;background:#eff6ff;font-weight:700">Name</td><td style="padding:10px 14px;border-bottom:1px solid #dbeafe">${name}</td></tr>
             <tr><td style="padding:10px 14px;background:#eff6ff;font-weight:700">Phone</td><td style="padding:10px 14px;border-bottom:1px solid #dbeafe"><a href="tel:${phone}">${phone}</a></td></tr>
+            ${datetime ? `<tr><td style="padding:10px 14px;background:#eff6ff;font-weight:700">Preferred Date/Time</td><td style="padding:10px 14px;border-bottom:1px solid #dbeafe">${datetime}</td></tr>` : ''}
             ${notes ? `<tr><td style="padding:10px 14px;background:#eff6ff;font-weight:700">Notes</td><td style="padding:10px 14px">${notes}</td></tr>` : ''}
           </table>
           <p style="margin-top:20px;color:#6b7280;font-size:13px">Submitted via Scout chat assistant · asads.ca</p>
