@@ -295,57 +295,41 @@ type ScoutMood = 'idle' | 'happy' | 'excited' | 'curious' | 'fire';
 
 interface ScoutProps { mood?: ScoutMood; blinking?: boolean; eyeX?: number; eyeY?: number; wingsOpen?: boolean; mini?: boolean; }
 
+// Home inspector: hard hat, blue work shirt, clipboard, magnifying glass
 const ScoutSVG: React.FC<ScoutProps> = ({ mood = 'idle', blinking = false, eyeX = 0, eyeY = 0, mini = false }) => {
   const happy = mood === 'happy' || mood === 'excited';
   const w = mini ? 44 : 100;
   const h = mini ? 50 : 138;
   return (
     <svg width={w} height={h} viewBox="0 0 160 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* ── HOME INSPECTOR CHARACTER ── */}
       <defs>
         <radialGradient id="sc-skin" cx="38%" cy="28%" r="70%">
-          <stop offset="0%" stopColor="#fde8d0"/>
-          <stop offset="55%" stopColor="#f9c49a"/>
-          <stop offset="100%" stopColor="#e8a06a"/>
+          <stop offset="0%" stopColor="#fde8d0"/><stop offset="55%" stopColor="#f9c49a"/><stop offset="100%" stopColor="#e8a06a"/>
         </radialGradient>
         <radialGradient id="sc-skin-d" cx="38%" cy="28%" r="70%">
-          <stop offset="0%" stopColor="#f9c49a"/>
-          <stop offset="100%" stopColor="#d4845a"/>
+          <stop offset="0%" stopColor="#f9c49a"/><stop offset="100%" stopColor="#d4845a"/>
         </radialGradient>
-        <radialGradient id="sc-shirt" cx="40%" cy="25%" r="72%">
-          <stop offset="0%" stopColor="#f0d08a"/>
-          <stop offset="45%" stopColor="#d4a040"/>
-          <stop offset="100%" stopColor="#a87828"/>
+        <radialGradient id="sc-shirt" cx="36%" cy="22%" r="74%">
+          <stop offset="0%" stopColor="#93c5fd"/><stop offset="40%" stopColor="#3b82f6"/><stop offset="100%" stopColor="#1d4ed8"/>
         </radialGradient>
-        <radialGradient id="sc-shorts" cx="40%" cy="25%" r="72%">
-          <stop offset="0%" stopColor="#4a9c5a"/>
-          <stop offset="55%" stopColor="#2d7a3a"/>
-          <stop offset="100%" stopColor="#1a5c28"/>
+        <radialGradient id="sc-hat" cx="38%" cy="25%" r="72%">
+          <stop offset="0%" stopColor="#fde68a"/><stop offset="45%" stopColor="#f59e0b"/><stop offset="100%" stopColor="#d97706"/>
         </radialGradient>
-        <radialGradient id="sc-hair" cx="42%" cy="30%" r="68%">
-          <stop offset="0%" stopColor="#8b5c2a"/>
-          <stop offset="50%" stopColor="#5c3a18"/>
-          <stop offset="100%" stopColor="#3a2010"/>
+        <radialGradient id="sc-pants" cx="40%" cy="25%" r="72%">
+          <stop offset="0%" stopColor="#d4b896"/><stop offset="55%" stopColor="#a08060"/><stop offset="100%" stopColor="#7a6048"/>
         </radialGradient>
         <radialGradient id="sc-eye-l" cx="35%" cy="30%" r="65%">
-          <stop offset="0%" stopColor="#6ab0e8"/>
-          <stop offset="45%" stopColor="#2980c8"/>
-          <stop offset="100%" stopColor="#1a5c9a"/>
+          <stop offset="0%" stopColor="#6ab0e8"/><stop offset="45%" stopColor="#2980c8"/><stop offset="100%" stopColor="#1a5c9a"/>
         </radialGradient>
         <radialGradient id="sc-eye-r" cx="35%" cy="30%" r="65%">
-          <stop offset="0%" stopColor="#6ab0e8"/>
-          <stop offset="45%" stopColor="#2980c8"/>
-          <stop offset="100%" stopColor="#1a5c9a"/>
+          <stop offset="0%" stopColor="#6ab0e8"/><stop offset="45%" stopColor="#2980c8"/><stop offset="100%" stopColor="#1a5c9a"/>
         </radialGradient>
         <radialGradient id="sc-lens" cx="35%" cy="30%" r="70%">
-          <stop offset="0%" stopColor="#d4f0e8" stopOpacity="0.85"/>
-          <stop offset="60%" stopColor="#a8dfc8" stopOpacity="0.6"/>
-          <stop offset="100%" stopColor="#70c0a0" stopOpacity="0.4"/>
+          <stop offset="0%" stopColor="#d4f0e8" stopOpacity="0.85"/><stop offset="60%" stopColor="#a8dfc8" stopOpacity="0.6"/><stop offset="100%" stopColor="#70c0a0" stopOpacity="0.4"/>
         </radialGradient>
         <filter id="sc-drop" x="-20%" y="-20%" width="140%" height="140%">
-          <feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="#5c3a18" floodOpacity="0.22"/>
-        </filter>
-        <filter id="sc-soft" x="-30%" y="-30%" width="160%" height="160%">
-          <feGaussianBlur stdDeviation="3"/>
+          <feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="#3a2010" floodOpacity="0.22"/>
         </filter>
         <filter id="sc-glow-blue" x="-40%" y="-40%" width="180%" height="180%">
           <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="b"/>
@@ -354,190 +338,173 @@ const ScoutSVG: React.FC<ScoutProps> = ({ mood = 'idle', blinking = false, eyeX 
       </defs>
 
       {/* Ground shadow */}
-      <ellipse cx="72" cy="226" rx="44" ry="5" fill="#3a2010" opacity="0.14"/>
+      <ellipse cx="72" cy="226" rx="44" ry="5" fill="#3a2010" opacity="0.12"/>
 
-      {/* ── LEGS ── */}
-      {/* Left leg skin */}
-      <path d="M 58,175 Q 55,195 54,215 Q 53,222 60,222 Q 66,222 67,215 Q 68,195 68,175 Z" fill="url(#sc-skin)"/>
-      {/* Right leg skin */}
-      <path d="M 78,175 Q 77,195 77,215 Q 76,222 83,222 Q 89,222 89,215 Q 88,195 86,175 Z" fill="url(#sc-skin)"/>
-      {/* Left shoe */}
-      <path d="M 52,216 Q 48,222 50,226 Q 55,229 64,228 Q 69,227 70,223 Q 68,218 60,218 Z" fill="#2a1a0e"/>
-      {/* Right shoe */}
-      <path d="M 75,216 Q 73,222 75,226 Q 80,229 89,228 Q 94,227 94,223 Q 91,218 83,218 Z" fill="#2a1a0e"/>
-      {/* Shoe shine */}
-      <path d="M 53,220 Q 57,218 62,219" stroke="white" strokeWidth="1" strokeLinecap="round" opacity="0.3"/>
-      <path d="M 77,220 Q 81,218 86,219" stroke="white" strokeWidth="1" strokeLinecap="round" opacity="0.3"/>
+      {/* ── LEGS (khaki) ── */}
+      <path d="M 54,168 Q 52,190 51,212 Q 50,220 58,220 Q 65,220 66,212 Q 67,190 66,168 Z" fill="url(#sc-pants)"/>
+      <path d="M 78,168 Q 78,190 78,212 Q 78,220 86,220 Q 93,220 92,212 Q 91,190 88,168 Z" fill="url(#sc-pants)"/>
+      {/* Leg crease */}
+      <line x1="57" y1="172" x2="55" y2="208" stroke="#7a6048" strokeWidth="1.2" opacity="0.35"/>
+      <line x1="82" y1="172" x2="82" y2="208" stroke="#7a6048" strokeWidth="1.2" opacity="0.35"/>
+      {/* Shoes */}
+      <path d="M 48,213 Q 44,220 47,224 Q 53,227 63,226 Q 68,224 68,220 Q 66,214 58,213 Z" fill="#2a1a0e"/>
+      <path d="M 76,213 Q 75,220 78,224 Q 84,227 93,226 Q 97,224 96,220 Q 93,214 85,213 Z" fill="#2a1a0e"/>
+      <path d="M 49,218 Q 53,216 59,217" stroke="white" strokeWidth="1" strokeLinecap="round" opacity="0.28"/>
+      <path d="M 78,218 Q 82,216 88,217" stroke="white" strokeWidth="1" strokeLinecap="round" opacity="0.28"/>
 
-      {/* ── SHORTS - dark green ── */}
-      <path d="M 46,148 Q 44,170 50,178 Q 58,182 68,180 Q 72,170 72,148 Z" fill="url(#sc-shorts)"/>
-      <path d="M 90,148 Q 92,170 88,178 Q 80,182 72,180 Q 68,170 68,148 Z" fill="url(#sc-shorts)"/>
-      {/* Shorts waistband */}
-      <rect x="44" y="145" width="50" height="8" rx="3" fill="#1a5c28"/>
-      <rect x="44" y="145" width="50" height="4" rx="2" fill="#235c30" opacity="0.5"/>
+      {/* ── TOOL BELT ── */}
+      <rect x="48" y="160" width="48" height="10" rx="3" fill="#4a3728"/>
+      {/* Belt buckle */}
+      <rect x="68" y="161" width="10" height="8" rx="1.5" fill="#c8a020"/>
+      <rect x="69" y="162" width="8" height="6" rx="1" fill="#f0c030" opacity="0.7"/>
+      {/* Flashlight on belt right side */}
+      <rect x="88" y="160" width="5" height="10" rx="2" fill="#888"/>
+      <ellipse cx="90" cy="160" rx="3" ry="2" fill="#ffee88" opacity="0.7"/>
+      {/* Pen on belt left */}
+      <rect x="52" y="158" width="3" height="12" rx="1.5" fill="#1d4ed8"/>
+      <rect x="56" y="158" width="3" height="12" rx="1.5" fill="#dc2626"/>
 
-      {/* ── LEFT ARM (at side, slightly forward) ── */}
-      <path d="M 46,100 Q 34,120 30,148 Q 29,155 35,156 Q 40,157 43,150 Q 47,132 54,112 Z" fill="url(#sc-shirt)"/>
+      {/* ── LEFT ARM (holding clipboard) ── */}
+      <path d="M 50,100 Q 36,118 26,148 Q 23,156 29,158 Q 35,160 38,152 Q 46,126 56,106 Z" fill="url(#sc-shirt)"/>
       {/* Left hand */}
-      <ellipse cx="34" cy="157" rx="7" ry="8" fill="url(#sc-skin)" filter="url(#sc-drop)"/>
-      {/* Finger details */}
-      <path d="M 29,155 Q 28,162 31,164" stroke="#e8a06a" strokeWidth="1.5" strokeLinecap="round"/>
-      <path d="M 33,154 Q 31,162 33,165" stroke="#e8a06a" strokeWidth="1.5" strokeLinecap="round"/>
-      <path d="M 37,154 Q 36,162 38,164" stroke="#e8a06a" strokeWidth="1.5" strokeLinecap="round"/>
-      <path d="M 40,156 Q 40,162 41,163" stroke="#e8a06a" strokeWidth="1.5" strokeLinecap="round"/>
+      <ellipse cx="31" cy="159" rx="7" ry="8" fill="url(#sc-skin)" filter="url(#sc-drop)"/>
 
-      {/* ── RIGHT ARM (raised high, holding magnifying glass) ── */}
-      <path d="M 96,100 Q 112,80 122,55 Q 125,48 120,44 Q 115,41 112,48 Q 104,68 92,90 Z" fill="url(#sc-shirt)"/>
-      {/* Right hand holding glass */}
-      <ellipse cx="120" cy="42" rx="7" ry="8" fill="url(#sc-skin)" filter="url(#sc-drop)"/>
+      {/* ── CLIPBOARD (left hand) ── */}
+      <g transform="rotate(-6,18,168)">
+        <rect x="4" y="144" width="30" height="42" rx="3" fill="#b07840"/>
+        <rect x="6" y="149" width="26" height="35" rx="2" fill="#f5f0e4"/>
+        {/* Clip */}
+        <rect x="11" y="141" width="16" height="10" rx="3" fill="#777"/>
+        <rect x="13" y="142" width="12" height="7" rx="2" fill="#555"/>
+        <ellipse cx="19" cy="142" rx="5" ry="2.5" fill="#666"/>
+        {/* Checklist lines */}
+        <line x1="10" y1="156" x2="28" y2="156" stroke="#9ca3af" strokeWidth="1.2" opacity="0.6"/>
+        <line x1="10" y1="162" x2="28" y2="162" stroke="#9ca3af" strokeWidth="1.2" opacity="0.6"/>
+        <line x1="10" y1="168" x2="28" y2="168" stroke="#9ca3af" strokeWidth="1.2" opacity="0.6"/>
+        <line x1="10" y1="174" x2="28" y2="174" stroke="#9ca3af" strokeWidth="1.2" opacity="0.6"/>
+        {/* Checkmarks */}
+        <path d="M 9,155 L 11,157 L 14,153" stroke="#22c55e" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
+        <path d="M 9,161 L 11,163 L 14,159" stroke="#22c55e" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
+        {/* X mark (issue found) */}
+        <path d="M 9,167 L 13,171 M 13,167 L 9,171" stroke="#ef4444" strokeWidth="1.5" strokeLinecap="round"/>
+      </g>
+
+      {/* ── RIGHT ARM (raised, holding magnifying glass) ── */}
+      <path d="M 96,100 Q 110,80 120,56 Q 123,48 118,45 Q 113,42 110,50 Q 102,70 90,92 Z" fill="url(#sc-shirt)"/>
+      {/* Right hand */}
+      <ellipse cx="117" cy="44" rx="7" ry="8" fill="url(#sc-skin)" filter="url(#sc-drop)"/>
 
       {/* ── MAGNIFYING GLASS ── */}
-      {/* Handle - green, angled */}
-      <path d="M 122,48 L 148,18" stroke="#2d7a3a" strokeWidth="8" strokeLinecap="round"/>
-      <path d="M 122,48 L 148,18" stroke="#3a9a4a" strokeWidth="4" strokeLinecap="round" opacity="0.5"/>
-      {/* Handle grip rings */}
-      <line x1="131" y1="40" x2="135" y2="36" stroke="#1a5c28" strokeWidth="2.5" opacity="0.6"/>
-      <line x1="136" y1="34" x2="140" y2="30" stroke="#1a5c28" strokeWidth="2.5" opacity="0.6"/>
-      {/* Lens outer ring */}
-      <circle cx="110" cy="52" r="22" fill="none" stroke="#2d7a3a" strokeWidth="5"/>
-      <circle cx="110" cy="52" r="22" fill="none" stroke="#4aaa5a" strokeWidth="2" opacity="0.5"/>
-      {/* Lens glass */}
-      <circle cx="110" cy="52" r="18" fill="url(#sc-lens)"/>
-      {/* Lens highlight */}
-      <ellipse cx="104" cy="44" rx="6" ry="4" fill="white" opacity="0.35" transform="rotate(-20,104,44)"/>
-      {/* Home icon */}
-      {/* Roof */}
-      <path d="M 110,40 L 101,50 L 119,50 Z" fill="#1a5c28" opacity="0.9"/>
-      <path d="M 110,40 L 102,49 L 118,49 Z" fill="#2d7a3a" opacity="0.5"/>
-      {/* Walls */}
-      <rect x="102" y="49" width="16" height="11" rx="1" fill="#1a5c28" opacity="0.85"/>
-      {/* Door */}
-      <rect x="107" y="53" width="6" height="7" rx="1" fill="#4aaa5a" opacity="0.9"/>
-      {/* Door knob */}
-      <circle cx="112" cy="57" r="1" fill="#2d7a3a"/>
-      {/* Compass rose overlay */}
-      <path d="M 110,38 L 108,43 L 110,41 L 112,43 Z" fill="#1a5c28" opacity="0.7"/>
-      <path d="M 110,66 L 108,61 L 110,63 L 112,61 Z" fill="#1a5c28" opacity="0.7"/>
-      <path d="M 96,52 L 101,50 L 99,52 L 101,54 Z" fill="#1a5c28" opacity="0.7"/>
-      <path d="M 124,52 L 119,50 L 121,52 L 119,54 Z" fill="#1a5c28" opacity="0.7"/>
-      <circle cx="110" cy="52" r="2.5" fill="#2d7a3a" opacity="0.6"/>
+      <path d="M 119,50 L 148,20" stroke="#2d7a3a" strokeWidth="8" strokeLinecap="round"/>
+      <path d="M 119,50 L 148,20" stroke="#3a9a4a" strokeWidth="4" strokeLinecap="round" opacity="0.5"/>
+      <line x1="128" y1="42" x2="132" y2="38" stroke="#1a5c28" strokeWidth="2.5" opacity="0.55"/>
+      <line x1="134" y1="36" x2="138" y2="32" stroke="#1a5c28" strokeWidth="2.5" opacity="0.55"/>
+      <circle cx="108" cy="54" r="22" fill="none" stroke="#2d7a3a" strokeWidth="5"/>
+      <circle cx="108" cy="54" r="22" fill="none" stroke="#4aaa5a" strokeWidth="2" opacity="0.4"/>
+      <circle cx="108" cy="54" r="18" fill="url(#sc-lens)"/>
+      <ellipse cx="102" cy="46" rx="6" ry="4" fill="white" opacity="0.32" transform="rotate(-20,102,46)"/>
+      {/* Home icon in lens */}
+      <path d="M 108,42 L 99,52 L 117,52 Z" fill="#1a5c28" opacity="0.9"/>
+      <path d="M 108,42 L 100,51 L 116,51 Z" fill="#2d7a3a" opacity="0.45"/>
+      <rect x="100" y="51" width="16" height="12" rx="1.5" fill="#1a5c28" opacity="0.85"/>
+      <rect x="105" y="55" width="6" height="8" rx="1" fill="#4aaa5a" opacity="0.95"/>
+      <circle cx="110" cy="59" r="1" fill="#2d7a3a"/>
+      <circle cx="108" cy="54" r="2.5" fill="#2d7a3a" opacity="0.45"/>
 
-      {/* ── SHIRT BODY - tan/khaki ── */}
-      <path d="M 44,100 Q 40,125 42,148 L 94,148 Q 96,125 98,100 Q 88,88 72,86 Q 54,88 44,100 Z"
+      {/* ── SHIRT BODY (blue work shirt) ── */}
+      <path d="M 46,100 Q 42,128 44,162 L 100,162 Q 102,128 98,100 Q 88,88 72,86 Q 56,88 46,100 Z"
         fill="url(#sc-shirt)" filter="url(#sc-drop)"/>
-      {/* Shirt button placket */}
-      <line x1="72" y1="90" x2="72" y2="148" stroke="#b88820" strokeWidth="1.5" opacity="0.5"/>
-      {[100,114,128,142].map((y, i) => (
-        <circle key={i} cx="72" cy={y} r="2" fill="#8a6010" opacity="0.6"/>
-      ))}
-      {/* Shirt collar */}
-      <path d="M 60,90 Q 66,98 72,94 Q 78,98 84,90 Q 78,84 72,82 Q 66,84 60,90 Z" fill="#e8c06a"/>
-      {/* Shirt sleeve cuffs */}
-      <path d="M 46,110 Q 38,114 36,120" stroke="#c89030" strokeWidth="4" strokeLinecap="round" fill="none"/>
-      <path d="M 96,108 Q 106,96 110,86" stroke="#c89030" strokeWidth="4" strokeLinecap="round" fill="none"/>
-
-      {/* ── MERIT BADGE SASH (diagonal, left shoulder to right hip) ── */}
-      <path d="M 50,95 Q 75,125 94,148" stroke="#8B4513" strokeWidth="11" strokeLinecap="round" fill="none" opacity="0.9"/>
-      <path d="M 50,95 Q 75,125 94,148" stroke="#a0522d" strokeWidth="7" strokeLinecap="round" fill="none" opacity="0.6"/>
-      {/* Merit badges - colorful rectangles/circles on sash */}
-      {[
-        { cx: 57, cy: 102, c: '#e74c3c' }, { cx: 63, cy: 110, c: '#f39c12' },
-        { cx: 69, cy: 118, c: '#27ae60' }, { cx: 75, cy: 126, c: '#3498db' },
-        { cx: 81, cy: 134, c: '#9b59b6' }, { cx: 87, cy: 142, c: '#e74c3c' },
-      ].map(({ cx, cy, c }, i) => (
-        <rect key={i} x={cx-4} y={cy-4} width="8" height="8" rx="1.5"
-          fill={c} stroke="white" strokeWidth="0.8" opacity="0.9"
-          transform={`rotate(-35,${cx},${cy})`}/>
-      ))}
+      {/* Shirt shading */}
+      <path d="M 46,100 Q 42,128 44,162 L 58,162 Q 54,132 56,104 Z" fill="#1d4ed8" opacity="0.3"/>
+      {/* Chest pocket */}
+      <rect x="74" y="108" width="15" height="13" rx="2" fill="#2563eb"/>
+      <rect x="74" y="108" width="15" height="5" rx="1" fill="#1d4ed8"/>
+      <line x1="78" y1="108" x2="78" y2="121" stroke="#f0c030" strokeWidth="1.5" strokeLinecap="round"/>
+      <line x1="82" y1="108" x2="82" y2="121" stroke="#ef4444" strokeWidth="1.5" strokeLinecap="round"/>
+      {/* Collar */}
+      <path d="M 58,92 Q 65,100 72,96 Q 79,100 86,92 Q 80,85 72,83 Q 64,85 58,92 Z" fill="#60a5fa"/>
+      <path d="M 59,92 Q 65,97 72,95" stroke="#93c5fd" strokeWidth="1" opacity="0.5"/>
+      <path d="M 85,92 Q 79,97 72,95" stroke="#93c5fd" strokeWidth="1" opacity="0.5"/>
+      {/* Shirt placket */}
+      <line x1="72" y1="96" x2="72" y2="162" stroke="#2563eb" strokeWidth="1.5" opacity="0.45"/>
+      {[108,122,136,150].map((y, i) => <circle key={i} cx="72" cy={y} r="2" fill="#1d4ed8" opacity="0.55"/>)}
 
       {/* ── NECK ── */}
-      <path d="M 65,85 Q 63,76 65,68 Q 72,62 80,62 Q 88,62 79,68 Q 80,76 79,85 Z" fill="url(#sc-skin)"/>
-
-      {/* ── ORANGE NECKERCHIEF ── */}
-      <path d="M 58,90 Q 72,115 72,122 Q 72,115 86,90 Q 80,82 72,80 Q 64,82 58,90 Z"
-        fill="#f57c00" opacity="0.95"/>
-      <path d="M 58,90 Q 72,115 72,122 Q 72,115 86,90 Q 80,82 72,80 Q 64,82 58,90 Z"
-        fill="none" stroke="#e65c00" strokeWidth="1" opacity="0.4"/>
-      {/* Neckerchief fold sheen */}
-      <path d="M 62,88 Q 70,108 72,116" stroke="#ffaa44" strokeWidth="1.5" strokeLinecap="round" opacity="0.4"/>
-      {/* Woggle ring */}
-      <ellipse cx="72" cy="96" rx="6" ry="4" fill="none" stroke="#5c3a18" strokeWidth="3"/>
-      <ellipse cx="72" cy="96" rx="6" ry="4" fill="none" stroke="#8B6040" strokeWidth="1.5" opacity="0.5"/>
+      <rect x="65" y="84" width="14" height="10" rx="5" fill="url(#sc-skin)"/>
 
       {/* ── HEAD ── */}
-      <ellipse cx="72" cy="50" rx="30" ry="32" fill="url(#sc-skin)" filter="url(#sc-drop)"/>
-      {/* Jaw highlight */}
-      <ellipse cx="72" cy="65" rx="18" ry="10" fill="white" opacity="0.08"/>
+      <ellipse cx="72" cy="56" rx="30" ry="32" fill="url(#sc-skin)" filter="url(#sc-drop)"/>
+      <ellipse cx="72" cy="71" rx="18" ry="10" fill="white" opacity="0.07"/>
 
       {/* ── EARS ── */}
-      <ellipse cx="42" cy="52" rx="7" ry="9" fill="url(#sc-skin)"/>
-      <ellipse cx="43" cy="52" rx="4" ry="6" fill="url(#sc-skin-d)" opacity="0.5"/>
-      <ellipse cx="102" cy="52" rx="7" ry="9" fill="url(#sc-skin)"/>
-      <ellipse cx="101" cy="52" rx="4" ry="6" fill="url(#sc-skin-d)" opacity="0.5"/>
+      <ellipse cx="42" cy="58" rx="7" ry="9" fill="url(#sc-skin)"/>
+      <ellipse cx="43" cy="58" rx="4" ry="6" fill="url(#sc-skin-d)" opacity="0.45"/>
+      <ellipse cx="102" cy="58" rx="7" ry="9" fill="url(#sc-skin)"/>
+      <ellipse cx="101" cy="58" rx="4" ry="6" fill="url(#sc-skin-d)" opacity="0.45"/>
 
-      {/* ── HAIR (short brown, styled) ── */}
-      {/* Back hair mass */}
-      <path d="M 43,44 Q 44,18 72,14 Q 100,18 101,44 Q 96,28 72,26 Q 48,28 43,44 Z"
-        fill="url(#sc-hair)"/>
-      {/* Side hair tufts */}
-      <path d="M 44,42 Q 40,50 43,58" stroke="#5c3a18" strokeWidth="5" strokeLinecap="round" fill="none"/>
-      <path d="M 100,42 Q 104,50 101,58" stroke="#5c3a18" strokeWidth="5" strokeLinecap="round" fill="none"/>
-      {/* Hair front part and styling */}
-      <path d="M 55,22 Q 65,18 72,20 Q 78,18 82,20 Q 88,22 92,28 Q 84,24 72,24 Q 60,24 55,22 Z"
-        fill="#5c3a18"/>
-      {/* Hair highlight */}
-      <path d="M 58,20 Q 68,17 76,19" stroke="#a07850" strokeWidth="2" strokeLinecap="round" opacity="0.5"/>
+      {/* ── HARD HAT (yellow) ── */}
+      {/* Dome */}
+      <path d="M 38,44 Q 38,10 72,8 Q 106,10 106,44 Q 98,30 72,28 Q 46,30 38,44 Z" fill="url(#sc-hat)"/>
+      {/* Dome shading sides */}
+      <path d="M 38,44 Q 40,22 52,14 Q 44,26 42,40 Z" fill="#d97706" opacity="0.4"/>
+      <path d="M 106,44 Q 104,22 92,14 Q 100,26 102,40 Z" fill="#d97706" opacity="0.35"/>
+      {/* Dome highlight */}
+      <ellipse cx="66" cy="18" rx="16" ry="7" fill="white" opacity="0.18" transform="rotate(-8,66,18)"/>
+      <path d="M 54,12 Q 68,9 82,12" stroke="#fde68a" strokeWidth="2.5" strokeLinecap="round" opacity="0.55"/>
+      {/* Brim */}
+      <path d="M 30,44 Q 30,52 72,54 Q 114,52 114,44 Q 114,38 72,40 Q 30,38 30,44 Z" fill="#d97706"/>
+      <path d="M 34,47 Q 72,52 110,47" stroke="#b45309" strokeWidth="2" opacity="0.35" fill="none"/>
+      {/* Hat suspension stripe */}
+      <path d="M 42,42 Q 72,46 102,42" stroke="#b45309" strokeWidth="1.5" opacity="0.25" fill="none"/>
+      {/* ASADS badge on hat */}
+      <rect x="62" y="24" width="20" height="10" rx="2" fill="#1d4ed8" opacity="0.85"/>
+      <text x="72" y="32" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold" fontFamily="sans-serif" opacity="0.9">ASADS</text>
+
+      {/* ── BROWN HAIR (visible at sides under hat) ── */}
+      <path d="M 38,44 Q 36,52 38,62" stroke="#5c3a18" strokeWidth="7" strokeLinecap="round" fill="none"/>
+      <path d="M 106,44 Q 108,52 106,62" stroke="#5c3a18" strokeWidth="7" strokeLinecap="round" fill="none"/>
+      <path d="M 40,46 Q 38,55 40,64" stroke="#3a2010" strokeWidth="4" strokeLinecap="round" fill="none" opacity="0.5"/>
+      <path d="M 104,46 Q 106,55 104,64" stroke="#3a2010" strokeWidth="4" strokeLinecap="round" fill="none" opacity="0.5"/>
 
       {/* ── EYES ── */}
-      {/* Eye whites */}
-      <ellipse cx="61" cy="46" rx="11" ry={blinking ? 2 : 12} fill="white" stroke="#d4a060" strokeWidth="0.5"/>
-      <ellipse cx="83" cy="46" rx="11" ry={blinking ? 2 : 12} fill="white" stroke="#d4a060" strokeWidth="0.5"/>
+      <ellipse cx="61" cy="54" rx="11" ry={blinking ? 2 : 12} fill="white" stroke="#d4a060" strokeWidth="0.5"/>
+      <ellipse cx="83" cy="54" rx="11" ry={blinking ? 2 : 12} fill="white" stroke="#d4a060" strokeWidth="0.5"/>
       {!blinking && <>
-        {/* Blue irises */}
-        <circle cx={61 + eyeX * 2} cy={46 + eyeY * 2} r={7.5} fill="url(#sc-eye-l)" filter="url(#sc-glow-blue)"/>
-        <circle cx={83 + eyeX * 2} cy={46 + eyeY * 2} r={7.5} fill="url(#sc-eye-r)" filter="url(#sc-glow-blue)"/>
-        {/* Pupils */}
-        <circle cx={61 + eyeX * 2} cy={46 + eyeY * 2} r={4} fill="#0a1a2e"/>
-        <circle cx={83 + eyeX * 2} cy={46 + eyeY * 2} r={4} fill="#0a1a2e"/>
-        {/* Eye sparkles */}
-        <circle cx={58 + eyeX * 2} cy={43 + eyeY * 2} r={2.2} fill="white" opacity="0.95"/>
-        <circle cx={80 + eyeX * 2} cy={43 + eyeY * 2} r={2.2} fill="white" opacity="0.95"/>
-        <circle cx={63 + eyeX * 2} cy={48 + eyeY * 2} r={1} fill="white" opacity="0.5"/>
-        <circle cx={85 + eyeX * 2} cy={48 + eyeY * 2} r={1} fill="white" opacity="0.5"/>
+        <circle cx={61 + eyeX * 2} cy={54 + eyeY * 2} r={7.5} fill="url(#sc-eye-l)" filter="url(#sc-glow-blue)"/>
+        <circle cx={83 + eyeX * 2} cy={54 + eyeY * 2} r={7.5} fill="url(#sc-eye-r)" filter="url(#sc-glow-blue)"/>
+        <circle cx={61 + eyeX * 2} cy={54 + eyeY * 2} r={4} fill="#0a1a2e"/>
+        <circle cx={83 + eyeX * 2} cy={54 + eyeY * 2} r={4} fill="#0a1a2e"/>
+        <circle cx={58 + eyeX * 2} cy={51 + eyeY * 2} r={2.2} fill="white" opacity="0.95"/>
+        <circle cx={80 + eyeX * 2} cy={51 + eyeY * 2} r={2.2} fill="white" opacity="0.95"/>
+        <circle cx={63 + eyeX * 2} cy={56 + eyeY * 2} r={1} fill="white" opacity="0.5"/>
+        <circle cx={85 + eyeX * 2} cy={56 + eyeY * 2} r={1} fill="white" opacity="0.5"/>
       </>}
-      {/* Eye lashes/outline */}
-      <ellipse cx="61" cy="46" rx="11" ry={blinking ? 2 : 12} fill="none" stroke="#5c3a18" strokeWidth="1.5"/>
-      <ellipse cx="83" cy="46" rx="11" ry={blinking ? 2 : 12} fill="none" stroke="#5c3a18" strokeWidth="1.5"/>
+      <ellipse cx="61" cy="54" rx="11" ry={blinking ? 2 : 12} fill="none" stroke="#5c3a18" strokeWidth="1.5"/>
+      <ellipse cx="83" cy="54" rx="11" ry={blinking ? 2 : 12} fill="none" stroke="#5c3a18" strokeWidth="1.5"/>
 
-      {/* ── EYEBROWS (expressive) ── */}
-      <path d={happy ? "M 51,33 Q 61,29 71,32" : "M 51,34 Q 61,31 71,33"}
+      {/* ── EYEBROWS ── */}
+      <path d={happy ? "M 51,41 Q 61,37 71,40" : "M 51,42 Q 61,39 71,41"}
         stroke="#5c3a18" strokeWidth="2.8" strokeLinecap="round" fill="none"/>
-      <path d={happy ? "M 73,32 Q 83,29 93,33" : "M 73,33 Q 83,31 93,34"}
+      <path d={happy ? "M 73,40 Q 83,37 93,41" : "M 73,41 Q 83,39 93,42"}
         stroke="#5c3a18" strokeWidth="2.8" strokeLinecap="round" fill="none"/>
 
       {/* ── NOSE ── */}
-      <path d="M 68,60 Q 72,64 76,60" stroke="#d4845a" strokeWidth="2" strokeLinecap="round" fill="none"/>
-      <circle cx="68" cy="60" r="2.5" fill="#d4845a" opacity="0.5"/>
-      <circle cx="76" cy="60" r="2.5" fill="#d4845a" opacity="0.5"/>
+      <path d="M 68,66 Q 72,70 76,66" stroke="#d4845a" strokeWidth="2" strokeLinecap="round" fill="none"/>
+      <circle cx="68" cy="66" r="2.5" fill="#d4845a" opacity="0.45"/>
+      <circle cx="76" cy="66" r="2.5" fill="#d4845a" opacity="0.45"/>
 
       {/* ── SMILE ── */}
-      <path d={happy
-        ? "M 58,70 Q 72,82 86,70"
-        : "M 60,70 Q 72,78 84,70"}
+      <path d={happy ? "M 58,76 Q 72,89 86,76" : "M 60,76 Q 72,84 84,76"}
         stroke="#c47850" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-      {/* Teeth */}
-      <path d={happy
-        ? "M 60,71 Q 72,80 84,71 L 82,73 Q 72,82 62,73 Z"
-        : "M 62,70 Q 72,77 82,70 L 80,72 Q 72,78 64,72 Z"}
-        fill="white" opacity="0.9"/>
-      {/* Tooth line */}
-      {happy && <line x1="72" y1="71" x2="72" y2="79" stroke="#e0c0a0" strokeWidth="1" opacity="0.4"/>}
-      {/* Rosy cheeks */}
-      <ellipse cx="51" cy="64" rx="9" ry="6" fill="#ff8888" opacity="0.28"/>
-      <ellipse cx="93" cy="64" rx="9" ry="6" fill="#ff8888" opacity="0.28"/>
+      <path d={happy ? "M 60,77 Q 72,87 84,77 L 82,79 Q 72,88 62,79 Z" : "M 62,76 Q 72,83 82,76 L 80,78 Q 72,84 64,78 Z"}
+        fill="white" opacity="0.88"/>
+      {happy && <line x1="72" y1="77" x2="72" y2="86" stroke="#e0c0a0" strokeWidth="1" opacity="0.4"/>}
+      {/* Cheeks */}
+      <ellipse cx="51" cy="70" rx="9" ry="6" fill="#ff8888" opacity="0.26"/>
+      <ellipse cx="93" cy="70" rx="9" ry="6" fill="#ff8888" opacity="0.26"/>
 
       {/* Head shine */}
-      <ellipse cx="62" cy="36" rx="12" ry="7" fill="white" opacity="0.1" transform="rotate(-15,62,36)"/>
+      <ellipse cx="62" cy="44" rx="10" ry="6" fill="white" opacity="0.08" transform="rotate(-15,62,44)"/>
     </svg>
   );
 };
