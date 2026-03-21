@@ -21,6 +21,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       payment_method_types: ['card'],
       mode: 'payment',
       customer_email: customerEmail || undefined,
+      payment_intent_data: {
+        statement_descriptor: 'ASADS HOME INSP',
+      },
       line_items: validItems.map(item => ({
         price_data: {
           currency: 'cad',
