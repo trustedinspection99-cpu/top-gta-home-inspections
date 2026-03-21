@@ -405,10 +405,16 @@ const ScoutSVG: React.FC<ScoutProps> = ({ mood = 'idle', blinking = false, eyeX 
       <circle cx="110" cy="52" r="18" fill="url(#sc-lens)"/>
       {/* Lens highlight */}
       <ellipse cx="104" cy="44" rx="6" ry="4" fill="white" opacity="0.35" transform="rotate(-20,104,44)"/>
-      {/* Pine tree icon */}
-      <path d="M 110,42 L 103,57 L 117,57 Z" fill="#1a5c28" opacity="0.85"/>
-      <path d="M 110,46 L 104,58 L 116,58 Z" fill="#235c30" opacity="0.7"/>
-      <rect x="108" y="56" width="4" height="5" rx="1" fill="#5c3a18" opacity="0.8"/>
+      {/* Home icon */}
+      {/* Roof */}
+      <path d="M 110,40 L 101,50 L 119,50 Z" fill="#1a5c28" opacity="0.9"/>
+      <path d="M 110,40 L 102,49 L 118,49 Z" fill="#2d7a3a" opacity="0.5"/>
+      {/* Walls */}
+      <rect x="102" y="49" width="16" height="11" rx="1" fill="#1a5c28" opacity="0.85"/>
+      {/* Door */}
+      <rect x="107" y="53" width="6" height="7" rx="1" fill="#4aaa5a" opacity="0.9"/>
+      {/* Door knob */}
+      <circle cx="112" cy="57" r="1" fill="#2d7a3a"/>
       {/* Compass rose overlay */}
       <path d="M 110,38 L 108,43 L 110,41 L 112,43 Z" fill="#1a5c28" opacity="0.7"/>
       <path d="M 110,66 L 108,61 L 110,63 L 112,61 Z" fill="#1a5c28" opacity="0.7"/>
