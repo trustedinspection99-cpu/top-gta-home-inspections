@@ -733,8 +733,11 @@ const SiteAssistant: React.FC = () => {
     // Active booking flow
     if (bookingStep !== null) { await handleBookingStep(t); return; }
 
-    // Start in-chat booking
-    if (t === 'I want to book an inspection') { startBookingFlow(); return; }
+    // Start in-chat booking — exact trigger or scheduling/availability questions
+    if (
+      t === 'I want to book an inspection' ||
+      /\b(book|schedul|appoint|availab|avail\w*|earliest|when can|when do|when are|next.?(open|slot|time)|come out|send.*inspector|inspector.*available|can i get|get an inspect)\b/i.test(t)
+    ) { startBookingFlow(); return; }
 
     // Internal navigation
     const nav = NAV_ACTIONS[t.toLowerCase()] ?? NAV_ACTIONS[t];
