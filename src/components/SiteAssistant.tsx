@@ -531,10 +531,10 @@ const SiteAssistant: React.FC = () => {
   const [greeted, setGreeted] = useState(false);
 
   // ── Booking flow ────────────────────────────────────────────────────────────
-  type BookingStep = null | 'service' | 'city' | 'name' | 'phone' | 'notes' | 'confirm' | 'submitting';
-  interface BookingData { service: string; city: string; name: string; phone: string; notes: string; }
+  type BookingStep = null | 'service' | 'city' | 'address' | 'age' | 'beds' | 'baths' | 'sqft' | 'name' | 'phone' | 'notes' | 'confirm' | 'submitting';
+  interface BookingData { service: string; city: string; address: string; age: string; beds: string; baths: string; sqft: string; name: string; phone: string; notes: string; }
   const [bookingStep, setBookingStep] = useState<BookingStep>(null);
-  const [bookingData, setBookingData] = useState<BookingData>({ service: '', city: '', name: '', phone: '', notes: '' });
+  const [bookingData, setBookingData] = useState<BookingData>({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', name: '', phone: '', notes: '' });
 
   const BOOKING_SERVICES: QuickReply[] = [
     { label: '🏠 Pre-Purchase', value: 'Pre-Purchase Inspection' },
@@ -554,7 +554,7 @@ const SiteAssistant: React.FC = () => {
 
   const startBookingFlow = () => {
     setBookingStep('service');
-    setBookingData({ service: '', city: '', name: '', phone: '', notes: '' });
+    setBookingData({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', name: '', phone: '', notes: '' });
     setTimeout(() => botSay("Let's book your inspection! 🔍\n\nWhat type of inspection do you need?", BOOKING_SERVICES), 300);
   };
 
@@ -568,8 +568,59 @@ const SiteAssistant: React.FC = () => {
       }
       case 'city': {
         const d = { ...bookingData, city: t };
+        setBookingData(d); setBookingStep('address');
+        botSay(`Got it — **${t}**! 🏠\n\nWhat's the property address?`, [{ label: '⏭️ Skip', value: '__skip__' }]);
+        break;
+      }
+      case 'address': {
+        const address = t === '__skip__' ? '' : t;
+        const d = { ...bookingData, address };
+        setBookingData(d); setBookingStep('age');
+        botSay(`Got it! 📅 Approximately when was the property built?`, [
+          { label: '🆕 New (< 5 yrs)', value: 'New build (under 5 years)' },
+          { label: '5–20 years old', value: '5–20 years old' },
+          { label: '20–50 years old', value: '20–50 years old' },
+          { label: '50+ years old', value: '50+ years old' },
+        ]);
+        break;
+      }
+      case 'age': {
+        const d = { ...bookingData, age: t };
+        setBookingData(d); setBookingStep('beds');
+        botSay(`Got it! 🛏️ How many bedrooms does the property have?`, [
+          { label: '1 bedroom', value: '1' },
+          { label: '2 bedrooms', value: '2' },
+          { label: '3 bedrooms', value: '3' },
+          { label: '4+ bedrooms', value: '4+' },
+        ]);
+        break;
+      }
+      case 'beds': {
+        const d = { ...bookingData, beds: t };
+        setBookingData(d); setBookingStep('baths');
+        botSay(`Got it! 🚿 How many bathrooms?`, [
+          { label: '1 bathroom', value: '1' },
+          { label: '2 bathrooms', value: '2' },
+          { label: '3 bathrooms', value: '3' },
+          { label: '4+ bathrooms', value: '4+' },
+        ]);
+        break;
+      }
+      case 'baths': {
+        const d = { ...bookingData, baths: t };
+        setBookingData(d); setBookingStep('sqft');
+        botSay(`Almost done! 📐 What's the approximate square footage?`, [
+          { label: 'Under 1,500 sq ft', value: 'Under 1,500 sq ft' },
+          { label: '1,500–2,500 sq ft', value: '1,500–2,500 sq ft' },
+          { label: '2,500–3,500 sq ft', value: '2,500–3,500 sq ft' },
+          { label: '3,500+ sq ft', value: '3,500+ sq ft' },
+        ]);
+        break;
+      }
+      case 'sqft': {
+        const d = { ...bookingData, sqft: t };
         setBookingData(d); setBookingStep('name');
-        botSay(`Got it — **${t}**. 👤\n\nWhat's your full name?`);
+        botSay(`Perfect! 👤\n\nWhat's your full name?`);
         break;
       }
       case 'name': {
@@ -588,14 +639,14 @@ const SiteAssistant: React.FC = () => {
         const notes = t === '__skip__' ? '' : t;
         const d = { ...bookingData, notes };
         setBookingData(d); setBookingStep('confirm');
-        botSay(`Here's your booking request:\n\n🔍 **Service:** ${d.service}\n📍 **City:** ${d.city}\n👤 **Name:** ${d.name}\n📞 **Phone:** ${d.phone}${d.notes ? `\n📝 **Notes:** ${d.notes}` : ''}\n\nShall I send this to our team?`,
+        botSay(`Here's your booking request:\n\n🔍 **Service:** ${d.service}\n📍 **City:** ${d.city}${d.address ? `\n🏠 **Address:** ${d.address}` : ''}\n📅 **Property Age:** ${d.age}\n🛏️ **Bedrooms:** ${d.beds}\n🚿 **Bathrooms:** ${d.baths}\n📐 **Sq Ft:** ${d.sqft}\n👤 **Name:** ${d.name}\n📞 **Phone:** ${d.phone}${d.notes ? `\n📝 **Notes:** ${d.notes}` : ''}\n\nShall I send this to our team?`,
           [{ label: '✅ Confirm Booking', value: '__confirm__' }, { label: '✏️ Start Over', value: '__restart__' }]);
         break;
       }
       case 'confirm': {
         if (t === '__restart__') {
           setBookingStep(null);
-          setBookingData({ service: '', city: '', name: '', phone: '', notes: '' });
+          setBookingData({ service: '', city: '', address: '', age: '', beds: '', baths: '', sqft: '', name: '', phone: '', notes: '' });
           botSay("No problem! Let's start fresh. 🔍", WELCOME_REPLIES);
           return;
         }
