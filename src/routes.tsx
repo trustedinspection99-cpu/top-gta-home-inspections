@@ -9,21 +9,25 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Outlet } from 'react-router-dom';
+import { AuthContext, useAuthState } from '@/hooks/useAuth';
 
 function RootLayout() {
   const [queryClient] = React.useState(() => new QueryClient());
+  const authState = useAuthState();
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <ScrollToTop />
-        <Suspense fallback={null}>
-          <Outlet />
-        </Suspense>
-      </TooltipProvider>
-    </QueryClientProvider>
+    <AuthContext.Provider value={authState}>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <ScrollToTop />
+          <Suspense fallback={null}>
+            <Outlet />
+          </Suspense>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </AuthContext.Provider>
   );
 }
 
@@ -62,6 +66,20 @@ const SewerScope = lazy(() => import('./pages/services/SewerScope'));
 const AirQuality = lazy(() => import('./pages/services/AirQuality'));
 const ServiceCityPage = lazy(() => import('./pages/services/ServiceCityPage'));
 const BlogCityPage = lazy(() => import('./pages/blog/BlogCityPage'));
+
+// Portal Pages
+const LoginPage = lazy(() => import('./pages/auth/LoginPage'));
+const SignupPage = lazy(() => import('./pages/auth/SignupPage'));
+const RealtorSignupPage = lazy(() => import('./pages/auth/RealtorSignupPage'));
+const HomeownerDashboard = lazy(() => import('./pages/dashboard/HomeownerDashboard'));
+const ReportViewer = lazy(() => import('./pages/dashboard/ReportViewer'));
+const SchedulePage = lazy(() => import('./pages/dashboard/SchedulePage'));
+const ChecklistPage = lazy(() => import('./pages/dashboard/ChecklistPage'));
+const RealtorDashboard = lazy(() => import('./pages/realtor/RealtorDashboard'));
+const AdminDashboard = lazy(() => import('./pages/admin/AdminDashboard'));
+const NewJobPage = lazy(() => import('./pages/admin/NewJobPage'));
+const ReportGeneratorPage = lazy(() => import('./pages/admin/ReportGeneratorPage'));
+const TrustedRealtorsPage = lazy(() => import('./pages/TrustedRealtorsPage'));
 
 export const routes: RouteObject[] = [
   {
@@ -102,6 +120,20 @@ export const routes: RouteObject[] = [
       { path: 'services/sewer-scope', element: <SewerScope /> },
       { path: 'services/air-quality', element: <AirQuality /> },
       { path: 'services/:serviceSlug/:citySlug', element: <ServiceCityPage /> },
+
+      // Portal routes
+      { path: 'login', element: <LoginPage /> },
+      { path: 'signup', element: <SignupPage /> },
+      { path: 'signup/realtor', element: <RealtorSignupPage /> },
+      { path: 'dashboard', element: <HomeownerDashboard /> },
+      { path: 'dashboard/reports/:id', element: <ReportViewer /> },
+      { path: 'dashboard/schedule', element: <SchedulePage /> },
+      { path: 'dashboard/checklist', element: <ChecklistPage /> },
+      { path: 'realtor-dashboard', element: <RealtorDashboard /> },
+      { path: 'admin', element: <AdminDashboard /> },
+      { path: 'admin/jobs/new', element: <NewJobPage /> },
+      { path: 'admin/jobs/:id/report', element: <ReportGeneratorPage /> },
+      { path: 'trusted-realtors', element: <TrustedRealtorsPage /> },
 
       { path: '*', element: <NotFound /> },
     ],

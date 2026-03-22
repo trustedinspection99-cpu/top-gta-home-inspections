@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { supabase, DbRealtor, DbUser } from '@/lib/supabase';
 import RealtorCard from '@/components/RealtorCard';
-import Layout from '@/components/layout/Layout';
+import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Users, Star } from 'lucide-react';
 
