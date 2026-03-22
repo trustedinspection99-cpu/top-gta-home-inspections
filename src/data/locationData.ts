@@ -1494,7 +1494,7 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-georgina",
     city: "Georgina",
     region: "York Region",
-    metaTitle: "Home Inspection Georgina | Lakefront Certified",
+    metaTitle: "Home Inspection Georgina | Lakefront Certified | ASADS",
     metaDescription: "Certified Georgina home inspector for Lake Simcoe waterfront & cottages. Thermal imaging specialist. Keswick to Sutton waterfront expert.",
     description: "Georgina's trusted Lake Simcoe waterfront inspector providing cottage pre-purchase inspections & thermal imaging diagnostics.",
     neighborhoods: ["Keswick", "Sutton", "Jackson's Point", "Pefferlaw", "Udora", "Virginia"],
