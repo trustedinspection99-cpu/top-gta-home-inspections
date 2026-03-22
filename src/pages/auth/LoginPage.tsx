@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Home, AlertCircle } from 'lucide-react';
 
 export default function LoginPage() {
-  const { signIn, role, dbUser } = useAuth();
+  const { signIn } = useAuth();
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -19,18 +20,23 @@ export default function LoginPage() {
     setError('');
     setLoading(true);
     const { error } = await signIn(email, password);
-    setLoading(false);
     if (error) {
       setError(error.message);
+      setLoading(false);
       return;
     }
-    // Small delay for dbUser to load
-    setTimeout(() => {
-      const r = dbUser?.role;
+    // Fetch role directly from DB — don't rely on context timing
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user) {
+      const { data } = await supabase.from('users').select('role').eq('id', user.id).single();
+      const r = data?.role;
       if (r === 'admin') navigate('/admin');
       else if (r === 'realtor') navigate('/realtor-dashboard');
       else navigate('/dashboard');
-    }, 500);
+    } else {
+      navigate('/dashboard');
+    }
+    setLoading(false);
   }
 
   return (
