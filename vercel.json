@@ -1,5 +1,13 @@
 {
   "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/blog/:slug/:city",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, follow" }
+      ]
+    }
+  ],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
@@ -800,6 +808,55 @@
       "source": "/brampton-inspection",
       "destination": "/locations/home-inspection-brampton",
       "permanent": true
-    }
+    },
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/blog/new-construction-inspection", "destination": "/blog/new-construction-inspection-importance", "permanent": true },
+    { "source": "/blog/mold-prevention-homeowners", "destination": "/blog/mold-prevention-tips", "permanent": true },
+    { "source": "/blog/first-time-buyer-inspection", "destination": "/blog/first-time-home-buyer-inspection-guide", "permanent": true },
+    { "source": "/services/mold-testing-toronto", "destination": "/services/mold-inspection", "permanent": true },
+    { "source": "/services/wett-inspection-toronto", "destination": "/services/wett", "permanent": true },
+    { "source": "/services/home-inspection-scarborough", "destination": "/locations/home-inspection-scarborough", "permanent": true },
+    { "source": "/services/condo-inspection", "destination": "/services/condo", "permanent": true },
+    { "source": "/services/plumbing-inspection", "destination": "/", "permanent": true },
+    { "source": "/services/septic-inspection", "destination": "/", "permanent": true },
+    { "source": "/services/home-inspection-toronto.html", "destination": "/locations/home-inspection-toronto", "permanent": true },
+    { "source": "/services/home-inspection-scarborough.html", "destination": "/locations/home-inspection-scarborough", "permanent": true },
+    { "source": "/services/home-inspection-markham.html", "destination": "/locations/home-inspection-markham", "permanent": true },
+    { "source": "/services/home-inspection-brampton.html", "destination": "/locations/home-inspection-brampton", "permanent": true },
+    { "source": "/services/home-inspection-ajax.html", "destination": "/locations/home-inspection-ajax", "permanent": true },
+    { "source": "/services/home-inspection-kitchener.html", "destination": "/locations/home-inspection-kitchener", "permanent": true },
+    { "source": "/services/home-inspection-richmond-hill.html", "destination": "/locations/home-inspection-richmond-hill", "permanent": true },
+    { "source": "/services/home-inspection-burlington.html", "destination": "/locations/home-inspection-burlington", "permanent": true },
+    { "source": "/services/home-inspection-oshawa.html", "destination": "/locations/home-inspection-oshawa", "permanent": true },
+    { "source": "/services/home-inspection-hamilton.html", "destination": "/locations/home-inspection-hamilton", "permanent": true },
+    { "source": "/services/home-inspection-newmarket.html", "destination": "/locations/home-inspection-newmarket", "permanent": true },
+    { "source": "/services/home-inspection-whitby.html", "destination": "/locations/home-inspection-whitby", "permanent": true },
+    { "source": "/services/home-inspection-etobicoke.html", "destination": "/locations/home-inspection-etobicoke", "permanent": true },
+    { "source": "/services/home-inspection-cambridge.html", "destination": "/locations/home-inspection-cambridge", "permanent": true },
+    { "source": "/services/home-inspection-bradford.html", "destination": "/locations/home-inspection-bradford", "permanent": true },
+    { "source": "/services/home-inspection-vaughan.html", "destination": "/locations/home-inspection-vaughan", "permanent": true },
+    { "source": "/services/home-inspection-north-york.html", "destination": "/locations/home-inspection-north-york", "permanent": true },
+    { "source": "/services/home-inspection-pickering.html", "destination": "/locations/home-inspection-pickering", "permanent": true },
+    { "source": "/services/home-inspection-oakville.html", "destination": "/locations/home-inspection-oakville", "permanent": true },
+    { "source": "/services/home-inspection-aurora.html", "destination": "/locations/home-inspection-aurora", "permanent": true },
+    { "source": "/services/home-inspection-waterloo.html", "destination": "/locations/home-inspection-waterloo", "permanent": true },
+    { "source": "/services/home-inspection-milton.html", "destination": "/locations/home-inspection-milton", "permanent": true },
+    { "source": "/services/home-inspection.html", "destination": "/services/pre-purchase", "permanent": true },
+    { "source": "/services/pre-purchase-inspection.html", "destination": "/services/pre-purchase", "permanent": true },
+    { "source": "/services/condo-inspection.html", "destination": "/services/condo", "permanent": true },
+    { "source": "/services/infrared-thermal-imaging.html", "destination": "/services/thermal-imaging", "permanent": true },
+    { "source": "/services/30-day-warranty-inspection.html", "destination": "/services/pre-purchase", "permanent": true },
+    { "source": "/services/same-day-reports.html", "destination": "/services/pre-purchase", "permanent": true },
+    { "source": "/services/seasonal-inspection.html", "destination": "/services/pre-purchase", "permanent": true },
+    { "source": "/services/tenants-inspection.html", "destination": "/services/pre-purchase", "permanent": true },
+    { "source": "/services/fence-deck.html", "destination": "/", "permanent": true },
+    { "source": "/services/property-maintenance.html", "destination": "/", "permanent": true },
+    { "source": "/services/power-washing.html", "destination": "/", "permanent": true },
+    { "source": "/services/snow-removal.html", "destination": "/", "permanent": true },
+    { "source": "/services/handyman.html", "destination": "/", "permanent": true },
+    { "source": "/services/painting.html", "destination": "/", "permanent": true },
+    { "source": "/services/leaf-cleanup.html", "destination": "/", "permanent": true },
+    { "source": "/services/electrical.html", "destination": "/", "permanent": true },
+    { "source": "/services/services/annual-maintenance-inspection.html", "destination": "/", "permanent": true }
   ]
 }
