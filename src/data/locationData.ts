@@ -2418,7 +2418,7 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-kitchener",
     city: "Kitchener",
     region: "Waterloo Region",
-    metaTitle: "Home Inspection Kitchener | Certified Inspector | ASADS",
+    metaTitle: "Home Inspection Kitchener-Waterloo | Certified | ASADS",
     metaDescription: "Certified home inspector in Kitchener-Waterloo. Heritage, new construction & KITEC plumbing in Doon, Westmount & Forest Heights. Thermal imaging standard.",
     description: "Kitchener's premier certified inspector specializing in smart home pre-purchase inspections, new construction warranty reviews & thermal imaging diagnostics.",
     neighborhoods: ["Downtown Kitchener", "Doon", "Forest Hill", "Laurelwood", "Huron Park", "Westmount"],
