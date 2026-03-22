@@ -8,6 +8,7 @@ interface AuthContextValue {
   session: Session | null;
   role: UserRole | null;
   loading: boolean;
+  dbLoading: boolean;
   signIn: (email: string, password: string) => Promise<{ error: Error | null }>;
   signUp: (email: string, password: string, name: string, role: UserRole, phone?: string) => Promise<{ error: Error | null }>;
   signOut: () => Promise<void>;
@@ -21,6 +22,7 @@ const AUTH_DEFAULTS: AuthContextValue = {
   session: null,
   role: null,
   loading: false,
+  dbLoading: false,
   signIn: async () => ({ error: null }),
   signUp: async () => ({ error: null }),
   signOut: async () => {},
@@ -36,14 +38,17 @@ export function useAuthState() {
   const [dbUser, setDbUser] = useState<DbUser | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
+  const [dbLoading, setDbLoading] = useState(false);
 
   async function fetchDbUser(userId: string) {
+    setDbLoading(true);
     const { data } = await supabase
       .from('users')
       .select('*')
       .eq('id', userId)
       .single();
     if (data) setDbUser(data as DbUser);
+    setDbLoading(false);
   }
 
   useEffect(() => {
@@ -94,6 +99,7 @@ export function useAuthState() {
     session,
     role: dbUser?.role ?? null,
     loading,
+    dbLoading,
     signIn,
     signUp,
     signOut,
