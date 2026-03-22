@@ -69,7 +69,7 @@ export const serviceDefinitions: ServiceDef[] = [
     shortName: "Pre-Listing Inspection",
     price: "From $399",
     duration: "2–3 Hours",
-    metaTitleTemplate: "Pre-Listing Home Inspection {city} | Seller Inspection | ASADS",
+    metaTitleTemplate: "Pre-Listing Home Inspection {city} | Seller Inspection",
     metaDescTemplate:
       "Pre-listing home inspection in {city} for sellers. Identify issues before buyers do. Same-day report, certified ASADS inspectors. Call (647) 801-9311.",
     heroTitle: "Pre-Listing Home Inspection in {city}",
@@ -112,7 +112,7 @@ export const serviceDefinitions: ServiceDef[] = [
     shortName: "Condo Inspection",
     price: "From $299",
     duration: "1.5–2.5 Hours",
-    metaTitleTemplate: "Condo Inspection {city} | Fan Coil & Status Certificate | ASADS",
+    metaTitleTemplate: "Condo Inspection {city} | Fan Coil & Status Certificate",
     metaDescTemplate:
       "Certified condo inspection in {city}. Fan coil units, balcony, parking & status certificate review. Same-day digital report. Call (647) 801-9311.",
     heroTitle: "Condo Inspection in {city}",
