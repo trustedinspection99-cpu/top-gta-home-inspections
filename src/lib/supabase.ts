@@ -1,16 +1,10 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = (import.meta.env.VITE_SUPABASE_URL || '') as string;
-const supabaseAnonKey = (import.meta.env.VITE_SUPABASE_ANON_KEY || '') as string;
+// Supabase anon key is public by design — safe to include in client code
+const SUPABASE_URL = 'https://wjxbojjhyocrxqkfnxmz.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_-pj5yNpJls9G2smvI4NUAg_F855YcT8';
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.error('VITE_SUPABASE_URL or VITE_SUPABASE_ANON_KEY missing from build env.');
-}
-
-export const supabase = createClient(
-  supabaseUrl || 'https://placeholder.supabase.co',
-  supabaseAnonKey || 'placeholder'
-);
+export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // Database types
 export type UserRole = 'homeowner' | 'realtor' | 'admin';
