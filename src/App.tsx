@@ -5,6 +5,21 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter, RouterProvider, Navigate, Outlet } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { AuthContext, useAuthState } from "@/hooks/useAuth";
+
+// Portal Pages
+import LoginPage from "./pages/auth/LoginPage";
+import SignupPage from "./pages/auth/SignupPage";
+import RealtorSignupPage from "./pages/auth/RealtorSignupPage";
+import HomeownerDashboard from "./pages/dashboard/HomeownerDashboard";
+import ReportViewer from "./pages/dashboard/ReportViewer";
+import SchedulePage from "./pages/dashboard/SchedulePage";
+import ChecklistPage from "./pages/dashboard/ChecklistPage";
+import RealtorDashboard from "./pages/realtor/RealtorDashboard";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import NewJobPage from "./pages/admin/NewJobPage";
+import ReportGeneratorPage from "./pages/admin/ReportGeneratorPage";
+import TrustedRealtorsPage from "./pages/TrustedRealtorsPage";
 
 // Main Pages
 import Index from "./pages/Index";
@@ -48,6 +63,12 @@ const RootLayout = () => (
   </>
 );
 
+// Auth provider wrapper component
+const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+  const authState = useAuthState();
+  return <AuthContext.Provider value={authState}>{children}</AuthContext.Provider>;
+};
+
 const router = createBrowserRouter([
   {
     element: <RootLayout />,
@@ -83,6 +104,19 @@ const router = createBrowserRouter([
       { path: "/services/sewer-scope", element: <SewerScope /> },
       { path: "/services/air-quality", element: <AirQuality /> },
       { path: "/services/:serviceSlug/:citySlug", element: <ServiceCityPage /> },
+      // Portal routes
+      { path: "/login", element: <LoginPage /> },
+      { path: "/signup", element: <SignupPage /> },
+      { path: "/signup/realtor", element: <RealtorSignupPage /> },
+      { path: "/dashboard", element: <HomeownerDashboard /> },
+      { path: "/dashboard/reports/:id", element: <ReportViewer /> },
+      { path: "/dashboard/schedule", element: <SchedulePage /> },
+      { path: "/dashboard/checklist", element: <ChecklistPage /> },
+      { path: "/realtor-dashboard", element: <RealtorDashboard /> },
+      { path: "/admin", element: <AdminDashboard /> },
+      { path: "/admin/jobs/new", element: <NewJobPage /> },
+      { path: "/admin/jobs/:id/report", element: <ReportGeneratorPage /> },
+      { path: "/trusted-realtors", element: <TrustedRealtorsPage /> },
       { path: "*", element: <NotFound /> },
     ],
   },
@@ -94,9 +128,11 @@ const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <RouterProvider router={router} />
+        <AuthProvider>
+          <Toaster />
+          <Sonner />
+          <RouterProvider router={router} />
+        </AuthProvider>
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
