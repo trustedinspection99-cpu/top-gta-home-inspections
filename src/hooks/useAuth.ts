@@ -15,10 +15,20 @@ interface AuthContextValue {
 
 export const AuthContext = createContext<AuthContextValue | null>(null);
 
+const AUTH_DEFAULTS: AuthContextValue = {
+  user: null,
+  dbUser: null,
+  session: null,
+  role: null,
+  loading: false,
+  signIn: async () => ({ error: null }),
+  signUp: async () => ({ error: null }),
+  signOut: async () => {},
+};
+
 export function useAuth(): AuthContextValue {
   const ctx = useContext(AuthContext);
-  if (!ctx) throw new Error('useAuth must be used within AuthProvider');
-  return ctx;
+  return ctx ?? AUTH_DEFAULTS;
 }
 
 export function useAuthState() {
