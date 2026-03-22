@@ -652,7 +652,7 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-oshawa",
     city: "Oshawa",
     region: "Durham Region",
-    metaTitle: "Home Inspection Oshawa | Buyer Thermal Specialist",
+    metaTitle: "Home Inspection Oshawa | Infrared Same-Day Service | ASADS",
     metaDescription: "Certified Oshawa home inspector for pre-purchase buyer inspections, thermal imaging & mold testing. Lakeview to Taunton. Same-day digital reports.",
     description: "Oshawa's trusted certified inspector providing comprehensive buyer pre-purchase inspections, thermal imaging diagnostics & mold/asbestos testing.",
     neighborhoods: [
@@ -1775,7 +1775,7 @@ export const locationData: LocationData[] = [
     city: "Woodbridge",
     region: "York Region",
     metaTitle: "Home Inspection Woodbridge | Certified Inspector | ASADS",
-    metaDescription: "Certified Woodbridge home inspector for established family homes & custom estates. Thermal imaging specialist. Pine Grove to Patterson.",
+    metaDescription: "Certified Woodbridge home inspector for established family homes & custom estates. Thermal imaging included. Pine Grove to Patterson. Call (647) 801-9311.",
     description: "Woodbridge's premier certified inspector for established residential pre-purchase inspections & custom home thermal imaging diagnostics.",
     neighborhoods: [
       "Woodbridge Village", "Pine Grove", "Weston Downs", "Sonoma Heights", "Patterson", "West Woodbridge", "Islington Woods"
