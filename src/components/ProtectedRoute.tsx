@@ -9,10 +9,10 @@ interface Props {
 }
 
 export default function ProtectedRoute({ children, role }: Props) {
-  const { user, dbUser, loading, dbLoading } = useAuth();
+  const { user, dbUser, loading, role: userRole } = useAuth();
 
-  // Wait for auth check AND dbUser fetch to complete
-  if (loading || dbLoading) {
+  // Only wait for initial auth check — role comes from JWT metadata, no DB needed
+  if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
@@ -24,11 +24,11 @@ export default function ProtectedRoute({ children, role }: Props) {
     return <Navigate to="/login" replace />;
   }
 
-  if (role && dbUser) {
+  if (role && userRole) {
     const allowed = Array.isArray(role) ? role : [role];
-    if (!allowed.includes(dbUser.role)) {
-      if (dbUser.role === 'admin') return <Navigate to="/admin" replace />;
-      if (dbUser.role === 'realtor') return <Navigate to="/realtor-dashboard" replace />;
+    if (!allowed.includes(userRole)) {
+      if (userRole === 'admin') return <Navigate to="/admin" replace />;
+      if (userRole === 'realtor') return <Navigate to="/realtor-dashboard" replace />;
       return <Navigate to="/dashboard" replace />;
     }
   }

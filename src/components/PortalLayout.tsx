@@ -33,11 +33,10 @@ const NAV_ITEMS: NavItem[] = [
 ];
 
 export default function PortalLayout({ children }: { children: ReactNode }) {
-  const { dbUser, signOut } = useAuth();
+  const { dbUser, role, signOut } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
 
-  const role = dbUser?.role;
   const visibleNav = role ? NAV_ITEMS.filter(item => item.roles.includes(role)) : [];
 
   async function handleSignOut() {

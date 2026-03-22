@@ -25,11 +25,12 @@ export default function LoginPage() {
       setLoading(false);
       return;
     }
-    // Fetch role directly from DB — don't rely on context timing
+    // Get role: try DB first, fall back to JWT metadata
     const { data: { user } } = await supabase.auth.getUser();
     if (user) {
+      let r: string | undefined;
       const { data } = await supabase.from('users').select('role').eq('id', user.id).single();
-      const r = data?.role;
+      r = data?.role ?? user.user_metadata?.role;
       if (r === 'admin') navigate('/admin');
       else if (r === 'realtor') navigate('/realtor-dashboard');
       else navigate('/dashboard');

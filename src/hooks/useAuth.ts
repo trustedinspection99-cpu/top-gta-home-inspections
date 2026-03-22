@@ -93,11 +93,14 @@ export function useAuthState() {
     setDbUser(null);
   }
 
+  // Role: prefer DB row (authoritative), fall back to JWT metadata (instant, no DB needed)
+  const metaRole = (user?.user_metadata?.role ?? null) as UserRole | null;
+
   return {
     user,
     dbUser,
     session,
-    role: dbUser?.role ?? null,
+    role: dbUser?.role ?? metaRole,
     loading,
     dbLoading,
     signIn,
