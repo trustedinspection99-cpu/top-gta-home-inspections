@@ -73,19 +73,14 @@ export function useAuthState() {
   }
 
   async function signUp(email: string, password: string, name: string, role: UserRole, phone?: string) {
-    const { data, error } = await supabase.auth.signUp({ email, password });
-    if (error || !data.user) return { error: error as Error | null };
-
-    // Insert into users table
-    const { error: insertError } = await supabase.from('users').insert({
-      id: data.user.id,
+    const { error } = await supabase.auth.signUp({
       email,
-      role,
-      name,
-      phone: phone ?? null,
+      password,
+      options: {
+        data: { name, role, phone: phone ?? null },
+      },
     });
-
-    return { error: insertError as Error | null };
+    return { error: error as Error | null };
   }
 
   async function signOut() {
