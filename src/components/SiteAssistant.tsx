@@ -1073,8 +1073,8 @@ const SiteAssistant: React.FC = () => {
             boxShadow: '0 8px 32px rgba(29,78,216,0.25)',
             whiteSpace: 'nowrap', pointerEvents: 'none',
           }}>
-            <p style={{ fontSize: 13, fontWeight: 800, color: '#1d4ed8', margin: 0 }}>Hi! 🔍 Need an inspection?</p>
-            <p style={{ fontSize: 11, color: '#2563eb', margin: '2px 0 0', fontWeight: 500 }}>Tap me to chat ✨</p>
+            <p style={{ fontSize: 13, fontWeight: 800, color: '#1d4ed8', margin: 0 }}>Buyer, Seller or Realtor? 🏠</p>
+            <p style={{ fontSize: 11, color: '#2563eb', margin: '2px 0 0', fontWeight: 500 }}>I can help — tap to chat! ✨</p>
             <div style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', width: 0, height: 0,
               borderLeft: '8px solid transparent', borderRight: '8px solid transparent', borderTop: '8px solid #60a5fa' }}/>
           </div>
