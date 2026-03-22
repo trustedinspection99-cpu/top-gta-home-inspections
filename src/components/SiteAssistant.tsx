@@ -298,8 +298,8 @@ interface ScoutProps { mood?: ScoutMood; blinking?: boolean; eyeX?: number; eyeY
 // Home inspector: hard hat, blue work shirt, clipboard, magnifying glass
 const ScoutSVG: React.FC<ScoutProps> = ({ mood = 'idle', blinking = false, eyeX = 0, eyeY = 0, mini = false }) => {
   const happy = mood === 'happy' || mood === 'excited';
-  const w = mini ? 44 : 100;
-  const h = mini ? 50 : 138;
+  const w = mini ? 44 : 140;
+  const h = mini ? 50 : 193;
   return (
     <svg width={w} height={h} viewBox="0 0 160 230" fill="none" xmlns="http://www.w3.org/2000/svg">
       {/* ── HOME INSPECTOR CHARACTER ── */}
@@ -1065,7 +1065,7 @@ const SiteAssistant: React.FC = () => {
         {/* Greeting bubble */}
         {showBubble && !chatOpen && (
           <div className="scout-bubble-pop" style={{
-            position: 'absolute', bottom: 148, left: '50%',
+            position: 'absolute', bottom: 207, left: '50%',
             transform: facingRight ? 'translateX(-50%)' : 'translateX(-50%) scaleX(-1)',
             background: 'linear-gradient(135deg,#eff6ff,#dbeafe)',
             border: '2px solid #60a5fa', borderRadius: 18,
