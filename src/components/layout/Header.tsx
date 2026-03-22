@@ -1,13 +1,22 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, LogIn, LayoutDashboard } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { user, dbUser } = useAuth();
+
+  function portalLink() {
+    if (!user) return "/login";
+    if (dbUser?.role === "admin") return "/admin";
+    if (dbUser?.role === "realtor") return "/realtor-dashboard";
+    return "/dashboard";
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
@@ -68,6 +77,12 @@ export function Header() {
           <Button asChild className="hidden sm:inline-flex">
             <Link to="/booking">Book Inspection</Link>
           </Button>
+          <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex border-blue-300 text-blue-700 hover:bg-blue-50">
+            <Link to={portalLink()} className="flex items-center gap-1.5">
+              {user ? <LayoutDashboard className="h-3.5 w-3.5" /> : <LogIn className="h-3.5 w-3.5" />}
+              {user ? "Portal" : "Sign In"}
+            </Link>
+          </Button>
           
           <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}>
             {mobileMenuOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
@@ -88,9 +103,16 @@ export function Header() {
             <Link to="/testimonials" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Reviews</Link>
             <Link to="/faq" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
             <Link to="/contact" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-            <div className="pt-4 border-t">
+            <Link to="/trusted-realtors" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Trusted Realtors</Link>
+            <div className="pt-4 border-t space-y-2">
               <Button asChild className="w-full">
                 <Link to="/booking" onClick={() => setMobileMenuOpen(false)}>Book Inspection</Link>
+              </Button>
+              <Button asChild variant="outline" className="w-full border-blue-300 text-blue-700">
+                <Link to={portalLink()} onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-center gap-2">
+                  {user ? <LayoutDashboard className="h-4 w-4" /> : <LogIn className="h-4 w-4" />}
+                  {user ? "My Portal" : "Sign In"}
+                </Link>
               </Button>
             </div>
           </nav>
