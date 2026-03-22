@@ -1,62 +1,40 @@
-import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-};
+const CORS_ORIGIN = "Access-Control-Allow-Origin";
+const CORS_HEADERS = "Access-Control-Allow-Headers";
+const ALLOWED_HEADERS = ["authorization", "x-client-info", "apikey", "content-type"].join(", ");
 
 serve(async (req) => {
-  if (req.method === 'OPTIONS') {
-    return new Response('ok', { headers: corsHeaders });
+  const headers = new Headers();
+  headers.set(CORS_ORIGIN, "*");
+  headers.set(CORS_HEADERS, ALLOWED_HEADERS);
+  headers.set("Content-Type", "application/json");
+
+  if (req.method === "OPTIONS") {
+    return new Response("ok", { headers });
   }
 
   try {
-    const { domain } = await req.json();
+    const body = await req.json();
+    const domain = (body.domain || "").replace(/^https?:\/\//, "").replace(/\/$/, "");
+
     if (!domain) {
-      return new Response(JSON.stringify({ verified: false, reason: 'No domain provided' }), {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        status: 400,
-      });
+      return new Response(JSON.stringify({ verified: false }), { headers, status: 400 });
     }
 
-    // Normalize domain
-    const cleanDomain = domain.replace(/^https?:\/\//, '').replace(/\/$/, '');
-    const url = `https://${cleanDomain}`;
-
-    const res = await fetch(url, {
-      headers: { 'User-Agent': 'ASADS-BacklinkVerifier/1.0' },
-      redirect: 'follow',
-      signal: AbortSignal.timeout(10000),
-    });
-
-    if (!res.ok) {
-      return new Response(JSON.stringify({ verified: false, reason: `Site returned ${res.status}` }), {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      });
-    }
-
+    const res = await fetch("https://" + domain, { redirect: "follow" });
     const html = await res.text();
+    const tags = html.match(/<a [^>]*asads\.ca[^>]*>/gi) || [];
 
-    // Find all anchor tags containing asads.ca
-    // Must be a do-follow link (not rel="nofollow", rel="ugc", or rel="sponsored")
-    const anchorRegex = /<a\s[^>]*href=["'][^"']*asads\.ca[^"']*["'][^>]*>/gi;
-    const matches = html.match(anchorRegex) ?? [];
-
-    const hasDoFollow = matches.some(tag => {
-      const relMatch = tag.match(/rel=["']([^"']*)["']/i);
-      if (!relMatch) return true; // No rel = do-follow
-      const relValues = relMatch[1].split(/\s+/);
-      const badRels = ['nofollow', 'ugc', 'sponsored'];
-      return !relValues.some(v => badRels.includes(v.toLowerCase()));
+    const ok = tags.some(function(tag) {
+      const rel = tag.match(/rel="([^"]*)"/i);
+      if (!rel) return true;
+      const bad = ["nofollow", "ugc", "sponsored"];
+      return !rel[1].split(" ").some(function(v) { return bad.indexOf(v) > -1; });
     });
 
-    return new Response(JSON.stringify({ verified: hasDoFollow, matches: matches.length }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
-  } catch (err) {
-    return new Response(JSON.stringify({ verified: false, reason: String(err) }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      status: 500,
-    });
+    return new Response(JSON.stringify({ verified: ok }), { headers });
+  } catch (e) {
+    return new Response(JSON.stringify({ verified: false, error: String(e) }), { headers });
   }
 });
