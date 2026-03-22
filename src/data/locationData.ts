@@ -861,7 +861,7 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-burlington",
     city: "Burlington",
     region: "Halton Region",
-    metaTitle: "Home Inspection Burlington | Lakefront & KITEC Expert | ASADS",
+    metaTitle: "Home Inspection Burlington | Lakefront & KITEC Expert",
     metaDescription: "Certified Burlington home inspector for lakefront estates, KITEC plumbing detection & condo inspections. Tyandaga to Aldershot GO corridor. Call (647) 801-9311.",
     description: "Burlington's trusted waterfront property inspector specializing in Lake Ontario lakefront pre-purchase inspections, KITEC plumbing identification & thermal imaging diagnostics.",
     neighborhoods: [
@@ -1330,7 +1330,7 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-cannington",
     city: "Cannington",
     region: "Durham Region",
-    metaTitle: "Home Inspection Cannington | Rural Property Specialist | ASADS",
+    metaTitle: "Home Inspection Cannington | Rural Property Specialist",
     metaDescription: "Certified Cannington home inspector for rural properties, farms & acreages. Well, septic & thermal imaging expertise for Brock Township.",
     description: "Cannington's premier certified rural property inspector for private systems assessment, farm inspections & thermal imaging diagnostics.",
     neighborhoods: [
