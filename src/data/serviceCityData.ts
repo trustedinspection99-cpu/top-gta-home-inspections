@@ -112,7 +112,7 @@ export const serviceDefinitions: ServiceDef[] = [
     shortName: "Condo Inspection",
     price: "From $299",
     duration: "1.5–2.5 Hours",
-    metaTitleTemplate: "Condo Inspection {city} | Fan Coil & Status Certificate",
+    metaTitleTemplate: "Condo Inspection {city} | Infrared Same-Day Service",
     metaDescTemplate:
       "Certified condo inspection in {city}. Fan coil units, balcony, parking & status certificate review. Same-day digital report. Call (647) 801-9311.",
     heroTitle: "Condo Inspection in {city}",
