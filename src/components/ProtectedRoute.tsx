@@ -11,7 +11,8 @@ interface Props {
 export default function ProtectedRoute({ children, role }: Props) {
   const { user, dbUser, loading } = useAuth();
 
-  if (loading) {
+  // Wait for auth check AND dbUser to resolve before making role decisions
+  if (loading || (user && role && !dbUser)) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />

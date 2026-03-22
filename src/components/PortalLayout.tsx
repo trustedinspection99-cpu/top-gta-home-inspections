@@ -37,8 +37,8 @@ export default function PortalLayout({ children }: { children: ReactNode }) {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const role = dbUser?.role ?? 'homeowner';
-  const visibleNav = NAV_ITEMS.filter(item => item.roles.includes(role));
+  const role = dbUser?.role;
+  const visibleNav = role ? NAV_ITEMS.filter(item => item.roles.includes(role)) : [];
 
   async function handleSignOut() {
     await signOut();
