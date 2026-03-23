@@ -3,18 +3,18 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { supabase, DbJob } from '@/lib/supabase';
 import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Sparkles, CheckCircle2, AlertCircle, Send, ImagePlus, Mic, MicOff } from 'lucide-react';
+import { ArrowLeft, Sparkles, CheckCircle2, AlertCircle, Send, ImagePlus, Mic, MicOff, Loader2 } from 'lucide-react';
 
 interface Message {
   role: 'user' | 'assistant';
   content: string;
-  images?: string[];
+  photoUrls?: string[]; // Supabase Storage URLs
 }
 
 function greeting(job?: DbJob | null) {
   return `Hi! I'm Scout, your AI inspection assistant.\n\n${
     job ? `This is a **${job.inspection_type}** at **${job.address}, ${job.city}**.\n\n` : ''
-  }Tap the mic and tell me what you found — go section by section (Roofing, Exterior, Foundation, Electrical, Plumbing, HVAC, Insulation, Interior). Upload photos anytime.\n\nWhen you've covered everything, tap **Generate Report**.`;
+  }Tap the mic and describe what you see — I'll categorize everything automatically by OAHI section.\n\nUpload photos anytime. They'll be stored and embedded in the final report.\n\nWhen you've covered everything, tap **Generate Report**.`;
 }
 
 export default function ReportGeneratorPage() {
@@ -25,7 +25,8 @@ export default function ReportGeneratorPage() {
   const [job, setJob] = useState<DbJob | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
-  const [pendingImages, setPendingImages] = useState<string[]>([]);
+  const [pendingPhotos, setPendingPhotos] = useState<{ url: string; preview: string }[]>([]);
+  const [uploadingPhotos, setUploadingPhotos] = useState(false);
   const [sending, setSending] = useState(false);
   const [generating, setGenerating] = useState(false);
   const [listening, setListening] = useState(false);
@@ -38,7 +39,7 @@ export default function ReportGeneratorPage() {
   const bottomRef = useRef<HTMLDivElement>(null);
   const fileRef = useRef<HTMLInputElement>(null);
   const recognitionRef = useRef<SpeechRecognition | null>(null);
-  const pendingInputRef = useRef(''); // holds transcript for auto-send in onend closure
+  const pendingInputRef = useRef('');
 
   // ── Load job + restore draft ──
   useEffect(() => {
@@ -65,7 +66,7 @@ export default function ReportGeneratorPage() {
     });
   }, [jobId, draftKey]);
 
-  // ── Auto-save draft on every message ──
+  // ── Auto-save draft ──
   useEffect(() => {
     if (messages.length > 1) {
       localStorage.setItem(draftKey, JSON.stringify(messages));
@@ -77,20 +78,68 @@ export default function ReportGeneratorPage() {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, sending]);
 
-  // ── Send message ──
-  const sendWithText = useCallback(async (text: string, imgs: string[] = []) => {
-    if (!text.trim() && imgs.length === 0) return;
+  // ── Upload photos to Supabase Storage ──
+  async function handleImages(e: React.ChangeEvent<HTMLInputElement>) {
+    const files = Array.from(e.target.files ?? []);
+    if (files.length === 0) return;
+    e.target.value = '';
+    setUploadingPhotos(true);
+    setError('');
 
-    const userMsg: Message = { role: 'user', content: text.trim(), images: imgs.length > 0 ? imgs : undefined };
+    const uploaded: { url: string; preview: string }[] = [];
+
+    for (const file of files) {
+      // Create local preview
+      const preview = URL.createObjectURL(file);
+
+      // Upload to Supabase Storage
+      const ext = file.name.split('.').pop() ?? 'jpg';
+      const fileName = `inspections/${jobId ?? 'draft'}/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
+
+      const { error: uploadErr } = await supabase.storage
+        .from('reports')
+        .upload(fileName, file, { contentType: file.type, upsert: false });
+
+      if (uploadErr) {
+        setError(`Photo upload failed: ${uploadErr.message}`);
+        continue;
+      }
+
+      const { data: { publicUrl } } = supabase.storage.from('reports').getPublicUrl(fileName);
+      uploaded.push({ url: publicUrl, preview });
+    }
+
+    setPendingPhotos(prev => [...prev, ...uploaded]);
+    setUploadingPhotos(false);
+  }
+
+  // ── Send message ──
+  const sendWithText = useCallback(async (text: string, photos: { url: string; preview: string }[] = []) => {
+    if (!text.trim() && photos.length === 0) return;
+
+    // Build photo note to append to message so Scout knows photos were attached
+    const photoNote = photos.length > 0
+      ? `\n\n[${photos.length} photo${photos.length > 1 ? 's' : ''} attached — stored for report]`
+      : '';
+
+    const userMsg: Message = {
+      role: 'user',
+      content: text.trim() + photoNote,
+      photoUrls: photos.length > 0 ? photos.map(p => p.url) : undefined,
+    };
+
     setMessages(prev => {
       const updated = [...prev, userMsg];
-      // Kick off API call with updated list
       (async () => {
         setSending(true);
         setError('');
         try {
+          // Send only text to Claude — photos are referenced by URL, not bytes
           const { data, error: fnErr } = await supabase.functions.invoke('generate-report', {
-            body: { mode: 'chat', messages: updated.map(m => ({ role: m.role, content: m.content })) },
+            body: {
+              mode: 'chat',
+              messages: updated.map(m => ({ role: m.role, content: m.content })),
+            },
           });
           if (fnErr || !data?.reply) {
             setError(fnErr?.message ?? 'Scout did not respond. Check the Edge Function is deployed.');
@@ -104,13 +153,14 @@ export default function ReportGeneratorPage() {
       })();
       return updated;
     });
+
     setInput('');
-    setPendingImages([]);
+    setPendingPhotos([]);
     pendingInputRef.current = '';
   }, []);
 
   function handleSend() {
-    sendWithText(input, pendingImages);
+    sendWithText(input, pendingPhotos);
   }
 
   // ── Voice ──
@@ -130,7 +180,7 @@ export default function ReportGeneratorPage() {
     }
 
     const rec = new SR();
-    rec.continuous = true;     // keep listening through pauses until mic tapped again
+    rec.continuous = true;
     rec.interimResults = true;
     rec.lang = 'en-CA';
 
@@ -146,9 +196,7 @@ export default function ReportGeneratorPage() {
     rec.onend = () => {
       setListening(false);
       const text = pendingInputRef.current.trim();
-      if (text) {
-        sendWithText(text, []);
-      }
+      if (text) sendWithText(text, pendingPhotos);
     };
 
     rec.onerror = () => {
@@ -166,11 +214,16 @@ export default function ReportGeneratorPage() {
   async function generateReport() {
     setGenerating(true);
     setError('');
+
+    // Collect all photo URLs from entire conversation
+    const allPhotoUrls = messages.flatMap(m => m.photoUrls ?? []);
+
     try {
       const { data, error: fnErr } = await supabase.functions.invoke('generate-report', {
         body: {
           mode: 'report',
           messages: messages.map(m => ({ role: m.role, content: m.content })),
+          photoUrls: allPhotoUrls,
           jobContext: job ? {
             address: job.address,
             inspectionType: job.inspection_type,
@@ -210,19 +263,10 @@ export default function ReportGeneratorPage() {
     await supabase.from('reports').insert({ job_id: jobId, storage_url: publicUrl });
     await supabase.from('jobs').update({ status: 'completed', completed_at: new Date().toISOString() }).eq('id', jobId);
 
-    localStorage.removeItem(draftKey); // clear draft on successful save
+    localStorage.removeItem(draftKey);
     setSaving(false);
     setSaved(true);
     setTimeout(() => navigate('/admin'), 2000);
-  }
-
-  function handleImages(e: React.ChangeEvent<HTMLInputElement>) {
-    Array.from(e.target.files ?? []).forEach(file => {
-      const reader = new FileReader();
-      reader.onload = ev => setPendingImages(prev => [...prev, ev.target?.result as string]);
-      reader.readAsDataURL(file);
-    });
-    e.target.value = '';
   }
 
   // ── Report review screen ──
@@ -318,10 +362,10 @@ export default function ReportGeneratorPage() {
                   : 'bg-white border border-gray-200 text-gray-800 rounded-bl-md shadow-sm'
               }`}>
                 <p className="whitespace-pre-wrap">{m.content}</p>
-                {m.images && (
+                {m.photoUrls && m.photoUrls.length > 0 && (
                   <div className="flex gap-2 mt-2 flex-wrap">
-                    {m.images.map((img, j) => (
-                      <img key={j} src={img} className="h-20 w-20 object-cover rounded-lg" alt="inspection photo" />
+                    {m.photoUrls.map((url, j) => (
+                      <img key={j} src={url} className="h-20 w-20 object-cover rounded-lg opacity-90" alt="inspection photo" />
                     ))}
                   </div>
                 )}
@@ -355,22 +399,31 @@ export default function ReportGeneratorPage() {
         {listening && (
           <div className="flex items-center gap-2 bg-red-50 border-t border-red-100 px-4 py-2 text-sm text-red-700">
             <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-            Listening… speak now, Scout will reply when you pause.
+            Listening… speak freely, tap mic when done.
           </div>
         )}
 
-        {/* Pending images */}
-        {pendingImages.length > 0 && (
-          <div className="flex gap-2 px-4 py-2 bg-white border-t border-gray-100 flex-wrap">
-            {pendingImages.map((img, i) => (
+        {/* Pending photos */}
+        {pendingPhotos.length > 0 && (
+          <div className="flex gap-2 px-4 py-2 bg-white border-t border-gray-100 flex-wrap items-center">
+            <span className="text-xs text-gray-400 mr-1">Photos ready:</span>
+            {pendingPhotos.map((p, i) => (
               <div key={i} className="relative">
-                <img src={img} className="h-14 w-14 object-cover rounded-lg border border-gray-300" alt="" />
+                <img src={p.preview} className="h-14 w-14 object-cover rounded-lg border border-gray-300" alt="" />
                 <button
-                  onClick={() => setPendingImages(prev => prev.filter((_, j) => j !== i))}
+                  onClick={() => setPendingPhotos(prev => prev.filter((_, j) => j !== i))}
                   className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center font-bold"
                 >×</button>
               </div>
             ))}
+          </div>
+        )}
+
+        {/* Uploading indicator */}
+        {uploadingPhotos && (
+          <div className="flex items-center gap-2 bg-blue-50 border-t border-blue-100 px-4 py-2 text-sm text-blue-700">
+            <Loader2 className="h-4 w-4 animate-spin" />
+            Uploading photos…
           </div>
         )}
 
@@ -381,7 +434,8 @@ export default function ReportGeneratorPage() {
           {/* Photo upload */}
           <button
             onClick={() => fileRef.current?.click()}
-            className="p-2 text-gray-400 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors shrink-0"
+            disabled={uploadingPhotos}
+            className="p-2 text-gray-400 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors shrink-0 disabled:opacity-40"
             title="Upload photos"
           >
             <ImagePlus className="h-5 w-5" />
@@ -406,7 +460,7 @@ export default function ReportGeneratorPage() {
                 ? 'bg-red-500 text-white animate-pulse'
                 : 'text-gray-400 hover:text-red-500 hover:bg-red-50'
             }`}
-            title={listening ? 'Stop listening' : 'Tap to speak'}
+            title={listening ? 'Tap to stop & send' : 'Tap to speak'}
           >
             {listening ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
           </button>
@@ -416,7 +470,7 @@ export default function ReportGeneratorPage() {
             size="sm"
             className="bg-blue-600 hover:bg-blue-700 shrink-0 h-9 w-9 p-0"
             onClick={handleSend}
-            disabled={sending || (!input.trim() && pendingImages.length === 0)}
+            disabled={sending || uploadingPhotos || (!input.trim() && pendingPhotos.length === 0)}
           >
             <Send className="h-4 w-4" />
           </Button>
