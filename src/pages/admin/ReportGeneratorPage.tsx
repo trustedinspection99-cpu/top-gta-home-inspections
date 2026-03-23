@@ -47,6 +47,7 @@ export default function ReportGeneratorPage() {
   const [magicLink, setMagicLink] = useState('');
   const [showPreview, setShowPreview] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const saveBarRef = useRef<HTMLDivElement>(null);
   const [error, setError] = useState('');
 
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -355,6 +356,7 @@ export default function ReportGeneratorPage() {
     localStorage.removeItem(reportDataKey);
     setSaving(false);
     setSavedReportId(reportRow.id);
+    setTimeout(() => saveBarRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
   }
 
   // ── Send report to client ──
@@ -385,7 +387,7 @@ export default function ReportGeneratorPage() {
 
   // ── Save / Send bar ──
   const SaveBar = reportHtml ? (
-    <div className="space-y-2 mb-3">
+    <div className="space-y-2 mb-3" ref={saveBarRef}>
       {/* Preview / Print row */}
       <div className="flex gap-2 flex-wrap">
         <Button size="sm" variant="outline" onClick={() => setShowPreview(p => !p)}>
@@ -419,17 +421,22 @@ export default function ReportGeneratorPage() {
 
       /* Saved — ready to send */
       ) : savedReportId ? (
-        <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-4">
-          <div className="flex items-center justify-between gap-3 flex-wrap">
-            <div className="flex items-center gap-2 text-green-800 font-semibold">
-              <CheckCircle2 className="h-5 w-5" />
-              Report saved successfully
-            </div>
-            <Button size="sm" className="bg-green-600 hover:bg-green-700" onClick={sendToClient} disabled={sendingReport}>
-              {sendingReport ? 'Sending…' : `Send to ${job?.client_name ?? 'Client'}`}
-            </Button>
+        <div className="rounded-xl border border-green-300 bg-green-50 px-4 py-4 space-y-3">
+          <div className="flex items-center gap-2 text-green-800 font-bold text-base">
+            <CheckCircle2 className="h-5 w-5 shrink-0" />
+            Report saved to Supabase
           </div>
-          <p className="text-sm text-green-700 mt-1">Ready to send — click the button to deliver the report and generate the client login link.</p>
+          <div className="bg-white border border-green-200 rounded-lg px-4 py-3 text-sm">
+            <p className="text-gray-500 text-xs uppercase tracking-wide font-semibold mb-1">Sending to client</p>
+            <p className="font-semibold text-gray-900">{job?.client_name ?? '—'}</p>
+            <p className="text-gray-500">{job?.client_email ?? '—'}</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <Button className="bg-green-600 hover:bg-green-700" onClick={sendToClient} disabled={sendingReport}>
+              {sendingReport ? 'Sending…' : `Send Report to ${job?.client_name ?? 'Client'}`}
+            </Button>
+            <p className="text-xs text-gray-500">This creates their login and sends a magic link to the email above.</p>
+          </div>
         </div>
 
       /* Unsaved */
@@ -484,6 +491,27 @@ export default function ReportGeneratorPage() {
             style={{ height: '80vh' }}
             title="Report Preview"
           />
+          {/* Repeat save/send bar below iframe so it's visible while scrolled */}
+          <div className="p-3 bg-gray-50 border-t border-gray-200">
+            {savedReportId && !sent ? (
+              <div className="flex items-center justify-between gap-3">
+                <div>
+                  <p className="text-sm font-semibold text-green-700 flex items-center gap-1"><CheckCircle2 className="h-4 w-4" /> Report saved</p>
+                  <p className="text-xs text-gray-500">Send to: {job?.client_name} · {job?.client_email}</p>
+                </div>
+                <Button size="sm" className="bg-green-600 hover:bg-green-700 shrink-0" onClick={sendToClient} disabled={sendingReport}>
+                  {sendingReport ? 'Sending…' : 'Send to Client'}
+                </Button>
+              </div>
+            ) : !savedReportId ? (
+              <div className="flex items-center justify-between gap-3">
+                <p className="text-sm text-gray-600">Report ready — save it to send to the client.</p>
+                <Button size="sm" className="bg-blue-600 hover:bg-blue-700 shrink-0" onClick={saveReport} disabled={saving}>
+                  {saving ? 'Saving…' : 'Save Report'}
+                </Button>
+              </div>
+            ) : null}
+          </div>
         </div>
       )}
 
