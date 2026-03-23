@@ -325,7 +325,7 @@ export default function ReportGeneratorPage() {
     const { data: { publicUrl } } = supabase.storage.from('Reports').getPublicUrl(fileName);
 
     const { data: reportRow, error: insertErr } = await supabase
-      .from('Reports')
+      .from('reports')
       .insert({ job_id: jobId, storage_url: publicUrl, status: 'saved' })
       .select('id')
       .single();
