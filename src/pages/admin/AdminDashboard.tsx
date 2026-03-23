@@ -61,27 +61,56 @@ export default function AdminDashboard() {
   useEffect(() => { load(); }, []);
 
   async function populateChecklist(job: JobRow) {
-    if (!job.report?.report_data || !job.homeowner_id) {
-      setChecklistMsg(prev => ({ ...prev, [job.id]: 'No report data available' }));
-      return;
-    }
+    if (!job.report || !job.homeowner_id) return;
     setPopulatingChecklist(job.id);
-    const reportData = job.report.report_data;
     const address = `${job.address}, ${job.city}`;
-    const items = reportData.sections.flatMap((section: any) =>
-      section.findings
-        .filter((f: any) => f.priority === 'P1' || f.priority === 'P2' || f.priority === 'P3')
-        .map((f: any) => ({
-          user_id: job.homeowner_id,
-          title: f.location ? `${f.location} — ${f.recommendation.slice(0, 120)}` : f.recommendation.slice(0, 120),
-          category: section.name,
-          completed: false,
-          property_address: address,
-          due_date: null,
-        }))
-    );
+    let items: any[] = [];
+
+    if (job.report.report_data) {
+      // Use structured JSON data
+      items = job.report.report_data.sections.flatMap((section: any) =>
+        section.findings
+          .filter((f: any) => f.priority === 'P1' || f.priority === 'P2' || f.priority === 'P3')
+          .map((f: any) => ({
+            user_id: job.homeowner_id,
+            title: f.location ? `${f.location} — ${f.recommendation.slice(0, 120)}` : f.recommendation.slice(0, 120),
+            category: section.name,
+            completed: false,
+            property_address: address,
+            due_date: null,
+          }))
+      );
+    } else {
+      // Parse from stored HTML report
+      try {
+        const res = await fetch(job.report.storage_url);
+        const html = await res.text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        doc.querySelectorAll('.page-wrap').forEach(wrap => {
+          const sectionName = wrap.querySelector('.section-header h2')?.textContent?.trim() ?? 'General';
+          wrap.querySelectorAll('.finding-card.p1, .finding-card.p2, .finding-card.p3').forEach(card => {
+            const title = card.querySelector('.finding-title')?.textContent?.trim() ?? '';
+            const recEl = card.querySelector('.finding-rec');
+            const rec = (recEl?.textContent ?? '').replace('Recommendation:', '').trim();
+            items.push({
+              user_id: job.homeowner_id,
+              title: title ? `${title} — ${rec.slice(0, 100)}` : rec.slice(0, 120),
+              category: sectionName,
+              completed: false,
+              property_address: address,
+              due_date: null,
+            });
+          });
+        });
+      } catch {
+        setChecklistMsg(prev => ({ ...prev, [job.id]: 'Failed to fetch report' }));
+        setPopulatingChecklist('');
+        return;
+      }
+    }
+
     if (items.length === 0) {
-      setChecklistMsg(prev => ({ ...prev, [job.id]: 'No P1/P2/P3 findings' }));
+      setChecklistMsg(prev => ({ ...prev, [job.id]: 'No P1/P2/P3 findings found' }));
       setPopulatingChecklist('');
       return;
     }
@@ -199,7 +228,7 @@ export default function AdminDashboard() {
                       </span>
                     )}
 
-                    {job.report?.report_data && job.homeowner_id && (
+                    {job.report && job.homeowner_id && (
                       <div className="flex items-center gap-1.5">
                         <Button
                           size="sm"
