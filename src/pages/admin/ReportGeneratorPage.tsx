@@ -369,59 +369,60 @@ export default function ReportGeneratorPage() {
 
   // ── Save / Send bar ──
   const SaveBar = reportHtml ? (
-    <div className="border border-gray-200 rounded-lg px-4 py-3 mb-3 bg-white">
+    <div className="space-y-2 mb-3">
+      {/* Preview / Print row */}
+      <div className="flex gap-2 flex-wrap">
+        <Button size="sm" variant="outline" onClick={() => setShowPreview(p => !p)}>
+          {showPreview ? 'Hide Preview' : 'Preview Report'}
+        </Button>
+        <Button size="sm" variant="outline" onClick={() => {
+          if (iframeRef.current?.contentWindow) iframeRef.current.contentWindow.print();
+        }} disabled={!showPreview}>
+          Print / Save PDF
+        </Button>
+      </div>
+
+      {/* Sent state */}
       {sent ? (
-        <div className="space-y-3">
-          <div className="flex items-center gap-2 text-green-700 text-sm">
-            <CheckCircle2 className="h-4 w-4" />
-            {magicLink
-              ? `New client — invite email sent to ${job?.client_email}. Magic link also copied below.`
-              : `Existing client — magic link generated below. Send it to ${job?.client_email}.`}
-            <Button size="sm" variant="outline" className="ml-auto" onClick={() => navigate('/admin')}>
-              Back to Dashboard
-            </Button>
+        <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-4 space-y-3">
+          <div className="flex items-center gap-2 text-green-800 font-semibold">
+            <CheckCircle2 className="h-5 w-5" />
+            Report sent to {job?.client_email}
           </div>
+          <p className="text-sm text-green-700">
+            {magicLink ? 'Invite email delivered. Copy the login link below to also send via text.' : 'Magic link ready — copy and send to the client.'}
+          </p>
           {magicLink && (
-            <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2">
-              <input
-                readOnly
-                value={magicLink}
-                className="flex-1 text-xs text-gray-700 bg-transparent outline-none font-mono truncate"
-                onFocus={e => e.target.select()}
-              />
-              <Button size="sm" variant="outline" className="shrink-0 text-xs" onClick={() => { navigator.clipboard.writeText(magicLink); }}>
-                Copy
-              </Button>
+            <div className="flex items-center gap-2 bg-white border border-green-200 rounded-lg px-3 py-2">
+              <input readOnly value={magicLink} className="flex-1 text-xs text-gray-700 bg-transparent outline-none font-mono truncate" onFocus={e => e.target.select()} />
+              <Button size="sm" variant="outline" className="shrink-0 text-xs" onClick={() => navigator.clipboard.writeText(magicLink)}>Copy</Button>
             </div>
           )}
+          <Button size="sm" variant="outline" onClick={() => navigate('/admin')}>Back to Dashboard</Button>
         </div>
+
+      /* Saved — ready to send */
+      ) : savedReportId ? (
+        <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-4">
+          <div className="flex items-center justify-between gap-3 flex-wrap">
+            <div className="flex items-center gap-2 text-green-800 font-semibold">
+              <CheckCircle2 className="h-5 w-5" />
+              Report saved successfully
+            </div>
+            <Button size="sm" className="bg-green-600 hover:bg-green-700" onClick={sendToClient} disabled={sendingReport}>
+              {sendingReport ? 'Sending…' : `Send to ${job?.client_name ?? 'Client'}`}
+            </Button>
+          </div>
+          <p className="text-sm text-green-700 mt-1">Ready to send — click the button to deliver the report and generate the client login link.</p>
+        </div>
+
+      /* Unsaved */
       ) : (
-        <div className="flex items-center justify-between gap-3 flex-wrap">
-          <div className="flex items-center gap-2 text-sm text-gray-700">
-            <CheckCircle2 className={`h-4 w-4 ${savedReportId ? 'text-green-600' : 'text-gray-300'}`} />
-            {savedReportId ? 'Report saved — send it to the client below.' : 'Report ready — preview, then save.'}
-          </div>
-          <div className="flex gap-2 flex-wrap">
-            <Button size="sm" variant="outline" onClick={() => setShowPreview(p => !p)}>
-              {showPreview ? 'Hide Preview' : 'Preview Report'}
-            </Button>
-            <Button size="sm" variant="outline" onClick={() => {
-              if (iframeRef.current?.contentWindow) {
-                iframeRef.current.contentWindow.print();
-              }
-            }} disabled={!showPreview}>
-              Print / Save PDF
-            </Button>
-            {!savedReportId ? (
-              <Button size="sm" className="bg-blue-600 hover:bg-blue-700" onClick={saveReport} disabled={saving}>
-                {saving ? 'Saving…' : 'Save Report'}
-              </Button>
-            ) : (
-              <Button size="sm" className="bg-green-600 hover:bg-green-700" onClick={sendToClient} disabled={sendingReport}>
-                {sendingReport ? 'Sending…' : `Send to ${job?.client_name ?? 'Client'}`}
-              </Button>
-            )}
-          </div>
+        <div className="rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 flex items-center justify-between gap-3 flex-wrap">
+          <p className="text-sm text-blue-800">Report generated — preview it, then save to make it available to the client.</p>
+          <Button size="sm" className="bg-blue-600 hover:bg-blue-700 shrink-0" onClick={saveReport} disabled={saving}>
+            {saving ? 'Saving…' : 'Save Report'}
+          </Button>
         </div>
       )}
     </div>
