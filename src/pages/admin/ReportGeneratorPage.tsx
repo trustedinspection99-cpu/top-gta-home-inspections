@@ -130,7 +130,7 @@ export default function ReportGeneratorPage() {
     }
 
     const rec = new SR();
-    rec.continuous = false;    // auto-stops after natural pause
+    rec.continuous = true;     // keep listening through pauses until mic tapped again
     rec.interimResults = true;
     rec.lang = 'en-CA';
 
