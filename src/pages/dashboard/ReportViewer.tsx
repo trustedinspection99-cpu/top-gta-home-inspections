@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { supabase, DbReport } from '@/lib/supabase';
 import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Download, AlertCircle } from 'lucide-react';
+import { ArrowLeft, Printer, AlertCircle } from 'lucide-react';
 
 export default function ReportViewer() {
   const { id } = useParams<{ id: string }>();
@@ -54,11 +54,10 @@ export default function ReportViewer() {
           </Link>
         </Button>
         {report && (
-          <Button asChild size="sm" variant="outline" className="border-blue-300 text-blue-700 hover:bg-blue-50">
-            <a href={report.storage_url} download className="flex items-center gap-2">
-              <Download className="h-4 w-4" />
-              Download PDF
-            </a>
+          <Button size="sm" variant="outline" className="border-blue-300 text-blue-700 hover:bg-blue-50"
+            onClick={() => window.print()}>
+            <Printer className="h-4 w-4 mr-2" />
+            Print / Save PDF
           </Button>
         )}
       </div>

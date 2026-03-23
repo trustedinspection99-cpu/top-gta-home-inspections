@@ -26,6 +26,7 @@ const INSPECTION_TYPES = [
 
 export default function NewJobPage() {
   const navigate = useNavigate();
+  const [clientName, setClientName] = useState('');
   const [clientEmail, setClientEmail] = useState('');
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
@@ -40,22 +41,17 @@ export default function NewJobPage() {
     setError('');
     setLoading(true);
 
-    // Look up homeowner by email
+    // Try to find existing homeowner account by email (optional — link if found)
     const { data: userData } = await supabase
       .from('users')
       .select('id')
-      .eq('email', clientEmail.trim())
-      .eq('role', 'homeowner')
-      .single();
-
-    if (!userData) {
-      setError('No homeowner account found with that email. Ask the client to sign up first.');
-      setLoading(false);
-      return;
-    }
+      .eq('email', clientEmail.trim().toLowerCase())
+      .maybeSingle();
 
     const { error: insertErr } = await supabase.from('jobs').insert({
-      homeowner_id: userData.id,
+      homeowner_id: userData?.id ?? null,
+      client_name: clientName.trim(),
+      client_email: clientEmail.trim().toLowerCase(),
       address: address.trim(),
       city: city.trim(),
       inspection_type: inspectionType,
@@ -103,17 +99,28 @@ export default function NewJobPage() {
             )}
 
             <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="space-y-1.5">
-                <Label htmlFor="clientEmail">Client email (homeowner account)</Label>
-                <Input
-                  id="clientEmail"
-                  type="email"
-                  value={clientEmail}
-                  onChange={e => setClientEmail(e.target.value)}
-                  placeholder="client@example.com"
-                  required
-                />
-                <p className="text-xs text-gray-400">Client must have a homeowner account on the portal</p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-1.5">
+                  <Label htmlFor="clientName">Client name</Label>
+                  <Input
+                    id="clientName"
+                    value={clientName}
+                    onChange={e => setClientName(e.target.value)}
+                    placeholder="Jane Smith"
+                    required
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="clientEmail">Client email</Label>
+                  <Input
+                    id="clientEmail"
+                    type="email"
+                    value={clientEmail}
+                    onChange={e => setClientEmail(e.target.value)}
+                    placeholder="jane@example.com"
+                    required
+                  />
+                </div>
               </div>
 
               <div className="space-y-1.5">
@@ -151,7 +158,7 @@ export default function NewJobPage() {
               </div>
 
               <div className="space-y-1.5">
-                <Label htmlFor="scheduledAt">Scheduled date & time</Label>
+                <Label htmlFor="scheduledAt">Scheduled date &amp; time</Label>
                 <Input
                   id="scheduledAt"
                   type="datetime-local"

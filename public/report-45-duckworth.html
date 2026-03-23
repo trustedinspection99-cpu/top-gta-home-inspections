@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ASADS Home Inspection Report — 45 Duckworth Rd, Cambridge, ON  N3H 0C1</title>
+<style>
+  :root {
+    --blue:    #1d4ed8;
+    --blue-lt: #3b82f6;
+    --blue-bg: #eff6ff;
+    --red:     #dc2626;
+    --red-bg:  #fef2f2;
+    --orange:  #ea580c;
+    --orange-bg:#fff7ed;
+    --yellow:  #ca8a04;
+    --yellow-bg:#fefce8;
+    --green:   #16a34a;
+    --green-bg:#f0fdf4;
+    --gray:    #6b7280;
+    --gray-bg: #f9fafb;
+    --border:  #e5e7eb;
+    --text:    #111827;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); font-size: 13.5px; line-height: 1.65; background: #fff; }
+
+  @page { margin: 0; }
+  @media print {
+    .no-print { display: none !important; }
+    .page-break { page-break-before: always; }
+    .avoid-break { page-break-inside: avoid; }
+    body { font-size: 12px; }
+    a { color: inherit; text-decoration: none; }
+    .page-wrap { padding: 12mm 14mm; }
+    .cover { padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .cover-header { padding: 20px 36px; }
+    .cover-body { padding: 28px 36px 20px; justify-content: center; }
+    .cover-footer { padding: 12px 36px; }
+    /* Prevent section header bar from being orphaned at bottom of page */
+    .section-header { page-break-after: avoid; }
+    /* Allow satisfactory-items notice to split naturally so it doesn't create phantom blank pages */
+    .finding-card { page-break-inside: avoid; margin-bottom: 10px; }
+    .section-body { padding: 14px 18px; margin-bottom: 0; }
+    .doc-header { margin-bottom: 16px; }
+  }
+
+  /* ── COVER ── */
+  .cover { min-height: 100vh; display: flex; flex-direction: column; background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 55%, #1d4ed8 100%); color: white; }
+  .cover-header { display: flex; align-items: center; justify-content: space-between; padding: 28px 48px; border-bottom: 1px solid rgba(255,255,255,0.15); }
+  .cover-logo { display: flex; align-items: center; gap: 14px; }
+  .cover-logo-icon { width: 48px; height: 48px; background: var(--blue-lt); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+  .cover-logo-text { font-size: 20px; font-weight: 800; }
+  .cover-logo-sub { font-size: 11px; color: #93c5fd; letter-spacing: 0.5px; }
+  .cover-cert { text-align: right; font-size: 11px; color: #93c5fd; line-height: 1.8; }
+  .cover-cert strong { color: white; }
+  .cover-body { flex: 1; display: flex; flex-direction: column; padding: 40px 48px 28px; }
+  .cover-photo-wrap { width: 3in; height: 3in; max-width: 100%; margin: 0 auto 24px; border-radius: 14px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); border: 3px solid rgba(255,255,255,0.2); }
+  .cover-photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+  .cover-address-card { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 14px; padding: 26px 32px; max-width: 760px; margin: 0 auto; }
+  .cover-report-type { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #93c5fd; font-weight: 700; margin-bottom: 6px; }
+  .cover-address { font-size: 26px; font-weight: 800; line-height: 1.25; margin-bottom: 4px; }
+  .cover-address-sub { font-size: 14px; color: #bfdbfe; margin-bottom: 22px; }
+  .cover-meta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.15); }
+  .cover-meta-item label { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #93c5fd; display: block; margin-bottom: 3px; }
+  .cover-meta-item span { font-size: 13px; font-weight: 600; }
+  .cover-footer { padding: 16px 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.15); font-size: 11px; color: #93c5fd; }
+
+  /* ── PAGE LAYOUT ── */
+  .page-wrap { max-width: 900px; margin: 0 auto; padding: 36px 48px; }
+  .doc-header { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 2px solid var(--blue); margin-bottom: 28px; }
+  .doc-header-logo { font-size: 14px; font-weight: 800; color: var(--blue); }
+  .doc-header-info { font-size: 11px; color: var(--gray); text-align: right; line-height: 1.6; }
+  .section-header { display: flex; align-items: center; gap: 12px; padding: 13px 20px; background: var(--blue); color: white; border-radius: 10px 10px 0 0; }
+  .section-header-icon { font-size: 20px; }
+  .section-header h2 { font-size: 16px; font-weight: 700; }
+  .section-body { border: 1.5px solid var(--border); border-top: none; border-radius: 0 0 10px 10px; padding: 22px; margin-bottom: 32px; }
+
+  /* ── BADGES ── */
+  .badge { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+  .badge-p1 { background: #fef2f2; color: var(--red);    border: 1.5px solid #fca5a5; }
+  .badge-p2 { background: #fff7ed; color: var(--orange); border: 1.5px solid #fed7aa; }
+  .badge-p3 { background: #fefce8; color: var(--yellow); border: 1.5px solid #fde68a; }
+  .badge-ok { background: #f0fdf4; color: var(--green);  border: 1.5px solid #86efac; }
+  .badge-ni { background: #f9fafb; color: var(--gray);   border: 1.5px solid #e5e7eb; }
+
+  /* ── SUMMARY BADGES ── */
+  .brow { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 22px; }
+  .sbadge { border-radius: 12px; padding: 18px 22px; text-align: center; flex: 1; min-width: 110px; border: 2px solid; }
+  .sbadge .n { font-size: 48px; font-weight: 900; line-height: 1; }
+  .sbadge .l { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 4px; }
+  .sbadge.p1 { background: #fef2f2; border-color: #ef4444; color: #ef4444; }
+  .sbadge.p2 { background: #fff7ed; border-color: #f97316; color: #f97316; }
+  .sbadge.p3 { background: #fefce8; border-color: #eab308; color: #ca8a04; }
+  .sbadge.ok { background: #f0fdf4; border-color: #22c55e; color: #16a34a; }
+
+  /* ── FINDING CARD ── */
+  .finding-card { border: 1.5px solid var(--border); border-radius: 8px; margin-bottom: 16px; overflow: hidden; }
+  .finding-card.p1 { border-left: 4px solid var(--red); }
+  .finding-card.p2 { border-left: 4px solid var(--orange); }
+  .finding-card.p3 { border-left: 4px solid var(--yellow); }
+  .finding-card.ok { border-left: 4px solid var(--green); }
+  .finding-head { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: var(--gray-bg); flex-wrap: wrap; gap: 8px; }
+  .finding-title { font-weight: 700; font-size: 13.5px; }
+  .finding-body { padding: 14px 16px; }
+  .finding-body p { margin-bottom: 8px; }
+  .finding-rec { background: var(--blue-bg); border-left: 3px solid var(--blue); padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 10px; font-size: 12.5px; }
+  .finding-rec strong { color: var(--blue); }
+
+  /* ── PHOTO GRID ── */
+  .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .photo-item { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
+  .photo-caption { padding: 6px 10px; font-size: 11px; color: var(--gray); background: var(--gray-bg); text-align: center; }
+  .photo-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; color: rgba(0,0,0,0.35); gap: 6px; font-size: 11px; text-align: center; background: rgba(0,0,0,0.03); border: 2px dashed #d1d5db; cursor: pointer; transition: background 0.15s, border-color 0.15s; }
+  .photo-placeholder:hover { background: var(--blue-bg); border-color: var(--blue-lt); }
+  .photo-placeholder.small { height: 150px; }
+  .photo-placeholder-icon { font-size: 24px; opacity: 0.45; }
+
+  /* ── NOTICE / OK BOX ── */
+  .notice { border-left: 4px solid var(--blue); background: var(--blue-bg); padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 16px 0; font-size: 12.5px; }
+  .notice.green  { border-color: var(--green);   background: var(--green-bg); }
+  .notice.yellow { border-color: var(--yellow);  background: var(--yellow-bg); }
+  .notice.red    { border-color: var(--red);      background: var(--red-bg); }
+  .notice-title  { font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+
+  /* ── SUMMARY TABLE ── */
+  .summary-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 12.5px; }
+  .summary-table th { background: #1e3a8a; color: white; padding: 10px 14px; text-align: left; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .summary-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .summary-table tr:last-child td { border-bottom: none; }
+  .summary-table tr:nth-child(even) td { background: #f8faff; }
+
+  /* ── TOC ── */
+  .toc { list-style: none; }
+  .toc li { padding: 8px 0; border-bottom: 1px dotted var(--border); display: flex; justify-content: space-between; align-items: center; }
+  .toc li:last-child { border-bottom: none; }
+  .toc-section-name { font-weight: 600; font-size: 13px; }
+
+  /* ── INSPECTOR SIG ── */
+  .sig-box { border: 1.5px solid var(--border); border-radius: 10px; padding: 22px; display: flex; gap: 22px; align-items: flex-start; }
+  .sig-avatar { width: 60px; height: 60px; background: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; font-weight: 800; flex-shrink: 0; }
+  .sig-name { font-size: 16px; font-weight: 800; margin-bottom: 4px; }
+  .sig-creds { font-size: 12px; color: var(--gray); line-height: 1.8; }
+
+  /* ── MISC ── */
+  ul.report-list { padding-left: 20px; margin: 8px 0; }
+  ul.report-list li { margin-bottom: 5px; }
+  strong { font-weight: 700; }
+  .mt8 { margin-top: 8px; }
+  .mt16 { margin-top: 16px; }
+  h1 { font-size: 20px; font-weight: 800; color: var(--blue); margin-bottom: 20px; }
+  .print-btn { position: fixed; top: 16px; right: 16px; z-index: 999; background: var(--blue); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 12px rgba(29,78,216,0.4); }
+  .print-btn:hover { background: #1e40af; }
+  .add-photo-btn { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 5px 12px; background: var(--gray-bg); border: 1.5px dashed #d1d5db; border-radius: 6px; font-size: 12px; font-weight: 600; color: var(--gray); cursor: pointer; transition: background 0.15s, border-color 0.15s, color 0.15s; }
+  .add-photo-btn:hover { background: var(--blue-bg); border-color: var(--blue-lt); color: var(--blue); }
+  .photo-item { position: relative; }
+  .remove-photo-btn { position: absolute; top: 5px; right: 5px; width: 22px; height: 22px; background: rgba(220,38,38,0.85); color: white; border: none; border-radius: 50%; font-size: 13px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; line-height: 1; z-index: 10; transition: background 0.15s; }
+  .remove-photo-btn:hover { background: #b91c1c; }
+</style>
+
+<script>
+  var _targetItem = null;
+  var _inp = null;
+  var _coverMode = false;
+
+  function addRemoveBtn(item) {
+    if (item.querySelector('.remove-photo-btn')) return;
+    var btn = document.createElement('button');
+    btn.className = 'remove-photo-btn no-print';
+    btn.title = 'Remove photo';
+    btn.textContent = '×';
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var grid = item.parentElement;
+      grid.removeChild(item);
+      Array.from(grid.children).forEach(function (child, i) {
+        var cap = child.querySelector('.photo-caption');
+        if (cap && !child.querySelector('.photo-placeholder')) cap.textContent = 'Photo ' + (i + 1);
+      });
+      var addBtn = grid.nextElementSibling;
+      if (addBtn && addBtn.classList.contains('add-photo-btn')) addBtn.style.display = '';
+    });
+    item.appendChild(btn);
+  }
+
+  function wireSlot(item) {
+    var ph = item.querySelector('.photo-placeholder');
+    if (ph) {
+      ph.addEventListener('click', function () { _targetItem = item; _inp.value = ''; _inp.click(); });
+    }
+    if (item.querySelector('img')) addRemoveBtn(item);
+  }
+
+  function addPhotoSlot(grid) {
+    var max = parseInt(grid.dataset.max || '10', 10);
+    if (grid.children.length >= max) return;
+
+    var item = document.createElement('div');
+    item.className = 'photo-item';
+
+    var ph = document.createElement('div');
+    ph.className = 'photo-placeholder small';
+    ph.title = 'Click to add photo';
+    ph.innerHTML = '<div class="photo-placeholder-icon">📷</div><span>Click to add photo</span>';
+
+    var cap = document.createElement('div');
+    cap.className = 'photo-caption';
+    cap.textContent = 'Tap to add';
+
+    item.appendChild(ph);
+    item.appendChild(cap);
+    grid.appendChild(item);
+    wireSlot(item);
+
+    var addBtn = grid.nextElementSibling;
+    if (addBtn && addBtn.classList.contains('add-photo-btn') && grid.children.length >= max) {
+      addBtn.style.display = 'none';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Create and append file input now that body exists
+    _inp = document.createElement('input');
+    _inp.type = 'file';
+    _inp.accept = 'image/*';
+    _inp.style.display = 'none';
+    document.body.appendChild(_inp);
+
+    _inp.addEventListener('change', function () {
+      if (!_inp.files[0]) return;
+
+      // Cover page photo
+      if (_coverMode) {
+        _coverMode = false;
+        var objectUrl = URL.createObjectURL(_inp.files[0]);
+        var wrap = document.getElementById('cover-photo-wrap');
+        var existing = wrap.querySelector('#cover-photo-placeholder, img');
+        var img = document.createElement('img');
+        img.src = objectUrl;
+        img.style.cssText = 'width:100%;display:block;cursor:pointer;';
+        img.alt = 'Property photo';
+        img.title = 'Click to change photo';
+        img.addEventListener('click', function () { _coverMode = true; _inp.value = ''; _inp.click(); });
+        if (existing) {
+          if (existing.tagName === 'IMG' && existing.src.startsWith('blob:')) URL.revokeObjectURL(existing.src);
+          wrap.replaceChild(img, existing);
+        } else {
+          wrap.appendChild(img);
+        }
+        _inp.value = '';
+        return;
+      }
+
+      if (!_targetItem) return;
+
+      // Use object URL — original file quality, no base64 re-encoding
+      var objectUrl = URL.createObjectURL(_inp.files[0]);
+
+      var img = document.createElement('img');
+      img.src = objectUrl;
+      img.style.cssText = 'width:100%;height:auto;display:block;';
+      img.alt = 'Inspection photo';
+
+      var ph = _targetItem.querySelector('.photo-placeholder');
+      if (ph) {
+        _targetItem.replaceChild(img, ph);
+      } else {
+        var old = _targetItem.querySelector('img');
+        if (old) {
+          // Revoke previous blob URL to free memory
+          if (old.src && old.src.startsWith('blob:')) URL.revokeObjectURL(old.src);
+          _targetItem.replaceChild(img, old);
+        }
+      }
+
+      var grid = _targetItem.parentElement;
+      var idx = Array.from(grid.children).indexOf(_targetItem) + 1;
+      var cap = _targetItem.querySelector('.photo-caption');
+      if (cap) cap.textContent = 'Photo ' + idx;
+
+      addRemoveBtn(_targetItem);
+      _inp.value = '';
+      _targetItem = null;
+
+      var addBtn = grid.nextElementSibling;
+      if (addBtn && addBtn.classList.contains('add-photo-btn')) addBtn.style.display = '';
+    });
+
+    // Wire cover page photo placeholder
+    var coverPh = document.getElementById('cover-photo-placeholder');
+    if (coverPh) {
+      coverPh.addEventListener('click', function () { _coverMode = true; _inp.value = ''; _inp.click(); });
+    }
+
+    // Wire all existing photo slots
+    document.querySelectorAll('.photo-grid .photo-item').forEach(wireSlot);
+  });
+</script>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">Save as PDF</button>
+
+<!-- ══ COVER PAGE ══════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-header">
+    <div class="cover-logo">
+      <div class="cover-logo-icon">🔍</div>
+      <div>
+        <div class="cover-logo-text">ASADS Home Inspection</div>
+        <div class="cover-logo-sub">Licensed · OAHI/CAHPI Standards · Intact Insurance</div>
+      </div>
+    </div>
+    <div class="cover-cert">
+      <strong>Ontario Home Inspection Act, 2017</strong><br>
+      OAHI/CAHPI 2023 National Standards<br>
+      Insured by Intact Insurance<br>
+      (647) 801-9311 · info@asads.ca
+    </div>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-photo-wrap" id="cover-photo-wrap">
+      <div class="photo-placeholder" id="cover-photo-placeholder" style="height:100%;border-radius:0;border:none;background:rgba(255,255,255,0.08);border:2px dashed rgba(255,255,255,0.25);" title="Click to add property photo">
+        <div class="photo-placeholder-icon" style="font-size:28px;color:rgba(255,255,255,0.4);">🏠</div>
+        <span style="font-size:12px;color:rgba(255,255,255,0.5);">Click to add property photo</span>
+      </div>
+    </div>
+
+    <div class="cover-address-card">
+      <div class="cover-report-type">Pre-Purchase Home Inspection</div>
+      <div class="cover-address">45 Duckworth Rd</div>
+      <div class="cover-address-sub">Cambridge, ON  N3H 0C1</div>
+      <div class="cover-meta-grid">
+        <div class="cover-meta-item"><label>Inspection Date</label><span>2026-03-22</span></div>
+        <div class="cover-meta-item"><label>Report Date</label><span>2026-03-23</span></div>
+        <div class="cover-meta-item"><label>Inspector</label><span>Haroon Chaudhry — ASADS Certified Inspector</span></div>
+        <div class="cover-meta-item"><label>Urgent Items</label><span style="color:#fca5a5;">3 P1 — Unsafe</span></div>
+        <div class="cover-meta-item"><label>Significant</label><span style="color:#fed7aa;">11 P2 — Deficiencies</span></div>
+        <div class="cover-meta-item"><label>Monitor</label><span style="color:#fde68a;">8 P3 — Items</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <span>Prepared per OAHI Standards of Practice &amp; CAHPI 2023 National Standards</span>
+    <span>asads.ca · Cambridge, ON</span>
+  </div>
+</div>
+
+<!-- ══ NOTICES & SCOPE ════════════════════════════════════════ -->
+<div class="page-wrap page-break">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22<br>Inspector: Haroon Chaudhry — ASADS Certified Inspector</div>
+  </div>
+  <h1>Important Notices &amp; Scope of Inspection</h1>
+  <div class="notice" style="margin-bottom:20px;">
+    <div class="notice-title">OAHI/CAHPI Standard Disclaimer</div>
+    This report was prepared in accordance with the Standards of Practice of the Ontario Association of Home Inspectors (OAHI) and the Canadian Association of Home &amp; Property Inspectors (CAHPI) 2023 National Standards. This inspection is not technically exhaustive. It will not identify concealed conditions or latent defects. Systems and components are reported on as observed at the time of inspection only.
+  </div>
+  <div class="notice yellow" style="margin-bottom:20px;">
+    <div class="notice-title">What This Inspection Does NOT Include</div>
+    <ul class="report-list mt8">
+      <li>Determination of remaining service life of any component</li>
+      <li>Engineering opinion on structural adequacy or load capacity</li>
+      <li>Code compliance, regulatory, or bylaw compliance determination</li>
+      <li>Environmental hazard assessment (mold, asbestos, radon) unless separately contracted</li>
+      <li>Market value or advisability of purchase</li>
+      <li>Concealed or latent defects not visible at time of inspection</li>
+    </ul>
+  </div>
+  <h1 style="margin-top:28px;">Property Overview</h1><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px;">
+        
+          <div style="background:var(--gray-bg);border-radius:8px;padding:12px 16px;">
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gray);margin-bottom:4px;">Year Built</div>
+            <div style="font-weight:700;font-size:13.5px;">1987</div>
+          </div>
+          <div style="background:var(--gray-bg);border-radius:8px;padding:12px 16px;">
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gray);margin-bottom:4px;">Bedrooms</div>
+            <div style="font-weight:700;font-size:13.5px;">5</div>
+          </div>
+          <div style="background:var(--gray-bg);border-radius:8px;padding:12px 16px;">
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gray);margin-bottom:4px;">Basement</div>
+            <div style="font-weight:700;font-size:13.5px;">Fully Finished</div>
+          </div>
+          <div style="background:var(--gray-bg);border-radius:8px;padding:12px 16px;">
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gray);margin-bottom:4px;">Electrical Service</div>
+            <div style="font-weight:700;font-size:13.5px;">200 Amp Overhead</div>
+          </div>
+          <div style="background:var(--gray-bg);border-radius:8px;padding:12px 16px;">
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gray);margin-bottom:4px;">Heating</div>
+            <div style="font-weight:700;font-size:13.5px;">Carrier Gas Furnace</div>
+          </div>
+          <div style="background:var(--gray-bg);border-radius:8px;padding:12px 16px;">
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gray);margin-bottom:4px;">Cooling</div>
+            <div style="font-weight:700;font-size:13.5px;">Carrier Central AC</div>
+          </div>
+          <div style="background:var(--gray-bg);border-radius:8px;padding:12px 16px;">
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gray);margin-bottom:4px;">Water Heater</div>
+            <div style="font-weight:700;font-size:13.5px;">Reliance 50 Gal Gas</div>
+          </div>
+          <div style="background:var(--gray-bg);border-radius:8px;padding:12px 16px;">
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gray);margin-bottom:4px;">Roof</div>
+            <div style="font-weight:700;font-size:13.5px;">Asphalt Shingles</div>
+          </div>
+          <div style="background:var(--gray-bg);border-radius:8px;padding:12px 16px;">
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gray);margin-bottom:4px;">Foundation</div>
+            <div style="font-weight:700;font-size:13.5px;">Concrete (Not Visible)</div>
+          </div>
+      </div>
+</div>
+
+<!-- ══ TABLE OF CONTENTS ══════════════════════════════════════ -->
+<div class="page-wrap page-break">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22</div>
+  </div>
+  <h1>Table of Contents</h1>
+  <ul class="toc">
+    <li><span class="toc-section-name">📋 Executive Summary</span><span></span></li>
+    
+      <li>
+        <span>🏗️ Section 3 — Structural System</span>
+        <span><span class="badge badge-ok">✅ OK</span></span>
+      </li>
+      <li>
+        <span>🌿 Section 4 — Exterior</span>
+        <span><span class="badge badge-p2">2 P2</span> <span class="badge badge-p3">1 P3</span></span>
+      </li>
+      <li>
+        <span>🏠 Section 5 — Roof System</span>
+        <span><span class="badge badge-p1">1 P1</span> <span class="badge badge-p2">3 P2</span></span>
+      </li>
+      <li>
+        <span>🚿 Section 6 — Plumbing System</span>
+        <span><span class="badge badge-p2">2 P2</span></span>
+      </li>
+      <li>
+        <span>⚡ Section 7 — Electrical System</span>
+        <span><span class="badge badge-p1">2 P1</span> <span class="badge badge-p2">3 P2</span> <span class="badge badge-p3">1 P3</span></span>
+      </li>
+      <li>
+        <span>🔥 Section 8 — Heating System</span>
+        <span><span class="badge badge-p2">1 P2</span> <span class="badge badge-p3">2 P3</span></span>
+      </li>
+      <li>
+        <span>❄️ Section 9 — Air Conditioning</span>
+        <span><span class="badge badge-ok">✅ OK</span></span>
+      </li>
+      <li>
+        <span>🛋️ Section 10 — Interior</span>
+        <span><span class="badge badge-p3">1 P3</span></span>
+      </li>
+      <li>
+        <span>🌡️ Section 11 — Insulation and Ventilation</span>
+        <span><span class="badge badge-p2">1 P2</span> <span class="badge badge-p3">2 P3</span></span>
+      </li>
+      <li>
+        <span>🔥 Section 12 — Fireplaces and Solid Fuel Burning Appliances</span>
+        <span><span class="badge badge-p3">1 P3</span></span>
+      </li>
+      <li>
+        <span>🚗 Garage</span>
+        <span><span class="badge badge-ok">✅ OK</span></span>
+      </li>
+    <li><span class="toc-section-name">🚫 Systems Not Inspected</span><span></span></li>
+    <li><span class="toc-section-name">📄 General Limitations &amp; Inspector Declaration</span><span></span></li>
+  </ul>
+</div>
+
+<!-- ══ EXECUTIVE SUMMARY ═════════════════════════════════════ -->
+<div class="page-wrap page-break">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22</div>
+  </div>
+  <div class="section-header">
+    <span class="section-header-icon">📋</span>
+    <h2>Executive Summary</h2>
+  </div>
+  <div class="section-body">
+    <div class="brow">
+      <div class="sbadge p1"><div class="n">3</div><div class="l">Unsafe / Urgent</div></div>
+      <div class="sbadge p2"><div class="n">11</div><div class="l">Significant Deficiency</div></div>
+      <div class="sbadge p3"><div class="n">8</div><div class="l">Monitor / Near EOL</div></div>
+      <div class="sbadge ok"><div class="n">20</div><div class="l">Satisfactory</div></div>
+    </div>
+    <p style="font-size:14px;line-height:1.8;color:#334155;margin-bottom:24px;">This pre-purchase home inspection of 45 Duckworth Rd, Cambridge (1987) identified 3 unsafe/urgent conditions requiring immediate attention prior to occupancy: carbon monoxide alarms are completely absent throughout the home with multiple gas appliances present, a loose bluestone on the chimney presents a falling hazard, and an exterior light fixture has exposed unsecured wiring creating a shock risk. Eleven significant deficiencies were identified including missing GFCI protection in all three bathrooms, unlabeled electrical panel circuits, inadequate smoke alarm coverage, heavily soiled ductwork, improper downspout discharge near the foundation, brick veneer cracking, multiple roof deficiencies, a non-functioning main-floor toilet, and an untested sump pump with mold-like growth observed nearby. Eight maintenance and monitoring items were noted. Numerous systems throughout the home were found to be in satisfactory condition at the time of inspection. All Priority 1 items should be addressed immediately, and the client should budget for Priority 2 repairs in the near term.</p>
+    
+  <table class="summary-table">
+    <thead>
+      <tr>
+        <th>Priority</th>
+        <th>Section</th>
+        <th>Item</th>
+        <th>Recommendation</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><span class="badge badge-p1">P1 — Unsafe / Urgent</span></td>
+      <td>Section 5 — Roof System</td>
+      <td>Chimney</td>
+      <td style="font-size:12px;">Recommend immediate referral to qualified mason to secure or remove the loose bluestone and evaluate overall chimney cap and crown condition.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p1">P1 — Unsafe / Urgent</span></td>
+      <td>Section 7 — Electrical System</td>
+      <td>Front entrance — exterior light fixture</td>
+      <td style="font-size:12px;">Recommend immediate referral to licensed electrician for evaluation, repair or replacement of the exterior light fixture and proper securing of all wiring.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p1">P1 — Unsafe / Urgent</span></td>
+      <td>Section 7 — Electrical System</td>
+      <td>Throughout house — carbon monoxide alarms absent</td>
+      <td style="font-size:12px;">Recommend immediate installation of carbon monoxide alarms on every level of the home, particularly in hallways near sleeping areas, prior to occupancy.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p2">P2 — Significant Deficiency</span></td>
+      <td>Section 4 — Exterior</td>
+      <td>Northwest elevation — brick veneer</td>
+      <td style="font-size:12px;">Recommend qualified mason evaluate and repair affected brick and repoint missing mortar joints to prevent water infiltration.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p2">P2 — Significant Deficiency</span></td>
+      <td>Section 4 — Exterior</td>
+      <td>Multiple downspout discharge points around perimeter</td>
+      <td style="font-size:12px;">Recommend installation of downspout extensions to direct water a minimum of 6 feet from the foundation. Recommend qualified contractor evaluate drainage and waterproofing at foundation perimeter.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p2">P2 — Significant Deficiency</span></td>
+      <td>Section 5 — Roof System</td>
+      <td>North slope — shingles</td>
+      <td style="font-size:12px;">Recommend qualified roofing contractor evaluate the extent of shingle deterioration on the north slope and repair or replace affected shingles.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p2">P2 — Significant Deficiency</span></td>
+      <td>Section 5 — Roof System</td>
+      <td>Roof flashings and penetrations</td>
+      <td style="font-size:12px;">Recommend qualified roofing contractor repair damaged flashing and seal all exposed nail holes at penetrations.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p2">P2 — Significant Deficiency</span></td>
+      <td>Section 5 — Roof System</td>
+      <td>Southwest and Northwest gutter corners</td>
+      <td style="font-size:12px;">Recommend repair or replacement of damaged gutter corner sections to restore proper roof drainage.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p2">P2 — Significant Deficiency</span></td>
+      <td>Section 6 — Plumbing System</td>
+      <td>Main floor bathroom — toilet</td>
+      <td style="font-size:12px;">Recommend qualified plumber evaluate and repair or replace main floor toilet flush mechanism.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p2">P2 — Significant Deficiency</span></td>
+      <td>Section 6 — Plumbing System</td>
+      <td>Basement utility area — sump pump</td>
+      <td style="font-size:12px;">Recommend qualified plumber test and service sump pump to confirm proper operation. Recommend environmental consultant assess mold-like growth.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p2">P2 — Significant Deficiency</span></td>
+      <td>Section 7 — Electrical System</td>
+      <td>Main electrical panel — circuit labeling</td>
+      <td style="font-size:12px;">Recommend licensed electrician accurately label all circuit breakers in the electrical panel.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p2">P2 — Significant Deficiency</span></td>
+      <td>Section 7 — Electrical System</td>
+      <td>Throughout house — smoke alarms</td>
+      <td style="font-size:12px;">Recommend installation of smoke alarms on every level of the home and inside and outside of every sleeping area as required by Ontario fire code.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p2">P2 — Significant Deficiency</span></td>
+      <td>Section 7 — Electrical System</td>
+      <td>All three bathrooms — GFCI receptacles</td>
+      <td style="font-size:12px;">Recommend licensed electrician install GFCI protected receptacles in all three bathrooms immediately.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p2">P2 — Significant Deficiency</span></td>
+      <td>Section 8 — Heating System</td>
+      <td>Duct system throughout house</td>
+      <td style="font-size:12px;">Recommend professional duct cleaning by a qualified HVAC contractor prior to occupancy.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p2">P2 — Significant Deficiency</span></td>
+      <td>Section 11 — Insulation and Ventilation</td>
+      <td>Thermal imaging — moisture detection</td>
+      <td style="font-size:12px;">Recommend qualified contractor investigate source of elevated moisture readings identified via thermal imaging to prevent structural damage or mold growth.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p3">P3 — Monitor / Maintenance</span></td>
+      <td>Section 4 — Exterior</td>
+      <td>Side yard walkway near downspout</td>
+      <td style="font-size:12px;">Recommend monitoring and resetting raised patio stones. Correcting downspout discharge (noted above) should also address contributing drainage.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p3">P3 — Monitor / Maintenance</span></td>
+      <td>Section 7 — Electrical System</td>
+      <td>Main electrical panel — AFCI protection</td>
+      <td style="font-size:12px;">Recommend licensed electrician evaluate panel and advise on AFCI protection status and any recommended upgrades.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p3">P3 — Monitor / Maintenance</span></td>
+      <td>Section 8 — Heating System</td>
+      <td>Basement utility room — Carrier furnace</td>
+      <td style="font-size:12px;">Recommend qualified HVAC technician service the furnace including cleaning the blower motor assembly. Recommend monitoring furnace operation and budgeting for eventual replacement.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p3">P3 — Monitor / Maintenance</span></td>
+      <td>Section 8 — Heating System</td>
+      <td>Furnace — filter compartment</td>
+      <td style="font-size:12px;">Recommend immediate replacement of furnace filter with appropriately rated replacement.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p3">P3 — Monitor / Maintenance</span></td>
+      <td>Section 10 — Interior</td>
+      <td>Bathroom — mirror</td>
+      <td style="font-size:12px;">Recommend replacement of damaged bathroom mirror.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p3">P3 — Monitor / Maintenance</span></td>
+      <td>Section 11 — Insulation and Ventilation</td>
+      <td>Bathroom exhaust fan</td>
+      <td style="font-size:12px;">Recommend cleaning or replacing bathroom exhaust fan to ensure effective moisture ventilation.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p3">P3 — Monitor / Maintenance</span></td>
+      <td>Section 11 — Insulation and Ventilation</td>
+      <td>Dryer exhaust duct</td>
+      <td style="font-size:12px;">Recommend professional dryer vent cleaning prior to occupancy.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-p3">P3 — Monitor / Maintenance</span></td>
+      <td>Section 12 — Fireplaces and Solid Fuel Burning Appliances</td>
+      <td>Main floor — wood-burning fireplace</td>
+      <td style="font-size:12px;">Recommend inspection and cleaning of the fireplace and chimney flue by a WETT-certified technician prior to use.</td>
+    </tr></tbody>
+  </table>
+  </div>
+</div>
+
+<!-- ══ FINDINGS BY SECTION ═══════════════════════════════════ -->
+
+<div class="page-wrap ">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22<br>Inspector: Haroon Chaudhry — ASADS Certified Inspector</div>
+  </div>
+  <div class="section-header">
+    <span class="section-header-icon">🏗️</span>
+    <h2>Section 3 — Structural System</h2>
+  </div>
+  <div class="section-body">
+    
+    
+      <div class="notice green mt16">
+        <div class="notice-title">✅ Satisfactory Items</div>
+        <ul class="report-list mt8">
+          <li>Visible structural framing inspected where accessible — no deficiencies noted at inspected areas</li><li>Floor structure — no significant deflection or movement observed at time of inspection</li>
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="page-wrap page-break">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22<br>Inspector: Haroon Chaudhry — ASADS Certified Inspector</div>
+  </div>
+  <div class="section-header">
+    <span class="section-header-icon">🌿</span>
+    <h2>Section 4 — Exterior</h2>
+  </div>
+  <div class="section-body">
+    
+      <div class="finding-card p2 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Northwest elevation — brick veneer</span>
+          <span class="badge badge-p2">🟠 Priority 2 — Significant Deficiency</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Observed one brick with visible cracking and spalling on the northwest side of the exterior wall. Missing mortar noted around the affected brick.</p>
+          <p><strong>Implication:</strong> Cracked and spalled brick with missing mortar allows water infiltration behind the brick veneer, leading to potential moisture damage to the underlying wall structure, insulation, and interior finishes over time.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend qualified mason evaluate and repair affected brick and repoint missing mortar joints to prevent water infiltration.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p2 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Multiple downspout discharge points around perimeter</span>
+          <span class="badge badge-p2">🟠 Priority 2 — Significant Deficiency</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Observed downspouts discharging water at or immediately adjacent to the foundation wall. No visible waterproofing membrane observed at foundation grade level.</p>
+          <p><strong>Implication:</strong> Discharge of roof drainage immediately adjacent to the foundation significantly increases the risk of water infiltration into the basement and potential deterioration of the foundation wall over time.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend installation of downspout extensions to direct water a minimum of 6 feet from the foundation. Recommend qualified contractor evaluate drainage and waterproofing at foundation perimeter.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p3 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Side yard walkway near downspout</span>
+          <span class="badge badge-p3">🟡 Priority 3 — Monitor / Maintenance</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Observed raised and uneven patio stones in side yard walkway area near downspout discharge point.</p>
+          <p><strong>Implication:</strong> Raised and uneven patio stones present a trip hazard and may indicate ground heave from improper water drainage below.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend monitoring and resetting raised patio stones. Correcting downspout discharge (noted above) should also address contributing drainage.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+    
+      <div class="notice green mt16">
+        <div class="notice-title">✅ Satisfactory Items</div>
+        <ul class="report-list mt8">
+          <li>Driveway — inspected, normal wear observed, no significant cracking or heaving</li><li>Front entrance door — opens and closes properly, hardware functioning, well sealed</li><li>Front patio — no cracks or damage observed</li><li>Brick veneer (general) — good condition at majority of inspected elevations</li><li>Ground grading — positive slope away from foundation observed at inspected locations</li><li>Front landscaping — well maintained, no concerns observed</li><li>Fence — generally good condition, stable</li><li>Trees and vegetation — no significant encroachment on structure observed</li><li>Rear yard — inspected, no significant concerns observed</li><li>Side walkway (general) — good condition except noted raised stones</li><li>Soffits and fascia — inspected from ground level, no significant damage observed</li>
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="page-wrap page-break">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22<br>Inspector: Haroon Chaudhry — ASADS Certified Inspector</div>
+  </div>
+  <div class="section-header">
+    <span class="section-header-icon">🏠</span>
+    <h2>Section 5 — Roof System</h2>
+  </div>
+  <div class="section-body">
+    
+      <div class="finding-card p1 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Chimney</span>
+          <span class="badge badge-p1">🔴 Priority 1 — Unsafe / Urgent</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Observed one loose bluestone on the chimney structure. Stone is unsecured and at risk of displacement.</p>
+          <p><strong>Implication:</strong> A loose stone on the chimney presents a significant risk of falling and causing personal injury to occupants or visitors below during normal day-to-day use.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend immediate referral to qualified mason to secure or remove the loose bluestone and evaluate overall chimney cap and crown condition.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p2 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">North slope — shingles</span>
+          <span class="badge badge-p2">🟠 Priority 2 — Significant Deficiency</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Observed shingles with visible crimping and curling on the north-facing slope of the roof.</p>
+          <p><strong>Implication:</strong> Crimped and curling shingles are no longer lying flat and are no longer providing full weather protection, increasing the risk of water penetration under the shingles and into the roof deck.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend qualified roofing contractor evaluate the extent of shingle deterioration on the north slope and repair or replace affected shingles.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p2 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Roof flashings and penetrations</span>
+          <span class="badge badge-p2">🟠 Priority 2 — Significant Deficiency</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Observed one damaged flashing. Exposed nail holes noted at roof deck and penetration locations, not sealed with roofing sealant.</p>
+          <p><strong>Implication:</strong> Damaged flashing and unsealed nail holes are potential water entry points that can lead to roof deck damage, sheathing rot, and interior water infiltration over time.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend qualified roofing contractor repair damaged flashing and seal all exposed nail holes at penetrations.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p2 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Southwest and Northwest gutter corners</span>
+          <span class="badge badge-p2">🟠 Priority 2 — Significant Deficiency</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Observed two damaged eavestrough corner sections — one at the southwest corner and one at the northwest corner of the roof drainage system.</p>
+          <p><strong>Implication:</strong> Damaged gutter corners prevent proper water channeling, allowing roof drainage to discharge near the foundation and potentially into the soffit area.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend repair or replacement of damaged gutter corner sections to restore proper roof drainage.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+    
+      <div class="notice green mt16">
+        <div class="notice-title">✅ Satisfactory Items</div>
+        <ul class="report-list mt8">
+          <li>Roof covering (general) — asphalt shingles inspected, condition generally adequate at inspected locations except noted deficiency area</li><li>Chimney structure (general) — masonry generally intact at inspected areas except noted loose stone</li><li>Roof penetrations (general) — inspected, no significant concerns beyond noted unsealed nail holes</li>
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="page-wrap page-break">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22<br>Inspector: Haroon Chaudhry — ASADS Certified Inspector</div>
+  </div>
+  <div class="section-header">
+    <span class="section-header-icon">🚿</span>
+    <h2>Section 6 — Plumbing System</h2>
+  </div>
+  <div class="section-body">
+    
+      <div class="finding-card p2 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Main floor bathroom — toilet</span>
+          <span class="badge badge-p2">🟠 Priority 2 — Significant Deficiency</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Observed toilet on the main floor not flushing properly at time of inspection.</p>
+          <p><strong>Implication:</strong> Toilet is not functioning as intended. A non-functioning toilet is a significant deficiency affecting habitability.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend qualified plumber evaluate and repair or replace main floor toilet flush mechanism.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p2 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Basement utility area — sump pump</span>
+          <span class="badge badge-p2">🟠 Priority 2 — Significant Deficiency</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Sump pump observed in basement. Sump pump was not tested at time of inspection. Mold-like growth observed in the vicinity of the sump pump area.</p>
+          <p><strong>Implication:</strong> An untested sump pump cannot be confirmed to be functioning. Failure during a high water event could lead to basement flooding. Mold-like growth in the area may indicate chronic moisture. Note: identification of mold species is outside the scope of this inspection.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend qualified plumber test and service sump pump to confirm proper operation. Recommend environmental consultant assess mold-like growth.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+    
+      <div class="notice green mt16">
+        <div class="notice-title">✅ Satisfactory Items</div>
+        <ul class="report-list mt8">
+          <li>Water heater — Reliance 50-gallon gas water heater observed, no visible leaks or corrosion noted at time of inspection</li><li>Main water shut-off — located and observed</li><li>Bathroom shut-off valves — observed and accessible</li><li>Visible supply and drain/waste lines — inspected at accessible locations, no active leaks observed</li><li>Plumbing fixtures and faucets — tested at inspected locations, functioning properly except noted main floor toilet</li>
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="page-wrap page-break">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22<br>Inspector: Haroon Chaudhry — ASADS Certified Inspector</div>
+  </div>
+  <div class="section-header">
+    <span class="section-header-icon">⚡</span>
+    <h2>Section 7 — Electrical System</h2>
+  </div>
+  <div class="section-body">
+    
+      <div class="finding-card p1 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Front entrance — exterior light fixture</span>
+          <span class="badge badge-p1">🔴 Priority 1 — Unsafe / Urgent</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Observed exterior light fixture at the front entrance with visible damaged housing. Wiring observed to be exposed and unsecured at the exterior fixture location.</p>
+          <p><strong>Implication:</strong> Exposed electrical wiring at an exterior location presents a significant risk of electrical shock to occupants or visitors during normal day-to-day use and is a fire hazard.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend immediate referral to licensed electrician for evaluation, repair or replacement of the exterior light fixture and proper securing of all wiring.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p1 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Throughout house — carbon monoxide alarms absent</span>
+          <span class="badge badge-p1">🔴 Priority 1 — Unsafe / Urgent</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> No carbon monoxide alarm was observed on any level of the home at the time of inspection. Gas appliances present including gas furnace and gas water heater.</p>
+          <p><strong>Implication:</strong> Absence of carbon monoxide alarms in a home with gas appliances presents a significant risk of undetected CO poisoning, which can be fatal. CO alarms are required in all homes with fuel-burning appliances under Ontario law.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend immediate installation of carbon monoxide alarms on every level of the home, particularly in hallways near sleeping areas, prior to occupancy.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p2 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Main electrical panel — circuit labeling</span>
+          <span class="badge badge-p2">🟠 Priority 2 — Significant Deficiency</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Circuit breakers in the main electrical panel are not properly labeled throughout. Multiple circuits could not be identified during inspection.</p>
+          <p><strong>Implication:</strong> Unlabeled circuits prevent safe and efficient identification of circuits for emergency shut-off or maintenance.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend licensed electrician accurately label all circuit breakers in the electrical panel.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p2 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Throughout house — smoke alarms</span>
+          <span class="badge badge-p2">🟠 Priority 2 — Significant Deficiency</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Smoke alarm coverage was observed to be insufficient. Not all required locations had smoke alarms observed at time of inspection.</p>
+          <p><strong>Implication:</strong> Insufficient smoke alarm coverage reduces the time available for occupants to safely evacuate in the event of a fire.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend installation of smoke alarms on every level of the home and inside and outside of every sleeping area as required by Ontario fire code.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p2 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">All three bathrooms — GFCI receptacles</span>
+          <span class="badge badge-p2">🟠 Priority 2 — Significant Deficiency</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> GFCI (Ground Fault Circuit Interrupter) protected receptacles were not present in all three bathrooms. GFCI protection was confirmed functioning in the kitchen.</p>
+          <p><strong>Implication:</strong> Absence of GFCI protection at bathroom receptacles presents a significant risk of electrical shock in wet locations during normal day-to-day use.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend licensed electrician install GFCI protected receptacles in all three bathrooms immediately.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p3 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Main electrical panel — AFCI protection</span>
+          <span class="badge badge-p3">🟡 Priority 3 — Monitor / Maintenance</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Presence or absence of AFCI (Arc Fault Circuit Interrupter) breakers in the electrical panel was not confirmed at time of inspection. Property built in 1987 — AFCI protection may not be present.</p>
+          <p><strong>Implication:</strong> AFCI protection reduces the risk of electrical fires caused by arc faults in branch circuits. Absence in an older home may represent an opportunity to improve fire safety.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend licensed electrician evaluate panel and advise on AFCI protection status and any recommended upgrades.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+    
+      <div class="notice green mt16">
+        <div class="notice-title">✅ Satisfactory Items</div>
+        <ul class="report-list mt8">
+          <li>Electrical service — 200-amp overhead service observed, appropriate for the home</li><li>Main electrical panel (general) — breakers observed functional, no tripped breakers or obvious double-tapping noted</li><li>GFCI protection — kitchen receptacles tested and confirmed functioning</li><li>Wiring (general) — no significant concerns noted at accessible locations</li><li>Service drop — overhead service drop inspected, no obstructions noted</li>
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="page-wrap page-break">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22<br>Inspector: Haroon Chaudhry — ASADS Certified Inspector</div>
+  </div>
+  <div class="section-header">
+    <span class="section-header-icon">🔥</span>
+    <h2>Section 8 — Heating System</h2>
+  </div>
+  <div class="section-body">
+    
+      <div class="finding-card p2 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Duct system throughout house</span>
+          <span class="badge badge-p2">🟠 Priority 2 — Significant Deficiency</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Duct system observed to be heavily soiled throughout inspected areas.</p>
+          <p><strong>Implication:</strong> Heavily soiled ductwork reduces heating and cooling efficiency and may affect indoor air quality by circulating accumulated dust and debris throughout the home.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend professional duct cleaning by a qualified HVAC contractor prior to occupancy.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p3 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Basement utility room — Carrier furnace</span>
+          <span class="badge badge-p3">🟡 Priority 3 — Monitor / Maintenance</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Carrier furnace observed. Unit is an older model. Blower motor compartment observed to be dirty with accumulated dust.</p>
+          <p><strong>Implication:</strong> An older furnace with a dirty blower motor operates less efficiently and may be approaching the end of its service life.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend qualified HVAC technician service the furnace including cleaning the blower motor assembly. Recommend monitoring furnace operation and budgeting for eventual replacement.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p3 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Furnace — filter compartment</span>
+          <span class="badge badge-p3">🟡 Priority 3 — Monitor / Maintenance</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Furnace filter observed to be dirty and in need of replacement at time of inspection.</p>
+          <p><strong>Implication:</strong> A dirty filter restricts airflow, reducing heating efficiency and placing additional strain on the blower motor.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend immediate replacement of furnace filter with appropriately rated replacement.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+    
+      <div class="notice green mt16">
+        <div class="notice-title">✅ Satisfactory Items</div>
+        <ul class="report-list mt8">
+          <li>Gas supply to furnace — observed, no evidence of leaks at accessible connections</li><li>Return vents — inspected at representative locations, no significant blockages noted</li><li>Heat registers — observed throughout home</li>
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="page-wrap ">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22<br>Inspector: Haroon Chaudhry — ASADS Certified Inspector</div>
+  </div>
+  <div class="section-header">
+    <span class="section-header-icon">❄️</span>
+    <h2>Section 9 — Air Conditioning</h2>
+  </div>
+  <div class="section-body">
+    
+    
+      <div class="notice green mt16">
+        <div class="notice-title">✅ Satisfactory Items</div>
+        <ul class="report-list mt8">
+          <li>Carrier central AC unit — newer model observed, good general condition at time of inspection. Unit NOT operated — outdoor temperature was below minimum operating threshold at time of inspection. Cold-weather operation risks compressor damage. Recommend testing when outdoor temperatures are appropriate.</li>
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="page-wrap page-break">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22<br>Inspector: Haroon Chaudhry — ASADS Certified Inspector</div>
+  </div>
+  <div class="section-header">
+    <span class="section-header-icon">🛋️</span>
+    <h2>Section 10 — Interior</h2>
+  </div>
+  <div class="section-body">
+    
+      <div class="finding-card p3 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Bathroom — mirror</span>
+          <span class="badge badge-p3">🟡 Priority 3 — Monitor / Maintenance</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Bathroom mirror observed to be damaged.</p>
+          <p><strong>Implication:</strong> Damaged mirror is a cosmetic deficiency and potential safety concern if breakage occurs.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend replacement of damaged bathroom mirror.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+    
+      <div class="notice green mt16">
+        <div class="notice-title">✅ Satisfactory Items</div>
+        <ul class="report-list mt8">
+          <li>Bedrooms (5) — inspected, walls, ceilings, floors in satisfactory condition at time of inspection</li><li>Stairway railings and guards — inspected, good condition, no damage or instability observed</li><li>Representative windows and doors — tested, opening and closing properly, no significant deficiencies observed</li><li>Interior walls, ceilings, floors (general) — inspected at representative locations, no significant deficiencies beyond noted items</li>
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="page-wrap page-break">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22<br>Inspector: Haroon Chaudhry — ASADS Certified Inspector</div>
+  </div>
+  <div class="section-header">
+    <span class="section-header-icon">🌡️</span>
+    <h2>Section 11 — Insulation and Ventilation</h2>
+  </div>
+  <div class="section-body">
+    
+      <div class="finding-card p2 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Thermal imaging — moisture detection</span>
+          <span class="badge badge-p2">🟠 Priority 2 — Significant Deficiency</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Thermal imaging camera was used during inspection. Elevated moisture readings were detected at inspected wall and ceiling surfaces in certain areas of the home.</p>
+          <p><strong>Implication:</strong> Elevated moisture readings detected via thermal imaging may indicate water infiltration, plumbing leak, or condensation issues within wall or ceiling cavities. The exact source cannot be determined without invasive investigation.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend qualified contractor investigate source of elevated moisture readings identified via thermal imaging to prevent structural damage or mold growth.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p3 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Bathroom exhaust fan</span>
+          <span class="badge badge-p3">🟡 Priority 3 — Monitor / Maintenance</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Bathroom exhaust fan observed to be producing excessive noise during operation.</p>
+          <p><strong>Implication:</strong> An excessively noisy exhaust fan may indicate a worn motor or bearing, and may discourage use, leading to inadequate moisture ventilation.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend cleaning or replacing bathroom exhaust fan to ensure effective moisture ventilation.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+      <div class="finding-card p3 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Dryer exhaust duct</span>
+          <span class="badge badge-p3">🟡 Priority 3 — Monitor / Maintenance</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Dryer exhaust vent duct observed to be in need of cleaning based on visual assessment.</p>
+          <p><strong>Implication:</strong> A clogged dryer vent is a recognized fire hazard and reduces dryer efficiency.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend professional dryer vent cleaning prior to occupancy.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+    
+      <div class="notice green mt16">
+        <div class="notice-title">✅ Satisfactory Items</div>
+        <ul class="report-list mt8">
+          <li>Mechanical ventilation — inspected at accessible locations, generally functional</li><li>Insulation — observed in unfinished spaces where accessible</li><li>Kitchen ventilation — observed, functional</li>
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="page-wrap page-break">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22<br>Inspector: Haroon Chaudhry — ASADS Certified Inspector</div>
+  </div>
+  <div class="section-header">
+    <span class="section-header-icon">🔥</span>
+    <h2>Section 12 — Fireplaces and Solid Fuel Burning Appliances</h2>
+  </div>
+  <div class="section-body">
+    
+      <div class="finding-card p3 avoid-break">
+        <div class="finding-head">
+          <span class="finding-title">Main floor — wood-burning fireplace</span>
+          <span class="badge badge-p3">🟡 Priority 3 — Monitor / Maintenance</span>
+        </div>
+        <div class="finding-body">
+          <p><strong>Observation:</strong> Creosote buildup observed in the firebox and visible flue area of the wood-burning fireplace.</p>
+          <p><strong>Implication:</strong> Creosote accumulation in a chimney/flue is a recognized fire hazard. The interior of the flue was not inspected as this is outside the scope of a home inspection.</p>
+          <div class="finding-rec"><strong>Recommendation:</strong> Recommend inspection and cleaning of the fireplace and chimney flue by a WETT-certified technician prior to use.</div>
+          <div class="photo-grid mt16" data-max="10"></div>
+      <button class="add-photo-btn no-print" onclick="addPhotoSlot(this.previousElementSibling)" title="Add another photo to this finding">📷 Add Photo</button>
+        </div>
+      </div>
+    
+      <div class="notice green mt16">
+        <div class="notice-title">✅ Satisfactory Items</div>
+        <ul class="report-list mt8">
+          <li>Firebox structure — inspected at accessible areas, masonry generally intact</li><li>Clearances around fireplace — no significant deficiencies observed</li>
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="page-wrap ">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22<br>Inspector: Haroon Chaudhry — ASADS Certified Inspector</div>
+  </div>
+  <div class="section-header">
+    <span class="section-header-icon">🚗</span>
+    <h2>Garage</h2>
+  </div>
+  <div class="section-body">
+    
+    
+      <div class="notice green mt16">
+        <div class="notice-title">✅ Satisfactory Items</div>
+        <ul class="report-list mt8">
+          <li>Garage fire separation door — present, opens and closes properly, no damage observed. Gas proofing between garage and habitable space satisfactory</li><li>Garage vehicle door — inspected, functioning properly, no significant damage observed</li><li>Garage interior — walls, floor, ceiling inspected, no significant deficiencies noted beyond items already reported</li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+<!-- ══ SYSTEMS NOT INSPECTED ══════════════════════════════════ -->
+
+<div class="page-wrap page-break">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22</div>
+  </div>
+  <div class="section-header">
+    <span class="section-header-icon">🚫</span>
+    <h2>Systems Not Inspected</h2>
+  </div>
+  <div class="section-body">
+    
+    <div class="finding-card avoid-break" style="border-left:4px solid #6b7280;">
+      <div class="finding-head">
+        <span class="finding-title">Foundation Walls (Section 3)</span>
+        <span class="badge badge-ni">⚪ Not Inspected</span>
+      </div>
+      <div class="finding-body">
+        <p>Basement is fully finished. Foundation walls were not visible or accessible at the time of inspection. Recommend monitoring for any future signs of water infiltration, cracking, or movement. If concerns arise, refer to qualified structural engineer.</p>
+      </div>
+    </div>
+    <div class="finding-card avoid-break" style="border-left:4px solid #6b7280;">
+      <div class="finding-head">
+        <span class="finding-title">Attic (Section 11)</span>
+        <span class="badge badge-ni">⚪ Not Inspected</span>
+      </div>
+      <div class="finding-body">
+        <p>Potential asbestos-containing material was observed near the attic access point. Attic was not entered for safety reasons. Recommend qualified environmental consultant assess prior to any attic work.</p>
+      </div>
+    </div>
+    <div class="finding-card avoid-break" style="border-left:4px solid #6b7280;">
+      <div class="finding-head">
+        <span class="finding-title">Backflow Preventer (Section 6)</span>
+        <span class="badge badge-ni">⚪ Not Inspected</span>
+      </div>
+      <div class="finding-body">
+        <p>Backflow preventer was not observed during inspection.</p>
+      </div>
+    </div>
+    <div class="finding-card avoid-break" style="border-left:4px solid #6b7280;">
+      <div class="finding-head">
+        <span class="finding-title">Air Conditioning — Operation (Section 9)</span>
+        <span class="badge badge-ni">⚪ Not Inspected</span>
+      </div>
+      <div class="finding-body">
+        <p>AC unit was not operated at time of inspection. Outdoor temperature was below the minimum threshold for safe compressor operation. Visual inspection only was performed. Recommend testing when outdoor temperatures are appropriate.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ INSPECTOR INFORMATION & DECLARATION ══════════════════════ -->
+<div class="page-wrap page-break">
+  <div class="doc-header">
+    <div class="doc-header-logo">🔍 ASADS Home Inspection</div>
+    <div class="doc-header-info">45 Duckworth Rd, Cambridge, ON  N3H 0C1 · 2026-03-22</div>
+  </div>
+  <div class="section-header">
+    <span class="section-header-icon">✅</span>
+    <h2>Inspector Information &amp; Declaration</h2>
+  </div>
+  <div class="section-body">
+
+    <!-- Inspector card -->
+    <div class="sig-box" style="margin-bottom:24px;">
+      <div class="sig-avatar">HC</div>
+      <div style="flex:1;">
+        <div class="sig-name">Haroon Chaudhry</div>
+        <div class="sig-creds">
+          Home Inspector · ASADS Home Inspection<br>
+          CMI® — Certified Master Inspector<br>
+          Licensed under the <strong>Ontario Home Inspection Act, 2017</strong><br>
+          OAHI · CAHPI National Standards Compliant<br>
+          Insured by Intact Insurance (E&amp;O &amp; General Liability)<br>
+          Criminal Background Verified
+        </div>
+        <div style="margin-top:10px;font-size:12px;color:var(--gray);">
+          Phone: (647) 801-9311 &nbsp;|&nbsp; Email: info@asads.ca &nbsp;|&nbsp; Web: asads.ca
+        </div>
+      </div>
+    </div>
+
+    <!-- Declaration -->
+    <h3 style="font-size:14px;font-weight:700;color:var(--blue);margin-bottom:10px;">Inspector Declaration</h3>
+    <p style="font-size:13px;line-height:1.8;color:#334155;margin-bottom:12px;">
+      I, <strong>Haroon Chaudhry</strong>, declare that this report accurately reflects the observations made during the inspection of the property located at <strong>45 Duckworth Rd, Cambridge, ON  N3H 0C1</strong>, conducted on <strong>2026-03-22</strong>. The inspection was performed in accordance with the Standards of Practice of the Ontario Association of Home Inspectors (OAHI) and the requirements of the Ontario Home Inspection Act, 2017.
+    </p>
+    <p style="font-size:13px;line-height:1.8;color:#334155;margin-bottom:24px;">
+      This report is the property of ASADS Home Inspection and the named client. It is not transferable and may not be relied upon by any party other than the named client without the express written consent of ASADS Home Inspection.
+    </p>
+
+    <!-- Signature block -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px;">
+      <div style="border:1.5px solid var(--border);border-radius:8px;padding:16px;">
+        <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gray);margin-bottom:8px;">Inspector Signature</div>
+        <div style="font-size:15px;font-style:italic;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:6px;">Haroon Chaudhry</div>
+        <div style="font-size:11px;color:var(--gray);">2026-03-22</div>
+      </div>
+      <div style="border:1.5px solid var(--border);border-radius:8px;padding:16px;">
+        <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gray);margin-bottom:8px;">Company Stamp / Seal</div>
+        <div style="font-size:14px;font-weight:800;color:var(--blue);margin-bottom:4px;">ASADS Home Inspection</div>
+        <div style="font-size:11px;color:var(--gray);">asads.ca · (647) 801-9311</div>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="notice yellow" style="margin-bottom:16px;">
+      <div class="notice-title">Disclaimer</div>
+      This report is not a warranty, guarantee, or insurance policy of any kind. The inspector is not a structural engineer, licensed contractor, specialist in any specific trade, or environmental consultant. Where specialist evaluation is recommended, such evaluation should be completed by appropriately licensed and qualified professionals. The inspector's liability is limited to the fee paid for this inspection. ASADS Home Inspection carries Errors &amp; Omissions insurance and General Liability insurance. A 90-day workmanship warranty applies to the inspection services provided.
+    </div>
+
+    <!-- 90-day warranty -->
+    <div class="notice green">
+      <div class="notice-title">90-Day Inspection Warranty</div>
+      This inspection is backed by ASADS Home Inspection's 90-day warranty. If a covered defect is discovered following the inspection that was accessible and should have been reported, ASADS Home Inspection will work to make it right. Contact us at (647) 801-9311 or info@asads.ca.
+    </div>
+
+  </div>
+
+  <!-- Report footer -->
+  <div style="text-align:center;padding:20px 0 8px;font-size:11px;color:var(--gray);border-top:1px solid var(--border);margin-top:24px;line-height:1.9;">
+    <strong style="color:var(--blue);font-size:13px;">ASADS Home Inspection</strong><br>
+    (647) 801-9311 &nbsp;·&nbsp; info@asads.ca &nbsp;·&nbsp; asads.ca<br>
+    CMI® Certified Master Inspector · Licensed · Insured by Intact Insurance<br>
+    Report Reference: <strong>ASADS-20260322-CAM</strong> &nbsp;·&nbsp; © 2026 ASADS Home Inspection. All rights reserved.
+  </div>
+</div>
+
+</body>
+</html>

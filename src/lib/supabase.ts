@@ -31,7 +31,9 @@ export interface DbRealtor {
 
 export interface DbJob {
   id: string;
-  homeowner_id: string;
+  homeowner_id: string | null;
+  client_name: string;
+  client_email: string;
   address: string;
   city: string;
   inspection_type: string;
@@ -40,11 +42,16 @@ export interface DbJob {
   completed_at: string | null;
 }
 
+export type ReportStatus = 'saved' | 'sent' | 'paid' | 'visible';
+
 export interface DbReport {
   id: string;
   job_id: string;
   storage_url: string;
+  status: ReportStatus;
   generated_at: string;
+  sent_at: string | null;
+  paid_at: string | null;
 }
 
 export interface DbMaintenance {

@@ -156,87 +156,65 @@ Deno.serve(async (req) => {
       content: m.content,
     }));
 
-    if (mode === 'report') {
-      const ctx = jobContext ?? {};
+    if (mode === 'summarize') {
       claudeMessages.push({
         role: 'user',
-        content: `Generate the complete OAHI/CAHPI-compliant inspection report HTML now based on everything discussed.
+        content: `Extract all inspection findings from this conversation and return ONLY a valid JSON object (no markdown, no code fences, no preamble) matching this exact structure:
 
-Property: ${ctx.address ?? 'See conversation'}
-Inspection Type: ${ctx.inspectionType ?? 'Home Inspection'}
-Inspection Date: ${ctx.inspectionDate ?? new Date().toLocaleDateString('en-CA')}
-Inspector: ${ctx.inspector ?? 'ASADS Certified Inspector'}
+{
+  "summary": {
+    "p1Count": <number>,
+    "p2Count": <number>,
+    "p3Count": <number>,
+    "okCount": <number>,
+    "assessment": "<one paragraph plain-language overall assessment for the client>"
+  },
+  "sections": [
+    {
+      "name": "<OAHI section name e.g. Roofing, Electrical, Plumbing>",
+      "findings": [
+        {
+          "priority": "<P1|P2|P3|OK>",
+          "location": "<specific location within property>",
+          "observation": "<factual: what was seen, starting with Observed... or Noted...>",
+          "implication": "<why it matters to the client>",
+          "recommendation": "<Recommend correct / monitor / refer to qualified specialist>"
+        }
+      ],
+      "satisfactory": ["<brief description of satisfactory items>"]
+    }
+  ],
+  "notInspected": [
+    { "system": "<system name>", "reason": "<why not inspected>" }
+  ]
+}
 
-${photoUrls && photoUrls.length > 0 ? `INSPECTION PHOTOS (${photoUrls.length} total — embed these as <img> tags distributed throughout the relevant finding sections of the report):
-${(photoUrls as string[]).map((url: string, i: number) => `Photo ${i + 1}: ${url}`).join('\n')}
-
-Embed each photo inline within the finding it most logically relates to based on the conversation order. Use: <img src="URL" style="max-width:100%;border-radius:8px;margin:8px 0;" alt="Inspection photo">` : ''}
-
-Apply all OAHI/CAHPI standards. Use proper observation/implication/recommendation language. Return ONLY the complete HTML document.`,
+Only include sections that have findings. Return ONLY the raw JSON object.`,
       });
     }
 
     const CORS = { 'Access-Control-Allow-Origin': '*' };
 
-    if (mode === 'report') {
-      // Raw fetch streaming — avoids SDK TypeScript issues on Deno
-      const anthropicRes = await fetch('https://api.anthropic.com/v1/messages', {
-        method: 'POST',
-        headers: {
-          'x-api-key': apiKey,
-          'anthropic-version': '2023-06-01',
-          'content-type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-6',
-          max_tokens: 8192,
-          system: SYSTEM,
-          messages: claudeMessages,
-          stream: true,
-        }),
+    if (mode === 'summarize') {
+      const response = await anthropic.messages.create({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 4096,
+        system: SYSTEM,
+        messages: claudeMessages,
       });
-
-      if (!anthropicRes.ok || !anthropicRes.body) {
-        return new Response(JSON.stringify({ error: 'Anthropic API error' }), {
+      const text = response.content[0].type === 'text' ? response.content[0].text : '{}';
+      const clean = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim();
+      try {
+        const parsed = JSON.parse(clean);
+        return new Response(JSON.stringify({ data: parsed }), {
+          headers: { 'Content-Type': 'application/json', ...CORS },
+        });
+      } catch {
+        return new Response(JSON.stringify({ error: 'Failed to parse Scout JSON', raw: clean }), {
           headers: { 'Content-Type': 'application/json', ...CORS },
           status: 500,
         });
       }
-
-      const encoder = new TextEncoder();
-      const readable = new ReadableStream({
-        async start(controller) {
-          const reader = anthropicRes.body!.getReader();
-          const decoder = new TextDecoder();
-          let buffer = '';
-          try {
-            while (true) {
-              const { done, value } = await reader.read();
-              if (done) break;
-              buffer += decoder.decode(value, { stream: true });
-              const lines = buffer.split('\n');
-              buffer = lines.pop() ?? '';
-              for (const line of lines) {
-                if (!line.startsWith('data: ')) continue;
-                const data = line.slice(6).trim();
-                if (data === '[DONE]') continue;
-                try {
-                  const ev = JSON.parse(data);
-                  if (ev.type === 'content_block_delta' && ev.delta?.type === 'text_delta' && ev.delta?.text) {
-                    controller.enqueue(encoder.encode(ev.delta.text));
-                  }
-                } catch { /* skip malformed */ }
-              }
-            }
-          } finally {
-            controller.close();
-          }
-        },
-      });
-
-      return new Response(readable, {
-        headers: { 'Content-Type': 'text/plain; charset=utf-8', ...CORS },
-      });
     }
 
     // Chat mode — SDK JSON (fast, no streaming needed)

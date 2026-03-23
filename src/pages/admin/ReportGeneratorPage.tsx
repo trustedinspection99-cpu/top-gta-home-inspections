@@ -4,6 +4,7 @@ import { supabase, DbJob } from '@/lib/supabase';
 import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Sparkles, CheckCircle2, AlertCircle, Send, ImagePlus, Mic, MicOff, Loader2 } from 'lucide-react';
+import { buildReportHtml, ReportData } from '@/lib/reportTemplate';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -33,7 +34,9 @@ export default function ReportGeneratorPage() {
   const [draftRestored, setDraftRestored] = useState(false);
   const [reportHtml, setReportHtml] = useState('');
   const [saving, setSaving] = useState(false);
-  const [saved, setSaved] = useState(false);
+  const [savedReportId, setSavedReportId] = useState('');
+  const [sendingReport, setSendingReport] = useState(false);
+  const [sent, setSent] = useState(false);
   const [error, setError] = useState('');
 
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -210,67 +213,48 @@ export default function ReportGeneratorPage() {
     setError('');
   }
 
-  // ── Generate report (streamed → opens in new tab) ──
+  // ── Generate report (Scout summarizes → template fills → opens in new tab) ──
   async function generateReport() {
     setGenerating(true);
     setError('');
 
     const allPhotoUrls = messages.flatMap(m => m.photoUrls ?? []);
-    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string;
-    const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
-    const { data: { session } } = await supabase.auth.getSession();
-    const token = session?.access_token ?? anonKey;
 
     try {
-      const res = await fetch(`${supabaseUrl}/functions/v1/generate-report`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-          'apikey': anonKey,
-        },
-        body: JSON.stringify({
-          mode: 'report',
+      // Step 1: Ask Scout to extract structured JSON from the conversation
+      const { data, error: fnErr } = await supabase.functions.invoke('generate-report', {
+        body: {
+          mode: 'summarize',
           messages: messages.map(m => ({ role: m.role, content: m.content })),
-          photoUrls: allPhotoUrls,
-          jobContext: job ? {
-            address: job.address,
-            inspectionType: job.inspection_type,
-            inspectionDate: job.scheduled_at
-              ? new Date(job.scheduled_at).toLocaleDateString('en-CA')
-              : new Date().toLocaleDateString('en-CA'),
-            inspector: 'ASADS Certified Inspector',
-          } : undefined,
-        }),
+        },
       });
 
-      if (!res.ok || !res.body) {
-        setError(`Report generation failed (${res.status}). Check Edge Function logs.`);
+      if (fnErr || !data?.data) {
+        setError(fnErr?.message ?? 'Scout did not return findings. Try again.');
         setGenerating(false);
         return;
       }
 
-      // Read stream
-      const reader = res.body.getReader();
-      const decoder = new TextDecoder();
-      let html = '';
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        html += decoder.decode(value, { stream: true });
-      }
+      const reportData = data.data as ReportData;
 
-      if (!html.trim()) {
-        setError('Report came back empty. Try again.');
-        setGenerating(false);
-        return;
-      }
+      // Step 2: Fill the pre-built HTML template client-side
+      const jobInfo = {
+        address: job?.address ?? 'Property Address',
+        city: job?.city ?? '',
+        inspectionType: job?.inspection_type ?? 'Home Inspection',
+        inspectionDate: job?.scheduled_at
+          ? new Date(job.scheduled_at).toLocaleDateString('en-CA')
+          : new Date().toLocaleDateString('en-CA'),
+        inspector: 'ASADS Certified Inspector',
+      };
 
-      // Open in new tab
+      const html = buildReportHtml(reportData, jobInfo, allPhotoUrls);
+
+      // Step 3: Open in new tab for review + print-to-PDF
       const blob = new Blob([html], { type: 'text/html' });
       const url = URL.createObjectURL(blob);
       window.open(url, '_blank');
-      setReportHtml(html); // also store for save button
+      setReportHtml(html);
     } catch (e: unknown) {
       setError((e as Error).message);
     }
@@ -279,7 +263,7 @@ export default function ReportGeneratorPage() {
 
   // ── Save report ──
   async function saveReport() {
-    if (!jobId) return;
+    if (!jobId || savedReportId) return;
     setSaving(true);
     setError('');
 
@@ -292,35 +276,84 @@ export default function ReportGeneratorPage() {
     if (uploadErr) { setError('Upload failed: ' + uploadErr.message); setSaving(false); return; }
 
     const { data: { publicUrl } } = supabase.storage.from('reports').getPublicUrl(fileName);
-    await supabase.from('reports').insert({ job_id: jobId, storage_url: publicUrl });
+
+    const { data: reportRow, error: insertErr } = await supabase
+      .from('reports')
+      .insert({ job_id: jobId, storage_url: publicUrl, status: 'saved' })
+      .select('id')
+      .single();
+
+    if (insertErr) { setError('DB insert failed: ' + insertErr.message); setSaving(false); return; }
+
     await supabase.from('jobs').update({ status: 'completed', completed_at: new Date().toISOString() }).eq('id', jobId);
 
     localStorage.removeItem(draftKey);
     setSaving(false);
-    setSaved(true);
-    setTimeout(() => navigate('/admin'), 2000);
+    setSavedReportId(reportRow.id);
   }
 
-  // ── Save bar (shown after report generated, stays on chat screen) ──
+  // ── Send report to client ──
+  async function sendToClient() {
+    if (!job || !savedReportId) return;
+    setSendingReport(true);
+    setError('');
+
+    const { error: fnErr } = await supabase.functions.invoke('send-report', {
+      body: {
+        reportId: savedReportId,
+        jobId,
+        clientEmail: job.client_email,
+        clientName: job.client_name,
+        address: `${job.address}, ${job.city}`,
+      },
+    });
+
+    if (fnErr) {
+      setError('Send failed: ' + fnErr.message);
+      setSendingReport(false);
+      return;
+    }
+
+    setSendingReport(false);
+    setSent(true);
+  }
+
+  // ── Save / Send bar ──
   const SaveBar = reportHtml ? (
-    <div className="flex items-center justify-between bg-green-50 border border-green-200 rounded-lg px-4 py-3 mb-3">
-      <div className="flex items-center gap-2 text-green-800 text-sm">
-        <CheckCircle2 className="h-4 w-4" />
-        {saved ? 'Report saved! Redirecting…' : 'Report generated — open tab to review.'}
-      </div>
-      <div className="flex gap-2">
-        <Button size="sm" variant="outline" onClick={() => {
-          const blob = new Blob([reportHtml], { type: 'text/html' });
-          window.open(URL.createObjectURL(blob), '_blank');
-        }}>
-          Open Report
-        </Button>
-        {!saved && (
-          <Button size="sm" className="bg-green-600 hover:bg-green-700" onClick={saveReport} disabled={saving}>
-            {saving ? 'Saving…' : 'Save & Send to Client'}
+    <div className="border border-gray-200 rounded-lg px-4 py-3 mb-3 bg-white">
+      {sent ? (
+        <div className="flex items-center gap-2 text-green-700 text-sm">
+          <CheckCircle2 className="h-4 w-4" />
+          Report sent to {job?.client_email}. The client will receive a login link. Once payment is confirmed, mark it paid in the dashboard.
+          <Button size="sm" variant="outline" className="ml-auto" onClick={() => navigate('/admin')}>
+            Back to Dashboard
           </Button>
-        )}
-      </div>
+        </div>
+      ) : (
+        <div className="flex items-center justify-between gap-3 flex-wrap">
+          <div className="flex items-center gap-2 text-sm text-gray-700">
+            <CheckCircle2 className={`h-4 w-4 ${savedReportId ? 'text-green-600' : 'text-gray-300'}`} />
+            {savedReportId ? 'Report saved.' : 'Report generated — review it then save.'}
+          </div>
+          <div className="flex gap-2 flex-wrap">
+            <Button size="sm" variant="outline" onClick={() => {
+              const blob = new Blob([reportHtml], { type: 'text/html' });
+              window.open(URL.createObjectURL(blob), '_blank');
+            }}>
+              Open Report
+            </Button>
+            {!savedReportId ? (
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-700" onClick={saveReport} disabled={saving}>
+                {saving ? 'Saving…' : 'Save Report'}
+              </Button>
+            ) : (
+              <Button size="sm" className="bg-green-600 hover:bg-green-700" onClick={sendToClient} disabled={sending}>
+                {sending ? 'Sending…' : `Send to ${job?.client_name ?? 'Client'}`}
+              </Button>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   ) : null;
 

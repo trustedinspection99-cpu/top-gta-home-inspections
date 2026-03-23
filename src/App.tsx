@@ -20,6 +20,7 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import NewJobPage from "./pages/admin/NewJobPage";
 import ReportGeneratorPage from "./pages/admin/ReportGeneratorPage";
 import TrustedRealtorsPage from "./pages/TrustedRealtorsPage";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 // Main Pages
 import Index from "./pages/Index";
@@ -108,14 +109,14 @@ const router = createBrowserRouter([
       { path: "/login", element: <LoginPage /> },
       { path: "/signup", element: <SignupPage /> },
       { path: "/signup/realtor", element: <RealtorSignupPage /> },
-      { path: "/dashboard", element: <HomeownerDashboard /> },
-      { path: "/dashboard/reports/:id", element: <ReportViewer /> },
-      { path: "/dashboard/schedule", element: <SchedulePage /> },
-      { path: "/dashboard/checklist", element: <ChecklistPage /> },
-      { path: "/realtor-dashboard", element: <RealtorDashboard /> },
-      { path: "/admin", element: <AdminDashboard /> },
-      { path: "/admin/jobs/new", element: <NewJobPage /> },
-      { path: "/admin/jobs/:id/report", element: <ReportGeneratorPage /> },
+      { path: "/dashboard", element: <ProtectedRoute role="homeowner"><HomeownerDashboard /></ProtectedRoute> },
+      { path: "/dashboard/reports/:id", element: <ProtectedRoute role="homeowner"><ReportViewer /></ProtectedRoute> },
+      { path: "/dashboard/schedule", element: <ProtectedRoute role="homeowner"><SchedulePage /></ProtectedRoute> },
+      { path: "/dashboard/checklist", element: <ProtectedRoute role="homeowner"><ChecklistPage /></ProtectedRoute> },
+      { path: "/realtor-dashboard", element: <ProtectedRoute role="realtor"><RealtorDashboard /></ProtectedRoute> },
+      { path: "/admin", element: <ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute> },
+      { path: "/admin/jobs/new", element: <ProtectedRoute role="admin"><NewJobPage /></ProtectedRoute> },
+      { path: "/admin/jobs/:id/report", element: <ProtectedRoute role="admin"><ReportGeneratorPage /></ProtectedRoute> },
       { path: "/trusted-realtors", element: <TrustedRealtorsPage /> },
       { path: "*", element: <NotFound /> },
     ],
