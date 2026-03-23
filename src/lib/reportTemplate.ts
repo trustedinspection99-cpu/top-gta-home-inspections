@@ -251,7 +251,8 @@ function buildSummaryTable(data: ReportData): string {
 export function buildReportHtml(
   data: ReportData,
   job: { address: string; city: string; inspectionType: string; inspectionDate: string; inspector: string },
-  photoUrls: string[]
+  photoUrls: string[],
+  coverPhotoUrl?: string
 ): string {
   const reportDate = new Date().toLocaleDateString('en-CA');
   const fullAddress = `${job.address}${job.city ? ', ' + job.city : ''}`;
@@ -626,10 +627,13 @@ export function buildReportHtml(
 
   <div class="cover-body">
     <div class="cover-photo-wrap" id="cover-photo-wrap">
-      <div class="photo-placeholder" id="cover-photo-placeholder" style="height:100%;border-radius:0;border:none;background:rgba(255,255,255,0.08);border:2px dashed rgba(255,255,255,0.25);" title="Click to add property photo">
-        <div class="photo-placeholder-icon" style="font-size:28px;color:rgba(255,255,255,0.4);">🏠</div>
-        <span style="font-size:12px;color:rgba(255,255,255,0.5);">Click to add property photo</span>
-      </div>
+      ${coverPhotoUrl
+        ? `<img src="${coverPhotoUrl}" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" alt="Property photo" />`
+        : `<div class="photo-placeholder" id="cover-photo-placeholder" style="height:100%;border-radius:0;border:none;background:rgba(255,255,255,0.08);border:2px dashed rgba(255,255,255,0.25);" title="Click to add property photo">
+          <div class="photo-placeholder-icon" style="font-size:28px;color:rgba(255,255,255,0.4);">🏠</div>
+          <span style="font-size:12px;color:rgba(255,255,255,0.5);">Click to add property photo</span>
+        </div>`
+      }
     </div>
 
     <div class="cover-address-card">

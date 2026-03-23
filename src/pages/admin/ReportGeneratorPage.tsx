@@ -36,6 +36,8 @@ export default function ReportGeneratorPage() {
   const [reportData, setReportData] = useState<ReportData | null>(null);
   const [photoStep, setPhotoStep] = useState(false);
   const [findingPhotos, setFindingPhotos] = useState<Record<string, string[]>>({});
+  const [coverPhoto, setCoverPhoto] = useState<string>('');
+  const [uploadingCover, setUploadingCover] = useState(false);
   const [uploadingFindingPhotos, setUploadingFindingPhotos] = useState<Set<string>>(new Set());
   const [saving, setSaving] = useState(false);
   const [savedReportId, setSavedReportId] = useState('');
@@ -236,11 +238,27 @@ export default function ReportGeneratorPage() {
       }
       setReportData(data.data as ReportData);
       setFindingPhotos({});
+      setCoverPhoto('');
+      setReportHtml('');
       setPhotoStep(true);
     } catch (e: unknown) {
       setError((e as Error).message);
     }
     setGenerating(false);
+  }
+
+  // ── Upload cover photo ──
+  async function uploadCoverPhoto(file: File) {
+    setUploadingCover(true);
+    const ext = file.name.split('.').pop() ?? 'jpg';
+    const fileName = `inspections/${jobId ?? 'draft'}/cover-${Date.now()}.${ext}`;
+    const { error: uploadErr } = await supabase.storage
+      .from('Reports')
+      .upload(fileName, file, { contentType: file.type, upsert: true });
+    if (uploadErr) { setError(`Cover upload failed: ${uploadErr.message}`); setUploadingCover(false); return; }
+    const { data: { publicUrl } } = supabase.storage.from('Reports').getPublicUrl(fileName);
+    setCoverPhoto(publicUrl);
+    setUploadingCover(false);
   }
 
   // ── Upload photo for a specific finding ──
@@ -285,7 +303,7 @@ export default function ReportGeneratorPage() {
         : new Date().toLocaleDateString('en-CA'),
       inspector: 'ASADS Certified Inspector',
     };
-    const html = buildReportHtml(enriched, jobInfo, allChatPhotos);
+    const html = buildReportHtml(enriched, jobInfo, allChatPhotos, coverPhoto || undefined);
     setReportHtml(html);
     setPhotoStep(false);
   }
@@ -417,15 +435,17 @@ export default function ReportGeneratorPage() {
           <p className="font-semibold text-gray-900">Scout AI</p>
           {job && <p className="text-xs text-gray-500">{job.address}</p>}
         </div>
-        <Button
-          className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
-          onClick={generateReport}
-          disabled={generating || messages.length < 3}
-          title={messages.length < 3 ? 'Have a conversation first' : 'Generate the report'}
-        >
-          <Sparkles className="h-4 w-4" />
-          {generating ? 'Generating…' : 'Generate Report'}
-        </Button>
+        {!photoStep && !reportHtml && (
+          <Button
+            className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
+            onClick={generateReport}
+            disabled={generating || messages.length < 3}
+            title={messages.length < 3 ? 'Have a conversation first' : 'Generate the report'}
+          >
+            <Sparkles className="h-4 w-4" />
+            {generating ? 'Generating…' : 'Generate Report'}
+          </Button>
+        )}
       </div>
 
       {/* Save bar */}
@@ -434,8 +454,31 @@ export default function ReportGeneratorPage() {
       {/* Photo assignment step */}
       {photoStep && reportData && (
         <div className="bg-white border border-gray-200 rounded-xl p-6 mb-4">
-          <h2 className="text-lg font-bold text-gray-900 mb-1">📷 Assign Photos to Findings</h2>
-          <p className="text-sm text-gray-500 mb-5">Upload a photo for each deficiency so it appears in the report. Skip any you don't have.</p>
+          <h2 className="text-lg font-bold text-gray-900 mb-1">📷 Assign Photos to Report</h2>
+          <p className="text-sm text-gray-500 mb-5">Add a cover photo and upload photos for each deficiency. Skip any you don't have.</p>
+
+          {/* Cover photo */}
+          <div className="mb-6 pb-6 border-b border-gray-100">
+            <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Cover Photo (Property exterior)</p>
+            <div className="flex items-center gap-4">
+              {coverPhoto ? (
+                <div className="relative">
+                  <img src={coverPhoto} className="h-24 w-36 object-cover rounded-xl border border-gray-200 shadow-sm" alt="Cover" />
+                  {!reportHtml && (
+                    <button onClick={() => setCoverPhoto('')} className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center font-bold">×</button>
+                  )}
+                </div>
+              ) : (
+                <label className={`flex flex-col items-center justify-center gap-2 h-24 w-36 rounded-xl border-2 border-dashed cursor-pointer text-xs font-medium ${uploadingCover ? 'border-blue-200 text-blue-400 bg-blue-50' : 'border-gray-300 text-gray-500 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50'}`}>
+                  {uploadingCover ? <Loader2 className="h-5 w-5 animate-spin" /> : <ImagePlus className="h-5 w-5" />}
+                  {uploadingCover ? 'Uploading…' : 'Add Cover Photo'}
+                  <input type="file" accept="image/*" className="hidden" disabled={uploadingCover} onChange={e => { if (e.target.files?.[0]) uploadCoverPhoto(e.target.files[0]); e.target.value = ''; }} />
+                </label>
+              )}
+              <p className="text-xs text-gray-400">This appears on the front page of the report</p>
+            </div>
+          </div>
+
           <div className="space-y-6">
             {reportData.sections.map((section, si) => {
               const deficient = section.findings.filter(f => f.priority !== 'OK');
