@@ -11,9 +11,8 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { reportId, jobId, clientEmail, clientName, address } = await req.json();
+    const { reportId, jobId, clientEmail, clientName } = await req.json();
 
-    // Service role client — needed to send magic links and update records
     const supabase = createClient(
       Deno.env.get('SUPABASE_URL')!,
       Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
@@ -25,30 +24,44 @@ Deno.serve(async (req) => {
       .update({ status: 'sent', sent_at: new Date().toISOString() })
       .eq('id', reportId);
 
-    // Send a magic-link sign-in email to the client.
-    // shouldCreateUser: true → creates homeowner account if one doesn't exist yet.
-    const { error: otpErr } = await supabase.auth.admin.generateLink({
-      type: 'magiclink',
-      email: clientEmail,
-      options: {
-        data: { name: clientName, role: 'homeowner' },
-        redirectTo: 'https://www.asads.ca/dashboard',
-      },
-    });
+    // Check if user already exists
+    const { data: authUser } = await supabase.auth.admin.listUsers();
+    const existing = authUser?.users?.find((u) => u.email === clientEmail);
 
-    // If user doesn't exist yet, invite them
-    if (otpErr) {
-      await supabase.auth.admin.inviteUserByEmail(clientEmail, {
+    let magicLink: string | null = null;
+
+    if (existing) {
+      // Existing user — generate a magic link (does NOT auto-send email, we return it to admin)
+      const { data: linkData, error: linkErr } = await supabase.auth.admin.generateLink({
+        type: 'magiclink',
+        email: clientEmail,
+        options: {
+          redirectTo: 'https://www.asads.ca/dashboard',
+        },
+      });
+      if (!linkErr && linkData?.properties?.action_link) {
+        magicLink = linkData.properties.action_link;
+      }
+    } else {
+      // New user — invite sends an email automatically AND creates the account
+      const { data: inviteData, error: inviteErr } = await supabase.auth.admin.inviteUserByEmail(clientEmail, {
         data: { name: clientName, role: 'homeowner' },
         redirectTo: 'https://www.asads.ca/dashboard',
       });
+      if (!inviteErr && inviteData?.user) {
+        // Generate a separate magic link to show admin as backup
+        const { data: linkData } = await supabase.auth.admin.generateLink({
+          type: 'magiclink',
+          email: clientEmail,
+          options: { redirectTo: 'https://www.asads.ca/dashboard' },
+        });
+        magicLink = linkData?.properties?.action_link ?? null;
+      }
     }
 
-    // Link job to homeowner_id if user now exists
-    const { data: authUser } = await supabase.auth.admin.listUsers();
-    const match = authUser?.users?.find((u) => u.email === clientEmail);
+    // Upsert user row and link job
+    const match = (await supabase.auth.admin.listUsers()).data?.users?.find((u) => u.email === clientEmail);
     if (match) {
-      // Insert user row if not already there
       await supabase.from('users').upsert({
         id: match.id,
         email: clientEmail,
@@ -57,7 +70,6 @@ Deno.serve(async (req) => {
         phone: null,
       }, { onConflict: 'id', ignoreDuplicates: true });
 
-      // Link job
       await supabase
         .from('jobs')
         .update({ homeowner_id: match.id })
@@ -65,7 +77,7 @@ Deno.serve(async (req) => {
         .is('homeowner_id', null);
     }
 
-    return new Response(JSON.stringify({ success: true }), {
+    return new Response(JSON.stringify({ success: true, magicLink }), {
       headers: { 'Content-Type': 'application/json', ...CORS },
     });
   } catch (err) {

@@ -41,6 +41,7 @@ export default function ReportGeneratorPage() {
   const [savedReportId, setSavedReportId] = useState('');
   const [sendingReport, setSendingReport] = useState(false);
   const [sent, setSent] = useState(false);
+  const [magicLink, setMagicLink] = useState('');
   const [error, setError] = useState('');
 
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -328,13 +329,12 @@ export default function ReportGeneratorPage() {
     setSendingReport(true);
     setError('');
 
-    const { error: fnErr } = await supabase.functions.invoke('send-report', {
+    const { data: sendData, error: fnErr } = await supabase.functions.invoke('send-report', {
       body: {
         reportId: savedReportId,
         jobId,
         clientEmail: job.client_email,
         clientName: job.client_name,
-        address: `${job.address}, ${job.city}`,
       },
     });
 
@@ -344,6 +344,7 @@ export default function ReportGeneratorPage() {
       return;
     }
 
+    if (sendData?.magicLink) setMagicLink(sendData.magicLink);
     setSendingReport(false);
     setSent(true);
   }
@@ -352,12 +353,29 @@ export default function ReportGeneratorPage() {
   const SaveBar = reportHtml ? (
     <div className="border border-gray-200 rounded-lg px-4 py-3 mb-3 bg-white">
       {sent ? (
-        <div className="flex items-center gap-2 text-green-700 text-sm">
-          <CheckCircle2 className="h-4 w-4" />
-          Report sent to {job?.client_email}. The client will receive a login link. Once payment is confirmed, mark it paid in the dashboard.
-          <Button size="sm" variant="outline" className="ml-auto" onClick={() => navigate('/admin')}>
-            Back to Dashboard
-          </Button>
+        <div className="space-y-3">
+          <div className="flex items-center gap-2 text-green-700 text-sm">
+            <CheckCircle2 className="h-4 w-4" />
+            {magicLink
+              ? `New client — invite email sent to ${job?.client_email}. Magic link also copied below.`
+              : `Existing client — magic link generated below. Send it to ${job?.client_email}.`}
+            <Button size="sm" variant="outline" className="ml-auto" onClick={() => navigate('/admin')}>
+              Back to Dashboard
+            </Button>
+          </div>
+          {magicLink && (
+            <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2">
+              <input
+                readOnly
+                value={magicLink}
+                className="flex-1 text-xs text-gray-700 bg-transparent outline-none font-mono truncate"
+                onFocus={e => e.target.select()}
+              />
+              <Button size="sm" variant="outline" className="shrink-0 text-xs" onClick={() => { navigator.clipboard.writeText(magicLink); }}>
+                Copy
+              </Button>
+            </div>
+          )}
         </div>
       ) : (
         <div className="flex items-center justify-between gap-3 flex-wrap">
