@@ -22,6 +22,7 @@ export default function ReportGeneratorPage() {
   const { id: jobId } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const draftKey = `scout-draft-${jobId ?? 'new'}`;
+  const reportDataKey = `scout-reportdata-${jobId ?? 'new'}`;
 
   const [job, setJob] = useState<DbJob | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -63,6 +64,11 @@ export default function ReportGeneratorPage() {
           if (parsed.length > 1) {
             setMessages(parsed);
             setDraftRestored(true);
+            // Restore reportData if it was previously generated
+            const savedReport = localStorage.getItem(reportDataKey);
+            if (savedReport) {
+              try { setReportData(JSON.parse(savedReport)); } catch { /* ignore */ }
+            }
             return;
           }
         } catch { /* ignore */ }
@@ -84,6 +90,15 @@ export default function ReportGeneratorPage() {
       localStorage.setItem(draftKey, JSON.stringify(messages));
     }
   }, [messages, draftKey]);
+
+  // ── Persist reportData ──
+  useEffect(() => {
+    if (reportData) {
+      localStorage.setItem(reportDataKey, JSON.stringify(reportData));
+      // If restored and no HTML built yet, go straight to photo step
+      if (!reportHtml) setPhotoStep(true);
+    }
+  }, [reportData, reportDataKey, reportHtml]);
 
   // ── Auto-scroll ──
   useEffect(() => {
@@ -337,6 +352,7 @@ export default function ReportGeneratorPage() {
     await supabase.from('jobs').update({ status: 'completed', completed_at: new Date().toISOString() }).eq('id', jobId);
 
     localStorage.removeItem(draftKey);
+    localStorage.removeItem(reportDataKey);
     setSaving(false);
     setSavedReportId(reportRow.id);
   }
@@ -569,7 +585,11 @@ export default function ReportGeneratorPage() {
             className="text-amber-600 hover:text-amber-900 font-medium ml-4"
             onClick={() => {
               localStorage.removeItem(draftKey);
+              localStorage.removeItem(reportDataKey);
               setMessages([{ role: 'assistant', content: greeting(job) }]);
+              setReportData(null);
+              setReportHtml('');
+              setPhotoStep(false);
               setDraftRestored(false);
             }}
           >
