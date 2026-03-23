@@ -177,27 +177,53 @@ Apply all OAHI/CAHPI standards. Use proper observation/implication/recommendatio
     const CORS = { 'Access-Control-Allow-Origin': '*' };
 
     if (mode === 'report') {
-      // Stream report — keeps connection alive, no timeout
-      const stream = await anthropic.messages.create({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 8192,
-        system: SYSTEM,
-        messages: claudeMessages,
-        stream: true,
+      // Raw fetch streaming — avoids SDK TypeScript issues on Deno
+      const anthropicRes = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: {
+          'x-api-key': apiKey,
+          'anthropic-version': '2023-06-01',
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'claude-sonnet-4-6',
+          max_tokens: 8192,
+          system: SYSTEM,
+          messages: claudeMessages,
+          stream: true,
+        }),
       });
+
+      if (!anthropicRes.ok || !anthropicRes.body) {
+        return new Response(JSON.stringify({ error: 'Anthropic API error' }), {
+          headers: { 'Content-Type': 'application/json', ...CORS },
+          status: 500,
+        });
+      }
 
       const encoder = new TextEncoder();
       const readable = new ReadableStream({
         async start(controller) {
+          const reader = anthropicRes.body!.getReader();
+          const decoder = new TextDecoder();
+          let buffer = '';
           try {
-            for await (const event of stream) {
-              if (
-                event.type === 'content_block_delta' &&
-                'delta' in event &&
-                event.delta.type === 'text_delta' &&
-                'text' in event.delta
-              ) {
-                controller.enqueue(encoder.encode(event.delta.text));
+            while (true) {
+              const { done, value } = await reader.read();
+              if (done) break;
+              buffer += decoder.decode(value, { stream: true });
+              const lines = buffer.split('\n');
+              buffer = lines.pop() ?? '';
+              for (const line of lines) {
+                if (!line.startsWith('data: ')) continue;
+                const data = line.slice(6).trim();
+                if (data === '[DONE]') continue;
+                try {
+                  const ev = JSON.parse(data);
+                  if (ev.type === 'content_block_delta' && ev.delta?.type === 'text_delta' && ev.delta?.text) {
+                    controller.enqueue(encoder.encode(ev.delta.text));
+                  }
+                } catch { /* skip malformed */ }
               }
             }
           } finally {
@@ -211,7 +237,7 @@ Apply all OAHI/CAHPI standards. Use proper observation/implication/recommendatio
       });
     }
 
-    // Chat mode — regular JSON
+    // Chat mode — SDK JSON (fast, no streaming needed)
     const response = await anthropic.messages.create({
       model: 'claude-sonnet-4-6',
       max_tokens: 1024,
