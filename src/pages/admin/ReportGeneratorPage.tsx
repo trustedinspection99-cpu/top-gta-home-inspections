@@ -445,21 +445,25 @@ export default function ReportGeneratorPage() {
                             {(findingPhotos[key] ?? []).map((url, pi) => (
                               <div key={pi} className="relative">
                                 <img src={url} className="h-16 w-16 object-cover rounded-lg border border-gray-200" alt="" />
-                                <button
-                                  onClick={() => setFindingPhotos(prev => ({ ...prev, [key]: prev[key].filter((_, j) => j !== pi) }))}
-                                  className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center font-bold"
-                                >×</button>
+                                {!reportHtml && (
+                                  <button
+                                    onClick={() => setFindingPhotos(prev => ({ ...prev, [key]: prev[key].filter((_, j) => j !== pi) }))}
+                                    className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center font-bold"
+                                  >×</button>
+                                )}
                               </div>
                             ))}
-                            <label className={`flex items-center gap-1.5 px-3 py-2 rounded-lg border border-dashed cursor-pointer text-xs font-medium ${uploading ? 'border-blue-200 text-blue-400 bg-blue-50' : 'border-gray-300 text-gray-500 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50'}`}>
-                              {uploading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <ImagePlus className="h-3.5 w-3.5" />}
-                              {uploading ? 'Uploading…' : 'Add Photo'}
-                              <input type="file" accept="image/*" multiple className="hidden" disabled={uploading} onChange={e => {
-                                const files = Array.from(e.target.files ?? []);
-                                e.target.value = '';
-                                files.forEach(f => uploadFindingPhoto(key, f));
-                              }} />
-                            </label>
+                            {!reportHtml && (
+                              <label className={`flex items-center gap-1.5 px-3 py-2 rounded-lg border border-dashed cursor-pointer text-xs font-medium ${uploading ? 'border-blue-200 text-blue-400 bg-blue-50' : 'border-gray-300 text-gray-500 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50'}`}>
+                                {uploading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <ImagePlus className="h-3.5 w-3.5" />}
+                                {uploading ? 'Uploading…' : 'Add Photo'}
+                                <input type="file" accept="image/*" multiple className="hidden" disabled={uploading} onChange={e => {
+                                  const files = Array.from(e.target.files ?? []);
+                                  e.target.value = '';
+                                  files.forEach(f => uploadFindingPhoto(key, f));
+                                }} />
+                              </label>
+                            )}
                           </div>
                         </div>
                       );
