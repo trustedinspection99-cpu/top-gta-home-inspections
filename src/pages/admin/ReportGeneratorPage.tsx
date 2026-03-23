@@ -35,8 +35,8 @@ export default function ReportGeneratorPage() {
   const [reportHtml, setReportHtml] = useState('');
   const [reportData, setReportData] = useState<ReportData | null>(null);
   const [photoStep, setPhotoStep] = useState(false);
-  const [findingPhotos, setFindingPhotos] = useState<Record<string, string>>({});
-  const [uploadingFindingPhoto, setUploadingFindingPhoto] = useState<string | null>(null);
+  const [findingPhotos, setFindingPhotos] = useState<Record<string, string[]>>({});
+  const [uploadingFindingPhotos, setUploadingFindingPhotos] = useState<Set<string>>(new Set());
   const [saving, setSaving] = useState(false);
   const [savedReportId, setSavedReportId] = useState('');
   const [sendingReport, setSendingReport] = useState(false);
@@ -244,16 +244,21 @@ export default function ReportGeneratorPage() {
 
   // ── Upload photo for a specific finding ──
   async function uploadFindingPhoto(key: string, file: File) {
-    setUploadingFindingPhoto(key);
+    const uid = `${key}-${Date.now()}`;
+    setUploadingFindingPhotos(prev => new Set(prev).add(uid));
     const ext = file.name.split('.').pop() ?? 'jpg';
-    const fileName = `inspections/${jobId ?? 'draft'}/finding-${key}-${Date.now()}.${ext}`;
+    const fileName = `inspections/${jobId ?? 'draft'}/finding-${key}-${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
     const { error: uploadErr } = await supabase.storage
       .from('Reports')
-      .upload(fileName, file, { contentType: file.type, upsert: true });
-    if (uploadErr) { setError(`Upload failed: ${uploadErr.message}`); setUploadingFindingPhoto(null); return; }
+      .upload(fileName, file, { contentType: file.type, upsert: false });
+    if (uploadErr) {
+      setError(`Upload failed: ${uploadErr.message}`);
+      setUploadingFindingPhotos(prev => { const n = new Set(prev); n.delete(uid); return n; });
+      return;
+    }
     const { data: { publicUrl } } = supabase.storage.from('Reports').getPublicUrl(fileName);
-    setFindingPhotos(prev => ({ ...prev, [key]: publicUrl }));
-    setUploadingFindingPhoto(null);
+    setFindingPhotos(prev => ({ ...prev, [key]: [...(prev[key] ?? []), publicUrl] }));
+    setUploadingFindingPhotos(prev => { const n = new Set(prev); n.delete(uid); return n; });
   }
 
   // ── Build final HTML with assigned photos ──
@@ -265,8 +270,8 @@ export default function ReportGeneratorPage() {
       sections: reportData.sections.map((section, si) => ({
         ...section,
         findings: section.findings.map((finding, fi) => {
-          const url = findingPhotos[`${si}-${fi}`];
-          return url ? { ...finding, photoUrls: [url, ...(finding.photoUrls ?? [])] } : finding;
+          const urls = findingPhotos[`${si}-${fi}`] ?? [];
+          return urls.length > 0 ? { ...finding, photoUrls: [...urls, ...(finding.photoUrls ?? [])] } : finding;
         }),
       })),
     };
@@ -427,7 +432,7 @@ export default function ReportGeneratorPage() {
                       if (finding.priority === 'OK') return null;
                       const key = `${si}-${fi}`;
                       const photo = findingPhotos[key];
-                      const uploading = uploadingFindingPhoto === key;
+                      const uploading = [...uploadingFindingPhotos].some(k => k.startsWith(key + '-'));
                       const priorityColor = finding.priority === 'P1' ? 'text-red-600 bg-red-50 border-red-200' : finding.priority === 'P2' ? 'text-orange-600 bg-orange-50 border-orange-200' : 'text-yellow-600 bg-yellow-50 border-yellow-200';
                       return (
                         <div key={fi} className="flex items-start gap-3 border border-gray-100 rounded-lg p-3">
@@ -436,19 +441,25 @@ export default function ReportGeneratorPage() {
                             <p className="text-sm font-medium text-gray-800 truncate">{finding.location || finding.observation.slice(0, 60)}</p>
                             <p className="text-xs text-gray-400 truncate">{finding.observation.slice(0, 80)}</p>
                           </div>
-                          <div className="shrink-0">
-                            {photo ? (
-                              <div className="relative">
-                                <img src={photo} className="h-16 w-16 object-cover rounded-lg border border-gray-200" alt="" />
-                                <button onClick={() => setFindingPhotos(prev => { const n = { ...prev }; delete n[key]; return n; })} className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center font-bold">×</button>
+                          <div className="flex flex-wrap gap-2 items-center shrink-0">
+                            {(findingPhotos[key] ?? []).map((url, pi) => (
+                              <div key={pi} className="relative">
+                                <img src={url} className="h-16 w-16 object-cover rounded-lg border border-gray-200" alt="" />
+                                <button
+                                  onClick={() => setFindingPhotos(prev => ({ ...prev, [key]: prev[key].filter((_, j) => j !== pi) }))}
+                                  className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center font-bold"
+                                >×</button>
                               </div>
-                            ) : (
-                              <label className={`flex items-center gap-1.5 px-3 py-2 rounded-lg border border-dashed cursor-pointer text-xs font-medium ${uploading ? 'border-blue-200 text-blue-400 bg-blue-50' : 'border-gray-300 text-gray-500 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50'}`}>
-                                {uploading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <ImagePlus className="h-3.5 w-3.5" />}
-                                {uploading ? 'Uploading…' : 'Add Photo'}
-                                <input type="file" accept="image/*" className="hidden" disabled={uploading} onChange={e => { if (e.target.files?.[0]) uploadFindingPhoto(key, e.target.files[0]); e.target.value = ''; }} />
-                              </label>
-                            )}
+                            ))}
+                            <label className={`flex items-center gap-1.5 px-3 py-2 rounded-lg border border-dashed cursor-pointer text-xs font-medium ${uploading ? 'border-blue-200 text-blue-400 bg-blue-50' : 'border-gray-300 text-gray-500 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50'}`}>
+                              {uploading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <ImagePlus className="h-3.5 w-3.5" />}
+                              {uploading ? 'Uploading…' : 'Add Photo'}
+                              <input type="file" accept="image/*" multiple className="hidden" disabled={uploading} onChange={e => {
+                                const files = Array.from(e.target.files ?? []);
+                                e.target.value = '';
+                                files.forEach(f => uploadFindingPhoto(key, f));
+                              }} />
+                            </label>
                           </div>
                         </div>
                       );
