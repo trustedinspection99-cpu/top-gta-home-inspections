@@ -1,181 +1,133 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { supabase } from '@/lib/supabase';
+import { supabase, DbJob } from '@/lib/supabase';
 import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { ArrowLeft, Sparkles, CheckCircle2, AlertCircle, Plus, Trash2 } from 'lucide-react';
+import { ArrowLeft, Sparkles, CheckCircle2, AlertCircle, Send, ImagePlus } from 'lucide-react';
 
-type Priority = 'P1' | 'P2' | 'P3' | 'OK';
-
-interface Finding {
-  id: string;
-  section: string;
-  priority: Priority;
-  observation: string;
-  recommendation: string;
-  photos: string[]; // base64 or URLs
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+  images?: string[];
 }
 
-const SECTIONS = [
-  'Roofing', 'Exterior', 'Foundation', 'Electrical',
-  'Plumbing', 'HVAC', 'Insulation', 'Interior',
-];
-
-const PRIORITY_COLORS: Record<Priority, string> = {
-  P1: 'bg-red-100 border-red-300 text-red-700',
-  P2: 'bg-amber-100 border-amber-300 text-amber-700',
-  P3: 'bg-blue-100 border-blue-300 text-blue-700',
-  OK: 'bg-green-100 border-green-300 text-green-700',
-};
-
-const PRIORITY_LABELS: Record<Priority, string> = {
-  P1: 'P1 — Safety / Urgent',
-  P2: 'P2 — Major Defect',
-  P3: 'P3 — Minor / Monitor',
-  OK: 'OK — Satisfactory',
-};
+function greeting(job?: DbJob | null) {
+  return `Hi! I'm Scout, ASADS's AI inspection assistant.\n\n${
+    job
+      ? `I can see this is a **${job.inspection_type}** at **${job.address}, ${job.city}**.\n\n`
+      : ''
+  }Tell me what you found during the inspection — go section by section (Roofing, Exterior, Foundation, Electrical, Plumbing, HVAC, Insulation, Interior) or just describe what stood out. Upload photos anytime.\n\nWhen you've covered everything, click **Generate Report** and I'll write the full professional report.`;
+}
 
 export default function ReportGeneratorPage() {
   const { id: jobId } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
-  // Step 1: property info
-  const [address, setAddress] = useState('');
-  const [clientEmail, setClientEmail] = useState('');
-  const [inspectionType, setInspectionType] = useState('Pre-Purchase Home Inspection');
-  const [inspectionDate, setInspectionDate] = useState('');
-  const [inspector, setInspector] = useState('ASADS Certified Inspector');
-
-  // Step 2: findings
-  const [findings, setFindings] = useState<Finding[]>([
-    { id: crypto.randomUUID(), section: 'Roofing', priority: 'OK', observation: '', recommendation: '', photos: [] },
-  ]);
-
-  // Step 3: generation
-  const [step, setStep] = useState<1 | 2 | 3>(1);
+  const [job, setJob] = useState<DbJob | null>(null);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState('');
+  const [pendingImages, setPendingImages] = useState<string[]>([]);
+  const [sending, setSending] = useState(false);
   const [generating, setGenerating] = useState(false);
-  const [generatedHtml, setGeneratedHtml] = useState('');
+  const [reportHtml, setReportHtml] = useState('');
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState('');
 
-  function addFinding() {
-    setFindings(prev => [...prev, {
-      id: crypto.randomUUID(),
-      section: SECTIONS[0],
-      priority: 'OK',
-      observation: '',
-      recommendation: '',
-      photos: [],
-    }]);
-  }
+  const bottomRef = useRef<HTMLDivElement>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
 
-  function removeFinding(id: string) {
-    setFindings(prev => prev.filter(f => f.id !== id));
-  }
+  useEffect(() => {
+    if (!jobId) {
+      setMessages([{ role: 'assistant', content: greeting() }]);
+      return;
+    }
+    supabase.from('jobs').select('*').eq('id', jobId).single().then(({ data }) => {
+      const j = data as DbJob | null;
+      setJob(j);
+      setMessages([{ role: 'assistant', content: greeting(j) }]);
+    });
+  }, [jobId]);
 
-  function updateFinding(id: string, patch: Partial<Finding>) {
-    setFindings(prev => prev.map(f => f.id === id ? { ...f, ...patch } : f));
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages, sending]);
+
+  async function send() {
+    if (!input.trim() && pendingImages.length === 0) return;
+
+    const userMsg: Message = {
+      role: 'user',
+      content: input.trim(),
+      images: pendingImages.length > 0 ? [...pendingImages] : undefined,
+    };
+
+    const updated = [...messages, userMsg];
+    setMessages(updated);
+    setInput('');
+    setPendingImages([]);
+    setSending(true);
+    setError('');
+
+    try {
+      const { data, error: fnErr } = await supabase.functions.invoke('generate-report', {
+        body: {
+          mode: 'chat',
+          messages: updated.map(m => ({ role: m.role, content: m.content })),
+        },
+      });
+
+      if (fnErr || !data?.reply) {
+        setError(fnErr?.message ?? 'Scout did not respond. Check the Edge Function is deployed.');
+      } else {
+        setMessages(prev => [...prev, { role: 'assistant', content: data.reply }]);
+      }
+    } catch (e: unknown) {
+      setError((e as Error).message);
+    }
+    setSending(false);
   }
 
   async function generateReport() {
-    setError('');
     setGenerating(true);
-
-    const prompt = buildScoutPrompt();
+    setError('');
 
     try {
-      // Call Claude via server-side proxy (Supabase Edge Function) to avoid exposing API key
       const { data, error: fnErr } = await supabase.functions.invoke('generate-report', {
         body: {
-          prompt,
-          address,
-          clientEmail,
-          inspectionType,
-          inspectionDate,
-          inspector,
-          findings,
+          mode: 'report',
+          messages: messages.map(m => ({ role: m.role, content: m.content })),
+          jobContext: job
+            ? {
+                address: job.address,
+                inspectionType: job.inspection_type,
+                inspectionDate: job.scheduled_at
+                  ? new Date(job.scheduled_at).toLocaleDateString('en-CA')
+                  : new Date().toLocaleDateString('en-CA'),
+                inspector: 'ASADS Certified Inspector',
+              }
+            : undefined,
         },
       });
 
       if (fnErr || !data?.html) {
-        setError(fnErr?.message ?? 'Report generation failed. Check that the Edge Function is deployed.');
-        setGenerating(false);
-        return;
+        setError(fnErr?.message ?? 'Report generation failed. Check the Edge Function logs.');
+      } else {
+        setReportHtml(data.html);
       }
-
-      setGeneratedHtml(data.html);
-      setStep(3);
-    } catch (err: unknown) {
-      setError((err as Error).message);
+    } catch (e: unknown) {
+      setError((e as Error).message);
     }
     setGenerating(false);
   }
 
-  function buildScoutPrompt(): string {
-    const findingsList = findings.map(f =>
-      `[${f.section}] ${f.priority}: ${f.observation || '(no observation)'} | Rec: ${f.recommendation || 'N/A'}`
-    ).join('\n');
-
-    return `You are Scout, ASADS's AI report writer. Generate a professional home inspection report in HTML.
-
-Property: ${address}
-Client email: ${clientEmail}
-Inspection type: ${inspectionType}
-Date: ${inspectionDate}
-Inspector: ${inspector}
-
-FINDINGS:
-${findingsList}
-
-OUTPUT FORMAT:
-Generate a complete self-contained HTML document styled with inline CSS. Include:
-1. Cover page with ASADS branding (blue #1d4ed8), address, date, inspector name
-2. Summary table: count of P1/P2/P3/OK findings per section
-3. Finding cards for each finding:
-   - Badge coloured by priority (P1=red, P2=amber, P3=blue, OK=green)
-   - Section heading, observation paragraph, recommendation paragraph
-4. Footer: "Report generated by Scout AI · ASADS Home Inspection · asads.ca · (647) 801-9311"
-
-Priority meanings:
-- P1: Safety hazard — requires immediate attention
-- P2: Major defect — repair before closing
-- P3: Minor issue — monitor or address when convenient
-- OK: Satisfactory condition
-
-Write professional, clear language. Every finding card must reference the specific section. Do NOT use placeholder text — use the actual findings provided. Return ONLY the HTML, no markdown.`;
-  }
-
   async function saveReport() {
+    if (!jobId) return;
     setSaving(true);
     setError('');
 
-    // Determine job_id: either from URL param or find by address+clientEmail
-    let targetJobId = jobId;
-
-    if (!targetJobId) {
-      // Find the job
-      const { data: userData } = await supabase
-        .from('users').select('id').eq('email', clientEmail).single();
-      if (userData) {
-        const { data: jobData } = await supabase
-          .from('jobs').select('id').eq('homeowner_id', userData.id)
-          .eq('address', address).single();
-        targetJobId = jobData?.id;
-      }
-    }
-
-    if (!targetJobId) {
-      setError('Could not find matching job. Create the job first via Admin → New Job.');
-      setSaving(false);
-      return;
-    }
-
-    // Upload HTML to Supabase Storage
-    const fileName = `report-${targetJobId}-${Date.now()}.html`;
-    const blob = new Blob([generatedHtml], { type: 'text/html' });
+    const fileName = `report-${jobId}-${Date.now()}.html`;
+    const blob = new Blob([reportHtml], { type: 'text/html' });
 
     const { error: uploadErr } = await supabase.storage
       .from('reports')
@@ -188,226 +140,205 @@ Write professional, clear language. Every finding card must reference the specif
     }
 
     const { data: { publicUrl } } = supabase.storage.from('reports').getPublicUrl(fileName);
-
-    // Save report record
-    await supabase.from('reports').insert({
-      job_id: targetJobId,
-      storage_url: publicUrl,
-    });
-
-    // Update job status to completed
+    await supabase.from('reports').insert({ job_id: jobId, storage_url: publicUrl });
     await supabase.from('jobs').update({
       status: 'completed',
       completed_at: new Date().toISOString(),
-    }).eq('id', targetJobId);
-
-    // Seed P1/P2 findings as maintenance checklist items
-    const { data: userData2 } = await supabase
-      .from('jobs').select('homeowner_id').eq('id', targetJobId).single();
-    if (userData2) {
-      const maintenanceItems = findings
-        .filter(f => f.priority === 'P1' || f.priority === 'P2')
-        .map(f => ({
-          user_id: userData2.homeowner_id,
-          title: f.observation || `${f.section} — ${f.priority} issue`,
-          category: f.section,
-          due_date: null,
-          completed: false,
-          property_address: address,
-        }));
-      if (maintenanceItems.length > 0) {
-        await supabase.from('maintenance').insert(maintenanceItems);
-      }
-    }
+    }).eq('id', jobId);
 
     setSaving(false);
     setSaved(true);
     setTimeout(() => navigate('/admin'), 2000);
   }
 
+  function handleImages(e: React.ChangeEvent<HTMLInputElement>) {
+    Array.from(e.target.files ?? []).forEach(file => {
+      const reader = new FileReader();
+      reader.onload = ev => {
+        setPendingImages(prev => [...prev, ev.target?.result as string]);
+      };
+      reader.readAsDataURL(file);
+    });
+    e.target.value = '';
+  }
+
+  // ── Report review screen ──
+  if (reportHtml) {
+    return (
+      <PortalLayout>
+        <div className="mb-6">
+          <Button variant="ghost" size="sm" onClick={() => setReportHtml('')}>
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Back to Chat
+          </Button>
+        </div>
+
+        <h1 className="text-2xl font-bold text-gray-900 mb-6">Review Report</h1>
+
+        {saved ? (
+          <div className="flex flex-col items-center gap-3 py-16 bg-white border border-gray-200 rounded-xl text-center">
+            <CheckCircle2 className="h-12 w-12 text-green-500" />
+            <p className="font-semibold text-gray-900 text-lg">Report saved!</p>
+            <p className="text-sm text-gray-500">Returning to admin dashboard…</p>
+          </div>
+        ) : (
+          <>
+            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-6">
+              <div
+                className="w-full max-h-[600px] overflow-auto p-6"
+                dangerouslySetInnerHTML={{ __html: reportHtml }}
+              />
+            </div>
+
+            {error && (
+              <div className="flex items-center gap-2 text-red-700 bg-red-50 border border-red-200 rounded-lg px-3 py-2 mb-4 text-sm">
+                <AlertCircle className="h-4 w-4 shrink-0" />
+                {error}
+              </div>
+            )}
+
+            <div className="flex gap-3">
+              <Button variant="outline" onClick={() => setReportHtml('')}>← Revise</Button>
+              <Button
+                className="bg-green-600 hover:bg-green-700 flex items-center gap-2"
+                onClick={saveReport}
+                disabled={saving}
+              >
+                <CheckCircle2 className="h-4 w-4" />
+                {saving ? 'Saving…' : 'Save & Send to Client'}
+              </Button>
+            </div>
+          </>
+        )}
+      </PortalLayout>
+    );
+  }
+
+  // ── Chat screen ──
   return (
     <PortalLayout>
-      <div className="mb-6">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-4">
         <Button asChild variant="ghost" size="sm">
           <Link to="/admin" className="flex items-center gap-2 text-gray-600">
             <ArrowLeft className="h-4 w-4" />
-            Back to Dashboard
+            Back
           </Link>
+        </Button>
+        <div className="text-center">
+          <p className="font-semibold text-gray-900">Scout AI</p>
+          {job && <p className="text-xs text-gray-500">{job.address}</p>}
+        </div>
+        <Button
+          className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
+          onClick={generateReport}
+          disabled={generating || messages.length < 3}
+          title={messages.length < 3 ? 'Have a conversation first' : 'Generate the report'}
+        >
+          <Sparkles className="h-4 w-4" />
+          {generating ? 'Generating…' : 'Generate Report'}
         </Button>
       </div>
 
-      <div className="flex items-center justify-between mb-8">
-        <div>
-          <h1 className="text-2xl font-bold text-gray-900">Scout AI Report Generator</h1>
-          <p className="text-gray-500">Generate a professional inspection report with Claude AI</p>
-        </div>
-        {/* Step indicator */}
-        <div className="hidden sm:flex items-center gap-2 text-sm">
-          {(['1 Property', '2 Findings', '3 Review'] as const).map((label, i) => (
-            <span key={label} className={`px-3 py-1 rounded-full font-medium ${
-              step === i + 1 ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-500'
-            }`}>{label}</span>
+      {/* Chat window */}
+      <div className="flex flex-col bg-gray-50 rounded-xl border border-gray-200 overflow-hidden" style={{ height: 'calc(100vh - 200px)' }}>
+        {/* Messages */}
+        <div className="flex-1 overflow-y-auto p-4 space-y-3">
+          {messages.map((m, i) => (
+            <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+              <div className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+                m.role === 'user'
+                  ? 'bg-blue-600 text-white rounded-br-md'
+                  : 'bg-white border border-gray-200 text-gray-800 rounded-bl-md shadow-sm'
+              }`}>
+                <p className="whitespace-pre-wrap">{m.content}</p>
+                {m.images && (
+                  <div className="flex gap-2 mt-2 flex-wrap">
+                    {m.images.map((img, j) => (
+                      <img key={j} src={img} className="h-20 w-20 object-cover rounded-lg" alt="inspection photo" />
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
           ))}
-        </div>
-      </div>
 
-      {error && (
-        <div className="flex items-center gap-2 bg-red-50 border border-red-200 text-red-700 rounded-lg px-4 py-3 mb-6 text-sm">
-          <AlertCircle className="h-4 w-4 shrink-0" />
-          {error}
-        </div>
-      )}
-
-      {/* ── STEP 1: Property Info ── */}
-      {step === 1 && (
-        <div className="bg-white border border-gray-200 rounded-xl p-8 max-w-xl">
-          <h2 className="font-semibold text-gray-900 mb-5">Step 1 — Property Information</h2>
-          <div className="space-y-4">
-            <div className="space-y-1.5">
-              <Label>Property address</Label>
-              <Input value={address} onChange={e => setAddress(e.target.value)} placeholder="20 Fireside Dr, Barrie, ON" />
-            </div>
-            <div className="space-y-1.5">
-              <Label>Client email</Label>
-              <Input type="email" value={clientEmail} onChange={e => setClientEmail(e.target.value)} placeholder="client@example.com" />
-            </div>
-            <div className="space-y-1.5">
-              <Label>Inspection type</Label>
-              <Input value={inspectionType} onChange={e => setInspectionType(e.target.value)} />
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-1.5">
-                <Label>Date of inspection</Label>
-                <Input type="date" value={inspectionDate} onChange={e => setInspectionDate(e.target.value)} />
-              </div>
-              <div className="space-y-1.5">
-                <Label>Inspector name</Label>
-                <Input value={inspector} onChange={e => setInspector(e.target.value)} />
+          {/* Typing indicator */}
+          {sending && (
+            <div className="flex justify-start">
+              <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-md px-4 py-3 shadow-sm">
+                <div className="flex gap-1 items-center h-4">
+                  {[0, 150, 300].map(delay => (
+                    <div
+                      key={delay}
+                      className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                      style={{ animationDelay: `${delay}ms` }}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
+          )}
+          <div ref={bottomRef} />
+        </div>
+
+        {/* Error */}
+        {error && (
+          <div className="flex items-center gap-2 bg-red-50 border-t border-red-200 text-red-700 px-4 py-2 text-sm">
+            <AlertCircle className="h-4 w-4 shrink-0" />
+            {error}
           </div>
-          <Button
-            className="mt-6 bg-blue-600 hover:bg-blue-700"
-            onClick={() => setStep(2)}
-            disabled={!address || !clientEmail}
+        )}
+
+        {/* Pending images preview */}
+        {pendingImages.length > 0 && (
+          <div className="flex gap-2 px-4 py-2 bg-white border-t border-gray-100 flex-wrap">
+            {pendingImages.map((img, i) => (
+              <div key={i} className="relative">
+                <img src={img} className="h-14 w-14 object-cover rounded-lg border border-gray-300" alt="" />
+                <button
+                  onClick={() => setPendingImages(prev => prev.filter((_, j) => j !== i))}
+                  className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center font-bold"
+                >×</button>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Input bar */}
+        <div className="flex gap-2 p-3 bg-white border-t border-gray-200">
+          <input ref={fileRef} type="file" accept="image/*" multiple className="hidden" onChange={handleImages} />
+          <button
+            onClick={() => fileRef.current?.click()}
+            className="p-2 text-gray-400 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors shrink-0"
+            title="Upload photos"
           >
-            Next: Enter Findings →
+            <ImagePlus className="h-5 w-5" />
+          </button>
+          <textarea
+            className="flex-1 resize-none text-sm focus:outline-none bg-transparent placeholder-gray-400 py-2"
+            placeholder="Describe what you found… (Shift+Enter for new line)"
+            value={input}
+            onChange={e => setInput(e.target.value)}
+            onKeyDown={e => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                send();
+              }
+            }}
+            rows={1}
+            style={{ maxHeight: '120px' }}
+          />
+          <Button
+            size="sm"
+            className="bg-blue-600 hover:bg-blue-700 shrink-0 h-9 w-9 p-0"
+            onClick={send}
+            disabled={sending || (!input.trim() && pendingImages.length === 0)}
+          >
+            <Send className="h-4 w-4" />
           </Button>
         </div>
-      )}
-
-      {/* ── STEP 2: Findings ── */}
-      {step === 2 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h2 className="font-semibold text-gray-900">Step 2 — Inspection Findings</h2>
-            <Button size="sm" variant="outline" onClick={addFinding}>
-              <Plus className="h-4 w-4 mr-1" />
-              Add Finding
-            </Button>
-          </div>
-
-          {findings.map(f => (
-            <div key={f.id} className={`border rounded-xl p-5 ${PRIORITY_COLORS[f.priority]}`}>
-              <div className="flex items-center gap-3 mb-4 flex-wrap">
-                <select
-                  className="bg-white border border-gray-300 rounded-md px-3 py-1.5 text-sm"
-                  value={f.section}
-                  onChange={e => updateFinding(f.id, { section: e.target.value })}
-                >
-                  {SECTIONS.map(s => <option key={s}>{s}</option>)}
-                </select>
-                <select
-                  className="bg-white border border-gray-300 rounded-md px-3 py-1.5 text-sm font-medium"
-                  value={f.priority}
-                  onChange={e => updateFinding(f.id, { priority: e.target.value as Priority })}
-                >
-                  {(Object.entries(PRIORITY_LABELS) as [Priority, string][]).map(([k, v]) => (
-                    <option key={k} value={k}>{v}</option>
-                  ))}
-                </select>
-                <button
-                  onClick={() => removeFinding(f.id)}
-                  className="ml-auto text-gray-400 hover:text-red-500"
-                >
-                  <Trash2 className="h-4 w-4" />
-                </button>
-              </div>
-              <div className="space-y-3">
-                <div>
-                  <label className="text-xs font-medium text-gray-600 mb-1 block">Observation</label>
-                  <textarea
-                    className="w-full bg-white border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    rows={2}
-                    placeholder="Describe what was observed…"
-                    value={f.observation}
-                    onChange={e => updateFinding(f.id, { observation: e.target.value })}
-                  />
-                </div>
-                <div>
-                  <label className="text-xs font-medium text-gray-600 mb-1 block">Recommendation</label>
-                  <textarea
-                    className="w-full bg-white border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    rows={2}
-                    placeholder="What should the homeowner do?"
-                    value={f.recommendation}
-                    onChange={e => updateFinding(f.id, { recommendation: e.target.value })}
-                  />
-                </div>
-              </div>
-            </div>
-          ))}
-
-          <div className="flex gap-3 pt-2">
-            <Button variant="outline" onClick={() => setStep(1)}>← Back</Button>
-            <Button
-              className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
-              onClick={generateReport}
-              disabled={generating || findings.length === 0}
-            >
-              <Sparkles className="h-4 w-4" />
-              {generating ? 'Generating with Scout…' : 'Generate with Scout AI'}
-            </Button>
-          </div>
-        </div>
-      )}
-
-      {/* ── STEP 3: Review & Save ── */}
-      {step === 3 && (
-        <div className="space-y-6">
-          <h2 className="font-semibold text-gray-900">Step 3 — Review & Save Report</h2>
-
-          {saved ? (
-            <div className="flex flex-col items-center gap-3 py-12 text-center bg-white border border-gray-200 rounded-xl">
-              <CheckCircle2 className="h-12 w-12 text-green-500" />
-              <p className="font-semibold text-gray-900">Report saved & client notified!</p>
-              <p className="text-sm text-gray-500">Returning to admin dashboard…</p>
-            </div>
-          ) : (
-            <>
-              {/* Preview */}
-              <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-                <div
-                  className="w-full max-h-[600px] overflow-auto p-4"
-                  dangerouslySetInnerHTML={{ __html: generatedHtml }}
-                />
-              </div>
-
-              <div className="flex gap-3">
-                <Button variant="outline" onClick={() => setStep(2)}>← Revise Findings</Button>
-                <Button
-                  className="bg-green-600 hover:bg-green-700 flex items-center gap-2"
-                  onClick={saveReport}
-                  disabled={saving}
-                >
-                  <CheckCircle2 className="h-4 w-4" />
-                  {saving ? 'Saving…' : 'Save & Send to Client'}
-                </Button>
-              </div>
-            </>
-          )}
-        </div>
-      )}
+      </div>
     </PortalLayout>
   );
 }

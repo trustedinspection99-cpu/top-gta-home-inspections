@@ -115,11 +115,11 @@ export default function AdminDashboard() {
                   <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium ${STATUS_COLORS[job.status]}`}>
                     {job.status.replace('_', ' ')}
                   </span>
-                  {job.status === 'completed' && (
+                  {job.status !== 'cancelled' && (
                     <Button asChild size="sm" variant="outline" className="border-blue-300 text-blue-700 text-xs">
                       <Link to={`/admin/jobs/${job.id}/report`} className="flex items-center gap-1">
                         <FileText className="h-3.5 w-3.5" />
-                        Report
+                        {job.status === 'completed' ? 'Report' : 'Start Report'}
                       </Link>
                     </Button>
                   )}
