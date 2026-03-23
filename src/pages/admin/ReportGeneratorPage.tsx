@@ -210,17 +210,25 @@ export default function ReportGeneratorPage() {
     setError('');
   }
 
-  // ── Generate report ──
+  // ── Generate report (streaming) ──
   async function generateReport() {
     setGenerating(true);
     setError('');
 
-    // Collect all photo URLs from entire conversation
     const allPhotoUrls = messages.flatMap(m => m.photoUrls ?? []);
 
     try {
-      const { data, error: fnErr } = await supabase.functions.invoke('generate-report', {
-        body: {
+      const { data: { session } } = await supabase.auth.getSession();
+      const token = session?.access_token ?? '';
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string;
+
+      const res = await fetch(`${supabaseUrl}/functions/v1/generate-report`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify({
           mode: 'report',
           messages: messages.map(m => ({ role: m.role, content: m.content })),
           photoUrls: allPhotoUrls,
@@ -232,12 +240,29 @@ export default function ReportGeneratorPage() {
               : new Date().toLocaleDateString('en-CA'),
             inspector: 'ASADS Certified Inspector',
           } : undefined,
-        },
+        }),
       });
-      if (fnErr || !data?.html) {
-        setError(fnErr?.message ?? 'Report generation failed. Check Edge Function logs.');
+
+      if (!res.ok || !res.body) {
+        setError('Report generation failed. Check Edge Function logs.');
+        setGenerating(false);
+        return;
+      }
+
+      // Read stream
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let html = '';
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        html += decoder.decode(value, { stream: true });
+      }
+
+      if (html.trim()) {
+        setReportHtml(html);
       } else {
-        setReportHtml(data.html);
+        setError('Report came back empty. Try again.');
       }
     } catch (e: unknown) {
       setError((e as Error).message);

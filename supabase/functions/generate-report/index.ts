@@ -174,19 +174,50 @@ Apply all OAHI/CAHPI standards. Use proper observation/implication/recommendatio
       });
     }
 
+    const CORS = { 'Access-Control-Allow-Origin': '*' };
+
+    if (mode === 'report') {
+      // Stream the report so the connection never times out
+      const stream = anthropic.messages.stream({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 16000,
+        system: SYSTEM,
+        messages: claudeMessages,
+      });
+
+      const encoder = new TextEncoder();
+      const body = new ReadableStream({
+        async start(controller) {
+          try {
+            for await (const chunk of stream) {
+              if (chunk.type === 'content_block_delta' && chunk.delta.type === 'text_delta') {
+                controller.enqueue(encoder.encode(chunk.delta.text));
+              }
+            }
+          } finally {
+            controller.close();
+          }
+        },
+      });
+
+      return new Response(body, {
+        headers: { 'Content-Type': 'text/plain; charset=utf-8', ...CORS },
+      });
+    }
+
+    // Chat mode — regular JSON response
     const response = await anthropic.messages.create({
       model: 'claude-sonnet-4-6',
-      max_tokens: mode === 'report' ? 16000 : 1024,
+      max_tokens: 1024,
       system: SYSTEM,
       messages: claudeMessages,
-      ...(mode === 'report' ? { betas: ['output-128k-2025-02-19'] } : {}),
-    } as Parameters<typeof anthropic.messages.create>[0]);
+    });
 
     const text = response.content[0].type === 'text' ? response.content[0].text : '';
 
     return new Response(
-      JSON.stringify({ reply: text, html: mode === 'report' ? text : undefined }),
-      { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } }
+      JSON.stringify({ reply: text }),
+      { headers: { 'Content-Type': 'application/json', ...CORS } }
     );
   } catch (err) {
     return new Response(JSON.stringify({ error: String(err) }), {
