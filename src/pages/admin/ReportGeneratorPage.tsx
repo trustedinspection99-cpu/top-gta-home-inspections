@@ -33,6 +33,10 @@ export default function ReportGeneratorPage() {
   const [listening, setListening] = useState(false);
   const [draftRestored, setDraftRestored] = useState(false);
   const [reportHtml, setReportHtml] = useState('');
+  const [reportData, setReportData] = useState<ReportData | null>(null);
+  const [photoStep, setPhotoStep] = useState(false);
+  const [findingPhotos, setFindingPhotos] = useState<Record<string, string>>({});
+  const [uploadingFindingPhoto, setUploadingFindingPhoto] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [savedReportId, setSavedReportId] = useState('');
   const [sendingReport, setSendingReport] = useState(false);
@@ -100,7 +104,7 @@ export default function ReportGeneratorPage() {
       const fileName = `inspections/${jobId ?? 'draft'}/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
 
       const { error: uploadErr } = await supabase.storage
-        .from('reports')
+        .from('Reports')
         .upload(fileName, file, { contentType: file.type, upsert: false });
 
       if (uploadErr) {
@@ -108,7 +112,7 @@ export default function ReportGeneratorPage() {
         continue;
       }
 
-      const { data: { publicUrl } } = supabase.storage.from('reports').getPublicUrl(fileName);
+      const { data: { publicUrl } } = supabase.storage.from('Reports').getPublicUrl(fileName);
       uploaded.push({ url: publicUrl, preview });
     }
 
@@ -213,52 +217,73 @@ export default function ReportGeneratorPage() {
     setError('');
   }
 
-  // ── Generate report (Scout summarizes → template fills → opens in new tab) ──
+  // ── Generate report: extract JSON → photo step ──
   async function generateReport() {
     setGenerating(true);
     setError('');
-
-    const allPhotoUrls = messages.flatMap(m => m.photoUrls ?? []);
-
     try {
-      // Step 1: Ask Scout to extract structured JSON from the conversation
       const { data, error: fnErr } = await supabase.functions.invoke('generate-report', {
         body: {
           mode: 'summarize',
           messages: messages.map(m => ({ role: m.role, content: m.content })),
         },
       });
-
       if (fnErr || !data?.data) {
         setError(fnErr?.message ?? 'Scout did not return findings. Try again.');
         setGenerating(false);
         return;
       }
-
-      const reportData = data.data as ReportData;
-
-      // Step 2: Fill the pre-built HTML template client-side
-      const jobInfo = {
-        address: job?.address ?? 'Property Address',
-        city: job?.city ?? '',
-        inspectionType: job?.inspection_type ?? 'Home Inspection',
-        inspectionDate: job?.scheduled_at
-          ? new Date(job.scheduled_at).toLocaleDateString('en-CA')
-          : new Date().toLocaleDateString('en-CA'),
-        inspector: 'ASADS Certified Inspector',
-      };
-
-      const html = buildReportHtml(reportData, jobInfo, allPhotoUrls);
-
-      // Step 3: Open in new tab for review + print-to-PDF
-      const blob = new Blob([html], { type: 'text/html' });
-      const url = URL.createObjectURL(blob);
-      window.open(url, '_blank');
-      setReportHtml(html);
+      setReportData(data.data as ReportData);
+      setFindingPhotos({});
+      setPhotoStep(true);
     } catch (e: unknown) {
       setError((e as Error).message);
     }
     setGenerating(false);
+  }
+
+  // ── Upload photo for a specific finding ──
+  async function uploadFindingPhoto(key: string, file: File) {
+    setUploadingFindingPhoto(key);
+    const ext = file.name.split('.').pop() ?? 'jpg';
+    const fileName = `inspections/${jobId ?? 'draft'}/finding-${key}-${Date.now()}.${ext}`;
+    const { error: uploadErr } = await supabase.storage
+      .from('Reports')
+      .upload(fileName, file, { contentType: file.type, upsert: true });
+    if (uploadErr) { setError(`Upload failed: ${uploadErr.message}`); setUploadingFindingPhoto(null); return; }
+    const { data: { publicUrl } } = supabase.storage.from('Reports').getPublicUrl(fileName);
+    setFindingPhotos(prev => ({ ...prev, [key]: publicUrl }));
+    setUploadingFindingPhoto(null);
+  }
+
+  // ── Build final HTML with assigned photos ──
+  function buildFinalReport() {
+    if (!reportData) return;
+    const allChatPhotos = messages.flatMap(m => m.photoUrls ?? []);
+    const enriched: ReportData = {
+      ...reportData,
+      sections: reportData.sections.map((section, si) => ({
+        ...section,
+        findings: section.findings.map((finding, fi) => {
+          const url = findingPhotos[`${si}-${fi}`];
+          return url ? { ...finding, photoUrls: [url, ...(finding.photoUrls ?? [])] } : finding;
+        }),
+      })),
+    };
+    const jobInfo = {
+      address: job?.address ?? 'Property Address',
+      city: job?.city ?? '',
+      inspectionType: job?.inspection_type ?? 'Home Inspection',
+      inspectionDate: job?.scheduled_at
+        ? new Date(job.scheduled_at).toLocaleDateString('en-CA')
+        : new Date().toLocaleDateString('en-CA'),
+      inspector: 'ASADS Certified Inspector',
+    };
+    const html = buildReportHtml(enriched, jobInfo, allChatPhotos);
+    const blob = new Blob([html], { type: 'text/html' });
+    window.open(URL.createObjectURL(blob), '_blank');
+    setReportHtml(html);
+    setPhotoStep(false);
   }
 
   // ── Save report ──
@@ -271,14 +296,14 @@ export default function ReportGeneratorPage() {
     const blob = new Blob([reportHtml], { type: 'text/html' });
 
     const { error: uploadErr } = await supabase.storage
-      .from('reports').upload(fileName, blob, { contentType: 'text/html', upsert: true });
+      .from('Reports').upload(fileName, blob, { contentType: 'text/html', upsert: true });
 
     if (uploadErr) { setError('Upload failed: ' + uploadErr.message); setSaving(false); return; }
 
-    const { data: { publicUrl } } = supabase.storage.from('reports').getPublicUrl(fileName);
+    const { data: { publicUrl } } = supabase.storage.from('Reports').getPublicUrl(fileName);
 
     const { data: reportRow, error: insertErr } = await supabase
-      .from('reports')
+      .from('Reports')
       .insert({ job_id: jobId, storage_url: publicUrl, status: 'saved' })
       .select('id')
       .single();
@@ -384,6 +409,63 @@ export default function ReportGeneratorPage() {
 
       {/* Save bar */}
       {SaveBar}
+
+      {/* Photo assignment step */}
+      {photoStep && reportData && (
+        <div className="bg-white border border-gray-200 rounded-xl p-6 mb-4">
+          <h2 className="text-lg font-bold text-gray-900 mb-1">📷 Assign Photos to Findings</h2>
+          <p className="text-sm text-gray-500 mb-5">Upload a photo for each deficiency so it appears in the report. Skip any you don't have.</p>
+          <div className="space-y-6">
+            {reportData.sections.map((section, si) => {
+              const deficient = section.findings.filter(f => f.priority !== 'OK');
+              if (deficient.length === 0) return null;
+              return (
+                <div key={si}>
+                  <p className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-3">{section.name}</p>
+                  <div className="space-y-3">
+                    {section.findings.map((finding, fi) => {
+                      if (finding.priority === 'OK') return null;
+                      const key = `${si}-${fi}`;
+                      const photo = findingPhotos[key];
+                      const uploading = uploadingFindingPhoto === key;
+                      const priorityColor = finding.priority === 'P1' ? 'text-red-600 bg-red-50 border-red-200' : finding.priority === 'P2' ? 'text-orange-600 bg-orange-50 border-orange-200' : 'text-yellow-600 bg-yellow-50 border-yellow-200';
+                      return (
+                        <div key={fi} className="flex items-start gap-3 border border-gray-100 rounded-lg p-3">
+                          <div className="flex-1 min-w-0">
+                            <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-bold border ${priorityColor} mb-1`}>{finding.priority}</span>
+                            <p className="text-sm font-medium text-gray-800 truncate">{finding.location || finding.observation.slice(0, 60)}</p>
+                            <p className="text-xs text-gray-400 truncate">{finding.observation.slice(0, 80)}</p>
+                          </div>
+                          <div className="shrink-0">
+                            {photo ? (
+                              <div className="relative">
+                                <img src={photo} className="h-16 w-16 object-cover rounded-lg border border-gray-200" alt="" />
+                                <button onClick={() => setFindingPhotos(prev => { const n = { ...prev }; delete n[key]; return n; })} className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center font-bold">×</button>
+                              </div>
+                            ) : (
+                              <label className={`flex items-center gap-1.5 px-3 py-2 rounded-lg border border-dashed cursor-pointer text-xs font-medium ${uploading ? 'border-blue-200 text-blue-400 bg-blue-50' : 'border-gray-300 text-gray-500 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50'}`}>
+                                {uploading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <ImagePlus className="h-3.5 w-3.5" />}
+                                {uploading ? 'Uploading…' : 'Add Photo'}
+                                <input type="file" accept="image/*" className="hidden" disabled={uploading} onChange={e => { if (e.target.files?.[0]) uploadFindingPhoto(key, e.target.files[0]); e.target.value = ''; }} />
+                              </label>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div className="flex gap-3 mt-6 pt-4 border-t border-gray-100">
+            <Button className="bg-blue-600 hover:bg-blue-700" onClick={buildFinalReport}>
+              <Sparkles className="h-4 w-4 mr-2" />Build Report
+            </Button>
+            <Button variant="outline" onClick={() => setPhotoStep(false)}>Cancel</Button>
+          </div>
+        </div>
+      )}
 
       {/* Draft restored banner */}
       {draftRestored && (
