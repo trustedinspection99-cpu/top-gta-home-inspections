@@ -44,6 +44,8 @@ export default function ReportGeneratorPage() {
   const [sendingReport, setSendingReport] = useState(false);
   const [sent, setSent] = useState(false);
   const [magicLink, setMagicLink] = useState('');
+  const [showPreview, setShowPreview] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   const [error, setError] = useState('');
 
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -400,11 +402,15 @@ export default function ReportGeneratorPage() {
             {savedReportId ? 'Report saved — send it to the client below.' : 'Report ready — preview, then save.'}
           </div>
           <div className="flex gap-2 flex-wrap">
+            <Button size="sm" variant="outline" onClick={() => setShowPreview(p => !p)}>
+              {showPreview ? 'Hide Preview' : 'Preview Report'}
+            </Button>
             <Button size="sm" variant="outline" onClick={() => {
-              const blob = new Blob([reportHtml], { type: 'text/html' });
-              window.open(URL.createObjectURL(blob), '_blank');
-            }}>
-              Preview / Print PDF
+              if (iframeRef.current?.contentWindow) {
+                iframeRef.current.contentWindow.print();
+              }
+            }} disabled={!showPreview}>
+              Print / Save PDF
             </Button>
             {!savedReportId ? (
               <Button size="sm" className="bg-blue-600 hover:bg-blue-700" onClick={saveReport} disabled={saving}>
@@ -450,6 +456,19 @@ export default function ReportGeneratorPage() {
 
       {/* Save bar */}
       {SaveBar}
+
+      {/* Inline report preview */}
+      {reportHtml && showPreview && (
+        <div className="mb-4 border border-gray-200 rounded-xl overflow-hidden">
+          <iframe
+            ref={iframeRef}
+            srcDoc={reportHtml}
+            className="w-full"
+            style={{ height: '80vh' }}
+            title="Report Preview"
+          />
+        </div>
+      )}
 
       {/* Photo assignment step */}
       {photoStep && reportData && (
