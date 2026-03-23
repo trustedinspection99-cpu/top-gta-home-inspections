@@ -210,16 +210,24 @@ export default function ReportGeneratorPage() {
     setError('');
   }
 
-  // ── Generate report ──
+  // ── Generate report (streamed → opens in new tab) ──
   async function generateReport() {
     setGenerating(true);
     setError('');
 
     const allPhotoUrls = messages.flatMap(m => m.photoUrls ?? []);
+    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string;
+    const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
 
     try {
-      const { data, error: fnErr } = await supabase.functions.invoke('generate-report', {
-        body: {
+      const res = await fetch(`${supabaseUrl}/functions/v1/generate-report`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${anonKey}`,
+          'apikey': anonKey,
+        },
+        body: JSON.stringify({
           mode: 'report',
           messages: messages.map(m => ({ role: m.role, content: m.content })),
           photoUrls: allPhotoUrls,
@@ -231,13 +239,36 @@ export default function ReportGeneratorPage() {
               : new Date().toLocaleDateString('en-CA'),
             inspector: 'ASADS Certified Inspector',
           } : undefined,
-        },
+        }),
       });
-      if (fnErr || !data?.html) {
-        setError(fnErr?.message ?? 'Report generation failed. Check Edge Function logs.');
-      } else {
-        setReportHtml(data.html);
+
+      if (!res.ok || !res.body) {
+        setError(`Report generation failed (${res.status}). Check Edge Function logs.`);
+        setGenerating(false);
+        return;
       }
+
+      // Read stream
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let html = '';
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        html += decoder.decode(value, { stream: true });
+      }
+
+      if (!html.trim()) {
+        setError('Report came back empty. Try again.');
+        setGenerating(false);
+        return;
+      }
+
+      // Open in new tab
+      const blob = new Blob([html], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      window.open(url, '_blank');
+      setReportHtml(html); // also store for save button
     } catch (e: unknown) {
       setError((e as Error).message);
     }
@@ -268,44 +299,28 @@ export default function ReportGeneratorPage() {
     setTimeout(() => navigate('/admin'), 2000);
   }
 
-  // ── Report review screen ──
-  if (reportHtml) {
-    return (
-      <PortalLayout>
-        <div className="mb-6">
-          <Button variant="ghost" size="sm" onClick={() => setReportHtml('')}>
-            <ArrowLeft className="h-4 w-4 mr-2" />Back to Chat
+  // ── Save bar (shown after report generated, stays on chat screen) ──
+  const SaveBar = reportHtml ? (
+    <div className="flex items-center justify-between bg-green-50 border border-green-200 rounded-lg px-4 py-3 mb-3">
+      <div className="flex items-center gap-2 text-green-800 text-sm">
+        <CheckCircle2 className="h-4 w-4" />
+        {saved ? 'Report saved! Redirecting…' : 'Report generated — open tab to review.'}
+      </div>
+      <div className="flex gap-2">
+        <Button size="sm" variant="outline" onClick={() => {
+          const blob = new Blob([reportHtml], { type: 'text/html' });
+          window.open(URL.createObjectURL(blob), '_blank');
+        }}>
+          Open Report
+        </Button>
+        {!saved && (
+          <Button size="sm" className="bg-green-600 hover:bg-green-700" onClick={saveReport} disabled={saving}>
+            {saving ? 'Saving…' : 'Save & Send to Client'}
           </Button>
-        </div>
-        <h1 className="text-2xl font-bold text-gray-900 mb-6">Review Report</h1>
-        {saved ? (
-          <div className="flex flex-col items-center gap-3 py-16 bg-white border border-gray-200 rounded-xl text-center">
-            <CheckCircle2 className="h-12 w-12 text-green-500" />
-            <p className="font-semibold text-gray-900 text-lg">Report saved!</p>
-            <p className="text-sm text-gray-500">Returning to admin dashboard…</p>
-          </div>
-        ) : (
-          <>
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-6">
-              <div className="w-full max-h-[600px] overflow-auto p-6" dangerouslySetInnerHTML={{ __html: reportHtml }} />
-            </div>
-            {error && (
-              <div className="flex items-center gap-2 text-red-700 bg-red-50 border border-red-200 rounded-lg px-3 py-2 mb-4 text-sm">
-                <AlertCircle className="h-4 w-4 shrink-0" />{error}
-              </div>
-            )}
-            <div className="flex gap-3">
-              <Button variant="outline" onClick={() => setReportHtml('')}>← Revise</Button>
-              <Button className="bg-green-600 hover:bg-green-700 flex items-center gap-2" onClick={saveReport} disabled={saving}>
-                <CheckCircle2 className="h-4 w-4" />
-                {saving ? 'Saving…' : 'Save & Send to Client'}
-              </Button>
-            </div>
-          </>
         )}
-      </PortalLayout>
-    );
-  }
+      </div>
+    </div>
+  ) : null;
 
   // ── Chat screen ──
   return (
@@ -331,6 +346,9 @@ export default function ReportGeneratorPage() {
           {generating ? 'Generating…' : 'Generate Report'}
         </Button>
       </div>
+
+      {/* Save bar */}
+      {SaveBar}
 
       {/* Draft restored banner */}
       {draftRestored && (

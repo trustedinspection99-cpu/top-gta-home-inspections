@@ -174,9 +174,47 @@ Apply all OAHI/CAHPI standards. Use proper observation/implication/recommendatio
       });
     }
 
+    const CORS = { 'Access-Control-Allow-Origin': '*' };
+
+    if (mode === 'report') {
+      // Stream report — keeps connection alive, no timeout
+      const stream = await anthropic.messages.create({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 8192,
+        system: SYSTEM,
+        messages: claudeMessages,
+        stream: true,
+      });
+
+      const encoder = new TextEncoder();
+      const readable = new ReadableStream({
+        async start(controller) {
+          try {
+            for await (const event of stream) {
+              if (
+                event.type === 'content_block_delta' &&
+                'delta' in event &&
+                event.delta.type === 'text_delta' &&
+                'text' in event.delta
+              ) {
+                controller.enqueue(encoder.encode(event.delta.text));
+              }
+            }
+          } finally {
+            controller.close();
+          }
+        },
+      });
+
+      return new Response(readable, {
+        headers: { 'Content-Type': 'text/plain; charset=utf-8', ...CORS },
+      });
+    }
+
+    // Chat mode — regular JSON
     const response = await anthropic.messages.create({
       model: 'claude-sonnet-4-6',
-      max_tokens: mode === 'report' ? 8192 : 1024,
+      max_tokens: 1024,
       system: SYSTEM,
       messages: claudeMessages,
     });
@@ -184,8 +222,8 @@ Apply all OAHI/CAHPI standards. Use proper observation/implication/recommendatio
     const text = response.content[0].type === 'text' ? response.content[0].text : '';
 
     return new Response(
-      JSON.stringify({ reply: text, html: mode === 'report' ? text : undefined }),
-      { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } }
+      JSON.stringify({ reply: text }),
+      { headers: { 'Content-Type': 'application/json', ...CORS } }
     );
   } catch (err) {
     return new Response(JSON.stringify({ error: String(err) }), {
