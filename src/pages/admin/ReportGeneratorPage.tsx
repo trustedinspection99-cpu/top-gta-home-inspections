@@ -218,13 +218,15 @@ export default function ReportGeneratorPage() {
     const allPhotoUrls = messages.flatMap(m => m.photoUrls ?? []);
     const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string;
     const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
+    const { data: { session } } = await supabase.auth.getSession();
+    const token = session?.access_token ?? anonKey;
 
     try {
       const res = await fetch(`${supabaseUrl}/functions/v1/generate-report`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${anonKey}`,
+          'Authorization': `Bearer ${token}`,
           'apikey': anonKey,
         },
         body: JSON.stringify({
