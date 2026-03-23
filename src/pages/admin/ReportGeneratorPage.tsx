@@ -286,8 +286,6 @@ export default function ReportGeneratorPage() {
       inspector: 'ASADS Certified Inspector',
     };
     const html = buildReportHtml(enriched, jobInfo, allChatPhotos);
-    const blob = new Blob([html], { type: 'text/html' });
-    window.open(URL.createObjectURL(blob), '_blank');
     setReportHtml(html);
     setPhotoStep(false);
   }
@@ -381,14 +379,14 @@ export default function ReportGeneratorPage() {
         <div className="flex items-center justify-between gap-3 flex-wrap">
           <div className="flex items-center gap-2 text-sm text-gray-700">
             <CheckCircle2 className={`h-4 w-4 ${savedReportId ? 'text-green-600' : 'text-gray-300'}`} />
-            {savedReportId ? 'Report saved.' : 'Report generated — review it then save.'}
+            {savedReportId ? 'Report saved — send it to the client below.' : 'Report ready — preview, then save.'}
           </div>
           <div className="flex gap-2 flex-wrap">
             <Button size="sm" variant="outline" onClick={() => {
               const blob = new Blob([reportHtml], { type: 'text/html' });
               window.open(URL.createObjectURL(blob), '_blank');
             }}>
-              Open Report
+              Preview / Print PDF
             </Button>
             {!savedReportId ? (
               <Button size="sm" className="bg-blue-600 hover:bg-blue-700" onClick={saveReport} disabled={saving}>
@@ -396,7 +394,7 @@ export default function ReportGeneratorPage() {
               </Button>
             ) : (
               <Button size="sm" className="bg-green-600 hover:bg-green-700" onClick={sendToClient} disabled={sendingReport}>
-                {sending ? 'Sending…' : `Send to ${job?.client_name ?? 'Client'}`}
+                {sendingReport ? 'Sending…' : `Send to ${job?.client_name ?? 'Client'}`}
               </Button>
             )}
           </div>
