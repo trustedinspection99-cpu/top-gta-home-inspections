@@ -99,34 +99,12 @@ Keep responses brief — the inspector is in the field.
 
 IMPORTANT: When the inspector says they are done or asks to generate the report, do NOT output any HTML. Instead respond with exactly: "All findings logged. Tap the **Generate Report** button at the top to create your full OAHI-compliant report."
 
-REPORT GENERATION
-═══════════════════
-
-When generating the report, produce a complete standalone HTML document per OAHI/CAHPI standards:
-
-1. COVER PAGE: ASADS branding (blue #1d4ed8), property address, inspection type, date, inspector, report date, client info
-   Disclaimer: "This report was prepared in accordance with the Standards of Practice of the Ontario Association of Home Inspectors (OAHI) and the Canadian Association of Home & Property Inspectors (CAHPI) 2023 National Standards. This inspection is not technically exhaustive. It will not identify concealed conditions or latent defects. Systems and components are reported on as observed at the time of inspection only."
-
-2. EXECUTIVE SUMMARY: P1/P2/P3/OK counts as large colour-coded badges; one plain-language paragraph overall assessment
-
-3. FINDINGS BY OAHI SECTION (only sections with findings):
-   Section heading · For each deficiency: Priority badge + Location + Observation (factual: what was seen) + Implication (why it matters) + Recommendation (correct/monitor/refer to qualified specialist)
-   OK items listed briefly at bottom of each section
-
-4. SYSTEMS NOT INSPECTED: Any OAHI-required systems not inspected and why
-
-5. GENERAL LIMITATIONS (per OAHI §13 / CAHPI §3): Visual inspection only; not technically exhaustive; concealed conditions not identified; no code compliance determination; no engineering opinion; no environmental hazard assessment; no guarantee of service life
-
-6. FOOTER: "Report prepared in accordance with OAHI Standards of Practice and CAHPI 2023 National Standards · ASADS Home Inspection · asads.ca · (647) 801-9311 · Cambridge, ON"
-
-LANGUAGE RULES:
+LANGUAGE RULES FOR FINDINGS:
 - Observation: factual ("Observed...", "Noted...", "Inspector observed...")
 - Implication: why it matters to the client
 - Recommendation: "Recommend..." — correct, monitor, or refer to qualified [specialist type] for further evaluation and repair
 - Never speculate on causes, costs, remaining life, or code compliance
-- Never recommend specific contractors
-
-Return ONLY valid HTML — no markdown, no preamble.`;
+- Never recommend specific contractors`;
 
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') {
@@ -220,7 +198,7 @@ Only include sections that have findings. Return ONLY the raw JSON object.`,
     // Chat mode — SDK JSON (fast, no streaming needed)
     const response = await anthropic.messages.create({
       model: 'claude-sonnet-4-6',
-      max_tokens: 1024,
+      max_tokens: 2048,
       system: SYSTEM,
       messages: claudeMessages,
     });

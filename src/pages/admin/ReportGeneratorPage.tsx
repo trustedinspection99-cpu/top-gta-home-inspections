@@ -347,7 +347,7 @@ export default function ReportGeneratorPage() {
                 {saving ? 'Saving…' : 'Save Report'}
               </Button>
             ) : (
-              <Button size="sm" className="bg-green-600 hover:bg-green-700" onClick={sendToClient} disabled={sending}>
+              <Button size="sm" className="bg-green-600 hover:bg-green-700" onClick={sendToClient} disabled={sendingReport}>
                 {sending ? 'Sending…' : `Send to ${job?.client_name ?? 'Client'}`}
               </Button>
             )}
