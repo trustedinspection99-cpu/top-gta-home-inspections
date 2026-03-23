@@ -344,7 +344,7 @@ export default function ReportGeneratorPage() {
 
     const { data: reportRow, error: insertErr } = await supabase
       .from('reports')
-      .insert({ job_id: jobId, storage_url: publicUrl, status: 'saved' })
+      .insert({ job_id: jobId, storage_url: publicUrl, status: 'saved', report_data: reportData })
       .select('id')
       .single();
 
@@ -381,6 +381,31 @@ export default function ReportGeneratorPage() {
     }
 
     if (sendData?.magicLink) setMagicLink(sendData.magicLink);
+
+    // Auto-populate maintenance checklist from P1/P2/P3 findings
+    if (reportData) {
+      const { data: jobRow } = await supabase.from('jobs').select('homeowner_id').eq('id', jobId).single();
+      const homeownerId = jobRow?.homeowner_id;
+      if (homeownerId) {
+        const address = `${job.address}, ${job.city}`;
+        const items = reportData.sections.flatMap(section =>
+          section.findings
+            .filter(f => f.priority === 'P1' || f.priority === 'P2' || f.priority === 'P3')
+            .map(f => ({
+              user_id: homeownerId,
+              title: f.location ? `${f.location} — ${f.recommendation.slice(0, 120)}` : f.recommendation.slice(0, 120),
+              category: section.name,
+              completed: false,
+              property_address: address,
+              due_date: null,
+            }))
+        );
+        if (items.length > 0) {
+          await supabase.from('maintenance').insert(items);
+        }
+      }
+    }
+
     setSendingReport(false);
     setSent(true);
   }

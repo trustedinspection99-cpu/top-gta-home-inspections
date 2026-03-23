@@ -52,6 +52,7 @@ export interface DbReport {
   generated_at: string;
   sent_at: string | null;
   paid_at: string | null;
+  report_data: any | null;
 }
 
 export interface DbMaintenance {

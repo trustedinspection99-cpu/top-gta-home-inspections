@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { supabase, DbJob, DbReport } from '@/lib/supabase';
 import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
-import { PlusCircle, FileText, Clock, CheckCircle2, Calendar, Users, DollarSign, Send } from 'lucide-react';
+import { PlusCircle, FileText, Clock, CheckCircle2, Calendar, Users, DollarSign, Send, ListChecks } from 'lucide-react';
 
 interface JobRow extends DbJob {
   report?: DbReport;
@@ -28,6 +28,8 @@ export default function AdminDashboard() {
   const [stats, setStats] = useState({ total: 0, pending: 0, completed: 0, realtors: 0 });
   const [loading, setLoading] = useState(true);
   const [markingPaid, setMarkingPaid] = useState<string>('');
+  const [populatingChecklist, setPopulatingChecklist] = useState<string>('');
+  const [checklistMsg, setChecklistMsg] = useState<Record<string, string>>({});
 
   async function load() {
     const [{ data: jobData }, { count: realtorCount }] = await Promise.all([
@@ -57,6 +59,36 @@ export default function AdminDashboard() {
   }
 
   useEffect(() => { load(); }, []);
+
+  async function populateChecklist(job: JobRow) {
+    if (!job.report?.report_data || !job.homeowner_id) {
+      setChecklistMsg(prev => ({ ...prev, [job.id]: 'No report data available' }));
+      return;
+    }
+    setPopulatingChecklist(job.id);
+    const reportData = job.report.report_data;
+    const address = `${job.address}, ${job.city}`;
+    const items = reportData.sections.flatMap((section: any) =>
+      section.findings
+        .filter((f: any) => f.priority === 'P1' || f.priority === 'P2' || f.priority === 'P3')
+        .map((f: any) => ({
+          user_id: job.homeowner_id,
+          title: f.location ? `${f.location} — ${f.recommendation.slice(0, 120)}` : f.recommendation.slice(0, 120),
+          category: section.name,
+          completed: false,
+          property_address: address,
+          due_date: null,
+        }))
+    );
+    if (items.length === 0) {
+      setChecklistMsg(prev => ({ ...prev, [job.id]: 'No P1/P2/P3 findings' }));
+      setPopulatingChecklist('');
+      return;
+    }
+    const { error } = await supabase.from('maintenance').insert(items);
+    setChecklistMsg(prev => ({ ...prev, [job.id]: error ? 'Failed' : `Added ${items.length} items` }));
+    setPopulatingChecklist('');
+  }
 
   async function markPaid(report: DbReport) {
     setMarkingPaid(report.id);
@@ -165,6 +197,24 @@ export default function AdminDashboard() {
                         <CheckCircle2 className="h-3.5 w-3.5" />
                         Paid · Visible
                       </span>
+                    )}
+
+                    {job.report?.report_data && job.homeowner_id && (
+                      <div className="flex items-center gap-1.5">
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="border-purple-300 text-purple-700 text-xs h-7"
+                          onClick={() => populateChecklist(job)}
+                          disabled={populatingChecklist === job.id}
+                        >
+                          <ListChecks className="h-3 w-3 mr-1" />
+                          {populatingChecklist === job.id ? 'Adding…' : 'Populate Checklist'}
+                        </Button>
+                        {checklistMsg[job.id] && (
+                          <span className="text-xs text-gray-500">{checklistMsg[job.id]}</span>
+                        )}
+                      </div>
                     )}
 
                     {job.status !== 'cancelled' && (
