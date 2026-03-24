@@ -756,10 +756,21 @@ export default function ReportGeneratorPage() {
             className="flex-1 resize-none text-sm focus:outline-none bg-transparent placeholder-gray-400 py-2"
             placeholder="Type or use the mic…"
             value={input}
-            onChange={e => { setInput(e.target.value); pendingInputRef.current = e.target.value; }}
+            onChange={e => {
+              setInput(e.target.value);
+              pendingInputRef.current = e.target.value;
+              e.target.style.height = 'auto';
+              e.target.style.height = Math.min(e.target.scrollHeight, 200) + 'px';
+            }}
             onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSend(); } }}
             rows={1}
-            style={{ maxHeight: '120px' }}
+            ref={el => {
+              if (el) {
+                el.style.height = 'auto';
+                el.style.height = Math.min(el.scrollHeight, 200) + 'px';
+              }
+            }}
+            style={{ maxHeight: '200px', overflowY: 'auto' }}
           />
 
           {/* Mic button */}
