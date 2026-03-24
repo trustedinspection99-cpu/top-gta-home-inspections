@@ -41,7 +41,8 @@ export default function ReportGeneratorPage() {
   const [uploadingCover, setUploadingCover] = useState(false);
   const [uploadingFindingPhotos, setUploadingFindingPhotos] = useState<Set<string>>(new Set());
   const [saving, setSaving] = useState(false);
-  const [savedReportId, setSavedReportId] = useState('');
+  const [savedReportId, setSavedReportId] = useState('');   // set after saving this session
+  const existingReportIdRef = useRef('');                    // pre-loaded from DB on mount
   const [sendingReport, setSendingReport] = useState(false);
   const [sent, setSent] = useState(false);
   const [magicLink, setMagicLink] = useState('');
@@ -84,6 +85,10 @@ export default function ReportGeneratorPage() {
       setJob(j);
       restore(j);
     });
+    // Load existing report so admin can update it
+    supabase.from('reports').select('id').eq('job_id', jobId)
+      .order('generated_at', { ascending: false }).limit(1).maybeSingle()
+      .then(({ data }) => { if (data?.id) existingReportIdRef.current = data.id; });
   }, [jobId, draftKey]);
 
   // ── Auto-save draft ──
@@ -344,7 +349,7 @@ export default function ReportGeneratorPage() {
 
   // ── Save report ──
   async function saveReport() {
-    if (!jobId || savedReportId) return;
+    if (!jobId) return;
     setSaving(true);
     setError('');
 
@@ -358,20 +363,31 @@ export default function ReportGeneratorPage() {
 
     const { data: { publicUrl } } = supabase.storage.from('Reports').getPublicUrl(fileName);
 
-    const { data: reportRow, error: insertErr } = await supabase
-      .from('reports')
-      .insert({ job_id: jobId, storage_url: publicUrl, status: 'saved', report_data: reportData })
-      .select('id')
-      .single();
-
-    if (insertErr) { setError('DB insert failed: ' + insertErr.message); setSaving(false); return; }
+    const reportIdToUpdate = savedReportId || existingReportIdRef.current;
+    if (reportIdToUpdate) {
+      // Update existing report
+      const { error: updateErr } = await supabase
+        .from('reports')
+        .update({ storage_url: publicUrl, report_data: reportData, generated_at: new Date().toISOString() })
+        .eq('id', reportIdToUpdate);
+      if (updateErr) { setError('Update failed: ' + updateErr.message); setSaving(false); return; }
+      setSavedReportId(reportIdToUpdate);
+    } else {
+      // Insert new report
+      const { data: reportRow, error: insertErr } = await supabase
+        .from('reports')
+        .insert({ job_id: jobId, storage_url: publicUrl, status: 'saved', report_data: reportData })
+        .select('id')
+        .single();
+      if (insertErr) { setError('DB insert failed: ' + insertErr.message); setSaving(false); return; }
+      setSavedReportId(reportRow.id);
+    }
 
     await supabase.from('jobs').update({ status: 'completed', completed_at: new Date().toISOString() }).eq('id', jobId);
 
     localStorage.removeItem(draftKey);
     localStorage.removeItem(reportDataKey);
     setSaving(false);
-    setSavedReportId(reportRow.id);
     setTimeout(() => saveBarRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
   }
 
@@ -483,9 +499,9 @@ export default function ReportGeneratorPage() {
       /* Unsaved */
       ) : (
         <div className="rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 flex items-center justify-between gap-3 flex-wrap">
-          <p className="text-sm text-blue-800">Report generated — preview it, then save to make it available to the client.</p>
+          <p className="text-sm text-blue-800">Report generated — preview it, then {existingReportIdRef.current ? 'update' : 'save'} to make it available to the client.</p>
           <Button size="sm" className="bg-blue-600 hover:bg-blue-700 shrink-0" onClick={saveReport} disabled={saving}>
-            {saving ? 'Saving…' : 'Save Report'}
+            {saving ? 'Saving…' : existingReportIdRef.current ? 'Update Report' : 'Save Report'}
           </Button>
         </div>
       )}
@@ -546,9 +562,9 @@ export default function ReportGeneratorPage() {
               </div>
             ) : !savedReportId ? (
               <div className="flex items-center justify-between gap-3">
-                <p className="text-sm text-gray-600">Report ready — save it to send to the client.</p>
+                <p className="text-sm text-gray-600">Report ready — {existingReportIdRef.current ? 'update it to replace the existing one.' : 'save it to send to the client.'}</p>
                 <Button size="sm" className="bg-blue-600 hover:bg-blue-700 shrink-0" onClick={saveReport} disabled={saving}>
-                  {saving ? 'Saving…' : 'Save Report'}
+                  {saving ? 'Saving…' : existingReportIdRef.current ? 'Update Report' : 'Save Report'}
                 </Button>
               </div>
             ) : null}
