@@ -293,12 +293,12 @@ export default function RealtorDashboard() {
           <div className="bg-blue-50 border border-blue-100 rounded-xl p-5 flex items-center justify-between gap-3">
             <div>
               <p className="font-medium text-gray-900">Book an inspection for your client?</p>
-              <p className="text-sm text-gray-500">Call ASADS directly to schedule</p>
+              <p className="text-sm text-gray-500">Scout will handle the scheduling</p>
             </div>
             <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 shrink-0">
-              <a href="tel:+16478019311" className="flex items-center gap-2">
-                <PhoneCall className="h-4 w-4" />(647) 801-9311
-              </a>
+              <Link to="/dashboard/book" className="flex items-center gap-2">
+                <PhoneCall className="h-4 w-4" />Book Now
+              </Link>
             </Button>
           </div>
         </div>

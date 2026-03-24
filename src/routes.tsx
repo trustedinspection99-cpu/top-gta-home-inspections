@@ -76,6 +76,7 @@ const HomeownerDashboard = lazy(() => import('./pages/dashboard/HomeownerDashboa
 const ReportViewer = lazy(() => import('./pages/dashboard/ReportViewer'));
 const SchedulePage = lazy(() => import('./pages/dashboard/SchedulePage'));
 const ChecklistPage = lazy(() => import('./pages/dashboard/ChecklistPage'));
+const BookWithScoutPage = lazy(() => import('./pages/dashboard/BookWithScoutPage'));
 const RealtorDashboard = lazy(() => import('./pages/realtor/RealtorDashboard'));
 const AdminDashboard = lazy(() => import('./pages/admin/AdminDashboard'));
 const NewJobPage = lazy(() => import('./pages/admin/NewJobPage'));
@@ -131,6 +132,7 @@ export const routes: RouteObject[] = [
       { path: 'dashboard/reports/:id', element: <ProtectedRoute role={['homeowner', 'realtor']}><ReportViewer /></ProtectedRoute> },
       { path: 'dashboard/schedule', element: <ProtectedRoute role={['homeowner', 'realtor']}><SchedulePage /></ProtectedRoute> },
       { path: 'dashboard/checklist', element: <ProtectedRoute role={['homeowner', 'realtor']}><ChecklistPage /></ProtectedRoute> },
+      { path: 'dashboard/book', element: <ProtectedRoute role={['homeowner', 'realtor']}><BookWithScoutPage /></ProtectedRoute> },
       { path: 'realtor-dashboard', element: <ProtectedRoute role="realtor"><RealtorDashboard /></ProtectedRoute> },
       { path: 'admin', element: <ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute> },
       { path: 'admin/jobs/new', element: <ProtectedRoute role="admin"><NewJobPage /></ProtectedRoute> },

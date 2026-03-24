@@ -85,10 +85,10 @@ export default function HomeownerDashboard() {
           <h2 className="text-lg font-semibold text-gray-700 mb-2">No inspections yet</h2>
           <p className="text-gray-500 mb-6">Book your first inspection to get started</p>
           <Button asChild className="bg-blue-600 hover:bg-blue-700">
-            <a href="tel:+16478019311" className="flex items-center gap-2">
+            <Link to="/dashboard/book" className="flex items-center gap-2">
               <PhoneCall className="h-4 w-4" />
-              Call (647) 801-9311
-            </a>
+              Book an Inspection
+            </Link>
           </Button>
         </div>
       ) : (

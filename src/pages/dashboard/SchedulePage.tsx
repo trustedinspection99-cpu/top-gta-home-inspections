@@ -68,7 +68,7 @@ export default function SchedulePage() {
                 <Calendar className="h-8 w-8 text-gray-300 mx-auto mb-3" />
                 <p className="text-gray-500 mb-4">No upcoming inspections</p>
                 <Button asChild className="bg-blue-600 hover:bg-blue-700">
-                  <Link to="/booking" className="flex items-center gap-2">
+                  <Link to="/dashboard/book" className="flex items-center gap-2">
                     <PhoneCall className="h-4 w-4" />
                     Book an Inspection
                   </Link>
