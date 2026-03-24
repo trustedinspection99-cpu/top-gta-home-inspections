@@ -426,7 +426,6 @@ export default function ReportGeneratorPage() {
 
     await supabase.from('jobs').update({ status: 'completed', completed_at: new Date().toISOString() }).eq('id', jobId);
 
-    localStorage.removeItem(draftKey);
     localStorage.removeItem(reportDataKey);
     setSaving(false);
     setTimeout(() => saveBarRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);

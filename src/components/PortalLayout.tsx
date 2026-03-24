@@ -26,10 +26,13 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Dashboard', path: '/dashboard', icon: <LayoutDashboard className="h-4 w-4" />, roles: ['homeowner'] },
   { label: 'Schedule', path: '/dashboard/schedule', icon: <Calendar className="h-4 w-4" />, roles: ['homeowner'] },
   { label: 'Checklist', path: '/dashboard/checklist', icon: <CheckSquare className="h-4 w-4" />, roles: ['homeowner'] },
-  { label: 'My Dashboard', path: '/realtor-dashboard', icon: <Star className="h-4 w-4" />, roles: ['realtor'] },
+  { label: 'Dashboard', path: '/realtor-dashboard', icon: <LayoutDashboard className="h-4 w-4" />, roles: ['realtor'] },
+  { label: 'Schedule', path: '/dashboard/schedule', icon: <Calendar className="h-4 w-4" />, roles: ['realtor'] },
+  { label: 'Checklist', path: '/dashboard/checklist', icon: <CheckSquare className="h-4 w-4" />, roles: ['realtor'] },
+  { label: 'Trusted Realtors', path: '/trusted-realtors', icon: <Users className="h-4 w-4" />, roles: ['realtor'] },
   { label: 'Admin Dashboard', path: '/admin', icon: <LayoutDashboard className="h-4 w-4" />, roles: ['admin'] },
   { label: 'New Job', path: '/admin/jobs/new', icon: <PlusCircle className="h-4 w-4" />, roles: ['admin'] },
-  { label: 'Trusted Realtors', path: '/trusted-realtors', icon: <Users className="h-4 w-4" />, roles: ['realtor', 'admin'] },
+  { label: 'Realtors', path: '/admin/realtors', icon: <Users className="h-4 w-4" />, roles: ['admin'] },
 ];
 
 export default function PortalLayout({ children }: { children: ReactNode }) {

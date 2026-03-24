@@ -3,7 +3,7 @@ import { supabase, DbRealtor, DbUser } from '@/lib/supabase';
 import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Pencil, Trash2, Check, X, Building2, Globe } from 'lucide-react';
+import { Pencil, Trash2, Check, X, Building2, Globe, BadgeCheck, Clock } from 'lucide-react';
 
 const GTA_CITIES = [
   'Toronto', 'Mississauga', 'Brampton', 'Markham', 'Vaughan', 'Richmond Hill',
@@ -12,7 +12,7 @@ const GTA_CITIES = [
 ];
 
 interface RealtorRow {
-  realtor: DbRealtor;
+  realtor: DbRealtor & { approved?: boolean; position?: number };
   user: DbUser;
 }
 
@@ -25,12 +25,16 @@ interface EditState {
   backlink_verified: boolean;
 }
 
+type Tab = 'pending' | 'listed' | 'all';
+
 export default function AdminRealtorsPage() {
   const [rows, setRows] = useState<RealtorRow[]>([]);
   const [loading, setLoading] = useState(true);
+  const [tab, setTab] = useState<Tab>('pending');
   const [editId, setEditId] = useState<string>('');
   const [editState, setEditState] = useState<EditState | null>(null);
   const [saving, setSaving] = useState(false);
+  const [approvingId, setApprovingId] = useState('');
   const [deletingId, setDeletingId] = useState('');
 
   async function load() {
@@ -41,11 +45,15 @@ export default function AdminRealtorsPage() {
     const { data: users } = await supabase.from('users').select('*').in('id', userIds);
     const userMap = Object.fromEntries(((users ?? []) as DbUser[]).map(u => [u.id, u]));
 
-    setRows((realtors as DbRealtor[]).filter(r => userMap[r.user_id]).map(r => ({ realtor: r, user: userMap[r.user_id] })));
+    setRows((realtors as DbRealtor[]).filter(r => userMap[r.user_id]).map(r => ({ realtor: r as any, user: userMap[r.user_id] })));
     setLoading(false);
   }
 
   useEffect(() => { load(); }, []);
+
+  const pending = rows.filter(r => r.realtor.backlink_verified && !r.realtor.approved);
+  const listed = rows.filter(r => r.realtor.listed);
+  const tabRows = tab === 'pending' ? pending : tab === 'listed' ? listed : rows;
 
   function startEdit(row: RealtorRow) {
     setEditId(row.realtor.id);
@@ -78,10 +86,17 @@ export default function AdminRealtorsPage() {
     load();
   }
 
-  async function deleteRealtor(row: RealtorRow) {
+  async function approveRealtor(row: RealtorRow) {
+    setApprovingId(row.realtor.id);
+    await supabase.from('realtors').update({ approved: true, listed: true }).eq('id', row.realtor.id);
+    setApprovingId('');
+    load();
+  }
+
+  async function removeRealtor(row: RealtorRow) {
     if (!confirm(`Remove ${row.user.name} from the directory?`)) return;
     setDeletingId(row.realtor.id);
-    await supabase.from('realtors').update({ listed: false }).eq('id', row.realtor.id);
+    await supabase.from('realtors').update({ listed: false, approved: false }).eq('id', row.realtor.id);
     setDeletingId('');
     load();
   }
@@ -94,6 +109,12 @@ export default function AdminRealtorsPage() {
     }) : prev);
   }
 
+  const TABS: { key: Tab; label: string; count: number }[] = [
+    { key: 'pending', label: 'Pending Approval', count: pending.length },
+    { key: 'listed', label: 'Listed', count: listed.length },
+    { key: 'all', label: 'All', count: rows.length },
+  ];
+
   return (
     <PortalLayout>
       <div className="mb-6">
@@ -101,16 +122,50 @@ export default function AdminRealtorsPage() {
         <p className="text-gray-500">{rows.length} realtors total</p>
       </div>
 
+      {/* Tabs */}
+      <div className="flex gap-1 bg-gray-100 p-1 rounded-lg mb-6 w-fit">
+        {TABS.map(t => (
+          <button
+            key={t.key}
+            onClick={() => setTab(t.key)}
+            className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors flex items-center gap-2 ${
+              tab === t.key ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'
+            }`}
+          >
+            {t.label}
+            {t.count > 0 && (
+              <span className={`text-xs rounded-full px-1.5 py-0.5 font-bold ${
+                t.key === 'pending' && t.count > 0 ? 'bg-red-100 text-red-600' : 'bg-gray-200 text-gray-600'
+              }`}>
+                {t.count}
+              </span>
+            )}
+          </button>
+        ))}
+      </div>
+
       {loading ? (
         <div className="space-y-3">{[1, 2, 3].map(i => <div key={i} className="h-20 bg-gray-100 rounded-xl animate-pulse" />)}</div>
-      ) : rows.length === 0 ? (
-        <p className="text-gray-500 text-center py-16">No realtors yet.</p>
+      ) : tabRows.length === 0 ? (
+        <div className="text-center py-16 text-gray-400">
+          {tab === 'pending' ? (
+            <div className="flex flex-col items-center gap-2">
+              <Clock className="h-10 w-10" />
+              <p>No realtors pending approval</p>
+            </div>
+          ) : (
+            <p>No realtors in this category.</p>
+          )}
+        </div>
       ) : (
         <div className="space-y-4">
-          {rows.map(row => {
+          {tabRows.map(row => {
             const isEditing = editId === row.realtor.id;
+            const isPending = row.realtor.backlink_verified && !row.realtor.approved;
             return (
-              <div key={row.realtor.id} className={`bg-white border rounded-xl p-5 ${isEditing ? 'border-blue-300 shadow-sm' : 'border-gray-200'}`}>
+              <div key={row.realtor.id} className={`bg-white border rounded-xl p-5 ${
+                isEditing ? 'border-blue-300 shadow-sm' : isPending ? 'border-amber-200 bg-amber-50/30' : 'border-gray-200'
+              }`}>
                 {isEditing && editState ? (
                   <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-3">
@@ -131,16 +186,12 @@ export default function AdminRealtorsPage() {
                       <label className="text-xs font-medium text-gray-500 mb-2 block">Cities</label>
                       <div className="flex flex-wrap gap-1.5">
                         {GTA_CITIES.map(city => (
-                          <button
-                            key={city}
-                            type="button"
-                            onClick={() => toggleCity(city)}
+                          <button key={city} type="button" onClick={() => toggleCity(city)}
                             className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-colors ${
                               editState.cities.includes(city)
                                 ? 'bg-blue-600 text-white border-blue-600'
                                 : 'bg-white text-gray-600 border-gray-300 hover:border-blue-400'
-                            }`}
-                          >
+                            }`}>
                             {city}
                           </button>
                         ))}
@@ -175,27 +226,39 @@ export default function AdminRealtorsPage() {
                         <p className="font-semibold text-gray-900">{row.user.name}</p>
                         <div className="flex items-center gap-3 text-sm text-gray-500 flex-wrap">
                           <span className="flex items-center gap-1"><Building2 className="h-3.5 w-3.5" />{row.realtor.agency}</span>
-                          <span className="flex items-center gap-1"><Globe className="h-3.5 w-3.5" />{row.realtor.domain}</span>
+                          {row.realtor.domain && <span className="flex items-center gap-1"><Globe className="h-3.5 w-3.5" />{row.realtor.domain}</span>}
+                          <span className="text-xs text-gray-400">{row.user.email}</span>
                         </div>
                         <div className="flex gap-1.5 mt-1 flex-wrap">
                           <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${row.realtor.listed ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'}`}>
                             {row.realtor.listed ? 'Listed' : 'Unlisted'}
                           </span>
-                          <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${row.realtor.backlink_verified ? 'bg-blue-100 text-blue-700' : 'bg-amber-100 text-amber-700'}`}>
-                            {row.realtor.backlink_verified ? 'Backlink ✓' : 'Backlink pending'}
+                          <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${row.realtor.backlink_verified ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'}`}>
+                            {row.realtor.backlink_verified ? 'Backlink ✓' : 'No backlink'}
                           </span>
-                          {row.realtor.cities.slice(0, 3).map(c => (
+                          {isPending && (
+                            <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-amber-100 text-amber-700">
+                              Pending approval
+                            </span>
+                          )}
+                          {row.realtor.cities?.slice(0, 3).map(c => (
                             <span key={c} className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{c}</span>
                           ))}
-                          {row.realtor.cities.length > 3 && <span className="text-xs text-gray-400">+{row.realtor.cities.length - 3}</span>}
+                          {row.realtor.cities?.length > 3 && <span className="text-xs text-gray-400">+{row.realtor.cities.length - 3}</span>}
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 shrink-0">
+                    <div className="flex items-center gap-2 shrink-0 flex-wrap justify-end">
+                      {isPending && (
+                        <Button size="sm" className="bg-green-600 hover:bg-green-700 text-xs h-7" onClick={() => approveRealtor(row)} disabled={approvingId === row.realtor.id}>
+                          <BadgeCheck className="h-3 w-3 mr-1" />
+                          {approvingId === row.realtor.id ? 'Approving…' : 'Approve & List'}
+                        </Button>
+                      )}
                       <Button size="sm" variant="outline" className="border-blue-300 text-blue-700 text-xs h-7" onClick={() => startEdit(row)}>
                         <Pencil className="h-3 w-3 mr-1" />Edit
                       </Button>
-                      <Button size="sm" variant="outline" className="border-red-300 text-red-600 text-xs h-7" onClick={() => deleteRealtor(row)} disabled={deletingId === row.realtor.id}>
+                      <Button size="sm" variant="outline" className="border-red-300 text-red-600 text-xs h-7" onClick={() => removeRealtor(row)} disabled={deletingId === row.realtor.id}>
                         <Trash2 className="h-3 w-3 mr-1" />{deletingId === row.realtor.id ? 'Removing…' : 'Remove'}
                       </Button>
                     </div>

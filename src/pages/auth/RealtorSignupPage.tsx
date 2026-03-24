@@ -5,7 +5,7 @@ import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Home, AlertCircle, CheckCircle2, RefreshCw, Copy } from 'lucide-react';
+import { Home, AlertCircle, CheckCircle2 } from 'lucide-react';
 
 const GTA_CITIES = [
   'Toronto', 'Mississauga', 'Brampton', 'Markham', 'Vaughan', 'Richmond Hill',
@@ -13,15 +13,10 @@ const GTA_CITIES = [
   'Newmarket', 'Aurora', 'Barrie', 'Cambridge', 'Kitchener', 'Waterloo', 'Guelph',
 ];
 
-const BACKLINK_SNIPPET = `<a href="https://www.asads.ca/trusted-realtors">ASADS Home Inspection</a>`;
-
-type VerifyStatus = 'idle' | 'checking' | 'verified' | 'failed';
-
 export default function RealtorSignupPage() {
   const { signUp } = useAuth();
   const navigate = useNavigate();
 
-  const [step, setStep] = useState<'form' | 'verify' | 'done'>('form');
   const [name, setName] = useState('');
   const [agency, setAgency] = useState('');
   const [email, setEmail] = useState('');
@@ -29,9 +24,9 @@ export default function RealtorSignupPage() {
   const [password, setPassword] = useState('');
   const [domain, setDomain] = useState('');
   const [selectedCities, setSelectedCities] = useState<string[]>([]);
-  const [verifyStatus, setVerifyStatus] = useState<VerifyStatus>('idle');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [done, setDone] = useState(false);
 
   function toggleCity(city: string) {
     setSelectedCities(prev =>
@@ -39,68 +34,43 @@ export default function RealtorSignupPage() {
     );
   }
 
-  async function checkBacklink(): Promise<boolean> {
-    setVerifyStatus('checking');
-    const { data, error } = await supabase.functions.invoke('verify-backlink', {
-      body: { domain: domain.trim() },
-    });
-    const ok = !error && !!data?.verified;
-    setVerifyStatus(ok ? 'verified' : 'failed');
-    return ok;
-  }
-
-  async function createAccount() {
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setError('');
     setLoading(true);
+
     const { error: signUpError } = await signUp(email, password, name, 'realtor', phone);
     if (signUpError) {
       setError(signUpError.message);
       setLoading(false);
       return;
     }
+
     const { data: { user } } = await supabase.auth.getUser();
     if (user) {
       await supabase.from('realtors').insert({
         user_id: user.id,
         agency,
         domain: domain.trim(),
-        backlink_verified: true,
-        listed: true,
+        backlink_verified: false,
+        listed: false,
+        approved: false,
         cities: selectedCities,
       });
     }
+
     setLoading(false);
-    setStep('done');
+    setDone(true);
     setTimeout(() => navigate('/realtor-dashboard'), 2000);
   }
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setError('');
-    setLoading(true);
-
-    if (verifyStatus !== 'verified') {
-      const ok = await checkBacklink();
-      setLoading(false);
-      setStep('verify');
-      if (ok) await createAccount();
-      return;
-    }
-
-    await createAccount();
-  }
-
-  async function handleRecheck() {
-    const ok = await checkBacklink();
-    if (ok) await createAccount();
-  }
-
-  if (step === 'done') {
+  if (done) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center space-y-3">
           <CheckCircle2 className="h-12 w-12 text-green-500 mx-auto" />
-          <h2 className="text-xl font-bold">You're listed!</h2>
-          <p className="text-gray-500">Redirecting to your realtor dashboard…</p>
+          <h2 className="text-xl font-bold text-gray-900">Account created!</h2>
+          <p className="text-gray-500">Taking you to your dashboard…</p>
         </div>
       </div>
     );
@@ -114,8 +84,8 @@ export default function RealtorSignupPage() {
             <Home className="h-6 w-6 text-blue-600" />
             <span className="font-bold text-gray-900">ASADS Home Inspection</span>
           </Link>
-          <h1 className="text-2xl font-bold text-gray-900">Become a Trusted Realtor</h1>
-          <p className="text-gray-500 mt-1">Get listed on our public directory — free, with one backlink</p>
+          <h1 className="text-2xl font-bold text-gray-900">Realtor Portal Sign Up</h1>
+          <p className="text-gray-500 mt-1">Create your account — get listed in our directory after verification</p>
         </div>
 
         <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm">
@@ -123,41 +93,6 @@ export default function RealtorSignupPage() {
             <div className="flex items-center gap-2 bg-red-50 border border-red-200 text-red-700 rounded-lg px-4 py-3 mb-5 text-sm">
               <AlertCircle className="h-4 w-4 shrink-0" />
               {error}
-            </div>
-          )}
-
-          {/* Backlink verification failure state */}
-          {step === 'verify' && verifyStatus === 'failed' && (
-            <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
-              <p className="font-semibold text-amber-800 mb-2">Backlink not found on {domain}</p>
-              <p className="text-sm text-amber-700 mb-3">
-                Add this HTML to your site footer, then click Re-check:
-              </p>
-              <div className="flex items-center gap-2 bg-white border border-amber-300 rounded p-2">
-                <code className="text-xs flex-1 text-gray-700 break-all">{BACKLINK_SNIPPET}</code>
-                <button
-                  onClick={() => navigator.clipboard.writeText(BACKLINK_SNIPPET)}
-                  className="text-amber-600 hover:text-amber-800"
-                  title="Copy"
-                >
-                  <Copy className="h-4 w-4" />
-                </button>
-              </div>
-              <Button
-                className="mt-3 bg-amber-600 hover:bg-amber-700 text-white"
-                onClick={handleRecheck}
-                disabled={verifyStatus === 'checking' || loading}
-              >
-                <RefreshCw className="h-4 w-4 mr-2" />
-                Re-check Backlink
-              </Button>
-            </div>
-          )}
-
-          {step === 'verify' && verifyStatus === 'verified' && (
-            <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center gap-2">
-              <CheckCircle2 className="h-5 w-5 text-green-600" />
-              <p className="text-green-700 font-medium">Backlink verified! Creating your account…</p>
             </div>
           )}
 
@@ -187,18 +122,11 @@ export default function RealtorSignupPage() {
               </div>
             </div>
             <div className="space-y-1.5">
-              <Label htmlFor="domain">Your website domain</Label>
-              <Input
-                id="domain"
-                value={domain}
-                onChange={e => setDomain(e.target.value)}
-                placeholder="yoursite.com"
-                required
-              />
-              <p className="text-xs text-gray-500">We'll verify a do-follow link to asads.ca exists on your site</p>
+              <Label htmlFor="domain">Your website domain <span className="text-gray-400 font-normal">(optional)</span></Label>
+              <Input id="domain" value={domain} onChange={e => setDomain(e.target.value)} placeholder="yoursite.com" />
+              <p className="text-xs text-gray-500">You can add this later from your dashboard to get listed in the directory</p>
             </div>
 
-            {/* Cities */}
             <div className="space-y-2">
               <Label>Cities you serve</Label>
               <div className="flex flex-wrap gap-2">
@@ -220,7 +148,7 @@ export default function RealtorSignupPage() {
             </div>
 
             <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={loading}>
-              {loading ? 'Verifying…' : 'Verify Backlink & Create Account'}
+              {loading ? 'Creating account…' : 'Create Account'}
             </Button>
           </form>
 

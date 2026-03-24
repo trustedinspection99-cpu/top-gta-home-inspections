@@ -26,16 +26,19 @@ const REPORT_STATUS_COLORS: Record<string, string> = {
 export default function AdminDashboard() {
   const [jobs, setJobs] = useState<JobRow[]>([]);
   const [stats, setStats] = useState({ total: 0, pending: 0, completed: 0, realtors: 0 });
+  const [pendingRealtors, setPendingRealtors] = useState(0);
   const [loading, setLoading] = useState(true);
   const [markingPaid, setMarkingPaid] = useState<string>('');
   const [populatingChecklist, setPopulatingChecklist] = useState<string>('');
   const [checklistMsg, setChecklistMsg] = useState<Record<string, string>>({});
 
   async function load() {
-    const [{ data: jobData }, { count: realtorCount }] = await Promise.all([
+    const [{ data: jobData }, { count: realtorCount }, { count: pendingCount }] = await Promise.all([
       supabase.from('jobs').select('*').order('scheduled_at', { ascending: false }).limit(50),
       supabase.from('realtors').select('*', { count: 'exact', head: true }).eq('listed', true),
+      supabase.from('realtors').select('*', { count: 'exact', head: true }).eq('backlink_verified', true).eq('approved', false),
     ]);
+    setPendingRealtors(pendingCount ?? 0);
 
     const jobList = (jobData as DbJob[]) ?? [];
 
@@ -136,10 +139,15 @@ export default function AdminDashboard() {
           <p className="text-gray-500">ASADS inspection management</p>
         </div>
         <div className="flex items-center gap-2">
-          <Button asChild variant="outline" className="border-purple-300 text-purple-700">
+          <Button asChild variant="outline" className="border-purple-300 text-purple-700 relative">
             <Link to="/admin/realtors" className="flex items-center gap-2">
               <BadgeCheck className="h-4 w-4" />
               Realtors
+              {pendingRealtors > 0 && (
+                <span className="absolute -top-1.5 -right-1.5 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">
+                  {pendingRealtors}
+                </span>
+              )}
             </Link>
           </Button>
           <Button asChild className="bg-blue-600 hover:bg-blue-700">
