@@ -39,16 +39,38 @@ export default function RealtorSignupPage() {
     );
   }
 
-  async function checkBacklink() {
+  async function checkBacklink(): Promise<boolean> {
     setVerifyStatus('checking');
     const { data, error } = await supabase.functions.invoke('verify-backlink', {
       body: { domain: domain.trim() },
     });
-    if (error || !data?.verified) {
-      setVerifyStatus('failed');
-    } else {
-      setVerifyStatus('verified');
+    const ok = !error && !!data?.verified;
+    setVerifyStatus(ok ? 'verified' : 'failed');
+    return ok;
+  }
+
+  async function createAccount() {
+    setLoading(true);
+    const { error: signUpError } = await signUp(email, password, name, 'realtor', phone);
+    if (signUpError) {
+      setError(signUpError.message);
+      setLoading(false);
+      return;
     }
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user) {
+      await supabase.from('realtors').insert({
+        user_id: user.id,
+        agency,
+        domain: domain.trim(),
+        backlink_verified: true,
+        listed: true,
+        cities: selectedCities,
+      });
+    }
+    setLoading(false);
+    setStep('done');
+    setTimeout(() => navigate('/realtor-dashboard'), 2000);
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -56,69 +78,20 @@ export default function RealtorSignupPage() {
     setError('');
     setLoading(true);
 
-    // Step 1: verify backlink first
     if (verifyStatus !== 'verified') {
-      await checkBacklink();
+      const ok = await checkBacklink();
       setLoading(false);
       setStep('verify');
+      if (ok) await createAccount();
       return;
     }
 
-    // Create auth account
-    const { error: signUpError } = await signUp(email, password, name, 'realtor', phone);
-    if (signUpError) {
-      setError(signUpError.message);
-      setLoading(false);
-      return;
-    }
-
-    // Get new user id
-    const { data: { user } } = await supabase.auth.getUser();
-    if (user) {
-      await supabase.from('realtors').insert({
-        user_id: user.id,
-        agency,
-        domain: domain.trim(),
-        backlink_verified: true,
-        listed: true,
-        cities: selectedCities,
-      });
-    }
-
-    setLoading(false);
-    setStep('done');
-    setTimeout(() => navigate('/realtor-dashboard'), 2000);
+    await createAccount();
   }
 
   async function handleRecheck() {
-    await checkBacklink();
-    if (verifyStatus === 'verified') {
-      await handleFinalSubmit();
-    }
-  }
-
-  async function handleFinalSubmit() {
-    setLoading(true);
-    const { error: signUpError } = await signUp(email, password, name, 'realtor', phone);
-    if (signUpError) {
-      setError(signUpError.message);
-      setLoading(false);
-      return;
-    }
-    const { data: { user } } = await supabase.auth.getUser();
-    if (user) {
-      await supabase.from('realtors').insert({
-        user_id: user.id,
-        agency,
-        domain: domain.trim(),
-        backlink_verified: true,
-        listed: true,
-        cities: selectedCities,
-      });
-    }
-    setLoading(false);
-    setStep('done');
-    setTimeout(() => navigate('/realtor-dashboard'), 2000);
+    const ok = await checkBacklink();
+    if (ok) await createAccount();
   }
 
   if (step === 'done') {
