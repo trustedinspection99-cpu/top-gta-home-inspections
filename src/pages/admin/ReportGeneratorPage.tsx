@@ -86,28 +86,48 @@ export default function ReportGeneratorPage() {
       restore(j);
     });
     // Load existing report — store ID and restore findings into Scout context
-    supabase.from('reports').select('id, report_data').eq('job_id', jobId)
+    supabase.from('reports').select('id, report_data, storage_url').eq('job_id', jobId)
       .order('generated_at', { ascending: false }).limit(1).maybeSingle()
-      .then(({ data }) => {
+      .then(async ({ data }) => {
         if (!data?.id) return;
         existingReportIdRef.current = data.id;
-        // If no localStorage draft, seed Scout with a summary of previous findings
         const hasDraft = (() => { try { const s = localStorage.getItem(`scout-draft-${jobId}`); return s && JSON.parse(s).length > 1; } catch { return false; } })();
-        if (!hasDraft && data.report_data?.sections) {
+        if (hasDraft) return;
+
+        let lines: string[] = [];
+
+        if (data.report_data?.sections) {
+          // Use structured data if available
           const rd = data.report_data as ReportData;
-          const lines: string[] = [];
+          setReportData(rd);
           rd.sections.forEach(sec => {
             sec.findings.filter(f => f.priority !== 'OK').forEach(f => {
               lines.push(`• [${sec.name} · ${f.priority}] ${f.location ? f.location + ': ' : ''}${f.observation}`);
             });
           });
-          if (lines.length > 0) {
-            setReportData(rd);
-            setMessages(prev => [
-              prev[0],
-              { role: 'assistant', content: `Previous report loaded — here are the findings on file:\n\n${lines.join('\n')}\n\nDescribe any new findings or corrections and I'll update the report.` },
-            ]);
-          }
+        } else if (data.storage_url) {
+          // Fall back to parsing the stored HTML
+          try {
+            const res = await fetch(data.storage_url);
+            const html = await res.text();
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            doc.querySelectorAll('.page-wrap').forEach(wrap => {
+              const section = wrap.querySelector('.section-header h2')?.textContent?.trim() ?? 'General';
+              wrap.querySelectorAll('.finding-card.p1, .finding-card.p2, .finding-card.p3').forEach(card => {
+                const priority = card.classList.contains('p1') ? 'P1' : card.classList.contains('p2') ? 'P2' : 'P3';
+                const title = card.querySelector('.finding-title')?.textContent?.trim() ?? '';
+                const obs = (card.querySelector('.finding-body p')?.textContent ?? '').replace('Observation:', '').trim();
+                lines.push(`• [${section} · ${priority}] ${title ? title + ': ' : ''}${obs}`);
+              });
+            });
+          } catch { /* ignore parse errors */ }
+        }
+
+        if (lines.length > 0) {
+          setMessages(prev => [
+            prev[0],
+            { role: 'assistant', content: `Previous report loaded — here are the findings on file:\n\n${lines.join('\n')}\n\nDescribe any new findings or corrections and I'll update the report.` },
+          ]);
         }
       });
   }, [jobId, draftKey]);
