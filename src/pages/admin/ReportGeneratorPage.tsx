@@ -85,10 +85,31 @@ export default function ReportGeneratorPage() {
       setJob(j);
       restore(j);
     });
-    // Load existing report so admin can update it
-    supabase.from('reports').select('id').eq('job_id', jobId)
+    // Load existing report — store ID and restore findings into Scout context
+    supabase.from('reports').select('id, report_data').eq('job_id', jobId)
       .order('generated_at', { ascending: false }).limit(1).maybeSingle()
-      .then(({ data }) => { if (data?.id) existingReportIdRef.current = data.id; });
+      .then(({ data }) => {
+        if (!data?.id) return;
+        existingReportIdRef.current = data.id;
+        // If no localStorage draft, seed Scout with a summary of previous findings
+        const hasDraft = (() => { try { const s = localStorage.getItem(`scout-draft-${jobId}`); return s && JSON.parse(s).length > 1; } catch { return false; } })();
+        if (!hasDraft && data.report_data?.sections) {
+          const rd = data.report_data as ReportData;
+          const lines: string[] = [];
+          rd.sections.forEach(sec => {
+            sec.findings.filter(f => f.priority !== 'OK').forEach(f => {
+              lines.push(`• [${sec.name} · ${f.priority}] ${f.location ? f.location + ': ' : ''}${f.observation}`);
+            });
+          });
+          if (lines.length > 0) {
+            setReportData(rd);
+            setMessages(prev => [
+              prev[0],
+              { role: 'assistant', content: `Previous report loaded — here are the findings on file:\n\n${lines.join('\n')}\n\nDescribe any new findings or corrections and I'll update the report.` },
+            ]);
+          }
+        }
+      });
   }, [jobId, draftKey]);
 
   // ── Auto-save draft ──
