@@ -54,6 +54,7 @@ export default function ReportGeneratorPage() {
   const fileRef = useRef<HTMLInputElement>(null);
   const recognitionRef = useRef<SpeechRecognition | null>(null);
   const pendingInputRef = useRef('');
+  const alreadySentRef = useRef(false);
 
   // ── Load job + restore draft ──
   useEffect(() => {
@@ -188,14 +189,16 @@ export default function ReportGeneratorPage() {
   }, []);
 
   function handleSend() {
-    if (listening) stopVoice();
+    if (listening) {
+      alreadySentRef.current = true;
+      stopVoice();
+    }
     sendWithText(input, pendingPhotos);
   }
 
   // ── Voice ──
   function stopVoice() {
     if (recognitionRef.current) {
-      recognitionRef.current.onresult = null;
       recognitionRef.current.onend = null;
       recognitionRef.current.stop();
     }
@@ -204,6 +207,8 @@ export default function ReportGeneratorPage() {
 
   function toggleVoice() {
     if (listening) {
+      // Mark as sent so any late onresult from Chrome doesn't re-populate input
+      alreadySentRef.current = true;
       stopVoice();
       const text = pendingInputRef.current.trim();
       if (text) sendWithText(text, pendingPhotos);
@@ -218,12 +223,14 @@ export default function ReportGeneratorPage() {
       return;
     }
 
+    alreadySentRef.current = false;
     const rec = new SR();
     rec.continuous = true;
     rec.interimResults = true;
     rec.lang = 'en-CA';
 
     rec.onresult = (e: SpeechRecognitionEvent) => {
+      if (alreadySentRef.current) return;
       let transcript = '';
       for (let i = 0; i < e.results.length; i++) {
         transcript += e.results[i][0].transcript;
