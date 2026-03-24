@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { supabase, DbJob, DbReport } from '@/lib/supabase';
 import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
-import { PlusCircle, FileText, Clock, CheckCircle2, Calendar, Users, DollarSign, Send, ListChecks, BadgeCheck } from 'lucide-react';
+import { PlusCircle, FileText, Clock, CheckCircle2, Calendar, Users, DollarSign, Send, ListChecks, BadgeCheck, Link2 } from 'lucide-react';
 
 interface JobRow extends DbJob {
   report?: DbReport;
@@ -31,6 +31,10 @@ export default function AdminDashboard() {
   const [markingPaid, setMarkingPaid] = useState<string>('');
   const [populatingChecklist, setPopulatingChecklist] = useState<string>('');
   const [checklistMsg, setChecklistMsg] = useState<Record<string, string>>({});
+  const [attachingJob, setAttachingJob] = useState<JobRow | null>(null);
+  const [attachUrl, setAttachUrl] = useState('');
+  const [attachSaving, setAttachSaving] = useState(false);
+  const [attachError, setAttachError] = useState('');
 
   async function load() {
     const [{ data: jobData }, { count: realtorCount }, { count: pendingCount }] = await Promise.all([
@@ -129,6 +133,37 @@ export default function AdminDashboard() {
       .eq('id', report.id);
     await load();
     setMarkingPaid('');
+  }
+
+  async function saveAttachedReport() {
+    if (!attachingJob || !attachUrl.trim()) return;
+    setAttachSaving(true);
+    setAttachError('');
+    const job = attachingJob;
+
+    // Upsert job to completed
+    const { error: jobErr } = await supabase.from('jobs')
+      .update({ status: 'completed', completed_at: new Date().toISOString() })
+      .eq('id', job.id);
+    if (jobErr) { setAttachError('Failed to update job: ' + jobErr.message); setAttachSaving(false); return; }
+
+    // Check if report already exists for this job
+    const { data: existing } = await supabase.from('reports').select('id').eq('job_id', job.id).maybeSingle();
+    let reportErr;
+    if (existing?.id) {
+      ({ error: reportErr } = await supabase.from('reports')
+        .update({ storage_url: attachUrl.trim(), status: 'sent', generated_at: new Date().toISOString() })
+        .eq('id', existing.id));
+    } else {
+      ({ error: reportErr } = await supabase.from('reports')
+        .insert({ job_id: job.id, storage_url: attachUrl.trim(), status: 'sent', report_data: null }));
+    }
+    if (reportErr) { setAttachError('Failed to save report: ' + reportErr.message); setAttachSaving(false); return; }
+
+    setAttachingJob(null);
+    setAttachUrl('');
+    setAttachSaving(false);
+    await load();
   }
 
   return (
@@ -262,6 +297,19 @@ export default function AdminDashboard() {
                       </div>
                     )}
 
+                    {/* Attach external report URL */}
+                    {job.status !== 'cancelled' && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="border-amber-300 text-amber-700 text-xs h-7 hover:bg-amber-50"
+                        onClick={() => { setAttachingJob(job); setAttachUrl(''); setAttachError(''); }}
+                      >
+                        <Link2 className="h-3 w-3 mr-1" />
+                        Attach Report
+                      </Button>
+                    )}
+
                     {job.status !== 'cancelled' && (
                       <Button asChild size="sm" variant="outline" className="border-blue-300 text-blue-700 text-xs h-7">
                         <Link to={`/admin/jobs/${job.id}/report`} className="flex items-center gap-1">
@@ -280,6 +328,45 @@ export default function AdminDashboard() {
           </div>
         )}
       </div>
+      {/* Attach Report Modal */}
+      {attachingJob && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-6">
+            <h2 className="text-lg font-bold text-gray-900 mb-1">Attach Report</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              {attachingJob.address}, {attachingJob.city}
+            </p>
+            <p className="text-xs text-gray-500 mb-3">
+              Run <code className="bg-gray-100 px-1 rounded">node scripts/upload-report-to-supabase.mjs</code>, then paste the Report URL here.
+            </p>
+            <label className="block text-xs font-semibold text-gray-700 mb-1">Report Storage URL</label>
+            <input
+              type="url"
+              value={attachUrl}
+              onChange={e => setAttachUrl(e.target.value)}
+              placeholder="https://wjxbojjhyocrxqkfnxmz.supabase.co/storage/v1/object/public/Reports/..."
+              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3"
+            />
+            {attachError && <p className="text-xs text-red-600 mb-3">{attachError}</p>}
+            <p className="text-xs text-gray-400 mb-4">
+              Job will be marked <strong>completed</strong> and report status set to <strong>sent</strong>.
+              Click "Mark Paid" after receiving payment to make it visible to the client.
+            </p>
+            <div className="flex gap-3">
+              <Button
+                className="bg-blue-600 hover:bg-blue-700 flex-1"
+                onClick={saveAttachedReport}
+                disabled={attachSaving || !attachUrl.trim()}
+              >
+                {attachSaving ? 'Saving…' : 'Save Report'}
+              </Button>
+              <Button variant="outline" onClick={() => setAttachingJob(null)} disabled={attachSaving}>
+                Cancel
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </PortalLayout>
   );
 }
