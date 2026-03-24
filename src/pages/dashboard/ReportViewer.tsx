@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { supabase, DbReport } from '@/lib/supabase';
+import { supabase, DbReport, DbJob } from '@/lib/supabase';
 import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Printer, AlertCircle } from 'lucide-react';
@@ -8,12 +8,14 @@ import { ArrowLeft, Printer, AlertCircle } from 'lucide-react';
 export default function ReportViewer() {
   const { id } = useParams<{ id: string }>();
   const [report, setReport] = useState<DbReport | null>(null);
+  const [job, setJob] = useState<DbJob | null>(null);
   const [htmlContent, setHtmlContent] = useState<string>('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   useEffect(() => {
     if (!id) return;
+    const originalTitle = document.title;
     async function load() {
       const { data, error: dbErr } = await supabase
         .from('reports')
@@ -30,6 +32,15 @@ export default function ReportViewer() {
       const rep = data as DbReport;
       setReport(rep);
 
+      // Fetch job for filename
+      const { data: jobData } = await supabase.from('jobs').select('*').eq('id', rep.job_id).single();
+      if (jobData) {
+        const j = jobData as DbJob;
+        setJob(j);
+        const date = j.completed_at ? new Date(j.completed_at).toLocaleDateString('en-CA') : '';
+        document.title = `ASADS Inspection Report - ${j.address}, ${j.city}${date ? ` - ${date}` : ''}`;
+      }
+
       // Fetch HTML from storage
       const res = await fetch(rep.storage_url);
       if (!res.ok) {
@@ -42,6 +53,7 @@ export default function ReportViewer() {
       setLoading(false);
     }
     load();
+    return () => { document.title = originalTitle; };
   }, [id]);
 
   return (
