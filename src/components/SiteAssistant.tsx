@@ -366,7 +366,7 @@ const SiteAssistant: React.FC = () => {
       const { data, error } = await supabase.functions.invoke('scout-booking', {
         body: { messages: cleanMessages },
       });
-      if (error) throw new Error(`${error.message} | fn-error: ${JSON.stringify(data)}`);
+      if (error) throw error;
 
       const reply: string = data.content ?? 'Sorry, something went wrong. Please try again.';
       setTyping(false);
@@ -378,10 +378,9 @@ const SiteAssistant: React.FC = () => {
       if (parsed) {
         await handleBookingReady(parsed);
       }
-    } catch (e) {
+    } catch {
       setTyping(false);
-      const msg = e instanceof Error ? e.message : String(e);
-      setMessages(prev => [...prev, { id: nid(), from: 'bot', text: `Error: ${msg}\n\nCall **(647) 801-9311** if this persists.` }]);
+      setMessages(prev => [...prev, { id: nid(), from: 'bot', text: 'Something went wrong. Please try again or call **(647) 801-9311**.' }]);
     }
   };
 
