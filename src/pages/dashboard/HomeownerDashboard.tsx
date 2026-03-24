@@ -33,6 +33,8 @@ export default function HomeownerDashboard() {
             .from('reports')
             .select('*')
             .eq('job_id', job.id)
+            .order('generated_at', { ascending: false })
+            .limit(1)
             .maybeSingle();
           return { ...job, report: rep ?? undefined } as JobWithReport;
         })

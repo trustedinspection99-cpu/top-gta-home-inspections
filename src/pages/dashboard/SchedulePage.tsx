@@ -36,7 +36,7 @@ export default function SchedulePage() {
       const withReports = await Promise.all(
         (jobData as DbJob[]).map(async job => {
           const { data: rep } = await supabase
-            .from('reports').select('*').eq('job_id', job.id).maybeSingle();
+            .from('reports').select('*').eq('job_id', job.id).order('generated_at', { ascending: false }).limit(1).maybeSingle();
           return { ...job, report: rep ?? undefined } as JobWithReport;
         })
       );
