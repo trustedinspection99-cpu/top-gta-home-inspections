@@ -1,5 +1,4 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import Anthropic from "npm:@anthropic-ai/sdk";
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -151,16 +150,33 @@ serve(async (req) => {
   try {
     const { messages } = await req.json();
 
-    const client = new Anthropic({ apiKey: Deno.env.get("ANTHROPIC_API_KEY")! });
+    const ANTHROPIC_KEY = Deno.env.get("ANTHROPIC_API_KEY");
+    if (!ANTHROPIC_KEY) {
+      return new Response(JSON.stringify({ error: "ANTHROPIC_API_KEY not configured" }), { headers: CORS_HEADERS, status: 500 });
+    }
 
-    const response = await client.messages.create({
-      model: "claude-sonnet-4-6",
-      max_tokens: 1024,
-      system: SYSTEM_PROMPT,
-      messages,
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": ANTHROPIC_KEY,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "claude-haiku-4-5-20251001",
+        max_tokens: 1024,
+        system: SYSTEM_PROMPT,
+        messages,
+      }),
     });
 
-    const content = response.content[0].type === "text" ? response.content[0].text : "";
+    if (!res.ok) {
+      const errBody = await res.text();
+      return new Response(JSON.stringify({ error: `Anthropic API error ${res.status}: ${errBody}` }), { headers: CORS_HEADERS, status: 500 });
+    }
+
+    const data = await res.json();
+    const content = data.content?.[0]?.text ?? "";
     return new Response(JSON.stringify({ content }), { headers: CORS_HEADERS });
   } catch (e) {
     return new Response(JSON.stringify({ error: String(e) }), { headers: CORS_HEADERS, status: 500 });

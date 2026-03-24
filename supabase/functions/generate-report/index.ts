@@ -1,4 +1,3 @@
-import Anthropic from 'npm:@anthropic-ai/sdk';
 
 const SYSTEM = `You are Scout — a Master Home Inspector with 50 years of field experience, fully certified under OAHI (Ontario Association of Home Inspectors), CAHPI (Canadian Association of Home & Property Inspectors) 2023 National Standards, and ASHI Standards of Practice. You have inspected thousands of Ontario homes and know every building system inside and out.
 
@@ -151,7 +150,7 @@ Deno.serve(async (req) => {
       });
     }
 
-    const anthropic = new Anthropic({ apiKey });
+    const CORS = { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' };
 
     const claudeMessages = messages.map((m: { role: string; content: string }) => ({
       role: m.role,
@@ -159,7 +158,16 @@ Deno.serve(async (req) => {
     }));
 
     if (mode === 'summarize') {
-      claudeMessages.push({
+      const cleanedMessages = claudeMessages
+        .filter((m: { role: string; content: string }) =>
+          !m.content.includes('<!DOCTYPE') && !m.content.includes('<html')
+        )
+        .map((m: { role: string; content: string }) => ({
+          ...m,
+          content: m.content.length > 2000 ? m.content.slice(0, 2000) + '…' : m.content,
+        }));
+
+      cleanedMessages.push({
         role: 'user',
         content: `Extract all inspection findings from this conversation and return ONLY a valid JSON object (no markdown, no code fences, no preamble) matching this exact structure:
 
@@ -193,56 +201,40 @@ Deno.serve(async (req) => {
 
 Only include sections that have findings. Return ONLY the raw JSON object.`,
       });
-    }
 
-    const CORS = { 'Access-Control-Allow-Origin': '*' };
-
-    if (mode === 'summarize') {
-      // Strip HTML-heavy messages (failed generation attempts) and truncate long ones
-      const cleanedMessages = claudeMessages
-        .filter((m: { role: string; content: string }) =>
-          !m.content.includes('<!DOCTYPE') && !m.content.includes('<html')
-        )
-        .map((m: { role: string; content: string }) => ({
-          ...m,
-          content: m.content.length > 2000 ? m.content.slice(0, 2000) + '…' : m.content,
-        }));
-
-      const response = await anthropic.messages.create({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 4096,
-        system: SYSTEM,
-        messages: cleanedMessages,
+      const res = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: { 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+        body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 4096, system: SYSTEM, messages: cleanedMessages }),
       });
-      const text = response.content[0].type === 'text' ? response.content[0].text : '{}';
+      if (!res.ok) {
+        const errBody = await res.text();
+        return new Response(JSON.stringify({ error: `Anthropic error ${res.status}: ${errBody}` }), { headers: CORS, status: 500 });
+      }
+      const data = await res.json();
+      const text = data.content?.[0]?.text ?? '{}';
       const clean = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim();
       try {
         const parsed = JSON.parse(clean);
-        return new Response(JSON.stringify({ data: parsed }), {
-          headers: { 'Content-Type': 'application/json', ...CORS },
-        });
+        return new Response(JSON.stringify({ data: parsed }), { headers: CORS });
       } catch {
-        return new Response(JSON.stringify({ error: 'Failed to parse Scout JSON', raw: clean }), {
-          headers: { 'Content-Type': 'application/json', ...CORS },
-          status: 500,
-        });
+        return new Response(JSON.stringify({ error: 'Failed to parse Scout JSON', raw: clean }), { headers: CORS, status: 500 });
       }
     }
 
-    // Chat mode — SDK JSON (fast, no streaming needed)
-    const response = await anthropic.messages.create({
-      model: 'claude-sonnet-4-6',
-      max_tokens: 2048,
-      system: SYSTEM,
-      messages: claudeMessages,
+    // Chat mode
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+      body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 2048, system: SYSTEM, messages: claudeMessages }),
     });
-
-    const text = response.content[0].type === 'text' ? response.content[0].text : '';
-
-    return new Response(
-      JSON.stringify({ reply: text }),
-      { headers: { 'Content-Type': 'application/json', ...CORS } }
-    );
+    if (!res.ok) {
+      const errBody = await res.text();
+      return new Response(JSON.stringify({ error: `Anthropic error ${res.status}: ${errBody}` }), { headers: CORS, status: 500 });
+    }
+    const data = await res.json();
+    const text = data.content?.[0]?.text ?? '';
+    return new Response(JSON.stringify({ reply: text }), { headers: CORS });
   } catch (err) {
     return new Response(JSON.stringify({ error: String(err) }), {
       headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
