@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import SiteAssistant from '@/components/SiteAssistant';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
@@ -109,6 +110,7 @@ export default function PortalLayout({ children }: { children: ReactNode }) {
           {children}
         </div>
       </main>
+      <SiteAssistant />
     </div>
   );
 }
