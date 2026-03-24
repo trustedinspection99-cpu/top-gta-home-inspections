@@ -250,7 +250,7 @@ export default function AdminDashboard() {
                       <Button asChild size="sm" variant="outline" className="border-blue-300 text-blue-700 text-xs h-7">
                         <Link to={`/admin/jobs/${job.id}/report`} className="flex items-center gap-1">
                           {job.report ? (
-                            <><Send className="h-3 w-3" />Report</>
+                            <><Send className="h-3 w-3" />Scout / Update Report</>
                           ) : (
                             <><FileText className="h-3 w-3" />Start Scout</>
                           )}
