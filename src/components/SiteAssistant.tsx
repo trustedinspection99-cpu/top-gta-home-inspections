@@ -366,7 +366,7 @@ const SiteAssistant: React.FC = () => {
       const { data, error } = await supabase.functions.invoke('scout-booking', {
         body: { messages: cleanMessages },
       });
-      if (error) throw error;
+      if (error) throw new Error(`${error.message} | fn-error: ${JSON.stringify(data)}`);
 
       const reply: string = data.content ?? 'Sorry, something went wrong. Please try again.';
       setTyping(false);
