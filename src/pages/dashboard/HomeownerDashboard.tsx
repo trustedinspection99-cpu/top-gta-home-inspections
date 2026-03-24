@@ -6,6 +6,8 @@ import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
 import { Calendar, FileText, Clock, CheckCircle2, AlertCircle, PhoneCall, CreditCard } from 'lucide-react';
 
+function openChat() { window.dispatchEvent(new Event('open-scout-chat')); }
+
 interface JobWithReport extends DbJob {
   report?: DbReport;
 }
@@ -84,11 +86,9 @@ export default function HomeownerDashboard() {
           <FileText className="h-12 w-12 text-gray-300 mx-auto mb-4" />
           <h2 className="text-lg font-semibold text-gray-700 mb-2">No inspections yet</h2>
           <p className="text-gray-500 mb-6">Book your first inspection to get started</p>
-          <Button asChild className="bg-blue-600 hover:bg-blue-700">
-            <Link to="/dashboard/book" className="flex items-center gap-2">
-              <PhoneCall className="h-4 w-4" />
-              Book an Inspection
-            </Link>
+          <Button onClick={openChat} className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2">
+            <PhoneCall className="h-4 w-4" />
+            Book an Inspection
           </Button>
         </div>
       ) : (
