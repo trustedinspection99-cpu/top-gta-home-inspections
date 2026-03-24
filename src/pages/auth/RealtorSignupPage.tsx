@@ -13,7 +13,7 @@ const GTA_CITIES = [
   'Newmarket', 'Aurora', 'Barrie', 'Cambridge', 'Kitchener', 'Waterloo', 'Guelph',
 ];
 
-const BACKLINK_SNIPPET = `<a href="https://www.asads.ca">ASADS Home Inspection</a>`;
+const BACKLINK_SNIPPET = `<a href="https://www.asads.ca/trusted-realtors">ASADS Home Inspection</a>`;
 
 type VerifyStatus = 'idle' | 'checking' | 'verified' | 'failed';
 
