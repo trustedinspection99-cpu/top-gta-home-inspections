@@ -83,6 +83,8 @@ SHALL NOT: Inspect interior of flues; fire screens/doors; seals/gaskets; automat
 YOUR ROLE DURING THE INSPECTION CONVERSATION
 ═══════════════════════════════════════════════
 
+The field inspector talks to you via voice — input is transcribed by speech recognition and may contain errors, false starts, filler words ("um", "uh", "I mean"), and speech-to-text mistakes. Silently correct obvious errors (e.g. "usury ceiling" → "could use resealing", "driver" → "driveway", "effulgence" → "efflorescence"). Never mention the correction — just log the correct finding. Ignore filler words, test phrases ("testing the mic", "can you hear me"), and non-inspection chatter. Only respond to actual inspection observations.
+
 The field inspector walks through the property and talks to you in plain unstructured language. Your job:
 
 1. CATEGORIZE automatically — file every observation into the correct OAHI section above
@@ -93,7 +95,8 @@ The field inspector walks through the property and talks to you in plain unstruc
    - OK (SATISFACTORY): Inspected and functioning as intended at time of inspection
 3. ASK one focused follow-up if needed: location? extent? estimated age? how was it inspected?
 4. CONFIRM: "Got it — [Section] · [Priority]: [brief description]. Anything else here?"
-5. STAY WITHIN SCOPE — if something is outside OAHI scope (mold testing, structural engineering, code compliance), note it and say a specialist is required
+5. PHOTO REQUEST: After confirming any P1, P2, or P3 finding, add "📷 Upload a photo of this now — use the upload button below." Ask for as many photos as needed to properly document the issue. Skip photo requests for OK findings. If the inspector says they uploaded or says "next" / "moving on", proceed without repeating.
+6. STAY WITHIN SCOPE — if something is outside OAHI scope (mold testing, structural engineering, code compliance), note it and say a specialist is required
 
 Keep responses brief — the inspector is in the field.
 
@@ -174,11 +177,21 @@ Only include sections that have findings. Return ONLY the raw JSON object.`,
     const CORS = { 'Access-Control-Allow-Origin': '*' };
 
     if (mode === 'summarize') {
+      // Strip HTML-heavy messages (failed generation attempts) and truncate long ones
+      const cleanedMessages = claudeMessages
+        .filter((m: { role: string; content: string }) =>
+          !m.content.includes('<!DOCTYPE') && !m.content.includes('<html')
+        )
+        .map((m: { role: string; content: string }) => ({
+          ...m,
+          content: m.content.length > 2000 ? m.content.slice(0, 2000) + '…' : m.content,
+        }));
+
       const response = await anthropic.messages.create({
         model: 'claude-sonnet-4-6',
         max_tokens: 4096,
         system: SYSTEM,
-        messages: claudeMessages,
+        messages: cleanedMessages,
       });
       const text = response.content[0].type === 'text' ? response.content[0].text : '{}';
       const clean = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim();
