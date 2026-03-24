@@ -188,14 +188,24 @@ export default function ReportGeneratorPage() {
   }, []);
 
   function handleSend() {
+    if (listening) stopVoice();
     sendWithText(input, pendingPhotos);
   }
 
   // ── Voice ──
+  function stopVoice() {
+    if (recognitionRef.current) {
+      recognitionRef.current.onend = null;
+      recognitionRef.current.stop();
+    }
+    setListening(false);
+  }
+
   function toggleVoice() {
     if (listening) {
-      recognitionRef.current?.stop();
-      setListening(false);
+      stopVoice();
+      const text = pendingInputRef.current.trim();
+      if (text) sendWithText(text, pendingPhotos);
       return;
     }
 
@@ -223,8 +233,6 @@ export default function ReportGeneratorPage() {
 
     rec.onend = () => {
       setListening(false);
-      const text = pendingInputRef.current.trim();
-      if (text) sendWithText(text, pendingPhotos);
     };
 
     rec.onerror = () => {
