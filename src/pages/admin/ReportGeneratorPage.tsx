@@ -195,6 +195,7 @@ export default function ReportGeneratorPage() {
   // ── Voice ──
   function stopVoice() {
     if (recognitionRef.current) {
+      recognitionRef.current.onresult = null;
       recognitionRef.current.onend = null;
       recognitionRef.current.stop();
     }
