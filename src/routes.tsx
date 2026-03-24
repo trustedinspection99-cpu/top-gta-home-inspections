@@ -80,6 +80,7 @@ const RealtorDashboard = lazy(() => import('./pages/realtor/RealtorDashboard'));
 const AdminDashboard = lazy(() => import('./pages/admin/AdminDashboard'));
 const NewJobPage = lazy(() => import('./pages/admin/NewJobPage'));
 const ReportGeneratorPage = lazy(() => import('./pages/admin/ReportGeneratorPage'));
+const AdminRealtorsPage = lazy(() => import('./pages/admin/AdminRealtorsPage'));
 const TrustedRealtorsPage = lazy(() => import('./pages/TrustedRealtorsPage'));
 
 export const routes: RouteObject[] = [
@@ -134,6 +135,7 @@ export const routes: RouteObject[] = [
       { path: 'admin', element: <ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute> },
       { path: 'admin/jobs/new', element: <ProtectedRoute role="admin"><NewJobPage /></ProtectedRoute> },
       { path: 'admin/jobs/:id/report', element: <ProtectedRoute role="admin"><ReportGeneratorPage /></ProtectedRoute> },
+      { path: 'admin/realtors', element: <ProtectedRoute role="admin"><AdminRealtorsPage /></ProtectedRoute> },
       { path: 'trusted-realtors', element: <TrustedRealtorsPage /> },
 
       { path: '*', element: <NotFound /> },
