@@ -55,7 +55,23 @@ export default function HomeownerDashboard() {
       <h1 className="text-2xl font-bold text-gray-900 mb-2">
         Welcome back{dbUser?.name ? `, ${dbUser.name.split(' ')[0]}` : ''}
       </h1>
-      <p className="text-gray-500 mb-8">Your ASADS inspection portal</p>
+      <p className="text-gray-500 mb-6">Your ASADS inspection portal</p>
+
+      {!loading && jobs.length > 0 && (
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
+          {[
+            { label: 'Total', value: jobs.length, color: 'bg-blue-50 text-blue-700' },
+            { label: 'Scheduled', value: jobs.filter(j => j.status === 'scheduled').length, color: 'bg-purple-50 text-purple-700' },
+            { label: 'In Progress', value: jobs.filter(j => j.status === 'in_progress').length, color: 'bg-amber-50 text-amber-700' },
+            { label: 'Completed', value: jobs.filter(j => j.status === 'completed').length, color: 'bg-green-50 text-green-700' },
+          ].map(s => (
+            <div key={s.label} className={`${s.color} rounded-xl p-4 text-center`}>
+              <p className="text-2xl font-bold">{s.value}</p>
+              <p className="text-xs font-medium mt-0.5 opacity-80">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
       {loading ? (
         <div className="space-y-4">
