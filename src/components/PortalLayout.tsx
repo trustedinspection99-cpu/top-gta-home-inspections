@@ -29,7 +29,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'My Dashboard', path: '/realtor-dashboard', icon: <Star className="h-4 w-4" />, roles: ['realtor'] },
   { label: 'Admin Dashboard', path: '/admin', icon: <LayoutDashboard className="h-4 w-4" />, roles: ['admin'] },
   { label: 'New Job', path: '/admin/jobs/new', icon: <PlusCircle className="h-4 w-4" />, roles: ['admin'] },
-  { label: 'Trusted Realtors', path: '/trusted-realtors', icon: <Users className="h-4 w-4" />, roles: ['homeowner', 'realtor', 'admin'] },
+  { label: 'Trusted Realtors', path: '/trusted-realtors', icon: <Users className="h-4 w-4" />, roles: ['realtor', 'admin'] },
 ];
 
 export default function PortalLayout({ children }: { children: ReactNode }) {
