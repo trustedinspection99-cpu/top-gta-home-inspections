@@ -378,9 +378,10 @@ const SiteAssistant: React.FC = () => {
       if (parsed) {
         await handleBookingReady(parsed);
       }
-    } catch {
+    } catch (e) {
       setTyping(false);
-      setMessages(prev => [...prev, { id: nid(), from: 'bot', text: 'Something went wrong. Please try again or call **(647) 801-9311**.' }]);
+      const msg = e instanceof Error ? e.message : String(e);
+      setMessages(prev => [...prev, { id: nid(), from: 'bot', text: `Error: ${msg}\n\nCall **(647) 801-9311** if this persists.` }]);
     }
   };
 
