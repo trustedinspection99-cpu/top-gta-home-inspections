@@ -3,7 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { supabase, DbJob } from '@/lib/supabase';
 import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Sparkles, CheckCircle2, AlertCircle, Send, ImagePlus, Mic, MicOff, Loader2 } from 'lucide-react';
+import { ArrowLeft, Sparkles, CheckCircle2, AlertCircle, Send, ImagePlus, Mic, MicOff, Loader2, Camera } from 'lucide-react';
 import { buildReportHtml, ReportData } from '@/lib/reportTemplate';
 
 interface Message {
@@ -15,7 +15,7 @@ interface Message {
 function greeting(job?: DbJob | null) {
   return `Hi! I'm Scout, your AI inspection assistant.\n\n${
     job ? `This is a **${job.inspection_type}** at **${job.address}, ${job.city}**.\n\n` : ''
-  }Tap the mic and describe what you see — I'll categorize everything automatically by OAHI section.\n\nUpload photos anytime. They'll be stored and embedded in the final report.\n\nWhen you've covered everything, tap **Generate Report**.`;
+  }Tap the mic and walk me through each system. After I confirm each finding, tap **Tag photo** to attach your photo right then — no separate photo step at the end.\n\nWhen all 10 sections are covered, tap **Generate Report** — the report will auto-save instantly.`;
 }
 
 export default function ReportGeneratorPage() {
@@ -43,6 +43,9 @@ export default function ReportGeneratorPage() {
   const [saving, setSaving] = useState(false);
   const [savedReportId, setSavedReportId] = useState('');   // set after saving this session
   const existingReportIdRef = useRef('');                    // pre-loaded from DB on mount
+  // Photos tagged inline to specific Scout confirmation messages during inspection
+  const [msgPhotos, setMsgPhotos] = useState<Record<number, string[]>>({});
+  const [uploadingMsgPhoto, setUploadingMsgPhoto] = useState<number | null>(null);
   const [sendingReport, setSendingReport] = useState(false);
   const [sent, setSent] = useState(false);
   const [magicLink, setMagicLink] = useState('');
@@ -300,30 +303,124 @@ export default function ReportGeneratorPage() {
     setError('');
   }
 
-  // ── Generate report: extract JSON → photo step ──
+  // ── Detect Scout finding confirmation messages ──
+  function isConfirmation(msg: Message): boolean {
+    return msg.role === 'assistant' && /\b(P1|P2|P3)\b/.test(msg.content);
+  }
+
+  // ── Tag a photo to a specific Scout message during inspection ──
+  async function handleTagPhoto(msgIdx: number, file: File) {
+    setUploadingMsgPhoto(msgIdx);
+    const ext = file.name.split('.').pop() ?? 'jpg';
+    const fileName = `inspections/${jobId ?? 'draft'}/tagged-${msgIdx}-${Date.now()}.${ext}`;
+    const { error: uploadErr } = await supabase.storage
+      .from('Reports').upload(fileName, file, { contentType: file.type, upsert: false });
+    if (!uploadErr) {
+      const { data: { publicUrl } } = supabase.storage.from('Reports').getPublicUrl(fileName);
+      setMsgPhotos(prev => ({ ...prev, [msgIdx]: [...(prev[msgIdx] ?? []), publicUrl] }));
+    }
+    setUploadingMsgPhoto(null);
+  }
+
+  // ── OAHI section coverage tracker ──
+  const OAHI_SECTIONS = ['Structural', 'Exterior', 'Roof', 'Plumbing', 'Electrical', 'Heating', 'Air Conditioning', 'Interior', 'Insulation', 'Fireplace'];
+  function coveredSections(msgs: Message[]): Set<string> {
+    const text = msgs.filter(m => m.role === 'assistant').map(m => m.content).join(' ');
+    const covered = new Set<string>();
+    for (const s of OAHI_SECTIONS) { if (new RegExp(s, 'i').test(text)) covered.add(s); }
+    return covered;
+  }
+
+  // ── Generate report → auto-assign photos → auto-build → auto-save ──
   async function generateReport() {
     setGenerating(true);
     setError('');
-    try {
-      const { data, error: fnErr } = await supabase.functions.invoke('generate-report', {
-        body: {
-          mode: 'summarize',
-          messages: messages.map(m => ({ role: m.role, content: m.content })),
-        },
-      });
-      if (fnErr || !data?.data) {
-        setError(fnErr?.message ?? 'Scout did not return findings. Try again.');
-        setGenerating(false);
-        return;
+    let rd: ReportData | null = null;
+
+    // Retry up to 3 times
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        const { data, error: fnErr } = await supabase.functions.invoke('generate-report', {
+          body: { mode: 'summarize', messages: messages.map(m => ({ role: m.role, content: m.content })) },
+        });
+        if (fnErr || !data?.data) {
+          if (attempt === 3) { setError(fnErr?.message ?? 'Scout did not return findings after 3 attempts.'); setGenerating(false); return; }
+          await new Promise(r => setTimeout(r, 1500 * attempt));
+          continue;
+        }
+        rd = data.data as ReportData;
+        break;
+      } catch (e: unknown) {
+        if (attempt === 3) { setError((e as Error).message); setGenerating(false); return; }
+        await new Promise(r => setTimeout(r, 1500 * attempt));
       }
-      setReportData(data.data as ReportData);
-      setFindingPhotos({});
-      setCoverPhoto('');
-      setReportHtml('');
-      setPhotoStep(true);
-    } catch (e: unknown) {
-      setError((e as Error).message);
     }
+    if (!rd) { setGenerating(false); return; }
+
+    // Auto-assign inline-tagged photos to findings by conversation order
+    const confirmationIdxs = messages.map((m, i) => ({ i, ok: isConfirmation(m) })).filter(x => x.ok).map(x => x.i);
+    const deficientFindings: { si: number; fi: number }[] = [];
+    rd.sections.forEach((s, si) => s.findings.forEach((f, fi) => { if (f.priority !== 'OK') deficientFindings.push({ si, fi }); }));
+
+    const autoFindingPhotos: Record<string, string[]> = {};
+    confirmationIdxs.forEach((msgIdx, order) => {
+      if (order < deficientFindings.length && msgPhotos[msgIdx]?.length) {
+        const { si, fi } = deficientFindings[order];
+        autoFindingPhotos[`${si}-${fi}`] = msgPhotos[msgIdx];
+      }
+    });
+
+    // Also merge any existing manually-set finding photos
+    const mergedFindingPhotos = { ...autoFindingPhotos, ...findingPhotos };
+
+    // Build enriched report
+    const allChatPhotos = messages.flatMap(m => m.photoUrls ?? []);
+    const enriched: ReportData = {
+      ...rd,
+      sections: rd.sections.map((section, si) => ({
+        ...section,
+        findings: section.findings.map((finding, fi) => {
+          const urls = mergedFindingPhotos[`${si}-${fi}`] ?? [];
+          return urls.length > 0 ? { ...finding, photoUrls: [...urls, ...(finding.photoUrls ?? [])] } : finding;
+        }),
+      })),
+    };
+
+    const jobInfo = {
+      address: job?.address ?? 'Property Address',
+      city: job?.city ?? '',
+      inspectionType: job?.inspection_type ?? 'Home Inspection',
+      inspectionDate: job?.scheduled_at ? new Date(job.scheduled_at).toLocaleDateString('en-CA') : new Date().toLocaleDateString('en-CA'),
+      inspector: 'ASADS Certified Inspector',
+    };
+
+    const html = buildReportHtml(enriched, jobInfo, allChatPhotos, coverPhoto || undefined);
+    setReportData(rd);
+    setFindingPhotos(mergedFindingPhotos);
+    setReportHtml(html);
+    localStorage.setItem(reportDataKey, JSON.stringify(rd));
+
+    // Auto-save immediately — no manual steps
+    if (jobId) {
+      setSaving(true);
+      const fileName = `report-${jobId}-${Date.now()}.html`;
+      const blob = new Blob([html], { type: 'text/html' });
+      const { error: uploadErr } = await supabase.storage.from('Reports').upload(fileName, blob, { contentType: 'text/html', upsert: true });
+      if (!uploadErr) {
+        const { data: { publicUrl } } = supabase.storage.from('Reports').getPublicUrl(fileName);
+        const reportIdToUpdate = existingReportIdRef.current;
+        if (reportIdToUpdate) {
+          await supabase.from('reports').update({ storage_url: publicUrl, report_data: rd, generated_at: new Date().toISOString() }).eq('id', reportIdToUpdate);
+          setSavedReportId(reportIdToUpdate);
+        } else {
+          const { data: reportRow } = await supabase.from('reports').insert({ job_id: jobId, storage_url: publicUrl, status: 'saved', report_data: rd }).select('id').single();
+          if (reportRow) setSavedReportId(reportRow.id);
+          await supabase.from('jobs').update({ status: 'completed', completed_at: new Date().toISOString() }).eq('id', jobId);
+        }
+      }
+      setSaving(false);
+    }
+
     setGenerating(false);
   }
 
@@ -723,8 +820,22 @@ export default function ReportGeneratorPage() {
         </div>
       )}
 
+      {/* Section coverage tracker */}
+      {!reportHtml && messages.length > 1 && (() => {
+        const covered = coveredSections(messages);
+        return (
+          <div className="flex flex-wrap gap-1.5 mb-3 px-1">
+            {OAHI_SECTIONS.map(s => (
+              <span key={s} className={`text-xs px-2 py-0.5 rounded-full font-medium border ${covered.has(s) ? 'bg-green-50 text-green-700 border-green-200' : 'bg-gray-50 text-gray-400 border-gray-200'}`}>
+                {covered.has(s) ? '✓' : '○'} {s}
+              </span>
+            ))}
+          </div>
+        );
+      })()}
+
       {/* Chat window */}
-      <div className="flex flex-col bg-gray-50 rounded-xl border border-gray-200 overflow-hidden" style={{ height: 'calc(100vh - 220px)' }}>
+      <div className="flex flex-col bg-gray-50 rounded-xl border border-gray-200 overflow-hidden" style={{ height: 'calc(100vh - 260px)' }}>
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-3">
           {messages.map((m, i) => (
@@ -740,6 +851,20 @@ export default function ReportGeneratorPage() {
                     {m.photoUrls.map((url, j) => (
                       <img key={j} src={url} className="h-20 w-20 object-cover rounded-lg opacity-90" alt="inspection photo" />
                     ))}
+                  </div>
+                )}
+                {/* Inline photo tag button on Scout finding confirmations */}
+                {!reportHtml && isConfirmation(m) && (
+                  <div className="mt-2 pt-2 border-t border-gray-100 flex items-center gap-2 flex-wrap">
+                    {(msgPhotos[i] ?? []).map((url, j) => (
+                      <img key={j} src={url} className="h-12 w-12 object-cover rounded-lg border border-gray-200" alt="" />
+                    ))}
+                    <label className={`flex items-center gap-1 text-xs font-medium cursor-pointer px-2 py-1 rounded-lg border border-dashed transition-colors ${uploadingMsgPhoto === i ? 'border-blue-300 text-blue-400 bg-blue-50' : 'border-gray-300 text-gray-500 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50'}`}>
+                      {uploadingMsgPhoto === i ? <Loader2 className="h-3 w-3 animate-spin" /> : <Camera className="h-3 w-3" />}
+                      {uploadingMsgPhoto === i ? 'Uploading…' : 'Tag photo'}
+                      <input type="file" accept="image/*" multiple className="hidden" disabled={uploadingMsgPhoto !== null}
+                        onChange={e => { Array.from(e.target.files ?? []).forEach(f => handleTagPhoto(i, f)); e.target.value = ''; }} />
+                    </label>
                   </div>
                 )}
               </div>
