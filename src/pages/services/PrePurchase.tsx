@@ -710,6 +710,37 @@
                  </div>
                </div>
 
+               {/* Pricing Table */}
+               <div>
+                 <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
+                   Pre-Purchase Home Inspection Cost Ontario
+                 </h2>
+                 <div className="overflow-hidden rounded-lg border border-border">
+                   <table className="w-full text-sm">
+                     <thead className="bg-muted">
+                       <tr>
+                         <th className="text-left px-4 py-3 font-semibold text-foreground">Property Size</th>
+                         <th className="text-right px-4 py-3 font-semibold text-foreground">Price</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       {[
+                         { size: "Up to 1,500 sq ft", price: "$399" },
+                         { size: "1,500 – 2,500 sq ft", price: "$449" },
+                         { size: "2,500 – 3,500 sq ft", price: "$499" },
+                         { size: "3,500+ sq ft", price: "$549+" },
+                       ].map((row, i) => (
+                         <tr key={i} className={i % 2 === 0 ? "bg-background" : "bg-muted/30"}>
+                           <td className="px-4 py-3 text-foreground">{row.size}</td>
+                           <td className="px-4 py-3 text-right font-semibold text-foreground">{row.price}</td>
+                         </tr>
+                       ))}
+                     </tbody>
+                   </table>
+                 </div>
+                 <p className="text-sm text-muted-foreground mt-3">Thermal imaging included. Same-day digital report. Call <a href="tel:+16478019311" className="text-primary">(647) 801-9311</a> for a quote.</p>
+               </div>
+
                {/* What We Inspect */}
                <div>
                  <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
