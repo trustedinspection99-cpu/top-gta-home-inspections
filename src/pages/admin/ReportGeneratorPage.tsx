@@ -318,6 +318,16 @@ export default function ReportGeneratorPage() {
     if (!uploadErr) {
       const { data: { publicUrl } } = supabase.storage.from('Reports').getPublicUrl(fileName);
       setMsgPhotos(prev => ({ ...prev, [msgIdx]: [...(prev[msgIdx] ?? []), publicUrl] }));
+
+      // Vision analysis — non-blocking, inject result as Scout message
+      const context = messages[msgIdx]?.content ?? '';
+      supabase.functions.invoke('generate-report', {
+        body: { mode: 'analyze-photo', photoUrl: publicUrl, context },
+      }).then(({ data }) => {
+        if (data?.analysis) {
+          setMessages(prev => [...prev, { role: 'assistant', content: data.analysis }]);
+        }
+      }).catch(() => { /* vision analysis is best-effort */ });
     }
     setUploadingMsgPhoto(null);
   }

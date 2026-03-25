@@ -140,7 +140,7 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { mode, messages, jobContext, photoUrls } = await req.json();
+    const { mode, messages, jobContext, photoUrls, photoUrl, context } = await req.json();
 
     const apiKey = Deno.env.get('CLAUDE_API_KEY');
     if (!apiKey) {
@@ -156,6 +156,37 @@ Deno.serve(async (req) => {
       role: m.role,
       content: m.content,
     }));
+
+    if (mode === 'analyze-photo') {
+      if (!photoUrl) {
+        return new Response(JSON.stringify({ error: 'photoUrl required' }), { headers: CORS, status: 400 });
+      }
+      const res = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: { 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+        body: JSON.stringify({
+          model: 'claude-haiku-4-5-20251001',
+          max_tokens: 400,
+          messages: [{
+            role: 'user',
+            content: [
+              { type: 'image', source: { type: 'url', url: photoUrl } },
+              {
+                type: 'text',
+                text: `You are a certified home inspector reviewing an inspection photo.${context ? ` Finding context: ${context}` : ''}\n\nDescribe what you observe that is relevant to a home inspection. Be concise and factual (2-4 sentences). Focus only on observable deficiencies, damage, or notable conditions visible in the photo. Start your response with "📷 Visual:"`,
+              },
+            ],
+          }],
+        }),
+      });
+      if (!res.ok) {
+        const errBody = await res.text();
+        return new Response(JSON.stringify({ error: `Vision error ${res.status}: ${errBody}` }), { headers: CORS, status: 500 });
+      }
+      const data = await res.json();
+      const analysis = data.content?.[0]?.text ?? '';
+      return new Response(JSON.stringify({ analysis }), { headers: CORS });
+    }
 
     if (mode === 'summarize') {
       const cleanedMessages = claudeMessages
