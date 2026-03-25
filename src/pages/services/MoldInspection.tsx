@@ -225,11 +225,39 @@ export default function MoldInspection() {
           </div>
 
           <div>
-            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Mold Inspection Across Ontario</h3>
-            <p className="text-slate-700 mb-4">We provide certified mold inspection and mold testing services across Ontario including Toronto, Mississauga, Brampton, Hamilton, Oakville, Burlington, Vaughan, Markham, Richmond Hill, Kitchener, Waterloo, Cambridge, Guelph, Barrie, Oshawa, Whitby, Ajax, Pickering, and 80+ more cities.</p>
-            <div className="flex flex-wrap gap-2">
-              {["Toronto","Mississauga","Brampton","Hamilton","Oakville","Burlington","Vaughan","Markham","Richmond Hill","Kitchener","Waterloo","Cambridge","Guelph","Barrie","Oshawa","Whitby","Ajax","Pickering","Milton","Newmarket"].map((c) => (
-                <span key={c} className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">{c}</span>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Mold Inspection by City — Toronto & Ontario</h3>
+            <p className="text-slate-700 mb-6">Mold risk varies significantly by neighbourhood, housing era, and local climate. Here is what our inspectors commonly find across Ontario's major cities.</p>
+            <div className="space-y-4">
+              {[
+                {
+                  city: "Mold Inspection — Toronto & Etobicoke",
+                  body: "Toronto's older residential boroughs — Etobicoke, North York, Scarborough, and East York — have the highest concentration of mold-prone housing in the GTA. Post-war bungalows from the 1950s and 1960s in Etobicoke and North York were commonly built with unventilated attic spaces where bathroom exhaust fans were ducted directly into the attic rather than to the exterior. The result is decades of moisture accumulation on roof sheathing, creating extensive black and grey mold colonies that are invisible from inside the home but can consume the entire underside of a roof deck. Toronto's aging window stock — single-pane and early double-glazed units — creates condensation-driven mold growth on window frames and in adjacent wall cavities throughout winter. ASADS provides same-day mold inspection across all Toronto neighbourhoods including Etobicoke, North York, Scarborough, East York, and the downtown core.",
+                },
+                {
+                  city: "Mold Inspection — Brampton",
+                  body: "Brampton's explosive residential growth from the 1970s through the 1990s produced large tracts of townhouses and semi-detached homes in Bramalea, downtown Brampton, and early Springdale developments that are now reaching peak moisture-problem age. Original bath fans in these homes were frequently either undersized or vented into attic spaces in violation of current code, creating chronic attic mold conditions on roof sheathing and insulation batts. Finished basements with original below-grade windows and no sump pump drainage commonly develop Penicillium and Cladosporium growth behind vapour barriers and under carpet underlay — often undetected for years. Air sampling during Brampton mold inspections frequently reveals elevated spore counts that have no visible source, confirming hidden wall or ceiling cavity colonization.",
+                },
+                {
+                  city: "Mold Inspection — Mississauga",
+                  body: "Mississauga's Port Credit, Cooksville, Lakeview, and Malton neighbourhoods contain significant concentrations of 1960s through 1980s housing where mold inspection is a standard pre-purchase and pre-renovation protocol. Lakefront proximity in Port Credit and Lakeview creates elevated ambient humidity levels that accelerate mold growth in basements, crawl spaces, and around window frames in homes without upgraded insulation or controlled mechanical ventilation. Cooksville and Malton's high-density townhouse and apartment-style housing presents attic mold from inadequate roof ventilation and bathroom fan exhaust issues common in multi-unit buildings from this era. ASADS provides certified mold testing across all Mississauga communities with same-day scheduling and AIHA lab results.",
+                },
+                {
+                  city: "Mold Inspection — Oakville",
+                  body: "Oakville's South Oakville, Kerr Village, and Bronte neighbourhoods feature older housing stock where basement moisture and crawl space mold are recurring inspection findings. South Oakville properties — many dating from the 1950s and 1960s — commonly have stone or block foundation walls without interior waterproofing membranes, allowing moisture migration that produces efflorescence and mold growth on basement walls and floor joists above crawl spaces. Kerr Village's heritage commercial-residential conversions present mold risk in poorly ventilated upper-floor suites and in original roof structures. Pre-purchase mold inspection is standard practice for Oakville buyers given the age and value of South Oakville properties. ASADS provides full air sampling with AIHA lab analysis across all Oakville neighbourhoods.",
+                },
+                {
+                  city: "Mold Inspection — Barrie",
+                  body: "Barrie's cold climate creates Ontario's most challenging conditions for attic mold formation. Freeze-thaw cycles, heavy snow loads, and dramatic temperature swings between heated interior spaces and cold attic decks drive condensation onto roof sheathing throughout the winter months. Barrie homes with inadequate attic insulation at the eave line — a code compliance issue common in pre-2000 construction — are particularly susceptible to ice dam formation and the associated attic mold that develops when meltwater infiltrates roof assemblies. Barrie's growing new construction market also presents builder-related mold issues: improperly commissioned HRV systems that fail to exhaust bathroom humidity, and spray foam insulation gaps that allow condensation pockets to form in wall assemblies. ASADS provides attic mold inspections and full air quality assessments across Barrie and the surrounding Simcoe County area.",
+                },
+                {
+                  city: "Mold Inspection — Hamilton & Stoney Creek",
+                  body: "Hamilton's older residential neighbourhoods — the lower city, Stoney Creek, and Dundas — contain a high concentration of pre-1960 housing where mold inspection requires attention to century-home-specific moisture pathways. Plaster and lathe wall systems absorb and retain moisture from envelope leaks and condensation, creating sustained growth conditions for Stachybotrys (black mold) and Aspergillus behind original wall finishes. Hamilton's geography — positioned between the Escarpment and Lake Ontario — creates localized humidity conditions that elevate baseline indoor moisture levels in older homes relative to other GTA markets. Basement mold in Hamilton's lower city properties is commonly linked to inadequate foundation waterproofing on solid masonry walls and deteriorated weeping tile systems that allow groundwater infiltration. ASADS provides certified mold inspection and air sampling across Hamilton, Stoney Creek, Dundas, and Ancaster.",
+                },
+              ].map((item) => (
+                <div key={item.city} className="p-4 bg-red-50 border border-red-100 rounded-xl">
+                  <h4 className="font-bold text-slate-900 mb-1">{item.city}</h4>
+                  <p className="text-sm text-slate-700">{item.body}</p>
+                </div>
               ))}
             </div>
           </div>
