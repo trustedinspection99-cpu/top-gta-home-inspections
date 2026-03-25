@@ -128,6 +128,36 @@ export default function WETT() {
             </div>
             <p className="text-sm text-slate-600 mt-3">Call <a href="tel:+16478019311" className="text-blue-600">(647) 801-9311</a> for a quote. Level 2 inspections required for all real estate transactions.</p>
           </div>
+
+          <div className="mt-8">
+            <h3 className="text-xl font-bold text-slate-800 mb-4">WETT Inspection by City — Ontario</h3>
+            <p className="text-slate-700 mb-6">Wood-burning appliance risk varies significantly by housing era and region. Older masonry chimneys, uncertified wood stoves, and clay tile flue liners are the most common WETT inspection findings across Ontario. Here is what our inspectors find in major markets.</p>
+            <div className="space-y-4">
+              {[
+                {
+                  city: "WETT Inspection — Toronto & Etobicoke",
+                  body: "Toronto's older housing stock — particularly the pre-1960 brick detached homes of Etobicoke, the Annex, Leaside, and Rosedale — commonly contains original masonry fireplace-and-chimney systems that have never received a professional WETT assessment. These heritage masonry fireplace systems typically have clay tile flue liners that are now 60–100 years old, frequently exhibiting spalled tiles, deteriorated mortar joints, and missing chimney caps. Toronto home insurance brokers now routinely require a current WETT Level 2 certificate before issuing or renewing coverage on homes with wood-burning appliances — a change that has caught many Toronto homeowners off-guard at renewal time. ASADS provides same-day WETT Level 1 and Level 2 inspections across all Toronto neighbourhoods, with thermal imaging included at no extra charge.",
+                },
+                {
+                  city: "WETT Inspection — Barrie, Collingwood & Cottage Country",
+                  body: "Barrie, Collingwood, and Simcoe County's cottage country represent the highest concentration of wood-burning appliance installations in Ontario — freestanding wood stoves, fireplace inserts, pellet stoves, and outdoor wood boilers are common features in both primary and seasonal residences. Many cottage properties throughout Simcoe County, Muskoka, and the Georgian Bay shoreline were constructed or extensively modified by owners without permits, resulting in wood stove installations that do not meet CSA B365 clearance requirements. Seasonal properties sitting empty for months often develop chimney bird and squirrel nesting, moisture damage to clay liners, and collapsed spark arrestors that go undetected without annual professional WETT inspection. ASADS covers all of Barrie, Innisfil, Angus, Collingwood, Wasaga Beach, Midland, and surrounding Simcoe County cottage markets.",
+                },
+                {
+                  city: "WETT Inspection — Hamilton, Ancaster & Dundas",
+                  body: "Hamilton's century homes and late-Victorian residential streets — particularly in Dundas, Ancaster, Westdale, and Hamilton's downtown core — contain original double-flue masonry chimneys serving both furnace and fireplace. These aging masonry chimney stacks commonly exhibit mortar joint deterioration, crumbling clay tile sections, and failed chimney crowns that allow water infiltration and accelerate liner damage. Hamilton's cold winters and high humidity create aggressive freeze-thaw cycles that damage chimney masonry faster than the GTA average. Level 2 WETT inspections in Hamilton commonly reveal deteriorated liner sections and creosote accumulation in fireplaces that have not been used or swept in years — a common scenario when older residents transition from wood burning to natural gas. ASADS covers Hamilton, Stoney Creek, Dundas, Ancaster, and Binbrook.",
+                },
+                {
+                  city: "WETT Inspection — Oakville, Burlington & Halton",
+                  body: "Oakville and Burlington's mix of 1960s–80s executive homes and newer luxury properties presents a different WETT profile. Older South Oakville and Burlington properties frequently contain fireplace inserts — wood or gas — that were added to existing masonry fireboxes without a WETT assessment. Fireplace inserts installed without proper liner connections create dangerous bypass zones where combustion gases can escape into chimney cavities adjacent to combustible framing. Newer luxury homes in North Oakville and Alton contain factory-built zero-clearance fireplaces that require inspection to verify proper installation, clearance, and venting. Halton real estate agents routinely require WETT certificates as a condition of sale — ASADS provides same-day Level 1 and Level 2 inspections across all of Oakville, Burlington, and Halton Region.",
+                },
+              ].map((item) => (
+                <div key={item.city} className="p-4 bg-orange-50 border border-orange-100 rounded-xl">
+                  <h4 className="font-bold text-slate-900 mb-1">{item.city}</h4>
+                  <p className="text-sm text-slate-700">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       }
       whatWeInspect={[

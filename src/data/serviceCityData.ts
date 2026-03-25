@@ -626,6 +626,52 @@ export const serviceDefinitions: ServiceDef[] = [
       { name: "Air Quality Testing", slug: "air-quality" },
     ],
   },
+  {
+    slug: "designated-substance-survey",
+    name: "Designated Substance Survey",
+    shortName: "Designated Substance Survey",
+    price: "From $399",
+    duration: "2–4 Hours + Lab Analysis",
+    metaTitleTemplate: "Designated Substance Survey {city} | O.Reg 278/05 | ASADS",
+    metaDescTemplate:
+      "Certified Designated Substance Survey in {city}. O.Reg 278/05 compliant. Asbestos, lead, mercury & all 11 substances. Required before renovation or demolition. From $399.",
+    heroTitle: "Designated Substance Survey in {city}",
+    whatWeCheck: [
+      "Asbestos-containing materials (ACM)",
+      "Lead-based paint & lead piping",
+      "Mercury in thermostats & switches",
+      "Silica in concrete, mortar & tile",
+      "Designated biological agents",
+      "Isocyanates in spray foam insulation",
+      "Arsenic & heavy metal coatings",
+      "Vermiculite attic insulation",
+      "Transite (asbestos cement) siding & pipe",
+      "All 11 Ontario OHSA designated substances",
+      "Written O.Reg 278/05 compliant report",
+      "Abatement contractor scope document",
+    ],
+    whyItMatters:
+      "Ontario's Occupational Health and Safety Act (OHSA) requires a Designated Substance Survey before any renovation, demolition, or construction work that may disturb hazardous materials in {city}. Failure to conduct a DSS before disturbing designated substances exposes the property owner, contractor, and project manager to significant fines, stop-work orders, and personal liability. Our certified DSS in {city} covers all 11 Ontario designated substances in a single inspection, providing the legally compliant documentation required to proceed with renovation or demolition safely.",
+    processSteps: [
+      { title: "Site Review & Scoping", body: "Inspector reviews building age, use history, and renovation scope to identify all areas requiring assessment for each of the 11 designated substances." },
+      { title: "Visual Survey & Sampling", body: "Systematic identification and bulk sampling of all suspect materials. Samples collected under controlled conditions to prevent fibre or dust release." },
+      { title: "Accredited Lab Analysis", body: "All samples submitted to a CFIA-accredited laboratory for PLM analysis, ICP metals testing, and other substance-specific analytical methods." },
+      { title: "Written O.Reg 278/05 Report", body: "Full written report documenting all findings by material type, location, and concentration — formatted for contractor tender and regulatory compliance." },
+    ],
+    faqs: [
+      { q: "When is a Designated Substance Survey required in {city}?", a: "A DSS is legally required under Ontario's OHSA before any renovation, alteration, demolition, or maintenance work that may disturb hazardous materials in a {city} building. This includes residential renovations in pre-1990 homes where suspect materials are present." },
+      { q: "What substances are covered in a DSS?", a: "Ontario's OHSA designates 11 substances: asbestos, lead, mercury, silica, acrylonitrile, arsenic, benzene, coke oven emissions, isocyanates, designated biological agents, and vinyl chloride. Our survey assesses all relevant substances based on building type and scope of work." },
+      { q: "Who needs a Designated Substance Survey?", a: "Property owners, general contractors, project managers, and renovation companies in {city} all have obligations under OHSA to ensure a DSS is conducted before disturbing suspect materials. Owner-operators of commercial, industrial, and institutional buildings have the broadest obligations." },
+      { q: "How much does a Designated Substance Survey cost in {city}?", a: "DSS pricing in {city} starts from $399 for a standard residential property. Commercial and industrial DSS pricing depends on building size and complexity. Contact us at (647) 801-9311 for a custom quote." },
+      { q: "How long does a DSS take?", a: "On-site inspection in {city} typically takes 2–4 hours depending on building size. Lab results are returned within 3–5 business days. We can arrange rush 24-hour lab processing for time-sensitive projects." },
+    ],
+    relatedServices: [
+      { name: "Asbestos Testing", slug: "asbestos-testing" },
+      { name: "Lead Paint Testing", slug: "lead-paint-testing" },
+      { name: "Air Quality Testing", slug: "air-quality" },
+      { name: "Commercial Inspection", slug: "commercial" },
+    ],
+  },
 ];
 
 /** Lookup map: serviceSlug → ServiceDef */
