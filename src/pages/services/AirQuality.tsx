@@ -105,6 +105,40 @@ export default function AirQuality() {
               ))}
             </ol>
           </div>
+
+          <div>
+            <h3 className="text-xl font-bold text-slate-800 mb-4">Air Quality Testing by City — Toronto & Ontario</h3>
+            <p className="text-slate-700 mb-6">Indoor air quality concerns vary by city, housing era, and local environment. Here is what our inspectors most commonly find across Ontario's major markets.</p>
+            <div className="space-y-4">
+              {[
+                {
+                  city: "Air Quality Testing — Toronto",
+                  body: "Toronto's diverse housing stock creates a wide range of indoor air quality concerns. High-rise condominiums along the downtown core and midtown corridors present VOC off-gassing from new finishes, inadequate fresh air exchange in sealed building envelopes, and particulate infiltration from urban traffic and construction. Toronto's older detached housing stock in Etobicoke, North York, Scarborough, and East York — particularly post-war bungalows — commonly presents elevated mold spore counts from poor attic ventilation, basement moisture, and aging HVAC systems with contaminated ductwork. Radon infiltration through foundation cracks is a growing concern in Toronto's lower-level living spaces. ASADS provides same-day air quality testing across all Toronto neighbourhoods including Etobicoke, North York, Scarborough, East York, and the downtown core.",
+                },
+                {
+                  city: "Air Quality Testing — Hamilton",
+                  body: "Hamilton's industrial heritage and geography create unique indoor air quality challenges not found elsewhere in the GTA. Properties near Hamilton's steel industry corridor on the waterfront can exhibit elevated particulate infiltration and VOC readings linked to ambient industrial emissions — a concern particularly for homes and commercial properties in the lower city and near the Escarpment face. Hamilton's older housing stock — much of it pre-1960 — also presents elevated mold spore risks from aging building envelopes, lead paint dust from deteriorating surfaces, and asbestos fibre release from deteriorating insulation. ASADS provides comprehensive indoor air quality testing in Hamilton, Stoney Creek, Dundas, Ancaster, and Binbrook, with same-day sampling and AIHA-accredited lab analysis.",
+                },
+                {
+                  city: "Air Quality Testing — Brampton & Mississauga",
+                  body: "Brampton and Mississauga's residential markets present air quality concerns primarily driven by the age of the housing stock and renovation activity. Brampton's large tracts of 1970s through 1990s housing contain original HVAC equipment approaching end-of-life, where contaminated evaporator coils, mold-colonized drain pans, and deteriorated duct liner distribute airborne contaminants throughout the home. Mississauga's Port Credit, Cooksville, and Malton neighbourhoods — older housing near the lake — present basement mold and VOC concerns from below-grade finished spaces with inadequate ventilation. New construction areas in both cities can exhibit elevated formaldehyde and VOC levels from fresh cabinetry, flooring adhesives, and spray foam insulation in the first 12–18 months after occupancy.",
+                },
+                {
+                  city: "Air Quality Testing — York Region (Markham, Vaughan, Richmond Hill, Newmarket)",
+                  body: "York Region's mix of new construction and established housing presents two distinct air quality profiles. Markham and Vaughan's newer subdivisions — particularly homes built within the last five years — are sealed building envelopes where fresh-build VOC off-gassing from engineered wood products, adhesives, and coatings can be significantly elevated. Without adequate HRV ventilation, these compounds accumulate to levels that cause headaches, eye irritation, and chronic fatigue. Older areas of Richmond Hill, Thornhill, and Newmarket present the classic pre-1990 concerns: attic mold from bathroom fan exhaust vented into attic spaces, basement particulate from crawl space vapour barrier failures, and allergen accumulation in ductwork from decades of use. ASADS provides professional air quality assessment across all of York Region with same-day scheduling.",
+                },
+                {
+                  city: "Air Quality Testing — Barrie & Simcoe County",
+                  body: "Barrie and Simcoe County's cold climate creates year-round indoor air quality pressures not seen in southern Ontario. Extended heating seasons mean Barrie homes run with windows sealed for 6-7 months of the year — dramatically reducing natural air exchange and allowing VOCs, carbon dioxide, and airborne particulates to accumulate. Radon levels in Barrie and surrounding Simcoe County are among the highest in Ontario due to the region's granite and uranium-bearing bedrock, making radon testing an essential component of any Barrie air quality assessment. ASADS provides comprehensive air quality testing across Barrie, Innisfil, Collingwood, Midland, Orillia, and all of Simcoe County.",
+                },
+              ].map((item) => (
+                <div key={item.city} className="p-4 bg-blue-50 border border-blue-100 rounded-xl">
+                  <h4 className="font-bold text-slate-900 mb-1">{item.city}</h4>
+                  <p className="text-sm text-slate-700">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       }
       whatWeInspect={[
