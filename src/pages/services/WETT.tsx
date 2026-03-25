@@ -45,7 +45,7 @@ export default function WETT() {
           </p>
 
           <div className="mt-8">
-            <h3 className="text-xl font-bold text-slate-800 mb-4">When Is a WETT Inspection Required?</h3>
+            <h3 className="text-xl font-bold text-slate-800 mb-4">When Is a WETT Inspection Required in Ontario?</h3>
             <ul className="space-y-3">
               {[
                 "When buying a home with a wood-burning fireplace, insert, or freestanding stove — before conditions are waived",
@@ -83,7 +83,7 @@ export default function WETT() {
           </div>
 
           <div className="mt-8">
-            <h3 className="text-xl font-bold text-slate-800 mb-4">The WETT Inspection Process</h3>
+            <h3 className="text-xl font-bold text-slate-800 mb-4">The WETT Inspection Process — What to Expect</h3>
             <ol className="space-y-4">
               {[
                 { step: "1", title: "Visual Interior Inspection", body: "Firebox refractory panels, damper operation, ash pit, smoke shelf, and all accessible flue surfaces are inspected for cracks, spalling, and deterioration." },
@@ -100,6 +100,33 @@ export default function WETT() {
                 </li>
               ))}
             </ol>
+          </div>
+          <div className="mt-8">
+            <h3 className="text-xl font-bold text-slate-800 mb-4">WETT Inspection Cost Ontario</h3>
+            <div className="overflow-hidden rounded-lg border border-slate-200">
+              <table className="w-full text-sm">
+                <thead className="bg-slate-50">
+                  <tr>
+                    <th className="text-left px-4 py-3 font-semibold text-slate-800">Service</th>
+                    <th className="text-right px-4 py-3 font-semibold text-slate-800">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { service: "WETT Inspection — Level 1 (Maintenance)", price: "$249" },
+                    { service: "WETT Inspection — Level 2 (Real Estate)", price: "$299+" },
+                    { service: "Thermal Imaging", price: "Included" },
+                    { service: "Same-Day Insurance Certificate", price: "Included" },
+                  ].map((row, i) => (
+                    <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                      <td className="px-4 py-3 text-slate-700">{row.service}</td>
+                      <td className="px-4 py-3 text-right font-semibold text-slate-800">{row.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-slate-600 mt-3">Call <a href="tel:+16478019311" className="text-blue-600">(647) 801-9311</a> for a quote. Level 2 inspections required for all real estate transactions.</p>
           </div>
         </div>
       }
