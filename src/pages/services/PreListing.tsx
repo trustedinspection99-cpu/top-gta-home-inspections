@@ -31,9 +31,9 @@ import { locationData } from "@/data/locationData";
 const featuredLocations = locationData.map(loc => ({ name: loc.city, slug: loc.slug }));
 
 const title = "Pre-Listing Home Inspection";
-const metaTitle = "Pre-Listing Home Inspection Ontario | From $450 | ASADS";
-const metaDescription = "Certified pre-listing inspection Ontario from $450. Find defects before buyers do — firm offers, faster closing & same-day digital report. (647) 801-9311.";
-const price = "$450-$750";
+const metaTitle = "Pre-Listing Home Inspection Ontario | From $399 | ASADS";
+const metaDescription = "Certified pre-listing inspection Ontario from $399. Find defects before buyers do — firm offers, faster closing & same-day digital report. (647) 801-9311.";
+const price = "$399-$549+";
 const duration = "2-4 Hours";
 
 const whatWeInspect = [
@@ -232,7 +232,7 @@ export default function PreListing() {
 
             <HeroBookingSection
         badge="ASADS Inspection Services · Seller Inspection Specialists"
-        title="Pre-Listing Inspection & Pre-Sale Home Inspection"
+        title="Pre-Listing Home Inspection Ontario — Sell Faster & For More"
         subtitle="Don't let a buyer's inspector control your price. Our pre-listing inspection identifies deal-breakers early, allowing sellers to control the narrative and secure higher offers."
         priceCards={[
           { label: "Pre-Listing Inspection", price: "From $399" },
@@ -282,6 +282,35 @@ export default function PreListing() {
                     </div>
                   ))}
                 </div>
+              </div>
+
+              {/* Pricing Table */}
+              <div>
+                <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">Pre-Listing Inspection Cost Ontario</h2>
+                <div className="overflow-hidden rounded-lg border border-border">
+                  <table className="w-full text-sm">
+                    <thead className="bg-muted">
+                      <tr>
+                        <th className="text-left px-4 py-3 font-semibold text-foreground">Property Size</th>
+                        <th className="text-right px-4 py-3 font-semibold text-foreground">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[
+                        { size: "Up to 1,500 sq ft", price: "$399" },
+                        { size: "1,500 – 2,500 sq ft", price: "$449" },
+                        { size: "2,500 – 3,500 sq ft", price: "$499" },
+                        { size: "3,500+ sq ft", price: "$549+" },
+                      ].map((row, i) => (
+                        <tr key={i} className={i % 2 === 0 ? "bg-background" : "bg-muted/30"}>
+                          <td className="px-4 py-3 text-foreground">{row.size}</td>
+                          <td className="px-4 py-3 text-right font-semibold text-foreground">{row.price}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-sm text-muted-foreground mt-3">Thermal imaging included. Same-day digital report. Call <a href="tel:+16478019311" className="text-primary">(647) 801-9311</a> for a custom quote.</p>
               </div>
 
               {/* FAQ Section */}
