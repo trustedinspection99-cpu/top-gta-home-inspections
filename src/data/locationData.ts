@@ -265,8 +265,8 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-brampton",
     city: "Brampton",
     region: "Peel Region",
-    metaTitle: "Home Inspector Brampton | Book Inspection | ASADS",
-    metaDescription: "Pre-purchase home inspection Brampton from $399. Infrared imaging, same-day booking & detailed PDF report. Serving Fletcher's Creek & Heart Lake.",
+    metaTitle: "Home Inspector Brampton | Thermal Roof Inspection | ASADS",
+    metaDescription: "Home inspection Brampton from $399. Thermal roof inspection, FLIR infrared & same-day report. Serving Fletcher's Creek & Heart Lake.",
     description: "Brampton's trusted certified home inspector providing comprehensive buyer inspections, thermal imaging diagnostics, mold testing and pre-listing seller services.",
     neighborhoods: [
       "Fletcher's Creek", "Heart Lake", "Bramalea City Centre", "Springdale",
@@ -2218,8 +2218,8 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-hamilton",
     city: "Hamilton",
     region: "Hamilton-Niagara Region",
-    metaTitle: "Home Inspector Hamilton | Pre-Listing & Pre-Purchase | ASADS",
-    metaDescription: "Pre-purchase home inspection Hamilton from $399. Infrared imaging, same-day booking & detailed PDF report. Serving Stipley, North End, Kirkendall & Westdale.",
+    metaTitle: "Home Inspection Hamilton | Certified Inspector | ASADS",
+    metaDescription: "Home inspection Hamilton from $399. Pre-purchase & pre-listing certified inspector. Serving Stipley, North End, Kirkendall, Westdale & the Mountain.",
     description: "Hamilton's premier certified inspector specializing in escarpment slope stability assessments, century home structural inspections & thermal imaging diagnostics.",
     neighborhoods: ["Stipley", "North End", "Kirkendall", "Westdale", "Durand", "Locke Street", "Ancaster Heights", "Mount Hope", "East Hamilton", "Crown Point"],
     phoneNumber: "(647) 801-9311",
@@ -2241,6 +2241,14 @@ export const locationData: LocationData[] = [
       {
         title: "Cast Iron Plumbing & Multi-Unit Conversions",
         content: "Hamilton's older North End, Gibson, Stipley, and waterfront district properties frequently feature cast iron drain stacks and galvanized water supply lines installed in the 1940s through 1960s that are approaching or exceeding their service life. Cast iron stacks develop internal scale buildup, section corrosion, and joint separation over decades — conditions that visual inspection alone cannot fully assess. ASADS recommends drain camera (CCTV) inspection for Hamilton pre-purchases with original plumbing to identify root intrusion, offset joints, and deteriorated sections before closing. Galvanized supply piping commonly shows internal scale that reduces water pressure at upper floor fixtures and may contain elevated lead levels from decades of corrosion. Hamilton also has a significant stock of converted duplexes and triplexes where additional plumbing branches may lack proper venting or permits. Our inspectors trace supply and drain systems throughout the property, document material type and condition, and flag areas requiring plumbing scope assessment for a complete picture of upgrade costs."
+      },
+      {
+        title: "Lower City Flooding & Basement Water Infiltration",
+        content: "Hamilton's lower city has experienced repeated basement flooding events during major rainfall, with the Red Hill Creek corridor, East End, Stipley, and properties near the industrial waterfront sitting within or adjacent to municipal flood assessment zones. Foundation drainage performance, window well conditions, sump pump systems, and the condition of weeping tile are critical evaluation points for any lower-city pre-purchase. Hamilton's clay-rich soils retain moisture and create lateral pressure against foundation walls that worsens through seasonal wet-dry cycles. Our inspectors assess basement water infiltration evidence including staining patterns, efflorescence deposits, paint delamination, floor heaving, and prior waterproofing attempts that can conceal recurring problems. Buyers considering lower-city properties should understand that waterproofing remediation — when needed — typically runs $8,000–$25,000 for interior or exterior foundation drainage systems. We document all moisture evidence with photographs and provide remediation guidance so buyers can negotiate accurately or plan post-closing budgets before committing."
+      },
+      {
+        title: "Hamilton Mountain New Construction & Soil Movement",
+        content: "Hamilton's upper city — Ancaster, Waterdown, Binbrook, and the Meadowlands and Harmony Hall subdivisions — has seen extensive new construction on former agricultural land with variable soil conditions. Queenston Shale-derived clay soils on the Mountain and in Ancaster exhibit shrink-swell behaviour, expanding when saturated and contracting during dry periods, creating differential foundation settlement and interior drywall cracking that recurs even after cosmetic repair. New subdivisions built since 2010 require assessment at Tarion warranty milestones (30-Day, 1-Year, 2-Year) to document settlement-related deficiencies before warranty expiry. Our inspectors evaluate stair-step brick cracking, interior door binding, and basement slab cracking that signal active soil movement — distinguishing cosmetic shrinkage cracks from structural settlement requiring engineer review. For Mountain buyers in homes under five years old, we time inspections to Tarion warranty deadlines to maximize documentation of deficiencies while builder coverage remains active. ASADS inspects across Hamilton's full housing spectrum from North End century homes to Ancaster new builds. Call (647) 801-9311 to book."
       }
     ],
     localExpertise: {
