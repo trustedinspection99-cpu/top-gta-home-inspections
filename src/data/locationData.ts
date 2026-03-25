@@ -222,8 +222,8 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-mississauga",
     city: "Mississauga",
     region: "Peel Region",
-    metaTitle: "Home Inspection Mississauga | Certified Inspector | ASADS",
-    metaDescription: "Certified Mississauga home inspector. Pre-purchase, thermal imaging, mold & asbestos testing for Square One condos & Erin Mills homes. Same-day reports.",
+    metaTitle: "Home Inspector Mississauga | Book Inspection | ASADS",
+    metaDescription: "Certified Mississauga home inspector. Book today — same-day reports, infrared thermal imaging & mold testing. Square One condos to Erin Mills. From $399.",
     description: "Mississauga's premier certified inspector for buyer pre-purchase inspections, seller pre-listing services, thermal imaging diagnostics, mold & asbestos testing throughout Peel Region.",
     neighborhoods: [
       "Port Credit", "Streetsville", "Clarkson", "Lorne Park", "Meadowvale",
@@ -308,8 +308,8 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-markham",
     city: "Markham",
     region: "York Region",
-    metaTitle: "Home Inspection Markham | Certified Inspector | ASADS",
-    metaDescription: "Certified Markham home inspector for luxury estates & new construction. Pre-purchase, thermal imaging & warranty inspections. Unionville to Cornell.",
+    metaTitle: "Home Inspector Markham | Infrared Thermal Imaging | ASADS",
+    metaDescription: "Certified Markham home inspector. Infrared thermal imaging, renovation & pre-purchase inspections. Unionville, Cornell & luxury estates. Same-day reports.",
     description: "Markham's premier certified inspector specializing in luxury estate pre-purchase inspections, new construction warranty inspections, thermal imaging & engineering referrals.",
     neighborhoods: [
       "Unionville", "Markham Village", "Cornell", "Cachet", "Angus Glen",
