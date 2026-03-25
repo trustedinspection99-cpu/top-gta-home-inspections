@@ -2,8 +2,8 @@ import { Radio, ShieldAlert, Activity, ClipboardCheck, LayoutList, GraduationCap
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function RadonTesting() {
-  const pageTitle = "Radon Testing Toronto | C-NRPP Certified | ASADS";
-  const schemaDescription = "C-NRPP certified radon testing Toronto & GTA. Health Canada compliant monitoring. Protect your family from Canada's top cause of lung cancer in non-smokers.";
+  const pageTitle = "Radon Testing Ontario | C-NRPP Certified | ASADS";
+  const schemaDescription = "C-NRPP certified radon testing Ontario. Health Canada compliant monitoring. Protect your family from Canada's #1 cause of lung cancer in non-smokers. From $199.";
 
   return (
     <ServicePageTemplate
@@ -103,6 +103,36 @@ export default function RadonTesting() {
                 </li>
               ))}
             </ol>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold text-slate-800 mb-4">Radon Testing by City — Ontario</h3>
+            <p className="text-slate-700 mb-6">Radon risk in Ontario is directly tied to the underlying geology. Homes on or near Canadian Shield bedrock face higher baseline radon concentrations. Here is what our inspectors find across Ontario's major markets.</p>
+            <div className="space-y-4">
+              {[
+                {
+                  city: "Radon Testing — Barrie & Simcoe County",
+                  body: "Barrie and Simcoe County have some of the highest measured radon levels in Ontario, driven by the region's proximity to granite and uranium-bearing Canadian Shield bedrock. Homes in Barrie's south end, Innisfil, Collingwood, Midland, and Orillia sit directly on Shield-influenced soils where radon concentrations routinely exceed 200 Bq/m³ — Health Canada's remediation action level. Extended heating seasons mean Barrie homes are sealed for 6–7 months annually, reducing natural air exchange and allowing radon to accumulate in basements and lower-level living spaces. C-NRPP certified radon testing is strongly recommended as part of any pre-purchase inspection in Barrie, Innisfil, Collingwood, Midland, and all of Simcoe County.",
+                },
+                {
+                  city: "Radon Testing — Toronto & GTA",
+                  body: "Toronto's radon levels are generally lower than Barrie and Simcoe County but remain a real concern in specific neighbourhoods and building types. Detached homes in Scarborough, North York, and Etobicoke built on glacial till and clay soils can exhibit elevated radon — particularly where basement living spaces, finished rec rooms, or secondary suites are present. Toronto condominiums above the 4th floor present negligible radon risk due to their height above grade, but units on the 1st–3rd floor and ground-level townhomes warrant testing. Any Toronto pre-purchase inspection that includes a basement apartment, nanny suite, or finished basement should include radon measurement. ASADS provides Health Canada compliant digital radon testing across all Toronto neighbourhoods and GTA municipalities.",
+                },
+                {
+                  city: "Radon Testing — Hamilton & Surrounding Area",
+                  body: "Hamilton sits at the edge of the Niagara Escarpment — a geological feature with elevated uranium content in the underlying dolostone and shale that can release radon into soil gas. Homes in Hamilton's lower city and on the Mountain above the Escarpment face different radon risk profiles: upper Mountain homes backed against the Escarpment face generally experience higher soil gas concentrations than lower city properties on lacustrine clay. The older housing stock in Hamilton's core — many with stone foundations, open sump pits, and aging drain tile — provides multiple radon entry pathways that modern construction avoids. Radon testing is recommended for all Hamilton pre-purchase inspections involving a finished basement or lower-level occupancy.",
+                },
+                {
+                  city: "Radon Testing — Kitchener, Waterloo & Cambridge",
+                  body: "The Waterloo Region sits on glacial till over sedimentary bedrock with moderate radon potential — lower than the Canadian Shield regions but above the national average in many neighbourhoods. Kitchener's older housing stock — particularly the post-war bungalows of Bridgeport, Stanley Park, and Westmount — have unfinished basements with open sump pits and concrete block foundations that allow radon entry. Cambridge's Grand River valley properties and Galt heritage homes with stone foundations are among the highest radon-risk properties in the region. Pre-purchase radon testing in Kitchener-Waterloo-Cambridge is strongly recommended for any home with a basement occupancy — a finished basement apartment or recreation room significantly increases daily radon exposure hours.",
+                },
+              ].map((item) => (
+                <div key={item.city} className="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                  <h4 className="font-bold text-slate-900 mb-1">{item.city}</h4>
+                  <p className="text-sm text-slate-700">{item.body}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       }

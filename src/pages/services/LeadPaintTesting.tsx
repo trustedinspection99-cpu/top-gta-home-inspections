@@ -2,7 +2,7 @@ import { Pipette, ShieldAlert, FileSearch, HardHat, AlertTriangle, Thermometer }
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function LeadPaintTesting() {
-  const pageTitle = "Lead Paint Testing Toronto | XRF Certified | ASADS";
+  const pageTitle = "Lead Paint Testing Ontario | XRF Certified | ASADS";
   const metaDescription = "Professional lead paint testing in Toronto & GTA. XRF certified inspection for homes built before 1990. O.Reg 278/05 compliant reports. From $349.";
 
   return (
@@ -97,6 +97,36 @@ export default function LeadPaintTesting() {
                 </li>
               ))}
             </ul>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold text-slate-800 mb-4">Lead Paint Testing by City — Ontario</h3>
+            <p className="text-slate-700 mb-6">Lead paint risk is directly tied to the age of a home. The older the housing, the higher the probability of lead-based paint on surfaces. Here is what our inspectors find across Ontario's key markets.</p>
+            <div className="space-y-4">
+              {[
+                {
+                  city: "Lead Paint Testing — Toronto & Etobicoke",
+                  body: "Toronto has one of Ontario's highest concentrations of pre-1960 housing stock — particularly in Etobicoke, North York, East York, and the older downtown neighbourhoods. Lead paint was used on virtually all painted surfaces in homes built before 1978, and remains present on trim, doors, window sashes, and walls in the majority of unrestored Toronto heritage properties. The City of Toronto's community housing portfolio and aging rental stock present ongoing lead paint exposure risks, particularly for children in homes with deteriorating painted surfaces. XRF testing during pre-purchase inspection documents all surfaces with detectable lead levels — distinguishing between intact encapsulated lead (manageable) and deteriorated friction surfaces (immediate hazard) — so buyers understand exactly what action is required before occupancy or renovation.",
+                },
+                {
+                  city: "Lead Paint Testing — Hamilton & Older Ontario City Cores",
+                  body: "Hamilton's lower city, Dundas, and Waterdown contain some of Ontario's densest concentrations of pre-1940 housing where lead paint is present on essentially every painted surface. Hamilton's heritage residential streets — many dating from the late 1800s and early 1900s — have layered paint histories where lead-containing coatings are buried under multiple later paint applications. Sanding, stripping, or abrading these surfaces during renovation creates lead dust exposures that require Designated Substance Survey documentation and abatement contractor involvement under O.Reg 278/05. Other older Ontario city cores including Brantford, Guelph, Cambridge, and St. Catharines present similar pre-1940 heritage housing lead paint risks that XRF testing can rapidly document without surface disturbance.",
+                },
+                {
+                  city: "Lead Paint Testing — Brampton, Mississauga & 1960s–1980s Housing",
+                  body: "Lead was permitted in residential paint in Canada until 1976. Brampton, Mississauga, Scarborough, and the other rapid-growth municipalities of the 1960s and 1970s contain substantial housing stock where lead paint is still present on original trim and interior surfaces. Brampton's Bramalea area, Mississauga's Malton, Cooksville, and Port Credit neighbourhoods, and Scarborough's postwar bungalow tracts all fall within the lead paint era. XRF testing is non-destructive and non-invasive — it identifies lead concentrations on every surface without creating any dust, making it safe for occupied homes and completed in 1–3 hours depending on property size. Pre-purchase lead testing in these markets is standard due diligence for buyers of pre-1980 homes.",
+                },
+                {
+                  city: "Lead Paint Testing — Barrie, Newmarket & Heritage Communities",
+                  body: "Barrie's older residential neighbourhoods downtown and Newmarket's heritage core streets contain significant pre-1960 housing where lead paint testing is recommended as part of any pre-purchase or pre-renovation assessment. Cottage country properties across Simcoe County, Muskoka, and the Kawartha Lakes often contain older seasonal and permanent housing where lead paint on window trim, exterior siding, and porch structures has deteriorated significantly due to weather exposure — creating hazardous flaking conditions that standard visual inspection alone cannot quantify. Our XRF testing service covers all of Barrie, Simcoe County, and cottage country markets with same-day report delivery.",
+                },
+              ].map((item) => (
+                <div key={item.city} className="p-4 bg-amber-50 border border-amber-100 rounded-xl">
+                  <h4 className="font-bold text-slate-900 mb-1">{item.city}</h4>
+                  <p className="text-sm text-slate-700">{item.body}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       }
