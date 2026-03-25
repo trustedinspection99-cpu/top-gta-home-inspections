@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CheckCircle2, Star, Phone, ArrowRight, Calendar, Loader2 } from "lucide-react";
+import { CheckCircle2, Star, Phone, ArrowRight, Loader2 } from "lucide-react";
 
 const INSPECTION_TYPES = [
   { label: "Pre-Purchase Home Inspection — From $399", value: "Pre-Purchase Home Inspection" },
@@ -49,16 +49,14 @@ export function HeroBookingSection({
   ctaPrimary = { text: "Book Your Inspection", href: "/booking" },
   defaultService = "",
   city,
-  formTitle = "Book Your Inspection",
+  formTitle = "Get a Free Quote",
 }: HeroBookingSectionProps) {
   const [form, setForm] = useState({
     service: defaultService,
-    address: city ? `, ${city}, ON` : "",
     name: "",
     phone: "",
-    email: "",
+    city: city || "",
     preferred_date: "",
-    preferred_time: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
@@ -71,18 +69,15 @@ export function HeroBookingSection({
     if (!form.service || !form.name || !form.phone) return;
     setStatus("sending");
     try {
-      const res = await fetch("/api/notify", {
+      const res = await fetch("https://formspree.io/f/mnjnzzoz", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          type: "booking",
+          service: form.service,
           name: form.name,
           phone: form.phone,
-          email: form.email,
-          service: form.service,
-          address: form.address,
-          preferred_date: form.preferred_date,
-          preferred_time: form.preferred_time,
+          city: form.city || "Not specified",
+          preferred_date: form.preferred_date || "Flexible",
         }),
       });
       setStatus(res.ok ? "sent" : "error");
@@ -180,48 +175,14 @@ export function HeroBookingSection({
             </div>
             <h2 className="text-xl font-extrabold text-slate-900 mb-1">{formTitle}</h2>
             <p className="text-sm text-gray-500 mb-4">
-              Your appointment is confirmed. We'll only reach out if a scheduling change is required within 24 hours.
+              We respond within 30 minutes during business hours.
             </p>
 
             {status === "sent" ? (
-              <div className="py-4">
-                <div className="flex items-center gap-2 mb-4">
-                  <CheckCircle2 className="h-6 w-6 text-green-500 shrink-0" />
-                  <p className="font-bold text-lg text-gray-900">Appointment Confirmed</p>
-                </div>
-                <div className="bg-gray-50 rounded-xl border border-gray-200 divide-y divide-gray-200 text-sm mb-4">
-                  {form.service && (
-                    <div className="flex justify-between px-4 py-2.5">
-                      <span className="text-gray-500">Service</span>
-                      <span className="font-medium text-gray-900 text-right max-w-[55%]">{form.service}</span>
-                    </div>
-                  )}
-                  {form.address && (
-                    <div className="flex justify-between px-4 py-2.5">
-                      <span className="text-gray-500">Address</span>
-                      <span className="font-medium text-gray-900 text-right max-w-[55%]">{form.address}</span>
-                    </div>
-                  )}
-                  {form.preferred_date && (
-                    <div className="flex justify-between px-4 py-2.5">
-                      <span className="text-gray-500">Date</span>
-                      <span className="font-medium text-gray-900">{form.preferred_date}</span>
-                    </div>
-                  )}
-                  {form.preferred_time && (
-                    <div className="flex justify-between px-4 py-2.5">
-                      <span className="text-gray-500">Time</span>
-                      <span className="font-medium text-gray-900">{form.preferred_time}</span>
-                    </div>
-                  )}
-                  {form.email && (
-                    <div className="flex justify-between px-4 py-2.5">
-                      <span className="text-gray-500">Confirmation</span>
-                      <span className="font-medium text-gray-900 text-right max-w-[55%]">{form.email}</span>
-                    </div>
-                  )}
-                </div>
-                <p className="text-gray-500 text-xs text-center">Should any scheduling changes be required, we will contact you within 24 hours.</p>
+              <div className="py-6 text-center">
+                <CheckCircle2 className="h-12 w-12 text-green-500 mx-auto mb-3" />
+                <p className="font-bold text-xl text-gray-900 mb-2">Quote Request Received!</p>
+                <p className="text-gray-500 text-sm">We'll call you within 30 minutes to confirm your booking.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-3">
@@ -242,22 +203,6 @@ export function HeroBookingSection({
                       <option key={t.value} value={t.value}>{t.label}</option>
                     ))}
                   </select>
-                </div>
-
-                {/* Property address */}
-                <div>
-                  <label className="block text-xs font-semibold text-gray-600 mb-1">
-                    Property Address <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="address"
-                    value={form.address}
-                    onChange={handleChange}
-                    required
-                    placeholder="123 Main St, Toronto, ON"
-                    className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
                 </div>
 
                 {/* Name + Phone */}
@@ -292,8 +237,22 @@ export function HeroBookingSection({
                   </div>
                 </div>
 
-                {/* Preferred date + time */}
+                {/* City + Preferred Date */}
                 <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">
+                      City <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="city"
+                      value={form.city}
+                      onChange={handleChange}
+                      required
+                      placeholder="Toronto"
+                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
                   <div>
                     <label className="block text-xs font-semibold text-gray-600 mb-1">Preferred Date</label>
                     <input
@@ -305,42 +264,6 @@ export function HeroBookingSection({
                       className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Preferred Time</label>
-                    <select
-                      name="preferred_time"
-                      value={form.preferred_time}
-                      onChange={handleChange}
-                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-                    >
-                      <option value="">Any time</option>
-                      <option>8:00 AM</option>
-                      <option>9:00 AM</option>
-                      <option>10:00 AM</option>
-                      <option>11:00 AM</option>
-                      <option>12:00 PM</option>
-                      <option>1:00 PM</option>
-                      <option>2:00 PM</option>
-                      <option>3:00 PM</option>
-                      <option>4:00 PM</option>
-                    </select>
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div>
-                  <label className="block text-xs font-semibold text-gray-600 mb-1">
-                    Email <span className="text-red-500">*</span> <span className="font-normal text-gray-400">(confirmation sent here)</span>
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="you@example.com"
-                    className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
                 </div>
 
                 {status === "error" && (
@@ -357,12 +280,12 @@ export function HeroBookingSection({
                   {status === "sending" ? (
                     <><Loader2 className="h-4 w-4 animate-spin" /> Submitting…</>
                   ) : (
-                    <><Calendar className="h-4 w-4" /> Book My Inspection</>
+                    "Get a Free Quote →"
                   )}
                 </button>
 
                 <p className="text-xs text-gray-400 text-center">
-                  Booking confirmed · We'll reach out only if a scheduling change is required
+                  No payment required · We'll call to confirm within 30 minutes
                 </p>
               </form>
             )}

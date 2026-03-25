@@ -75,21 +75,20 @@ export default function Booking() {
     const inspectionLabel = inspectionTypes.find(t => t.value === formData.inspectionType)?.label || formData.inspectionType;
 
     try {
-      const response = await fetch('/api/notify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("https://formspree.io/f/mnjnzzoz", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          type: 'booking',
-          name: `${formData.firstName} ${formData.lastName}`,
-          email: formData.email,
-          phone: formData.phone,
           service: inspectionLabel,
-          address: `${formData.address}, ${formData.city}${formData.postalCode ? ' ' + formData.postalCode : ''}`,
-          preferred_date: date ? format(date, "PPP") : '',
-          preferred_time: formData.timeSlot,
-          property_type: formData.propertyType,
-          sq_footage: formData.squareFootage,
-          notes: formData.notes,
+          name: `${formData.firstName} ${formData.lastName}`.trim(),
+          phone: formData.phone,
+          email: formData.email || "Not provided",
+          city: formData.city || "Not specified",
+          address: formData.address || "Not provided",
+          property_type: formData.propertyType || "Not specified",
+          preferred_date: date ? format(date, "PPP") : "Flexible",
+          preferred_time: formData.timeSlot || "Any time",
+          notes: formData.notes || "",
         }),
       });
 
