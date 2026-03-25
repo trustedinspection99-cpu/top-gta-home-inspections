@@ -652,8 +652,8 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-oshawa",
     city: "Oshawa",
     region: "Durham Region",
-    metaTitle: "Home Inspection Oshawa | Infrared Same-Day Service | ASADS",
-    metaDescription: "Certified Oshawa home inspector for pre-purchase buyer inspections, thermal imaging & mold testing. Lakeview to Taunton. Same-day digital reports.",
+    metaTitle: "Home Inspector Oshawa | Infrared & Mold Testing | ASADS",
+    metaDescription: "Certified Oshawa home inspector for pre-purchase & property inspections. Thermal imaging, mold testing & same-day reports. Lakeview to Taunton. From $399.",
     description: "Oshawa's trusted certified inspector providing comprehensive buyer pre-purchase inspections, thermal imaging diagnostics & mold/asbestos testing.",
     neighborhoods: [
       "Lakeview", "Central Oshawa", "O'Neill", "Pinecrest", "Eastdale",
@@ -861,8 +861,8 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-burlington",
     city: "Burlington",
     region: "Halton Region",
-    metaTitle: "Home Inspection Burlington | Lakefront & KITEC Expert",
-    metaDescription: "Certified Burlington home inspector for lakefront estates, KITEC plumbing detection & condo inspections. Tyandaga to Aldershot GO corridor. Call (647) 801-9311.",
+    metaTitle: "Home Inspector Burlington | Thermal & Plumbing Inspections",
+    metaDescription: "Certified Burlington home inspector. Thermal roof & plumbing inspections, pre-purchase & condo. Tyandaga, Aldershot & lakefront properties. Same-day reports.",
     description: "Burlington's trusted waterfront property inspector specializing in Lake Ontario lakefront pre-purchase inspections, KITEC plumbing identification & thermal imaging diagnostics.",
     neighborhoods: [
       "Downtown Burlington", "Aldershot", "Tyandaga", "Roseland", "Orchard",
