@@ -54,6 +54,7 @@ import LeadPaintTesting from "./pages/services/LeadPaintTesting";
 import WellWaterTesting from "./pages/services/WellWaterTesting";
 import SewerScope from "./pages/services/SewerScope";
 import AirQuality from "./pages/services/AirQuality";
+import DesignatedSubstanceSurvey from "./pages/services/DesignatedSubstanceSurvey";
 import ServiceCityPage from "./pages/services/ServiceCityPage";
 import BlogCityPage from "./pages/blog/BlogCityPage";
 
@@ -104,6 +105,7 @@ const router = createBrowserRouter([
       { path: "/services/well-water-testing", element: <WellWaterTesting /> },
       { path: "/services/sewer-scope", element: <SewerScope /> },
       { path: "/services/air-quality", element: <AirQuality /> },
+      { path: "/services/designated-substance-survey", element: <DesignatedSubstanceSurvey /> },
       { path: "/services/:serviceSlug/:citySlug", element: <ServiceCityPage /> },
       // Portal routes
       { path: "/login", element: <LoginPage /> },
