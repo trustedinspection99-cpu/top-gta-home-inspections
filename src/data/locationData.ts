@@ -2441,6 +2441,10 @@ export const locationData: LocationData[] = [
       {
         title: "Pre-Listing Seller Inspections Kitchener: Waterloo Region Market",
         content: "Kitchener's Waterloo Region real estate market — driven by the technology sector, Wilfrid Laurier University, and strong manufacturing employment — sees consistent resale activity across all housing price points. Pre-listing inspection identifies material conditions including lead paint, KITEC plumbing, aging mechanical systems, and foundation drainage concerns before listing day, enabling Kitchener sellers to price accurately and disclose transparently. In multiple-offer situations common in Kitchener's tech-economy market, buyers may waive inspection conditions — making the seller's professional inspection report the primary condition reference. Our pre-listing service provides Kitchener sellers with documented property condition intelligence that supports confident pricing and reduces post-offer renegotiation risk."
+      },
+      {
+        title: "Commercial Inspection Kitchener-Waterloo: Tech Parks, Industrial & Multi-Unit",
+        content: "Kitchener's commercial real estate sector has transformed significantly with the region's technology industry growth. The Communitech Hub area, Tannery District, and LRT-corridor mixed-use developments represent new-generation commercial space where HVAC system capacity, fire suppression, electrical service adequacy for high-density office use, and building envelope performance require expert documentation before lease or purchase. Kitchener's older industrial districts along Ottawa Street and Courtland Avenue contain manufacturing and warehouse buildings from the 1950s through 1980s where roof membrane condition, heavy-use floor slab integrity, column grid structural assessment, and electrical capacity for industrial equipment are primary inspection focuses. Multi-unit residential buildings — a growing Kitchener asset class driven by student and tech-worker rental demand — require fire separation verification, common-area code compliance, and mechanical system adequacy assessment. ASADS commercial inspections in Kitchener-Waterloo include thermal imaging of all roof assemblies and electrical panels, with detailed scope-of-work reports accepted by major Ontario commercial lenders."
       }
     ],
     localExpertise: {
@@ -2473,6 +2477,10 @@ export const locationData: LocationData[] = [
       {
         title: "Uptown Waterloo Heritage Homes: Lead Paint, Wiring & Masonry",
         content: "Uptown Waterloo's established residential streets — Willis Way, Dorset Street, and the heritage blocks surrounding King Street North — contain housing from the 1900s through 1940s where century-home inspection concerns require specific expertise. Lead-based paint is present in virtually every unrestored Uptown Waterloo home on interior woodwork, exterior trim, and wall surfaces. Original or partially updated electrical systems, including knob-and-tube wiring in the oldest properties, require thorough safety assessment and documentation for insurance purposes. Masonry chimney deterioration — deteriorating mortar joints, displaced crowns, and interior tile liner cracking — is common in Uptown's heritage stock. Foundation moisture performance in Waterloo's heavier clay soils requires careful attention to drainage, weeping tile condition, and sump pump adequacy."
+      },
+      {
+        title: "Westmount Home Inspection: Mature Neighbourhood Pre-Purchase Expertise",
+        content: "Westmount — the established mature neighbourhood straddling the Kitchener-Waterloo boundary — is one of the region's most consistently active resale markets, drawing buyers who value tree-lined streets, mid-century architectural character, and proximity to both downtown Waterloo and Kitchener's commercial core. Westmount homes built from the 1950s through 1980s present a predictable mid-century inspection profile: furnaces and central air conditioning units approaching the 20-to-25-year replacement threshold, roofing materials at the end of a two-decade service life, and original windows requiring evaluation for air sealing and thermal performance. KITEC plumbing is a documented concern in Westmount homes from the late 1990s and early 2000s — identifiable at the water heater and pressure-reducing valve connections. Thermal imaging of Westmount homes identifies rim joist air leakage common in this construction era, settled attic insulation batt coverage, and moisture infiltration behind finished basement walls. Our Westmount pre-purchase inspections include a full written report with photographic documentation delivered the same day as the inspection."
       },
       {
         title: "Thermal Imaging Tech Executive Homes: Beechwood & Lincoln Heights",
@@ -3260,7 +3268,7 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-cambridge",
     city: "Cambridge",
     region: "Waterloo Region",
-    metaTitle: "Home Inspection Cambridge | Certified & Insured | ASADS",
+    metaTitle: "Home Inspection Cambridge | Commercial & Certified | ASADS",
     metaDescription: "Pre-purchase home inspection Cambridge from $399. Infrared imaging, same-day booking & detailed PDF report. Serving Galt West, Preston Heights & Hespeler.",
     description: "Cambridge's premier new construction inspector specializing in subdivision warranty inspections, family home pre-purchase & thermal imaging diagnostics.",
     neighborhoods: ["Galt West", "Preston Heights", "Hespeler", "North Dumfries", "Furnivall"],
@@ -3283,6 +3291,10 @@ export const locationData: LocationData[] = [
       {
         title: "Pre-Listing Inspections for All Cambridge Communities",
         content: "Cambridge sellers across all three communities — Galt, Preston, and Hespeler — benefit from pre-listing inspections that document property condition transparently before market entry. For Galt heritage properties, documentation of foundation condition, electrical service age, plumbing system status, and asbestos presence provides buyers with realistic expectations and reduces renegotiation risk. For Hespeler and newer Cambridge properties, KITEC confirmation and any warranty deficiency documentation adds value for sellers. Our pre-listing reports include photographic documentation, priority-ranked deficiency lists, and estimated remediation costs — supporting confident pricing across Cambridge's diverse and competitive real estate market."
+      },
+      {
+        title: "Commercial Property Inspection Cambridge: Office, Retail & Industrial",
+        content: "Cambridge's commercial real estate market spans three distinct business cores, each presenting unique inspection demands. Galt's historic downtown along Main Street and Water Street contains stone and brick commercial buildings from the mid-1800s through early 1900s where structural masonry assessment, roof drainage, and mechanical system condition require specialist evaluation. Preston's commercial corridor includes retail plazas and mixed-use buildings where roof membrane condition, HVAC rooftop unit performance, and electrical service capacity are primary inspection priorities. Hespeler's industrial and light-manufacturing park along Eagle Street serves Cambridge's manufacturing and logistics sector, where concrete slab integrity, overhead door systems, loading dock drainage, and three-phase electrical service must be thoroughly documented. ASADS commercial property inspections in Cambridge include thermal imaging of all roof assemblies and electrical panels as standard, providing investors and business owners with detailed condition reports before purchase commitment."
       }
     ],
     localExpertise: {
