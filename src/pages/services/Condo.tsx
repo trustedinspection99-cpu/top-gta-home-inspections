@@ -302,7 +302,7 @@ export default function CondoInspection() {
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                   {featuredLocations.map((loc) => (
-                    <Link key={loc.slug} to={`/locations/${loc.slug}`} className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 transition-colors text-sm text-foreground">
+                    <Link key={loc.slug} to={`/services/condo/${loc.slug.replace('home-inspection-', '')}`} className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 transition-colors text-sm text-foreground">
                       <MapPin className="h-4 w-4 text-primary flex-shrink-0" />{loc.name}
                     </Link>
                   ))}
@@ -334,6 +334,36 @@ export default function CondoInspection() {
                 For an exact quote, contact ASADS at <strong>(647) 801-9311</strong>.
                 Transparent pricing with no hidden add-ons.
               </p>
+            </div>
+
+            <div>
+              <h2 className="font-heading text-3xl mb-6">
+                Condo Inspection Cost Ontario
+              </h2>
+              <div className="overflow-hidden rounded-lg border border-border">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted">
+                    <tr>
+                      <th className="text-left px-4 py-3 font-semibold text-foreground">Unit Size</th>
+                      <th className="text-right px-4 py-3 font-semibold text-foreground">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      { size: "Studio / 1 Bedroom", price: "$299" },
+                      { size: "2 Bedroom", price: "$349" },
+                      { size: "3+ Bedroom", price: "$399" },
+                      { size: "Townhouse Condo", price: "$449" },
+                    ].map((row, i) => (
+                      <tr key={i} className={i % 2 === 0 ? "bg-background" : "bg-muted/30"}>
+                        <td className="px-4 py-3 text-foreground">{row.size}</td>
+                        <td className="px-4 py-3 text-right font-semibold text-foreground">{row.price}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-sm text-muted-foreground mt-3">Thermal imaging & Kitec plumbing audit included. Same-day digital report. Call <a href="tel:+16478019311" className="text-primary">(647) 801-9311</a> for a quote.</p>
             </div>
 
             <div>
