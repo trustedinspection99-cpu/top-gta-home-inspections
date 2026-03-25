@@ -187,7 +187,7 @@ const Index = () => {
     e.preventDefault();
     setFormStatus('sending');
     try {
-      const res = await fetch('/api/notify', {
+      const res = await fetch('https://formspree.io/f/mnjnzzoz', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
