@@ -265,8 +265,8 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-brampton",
     city: "Brampton",
     region: "Peel Region",
-    metaTitle: "Home Inspection Brampton | Certified Inspector | ASADS",
-    metaDescription: "Certified Brampton home inspector for pre-purchase inspections, thermal imaging & pre-listing. Serving all Brampton neighborhoods. Same-day reports.",
+    metaTitle: "Home Inspector Brampton | Book Inspection | ASADS",
+    metaDescription: "Certified Brampton home inspector. Book today — same-day reports, thermal imaging & pre-purchase inspections. Serving all Brampton neighborhoods. From $399.",
     description: "Brampton's trusted certified home inspector providing comprehensive buyer inspections, thermal imaging diagnostics, mold testing and pre-listing seller services.",
     neighborhoods: [
       "Fletcher's Creek", "Heart Lake", "Bramalea City Centre", "Springdale",
@@ -609,8 +609,8 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-oakville",
     city: "Oakville",
     region: "Halton Region",
-    metaTitle: "Home Inspection Oakville | Luxury & KITEC Expert | ASADS",
-    metaDescription: "Certified Oakville home inspector for Glen Abbey luxury estates, lakefront properties & KITEC detection. Ravine lot drainage experts. Call (647) 801-9311.",
+    metaTitle: "Home Inspector Oakville | Thermal Imaging | ASADS",
+    metaDescription: "Certified Oakville home inspector. Thermal imaging, pre-purchase & plumbing inspections. Glen Abbey, Kerr Village & lakefront properties. Same-day reports.",
     description: "Oakville's #1 certified inspector for high-end estate pre-purchase inspections, lakefront property assessments, ravine lot drainage & KITEC plumbing identification.",
     neighborhoods: [
       "Glen Abbey", "Bronte", "Downtown Oakville", "River Oaks", "Iroquois Ridge",
