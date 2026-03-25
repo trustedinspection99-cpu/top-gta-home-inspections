@@ -167,7 +167,16 @@ Deno.serve(async (req) => {
           content: m.content.length > 2000 ? m.content.slice(0, 2000) + '…' : m.content,
         }));
 
-      cleanedMessages.push({
+      // Anthropic requires first message to be user — strip any leading assistant messages
+      const firstUserIdx = cleanedMessages.findIndex((m: { role: string; content: string }) => m.role === 'user');
+      const trimmedMessages = firstUserIdx > 0 ? cleanedMessages.slice(firstUserIdx) : cleanedMessages;
+
+      // Bridge: prevent two consecutive user messages and signal Claude to skip completion check
+      if (trimmedMessages.length > 0 && trimmedMessages[trimmedMessages.length - 1].role === 'user') {
+        trimmedMessages.push({ role: 'assistant', content: 'All sections reviewed. Extracting findings as structured JSON now.' });
+      }
+
+      trimmedMessages.push({
         role: 'user',
         content: `Extract all inspection findings from this conversation and return ONLY a valid JSON object (no markdown, no code fences, no preamble) matching this exact structure:
 
@@ -205,7 +214,7 @@ Only include sections that have findings. Return ONLY the raw JSON object.`,
       const res = await fetch('https://api.anthropic.com/v1/messages', {
         method: 'POST',
         headers: { 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
-        body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 4096, system: SYSTEM, messages: cleanedMessages }),
+        body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 8192, system: SYSTEM, messages: trimmedMessages }),
       });
       if (!res.ok) {
         const errBody = await res.text();
@@ -222,11 +231,14 @@ Only include sections that have findings. Return ONLY the raw JSON object.`,
       }
     }
 
-    // Chat mode
+    // Chat mode — strip leading assistant messages (greeting) so first message is user
+    const firstUserIdx = claudeMessages.findIndex((m: { role: string; content: string }) => m.role === 'user');
+    const chatMessages = firstUserIdx > 0 ? claudeMessages.slice(firstUserIdx) : claudeMessages;
+
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: { 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
-      body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 2048, system: SYSTEM, messages: claudeMessages }),
+      body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 2048, system: SYSTEM, messages: chatMessages }),
     });
     if (!res.ok) {
       const errBody = await res.text();
