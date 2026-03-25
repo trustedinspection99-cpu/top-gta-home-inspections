@@ -286,9 +286,12 @@ export default function CondoInspection() {
                 </Link>,{" "}
                 <Link to="/services/thermal-imaging" className="text-primary underline">
                   thermal imaging inspections
+                </Link>,{" "}
+                <Link to="/services/pdi-inspection" className="text-primary underline">
+                  PDI inspection for new condos
                 </Link>, and{" "}
                 <Link to="/services/pre-purchase" className="text-primary underline">
-                  HVAC system inspections
+                  pre-purchase inspections
                 </Link>.
               </p>
 

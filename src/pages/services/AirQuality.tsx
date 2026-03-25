@@ -214,10 +214,10 @@ export default function AirQuality() {
         },
       ]}
       relatedServices={[
+        { title: "Designated Substance Survey", href: "/services/designated-substance-survey" },
         { title: "Mold Inspection", href: "/services/mold-inspection" },
         { title: "Radon Testing", href: "/services/radon-testing" },
         { title: "Asbestos Testing", href: "/services/asbestos-testing" },
-        { title: "Thermal Imaging", href: "/services/thermal-imaging" },
       ]}
     />
   );

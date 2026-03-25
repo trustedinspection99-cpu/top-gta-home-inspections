@@ -99,7 +99,7 @@
  ];
  
  const relatedServices = [
-   { title: "New Construction Inspection", href: "/services/new-construction" },
+   { title: "PDI Inspection", href: "/services/pdi-inspection" },
    { title: "Radon Testing", href: "/services/radon-testing" },
    { title: "Thermal Imaging", href: "/services/thermal-imaging" },
    { title: "WETT Inspection", href: "/services/wett" },

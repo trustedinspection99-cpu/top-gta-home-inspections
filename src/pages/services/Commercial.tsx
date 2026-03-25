@@ -113,8 +113,8 @@ const faqs = [
 ];
 
 const relatedServices = [
+  { title: "Designated Substance Survey", href: "/services/designated-substance-survey" },
   { title: "Thermal Imaging", href: "/services/thermal-imaging" },
-  { title: "Sewer Scope Inspection", href: "/services/sewer-scope" },
   { title: "Asbestos Testing", href: "/services/asbestos-testing" },
   { title: "Mold Inspection", href: "/services/mold-inspection" },
 ];

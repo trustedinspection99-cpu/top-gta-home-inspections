@@ -207,8 +207,8 @@ export default function LeadPaintTesting() {
         },
       ]}
       relatedServices={[
+        { title: "Designated Substance Survey", href: "/services/designated-substance-survey" },
         { title: "Asbestos Testing", href: "/services/asbestos-testing" },
-        { title: "Mold Inspection", href: "/services/mold-inspection" },
         { title: "Air Quality Testing", href: "/services/air-quality" },
         { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
       ]}

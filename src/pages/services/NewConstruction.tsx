@@ -436,6 +436,25 @@ export default function NewConstruction() {
         </div>
       </section>
 
+      {/* Related Services */}
+      <section className="py-12">
+        <div className="container">
+          <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Related Services</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              { title: "PDI Inspection", href: "/services/pdi-inspection" },
+              { title: "Radon Testing", href: "/services/radon-testing" },
+              { title: "Thermal Imaging", href: "/services/thermal-imaging" },
+              { title: "Air Quality Testing", href: "/services/air-quality" },
+            ].map((s) => (
+              <Link key={s.href} to={s.href} className="flex items-center gap-2 p-4 rounded-lg border border-border/50 hover:border-primary/50 transition-colors text-sm font-medium text-foreground">
+                <ArrowRight className="h-4 w-4 text-primary flex-shrink-0" />{s.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Service Areas */}
       <section className="py-12 bg-muted/30">
         <div className="container">
