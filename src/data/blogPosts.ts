@@ -74,7 +74,7 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">Your inspection report is a valuable negotiating tool. You can request the seller to repair certain items, ask for a price reduction to cover repair costs, or in some cases, walk away from the deal if significant issues are discovered.</p>
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Conclusion</h2>
-      <p class="mb-4">A home inspection is not just a formality—it's essential protection for one of life's biggest purchases. Don't skip this crucial step, even in a competitive market. The peace of mind and potential savings far outweigh the cost of the inspection.</p>
+      <p class="mb-4">A home inspection is not just a formality—it's essential protection for one of life's biggest purchases. Don't skip this crucial step, even in a competitive market. The peace of mind and potential savings far outweigh the cost of the inspection. If you're buying in the city, our <a href="/locations/home-inspection-toronto" class="text-primary underline font-medium">Toronto home inspection</a> service covers the full GTA, and we offer <a href="/services/same-day-home-inspection" class="text-primary underline font-medium">same-day home inspections</a> for buyers working under tight deadlines.</p>
       <p class="mb-4">Ready to book? Learn more about our <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase home inspection service</a>, or view our <a href="/pricing" class="text-primary underline font-medium">home inspection pricing</a> and <a href="/booking" class="text-primary underline font-medium">book online</a>.</p>
     `,
   },
@@ -509,7 +509,7 @@ export const blogPostsData: BlogPost[] = [
       </ul>
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When to Call Professionals</h2>
-      <p class="mb-4">If you find mold covering more than about 10 square feet, or if mold returns after cleaning, it's time to call in professionals. A mold inspection can identify the source of moisture and the extent of contamination.</p>
+      <p class="mb-4">If you find mold covering more than about 10 square feet, or if mold returns after cleaning, it's time to call in professionals. A <a href="/services/mold-inspection" class="text-primary underline font-medium">mold inspection</a> can identify the source of moisture and the extent of contamination. We serve homeowners in Mississauga and across Ontario — book a <a href="/locations/home-inspection-mississauga" class="text-primary underline font-medium">Mississauga home inspection</a> if you're concerned about air quality in your home.</p>
       <p class="mb-4">Suspect mold in your home? Our <a href="/services/mold-inspection" class="text-primary underline font-medium">mold inspection service</a> includes air and surface sampling with accredited lab analysis. <a href="/booking" class="text-primary underline font-medium">Book a mold inspection today.</a></p>
     `,
   },
@@ -573,7 +573,7 @@ export const blogPostsData: BlogPost[] = [
       </ul>
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Conclusion</h2>
-      <p class="mb-4">A professional inspection of your new home is an investment that can save you thousands in repairs that should be covered by your builder's warranty. Don't assume new means perfect.</p>
+      <p class="mb-4">A professional inspection of your new home is an investment that can save you thousands in repairs that should be covered by your builder's warranty. Don't assume new means perfect. We serve new-build buyers across the region — including our <a href="/locations/home-inspection-toronto" class="text-primary underline font-medium">Toronto home inspection</a> team and communities across Ontario.</p>
       <p class="mb-4">Don't skip the inspection on your new build. Book a <a href="/services/new-construction" class="text-primary underline font-medium">new construction home inspection</a> with ASADS — phase and final walkthroughs across Ontario. <a href="/booking" class="text-primary underline font-medium">Schedule today.</a></p>
     `,
   },
@@ -1264,7 +1264,7 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">ASADS inspectors are available to consult with your real estate agent and explain findings to facilitate negotiations. We can also refer you to ESA-licensed electricians who specialize in aluminum wiring remediation across the GTA.</p>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Bottom Line</h2>
-      <p class="mb-4">Aluminum wiring is common, manageable, and not a reason to automatically walk away from a home — but it must be identified, understood, and properly remediated. A home inspection that includes thermal imaging of the electrical system is the best way to assess the current condition of aluminum wiring connections and determine the scope of remediation needed before you commit to a purchase. Contact ASADS at (647) 801-9311 to book a pre-purchase inspection with thermal imaging included.</p>
+      <p class="mb-4">Aluminum wiring is common, manageable, and not a reason to automatically walk away from a home — but it must be identified, understood, and properly remediated. A home inspection that includes thermal imaging of the electrical system is the best way to assess the current condition of aluminum wiring connections and determine the scope of remediation needed before you commit to a purchase. Contact ASADS at (647) 801-9311 to book a pre-purchase inspection with thermal imaging included. We conduct aluminum wiring inspections throughout the GTA — visit our <a href="/locations/home-inspection-toronto" class="text-primary underline font-medium">Toronto home inspection</a> page to learn more about our coverage area.</p>
       <p class="mb-4">Buying an older Toronto home? Our <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase inspection</a> includes electrical panel evaluation and <a href="/services/thermal-imaging" class="text-primary underline font-medium">thermal imaging</a> to detect aluminum wiring arc faults. <a href="/booking" class="text-primary underline font-medium">Book today.</a></p>
     `,
   },
@@ -2905,6 +2905,417 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">ASADS provides <a href="/services/commercial" class="text-primary underline font-medium">commercial building inspections</a> across Ontario — from individual retail units to large industrial complexes. Our inspectors are experienced with ASTM E2018-15 methodology, Ontario Building Code requirements, and the GTA's specific commercial property stock. We provide CapEx forecasts, thermal imaging for electrical and envelope systems, and coordinated specialist reports when required.</p>
       <p class="mb-4">We also offer add-on services frequently required alongside commercial PCAs: <a href="/services/asbestos-testing" class="text-primary underline font-medium">asbestos inspection and designated substance surveys</a>, <a href="/services/thermal-imaging" class="text-primary underline font-medium">infrared thermography</a> for electrical and envelope systems, and <a href="/services/air-quality" class="text-primary underline font-medium">indoor air quality testing</a> for tenant-occupied buildings with occupancy health complaints.</p>
       <p class="mb-4">Contact ASADS to discuss your commercial property inspection requirements. We provide detailed proposals within 24 hours and can accommodate expedited timelines for time-sensitive transactions. Call (647) 801-9311 or <a href="/booking" class="text-primary underline font-medium">submit a request online</a>.</p>
+    `,
+  },
+  {
+    id: 50,
+    slug: "home-inspection-cost-toronto",
+    title: "Home Inspection Cost Toronto 2026 — What Buyers Pay",
+    metaTitle: "Home Inspection Cost Toronto 2026 | ASADS",
+    metaDescription: "How much does a home inspection cost in Toronto? From $299 (condos) to $549+ (detached). Thermal imaging included. Same-day report. ASADS certified inspectors.",
+    excerpt: "Toronto home inspection costs range from $299 for condos to $549+ for larger detached homes. Learn what drives the price, what's included, and how to book.",
+    category: "Pricing",
+    author: "ASADS Team",
+    date: "2026-03-27",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does a Home Inspection Cost in Toronto?</h2>
+      <p class="mb-4">A home inspection in Toronto costs between $299 and $599+ depending on property type and size. Condos and small apartments start at $299, townhouses and semis run $349–$399, and detached homes range from $399 for smaller properties to $549 or more for larger houses in neighbourhoods like Forest Hill, Rosedale, or Leaside.</p>
+      <p class="mb-4">ASADS charges the same base rates across all Toronto neighbourhoods — there is no downtown surcharge. The primary cost driver is property size and complexity, not postal code.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Toronto Home Inspection Pricing Breakdown</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo / apartment (any size):</strong> From $299</li>
+        <li><strong>Townhouse / semi-detached:</strong> From $349</li>
+        <li><strong>Detached under 2,000 sq ft:</strong> From $399</li>
+        <li><strong>Detached 2,000–3,500 sq ft:</strong> From $449</li>
+        <li><strong>Detached 3,500–5,000 sq ft:</strong> From $549</li>
+        <li><strong>Luxury / estate over 5,000 sq ft:</strong> From $599+</li>
+      </ul>
+      <p class="mb-4">Thermal imaging is included with every inspection at no additional charge — this is not standard across all Toronto inspectors and represents significant added value for buyers in this market.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Toronto Homes Can Cost More to Inspect</h2>
+      <p class="mb-4">Toronto's housing stock is among the most diverse in Canada — and also among the most complex to inspect. Neighbourhoods like The Annex, Riverdale, Leslieville, and the Beaches are filled with pre-war homes built between 1890 and 1940. These properties routinely present:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Knob-and-tube wiring</strong> — found in homes built before 1950; requires detailed documentation and often flags for insurance</li>
+        <li><strong>Galvanized steel plumbing</strong> — corrodes from the inside out; common in 1940s–1960s Toronto homes</li>
+        <li><strong>Rubble stone foundations</strong> — require specific evaluation for settlement, moisture intrusion, and structural movement</li>
+        <li><strong>Low-slope or flat roof sections</strong> — common on Victorian rowhouses and require separate evaluation methodology</li>
+        <li><strong>Aluminum wiring (1960s–70s builds)</strong> — prevalent in North York, Scarborough, and Etobicoke; thermal imaging reveals overheating connections</li>
+      </ul>
+      <p class="mb-4">Inspecting a 100-year-old Annex semi requires more time and documentation than a 2010 Scarborough condo — this is reflected in our pricing tiers.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What's Included in Every Toronto Home Inspection</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Structural components: foundation, framing, roof, attic</li>
+        <li>Electrical: panel, wiring type, outlets, GFCI/AFCI protection</li>
+        <li>Plumbing: supply lines, drainage, water heater, fixtures</li>
+        <li>HVAC: furnace, boiler, AC, HRV/ERV, ductwork</li>
+        <li>Interior: windows, doors, ceilings, floors, stairs</li>
+        <li>Exterior: cladding, grading, driveway, deck/porch</li>
+        <li>Thermal imaging scan (included, not extra)</li>
+        <li>Same-day digital report with photos and severity ratings</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Add-On Services for Toronto Buyers</h2>
+      <p class="mb-4">Given the age and diversity of Toronto's housing stock, several add-on tests are commonly recommended:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Mold inspection and air sampling:</strong> From $149 — important for older homes with water damage history or musty basements</li>
+        <li><strong>Asbestos testing:</strong> From $249 — strongly recommended for pre-1985 homes; vermiculite insulation in attics and floor tiles are the most common sources</li>
+        <li><strong>Radon testing:</strong> From $199 — 48-hour minimum deployment; Etobicoke and North York see elevated readings in some areas</li>
+        <li><strong>Sewer scope inspection:</strong> From $299 — critical for older Toronto homes with clay tile or Orangeburg sewer laterals; sewer replacement in Toronto can cost $8,000–$25,000</li>
+        <li><strong>Lead paint testing:</strong> From $249 — homes built before 1978 may have lead-based paint on trim, windows, and doors</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is a Home Inspection Worth It in Toronto's Market?</h2>
+      <p class="mb-4">Yes — categorically. In a market where the average Toronto detached home sells for over $1.2 million, a $399–$549 inspection is the cheapest insurance you can buy. Our inspectors regularly find deficiencies that cost $5,000–$30,000 to repair. Common finds in Toronto include aging electrical panels ($3,000–$6,000 to replace), failing flat roofs ($8,000–$15,000), and failed sewer laterals ($8,000–$20,000).</p>
+      <p class="mb-4">Toronto buyers who waive the inspection condition can still protect themselves with a <a href="/services/same-day-home-inspection" class="text-primary underline font-medium">same-day home inspection</a> before submitting their offer — call us before noon and we can inspect the same afternoon.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Toronto Home Inspection</h2>
+      <p class="mb-4">ASADS serves all Toronto neighbourhoods including the downtown core, Etobicoke, North York, East York, Scarborough, and all surrounding GTA communities. We operate 7 days a week, 7am–10pm, with same-day availability on most dates.</p>
+      <p class="mb-4">Visit our <a href="/locations/home-inspection-toronto" class="text-primary underline font-medium">Toronto home inspection page</a> to learn more, view our full <a href="/pricing" class="text-primary underline font-medium">home inspection pricing</a>, or <a href="/booking" class="text-primary underline font-medium">book online now</a>. Questions? Call (647) 801-9311.</p>
+    `,
+  },
+  {
+    id: 51,
+    slug: "home-inspection-cost-mississauga",
+    title: "Home Inspection Cost Mississauga 2026 — Full Pricing Guide",
+    metaTitle: "Home Inspection Cost Mississauga 2026 | ASADS",
+    metaDescription: "Home inspection cost in Mississauga: condos from $299, detached from $399. Thermal imaging included. Same-day report. Certified inspectors. (647) 801-9311.",
+    excerpt: "Mississauga home inspection costs: condos from $299, townhouses from $349, detached homes from $399. Learn what's included and what adds to the price in Mississauga.",
+    category: "Pricing",
+    author: "ASADS Team",
+    date: "2026-03-27",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Cost in Mississauga</h2>
+      <p class="mb-4">A home inspection in Mississauga costs between $299 and $549 depending on property size and type. Condos in communities like City Centre, Port Credit, and Lakeview start at $299. Townhouses in Erin Mills, Meadowvale, or Streetsville run $349–$399. Larger detached homes in communities like Lorne Park or Mineola average $449–$549+.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mississauga Pricing by Property Type</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo / apartment:</strong> From $299</li>
+        <li><strong>Townhouse / semi-detached:</strong> From $349</li>
+        <li><strong>Detached under 2,000 sq ft:</strong> From $399</li>
+        <li><strong>Detached 2,000–3,500 sq ft:</strong> From $449</li>
+        <li><strong>Large detached or luxury:</strong> From $549+</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mississauga Housing Stock — What Inspectors Find</h2>
+      <p class="mb-4">The majority of Mississauga's housing stock was built in the 1970s through 1990s — the city grew rapidly during Ontario's suburban expansion era. This era of construction comes with predictable patterns our inspectors know well:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Aluminum wiring:</strong> Extremely common in Mississauga homes built 1965–1975 in areas like Cooksville, Port Credit, and Malton. Thermal imaging during your inspection can identify overheating connections before they become fire hazards.</li>
+        <li><strong>KITEC plumbing:</strong> Thousands of Mississauga homes built between 1995 and 2007 were fitted with KITEC flexible plumbing that fails prematurely. ASADS inspectors flag all KITEC installations and document the pipe location and type.</li>
+        <li><strong>Flat and low-slope roofs:</strong> Bungalows in south Mississauga often have partial flat roof sections that require membrane evaluation — separate from standard sloped roof assessment.</li>
+        <li><strong>Aging HVAC equipment:</strong> Original gas furnaces and air conditioners from the 1980s–1990s are now well past their service life in many Mississauga homes.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Add-On Services Commonly Booked in Mississauga</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Sewer scope inspection — From $299:</strong> Mississauga's older subdivisions have clay tile and cast iron sewer laterals that require camera inspection before purchase.</li>
+        <li><strong>Mold inspection — From $149 add-on:</strong> High-humidity basements in older Cooksville and Port Credit homes frequently develop mold issues behind finished drywall.</li>
+        <li><strong>Radon testing — From $199:</strong> Mississauga sits within the regional radon zone — a 48-hour test gives you a baseline reading for peace of mind.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Every Mississauga Inspection Includes</h2>
+      <p class="mb-4">Every ASADS inspection covers: foundation and structure, roofing, electrical panel and wiring, plumbing, HVAC, attic insulation, windows and doors, exterior grading, and a full thermal imaging scan. Same-day digital report with photographs and repair priorities is always included.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Home Inspection in Mississauga</h2>
+      <p class="mb-4">ASADS inspectors serve all Mississauga communities: Port Credit, Lorne Park, Streetsville, Erin Mills, Meadowvale, Malton, and more. Same-day availability most days — call before noon and we can inspect that afternoon.</p>
+      <p class="mb-4">Visit our <a href="/locations/home-inspection-mississauga" class="text-primary underline font-medium">Mississauga home inspection page</a>, view our <a href="/pricing" class="text-primary underline font-medium">full pricing guide</a>, or <a href="/booking" class="text-primary underline font-medium">book online</a>. Call (647) 801-9311 for same-day requests.</p>
+    `,
+  },
+  {
+    id: 52,
+    slug: "home-inspection-cost-brampton",
+    title: "Home Inspection Cost Brampton 2026 — Prices & What's Included",
+    metaTitle: "Home Inspection Cost Brampton 2026 | ASADS",
+    metaDescription: "Home inspection in Brampton from $299 (condos) to $549+ (large detached). Certified inspectors, thermal imaging included, same-day report. Call (647) 801-9311.",
+    excerpt: "Brampton home inspection costs explained — from $299 for condos to $549+ for large detached homes. Covers what inspectors look for in Brampton's 1990s–2000s housing stock.",
+    category: "Pricing",
+    author: "ASADS Team",
+    date: "2026-03-27",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Cost in Brampton, Ontario</h2>
+      <p class="mb-4">Home inspection costs in Brampton range from $299 for a condo to $549+ for a large detached home. Brampton's rapid growth in the 1990s and 2000s means most of its housing stock is newer than Toronto's, but still old enough to develop the deficiencies that inspectors find most often: KITEC plumbing, aging flat roofs on townhouses, and brick veneer movement on clay soil foundations.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Brampton Inspection Pricing by Property Type</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo / apartment:</strong> From $299</li>
+        <li><strong>Townhouse (attached or freehold):</strong> From $349</li>
+        <li><strong>Semi-detached:</strong> From $349</li>
+        <li><strong>Detached under 2,000 sq ft:</strong> From $399</li>
+        <li><strong>Detached 2,000–3,500 sq ft:</strong> From $449</li>
+        <li><strong>Executive / large detached:</strong> From $549+</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Inspectors Find in Brampton Homes</h2>
+      <p class="mb-4">Brampton's building boom of the late 1990s and early 2000s coincided with the widespread installation of several now-problematic materials:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>KITEC plumbing:</strong> Communities like Springdale, Credit Valley, Snelgrove, and Heart Lake built between 1995 and 2007 have a high prevalence of KITEC orange flexible pipe. KITEC is known to fail at fittings, causing water damage. All ASADS inspections identify and document KITEC installations.</li>
+        <li><strong>Aging shingles on townhouse rows:</strong> Brampton's 1990s townhouse complexes are reaching the 25–30 year mark on their original roofing. This is peak replacement territory — a home inspection documents current roof condition and estimates remaining life.</li>
+        <li><strong>Brick veneer cracking:</strong> Brampton sits on expansive clay soils. Differential settlement causes brick veneer to crack at corners, window openings, and garage door lintels. Our inspectors photograph and classify all masonry movement.</li>
+        <li><strong>Grading and drainage issues:</strong> Many Brampton lots were graded to builder standard (minimum code) and have settled over 20+ years, directing water back toward foundations.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Add-On Services for Brampton Buyers</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Radon testing (from $199):</strong> Peel Region has moderate radon levels — a 48-hour test establishes your baseline.</li>
+        <li><strong>Mold inspection (from $149 add-on):</strong> Water intrusion from poor grading or KITEC failures often leads to hidden mold in finished basements.</li>
+        <li><strong>Sewer scope (from $299):</strong> Even 1990s–2000s PVC sewer laterals can develop root intrusion or bellies in Brampton's clay soils.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Home Inspection in Brampton</h2>
+      <p class="mb-4">ASADS inspectors cover all Brampton communities including Springdale, Credit Valley, Snelgrove, Heart Lake, Bramalea, and downtown Brampton. Same-day inspections available most weekdays.</p>
+      <p class="mb-4">See our <a href="/locations/home-inspection-brampton" class="text-primary underline font-medium">Brampton home inspection page</a>, or view the full <a href="/pricing" class="text-primary underline font-medium">home inspection pricing guide</a>. <a href="/booking" class="text-primary underline font-medium">Book online</a> or call (647) 801-9311.</p>
+    `,
+  },
+  {
+    id: 53,
+    slug: "home-inspection-cost-hamilton",
+    title: "Home Inspection Cost Hamilton 2026 — What to Budget",
+    metaTitle: "Home Inspection Cost Hamilton 2026 | ASADS",
+    metaDescription: "Home inspection cost in Hamilton from $299 to $549+. Victorian-era homes in the lower city need thorough inspection. Certified inspectors, same-day report.",
+    excerpt: "Hamilton home inspection costs range from $299 (condos) to $549+ (large detached). Learn what drives cost in Hamilton's unique mix of Victorian heritage and new builds.",
+    category: "Pricing",
+    author: "ASADS Team",
+    date: "2026-03-27",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does a Home Inspection Cost in Hamilton?</h2>
+      <p class="mb-4">Home inspection costs in Hamilton range from $299 for a condo or small apartment to $499–$549 for a larger detached home. Hamilton offers some of Ontario's best value in real estate, but its housing stock — particularly in the lower city — is among the oldest and most complex to inspect in the province. Many Hamilton buyers purchasing heritage homes in Durand, Kirkendall, or the North End need to budget extra time (and scrutiny) for their inspection.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Hamilton Inspection Pricing by Property Type</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo / apartment:</strong> From $299</li>
+        <li><strong>Townhouse / semi-detached:</strong> From $349</li>
+        <li><strong>Detached under 2,000 sq ft:</strong> From $399</li>
+        <li><strong>Detached 2,000–3,500 sq ft:</strong> From $449</li>
+        <li><strong>Large detached or heritage home:</strong> From $499+</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Hamilton's Heritage Homes — What Inspectors Watch For</h2>
+      <p class="mb-4">Hamilton's lower city contains thousands of homes built between 1870 and 1940 — Victorian and Edwardian-era rowhouses, detached workers' cottages, and brick foursquares in neighbourhoods like Durand, Kirkendall, Gibson, and the International Village. These properties require significantly more inspection time and expertise than newer construction:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Knob-and-tube wiring:</strong> The most common electrical system in lower city homes built before 1950. K&T is ungrounded and cannot be shared with modern insulation — insurers often require its replacement before issuing coverage.</li>
+        <li><strong>Rubble stone and brick foundations:</strong> Original stone foundations from the late 1800s need assessment for pointing deterioration, bowing, moisture seepage, and efflorescence. These issues are very different from poured concrete evaluation.</li>
+        <li><strong>Lead water service lines:</strong> Hamilton's older neighbourhoods may still have lead supply pipes connecting to the municipal main. Your inspector will note the visible pipe material and recommend a lead test if lead is suspected.</li>
+        <li><strong>Galvanized plumbing:</strong> Internal corrosion in galvanized steel supply lines is common in Hamilton's 1920s–1950s homes — low water pressure and rust-coloured water are common symptoms.</li>
+        <li><strong>Single-pane wood frame windows:</strong> Original wood windows are charming but energy-inefficient. Inspectors document condition, operation, glazing putty, and rot in wood frame windows.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mountain and New-Build Hamilton Neighbourhoods</h2>
+      <p class="mb-4">Hamilton's upper mountain communities (Ancaster, Dundas, Waterdown, Binbrook) feature newer construction from the 1980s through 2010s. These properties present fewer heritage concerns but still benefit from inspection for KITEC plumbing (1995–2007 builds), aging roofing, and grading issues on sloped mountain lots.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Add-On Services for Hamilton Buyers</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Asbestos testing (from $249):</strong> Pre-1985 Hamilton homes frequently contain asbestos in floor tiles, pipe insulation, and ceiling texture. Essential for heritage renovators.</li>
+        <li><strong>Mold inspection (from $149 add-on):</strong> Stone foundation basements in the lower city are prone to moisture intrusion and mold growth.</li>
+        <li><strong>Sewer scope (from $299):</strong> Clay tile and cast iron sewer laterals are common in Hamilton's older neighbourhoods — replacement costs can reach $10,000–$20,000.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Hamilton Home Inspection</h2>
+      <p class="mb-4">ASADS inspectors serve the entire City of Hamilton including the lower city, Ancaster, Dundas, Waterdown, Stoney Creek, and Flamborough. Heritage and pre-war homes are a specialty — our inspectors are experienced with rubble stone, K&T, and other period-specific systems.</p>
+      <p class="mb-4">Visit our <a href="/locations/home-inspection-hamilton" class="text-primary underline font-medium">Hamilton home inspection page</a>, view our <a href="/pricing" class="text-primary underline font-medium">full pricing guide</a>, or <a href="/booking" class="text-primary underline font-medium">book your inspection online</a>. Call (647) 801-9311 for same-day availability.</p>
+    `,
+  },
+  {
+    id: 54,
+    slug: "home-inspection-cost-kitchener",
+    title: "Home Inspection Cost Kitchener 2026 — Pricing Guide",
+    metaTitle: "Home Inspection Cost Kitchener 2026 | ASADS",
+    metaDescription: "Home inspection in Kitchener from $299 to $499+. Radon testing recommended in Waterloo Region. Certified inspectors, thermal imaging, same-day report.",
+    excerpt: "Kitchener home inspection costs from $299 to $499+. Learn about radon risk in Waterloo Region, new subdivision issues, and what inspectors look for in Kitchener homes.",
+    category: "Pricing",
+    author: "ASADS Team",
+    date: "2026-03-27",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Cost in Kitchener, Ontario</h2>
+      <p class="mb-4">A home inspection in Kitchener costs between $299 and $499 for most residential properties. Condos and small apartments start at $299, townhouses run $349, and detached homes range from $399 to $499 depending on size. Kitchener has grown significantly in the 2000s and 2010s with large new subdivisions — but the city also has older stock in its downtown core and established areas like Bridgeport, Chicopee, and Stanley Park.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Kitchener Pricing by Property Type</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo / apartment:</strong> From $299</li>
+        <li><strong>Townhouse:</strong> From $349</li>
+        <li><strong>Detached under 2,000 sq ft:</strong> From $399</li>
+        <li><strong>Detached 2,000–3,500 sq ft:</strong> From $449</li>
+        <li><strong>Larger detached:</strong> From $499+</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Radon Risk in Waterloo Region — Why It Matters</h2>
+      <p class="mb-4">Kitchener and the Waterloo Region are located within one of Ontario's elevated radon zones. Radon is a naturally occurring radioactive gas that enters homes through foundation cracks and is the second-leading cause of lung cancer in Canada. Health Canada recommends testing all homes below the third floor.</p>
+      <p class="mb-4">Our radon test (from $199) deploys an accredited detector for a minimum of 48 hours and provides a lab-certified result. If levels exceed 200 Bq/m3 — Health Canada's action level — we recommend a licensed radon mitigation contractor. Many Kitchener homes test elevated and benefit from a sub-slab depressurization system (typically $1,500–$3,000 to install).</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Kitchener Inspectors Commonly Find</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Newer subdivision issues (Doon, Huron, Laurentian West):</strong> 2000s–2010s builds may have KITEC plumbing, grading that has settled, or attic insulation voids from poor installation.</li>
+        <li><strong>Older downtown Kitchener homes:</strong> Pre-1960 homes in Civic Centre and Bridgeport areas may have knob-and-tube wiring, galvanized plumbing, and original oil tank decommissioning to consider.</li>
+        <li><strong>Attached garages:</strong> Gas entry, fire-separation door, and CO detector compliance are checked on all homes with attached garages.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Kitchener Home Inspection</h2>
+      <p class="mb-4">ASADS inspectors serve all Kitchener communities including Doon, Huron, Laurentian West, Bridgeport, Stanley Park, and downtown Kitchener. We also serve nearby Waterloo, Cambridge, and Guelph.</p>
+      <p class="mb-4">Visit our <a href="/locations/home-inspection-kitchener" class="text-primary underline font-medium">Kitchener home inspection page</a>, view our <a href="/pricing" class="text-primary underline font-medium">pricing guide</a>, or <a href="/booking" class="text-primary underline font-medium">book online</a>. Call (647) 801-9311.</p>
+    `,
+  },
+  {
+    id: 55,
+    slug: "home-inspection-cost-markham",
+    title: "Home Inspection Cost Markham 2026 — Buyer's Guide",
+    metaTitle: "Home Inspection Cost Markham 2026 | ASADS",
+    metaDescription: "Home inspection in Markham from $299 to $549+. KITEC plumbing prevalent in 1995–2007 builds. Certified inspectors, same-day report. Call (647) 801-9311.",
+    excerpt: "Markham home inspection costs: condos from $299, detached from $399. KITEC plumbing is the top concern in Markham's 1990s–2000s communities. Here's what you need to know.",
+    category: "Pricing",
+    author: "ASADS Team",
+    date: "2026-03-27",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Cost in Markham, Ontario</h2>
+      <p class="mb-4">A home inspection in Markham typically costs between $299 and $549, depending on property size. Markham's housing stock is largely from the 1990s and 2000s — communities like Cornell, Berczy Village, Angus Glen, Unionville, and Cathedraltown — placing many homes in the KITEC plumbing era. This is the single most important inspection finding for Markham buyers.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Markham Pricing by Property Type</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo / apartment:</strong> From $299</li>
+        <li><strong>Townhouse (freehold or condo):</strong> From $349</li>
+        <li><strong>Semi-detached:</strong> From $349–$399</li>
+        <li><strong>Detached under 2,500 sq ft:</strong> From $399</li>
+        <li><strong>Detached 2,500–4,000 sq ft:</strong> From $449–$549</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">KITEC Plumbing — The Most Critical Markham Issue</h2>
+      <p class="mb-4">KITEC flexible plumbing was installed in thousands of Markham homes between 1995 and 2007. The orange (hot) and blue (cold) flexible pipes are known to fail at brass fittings, often causing sudden water damage to finished basements and main floor areas. KITEC is identifiable by the orange and blue pipe colours and the IPEX or KTC fittings.</p>
+      <p class="mb-4">ASADS inspectors identify all accessible KITEC installations, document pipe routes, and provide guidance on remediation options. Full KITEC replacement in a typical Markham home runs $8,000–$15,000. Buyers can often negotiate repair credits when KITEC is identified in an inspection.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Unionville Heritage District</h2>
+      <p class="mb-4">Old Unionville's Main Street and the surrounding heritage district contains homes dating to the mid-1800s. These properties require entirely different inspection expertise — rubble stone foundations, original single-pane windows, knob-and-tube wiring, and heritage chimney systems. ASADS inspectors document heritage features while flagging deficiencies clearly.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Add-Ons Commonly Booked in Markham</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Sewer scope (from $299):</strong> Even 1990s PVC laterals can develop root intrusion; clay tiles in older Unionville need camera inspection.</li>
+        <li><strong>Mold inspection (from $149 add-on):</strong> KITEC failures often leave hidden water damage and mold in finished basements.</li>
+        <li><strong>Radon testing (from $199):</strong> York Region sees variable radon levels — testing is recommended, especially in basement bedrooms.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Markham Home Inspection</h2>
+      <p class="mb-4">We inspect all Markham communities including Cornell, Berczy Village, Angus Glen, Unionville, Cathedraltown, and Milliken. Same-day availability most weekdays.</p>
+      <p class="mb-4">Visit our <a href="/locations/home-inspection-markham" class="text-primary underline font-medium">Markham home inspection page</a>, view <a href="/pricing" class="text-primary underline font-medium">full pricing</a>, or <a href="/booking" class="text-primary underline font-medium">book online</a>. Call (647) 801-9311.</p>
+    `,
+  },
+  {
+    id: 56,
+    slug: "home-inspection-cost-oakville",
+    title: "Home Inspection Cost Oakville 2026 — Full Price Guide",
+    metaTitle: "Home Inspection Cost Oakville 2026 | ASADS",
+    metaDescription: "Home inspection in Oakville from $299 to $599+. Heritage lakefront homes and large north Oakville builds both covered. Certified inspectors, same-day report.",
+    excerpt: "Oakville home inspection costs from $299 to $599+. South Oakville heritage homes and north Oakville executive builds require different approaches — here's what to know.",
+    category: "Pricing",
+    author: "ASADS Team",
+    date: "2026-03-27",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Cost in Oakville, Ontario</h2>
+      <p class="mb-4">A home inspection in Oakville costs between $299 and $599+ depending on property size and type. Oakville has some of the most diverse real estate in Ontario — from 1920s lakefront heritage homes in Old Oakville and Bronte, to massive 4,000–6,000 sq ft executive homes in Joshua Creek, River Oaks, and Palermo Village. Inspection pricing reflects this range.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Oakville Pricing by Property Type</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo / apartment:</strong> From $299</li>
+        <li><strong>Townhouse:</strong> From $399</li>
+        <li><strong>Detached under 2,500 sq ft:</strong> From $449</li>
+        <li><strong>Detached 2,500–4,000 sq ft:</strong> From $499–$549</li>
+        <li><strong>Luxury / estate over 4,000 sq ft:</strong> From $599+</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">South Oakville Heritage Homes</h2>
+      <p class="mb-4">Old Oakville and Bronte contain some of the most sought-after heritage properties in the GTA, many dating to the 1920s–1950s. These homes are charming but require detailed inspection. Our inspectors assess:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Original masonry chimneys and fireplace condition</li>
+        <li>Knob-and-tube or early copper wiring systems</li>
+        <li>Galvanized or lead supply plumbing</li>
+        <li>Rubble stone or poured concrete foundation condition</li>
+        <li>Original cedar or slate roofing where present</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">North Oakville Executive Homes</h2>
+      <p class="mb-4">North Oakville's communities — Joshua Creek, River Oaks, Uptown Core, Palermo, and Woodland Park — were built primarily between 2000 and 2015. These larger homes have more systems to inspect: multiple HVAC zones, high-efficiency boilers, triple-car garages, finished walkout basements, and large outdoor entertainment structures. Inspection time (and therefore cost) reflects the additional scope.</p>
+      <p class="mb-4">KITEC plumbing is also present in north Oakville homes built before 2007 — our inspectors identify it in every inspection.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Recommended Add-Ons for Oakville Buyers</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Sewer scope (from $299):</strong> Clay tile sewer laterals in south Oakville heritage properties require camera inspection — replacement costs in Oakville run $10,000–$25,000.</li>
+        <li><strong>WETT inspection (from $199):</strong> Many Oakville homes have fireplaces or wood inserts — WETT certification is required for home insurance.</li>
+        <li><strong>Radon testing (from $199):</strong> Halton Region has variable radon readings — testing recommended for any below-grade living space.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book an Oakville Home Inspection</h2>
+      <p class="mb-4">ASADS inspectors serve all Oakville communities. Same-day availability most weekdays — call before noon for afternoon or evening appointments.</p>
+      <p class="mb-4">Visit our <a href="/locations/home-inspection-oakville" class="text-primary underline font-medium">Oakville home inspection page</a>, view <a href="/pricing" class="text-primary underline font-medium">full pricing</a>, or <a href="/booking" class="text-primary underline font-medium">book online</a>. Call (647) 801-9311.</p>
+    `,
+  },
+  {
+    id: 57,
+    slug: "home-inspection-cost-barrie",
+    title: "Home Inspection Cost Barrie 2026 — What to Expect",
+    metaTitle: "Home Inspection Cost Barrie 2026 | ASADS",
+    metaDescription: "Home inspection in Barrie from $299 to $499+. Simcoe County high-radon zone — testing strongly recommended. Certified inspectors, same-day report.",
+    excerpt: "Barrie home inspection costs from $299 to $499+. Simcoe County is a high-radon zone. Learn what inspectors find in Barrie's mix of lakefront cottages, 1990s builds, and new subdivisions.",
+    category: "Pricing",
+    author: "ASADS Team",
+    date: "2026-03-27",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Cost in Barrie, Ontario</h2>
+      <p class="mb-4">A home inspection in Barrie costs between $299 and $499 for most residential properties. Barrie and Simcoe County are experiencing significant growth as remote-work migration has pushed buyers north from the GTA. The region's housing stock ranges from lakefront cottages on Lake Simcoe's shores, to 1990s–2000s subdivisions in Ardagh Bluffs and Painswick, to brand-new development in the city's expanding northwest.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Barrie Inspection Pricing by Property Type</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo / apartment:</strong> From $299</li>
+        <li><strong>Townhouse:</strong> From $349</li>
+        <li><strong>Detached under 2,000 sq ft:</strong> From $399</li>
+        <li><strong>Detached 2,000–3,500 sq ft:</strong> From $449</li>
+        <li><strong>Large detached or waterfront:</strong> From $499+</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Radon in Simcoe County — A Critical Risk Factor</h2>
+      <p class="mb-4">Simcoe County, including Barrie, is within one of Ontario's elevated radon zones. The Canadian Shield geology underlying much of the region produces higher-than-average radon concentrations that accumulate in homes through foundation cracks and openings.</p>
+      <p class="mb-4">Health Canada estimates that radon exposure causes approximately 3,200 lung cancer deaths per year in Canada — it's the second-leading cause after smoking. A 48-hour radon test (from $199) provides a lab-certified baseline reading. ASADS strongly recommends radon testing for all Barrie purchases, especially homes with below-grade living space or bedrooms.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Inspectors Find in Barrie Homes</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Seasonal properties:</strong> Barrie's proximity to cottage country means some properties are converted seasonal homes — inspectors assess winterization quality, insulation adequacy, and year-round plumbing capability.</li>
+        <li><strong>Crawl spaces:</strong> Common in 1960s–1980s Barrie bungalows; inspectors check for moisture, insulation, vapour barrier, and structural condition below the main floor.</li>
+        <li><strong>Private wells and septic:</strong> Rural properties and some older in-town homes have private well water and septic systems. ASADS recommends separate well water testing and septic inspection for these properties.</li>
+        <li><strong>KITEC plumbing:</strong> Barrie's 1995–2007 builds are in the KITEC era — our inspectors identify and document all installations.</li>
+        <li><strong>Ice damming evidence:</strong> Barrie's winter climate means attic insulation and ventilation issues often present as water staining at exterior walls and ceilings — thermal imaging catches these even in summer months.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Add-On Services for Barrie Buyers</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Radon testing (from $199) — strongly recommended</strong></li>
+        <li><strong>Well water testing (from $199):</strong> E.coli, bacteria, nitrates, and arsenic panel for properties on private wells</li>
+        <li><strong>Mold inspection (from $149 add-on):</strong> Crawl spaces and basement conversions in Barrie frequently develop moisture and mold issues</li>
+        <li><strong>WETT inspection (from $199):</strong> Many Barrie and cottage-country homes have wood-burning fireplaces or stoves requiring WETT certification</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Barrie Home Inspection</h2>
+      <p class="mb-4">ASADS inspectors serve Barrie and surrounding Simcoe County communities including Innisfil, Collingwood, Midland, Orillia, and Wasaga Beach. Same-day availability most weekdays.</p>
+      <p class="mb-4">Visit our <a href="/locations/home-inspection-barrie" class="text-primary underline font-medium">Barrie home inspection page</a>, view our full <a href="/pricing" class="text-primary underline font-medium">pricing guide</a>, or <a href="/booking" class="text-primary underline font-medium">book your inspection online</a>. Call (647) 801-9311 for same-day requests.</p>
     `,
   },
 ];

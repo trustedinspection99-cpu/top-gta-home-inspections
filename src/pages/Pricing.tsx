@@ -351,6 +351,64 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* City-by-City Cost Comparison */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-heading text-3xl font-bold mb-3">
+              Home Inspection Cost by City — Ontario 2026
+            </h2>
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              Base pricing is consistent across Ontario — property size is the primary driver, not location.
+              Travel surcharges apply only for properties more than 90 minutes from our Cambridge base.
+            </p>
+            <div className="overflow-x-auto rounded-xl border border-border">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-primary text-primary-foreground">
+                    <th className="text-left p-4 font-semibold">City</th>
+                    <th className="text-left p-4 font-semibold">Condo</th>
+                    <th className="text-left p-4 font-semibold">Townhouse</th>
+                    <th className="text-left p-4 font-semibold">Detached (avg)</th>
+                    <th className="text-left p-4 font-semibold hidden md:table-cell">Notes</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  {[
+                    { city: "Toronto", condo: "$299", town: "$349", det: "$399–$549", note: "Pre-war homes common — allow extra time" },
+                    { city: "Mississauga", condo: "$299", town: "$349", det: "$399–$499", note: "1970s–80s subdivision stock; crawl spaces common" },
+                    { city: "Brampton", condo: "$299", town: "$349", det: "$399–$499", note: "Mix of new builds and 1990s subdivisions" },
+                    { city: "Vaughan", condo: "$299", town: "$349", det: "$399–$549", note: "Newer builds + large executive homes" },
+                    { city: "Markham", condo: "$299", town: "$349", det: "$399–$549", note: "Many 2000s–2010s townhouse communities" },
+                    { city: "Richmond Hill", condo: "$299", town: "$349", det: "$399–$549", note: "Mix of older bungalows and newer builds" },
+                    { city: "Oakville", condo: "$299", town: "$399", det: "$449–$599+", note: "Larger luxury homes; more systems to inspect" },
+                    { city: "Burlington", condo: "$299", town: "$349", det: "$399–$549", note: "Older downtown core + newer north end builds" },
+                    { city: "Hamilton", condo: "$299", town: "$349", det: "$399–$499", note: "Victorian-era homes in lower city — detailed electrical" },
+                    { city: "Kitchener", condo: "$299", town: "$349", det: "$399–$499", note: "Suburban growth corridor; many new construction" },
+                    { city: "Waterloo", condo: "$299", town: "$349", det: "$399–$499", note: "University proximity; many investor-owned properties" },
+                    { city: "Cambridge", condo: "$299", town: "$349", det: "$399–$499", note: "Older industrial city; heritage homes require thorough review" },
+                    { city: "Barrie", condo: "$299", town: "$349", det: "$399–$499", note: "Cottage-country proximity; some seasonal properties" },
+                    { city: "Oshawa / Durham", condo: "$299", town: "$349", det: "$399–$499", note: "Post-war worker housing common in south Oshawa" },
+                    { city: "Other Ontario", condo: "$299", town: "$349", det: "$399–$549", note: "Travel surcharge may apply beyond 90 min from Cambridge" },
+                  ].map((row, i) => (
+                    <tr key={row.city} className={i % 2 === 0 ? "bg-background" : "bg-muted/40"}>
+                      <td className="p-4 font-semibold text-foreground">{row.city}</td>
+                      <td className="p-4 text-primary font-bold">{row.condo}</td>
+                      <td className="p-4 font-medium">{row.town}</td>
+                      <td className="p-4 font-medium">{row.det}</td>
+                      <td className="p-4 text-muted-foreground text-xs hidden md:table-cell">{row.note}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-muted-foreground mt-3">
+              * Thermal imaging included in all inspections. Prices shown are for standard residential properties. Commercial quotes are separate.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* What Affects Home Inspection Cost */}
       <section className="py-16 md:py-20 bg-background">
         <div className="container">
