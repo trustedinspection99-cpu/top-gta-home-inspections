@@ -19,7 +19,11 @@ import {
   FileText,
   ArrowRight,
   Star,
-  AlertCircle
+  AlertCircle,
+  Award,
+  BadgeCheck,
+  DollarSign,
+  ClipboardList
 } from "lucide-react";
 
 interface SpecialtyService {
@@ -227,10 +231,34 @@ export function LocationPageTemplate({
             "@type": "Answer",
             text: `Our ${city} home inspections cover 400+ checkpoints including roof, foundation, plumbing, electrical, HVAC, insulation, windows, doors, and structural components. We also offer optional add-ons like radon testing, mold inspection, and thermal imaging.`
           }
+        },
+        {
+          "@type": "Question",
+          name: `Are ASADS home inspectors certified in ${city}?`,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: `Yes. ASADS inspectors are InterNACHI certified, carry $2M liability insurance, and follow the Canadian Association of Home & Property Inspectors (CAHPI) standards of practice. We serve ${city} and all surrounding ${region} communities.`
+          }
+        },
+        {
+          "@type": "Question",
+          name: `How soon can I get a home inspection in ${city}?`,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: `ASADS offers same-day and next-day home inspection booking in ${city}. We are available 7 days a week including evenings. Book online or call ${phoneNumber} for immediate scheduling.`
+          }
+        },
+        {
+          "@type": "Question",
+          name: `Do you provide a written report after the ${city} home inspection?`,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: `Yes. Every ${city} inspection includes a detailed digital PDF report with photos, prioritized findings, and maintenance recommendations — delivered the same day as the inspection, typically within 2–4 hours of completion.`
+          }
         }
       ]
     }),
-    [city, phoneNumber, neighborhoods]
+    [city, phoneNumber, neighborhoods, region]
   );
 
   // Service Schema with hasOfferCatalog
@@ -366,6 +394,34 @@ export function LocationPageTemplate({
         ctaPrimary={{ text: `Book Inspection in ${city}`, href: "/booking" }}
       />
 
+      {/* Trust Badge Strip */}
+      <section className="py-8 bg-slate-50 border-y border-slate-200">
+        <div className="container">
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 text-sm text-slate-600">
+            <div className="flex items-center gap-2 font-semibold">
+              <BadgeCheck className="w-5 h-5 text-primary" />
+              InterNACHI Certified
+            </div>
+            <div className="flex items-center gap-2 font-semibold">
+              <Award className="w-5 h-5 text-primary" />
+              CAHPI Standards
+            </div>
+            <div className="flex items-center gap-2 font-semibold">
+              <Shield className="w-5 h-5 text-primary" />
+              $2M Liability Insured
+            </div>
+            <div className="flex items-center gap-2 font-semibold">
+              <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+              <span>4.9★ &nbsp;·&nbsp; 150+ Reviews</span>
+            </div>
+            <div className="flex items-center gap-2 font-semibold">
+              <Clock className="w-5 h-5 text-primary" />
+              Same-Day Report
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Local Expertise Section */}
       {localExpertise && (
         <section className="py-16 bg-background">
@@ -419,6 +475,98 @@ export function LocationPageTemplate({
                     </div>
                   ))}
                 </div>
+              </div>
+
+              {/* Pricing Table */}
+              <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8">
+                <h2 className="font-heading text-2xl font-bold text-foreground mb-2 flex items-center gap-3">
+                  <DollarSign className="w-6 h-6 text-primary" aria-hidden="true" />
+                  Home Inspection Cost in {city}
+                </h2>
+                <p className="text-muted-foreground mb-6 text-sm">All-inclusive pricing · No hidden fees · HST included</p>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm border-collapse">
+                    <thead>
+                      <tr className="bg-primary text-primary-foreground">
+                        <th className="text-left p-3 rounded-tl-lg">Property Type</th>
+                        <th className="text-left p-3">Size</th>
+                        <th className="text-right p-3 rounded-tr-lg">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      <tr className="bg-white hover:bg-slate-50 transition-colors">
+                        <td className="p-3 font-medium">Condo / Apartment</td>
+                        <td className="p-3 text-muted-foreground">Any size</td>
+                        <td className="p-3 text-right font-bold text-primary">From $299</td>
+                      </tr>
+                      <tr className="bg-white hover:bg-slate-50 transition-colors">
+                        <td className="p-3 font-medium">Townhouse</td>
+                        <td className="p-3 text-muted-foreground">Up to 1,600 sq ft</td>
+                        <td className="p-3 text-right font-bold text-primary">From $349</td>
+                      </tr>
+                      <tr className="bg-white hover:bg-slate-50 transition-colors">
+                        <td className="p-3 font-medium">Semi-Detached / Detached</td>
+                        <td className="p-3 text-muted-foreground">Up to 1,600 sq ft</td>
+                        <td className="p-3 text-right font-bold text-primary">From $399</td>
+                      </tr>
+                      <tr className="bg-white hover:bg-slate-50 transition-colors">
+                        <td className="p-3 font-medium">Detached Home</td>
+                        <td className="p-3 text-muted-foreground">1,600–2,500 sq ft</td>
+                        <td className="p-3 text-right font-bold text-primary">From $449</td>
+                      </tr>
+                      <tr className="bg-white hover:bg-slate-50 transition-colors">
+                        <td className="p-3 font-medium">Detached Home</td>
+                        <td className="p-3 text-muted-foreground">2,500–4,000 sq ft</td>
+                        <td className="p-3 text-right font-bold text-primary">From $499</td>
+                      </tr>
+                      <tr className="bg-white hover:bg-slate-50 transition-colors">
+                        <td className="p-3 font-medium">Luxury / 4,000+ sq ft</td>
+                        <td className="p-3 text-muted-foreground">4,000+ sq ft</td>
+                        <td className="p-3 text-right font-bold text-primary">From $599</td>
+                      </tr>
+                      <tr className="bg-blue-50 border-t-2 border-primary">
+                        <td className="p-3 font-medium text-primary">Mold Inspection</td>
+                        <td className="p-3 text-muted-foreground">Air sampling + lab</td>
+                        <td className="p-3 text-right font-bold text-primary">From $299</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p className="mt-4 text-xs text-muted-foreground">* Thermal imaging included at no extra charge. Add-ons: Radon $199 · Asbestos from $249 · WETT $199. <Link to="/pricing" className="text-primary underline">Full pricing →</Link></p>
+              </div>
+
+              {/* What We Inspect */}
+              <div>
+                <h2 className="font-heading text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
+                  <ClipboardList className="w-6 h-6 text-primary" aria-hidden="true" />
+                  What's Inspected in Every {city} Home Inspection
+                </h2>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {[
+                    "Roof, gutters & drainage",
+                    "Foundation & structure",
+                    "Electrical panel & wiring",
+                    "Plumbing supply & drain",
+                    "Furnace & heat exchanger",
+                    "Air conditioning system",
+                    "Attic insulation & ventilation",
+                    "Basement & crawlspace",
+                    "Windows, doors & sealing",
+                    "Exterior cladding & grading",
+                    "Thermal imaging (IR scan)",
+                    "Smoke & CO detector locations",
+                    "Garage & fire separation",
+                    "Fireplace & chimney (visual)",
+                    "Kitchen & bathroom fixtures",
+                    "HRV / ERV ventilation system",
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-2 text-sm text-slate-700">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" aria-hidden="true" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-4 text-sm text-muted-foreground">400+ checkpoints total · Delivered as a same-day digital PDF report with photos</p>
               </div>
 
               {/* Specialty Services */}
@@ -517,6 +665,18 @@ export function LocationPageTemplate({
               <div className="bg-background p-6 rounded-xl border border-border/50">
                 <h3 className="font-bold text-lg mb-2">What does a home inspection in {city} include?</h3>
                 <p className="text-muted-foreground">Our {city} home inspections cover 400+ checkpoints including roof, foundation, plumbing, electrical, HVAC, insulation, windows, doors, and structural components. We also offer optional add-ons like radon testing, mold inspection, and thermal imaging.</p>
+              </div>
+              <div className="bg-background p-6 rounded-xl border border-border/50">
+                <h3 className="font-bold text-lg mb-2">Are ASADS home inspectors certified in {city}?</h3>
+                <p className="text-muted-foreground">Yes. ASADS inspectors are InterNACHI certified, carry $2M liability insurance, and follow CAHPI standards of practice. We are experienced with the specific housing stock and construction eras found in {city} and throughout {region}.</p>
+              </div>
+              <div className="bg-background p-6 rounded-xl border border-border/50">
+                <h3 className="font-bold text-lg mb-2">How soon can I get a home inspection in {city}?</h3>
+                <p className="text-muted-foreground">ASADS offers same-day and next-day home inspection booking in {city}, available 7 days a week including evenings. Book online in minutes or call {phoneNumber} for immediate scheduling confirmation.</p>
+              </div>
+              <div className="bg-background p-6 rounded-xl border border-border/50">
+                <h3 className="font-bold text-lg mb-2">Do you provide a written report after the {city} home inspection?</h3>
+                <p className="text-muted-foreground">Yes. Every inspection includes a detailed digital PDF report with photos, prioritized findings, maintenance recommendations, and repair cost guidance — delivered the same day as the inspection, typically within 2–4 hours of completion.</p>
               </div>
             </div>
           </div>
