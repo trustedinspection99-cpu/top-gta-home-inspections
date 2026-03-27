@@ -56,6 +56,7 @@ import SewerScope from "./pages/services/SewerScope";
 import AirQuality from "./pages/services/AirQuality";
 import DesignatedSubstanceSurvey from "./pages/services/DesignatedSubstanceSurvey";
 import PreDeliveryInspection from "./pages/services/PreDeliveryInspection";
+import SameDayInspection from "./pages/services/SameDayInspection";
 import ServiceCityPage from "./pages/services/ServiceCityPage";
 import BlogCityPage from "./pages/blog/BlogCityPage";
 
@@ -108,6 +109,7 @@ const router = createBrowserRouter([
       { path: "/services/air-quality", element: <AirQuality /> },
       { path: "/services/designated-substance-survey", element: <DesignatedSubstanceSurvey /> },
       { path: "/services/pdi-inspection", element: <PreDeliveryInspection /> },
+      { path: "/services/same-day-home-inspection", element: <SameDayInspection /> },
       { path: "/services/:serviceSlug/:citySlug", element: <ServiceCityPage /> },
       // Portal routes
       { path: "/login", element: <LoginPage /> },

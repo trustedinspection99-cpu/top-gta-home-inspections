@@ -184,6 +184,69 @@ export default function SewerScope() {
             </p>
           </div>
 
+          {/* Drain Camera vs Sewer Scope comparison */}
+          <div className="mt-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              Drain Camera Inspection vs. Sewer Scope — What's the Difference?
+            </h2>
+            <p className="text-slate-700 mb-4">
+              The terms are often used interchangeably, but they describe the same service: a closed-circuit television (CCTV) camera is inserted into the sewer lateral to inspect conditions from the inside. Here's how the terminology breaks down and what each term typically implies in Ontario:
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-slate-100 text-slate-800">
+                    <th className="p-3 text-left border border-slate-200 font-semibold">Term</th>
+                    <th className="p-3 text-left border border-slate-200 font-semibold">What It Means</th>
+                    <th className="p-3 text-left border border-slate-200 font-semibold">Scope</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { term: "Drain Camera Inspection", meaning: "Used when accessing smaller diameter pipes (kitchen, bathroom, floor drains)", scope: "Focuses on interior drain lines inside the home" },
+                    { term: "Sewer Scope Inspection", meaning: "Inspection of the main sewer lateral from house to municipal main", scope: "The underground line under/beside your home (most critical)" },
+                    { term: "CCTV Sewer Inspection", meaning: "Technical/industry term for the same service", scope: "Same as sewer scope — full lateral from cleanout to street" },
+                    { term: "Sewer Camera Inspection", meaning: "Common consumer search term, same service", scope: "Used interchangeably with sewer scope in most GTA markets" },
+                  ].map(({ term, meaning, scope }, i) => (
+                    <tr key={i} className="border-b border-slate-200 even:bg-slate-50">
+                      <td className="p-3 border border-slate-200 font-semibold text-blue-700">{term}</td>
+                      <td className="p-3 border border-slate-200 text-slate-700">{meaning}</td>
+                      <td className="p-3 border border-slate-200 text-slate-600">{scope}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-slate-500 mt-3">
+              Regardless of what you call it, ASADS uses the same 200ft industrial push-rod camera system for all sewer lateral inspections in Ontario.
+            </p>
+          </div>
+
+          {/* Service×City links */}
+          <div className="mt-6">
+            <h3 className="text-lg font-bold text-slate-800 mb-3">Book a Sewer Scope Near You</h3>
+            <div className="flex flex-wrap gap-2">
+              {[
+                { city: "Toronto", slug: "sewer-scope/toronto" },
+                { city: "Mississauga", slug: "sewer-scope/mississauga" },
+                { city: "Hamilton", slug: "sewer-scope/hamilton" },
+                { city: "Brampton", slug: "sewer-scope/brampton" },
+                { city: "Markham", slug: "sewer-scope/markham" },
+                { city: "Oakville", slug: "sewer-scope/oakville" },
+                { city: "Kitchener", slug: "sewer-scope/kitchener" },
+                { city: "Oshawa", slug: "sewer-scope/oshawa" },
+              ].map(({ city, slug }) => (
+                <a
+                  key={slug}
+                  href={`/services/${slug}`}
+                  className="inline-block px-4 py-1.5 bg-blue-50 border border-blue-200 text-blue-700 text-sm rounded-full hover:bg-blue-100 transition-colors"
+                >
+                  {city}
+                </a>
+              ))}
+            </div>
+          </div>
+
           {/* What if we find something */}
           <div className="mt-6">
             <h3 className="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">

@@ -62,6 +62,7 @@ const servicePages = [
   { path: '/services/lead-paint-testing',title:'Lead Paint Testing Ontario | XRF Certified | ASADS',                desc: 'Certified lead paint testing across Ontario. XRF screening, lab analysis, written report. Pre-1980 homes & renovations. Call (647) 801-9311.' },
   { path: '/services/air-quality',     title: 'Air Quality Testing Ontario | VOC & Mold | ASADS',                    desc: 'Indoor air quality testing for VOCs, particulates, CO2 & allergens. GTA & Ontario. AIHA-accredited lab. Residential & commercial. From $299.' },
   { path: '/services/wett',            title: 'WETT Inspection Ontario | Wood Burning & Fireplace | ASADS',          desc: 'Certified WETT inspection for fireplaces, wood stoves & inserts in Ontario. Required for home sales & insurance. Same-day report. Call (647) 801-9311.' },
+  { path: '/services/same-day-home-inspection', title: 'Same-Day Home Inspection Ontario | Book Today',             desc: 'Need a home inspection today in Ontario? ASADS offers same-day home inspections across the GTA — certified inspectors, thermal imaging, digital report in hours.' },
 ];
 
 // ─── Static pages ─────────────────────────────────────────────────────────────
