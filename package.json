@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/prerender-meta.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
+    "monitor": "node scripts/monitor-competitors.mjs",
+    "city-intel": "node scripts/city-intel.mjs",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
