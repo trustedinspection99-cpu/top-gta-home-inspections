@@ -3,7 +3,7 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function DesignatedSubstanceSurvey() {
   const pageTitle = "Designated Substance Survey Ontario | O.Reg 278/05 | ASADS";
-  const metaDescription = "Certified Designated Substance Survey Ontario. Legally required before renovation or demolition. Asbestos, lead, mercury, silica & all 11 substances. From $399.";
+  const metaDescription = "Certified Designated Substance Survey Ontario. Required before renovation or demolition. All 11 substances under OHSA. From $399. Same-day scheduling.";
 
   return (
     <ServicePageTemplate
