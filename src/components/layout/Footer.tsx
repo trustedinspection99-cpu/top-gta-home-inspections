@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ChevronDown } from "lucide-react";
 import { OrphanLocationLinks } from "@/components/seo/OrphanLocationLinks";
 
 const services = [
@@ -103,8 +103,16 @@ export function Footer() {
           {/* Service Areas */}
           <div>
             <h3 className="font-heading font-semibold text-lg mb-4">Service Areas</h3>
-            <div className="space-y-4">
-              <OrphanLocationLinks className="grid grid-cols-2 gap-x-6 gap-y-2" linkClassName="text-primary-foreground/80 hover:text-primary-foreground" />
+            <div className="space-y-3">
+              <details className="group">
+                <summary className="flex items-center gap-1.5 cursor-pointer list-none text-primary-foreground/80 hover:text-primary-foreground text-sm font-medium select-none">
+                  View all cities
+                  <ChevronDown className="h-3.5 w-3.5 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="mt-3">
+                  <OrphanLocationLinks className="grid grid-cols-2 gap-x-6 gap-y-2" linkClassName="text-primary-foreground/80 hover:text-primary-foreground" />
+                </div>
+              </details>
               <Link to="/locations" className="inline-block text-accent hover:text-accent/80 text-sm transition-colors font-medium">
                 View All Areas →
               </Link>

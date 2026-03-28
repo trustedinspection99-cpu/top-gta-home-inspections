@@ -356,7 +356,20 @@ export default function Locations() {
         </div>
       </section>
 
-      <OrphanLocationLinks />
+      {/* SEO orphan links — collapsed by default, visible to crawlers */}
+      <div className="bg-gray-50 border-t border-gray-100 py-8">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <details className="group">
+            <summary className="flex items-center gap-2 cursor-pointer list-none text-gray-500 hover:text-gray-700 text-sm font-medium select-none">
+              <span>More Ontario service areas</span>
+              <svg className="h-4 w-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div className="mt-4">
+              <OrphanLocationLinks className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-x-6 gap-y-2" />
+            </div>
+          </details>
+        </div>
+      </div>
     </Layout>
   );
 }
