@@ -10,7 +10,7 @@ const badges = [
   { 
     icon: Award, 
     label: "Master Inspector", 
-    sublabel: "OAHI & OBC Expert" 
+    sublabel: "OAHI & InterNACHI Certified"
   },
   { 
     icon: CheckCircle, 

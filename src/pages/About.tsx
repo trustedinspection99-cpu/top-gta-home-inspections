@@ -121,7 +121,7 @@ const team = [
     name: "Haroon Choudhry",
     role: "Master Inspector & Founder",
     experience: "15+ Years Experience",
-    certs: ["OAHI", "InterNACHI", "WETT", "OBC Expert"],
+    certs: ["OAHI", "InterNACHI", "WETT", "Thermography"],
     bio: "Haroon founded ASADS with a mission to provide GTA homeowners with unmatched expertise. Having completed over 2,000 inspections, he leverages his background in structural restoration and general contracting to identify issues others miss.",
     founder: true,
   },
@@ -221,14 +221,14 @@ export default function About() {
                   With a professional foundation as the former Owner and Principal Contractor of <strong>Aro Construction Inc.</strong>, Haroon provides a rare "inside-out" perspective. His background in <strong>structural restorations</strong> and general contracting allows him to identify critical mechanical and structural issues that standard inspections often overlook.
                 </p>
                 <p>
-                  We specialize in high-detail <strong>residential and commercial inspections</strong>, ensuring every property remains in strict alignment with the <strong>Ontario Building Code (OBC)</strong> and municipal safety standards.
+                  We specialize in high-detail <strong>residential and commercial inspections</strong>, following the OAHI and InterNACHI Standards of Practice. Haroon's construction background means he understands how buildings are built — and how they fail — giving every inspection a depth that goes beyond a standard visual assessment.
                 </p>
                 <p>
                   With a proven track record of over <strong>2,000 comprehensive property assessments</strong>, Haroon delivers technical clarity and actionable insights through professional, photographic reporting.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 mt-8">
-                {["OBC Compliance", "Structural Integrity", "MEP Systems", "Building Envelopes", "Technical Reporting"].map((skill) => (
+                {["OAHI Standards", "Structural Integrity", "MEP Systems", "Building Envelopes", "Technical Reporting"].map((skill) => (
                   <span key={skill} className="bg-primary/5 text-primary border border-primary/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
                     {skill}
                   </span>
@@ -249,7 +249,7 @@ export default function About() {
                     "OAHI Member — Ontario Association of Home Inspectors",
                     "InterNACHI Certified Professional Inspector",
                     "WETT Certified Technician",
-                    "Ontario Building Code (OBC) Expert",
+                    "Former Principal Contractor — Aro Construction Inc.",
                     "Thermography & Radon Certified",
                     "15+ years in structural restoration & contracting",
                   ].map(cred => (
@@ -279,7 +279,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: ShieldCheck, title: "Structural & MEP Expertise", desc: "Leveraging 15+ years of general contracting experience to identify critical structural, electrical, and plumbing issues." },
-              { icon: Search,      title: "OBC Code Compliance",        desc: "Expert knowledge of the Ontario Building Code (OBC) ensures your property meets all legal and safety requirements." },
+              { icon: Search,      title: "OAHI & InterNACHI Standards", desc: "Every inspection follows OAHI and InterNACHI Standards of Practice — the two most recognized inspection frameworks in Ontario." },
               { icon: FileText,    title: "Photographic Reporting",     desc: "Delivering high-quality, technical reports with actionable insights to empower your investment decisions." },
               { icon: UserCheck,   title: "Master Inspector Lead",      desc: "As a Master Inspector, our loyalty is to your safety. We move beyond surface-level observations to protect your asset." },
             ].map(item => {
