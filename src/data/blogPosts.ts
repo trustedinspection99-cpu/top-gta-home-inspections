@@ -3318,6 +3318,197 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">Visit our <a href="/locations/home-inspection-barrie" class="text-primary underline font-medium">Barrie home inspection page</a>, view our full <a href="/pricing" class="text-primary underline font-medium">pricing guide</a>, or <a href="/booking" class="text-primary underline font-medium">book your inspection online</a>. Call (647) 801-9311 for same-day requests.</p>
     `,
   },
+  {
+    id: 58,
+    slug: "home-inspection-waterloo-guide",
+    title: "Home Inspection in Waterloo, Ontario: What Buyers Need to Know",
+    metaTitle: "Home Inspection Waterloo Ontario | Buyer's Guide",
+    metaDescription: "Complete guide to home inspections in Waterloo, Ontario. Learn about KITEC plumbing, university district rentals, tech home upgrades, and what inspectors find most in Waterloo homes.",
+    excerpt: "Waterloo's housing market serves tech executives, university investors, and first-time buyers — all with different inspection priorities. Here's what a certified Waterloo home inspector looks for.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2026-03-28",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Waterloo Home Inspections Are Different</h2>
+      <p class="mb-4">Waterloo, Ontario is unlike most Ontario cities when it comes to real estate. It's simultaneously one of Canada's most active tech-economy housing markets and home to two major universities — the University of Waterloo and Wilfrid Laurier — that drive a massive student rental investment sector. These two markets require completely different inspection approaches, and understanding which one applies to your purchase is critical before you sign any offer.</p>
+      <p class="mb-4">A pre-purchase home inspection in Waterloo isn't optional — it's essential. Here's what certified Waterloo home inspectors consistently find, neighbourhood by neighbourhood.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">KITEC Plumbing: The #1 Risk in Waterloo's Westmount and Beechwood Homes</h2>
+      <p class="mb-4">Waterloo's most active resale neighbourhoods — Westmount, Beechwood, and Lincoln Heights — were built predominantly between the late 1990s and mid-2000s. This places a significant portion of Waterloo's housing stock squarely within the KITEC plumbing installation window (approximately 1995–2007).</p>
+      <p class="mb-4">KITEC is an orange-and-blue plastic piping system with brass fittings that are prone to a process called dezincification — the zinc leaches from the fitting over time, leaving a porous structure that can fail suddenly and catastrophically. A single KITEC fitting failure can discharge hundreds of gallons of water before the supply is shut off.</p>
+      <p class="mb-4">The insurance implications are serious. Many Ontario insurers now surcharge KITEC-plumbed properties by 15–30% on premiums, and some decline to write new policies at all. For Waterloo buyers in Westmount and Beechwood, KITEC investigation should be a standard part of every pre-purchase inspection. ASADS inspectors check mechanical rooms, manifold locations, and accessible fixture connections for KITEC identification on every property from this construction era.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">University District Investment Properties: What Rental Wear Looks Like</h2>
+      <p class="mb-4">If you're purchasing a rental property near the University of Waterloo or Wilfrid Laurier — anywhere along University Avenue, Columbia Street, or Erb Street West — you're looking at a property that has likely housed 4–8 occupants per year for decades. That density of use accelerates wear in ways that standard residential properties don't experience.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Common Findings in Waterloo Student Rentals</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Electrical panel modifications:</strong> Added circuits for mini-fridges, gaming setups, and high-draw appliances in every bedroom. Often done without permits, creating overloaded circuits and fire risk.</li>
+        <li><strong>Plumbing stress damage:</strong> Faucets, shower valves, and drain lines subjected to above-average use volume. Expect more frequent repairs than standard residential properties.</li>
+        <li><strong>Fire separation deficiencies:</strong> Many converted properties have inadequate fire separation between dwelling units — a safety and insurance concern, and a code compliance issue that affects rental licensing.</li>
+        <li><strong>Deferred maintenance:</strong> Landlords who manage multiple student rental properties often defer maintenance between tenancies. Furnaces, roof membranes, and exterior caulking frequently show neglect.</li>
+        <li><strong>HVAC condition:</strong> Filters are rarely changed in student rentals. Expect to find clogged heat exchangers, dirty coils, and reduced system efficiency on every property.</li>
+      </ul>
+      <p class="mb-4">For investor buyers, an ASADS inspection of a Waterloo student rental property includes documented condition assessment and remediation cost estimates — so you can accurately forecast your capital improvement budget before committing.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Uptown Waterloo Heritage Homes: Century-Home Inspection Priorities</h2>
+      <p class="mb-4">The residential streets around Uptown Waterloo — Willis Way, Dorset Street, and the heritage blocks north of King Street — contain housing from the 1900s through 1940s. These are among the most charming properties in the region, and they come with inspection priorities specific to their age:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Lead Paint</h3>
+      <p class="mb-4">Lead-based paint is present on virtually every unpainted interior and exterior surface in Uptown Waterloo's unrestored heritage homes. Window sills, door frames, trim, and exterior siding all carry lead risk. For families with children under six or pregnant occupants, lead paint testing before renovation — or before moving in — is strongly recommended. Our XRF non-destructive screening identifies all lead-containing surfaces without removing samples.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Electrical Systems</h3>
+      <p class="mb-4">The oldest Uptown Waterloo homes may retain active knob-and-tube wiring — the cloth-insulated wiring system from the early 20th century that is now largely uninsurable in Ontario without a documented professional inspection confirming its condition. Even homes that appear to have been updated may have cosmetic panel replacements with original knob-and-tube branch circuits still running through walls and attics. Our inspectors use thermal imaging to identify active knob-and-tube circuits that aren't visible to the eye.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Foundation and Moisture</h3>
+      <p class="mb-4">Waterloo's clay-heavy soils retain moisture and create lateral pressure against older foundation walls. Heritage homes with poured concrete or stone rubble foundations often show efflorescence (white mineral deposits), horizontal cracking from soil pressure, and evidence of prior water infiltration events. Understanding what has been addressed and what is active is a critical part of any Uptown Waterloo pre-purchase inspection.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Tech Executive Homes in Beechwood and Lincoln Heights</h2>
+      <p class="mb-4">Waterloo's technology sector — anchored by the Communitech Hub, Google's Canadian engineering office, and dozens of scale-up companies — has produced a strong demand for executive housing in Beechwood and Lincoln Heights. These properties, built primarily in the 2000s and 2010s, present mid-cycle inspection needs:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Roofing:</strong> Asphalt shingles at the 15–20 year mark are approaching replacement, particularly on south- and west-facing slopes. Budget $10,000–$18,000 for a full re-roof on a Beechwood-sized home.</li>
+        <li><strong>HVAC:</strong> Furnaces and central air conditioning installed in the mid-2000s are reaching the end of their service life. A thermal imaging inspection verifies heat exchanger condition and identifies early failure indicators.</li>
+        <li><strong>Smart home systems:</strong> Integrated HVAC controls, security systems, and lighting automation common in tech-sector homes need functional testing during inspection — a defective home automation system can be expensive to diagnose and repair post-closing.</li>
+        <li><strong>Building envelope:</strong> Thermal imaging verifies insulation continuity and identifies air leakage at rim joists, window perimeters, and attic hatch seals — common energy performance issues in this construction era.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does a Home Inspection Cost in Waterloo?</h2>
+      <p class="mb-4">Home inspection costs in Waterloo range from $299 for a small condo unit to $550+ for a large detached home. ASADS pricing:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Condo inspection: From $299</li>
+        <li>Townhouse or semi-detached: From $349</li>
+        <li>Standard detached home: From $399</li>
+        <li>Large or older home (2,500+ sq ft, pre-1980): From $479</li>
+        <li>KITEC plumbing investigation add-on: Included in standard inspection</li>
+        <li>Thermal imaging: From $199 add-on (recommended for Westmount and Beechwood era homes)</li>
+        <li>Radon testing: From $149 (long-term 90-day test recommended)</li>
+      </ul>
+      <p class="mb-4">All ASADS inspections include same-day digital report delivery. We are available 7 days a week across Waterloo and the Kitchener-Waterloo region.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your Waterloo Home Inspection</h2>
+      <p class="mb-4">ASADS Home Inspection serves all Waterloo neighbourhoods — University District, Uptown, Westmount, Beechwood, Lincoln Heights, and beyond. Our certified inspectors are familiar with Waterloo's housing stock and investment property landscape.</p>
+      <p class="mb-4">Call <a href="tel:+16478019311" class="text-primary hover:underline">(647) 801-9311</a> or <a href="/booking" class="text-primary hover:underline">book online</a> for same-day availability. We serve Waterloo, Kitchener, Cambridge, Guelph, and all of Waterloo Region.</p>
+      <p class="mb-4">Related: <a href="/locations/home-inspection-waterloo" class="text-primary hover:underline">Waterloo Home Inspection Services</a> | <a href="/locations/home-inspection-kitchener" class="text-primary hover:underline">Kitchener Home Inspection</a> | <a href="/services/pre-purchase/waterloo" class="text-primary hover:underline">Pre-Purchase Inspection Waterloo</a></p>
+    `,
+  },
+  {
+    id: 59,
+    slug: "condo-inspection-toronto-guide",
+    title: "Condo Inspection Toronto: Complete Buyer's Guide (2026)",
+    metaTitle: "Condo Inspection Toronto | Buyer's Guide 2026",
+    metaDescription: "Complete guide to condo inspections in Toronto. Fan coil units, status certificates, building era risks, and what to inspect before buying a Toronto condo. From $299.",
+    excerpt: "Buying a Toronto condo without an inspection is one of the riskiest moves in real estate. Here's exactly what a certified condo inspector looks for — and why fan coil units matter more than you think.",
+    category: "City Guides",
+    author: "ASADS Team",
+    date: "2026-03-28",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Should You Get a Condo Inspection in Toronto?</h2>
+      <p class="mb-4">In Toronto's competitive condo market, it's tempting to waive your inspection condition to strengthen an offer. But skipping a condo inspection is one of the highest-risk decisions a Toronto buyer can make — and here's why: the defects that matter most in a Toronto condo are completely invisible without a trained inspector.</p>
+      <p class="mb-4">Fan coil unit failures. Balcony membrane delamination. Window seal failures letting in moisture. Inadequate reserve funds sitting behind a slick status certificate. None of these show up on a showing. All of them can cost you $5,000 to $50,000 after closing.</p>
+      <p class="mb-4">A Toronto condo inspection from ASADS costs from $299 and takes 1.5–2.5 hours. For a $600,000+ purchase, it's an essential due diligence step.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Fan Coil Unit: Toronto's #1 Condo Inspection Finding</h2>
+      <p class="mb-4">The fan coil unit — the in-suite HVAC system used in the vast majority of Toronto high-rise condos — is the single most important mechanical component your inspector will assess. Unlike a furnace in a detached home, the fan coil is entirely your financial responsibility after closing, even though it serves the building's central chilled/hot water loop.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What Can Go Wrong with a Fan Coil Unit</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Clogged condensate drain pan:</strong> The most common finding. A blocked drain pan overflows, damaging your unit's ceiling and — more critically — the unit below yours. Condo corporations frequently charge back water damage repair costs to the unit where the leak originated, even if the cause was a maintained fan coil.</li>
+        <li><strong>Dirty coil:</strong> A coil that hasn't been cleaned in years loses heating and cooling efficiency and can harbour mold growth within the fan coil cabinet. Air quality implications for occupants.</li>
+        <li><strong>Fan motor failure:</strong> Replacement fan coil units in Toronto high-rises cost $3,000–$8,000 installed, depending on access and unit size. An inspector can assess the unit's operational condition and estimated remaining service life.</li>
+        <li><strong>Incorrect thermostat calibration:</strong> Fan coil units that run continuously but never reach set temperature indicate either a failing coil or a thermostat calibration issue — both worth documenting before closing.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Balcony Membrane: The Most Expensive Surprise in Toronto Condos</h2>
+      <p class="mb-4">Toronto's freeze-thaw climate is brutal on balcony waterproofing membranes. A balcony that drains onto the unit below creates an immediate water damage situation — and in most Toronto condo corporations' declaration documents, the unit from which water originates is responsible for the damage below, regardless of whether the membrane was maintained by the unit owner or the corporation.</p>
+      <p class="mb-4">Signs of balcony membrane failure our inspectors look for:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Efflorescence (white mineral deposits) on the balcony soffit visible from below</li>
+        <li>Cracking or bubbling in the balcony floor coating</li>
+        <li>Drainage pooling rather than flowing to drains</li>
+        <li>Rust staining from embedded deck hardware penetrating the membrane</li>
+      </ul>
+      <p class="mb-4">Full balcony membrane replacement in a Toronto mid-rise or high-rise unit runs $15,000–$40,000+ depending on building access. It's also a coordinated project that requires corporation approval and may have multi-year waiting lists on buildings with widespread membrane issues.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Toronto Condo Inspection by Building Era</h2>
+      <p class="mb-4">Toronto's condo stock spans five decades of construction, and each era carries distinct risk profiles:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1970s–1980s Towers (King West, Don Mills, Scarborough, North York)</h3>
+      <p class="mb-4">Toronto's first generation of high-rise condos — many originally built as rental apartments and later converted — are now 40–55 years old. Common findings:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Original cast iron drain stacks requiring replacement (entire-building projects costing millions)</li>
+        <li>Galvanized or original copper plumbing in aging condition</li>
+        <li>Aging electrical systems — some units retain original Federal Pacific or similar panels</li>
+        <li>Window seals long-failed on original single or early double-pane glazing</li>
+        <li>Potential asbestos-containing materials in floor tile adhesive, ceiling texture, and pipe insulation</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1990s–2000s Buildings (Liberty Village, CityPlace, Distillery District)</h3>
+      <p class="mb-4">Toronto's first condo boom produced the bulk of buildings in these now-popular neighbourhoods. These buildings are now 20–35 years old — the age where major building envelope work begins:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Window wall system seal failures causing air and water infiltration</li>
+        <li>Balcony membrane first or second replacement cycles</li>
+        <li>Parking garage membrane replacement (enormous special assessment risk — $3,000–$8,000 per unit)</li>
+        <li>Elevator cab and mechanical system modernization projects</li>
+        <li>Fan coil units at or approaching end of service life (15–20 year typical lifespan)</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2010s–2020s Towers (Downtown Core, Midtown, Etobicoke Waterfront)</h3>
+      <p class="mb-4">Newer buildings have fewer immediate mechanical concerns, but buyers should look carefully at:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Deficient construction quality from production-line build timelines (drywall finish, window seals, bathroom tile grout)</li>
+        <li>Reserve fund adequacy — many newer buildings launched with low monthly fees that don't reflect long-term reserve requirements</li>
+        <li>Assignment sales and early investor turnover creating deferred maintenance histories</li>
+        <li>Smart home systems that require manufacturer-specific maintenance or updates</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Understanding the Status Certificate</h2>
+      <p class="mb-4">A Toronto condo purchase should always include review of the status certificate — a package of documents that reveals the financial health of the condominium corporation. Your real estate lawyer reviews the legal components, but your inspector can help you understand the physical implications of what the status certificate reveals:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Reserve fund adequacy:</strong> Ontario law requires condo corporations to maintain a reserve fund for major repairs. A status certificate showing a reserve fund at less than 50% of the required amount is a significant red flag. A special assessment — an unexpected charge levied on all unit owners — may be pending.</li>
+        <li><strong>Pending special assessments:</strong> Disclosed directly in the status certificate. Any pending or approved special assessment reduces the effective value of your purchase by that amount per unit.</li>
+        <li><strong>Recent or ongoing major repairs:</strong> The status certificate discloses known material facts about building condition. Ongoing litigation, insurance claims, or engineer reports on building deficiencies should inform your decision.</li>
+        <li><strong>Monthly fee trajectory:</strong> A reserve fund study showing substantial increases in required contributions signals that monthly fees are about to rise significantly.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does a Condo Inspection Cost in Toronto?</h2>
+      <p class="mb-4">Toronto condo inspection pricing with ASADS:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Studio / bachelor unit: From $299</li>
+        <li>1-bedroom or 1+den: From $299–$329</li>
+        <li>2-bedroom unit: From $349</li>
+        <li>3-bedroom or penthouse: From $399</li>
+        <li>Townhouse condo: From $399 (treated as ground-level unit)</li>
+        <li>Thermal imaging add-on: From $199 (identifies hidden moisture behind walls and ceiling)</li>
+        <li>Mold air sampling add-on: From $299 (recommended in 1980s–1990s buildings)</li>
+      </ul>
+      <p class="mb-4">All inspections include same-day digital report delivery with photographs, a status certificate interpretation guide, and a post-inspection consultation by phone.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Toronto Condo Inspectors Check That Realtors Don't</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Fan coil unit operation, coil condition, and condensate drain path</li>
+        <li>Balcony membrane condition and drainage</li>
+        <li>Window and patio door seal integrity (fogged glass = failed seal)</li>
+        <li>In-suite electrical panel and circuit breaker operation</li>
+        <li>Plumbing water pressure and drain flow rates</li>
+        <li>Bathroom exhaust fan performance (critical for moisture control)</li>
+        <li>Parking space and locker physical condition</li>
+        <li>Building common area observations from your unit's perspective</li>
+        <li>Any visible evidence of past water damage, efflorescence, or mold</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your Toronto Condo Inspection Today</h2>
+      <p class="mb-4">ASADS Home Inspection serves all Toronto condo buildings — from King West and Liberty Village to CityPlace, the Distillery District, Midtown, North York, Scarborough, and Etobicoke. Our certified inspectors understand Toronto's condo market and the specific systems and risks in each building era.</p>
+      <p class="mb-4">Same-day availability · From $299 · Digital report same day · Available 7 days a week</p>
+      <p class="mb-4">Call <a href="tel:+16478019311" class="text-primary hover:underline">(647) 801-9311</a> or <a href="/booking" class="text-primary hover:underline">book your Toronto condo inspection online</a>.</p>
+      <p class="mb-4">See also: <a href="/locations/home-inspection-toronto" class="text-primary hover:underline">Toronto Home Inspection Services</a> | <a href="/services/condo/toronto" class="text-primary hover:underline">Condo Inspection Toronto</a> | <a href="/services/pre-purchase/toronto" class="text-primary hover:underline">Pre-Purchase Inspection Toronto</a> | <a href="/pricing" class="text-primary hover:underline">Full Inspection Pricing</a></p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
