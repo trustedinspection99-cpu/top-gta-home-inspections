@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Check, ArrowRight, Phone, Trophy } from "lucide-react";
+import { Check, ArrowRight, Phone } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -24,7 +24,7 @@ const mainInspections = [
       "Electrical and plumbing systems check",
       "HVAC system inspection",
       "Same-day digital report with photos",
-      "Money-back guarantee if report isn't detailed enough",
+      "Satisfaction guarantee — full refund if not happy",
     ],
     href: "/services/pre-purchase",
     popular: true,
@@ -513,31 +513,23 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* Guarantee + $1,000 Challenge */}
+      {/* Guarantee + CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-800 to-blue-900 text-white">
         <div className="container">
           <div className="max-w-4xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <Trophy className="h-8 w-8 text-yellow-400 flex-shrink-0" />
-                <h2 className="text-3xl font-bold">Our $1,000 Report Challenge</h2>
-              </div>
+              <h2 className="text-3xl font-bold mb-4">Our Satisfaction Guarantee</h2>
               <p className="text-blue-100 text-lg mb-6 leading-relaxed">
-                We're so confident in the depth and detail of our inspection reports that we'll pay <strong className="text-white">$1,000</strong> to anyone who can show us a more detailed report from another certified Ontario inspector.
+                If you're not completely satisfied with the depth and detail of your report — we'll refund your inspection fee. No questions asked.
               </p>
-              <div className="bg-white/10 border border-white/20 rounded-xl p-5 mb-6">
-                <h3 className="font-bold text-white mb-2">Satisfaction Guarantee</h3>
-                <p className="text-blue-100 text-sm leading-relaxed">
-                  If you feel our report isn't detailed enough — we'll refund your inspection fee. No questions asked. We back every report with our full satisfaction guarantee.
-                </p>
-              </div>
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-8">
                 {[
                   "400+ checkpoints documented with photos",
                   "Severity ratings on every finding",
                   "AI-assisted report narration for clarity",
                   "Same-day delivery — typically within 2 hours",
                   "OAHI & InterNACHI Standards of Practice",
+                  "Fully insured — Intact · $2M liability",
                 ].map(item => (
                   <li key={item} className="flex items-center gap-3 text-blue-100 text-sm">
                     <Check className="h-4 w-4 text-green-400 flex-shrink-0" />
@@ -545,6 +537,10 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
+              <a href="tel:6478019311" className="inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+                <Phone className="h-5 w-5" />
+                (647) 801-9311
+              </a>
             </div>
             <div className="bg-white rounded-2xl p-6 text-gray-900 shadow-2xl">
               <div className="flex items-center gap-2 mb-1">
