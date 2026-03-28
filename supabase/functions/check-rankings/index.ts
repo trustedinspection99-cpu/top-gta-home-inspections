@@ -1,9 +1,8 @@
 // Supabase Edge Function: check-rankings
-// Deploy: supabase functions deploy check-rankings
-// Requires Supabase secret: SERP_API_KEY
-// Called by: admin dashboard "Refresh Now" button + optional daily pg_cron
+// Checks Google rankings for 48 ASADS target keywords via SerpAPI
+// Stores results in rank_tracking table
 
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import { createClient } from 'npm:@supabase/supabase-js@2';
 
 const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
 const SUPABASE_SERVICE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
@@ -12,7 +11,6 @@ const SERP_API_KEY = Deno.env.get('SERP_API_KEY')!;
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
 
 const KEYWORDS = [
-  // Toronto — all services
   { keyword: 'home inspection toronto', city: 'Toronto', service: 'general' },
   { keyword: 'home inspector toronto', city: 'Toronto', service: 'general' },
   { keyword: 'same day home inspection toronto', city: 'Toronto', service: 'general' },
@@ -29,14 +27,12 @@ const KEYWORDS = [
   { keyword: 'air quality testing toronto', city: 'Toronto', service: 'air-quality' },
   { keyword: 'PDI inspection toronto', city: 'Toronto', service: 'pdi' },
   { keyword: 'aluminum wiring inspection toronto', city: 'Toronto', service: 'general' },
-  // Ontario-wide
   { keyword: 'home inspection ontario', city: 'Ontario', service: 'general' },
   { keyword: 'home inspector ontario', city: 'Ontario', service: 'general' },
   { keyword: 'house inspection ontario', city: 'Ontario', service: 'general' },
   { keyword: 'pre-purchase home inspection ontario', city: 'Ontario', service: 'pre-purchase' },
   { keyword: 'home inspection cost ontario', city: 'Ontario', service: 'pricing' },
   { keyword: 'mold inspection ontario', city: 'Ontario', service: 'mold-inspection' },
-  // Key cities
   { keyword: 'home inspection markham', city: 'Markham', service: 'general' },
   { keyword: 'home inspection mississauga', city: 'Mississauga', service: 'general' },
   { keyword: 'home inspection hamilton', city: 'Hamilton', service: 'general' },
@@ -54,7 +50,6 @@ const KEYWORDS = [
   { keyword: 'home inspection whitby', city: 'Whitby', service: 'general' },
   { keyword: 'home inspection oshawa', city: 'Oshawa', service: 'general' },
   { keyword: 'home inspection barrie', city: 'Barrie', service: 'general' },
-  // Service × city combos
   { keyword: 'mold inspection north york', city: 'North York', service: 'mold-inspection' },
   { keyword: 'mold inspection scarborough', city: 'Scarborough', service: 'mold-inspection' },
   { keyword: 'mold inspection mississauga', city: 'Mississauga', service: 'mold-inspection' },
@@ -64,7 +59,6 @@ const KEYWORDS = [
   { keyword: 'pre-purchase inspection mississauga', city: 'Mississauga', service: 'pre-purchase' },
   { keyword: 'commercial inspection toronto', city: 'Toronto', service: 'commercial' },
   { keyword: 'home inspection richmond hill', city: 'Richmond Hill', service: 'general' },
-  { keyword: 'home inspection newmarket', city: 'Newmarket', service: 'general' },
 ];
 
 async function checkKeyword(keyword: string): Promise<{ position: number | null; url: string | null }> {
@@ -87,14 +81,18 @@ async function checkKeyword(keyword: string): Promise<{ position: number | null;
 
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') {
-    return new Response('ok', { headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'authorization, content-type' } });
+    return new Response('ok', {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'authorization, content-type',
+      },
+    });
   }
 
   const checkedAt = new Date().toISOString();
   const results = [];
 
   for (const kw of KEYWORDS) {
-    // Get previous position for this keyword
     const { data: prev } = await supabase
       .from('rank_tracking')
       .select('position')
@@ -115,7 +113,6 @@ Deno.serve(async (req) => {
       previous_position: prev?.position ?? null,
     });
 
-    // Small delay to avoid rate limits
     await new Promise(r => setTimeout(r, 300));
   }
 
@@ -128,7 +125,8 @@ Deno.serve(async (req) => {
     });
   }
 
-  return new Response(JSON.stringify({ success: true, checked: results.length, at: checkedAt }), {
-    headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
-  });
+  return new Response(
+    JSON.stringify({ success: true, checked: results.length, at: checkedAt }),
+    { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } }
+  );
 });

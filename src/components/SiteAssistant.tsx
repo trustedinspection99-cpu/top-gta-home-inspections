@@ -224,6 +224,7 @@ const SiteAssistant: React.FC = () => {
   const navigate = useNavigate();
   const { dbUser } = useAuth();
 
+  const [sessionId] = useState(() => crypto.randomUUID());
   const [chatOpen, setChatOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -364,7 +365,7 @@ const SiteAssistant: React.FC = () => {
 
     try {
       const { data, error } = await supabase.functions.invoke('scout-booking', {
-        body: { messages: cleanMessages },
+        body: { messages: cleanMessages, sessionId },
       });
       if (error) throw error;
 

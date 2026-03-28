@@ -1,10 +1,70 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "npm:@supabase/supabase-js@2";
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
   "Content-Type": "application/json",
 };
+
+const supabase = createClient(
+  Deno.env.get("SUPABASE_URL")!,
+  Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+);
+
+function extractField(text: string, field: string): string | null {
+  return text.match(new RegExp(`${field}:\\s*([^\\n]+)`, "i"))?.[1]?.trim() ?? null;
+}
+
+function guessReasonNotBooked(msgs: { role: string; content: string }[]): string | null {
+  const userText = msgs.filter(m => m.role === "user").map(m => m.content.toLowerCase()).join(" ");
+  if (userText.includes("too expens") || userText.includes("cheaper") || userText.includes("price")) return "Price concern";
+  if (userText.includes("not ready") || userText.includes("maybe later") || userText.includes("just looking")) return "Not ready to book";
+  if (userText.includes("another") || userText.includes("someone else") || userText.includes("different company")) return "Chose another inspector";
+  if (msgs.filter(m => m.role === "user").length <= 1) return "Left after first message";
+  return "Did not complete booking";
+}
+
+async function logConversation(
+  sessionId: string,
+  allMessages: { role: string; content: string }[],
+  assistantReply: string
+) {
+  try {
+    const fullText = [...allMessages, { role: "assistant", content: assistantReply }].map(m => m.content).join("\n");
+    const booked = /BOOKING_READY/i.test(assistantReply);
+    const allMsgs = [...allMessages, { role: "assistant", content: assistantReply }];
+
+    const payload = {
+      messages: allMsgs,
+      booked,
+      city: extractField(fullText, "city"),
+      service_type: extractField(fullText, "inspection_type"),
+      address: extractField(fullText, "address"),
+      client_name: extractField(fullText, "client_name"),
+      client_email: extractField(fullText, "client_email"),
+      client_phone: extractField(fullText, "client_phone"),
+      inspection_date: extractField(fullText, "preferred_date"),
+      price: extractField(fullText, "total_price"),
+      reason_not_booked: booked ? null : guessReasonNotBooked(allMsgs),
+      ended_at: booked ? new Date().toISOString() : null,
+    };
+
+    const { data: existing } = await supabase
+      .from("conversation_logs")
+      .select("id")
+      .eq("session_id", sessionId)
+      .maybeSingle();
+
+    if (existing?.id) {
+      await supabase.from("conversation_logs").update(payload).eq("id", existing.id);
+    } else {
+      await supabase.from("conversation_logs").insert({ session_id: sessionId, started_at: new Date().toISOString(), ...payload });
+    }
+  } catch (_) {
+    // Logging failure should never break the booking flow
+  }
+}
 
 const SYSTEM_PROMPT = `You are Asad — ASADS Home Inspection's expert sales agent and booking specialist. You are confident, knowledgeable, warm, and focused on closing bookings. You never recommend outside companies, competitors, or services not offered by ASADS.
 
@@ -148,7 +208,7 @@ serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: CORS_HEADERS });
 
   try {
-    const { messages } = await req.json();
+    const { messages, sessionId } = await req.json();
 
     const ANTHROPIC_KEY = Deno.env.get("ANTHROPIC_API_KEY");
     if (!ANTHROPIC_KEY) {
@@ -177,6 +237,12 @@ serve(async (req) => {
 
     const data = await res.json();
     const content = data.content?.[0]?.text ?? "";
+
+    // Log conversation (non-blocking — never breaks booking)
+    if (sessionId) {
+      logConversation(sessionId, messages, content);
+    }
+
     return new Response(JSON.stringify({ content }), { headers: CORS_HEADERS });
   } catch (e) {
     return new Response(JSON.stringify({ error: String(e) }), { headers: CORS_HEADERS, status: 500 });
