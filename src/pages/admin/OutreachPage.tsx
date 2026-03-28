@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 
 const SAMPLE_URL_KEY = 'asads_outreach_sample_url';
+const DEFAULT_SAMPLE_URL = 'https://wjxbojjhyocrxqkfnxmz.supabase.co/storage/v1/object/public/Reports/inspections/23-seed-house-lane/report.html';
 
 const STATUS_STYLES: Record<OutreachStatus, string> = {
   pending: 'bg-gray-100 text-gray-600',
@@ -40,9 +41,9 @@ export default function OutreachPage() {
   const [rows, setRows] = useState<DbOutreach[]>([]);
   const [loading, setLoading] = useState(true);
   const [filterStatus, setFilterStatus] = useState<OutreachStatus | 'all'>('all');
-  const [sampleUrl, setSampleUrl] = useState(() => localStorage.getItem(SAMPLE_URL_KEY) ?? '');
+  const [sampleUrl, setSampleUrl] = useState(() => localStorage.getItem(SAMPLE_URL_KEY) ?? DEFAULT_SAMPLE_URL);
   const [showConfig, setShowConfig] = useState(false);
-  const [sampleDraft, setSampleDraft] = useState(sampleUrl);
+  const [sampleDraft, setSampleDraft] = useState(() => localStorage.getItem(SAMPLE_URL_KEY) ?? DEFAULT_SAMPLE_URL);
   const [showAdd, setShowAdd] = useState(false);
   const [form, setForm] = useState<AddForm>(BLANK_FORM);
   const [adding, setAdding] = useState(false);
