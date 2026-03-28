@@ -288,9 +288,31 @@ export default function CondoInspection() {
                 <h2 className="font-heading text-3xl mb-6">
                   Condo & Townhome Inspections Across Ontario
                 </h2>
-                <p className="text-muted-foreground mb-4">
-                  ASADS provides condo and townhome inspections throughout Ontario — Toronto, GTA, Waterloo Region, Hamilton, Barrie and beyond.
-                </p>
+                <div className="space-y-4 mb-8">
+                  {[
+                    {
+                      title: "Toronto Condo Inspection — Downtown, North York & Etobicoke",
+                      body: "Toronto's condo market spans 1980s co-ops in Etobicoke to post-2010 glass towers in King West, the Distillery District, and Yonge-Sheppard. Units in buildings from the late 1990s to mid-2000s carry significant Kitec plumbing exposure. Fan coil units in high-rise buildings are frequently at or beyond their 20-year service life — blocked condensate drains and mold growth inside coils are among the most common findings in Toronto condo inspections. Ground-level and podium units face higher moisture intrusion risk from below-grade parking garage waterproofing. ASADS provides condo inspections throughout Toronto — downtown core, midtown, North York, Etobicoke, Scarborough, and all waterfront neighbourhoods.",
+                    },
+                    {
+                      title: "Mississauga Condo Inspection — Square One & Hurontario Corridor",
+                      body: "Mississauga's Square One district — the Hurontario corridor between Burnhamthorpe and Eglinton — contains towers spanning several decades of construction. Fan coil condition varies dramatically by building management quality — poorly maintained fan coils are among the highest-cost in-suite deficiencies in Square One buildings. Kitec plumbing is present in Mississauga condo buildings from the 1997–2007 construction window. Port Credit's waterfront mid-rise developments carry balcony waterproofing concerns that thermal imaging can identify. ASADS provides same-day condo inspection services across all Mississauga communities.",
+                    },
+                    {
+                      title: "Vaughan & Markham Townhome Inspection — York Region New Construction",
+                      body: "York Region's new townhome market — Cornell and Wismer in Markham, Kleinburg and Woodbridge in Vaughan — produces consistent Tarion warranty inspection demand. Townhomes under 7 years old benefit from milestone inspections at 30 days, 1 year, and 2 years after possession to document builder deficiencies while warranty coverage remains active. Common findings include improper HRV commissioning, spray foam insulation gaps at rim joists, and exterior grading that hasn't settled to proper drainage slopes. ASADS provides condo and townhome inspections across all York Region communities.",
+                    },
+                    {
+                      title: "Hamilton & Burlington Condo Inspection — Heritage to New Builds",
+                      body: "Hamilton's condo market ranges from heritage loft conversions in the James Street North arts district to new suburban townhomes on the Mountain and in Stoney Creek. Heritage building conversions present structural masonry, fire separation between units, and original cast iron plumbing concerns not found in modern construction. Burlington's newer condominium towers along Brant Street carry Kitec plumbing exposure in mid-2000s construction. Waterdown and Ancaster townhomes face soil settlement concerns — drywall cracking at ceiling-wall junctions is a common finding in Mountain-area new builds. ASADS provides condo and townhome inspections across Hamilton, Burlington, and all of Hamilton-Niagara Region.",
+                    },
+                  ].map((item) => (
+                    <div key={item.title} className="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                      <h4 className="font-bold text-slate-900 mb-1">{item.title}</h4>
+                      <p className="text-sm text-slate-700">{item.body}</p>
+                    </div>
+                  ))}
+                </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                   {featuredLocations.map((loc) => (
                     <Link key={loc.slug} to={`/services/condo/${loc.slug.replace('home-inspection-', '')}`} className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 transition-colors text-sm text-foreground">

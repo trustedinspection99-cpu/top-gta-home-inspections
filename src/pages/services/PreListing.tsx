@@ -354,6 +354,39 @@ export default function PreListing() {
         </div>
       </section>
 
+      {/* --- PRE-LISTING BY CITY --- */}
+      <section className="py-12 bg-background">
+        <div className="container max-w-5xl">
+          <h2 className="font-heading text-2xl font-bold text-foreground mb-2 text-center">Pre-Listing Inspection by Market — Ontario</h2>
+          <p className="text-center text-muted-foreground mb-8">Every Ontario real estate market has distinct pre-listing priorities. Here is what sellers need to know by region.</p>
+          <div className="space-y-4">
+            {[
+              {
+                title: "Pre-Listing Inspection — Toronto",
+                body: "In Toronto's competitive market, buyers in Leslieville, Riverdale, Leaside, and Forest Hill frequently submit bids without inspection conditions — making the seller's professional inspection report the primary reference buyers use before committing. Toronto sellers who provide an ASADS inspection upfront eliminate the biggest source of buyer hesitation in waived-condition offers: fear of what a buyer's own inspector might find. Common Toronto pre-listing findings include knob-and-tube wiring in pre-1960 homes, aging cast iron drain stacks, and basement moisture that must be disclosed accurately on SPIS. Thermal imaging is included as standard — the tool most likely to identify moisture concealed behind finished basement walls.",
+              },
+              {
+                title: "Pre-Listing Inspection — Mississauga & Brampton",
+                body: "Mississauga and Brampton's high-volume suburban market sees significant multiple-offer activity on detached homes in Streetsville, Meadowvale, Credit Valley, and Brampton's Gore Road corridor. KITEC plumbing is prevalent in homes built 1997–2007 throughout both cities, and discovering KITEC during a buyer's inspection is one of the most common deal-disruptions in this market. A pre-listing inspection that identifies and discloses KITEC upfront — with documented replacement cost estimates — neutralizes this issue before buyers use it as a renegotiation tool. Peel Region sellers with older homes should also assess knob-and-tube wiring, furnaces approaching 25 years, and foundation drainage before listing day.",
+              },
+              {
+                title: "Pre-Listing Inspection — Markham, Vaughan & York Region",
+                body: "Sellers of premium homes in Markham's Cachet and Angus Glen, Vaughan's Woodbridge estates, and Richmond Hill's Oak Ridges communities face sophisticated buyer inspectors who review complex HVAC zoning, geothermal systems, and smart home automation continuity. ASADS York Region luxury pre-listing inspections include thermal imaging of all radiant floor heating zones, geothermal heat pump performance assessment, and multi-zone HVAC verification. Providing a comprehensive inspection report to luxury buyers signals confidence and significantly reduces renegotiation risk at the level where a 1% price adjustment represents $15,000–$30,000.",
+              },
+              {
+                title: "Pre-Listing Inspection — Hamilton & Kitchener-Waterloo",
+                body: "Hamilton's lower-city market — Kirkendall, Stipley, North End, and Westdale — contains dense concentrations of pre-1960 heritage homes where pre-listing inspection is not just a sales strategy but a legal protection measure. Hamilton sellers with century homes face significant latent defect disclosure obligations: lead paint, asbestos, knob-and-tube wiring, and cast iron plumbing are present in most lower-city properties. An ASADS pre-listing inspection documents these conditions accurately for SPIS completion, protecting sellers from post-sale latent defect claims. Kitchener-Waterloo sellers listing KITEC-era properties (late 1990s to early 2000s) benefit from early identification and disclosure — removing this obstacle from buyer negotiations before it controls the price.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="p-5 bg-muted/30 border border-border rounded-xl">
+                <h3 className="font-bold text-foreground mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* --- SERVICE AREAS GRID --- */}
       <section className="py-12 bg-muted/30">
         <div className="container">

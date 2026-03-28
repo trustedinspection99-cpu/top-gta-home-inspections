@@ -3805,6 +3805,117 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">See also: <a href="/locations/home-inspection-scarborough" class="text-primary hover:underline">Scarborough Home Inspection Services</a> | <a href="/services/pre-purchase/scarborough" class="text-primary hover:underline">Pre-Purchase Inspection Scarborough</a> | <a href="/services/mold-inspection/scarborough" class="text-primary hover:underline">Mold Inspection Scarborough</a> | <a href="/locations/home-inspection-toronto" class="text-primary hover:underline">Toronto Home Inspection</a></p>
     `,
   },
+  {
+    id: 64,
+    slug: "home-inspection-cost-ontario",
+    title: "Home Inspection Cost in Ontario 2026: Complete Pricing Guide",
+    metaTitle: "Home Inspection Cost Ontario 2026 | Pricing Guide",
+    metaDescription: "How much does a home inspection cost in Ontario? Full price breakdown by property type, size, and add-ons. From $299 condos to $599+ large homes.",
+    excerpt: "Home inspection costs in Ontario range from $299 for condos to $599+ for large homes. Learn what drives pricing, what's included, and how to avoid paying for services you don't need.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-03-28",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does a Home Inspection Cost in Ontario?</h2>
+      <p class="mb-4">Home inspection costs in Ontario typically range from <strong>$299 to $599+</strong> depending on property type, size, age, and location. Condos and apartments are at the lower end; large detached homes and century properties are at the higher end. Add-on services like thermal imaging, radon testing, and mold inspection add to the base price.</p>
+      <p class="mb-4">Unlike other trades where pricing varies wildly, Ontario home inspection pricing follows a fairly consistent range across certified inspectors. What differs is what you get for your money — included thermal imaging, report quality, inspector certification level, and response time vary significantly between providers.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Ontario Home Inspection Prices by Property Type</h2>
+      <table class="w-full text-sm border border-slate-200 rounded-lg overflow-hidden mb-6">
+        <thead class="bg-slate-100">
+          <tr>
+            <th class="text-left px-4 py-3 font-semibold">Property Type</th>
+            <th class="text-left px-4 py-3 font-semibold">Size</th>
+            <th class="text-left px-4 py-3 font-semibold">Typical Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-slate-200"><td class="px-4 py-3">Condo / Apartment</td><td class="px-4 py-3">Any size</td><td class="px-4 py-3 font-semibold">$299 – $349</td></tr>
+          <tr class="border-t border-slate-200 bg-slate-50"><td class="px-4 py-3">Townhouse</td><td class="px-4 py-3">Up to 2,000 sq ft</td><td class="px-4 py-3 font-semibold">$349 – $399</td></tr>
+          <tr class="border-t border-slate-200"><td class="px-4 py-3">Detached — Small</td><td class="px-4 py-3">Up to 2,000 sq ft</td><td class="px-4 py-3 font-semibold">$399 – $449</td></tr>
+          <tr class="border-t border-slate-200 bg-slate-50"><td class="px-4 py-3">Detached — Medium</td><td class="px-4 py-3">2,000 – 3,500 sq ft</td><td class="px-4 py-3 font-semibold">$449 – $499</td></tr>
+          <tr class="border-t border-slate-200"><td class="px-4 py-3">Detached — Large</td><td class="px-4 py-3">3,500 – 5,000 sq ft</td><td class="px-4 py-3 font-semibold">$499 – $549</td></tr>
+          <tr class="border-t border-slate-200 bg-slate-50"><td class="px-4 py-3">Luxury / Estate</td><td class="px-4 py-3">5,000+ sq ft</td><td class="px-4 py-3 font-semibold">$599+</td></tr>
+          <tr class="border-t border-slate-200"><td class="px-4 py-3">PDI (New Construction)</td><td class="px-4 py-3">Any size</td><td class="px-4 py-3 font-semibold">$349 – $499</td></tr>
+          <tr class="border-t border-slate-200 bg-slate-50"><td class="px-4 py-3">Pre-Listing Inspection</td><td class="px-4 py-3">Any size</td><td class="px-4 py-3 font-semibold">$399 – $549</td></tr>
+        </tbody>
+      </table>
+      <p class="mb-4 text-sm text-slate-600">Prices above are for ASADS Home Inspection in Ontario. <a href="/pricing" class="text-primary underline">See full pricing details</a>.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Affects Home Inspection Cost in Ontario?</h2>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Property Size</h3>
+      <p class="mb-4">The single biggest driver of cost is square footage. A 1,200 sq ft condo takes 1.5–2 hours to inspect; a 4,000 sq ft detached home takes 3.5–4.5 hours. Inspectors price to reflect the time required for a thorough assessment — avoid inspectors who quote a flat fee regardless of size.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Property Age</h3>
+      <p class="mb-4">Older homes require more time and expertise. Pre-1980 homes often have knob-and-tube wiring, galvanized plumbing, asbestos-containing materials, and older foundations — all of which require careful documentation. Some inspectors charge a premium for homes built before 1960; others include it in base pricing.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. Location in Ontario</h3>
+      <p class="mb-4">Pricing in Toronto and the GTA tends to be $50–$100 higher than in smaller Ontario cities for comparable properties, reflecting higher operating costs and travel time. ASADS prices uniformly across all 106 Ontario cities we serve — no travel surcharges.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. What's Included</h3>
+      <p class="mb-4">Not all inspections are created equal. The base price should include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>400+ point checklist covering all major systems (roof, foundation, electrical, plumbing, HVAC)</li>
+        <li>Same-day digital PDF report with photographs</li>
+        <li>Deficiency prioritization (major vs. maintenance)</li>
+        <li>Verbal summary walk-through with the inspector</li>
+      </ul>
+      <p class="mb-4">ASADS includes <strong>thermal imaging</strong> as standard — many inspectors charge $100–$150 extra for this. Thermal imaging detects moisture, insulation gaps, and electrical hot spots that visual inspection alone cannot identify.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Add-On Services & Costs</h2>
+      <table class="w-full text-sm border border-slate-200 rounded-lg overflow-hidden mb-6">
+        <thead class="bg-slate-100">
+          <tr>
+            <th class="text-left px-4 py-3 font-semibold">Add-On Service</th>
+            <th class="text-left px-4 py-3 font-semibold">What It Tests</th>
+            <th class="text-left px-4 py-3 font-semibold">Typical Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-slate-200"><td class="px-4 py-3">Radon Testing (Short-term)</td><td class="px-4 py-3">48-hour digital radon measurement</td><td class="px-4 py-3 font-semibold">$199</td></tr>
+          <tr class="border-t border-slate-200 bg-slate-50"><td class="px-4 py-3">Mold Inspection</td><td class="px-4 py-3">Visual + air/swab samples</td><td class="px-4 py-3 font-semibold">$149 – $299</td></tr>
+          <tr class="border-t border-slate-200"><td class="px-4 py-3">Asbestos Testing</td><td class="px-4 py-3">Bulk sample + lab analysis</td><td class="px-4 py-3 font-semibold">$249 – $449</td></tr>
+          <tr class="border-t border-slate-200 bg-slate-50"><td class="px-4 py-3">WETT Inspection</td><td class="px-4 py-3">Wood stove / fireplace for insurance</td><td class="px-4 py-3 font-semibold">$249</td></tr>
+          <tr class="border-t border-slate-200"><td class="px-4 py-3">Lead Paint Testing</td><td class="px-4 py-3">XRF or swab testing</td><td class="px-4 py-3 font-semibold">$199 – $349</td></tr>
+          <tr class="border-t border-slate-200 bg-slate-50"><td class="px-4 py-3">Well Water Testing</td><td class="px-4 py-3">Potability + contaminants</td><td class="px-4 py-3 font-semibold">$149 – $299</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Should You Choose the Cheapest Home Inspector?</h2>
+      <p class="mb-4">Choosing a home inspector based on price alone is one of the most common — and costly — mistakes buyers make. A $299 inspector who misses a $15,000 foundation issue or a $8,000 knob-and-tube wiring problem has cost you far more than the $100 you saved.</p>
+      <p class="mb-4">What to look for when comparing Ontario home inspectors:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Certification:</strong> InterNACHI or OAHI/CAHPI certification means the inspector meets national standards of practice. In Ontario, home inspection is not yet licensed — anyone can call themselves a home inspector without certification.</li>
+        <li><strong>Errors & Omissions Insurance:</strong> E&O insurance protects you if the inspector misses something significant. Uncertified inspectors often carry no E&O coverage.</li>
+        <li><strong>Thermal imaging included:</strong> If thermal imaging is extra, ask why. It should be standard — it catches what visual inspection can't.</li>
+        <li><strong>Same-day report:</strong> You should receive your report the same day as the inspection — not 2–3 days later when you're in the middle of negotiations.</li>
+        <li><strong>Reviews:</strong> Check Google reviews and ask for sample reports. Thin reports with no photos are a red flag.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Cost by City in Ontario</h2>
+      <p class="mb-4">Here's what a standard pre-purchase inspection of a 2,500 sq ft detached home costs across Ontario's major markets with ASADS:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Toronto home inspection cost:</strong> $449 – $499</li>
+        <li><strong>Mississauga home inspection cost:</strong> $449 – $499</li>
+        <li><strong>Brampton / Vaughan / Markham:</strong> $449 – $499</li>
+        <li><strong>Hamilton home inspection cost:</strong> $399 – $449</li>
+        <li><strong>Kitchener / Waterloo / Cambridge:</strong> $399 – $449</li>
+        <li><strong>Barrie / Simcoe County:</strong> $399 – $449</li>
+        <li><strong>Ottawa home inspection cost:</strong> Not currently served</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is a Home Inspection Worth the Cost?</h2>
+      <p class="mb-4">Yes — consistently and without exception. A home inspection typically costs $399–$549. The average deficiency list on an Ontario pre-purchase inspection identifies $3,000–$15,000 in repair items that buyers can negotiate before closing or budget for post-purchase. The ROI on a home inspection is among the highest of any professional service in a real estate transaction.</p>
+      <p class="mb-4">More importantly, a home inspection protects you from unknowns. Buying without one — even in a competitive offer situation — means accepting a property's condition blind. A <a href="/services/same-day-home-inspection" class="text-primary underline font-medium">same-day home inspection</a> is available for tight offer deadlines.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your Ontario Home Inspection</h2>
+      <p class="mb-4">ASADS Home Inspection provides certified pre-purchase, pre-listing, condo, new construction, and commercial inspections across 106 Ontario cities. Thermal imaging included. Same-day digital report. No rush surcharge for same-day bookings.</p>
+      <p class="mb-4">See our <a href="/pricing" class="text-primary underline font-medium">full pricing page</a> or <a href="/booking" class="text-primary underline font-medium">book your inspection online</a>. Call <a href="tel:+16478019311" class="text-primary underline">(647) 801-9311</a> for same-day availability.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
