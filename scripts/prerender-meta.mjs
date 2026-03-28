@@ -446,10 +446,10 @@ for (const page of pages) {
     const sSlug = parts[1];
     const cName = allCityNames[parts[2]] || parts[2];
     faqSchema = buildFaqSchema(serviceFaqsMap[sSlug], cName);
-  } else if (parts[0] === 'services' && parts.length === 2) {
-    // /services/:svc — use same FAQs with "Ontario" substituted for {city}
-    faqSchema = buildFaqSchema(serviceFaqsMap[parts[1]], 'Ontario');
   } else if (parts[0] === 'locations' && parts.length === 2) {
+    // NOTE: /services/:svc pages are intentionally excluded — ServicePageTemplate
+    // renders its own FAQPage JSON-LD from the component's faqs prop, so injecting
+    // here would create a duplicate FAQPage schema (Google critical error).
     // /locations/home-inspection-:city — inject location FAQs with city substitution
     const cSlug = parts[1].replace(/^home-inspection-/, '');
     const cName = allCityNames[cSlug] || cSlug;
