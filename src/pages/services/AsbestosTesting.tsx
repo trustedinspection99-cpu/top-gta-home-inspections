@@ -110,42 +110,42 @@ export default function AsbestosTesting() {
           </div>
 
           <div>
-            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Asbestos Inspection by City</h3>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Asbestos Testing by City</h3>
             <p className="text-slate-700 mb-4">
               Asbestos risk varies significantly by era of construction and neighbourhood. Here is what our inspectors commonly find in the GTA's major cities.
             </p>
             <div className="space-y-4">
               {[
                 {
-                  city: "Asbestos Inspection — Brampton",
+                  city: "Asbestos Testing — Brampton",
                   body: "Brampton experienced explosive residential growth from the 1960s through the 1990s. The older areas of downtown Brampton, Bramalea, and early Springdale developments are full of homes with popcorn ceilings, vinyl floor tiles, and pipe insulation from the asbestos era. Pre-1985 bungalows in Brampton commonly have Zonolite vermiculite in attics. O.Reg 278/05 requires testing before any renovation — and Brampton's active renovation and resale market means demand for certified inspections is high.",
                 },
                 {
-                  city: "Asbestos Inspection — Markham",
+                  city: "Asbestos Testing — Markham",
                   body: "Markham's heritage areas — Unionville, Old Markham Village, and Thornhill — include pre-1980 homes where asbestos-containing materials are common. The older bungalow stock east of Warden Avenue and in the Cornell and Milliken Park areas often contains stipple ceiling texture, vinyl floor tile adhesive, and pipe lagging. Buyers of pre-1985 Markham homes should always include asbestos sampling as part of their due diligence.",
                 },
                 {
-                  city: "Asbestos Inspection — Mississauga",
+                  city: "Asbestos Testing — Mississauga",
                   body: "Mississauga's Port Credit, Lakeview, Cooksville, and Malton neighbourhoods have significant stocks of pre-1985 housing. Asbestos was used extensively in floor tiles, acoustic ceiling coatings, and HVAC duct insulation in this era. The city's rapid 1970s development boom means a large proportion of detached and semi-detached homes in these areas require pre-renovation testing.",
                 },
                 {
-                  city: "Asbestos Inspection — Toronto",
+                  city: "Asbestos Testing — Toronto",
                   body: "Toronto's older boroughs — Etobicoke, North York, Scarborough, and East York — contain some of the GTA's highest concentrations of asbestos-era construction. Post-war bungalows from the 1950s and 1960s, apartment towers from the 1970s, and commercial properties throughout the core frequently test positive for asbestos in ceiling textures, floor underlayment, and insulation systems. Our Toronto inspectors are specialists in navigating pre-demolition asbestos surveys for both residential and light commercial properties.",
                 },
                 {
-                  city: "Asbestos Inspection — Vaughan",
+                  city: "Asbestos Testing — Vaughan",
                   body: "Vaughan's older residential communities — Woodbridge, Concord, and Maple — contain a significant stock of pre-1990 homes where asbestos testing is legally required before renovation. Woodbridge bungalows and split-levels from the 1960s and 1970s commonly contain vermiculite attic insulation, vinyl floor tile adhesive, and stipple ceiling texture. The Concord and Jane–Rutherford corridor includes older commercial and light-industrial buildings where asbestos-containing pipe insulation, floor leveling compound, and fireproofing spray are recurring findings. O.Reg 278/05 testing is mandatory before any renovation or demolition — and Vaughan's active renovation market means demand for same-day certified inspection is high.",
                 },
                 {
-                  city: "Asbestos Inspection — Oakville",
+                  city: "Asbestos Testing — Oakville",
                   body: "Oakville's older neighbourhoods — South Oakville, Kerr Village, Bronte, and Old Oakville near the lakeshore — contain pre-1975 homes where asbestos was used extensively in pipe insulation, acoustic ceiling coatings, and floor tile underlayment. The city's premium resale market regularly sees pre-purchase asbestos sampling requests on heritage and century-home properties. Buyers of Oakville homes built before 1980 should include asbestos assessment in their due diligence, particularly in properties being considered for renovation where materials will be disturbed.",
                 },
                 {
-                  city: "Asbestos Inspection — Burlington",
+                  city: "Asbestos Testing — Burlington",
                   body: "Burlington's Aldershot, downtown core, and waterfront neighbourhoods contain a high concentration of pre-1985 bungalows and split-levels where asbestos sampling is standard pre-renovation protocol. Pipe wrap on older boilers and hydronic heating systems is a consistent finding in Burlington's 1950s and 1960s housing. The city's significant condominium and apartment stock from the 1970s and 1980s also requires pre-renovation designated substance surveys before any unit renovation or common-area mechanical work. ASADS provides rapid-turnaround asbestos testing across Burlington with same-day scheduling.",
                 },
                 {
-                  city: "Asbestos Inspection — Oshawa & Durham Region",
+                  city: "Asbestos Testing — Oshawa & Durham Region",
                   body: "Oshawa and Durham Region's industrial and residential heritage means asbestos testing needs are high across multiple property types. Oshawa's post-war residential neighbourhoods — Lakeview, Farewell, and the streets surrounding the GM plant corridor — contain bungalows from the 1950s through 1970s with vermiculite insulation, popcorn ceilings, and vinyl floor tiles. Durham Region also has a significant inventory of former industrial and light-manufacturing buildings where asbestos-containing fireproofing spray, pipe insulation, and floor leveling compound require pre-demolition Type 2 and Type 3 surveys under O.Reg 278/05. ASADS serves all of Durham Region including Whitby, Ajax, Pickering, Oshawa, Clarington, and Bowmanville.",
                 },
               ].map((item) => (
