@@ -2437,7 +2437,7 @@ export const locationData: LocationData[] = [
     metaTitle: "Home Inspector Kitchener-Waterloo | From $399 | ASADS",
     metaDescription: "Certified home inspector in Kitchener-Waterloo from $399. Infrared thermal imaging, KITEC & lead paint screening, same-day PDF report. Serving Doon, Westmount & Downtown.",
     description: "Kitchener's premier certified inspector specializing in smart home pre-purchase inspections, new construction warranty reviews & thermal imaging diagnostics.",
-    neighborhoods: ["Downtown Kitchener", "Doon", "Forest Hill", "Laurelwood", "Huron Park", "Westmount"],
+    neighborhoods: ["Downtown Kitchener", "Doon", "Forest Hill", "Laurelwood", "Huron Park", "Bridgeport"],
     phoneNumber: "(647) 801-9311",
     latitude: 43.4516,
     longitude: -80.4924,
@@ -2464,7 +2464,7 @@ export const locationData: LocationData[] = [
       }
     ],
     localExpertise: {
-      title: "Home Inspection Experience in Kitchener",
+      title: "Home Inspection Services in Kitchener-Waterloo, Ontario",
       paragraphs: [
         "Kitchener — formerly Berlin, renamed during World War I — is the larger of Waterloo Region's twin cities and one of southwestern Ontario's fastest-growing metropolitan areas. The city's housing stock spans nearly 150 years of construction, from late-Victorian working-class homes in the downtown core to contemporary master-planned subdivisions in Doon South and Huron Park. Understanding Kitchener's housing evolution is essential for accurate pre-purchase inspection across the city's diverse neighbourhoods.",
         "Kitchener's older residential neighbourhoods — Centreville-Chicopee, Forest Hill, and the streets surrounding Victoria Park — contain housing stock from the 1910s through 1950s. In this era, lead paint was used on all interior and exterior painted surfaces, and it remains present in the majority of unrestored older Kitchener homes. Knob-and-tube electrical wiring is found in the oldest properties, and many 1940s and 1950s homes retain original Federal Pacific or Pushmatic electrical panels that are not acceptable to modern insurers and require replacement. Galvanized plumbing is common through the 1960s.",

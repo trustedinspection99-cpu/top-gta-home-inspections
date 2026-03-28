@@ -10,7 +10,7 @@ export default function WETT() {
       title="WETT Inspection"
       metaTitle={pageTitle}
       metaDescription={metaDescription}
-      heroTitle="Certified WETT Inspection & Chimney Inspection — Toronto & GTA"
+      heroTitle="Certified WETT Inspection & Chimney Inspection — Ontario"
       heroSubtitle="Insurance-Approved Safety Certification for Wood-Burning Appliances. Our WETT and chimney inspection includes thermal imaging and same-day digital reports accepted by all major Ontario insurers."
       icon={Flame}
       price="From $249"
