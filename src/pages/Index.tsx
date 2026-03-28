@@ -239,9 +239,8 @@ const Index = () => {
               </div>
 
               <p className="text-lg mb-7 opacity-95 leading-relaxed">
-                Certified home inspectors covering <strong className="text-white">106 cities</strong> across
-                the GTA and Ontario. <strong className="text-white">14 specialty services</strong> including
-                radon, mold & WETT. <strong className="text-white">Same-day digital reports.</strong>
+                Book a trusted home inspection in Ontario. Certified inspectors, clear digital reports,
+                fast scheduling, and calm guidance you can trust. Serving <strong className="text-white">106 cities</strong> across the GTA and Ontario.
               </p>
 
               {/* Price callout */}
