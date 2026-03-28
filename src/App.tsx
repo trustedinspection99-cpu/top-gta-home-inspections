@@ -19,6 +19,8 @@ import RealtorDashboard from "./pages/realtor/RealtorDashboard";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import NewJobPage from "./pages/admin/NewJobPage";
 import ReportGeneratorPage from "./pages/admin/ReportGeneratorPage";
+import SeoRankingsPage from "./pages/admin/SeoRankingsPage";
+import AsadAnalyticsPage from "./pages/admin/AsadAnalyticsPage";
 import TrustedRealtorsPage from "./pages/TrustedRealtorsPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -123,6 +125,8 @@ const router = createBrowserRouter([
       { path: "/admin", element: <ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute> },
       { path: "/admin/jobs/new", element: <ProtectedRoute role="admin"><NewJobPage /></ProtectedRoute> },
       { path: "/admin/jobs/:id/report", element: <ProtectedRoute role="admin"><ReportGeneratorPage /></ProtectedRoute> },
+      { path: "/admin/seo", element: <ProtectedRoute role="admin"><SeoRankingsPage /></ProtectedRoute> },
+      { path: "/admin/asad", element: <ProtectedRoute role="admin"><AsadAnalyticsPage /></ProtectedRoute> },
       { path: "/trusted-realtors", element: <TrustedRealtorsPage /> },
       { path: "*", element: <NotFound /> },
     ],

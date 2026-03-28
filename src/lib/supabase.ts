@@ -64,3 +64,32 @@ export interface DbMaintenance {
   completed: boolean;
   property_address: string;
 }
+
+export interface DbRankTracking {
+  id: string;
+  checked_at: string;
+  keyword: string;
+  city: string;
+  service: string;
+  position: number | null;
+  url_ranked: string | null;
+  previous_position: number | null;
+}
+
+export interface DbConversationLog {
+  id: string;
+  session_id: string;
+  started_at: string;
+  ended_at: string | null;
+  messages: { role: string; content: string }[];
+  booked: boolean;
+  service_type: string | null;
+  city: string | null;
+  address: string | null;
+  client_name: string | null;
+  client_email: string | null;
+  client_phone: string | null;
+  reason_not_booked: string | null;
+  inspection_date: string | null;
+  price: string | null;
+}
