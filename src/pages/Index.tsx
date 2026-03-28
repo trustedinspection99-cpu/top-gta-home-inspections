@@ -73,22 +73,19 @@ const homepageFaqs = [
 ];
 
 // --- YOUR ONTARIO SERVICES ---
-const ontarioServices = [
-  { name: "Pre-Purchase", icon: Home, href: "/services/pre-purchase", description: "Complete evaluation before buying" },
-  { name: "Pre-Listing", icon: FileText, href: "/services/pre-listing", description: "Seller's inspection package" },
-  { name: "Same-Day", icon: Clock, href: "/services/same-day-home-inspection", description: "Book same-day, inspect today" },
-  { name: "Condo", icon: Building, href: "/services/condo", description: "Condo & apartment inspections" },
-  { name: "Commercial", icon: Factory, href: "/services/commercial", description: "Commercial property inspections" },
-  { name: "New Construction", icon: Construction, href: "/services/new-construction", description: "Phase & final inspections" },
-  { name: "PDI Inspection", icon: HardHat, href: "/services/pdi-inspection", description: "Pre-delivery Tarion inspection" },
-  { name: "Radon Testing", icon: Radio, href: "/services/radon-testing", description: "Long-term radon detection" },
-  { name: "Mold Inspection", icon: Droplets, href: "/services/mold-inspection", description: "Air quality & mold testing" },
-  { name: "Asbestos Testing", icon: ShieldAlert, href: "/services/asbestos-testing", description: "Material sampling & analysis" },
-  { name: "Air Quality", icon: Wind, href: "/services/air-quality", description: "Indoor air quality testing" },
-  { name: "Lead Paint Testing", icon: FlaskConical, href: "/services/lead-paint-testing", description: "Lead detection services" },
-  { name: "Thermal Imaging", icon: ThermometerSun, href: "/services/thermal-imaging", description: "Infrared moisture detection" },
-  { name: "WETT", icon: Zap, href: "/services/wett", description: "Wood energy technology transfer" },
-  { name: "Well Water Testing", icon: WavesIcon, href: "/services/well-water-testing", description: "Water quality analysis" },
+const featuredServiceAreas = [
+  { name: "Toronto",       slug: "home-inspection-toronto" },
+  { name: "Mississauga",   slug: "home-inspection-mississauga" },
+  { name: "Brampton",      slug: "home-inspection-brampton" },
+  { name: "Vaughan",       slug: "home-inspection-vaughan" },
+  { name: "Markham",       slug: "home-inspection-markham" },
+  { name: "Hamilton",      slug: "home-inspection-hamilton" },
+  { name: "Oakville",      slug: "home-inspection-oakville" },
+  { name: "Barrie",        slug: "home-inspection-barrie" },
+  { name: "Kitchener",     slug: "home-inspection-kitchener" },
+  { name: "Oshawa",        slug: "home-inspection-oshawa" },
+  { name: "Richmond Hill", slug: "home-inspection-richmond-hill" },
+  { name: "Guelph",        slug: "home-inspection-guelph" },
 ];
 
 // --- ONTARIO-SPECIFIC RED FLAGS ---
@@ -103,115 +100,6 @@ const ontarioRedFlags = [
   "Poly-B Plumbing Pipes",
   "Oil Tank Concerns",
   "Wood Stove Safety Issues"
-];
-
-// --- ONTARIO CITIES SERVED (all 105 locations) ---
-const ontarioCities = [
-  { name: "Toronto", slug: "home-inspection-toronto" },
-  { name: "North York", slug: "home-inspection-north-york" },
-  { name: "Scarborough", slug: "home-inspection-scarborough" },
-  { name: "Etobicoke", slug: "home-inspection-etobicoke" },
-  { name: "East York", slug: "home-inspection-east-york" },
-  { name: "Mississauga", slug: "home-inspection-mississauga" },
-  { name: "Brampton", slug: "home-inspection-brampton" },
-  { name: "Markham", slug: "home-inspection-markham" },
-  { name: "Vaughan", slug: "home-inspection-vaughan" },
-  { name: "Richmond Hill", slug: "home-inspection-richmond-hill" },
-  { name: "Aurora", slug: "home-inspection-aurora" },
-  { name: "Newmarket", slug: "home-inspection-newmarket" },
-  { name: "Oakville", slug: "home-inspection-oakville" },
-  { name: "Burlington", slug: "home-inspection-burlington" },
-  { name: "Milton", slug: "home-inspection-milton" },
-  { name: "Halton Hills", slug: "home-inspection-halton-hills" },
-  { name: "Pickering", slug: "home-inspection-pickering" },
-  { name: "Ajax", slug: "home-inspection-ajax" },
-  { name: "Whitby", slug: "home-inspection-whitby" },
-  { name: "Oshawa", slug: "home-inspection-oshawa" },
-  { name: "Clarington", slug: "home-inspection-clarington" },
-  { name: "Bowmanville", slug: "home-inspection-bowmanville" },
-  { name: "Thornhill", slug: "home-inspection-thornhill" },
-  { name: "Stouffville", slug: "home-inspection-stouffville" },
-  { name: "Unionville", slug: "home-inspection-unionville" },
-  { name: "King City", slug: "home-inspection-king-city" },
-  { name: "Bolton", slug: "home-inspection-bolton" },
-  { name: "Caledon", slug: "home-inspection-caledon" },
-  { name: "Kleinburg", slug: "home-inspection-kleinburg" },
-  { name: "Maple", slug: "home-inspection-maple" },
-  { name: "Woodbridge", slug: "home-inspection-woodbridge" },
-  { name: "Concord", slug: "home-inspection-concord" },
-  { name: "Georgetown", slug: "home-inspection-georgetown" },
-  { name: "Acton", slug: "home-inspection-acton" },
-  { name: "Hamilton", slug: "home-inspection-hamilton" },
-  { name: "Stoney Creek", slug: "home-inspection-stoney-creek" },
-  { name: "Ancaster", slug: "home-inspection-ancaster" },
-  { name: "Dundas", slug: "home-inspection-dundas" },
-  { name: "Flamborough", slug: "home-inspection-flamborough" },
-  { name: "Grimsby", slug: "home-inspection-grimsby" },
-  { name: "Kitchener", slug: "home-inspection-kitchener" },
-  { name: "Waterloo", slug: "home-inspection-waterloo" },
-  { name: "Cambridge", slug: "home-inspection-cambridge" },
-  { name: "Guelph", slug: "home-inspection-guelph" },
-  { name: "Brantford", slug: "home-inspection-brantford" },
-  { name: "Orangeville", slug: "home-inspection-orangeville" },
-  { name: "Barrie", slug: "home-inspection-barrie" },
-  { name: "Innisfil", slug: "home-inspection-innisfil" },
-  { name: "Collingwood", slug: "home-inspection-collingwood" },
-  { name: "Wasaga Beach", slug: "home-inspection-wasaga-beach" },
-  { name: "Midland", slug: "home-inspection-midland" },
-  { name: "Orillia", slug: "home-inspection-orillia" },
-  { name: "Springwater", slug: "home-inspection-springwater" },
-  { name: "Penetanguishene", slug: "home-inspection-penetanguishene" },
-  { name: "Severn", slug: "home-inspection-severn" },
-  { name: "Tiny Township", slug: "home-inspection-tiny-township" },
-  { name: "Tay Township", slug: "home-inspection-tay-township" },
-  { name: "Peterborough", slug: "home-inspection-peterborough" },
-  { name: "Cobourg", slug: "home-inspection-cobourg" },
-  { name: "Uxbridge", slug: "home-inspection-uxbridge" },
-  { name: "Beaverton", slug: "home-inspection-beaverton" },
-  { name: "Cannington", slug: "home-inspection-cannington" },
-  { name: "Scugog", slug: "home-inspection-scugog" },
-  { name: "Port Perry", slug: "home-inspection-port-perry" },
-  { name: "Brock", slug: "home-inspection-brock" },
-  { name: "Georgina", slug: "home-inspection-georgina" },
-  { name: "Keswick", slug: "home-inspection-keswick" },
-  { name: "Sutton", slug: "home-inspection-sutton" },
-  { name: "East Gwillimbury", slug: "home-inspection-east-gwillimbury" },
-  { name: "Bradford West Gwillimbury", slug: "home-inspection-bradford" },
-  { name: "New Tecumseth", slug: "home-inspection-new-tecumseth" },
-  { name: "Alliston", slug: "home-inspection-alliston" },
-  { name: "Essa", slug: "home-inspection-essa" },
-  { name: "Clearview", slug: "home-inspection-clearview" },
-  { name: "Stayner", slug: "home-inspection-stayner" },
-  { name: "Niagara Falls", slug: "home-inspection-niagara-falls" },
-  { name: "St. Catharines", slug: "home-inspection-st-catharines" },
-  { name: "Welland", slug: "home-inspection-welland" },
-  { name: "Thorold", slug: "home-inspection-thorold" },
-  { name: "Fort Erie", slug: "home-inspection-fort-erie" },
-  { name: "Port Colborne", slug: "home-inspection-port-colborne" },
-  { name: "Niagara-on-the-Lake", slug: "home-inspection-niagara-on-the-lake" },
-  { name: "Lincoln", slug: "home-inspection-lincoln" },
-  { name: "Beamsville", slug: "home-inspection-beamsville" },
-  { name: "Pelham", slug: "home-inspection-pelham" },
-  { name: "Wainfleet", slug: "home-inspection-wainfleet" },
-  { name: "West Lincoln", slug: "home-inspection-west-lincoln" },
-  { name: "Woolwich", slug: "home-inspection-woolwich" },
-  { name: "Wilmot", slug: "home-inspection-wilmot" },
-  { name: "North Dumfries", slug: "home-inspection-north-dumfries" },
-  { name: "Wellesley", slug: "home-inspection-wellesley" },
-  { name: "Centre Wellington", slug: "home-inspection-centre-wellington" },
-  { name: "Erin", slug: "home-inspection-erin" },
-  { name: "Guelph/Eramosa", slug: "home-inspection-guelph-eramosa" },
-  { name: "Mapleton", slug: "home-inspection-mapleton" },
-  { name: "Puslinch", slug: "home-inspection-puslinch" },
-  { name: "Wellington North", slug: "home-inspection-wellington-north" },
-  { name: "Minto", slug: "home-inspection-minto" },
-  { name: "Adelaide Metcalfe", slug: "home-inspection-adelaide-metcalfe" },
-  { name: "Woodstock", slug: "home-inspection-woodstock" },
-  { name: "Ingersoll", slug: "home-inspection-ingersoll" },
-  { name: "Tillsonburg", slug: "home-inspection-tillsonburg" },
-  { name: "Paris", slug: "home-inspection-paris" },
-  { name: "Shelburne", slug: "home-inspection-shelburne" },
-  { name: "Mono", slug: "home-inspection-mono" },
 ];
 
 const faqSchema = {
@@ -631,28 +519,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* PRE-PURCHASE FEATURED BANNER */}
-      <section className="py-10 bg-blue-900 text-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <p className="text-blue-300 text-sm font-semibold uppercase tracking-wide mb-1">Most Booked Service</p>
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">Pre-Purchase Home Inspection Ontario</h2>
-              <p className="text-blue-100 text-sm max-w-xl">
-                Our most requested inspection — 400-point assessment covering foundation, roof, electrical, plumbing, and HVAC. Same-day digital report. From $399 across Ontario.
-              </p>
-            </div>
-            <a
-              href="/services/pre-purchase"
-              className="shrink-0 bg-white text-blue-900 font-bold px-7 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center gap-2 text-sm"
-            >
-              Learn More & Book
-              <ChevronRight size={16} />
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* 4. RED FLAGS */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -951,8 +817,8 @@ const Index = () => {
               Certified home inspector serving Toronto, the GTA, and communities across Ontario
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-12">
-            {ontarioCities.map((city) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-10">
+            {featuredServiceAreas.map((city) => (
               <a key={city.slug} href={`/locations/${city.slug}`} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center hover:bg-white/10 transition-all group">
                 <MapPin className="h-5 w-5 text-blue-400 mx-auto mb-2 group-hover:text-blue-300" />
                 <span className="font-medium group-hover:text-blue-300 transition-colors">{city.name}</span>
@@ -960,12 +826,9 @@ const Index = () => {
             ))}
           </div>
           <div className="text-center">
-            <p className="text-gray-300 mb-6">
-              Plus all other Ontario cities and towns - call to confirm service in your area
-            </p>
-            <a href="tel:6478019311" className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all">
-              <Phone size={20} />
-              Check Your Ontario Area
+            <a href="/locations" className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all">
+              View All 106 Service Areas
+              <ArrowRight size={18} />
             </a>
           </div>
         </div>
