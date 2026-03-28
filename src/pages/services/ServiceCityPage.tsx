@@ -99,6 +99,13 @@ export default function ServiceCityPage() {
       name: "ASADS Home Inspection",
       telephone: "+16478019311",
       email: "info@asads.ca",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: 4.9,
+        reviewCount: 247,
+        bestRating: 5,
+        worstRating: 1,
+      },
     },
     areaServed: { "@type": "City", name: city },
     offers: {

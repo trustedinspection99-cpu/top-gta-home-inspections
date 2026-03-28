@@ -170,10 +170,10 @@ export function LocationPageTemplate({
       },
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: 5.0,
-        reviewCount: 150,
-        bestRating: "5",
-        worstRating: "1"
+        ratingValue: 4.9,
+        reviewCount: 247,
+        bestRating: 5,
+        worstRating: 1,
       },
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
