@@ -28,7 +28,7 @@ function displayContent(text: string): string {
   return text.includes('BOOKING_READY') ? text.split('BOOKING_READY')[0].trim() : text;
 }
 
-const WELCOME = "Hi! I'm **Asad** — ASADS Home Inspection specialist.\n\nI can help you book an inspection, answer pricing questions, or tell you about our services. What can I help you with?";
+const WELCOME = "Hi! I'm **Max** — ASADS Home Inspection specialist.\n\nI can help you book an inspection, answer pricing questions, or tell you about our services. What can I help you with?";
 const WELCOME_REPLIES: QuickReply[] = [
   { label: '🏠 Book Inspection', value: 'I want to book an inspection' },
   { label: '💰 See Pricing', value: 'What are your prices?' },
@@ -37,7 +37,7 @@ const WELCOME_REPLIES: QuickReply[] = [
 ];
 
 // ─── Mini avatar for chat header ─────────────────────────────────────────────
-const AsadAvatar: React.FC = () => (
+const MaxAvatar: React.FC = () => (
   <div style={{
     width: 36, height: 36, borderRadius: '50%',
     background: 'linear-gradient(135deg,#3b82f6,#1d4ed8)',
@@ -165,20 +165,20 @@ const SiteAssistant: React.FC = () => {
   return (
     <>
       <style>{`
-        @keyframes asad-dot {
+        @keyframes max-dot {
           0%,60%,100% { transform: translateY(0); opacity:.35; }
           30%          { transform: translateY(-5px); opacity:1; }
         }
-        @keyframes asad-pop {
+        @keyframes max-pop {
           0%   { opacity:0; transform: scale(0.85) translateY(12px); }
           100% { opacity:1; transform: scale(1) translateY(0); }
         }
-        .asad-pop { animation: asad-pop 0.2s ease-out forwards; }
+        .max-pop { animation: max-pop 0.2s ease-out forwards; }
       `}</style>
 
       {/* Chat window */}
       {chatOpen && (
-        <div className="asad-pop" style={{
+        <div className="max-pop" style={{
           position: 'fixed', right: 16, bottom: 80, zIndex: 9999,
           width: Math.min(360, (window.innerWidth || 400) - 32),
           height: 'min(540px, calc(100vh - 100px))',
@@ -196,9 +196,9 @@ const SiteAssistant: React.FC = () => {
             background: 'linear-gradient(135deg,#1d4ed8,#2563eb)',
             flexShrink: 0,
           }}>
-            <AsadAvatar />
+            <MaxAvatar />
             <div style={{ flex: 1 }}>
-              <p style={{ margin: 0, fontWeight: 800, fontSize: 14, color: 'white' }}>Asad</p>
+              <p style={{ margin: 0, fontWeight: 800, fontSize: 14, color: 'white' }}>Max</p>
               <p style={{ margin: 0, fontSize: 11, color: 'rgba(255,255,255,0.8)' }}>ASADS Home Inspection · Online</p>
             </div>
             <button onClick={() => setChatOpen(false)} style={{
@@ -238,7 +238,7 @@ const SiteAssistant: React.FC = () => {
                   display: 'flex', gap: 5, boxShadow: '0 1px 4px rgba(0,0,0,0.08)' }}>
                   {[0, 0.18, 0.36].map((d, i) => (
                     <div key={i} style={{ width: 7, height: 7, borderRadius: '50%', background: '#3b82f6',
-                      animation: `asad-dot 1.1s ease-in-out ${d}s infinite` }}/>
+                      animation: `max-dot 1.1s ease-in-out ${d}s infinite` }}/>
                   ))}
                 </div>
               </div>
@@ -266,7 +266,7 @@ const SiteAssistant: React.FC = () => {
           {/* Input */}
           <div style={{ padding: '8px 12px 12px', display: 'flex', gap: 8, flexShrink: 0,
             borderTop: '1px solid #dbeafe', background: 'white' }}>
-            <input id="asad-chat-input" name="asad-chat-input" ref={inputRef} value={input}
+            <input id="max-chat-input" name="max-chat-input" ref={inputRef} value={input}
               onChange={e => setInput(e.target.value)}
               placeholder="Ask about inspections…"
               autoComplete="off"
@@ -302,7 +302,7 @@ const SiteAssistant: React.FC = () => {
         }}
         onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.08)')}
         onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
-        title={chatOpen ? 'Close chat' : 'Chat with Asad'}
+        title={chatOpen ? 'Close chat' : 'Chat with Max'}
       >
         {chatOpen ? (
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
