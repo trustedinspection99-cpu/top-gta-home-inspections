@@ -606,8 +606,9 @@ const SiteAssistant: React.FC = () => {
           {/* Input */}
           <div style={{ padding: '8px 12px 12px', display: 'flex', gap: 8, flexShrink: 0,
             borderTop: '1px solid #dbeafe', background: 'white' }}>
-            <input ref={inputRef} value={input} onChange={e => setInput(e.target.value)}
+            <input id="asad-chat-input" name="asad-chat-input" ref={inputRef} value={input} onChange={e => setInput(e.target.value)}
               placeholder="Ask about inspections…"
+              autoComplete="off"
               onKeyDown={e => { if (e.key === 'Enter') handleSend(input); }}
               style={{
                 flex: 1, border: '1.5px solid #bfdbfe', borderRadius: 20, padding: '9px 14px',
