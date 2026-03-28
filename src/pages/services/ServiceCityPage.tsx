@@ -109,18 +109,7 @@ export default function ServiceCityPage() {
     description: metaDesc,
     url: canonical,
     provider: {
-      "@type": "LocalBusiness",
       "@id": `${SITE_URL}/#localbusiness`,
-      name: "ASADS Home Inspection",
-      telephone: "+16478019311",
-      email: "info@asads.ca",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: 4.9,
-        reviewCount: 247,
-        bestRating: 5,
-        worstRating: 1,
-      },
     },
     areaServed: { "@type": "City", name: city },
     offers: {

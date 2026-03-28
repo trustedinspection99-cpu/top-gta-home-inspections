@@ -441,15 +441,11 @@ for (const page of pages) {
 
   // Inject FAQPage JSON-LD into <head> so Googlebot sees it without JS
   let faqSchema = null;
-  if (parts[0] === 'services' && parts.length === 3) {
-    // /services/:svc/:city — use serviceCityData FAQs with city substitution
-    const sSlug = parts[1];
-    const cName = allCityNames[parts[2]] || parts[2];
-    faqSchema = buildFaqSchema(serviceFaqsMap[sSlug], cName);
-  } else if (parts[0] === 'locations' && parts.length === 2) {
-    // NOTE: /services/:svc pages are intentionally excluded — ServicePageTemplate
-    // renders its own FAQPage JSON-LD from the component's faqs prop, so injecting
-    // here would create a duplicate FAQPage schema (Google critical error).
+  if (parts[0] === 'locations' && parts.length === 2) {
+    // NOTE: /services/:svc and /services/:svc/:city pages are intentionally excluded —
+    // ServicePageTemplate and ServiceCityPage both render their own FAQPage JSON-LD,
+    // so injecting here would create duplicate FAQPage schemas (Google critical error).
+    // Only location pages get FAQ injected here (LocationPageTemplate has no FAQ schema).
     // /locations/home-inspection-:city — inject location FAQs with city substitution
     const cSlug = parts[1].replace(/^home-inspection-/, '');
     const cName = allCityNames[cSlug] || cSlug;
