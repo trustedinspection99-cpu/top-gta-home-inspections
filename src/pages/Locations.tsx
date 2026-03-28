@@ -161,7 +161,7 @@ export default function Locations() {
               { value: "2,000+", label: "Inspections Done" },
               { value: "14",     label: "Specialty Services" },
               { value: "OAHI",   label: "& InterNACHI Cert." },
-              { value: "E&O",    label: "Insured" },
+              { value: "Intact",   label: "Insured" },
             ].map((item, i) => (
               <div key={i} className="text-center">
                 <div className="text-sm font-extrabold text-white">{item.value}</div>
@@ -209,7 +209,7 @@ export default function Locations() {
             </h2>
             <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-4 text-sm">
               <p>
-                ASADS Home Inspection is a mobile inspection company serving <strong>106 cities across Ontario</strong> — from the Greater Toronto Area (Toronto, Mississauga, Brampton, Vaughan, Markham) to the Hamilton-Niagara corridor, Kitchener-Waterloo-Cambridge, Barrie, Peterborough, and beyond. Every inspection is performed by <strong>OAHI-certified, InterNACHI-trained inspectors</strong> carrying full errors &amp; omissions and $2M liability insurance.
+                ASADS Home Inspection is a mobile inspection company serving <strong>106 cities across Ontario</strong> — from the Greater Toronto Area (Toronto, Mississauga, Brampton, Vaughan, Markham) to the Hamilton-Niagara corridor, Kitchener-Waterloo-Cambridge, Barrie, Peterborough, and beyond. Every inspection is performed by <strong>OAHI-certified, InterNACHI-trained inspectors</strong> carrying full Intact insurance and $2M liability coverage.
               </p>
               <p>
                 Each city page includes local property insights — neighbourhood-specific building stock issues, common defects in that area's housing era, and proximity to environmental concerns — so your report is relevant to your specific location, not generic boilerplate. Whether you're buying in a 1960s Toronto semi or a 2023 Brampton new-build, our inspectors understand what to look for.
@@ -327,7 +327,7 @@ export default function Locations() {
                   "Same-day availability 7 days a week",
                   "Same-day digital report after every inspection",
                   "OAHI & InterNACHI certified inspectors",
-                  "Fully insured — E&O + $2M liability",
+                  "Fully insured — Intact · $2M liability",
                 ].map(item => (
                   <li key={item} className="flex items-center gap-3 text-blue-100 text-sm">
                     <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />

@@ -96,7 +96,7 @@ const specialtyServices = [
 
 const trustItems = [
   { icon: Award,      label: "OAHI & InterNACHI", sub: "Certified inspectors" },
-  { icon: Shield,     label: "E&O + $2M Liability", sub: "Fully insured" },
+  { icon: Shield,     label: "Intact · $2M Liability", sub: "Fully insured" },
   { icon: FileText,   label: "Same-Day Reports",  sub: "Digital with photos" },
   { icon: Clock,      label: "7 Days a Week",     sub: "Flexible scheduling" },
   { icon: BadgeCheck, label: "15+ Years",         sub: "Serving Ontario" },
@@ -256,7 +256,7 @@ export default function Services() {
               { value: "106",   label: "Cities Served" },
               { value: "2,000+",label: "Inspections Done" },
               { value: "OAHI",  label: "& InterNACHI Cert." },
-              { value: "E&O",   label: "Insured" },
+              { value: "Intact",  label: "Insured" },
             ].map((item, i) => (
               <div key={i} className="text-center">
                 <div className="text-sm font-extrabold text-white">{item.value}</div>

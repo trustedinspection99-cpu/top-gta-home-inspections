@@ -168,7 +168,7 @@ export default function Terms() {
             <section>
               <h2 className="font-heading text-2xl font-semibold mb-4">11. Insurance and Qualifications</h2>
               <p className="text-muted-foreground leading-relaxed">
-                ASADS Home Inspection maintains Errors and Omissions (E&O) insurance and General 
+                ASADS Home Inspection maintains Intact insurance and General
                 Liability insurance. Our inspectors are certified professionals who maintain current 
                 training and certifications in the home inspection industry.
               </p>

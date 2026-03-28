@@ -297,7 +297,7 @@ export default function Blog() {
                   "OAHI & InterNACHI certified inspectors",
                   "Same-day digital reports with photos",
                   "Available 7 days a week",
-                  "Fully insured — E&O + $2M liability",
+                  "Fully insured — Intact · $2M liability",
                 ].map(item => (
                   <li key={item} className="flex items-center gap-3 text-blue-100 text-sm">
                     <ArrowRight className="h-4 w-4 text-green-400 flex-shrink-0" />

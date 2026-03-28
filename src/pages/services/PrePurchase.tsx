@@ -67,7 +67,7 @@
    "Lifetime Technical Support",
    "Detailed Photo Documentation",
    "Unbiased Third-Party Evaluation",
-   "E&O Insurance Coverage",
+   "Intact Insurance Coverage",
    "Flexible Scheduling",
  ];
  

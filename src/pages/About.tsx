@@ -426,7 +426,7 @@ export default function About() {
                 ))}
               </div>
               <p>
-                When searching for a <strong>home inspector in Ontario</strong>, look for clear reporting standards, liability insurance (E&O + $2M general liability), and availability for same-day or next-day bookings. ASADS checks every box — and our <strong>4.9-star average</strong> across hundreds of verified reviews reflects the standard we hold ourselves to.
+                When searching for a <strong>home inspector in Ontario</strong>, look for clear reporting standards, liability insurance (Intact + $2M general liability), and availability for same-day or next-day bookings. ASADS checks every box — and our <strong>4.9-star average</strong> across hundreds of verified reviews reflects the standard we hold ourselves to.
               </p>
             </div>
             <div className="flex flex-wrap gap-4 mt-8">
@@ -456,7 +456,7 @@ export default function About() {
                   "OAHI & InterNACHI certified inspectors",
                   "Same-day digital reports with photos",
                   "Available 7 days a week",
-                  "Fully insured — E&O + $2M liability",
+                  "Fully insured — Intact · $2M liability",
                 ].map(item => (
                   <li key={item} className="flex items-center gap-3 text-blue-100 text-sm">
                     <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />

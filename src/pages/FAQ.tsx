@@ -59,7 +59,7 @@ const faqCategories = [
       },
       {
         question: "Do home inspectors in Ontario carry insurance?",
-        answer: "Yes, licensed Ontario home inspectors are required to carry errors-and-omissions (E&O) insurance and general liability insurance. At ASADS, all inspectors are also covered by WSIB, protecting both our team and our clients. Always confirm insurance coverage before booking any inspector.",
+        answer: "Yes, licensed Ontario home inspectors are required to carry insurance and general liability coverage. At ASADS, we carry Intact insurance and all inspectors are also covered by WSIB, protecting both our team and our clients. Always confirm insurance coverage before booking any inspector.",
       },
       {
         question: "What happens after the home inspection is complete?",
@@ -1391,7 +1391,7 @@ export default function FAQ() {
                   "OAHI & InterNACHI certified inspectors",
                   "Same-day digital reports with photos",
                   "Available 7 days a week",
-                  "Fully insured — E&O + $2M liability",
+                  "Fully insured — Intact · $2M liability",
                 ].map(item => (
                   <li key={item} className="flex items-center gap-3 text-blue-100 text-sm">
                     <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />

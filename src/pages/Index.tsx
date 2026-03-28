@@ -458,7 +458,7 @@ const Index = () => {
               { value: "15+", label: "Years in Ontario" },
               { value: "106", label: "Cities Served" },
               { value: "OAHI & InterNACHI", label: "Certified" },
-              { value: "E&O Insured", label: "Fully Covered" },
+              { value: "Intact Insured", label: "Fully Covered" },
             ].map((item, i) => (
               <div key={i} className="text-center">
                 <div className="text-sm font-extrabold text-white">{item.value}</div>
@@ -576,14 +576,14 @@ const Index = () => {
                 As one of the <strong>best home inspection companies near me</strong> for GTA residents, ASADS offers same-day bookings 7 days a week, comprehensive digital reports delivered within 24 hours, and 14 specialty services under one roof. No matter which Ontario city you're in, you can reach us at <a href="tel:6478019311" className="text-blue-700 font-semibold hover:underline">(647) 801-9311</a> or <a href="/booking" className="text-blue-700 font-semibold hover:underline">book online instantly</a>.
               </p>
               <p>
-                Looking for a <strong>top home inspection company near me</strong> with verified reviews? ASADS has completed over 2,000 inspections across Ontario with a 4.9-star rating and 1,500+ verified client reviews. Our OAHI-certified inspectors carry full E&O insurance and use professional-grade equipment including thermal imaging cameras, moisture meters, and gas detectors on every inspection — not just on request.
+                Looking for a <strong>top home inspection company near me</strong> with verified reviews? ASADS has completed over 2,000 inspections across Ontario with a 4.9-star rating and 1,500+ verified client reviews. Our OAHI-certified inspectors carry full Intact insurance and use professional-grade equipment including thermal imaging cameras, moisture meters, and gas detectors on every inspection — not just on request.
               </p>
             </div>
             <div className="mt-8 grid sm:grid-cols-3 gap-4">
               {[
                 { label: "Same-Day Booking", desc: "Available 7 days a week across Ontario" },
                 { label: "24-Hr Digital Report", desc: "Detailed photos, findings & recommendations" },
-                { label: "OAHI Certified", desc: "Fully insured with E&O coverage" },
+                { label: "OAHI Certified", desc: "Fully insured — Intact Insurance" },
               ].map((item, i) => (
                 <div key={i} className="bg-blue-50 rounded-xl p-5 border border-blue-100">
                   <div className="font-bold text-gray-900 mb-1">{item.label}</div>
@@ -611,7 +611,7 @@ const Index = () => {
                 In Ontario, anyone can legally call themselves a home inspector — there is no mandatory provincial licensing. That means the difference between the <strong>best home inspector</strong> and an unqualified one comes down to their certifications, training, and track record. ASADS inspectors hold OAHI (Ontario Association of Home Inspectors) certification, which requires rigorous training, field experience, and ongoing education to maintain.
               </p>
               <p>
-                A certified inspector follows a standardized methodology, carries Errors & Omissions (E&O) insurance, and provides legally defensible reports. This matters enormously if deficiencies are discovered after closing — a certified inspection report is your documentation. An uncertified inspection from a non-credentialed individual offers you no such protection.
+                A certified inspector follows a standardized methodology, carries professional liability insurance, and provides legally defensible reports. This matters enormously if deficiencies are discovered after closing — a certified inspection report is your documentation. An uncertified inspection from a non-credentialed individual offers you no such protection.
               </p>
               <p>
                 ASADS has served Ontario homebuyers and sellers since 2009. In that time, we have developed deep expertise in Ontario's most common housing issues: knob and tube wiring in pre-1960 homes, aluminum wiring in 1970s properties, Kitec plumbing failures, ice dam damage in older attics, UFFI insulation, and foundation cracking from Ontario's freeze-thaw cycles. We find what other inspectors miss — and we explain it in plain language so you can make an informed decision.
@@ -620,7 +620,7 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 { title: "OAHI Certified Inspectors", desc: "Ontario's highest professional standard for home inspectors, requiring rigorous training and ongoing education." },
-                { title: "Errors & Omissions Insurance", desc: "Full E&O and liability coverage protects you if something is missed or misidentified during the inspection." },
+                { title: "Intact Insurance Coverage", desc: "Full Intact and liability coverage protects you if something is missed or misidentified during the inspection." },
                 { title: "15+ Years in Ontario", desc: "Over a decade of inspecting Ontario homes means we know exactly what to look for in every property type and era." },
                 { title: "200+ Point Inspection", desc: "Comprehensive evaluation of every major system and component including structure, electrical, plumbing, HVAC, and envelope." },
                 { title: "Thermal Imaging Included", desc: "We include infrared scanning on every inspection at no extra charge — revealing hidden moisture, insulation gaps, and electrical hot spots." },
