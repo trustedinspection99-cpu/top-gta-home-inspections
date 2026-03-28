@@ -220,21 +220,7 @@ export default function Commercial() {
     }
   };
 
-  // Schema 3: FAQPage
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-
-  // Schema 4: BreadcrumbList
+  // Schema 3: BreadcrumbList
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -441,12 +427,7 @@ export default function Commercial() {
           {JSON.stringify(serviceSchema)}
         </script>
           
-        {/* Schema 3: FAQPage */}
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-          
-        {/* Schema 4: BreadcrumbList */}
+        {/* Schema 3: BreadcrumbList */}
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}
         </script>

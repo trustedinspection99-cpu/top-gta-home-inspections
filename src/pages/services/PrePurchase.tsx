@@ -99,9 +99,9 @@
  ];
  
  const relatedServices = [
+   { title: "Same-Day Inspection", href: "/services/same-day-home-inspection" },
    { title: "PDI Inspection", href: "/services/pdi-inspection" },
    { title: "Radon Testing", href: "/services/radon-testing" },
-   { title: "Thermal Imaging", href: "/services/thermal-imaging" },
    { title: "WETT Inspection", href: "/services/wett" },
  ];
  
@@ -205,19 +205,6 @@
      }
    };
  
-   // Schema 3: FAQPage
-   const faqSchema = {
-     "@context": "https://schema.org",
-     "@type": "FAQPage",
-     "mainEntity": faqs.map(faq => ({
-       "@type": "Question",
-       "name": faq.question,
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": faq.answer
-       }
-     }))
-   };
  
    // Schema 4: BreadcrumbList
    const breadcrumbSchema = {
@@ -450,12 +437,7 @@
            {JSON.stringify(serviceSchema)}
          </script>
          
-         {/* Schema 3: FAQPage */}
-         <script type="application/ld+json">
-           {JSON.stringify(faqSchema)}
-         </script>
-         
-         {/* Schema 4: BreadcrumbList */}
+         {/* Schema 3: BreadcrumbList */}
          <script type="application/ld+json">
            {JSON.stringify(breadcrumbSchema)}
          </script>

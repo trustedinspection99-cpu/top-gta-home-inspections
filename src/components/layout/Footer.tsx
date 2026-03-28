@@ -4,6 +4,7 @@ import { OrphanLocationLinks } from "@/components/seo/OrphanLocationLinks";
 
 const services = [
   { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
+  { title: "Same-Day Inspection", href: "/services/same-day-home-inspection" },
   { title: "Pre-Listing Inspection", href: "/services/pre-listing" },
   { title: "Condo Inspection", href: "/services/condo" },
   { title: "Commercial Inspection", href: "/services/commercial" },

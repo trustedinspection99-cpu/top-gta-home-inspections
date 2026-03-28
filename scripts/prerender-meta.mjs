@@ -441,11 +441,20 @@ for (const page of pages) {
 
   // Inject FAQPage JSON-LD into <head> so Googlebot sees it without JS.
   // React components do NOT render their own FAQPage — prerender is single source of truth.
+  const sameDayFaqs = [
+    { q: "How quickly can you do a same-day home inspection in Ontario?", a: "Call us before noon and we can typically get an inspector to your property the same afternoon or evening. We operate 7 days a week, 7am–10pm, across Toronto, the GTA, Hamilton, Kitchener-Waterloo, Barrie, and 100+ Ontario cities." },
+    { q: "Is a same-day home inspection as thorough as a scheduled one?", a: "Yes — 100%. Our same-day inspections follow the identical InterNACHI Standards of Practice as all our inspections: 400+ checkpoints, thermal imaging available, foundation to roof. We never rush or cut corners to meet a same-day request." },
+    { q: "How much does a same-day home inspection cost in Ontario?", a: "Same-day inspections are priced identically to standard inspections: condos from $299, townhouses from $349, detached homes from $399. There is no rush surcharge. Thermal imaging, mold screening, and radon testing are available as add-ons." },
+    { q: "What areas do you cover for same-day home inspections?", a: "We cover 106 cities across Ontario including Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Hamilton, Kitchener, Waterloo, Cambridge, Barrie, Oshawa, Ajax, Whitby, Pickering, Newmarket, Aurora, and more." },
+    { q: "Can I get a same-day inspection when waiving a home inspection condition?", a: "Yes — this is one of the most common same-day scenarios we handle. Book first thing in the morning, complete the inspection that afternoon, review the report, then make your decision before your offer expiry." },
+  ];
   let faqSchema = null;
   if (parts[0] === 'services' && parts.length === 3) {
     const sSlug = parts[1];
     const cName = allCityNames[parts[2]] || parts[2];
     faqSchema = buildFaqSchema(serviceFaqsMap[sSlug], cName);
+  } else if (parts[0] === 'services' && parts.length === 2 && parts[1] === 'same-day-home-inspection') {
+    faqSchema = buildFaqSchema(sameDayFaqs, 'Ontario');
   } else if (parts[0] === 'services' && parts.length === 2) {
     faqSchema = buildFaqSchema(serviceFaqsMap[parts[1]], 'Ontario');
   } else if (parts[0] === 'locations' && parts.length === 2) {

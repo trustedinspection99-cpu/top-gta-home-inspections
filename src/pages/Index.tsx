@@ -77,6 +77,7 @@ const homepageFaqs = [
 const ontarioServices = [
   { name: "Pre-Purchase", icon: Home, href: "/services/pre-purchase", description: "Complete evaluation before buying" },
   { name: "Pre-Listing", icon: FileText, href: "/services/pre-listing", description: "Seller's inspection package" },
+  { name: "Same-Day", icon: Clock, href: "/services/same-day-home-inspection", description: "Book same-day, inspect today" },
   { name: "Condo", icon: Building, href: "/services/condo", description: "Condo & apartment inspections" },
   { name: "Commercial", icon: Factory, href: "/services/commercial", description: "Commercial property inspections" },
   { name: "New Construction", icon: Construction, href: "/services/new-construction", description: "Phase & final inspections" },
