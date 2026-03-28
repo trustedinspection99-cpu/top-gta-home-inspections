@@ -17,6 +17,7 @@ import SchedulePage from "./pages/dashboard/SchedulePage";
 import ChecklistPage from "./pages/dashboard/ChecklistPage";
 import RealtorDashboard from "./pages/realtor/RealtorDashboard";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminRealtorsPage from "./pages/admin/AdminRealtorsPage";
 import NewJobPage from "./pages/admin/NewJobPage";
 import ReportGeneratorPage from "./pages/admin/ReportGeneratorPage";
 import SeoRankingsPage from "./pages/admin/SeoRankingsPage";
@@ -123,6 +124,7 @@ const router = createBrowserRouter([
       { path: "/dashboard/checklist", element: <ProtectedRoute role="homeowner"><ChecklistPage /></ProtectedRoute> },
       { path: "/realtor-dashboard", element: <ProtectedRoute role="realtor"><RealtorDashboard /></ProtectedRoute> },
       { path: "/admin", element: <ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute> },
+      { path: "/admin/realtors", element: <ProtectedRoute role="admin"><AdminRealtorsPage /></ProtectedRoute> },
       { path: "/admin/jobs/new", element: <ProtectedRoute role="admin"><NewJobPage /></ProtectedRoute> },
       { path: "/admin/jobs/:id/report", element: <ProtectedRoute role="admin"><ReportGeneratorPage /></ProtectedRoute> },
       { path: "/admin/seo", element: <ProtectedRoute role="admin"><SeoRankingsPage /></ProtectedRoute> },
