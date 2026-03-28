@@ -84,6 +84,7 @@ const AdminRealtorsPage = lazy(() => import('./pages/admin/AdminRealtorsPage'));
 const SeoRankingsPage = lazy(() => import('./pages/admin/SeoRankingsPage'));
 const AsadAnalyticsPage = lazy(() => import('./pages/admin/AsadAnalyticsPage'));
 const TrustedRealtorsPage = lazy(() => import('./pages/TrustedRealtorsPage'));
+const RealtorProfilePage = lazy(() => import('./pages/RealtorProfilePage'));
 
 export const routes: RouteObject[] = [
   {
@@ -142,6 +143,7 @@ export const routes: RouteObject[] = [
       { path: 'admin/seo', element: <ProtectedRoute role="admin"><SeoRankingsPage /></ProtectedRoute> },
       { path: 'admin/asad', element: <ProtectedRoute role="admin"><AsadAnalyticsPage /></ProtectedRoute> },
       { path: 'trusted-realtors', element: <TrustedRealtorsPage /> },
+      { path: 'trusted-realtors/:slug', element: <RealtorProfilePage /> },
 
       { path: '*', element: <NotFound /> },
     ],
