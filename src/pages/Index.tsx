@@ -14,7 +14,7 @@ import {
   DollarSign, Calculator, Download, BookOpen, CheckSquare,
   AlertCircle, Home as HomeIcon, BarChart3, Settings,
   Wind, FlaskConical, Droplet, Eye, Radio, Wrench,
-  ThermometerSun, Waves, Factory, WavesIcon, ShieldAlert
+  ThermometerSun, Waves, Factory, WavesIcon, ShieldAlert, HardHat
 } from "lucide-react";
 
 // --- ONTARIO-FOCUSED FAQS ---
@@ -81,6 +81,7 @@ const ontarioServices = [
   { name: "Condo", icon: Building, href: "/services/condo", description: "Condo & apartment inspections" },
   { name: "Commercial", icon: Factory, href: "/services/commercial", description: "Commercial property inspections" },
   { name: "New Construction", icon: Construction, href: "/services/new-construction", description: "Phase & final inspections" },
+  { name: "PDI Inspection", icon: HardHat, href: "/services/pdi-inspection", description: "Pre-delivery Tarion inspection" },
   { name: "Radon Testing", icon: Radio, href: "/services/radon-testing", description: "Long-term radon detection" },
   { name: "Mold Inspection", icon: Droplets, href: "/services/mold-inspection", description: "Air quality & mold testing" },
   { name: "Asbestos Testing", icon: ShieldAlert, href: "/services/asbestos-testing", description: "Material sampling & analysis" },

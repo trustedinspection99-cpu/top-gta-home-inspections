@@ -9,6 +9,7 @@ const services = [
   { title: "Condo Inspection", href: "/services/condo" },
   { title: "Commercial Inspection", href: "/services/commercial" },
   { title: "New Construction", href: "/services/new-construction" },
+  { title: "PDI Inspection", href: "/services/pdi-inspection" },
   { title: "Radon Testing", href: "/services/radon-testing" },
   { title: "Mold Inspection", href: "/services/mold-inspection" },
   { title: "Asbestos Testing", href: "/services/asbestos-testing" },
