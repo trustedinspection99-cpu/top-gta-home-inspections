@@ -220,8 +220,12 @@ export default function WETT() {
           answer: "If we find deficiencies (e.g., inadequate clearance), we provide a detailed list of required corrections. We can often suggest simple heat-shielding solutions to bring an appliance into compliance."
         },
         {
+          question: "How much does a WETT inspection cost in Ontario?",
+          answer: "WETT inspections in Ontario start from $249 for a Level 1 maintenance inspection. A Level 2 real estate inspection (required for home purchases) starts from $299. Both include thermal imaging and same-day digital certification. Contact us at (647) 801-9311 for a quote."
+        },
+        {
           question: "How much does a WETT inspection cost in Toronto?",
-          answer: "WETT inspections in Toronto start from $249. This includes thermal imaging and same-day digital certification. Contact us at (647) 801-9311 for a quote."
+          answer: "WETT inspections in Toronto start from $249 for Level 1 and $299 for Level 2 (real estate). Thermal imaging is included at no extra charge. Same-day PDF certificate provided. Call (647) 801-9311."
         },
         {
           question: "What is the difference between a WETT Level 1, 2, and 3 inspection?",
@@ -235,7 +239,7 @@ export default function WETT() {
       relatedServices={[
         { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
         { title: "Thermal Imaging", href: "/services/thermal-imaging" },
-        { title: "Sewer Scope Inspection", href: "/services/sewer-scope" },
+        { title: "Air Quality Testing", href: "/services/air-quality" },
         { title: "Mold Inspection", href: "/services/mold-inspection" },
       ]}
     />

@@ -2,16 +2,16 @@ import { Pipette, ShieldAlert, FileSearch, HardHat, AlertTriangle, Thermometer }
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function LeadPaintTesting() {
-  const pageTitle = "Lead Paint Testing Ontario | XRF Certified | ASADS";
-  const metaDescription = "Professional lead paint testing in Toronto & GTA. XRF certified inspection for homes built before 1990. O.Reg 278/05 compliant reports. From $349.";
+  const pageTitle = "Lead Paint Testing Ontario | XRF Testing | From $349";
+  const metaDescription = "Lead paint testing across Ontario. XRF certified inspection for homes built before 1990. O.Reg 278/05 compliant reports. From $349. Same-day results.";
 
   return (
     <ServicePageTemplate
       title="Lead Paint Testing"
       metaTitle={pageTitle}
       metaDescription={metaDescription}
-      heroTitle="Certified Lead Paint Testing & Lead Testing — Toronto & GTA"
-      heroSubtitle="Professional lead paint testing and lead testing for homes built before 1990. XRF Certified Inspection · Lead Dust Wipe Testing · Ontario Regulation 278/05 Compliant. Protecting GTA families from lead-based hazards."
+      heroTitle="Certified Lead Paint Testing & XRF Lead Testing — Ontario"
+      heroSubtitle="Professional lead paint testing for homes built before 1990 across Ontario. XRF Certified Inspection · Lead Dust Wipe Testing · Ontario Regulation 278/05 Compliant. Protecting Ontario families from lead-based hazards."
       icon={Pipette}
       price="From $349"
       duration="1-3 Hours"
@@ -38,7 +38,7 @@ export default function LeadPaintTesting() {
           </p>
 
           <p>
-            Whether you are planning a renovation, buying an older Toronto home, or are
+            Whether you are planning a renovation, buying an older Ontario home, or are
             concerned about child safety, our certified Lead Risk Assessors provide
             comprehensive testing that covers windowsills, baseboards, and exterior
             siding—the areas where lead concentration is typically highest.
@@ -67,7 +67,7 @@ export default function LeadPaintTesting() {
             <ol className="space-y-4">
               {[
                 { step: "1", title: "Visual Survey of Suspect Materials", body: "Our assessor walks the entire property and identifies all painted surfaces, components, and materials with a likely lead-paint history based on age, condition, and location." },
-                { step: "2", title: "XRF Non-Destructive Analysis or Dust Wipe Sampling", body: "We use XRF (X-ray Fluorescence) technology for a non-destructive scan of all flagged surfaces. Where XRF is inconclusive, EPA-standard dust wipe samples are collected from floors, windowsills, and friction surfaces." },
+                { step: "2", title: "XRF Non-Destructive Analysis or Dust Wipe Sampling", body: "We use XRF (X-ray Fluorescence) technology for a non-destructive scan of all flagged surfaces. Where XRF is inconclusive, Health Canada–standard dust wipe samples are collected from floors, windowsills, and friction surfaces." },
                 { step: "3", title: "Samples Sent to Accredited Lab", body: "All dust wipe and paint chip samples are sealed and delivered to a CFIA-accredited laboratory under a documented chain of custody for analysis." },
                 { step: "4", title: "Written Report with Lab Results and Remediation Recommendations", body: "You receive a full written report showing XRF readings and lab results by location, flagging any exceedances, and providing a clear remediation scope for each affected component." },
               ].map((item) => (
@@ -151,7 +151,7 @@ export default function LeadPaintTesting() {
         },
         {
           title: "Dust Wipe Analysis",
-          description: "We collect EPA-standard dust wipes to measure current lead hazard levels on floors and surfaces where children play."
+          description: "We collect Health Canada–standard dust wipes to measure current lead hazard levels on floors and surfaces where children play."
         },
         {
           title: "Ontario Reg 278/05",
@@ -159,7 +159,7 @@ export default function LeadPaintTesting() {
         },
         {
           title: "Certified Risk Assessors",
-          description: "Inspections are performed by Radiation Safety Officer certified technicians with EPA RRP credentials."
+          description: "Inspections are performed by Radiation Safety Officer certified technicians following Ontario Ministry of Labour standards."
         },
       ]}
       benefits={[
@@ -170,7 +170,7 @@ export default function LeadPaintTesting() {
         "Child Safety Prioritization",
         "Renovation Safety Planning",
         "Ontario Regulation Compliant",
-        "GTA-Wide Service",
+        "Ontario-Wide Service",
       ]}
       faqs={[
         {
@@ -190,8 +190,8 @@ export default function LeadPaintTesting() {
           answer: "In children, exposure leads to permanent IQ loss, learning disabilities, and behavioral issues. In adults, it causes hypertension and kidney damage. No amount of lead in the blood is considered safe."
         },
         {
-          question: "How much does lead paint testing cost in Toronto?",
-          answer: "Lead paint testing in Toronto starts from $349. Pricing depends on home size and number of surfaces tested. Contact us at (647) 801-9311 for a personalized quote."
+          question: "How much does lead paint testing cost in Ontario?",
+          answer: "Lead paint testing in Ontario starts from $349 for a standard residential assessment. Larger homes or properties requiring lab analysis for dust wipe samples may range from $449–$599. Contact us at (647) 801-9311 for a personalized quote."
         },
         {
           question: "What does XRF lead testing mean?",
