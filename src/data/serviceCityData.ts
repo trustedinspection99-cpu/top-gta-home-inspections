@@ -43,7 +43,7 @@ export const serviceDefinitions: ServiceDef[] = [
       "All visible interior surfaces",
     ],
     whyItMatters:
-      "Buying a home in {city} is one of the largest financial decisions you'll make. A certified pre-purchase inspection identifies defects before you close — giving you negotiating power or the option to walk away. Our 400-point checklist covers every major system and structure so nothing gets missed.",
+      "Buying a home in {city} is one of the largest financial decisions you will ever make — and the Ontario real estate market moves fast. Conditions-free offers are common, but waiving your home inspection right removes your only independent safety net. A certified pre-purchase inspection by ASADS identifies structural defects, failing systems, and hidden moisture before you sign on the dotted line. Our 400-point checklist covers every accessible system: roof, foundation, HVAC, electrical panel, plumbing, attic, basement, and all interior and exterior surfaces. {city}'s housing stock ranges from century-old brick workers' cottages to 1970s raised bungalows and recent infill builds — each era carries distinct risk profiles. Older homes carry risks from knob-and-tube wiring, galvanized plumbing, and asbestos-containing materials. Post-war homes frequently have undersized electrical services and aging furnaces. Even newer builds have deficiencies. Our written report with photos and priority ratings gives you the negotiating power to request repairs, price adjustments, or the option to walk away — protecting your deposit and your family.",
     processSteps: [
       { title: "Book Online", body: "Select your date and time. Confirmation sent instantly." },
       { title: "On-Site Inspection", body: "Certified inspector spends 2–3 hours assessing every accessible area of the home." },
@@ -86,7 +86,7 @@ export const serviceDefinitions: ServiceDef[] = [
       "All appliances included in sale",
     ],
     whyItMatters:
-      "Selling your home in {city}? A pre-listing inspection gives you control. Discover issues before buyers find them, price your home accurately, and eliminate last-minute renegotiations that kill deals. Sellers who list with a completed inspection report close faster and with fewer surprises.",
+      "Selling your home in {city} in today's market means facing informed buyers who often bring their own inspector — and every deficiency they find becomes a renegotiation chip after your offer is accepted. A pre-listing inspection flips that dynamic entirely. By completing your own inspection before listing, you know exactly what is in the home, you control the narrative, and you remove the risk of a last-minute price reduction or collapsed deal. {city} buyers and their agents are increasingly skeptical of homes without any inspection history. When you list with a completed ASADS pre-listing report available for review, buyers have less reason to add stringent inspection conditions. Common findings that kill {city} deals — moisture in the basement, aging electrical panels, deteriorating roofs, and HVAC at end-of-life — can be addressed proactively or priced into your asking price before any offer comes in. Our report is formatted to share directly with buyers or their agents, accelerating their decision and protecting your closing timeline.",
     processSteps: [
       { title: "Schedule Before Listing", body: "Book 2–4 weeks before your listing date to allow time for repairs if needed." },
       { title: "Full Property Assessment", body: "Inspector reviews every system and structure — same as a buyer's inspection." },
@@ -129,7 +129,7 @@ export const serviceDefinitions: ServiceDef[] = [
       "Status certificate review guidance",
     ],
     whyItMatters:
-      "Condo inspections in {city} differ significantly from house inspections. The inspector focuses on in-suite systems — especially the fan coil HVAC unit — plus shared building elements visible from your unit. Understanding the status certificate alongside the physical inspection protects you from unexpected special assessments.",
+      "Buying a condo in {city} comes with a unique set of risks that a standard house inspection does not address. The in-suite systems — particularly the fan coil HVAC unit, its condensate drain, and the balcony membrane — are your financial responsibility after closing, yet they are frequently overlooked by buyers in fast-moving {city} condo markets. Fan coil failures in high-rise buildings can cost $4,000–$8,000 to replace and are one of the most common insurance claims in {city} condo units. Balcony membrane failures cause water intrusion into the suite below, creating disputes and repair costs that can reach tens of thousands of dollars. Beyond the physical inspection, understanding what the status certificate reveals about reserve fund adequacy and pending special assessments is critical — a building with an underfunded reserve in {city} can result in a sudden five-figure special assessment landing on the new owner. ASADS condo inspectors are trained specifically on {city}'s high-rise and mid-rise building systems, providing you with a complete picture of both the physical unit and the financial health signals from the building's documentation.",
     processSteps: [
       { title: "Book with Unit Details", body: "Provide floor, building age, and any known concerns when booking." },
       { title: "In-Suite Inspection", body: "Inspector covers every accessible area of the unit plus visible building elements." },
@@ -172,7 +172,7 @@ export const serviceDefinitions: ServiceDef[] = [
       "Driveway, grading & drainage",
     ],
     whyItMatters:
-      "New homes in {city} aren't automatically defect-free. Builder timelines create pressure that leads to overlooked details. Our inspection before your Tarion PDI (Pre-Delivery Inspection) or at 30-day, 1-year, and 2-year Tarion milestones ensures you document every deficiency while it's covered under warranty.",
+      "New homes in {city} are not automatically defect-free. Builder production timelines and subcontractor scheduling pressure routinely result in overlooked details, incomplete finishes, and code-adjacent installations that pass occupancy inspection but fail long-term. {city}'s active new construction market — from high-rise condos to low-rise subdivisions — produces homes where HVAC commissioning, attic insulation coverage, window weatherstripping, and exterior grading are frequently deficient at closing. Under Ontario's Tarion warranty program, you have defined windows to submit documented claims: the PDI, the 30-day form, and the 1-year and 2-year anniversary forms. Items missed at these deadlines are substantially harder to have remediated at builder cost. Our certified new construction inspectors in {city} are trained to identify deficiencies that first-time buyers miss — particularly in mechanical systems, building envelope, and cosmetic finishes. We document every finding with photographs, measurements, and plain-language descriptions so that your Tarion submissions are bulletproof. Buyers in {city} who have ASADS at their PDI typically document 30–80 deficiency items that the builder is then contractually obligated to address.",
     processSteps: [
       { title: "Time the Inspection", body: "Best before your PDI, or at 30-day, 1-year & 2-year Tarion warranty milestones." },
       { title: "Full New-Build Assessment", body: "Inspector reviews all systems and finishes with focus on construction quality and code compliance." },
@@ -262,7 +262,7 @@ export const serviceDefinitions: ServiceDef[] = [
       "Pest entry point heat signatures",
     ],
     whyItMatters:
-      "Thermal imaging in {city} reveals what a standard inspection can't — problems hidden inside walls, floors, and ceilings. FLIR infrared cameras detect temperature differentials that indicate moisture, heat loss, and electrical faults before they become visible or cause structural damage.",
+      "A standard home inspection is limited to what the inspector can see with their eyes. Thermal imaging in {city} removes that limitation. Our FLIR infrared cameras detect temperature differentials across walls, ceilings, floors, and electrical panels — revealing moisture intrusion, insulation voids, and electrical hotspots that are completely invisible to the naked eye. In {city}'s older housing stock, hidden moisture behind finished basement walls is one of the most costly surprises a buyer can face. Active water intrusion behind drywall shows as a cold anomaly on the thermal camera weeks before it becomes a visible stain or mold colony. Missing attic insulation — common in {city} homes that have had roof work or additions — shows as heat loss along rafter bays. Electrical hotspots on breakers and connections are safety hazards that thermal imaging catches before they become fires. For optimal results, there should be a 10°C or greater temperature differential between inside and outside — making {city}'s winters ideal for thermal scanning. Thermal imaging is available as an add-on to any ASADS home inspection or as a standalone service for homeowners concerned about specific areas.",
     processSteps: [
       { title: "Condition Requirements", body: "For best results, there should be a 10°C+ temperature differential between inside and outside. Best done in winter or peak summer." },
       { title: "Full Infrared Scan", body: "Inspector scans all accessible walls, ceilings, floors, and electrical panels with a calibrated FLIR camera." },
@@ -305,7 +305,7 @@ export const serviceDefinitions: ServiceDef[] = [
       "Post-remediation clearance testing",
     ],
     whyItMatters:
-      "Mold in {city} homes is a health risk that goes beyond appearance. Our AIHA-certified lab testing identifies species and spore concentrations — even when mold is hidden inside walls, HVAC systems, or under insulation. We are an independent inspector: we never do remediation, so our assessment is completely unbiased.",
+      "When you search for mold inspection in {city}, most results are mold removal companies — businesses with a direct financial incentive to find mold and quote you remediation. ASADS is different. We are an independent mold inspection and testing service. We do not do remediation. We never will. That independence means our assessment is completely unbiased: if the lab results come back clean, we tell you that. If elevated spore counts or toxic species are identified, we provide a written remediation scope of work that you can send to any contractor for competitive quotes — no upselling, no pressure. {city} homes — particularly those with finished basements, older HVAC systems, or previous water damage — are at elevated mold risk due to Ontario's freeze-thaw cycles and the seasonal humidity changes that drive condensation inside wall cavities. Our AIHA-accredited lab testing identifies both airborne spore concentration and species using Spore Trap or PCR/DNA analysis, so you know exactly what you are dealing with and whether it poses a health risk. For real estate transactions, insurers, courts, and remediation contractors, our independent report carries the credibility that a remediation company's own assessment cannot.",
     processSteps: [
       { title: "Visual Assessment & Moisture Mapping", body: "FLIR thermal camera and calibrated moisture meters locate hidden wet areas without opening walls." },
       { title: "Air Cassette Sampling", body: "Calibrated pump draws air through cassette filters. Indoor samples are taken alongside outdoor control samples." },
@@ -391,7 +391,7 @@ export const serviceDefinitions: ServiceDef[] = [
       "Written report with Bq/m³ readings",
     ],
     whyItMatters:
-      "Radon is the second leading cause of lung cancer in Canada. {city} and surrounding Ontario regions have documented elevated radon levels due to local geology. Health Canada recommends testing every home. Long-term testing over 90+ days gives the most accurate annual average concentration.",
+      "Radon is the second leading cause of lung cancer in Canada, responsible for approximately 3,300 deaths per year — and it is completely invisible and odourless. {city} and the broader Ontario region sit on granite and shale geology that produces elevated radon concentrations in soil gas, which then enters homes through foundation cracks, floor drains, and construction joints. Health Canada's guideline is 200 Bq/m³, and the WHO recommends action at 100 Bq/m³. Testing is the only way to know your home's level. Short-term tests over 2–7 days are available for real estate transactions, but long-term testing over 90+ days provides the most accurate annual average — important because radon levels in {city} vary seasonally, typically rising in winter when homes are sealed. If your home tests above the guideline, active soil depressurization (ASD) mitigation systems reliably reduce radon by 80–99% and are installed by licensed radon mitigation contractors. ASADS provides certified Health Canada-compliant detectors, full written reports with your Bq/m³ reading compared against Health Canada and WHO guidelines, and guidance on next steps if mitigation is needed. Radon testing is increasingly requested by {city} buyers as part of purchase conditions alongside standard home inspections.",
     processSteps: [
       { title: "Deploy Certified Detector", body: "A Health Canada-certified long-term alpha track detector is placed in the lowest livable area of your home." },
       { title: "90-Day Monitoring", body: "The detector passively records radon levels over 90 days to establish a reliable annual average." },
@@ -434,7 +434,7 @@ export const serviceDefinitions: ServiceDef[] = [
       "Inspection access point condition",
     ],
     whyItMatters:
-      "Sewer line replacement in {city} typically costs $8,000–$20,000+. A sewer scope inspection for $299 reveals problems before you buy. Clay tile sewers in older {city} neighbourhoods are particularly prone to root intrusion and joint failure that a standard home inspection cannot detect.",
+      "Sewer line replacement in {city} typically costs $8,000–$25,000 or more, depending on depth, length, and access conditions — and it is one of the most common surprise expenses that buyers face in the first years of homeownership. A standard home inspection cannot assess the buried sewer line between the house and the municipal connection. That section is completely invisible without a camera. {city}'s older neighbourhoods are served by clay tile sewer laterals that were installed in the 1940s through 1970s. These pipes are now decades past their design life and are highly susceptible to root intrusion from mature street trees, joint separation from soil settlement, and longitudinal cracking. Even homes with newer ABS or PVC connecting pipes frequently have clay tile sections remaining in the run to the street. Bellied or sagging pipe sections trap grease and debris, causing recurring blockages that owners mistake for routine maintenance until they require full excavation. Our HD sewer scope inspection in {city} provides a real-time video of the entire lateral from cleanout to municipal connection, with GPS coordinates for all defects so excavation contractors can provide accurate bids. For $299, it is one of the highest-value add-ons available in a {city} real estate transaction.",
     processSteps: [
       { title: "Access the Cleanout", body: "Inspector locates the sewer cleanout access point — usually in the basement or exterior." },
       { title: "Camera Insertion", body: "A waterproof HD camera is pushed through the sewer line from house to the municipal connection." },
@@ -477,7 +477,7 @@ export const serviceDefinitions: ServiceDef[] = [
       "Pressure tank & pump system (visual)",
     ],
     whyItMatters:
-      "Private wells in {city} and surrounding Ontario counties are not regulated by the municipality. Contamination from agricultural runoff, septic systems, and naturally occurring arsenic is common. Annual testing is recommended by MOH, and testing is mandatory in most real estate transactions involving private wells.",
+      "Unlike municipal water systems in {city}, private wells receive no ongoing testing or treatment from the government. The responsibility for water quality falls entirely on the property owner — which means that without regular testing, contamination from bacteria, nitrates, arsenic, or other sources can go undetected for years. {city}'s rural fringe and surrounding Ontario counties have a significant number of properties served by private drilled or dug wells. Agricultural areas bring risks from nitrate runoff and coliform bacteria from nearby livestock operations. Shallow dug wells are particularly vulnerable to seasonal contamination after heavy rainfall or snowmelt. Ontario's geological formations in some regions contribute naturally elevated levels of arsenic, uranium, and hardness minerals that are not apparent from taste or appearance. The Ministry of Health (MOH) recommends testing private wells for bacteria at least twice per year and for chemical parameters every three to five years. Most Ontario lenders and real estate lawyers require current well water test results for any property with a private well as a condition of financing and closing. ASADS provides MOH-approved sterile sample collection, submission to a certified laboratory, and a plain-language written report interpreting results against Ontario Drinking Water Standards.",
     processSteps: [
       { title: "Sterile Sample Kit", body: "We provide MOH-approved sterile sample bottles with collection instructions." },
       { title: "Sample Collection", body: "Samples are collected from the tap after proper flushing as per MOH protocol." },
@@ -520,7 +520,7 @@ export const serviceDefinitions: ServiceDef[] = [
       "Risk assessment for disturbance during renovation",
     ],
     whyItMatters:
-      "Lead paint is present in the majority of {city} homes built before 1978. Even intact lead paint on friction surfaces (windows, doors) creates lead dust hazards during normal use. Children and pregnant women are most at risk. Testing before renovation is essential to protect occupants and comply with Ontario regulations.",
+      "Lead paint is present in the majority of {city} homes built before 1978, and in significant numbers of homes built through the 1980s on exterior surfaces. {city}'s older residential neighbourhoods — including many post-war bungalows, wartime housing, and Victorian-era homes — contain multiple layers of lead-based paint on interior trim, window sills, doors, and exterior siding. The risk is not from lead paint that is intact and undisturbed. The risk is from deteriorating surfaces and, most critically, from renovation work that generates lead dust. Sanding, cutting, grinding, or demolishing painted surfaces in a pre-1978 {city} home without prior testing exposes workers and occupants — particularly children under six and pregnant women — to lead dust concentrations that cause irreversible neurological damage. Even low-level chronic lead exposure produces measurable cognitive effects in children. Ontario contractors working on suspect surfaces have obligations under occupational health regulations to control lead dust exposure. Property owners who hire contractors without warning them of known or suspected lead paint face potential liability. Our XRF non-destructive screening and chip sampling service in {city} identifies all lead-containing surfaces, assesses their condition and disturbance risk, and provides a written report that satisfies regulatory requirements and protects everyone involved in your renovation project.",
     processSteps: [
       { title: "XRF Screening", body: "Non-destructive X-ray fluorescence scanning provides immediate readings on all tested surfaces." },
       { title: "Chip Sampling (if needed)", body: "Where confirmation is required, small paint chip samples are collected and sent to an accredited lab." },
@@ -563,7 +563,7 @@ export const serviceDefinitions: ServiceDef[] = [
       "HVAC filtration effectiveness",
     ],
     whyItMatters:
-      "Indoor air quality in {city} homes is often 2–5× more polluted than outdoor air. New construction materials, VOCs from finishes, poor ventilation, and biological contaminants create chronic health concerns. Our AIHA-accredited lab testing provides certified results for health assessments, real estate disclosures, and insurance claims.",
+      "Health Canada research consistently shows that indoor air in Canadian homes is often two to five times more polluted than outdoor air — and {city} residents spend approximately 90% of their time indoors. The sources are numerous: volatile organic compounds (VOCs) off-gassing from new flooring, cabinetry, and paint; carbon dioxide buildup from inadequate ventilation in airtight modern homes; mold spores from hidden moisture; formaldehyde from engineered wood products; and allergens from pets, dust mites, and HVAC systems that have not been serviced. Symptoms like persistent headaches, fatigue, respiratory irritation, and unexplained allergic reactions in a {city} home often have an indoor air quality cause that is not diagnosed without testing. New construction and recently renovated {city} homes have particularly high VOC concentrations in the first year after completion. Older {city} homes with aging HVAC systems or inadequate heat recovery ventilators (HRVs) frequently have elevated CO2 and humidity levels that degrade sleep quality and cognitive function. Our AIHA-accredited laboratory analysis provides certified results against Health Canada, ASHRAE, and WHO indoor air quality guidelines — giving you objective data for health assessments, real estate disclosures, landlord-tenant disputes, and insurance claims.",
     processSteps: [
       { title: "Pre-Test Assessment", body: "Inspector reviews HVAC system, ventilation rates, and visible moisture concerns before sampling." },
       { title: "Air Sampling", body: "Calibrated pumps and passive samplers collect air quality data from key areas of the home." },
@@ -606,7 +606,7 @@ export const serviceDefinitions: ServiceDef[] = [
       "Pellet stove venting (where applicable)",
     ],
     whyItMatters:
-      "A WETT inspection is required by most Ontario insurance companies and is standard in real estate transactions involving wood-burning appliances in {city}. Improper installations and deteriorated flue liners are leading causes of house fires. ASADS provides certified WETT Level 1 and Level 2 inspections by registered technicians.",
+      "In {city} and across Ontario, most home insurance companies will not issue or renew a policy on a home with a wood-burning fireplace, wood stove, or insert without a current WETT inspection certificate. For buyers, this means a WETT inspection is effectively a condition of coverage — not an optional add-on. For sellers, having a valid WETT certificate removes a potential deal-killer and speeds up buyer financing approval. Beyond the insurance requirement, wood-burning appliance safety is a genuine life-safety issue. Chimney fires in Ontario cause millions of dollars in property damage annually. The leading causes are deteriorated flue liners, improper clearances to combustible materials, and excessive creosote buildup — all of which are invisible without a proper WETT inspection. {city}'s housing stock includes a large proportion of homes built in the 1970s and 1980s with masonry fireplaces, many of which have never had a professional inspection. Single-wall metal stovepipe installations in older {city} homes frequently fail clearance requirements that have tightened since original installation. ASADS provides certified WETT Level 1 visual inspections for standard real estate and insurance requirements, and Level 2 inspections with flue camera video for change-of-appliance, after-chimney-event, or complex installation scenarios.",
     processSteps: [
       { title: "Schedule Before Closing", body: "Book your WETT inspection before your real estate closing date. Insurance companies typically require it before coverage takes effect." },
       { title: "Level 1 or Level 2 Inspection", body: "Level 1 for standard sale/insurance requirements. Level 2 includes video scan of flue — required for change of appliance or after chimney events." },
@@ -670,6 +670,52 @@ export const serviceDefinitions: ServiceDef[] = [
       { name: "Lead Paint Testing", slug: "lead-paint-testing" },
       { name: "Air Quality Testing", slug: "air-quality" },
       { name: "Commercial Inspection", slug: "commercial" },
+    ],
+  },
+  {
+    slug: "pdi-inspection",
+    name: "PDI Inspection (Pre-Delivery Inspection)",
+    shortName: "PDI Inspection",
+    price: "From $349",
+    duration: "2–3 Hours",
+    metaTitleTemplate: "PDI Inspection {city} | Pre-Delivery Inspection | ASADS",
+    metaDescTemplate:
+      "Independent PDI inspection in {city}. Catch builder deficiencies before your Tarion closing. Certified inspector, same-day report. From $349.",
+    heroTitle: "PDI Inspection in {city}",
+    whatWeCheck: [
+      "All interior doors, windows & hardware operation",
+      "Drywall finish, paint, and trim deficiencies",
+      "Flooring installation and surface defects",
+      "Kitchen and bathroom fixture operation",
+      "HVAC, HRV, and mechanical system function",
+      "Electrical panel, outlets, and fixture operation",
+      "Exterior grading, eavestroughs & downspouts",
+      "Garage door operation and safety reversal",
+      "Foundation visible defects and grading",
+      "All Tarion statutory warranty items",
+      "Comprehensive PDI deficiency list for builder",
+      "Same-day digital report with photos",
+    ],
+    whyItMatters:
+      "Your PDI in {city} is your one official opportunity to walk through your new home with the builder before closing and document every deficiency on the record. Items not noted on the PDI form are harder to claim under Tarion warranty later. An independent certified inspector at your PDI in {city} catches deficiencies you would miss — typically 30–80 items in a new home — and ensures every finding is documented correctly on the builder's form before you take possession.",
+    processSteps: [
+      { title: "Pre-PDI Briefing", body: "Inspector reviews the builder's PDI checklist and explains what to look for, what builder reps commonly minimize, and how to document findings on the official form." },
+      { title: "Systematic Unit Walkthrough", body: "Room-by-room inspection covering all surfaces, fixtures, appliances, mechanical systems, and exterior components. Inspector documents all deficiencies with photos." },
+      { title: "PDI Form Completion", body: "Inspector ensures all deficiencies are correctly recorded on the builder's PDI form before you sign. You leave with a complete photographic record of every noted item." },
+      { title: "30-Day & Tarion Follow-Up", body: "Inspector provides guidance on the 30-day and 1-year Tarion claim windows, and can return for follow-up inspections to verify builder repairs." },
+    ],
+    faqs: [
+      { q: "Do I need an inspector at my PDI in {city}?", a: "You are not required to bring an inspector, but it is strongly recommended. Builder PDI representatives are employed by the builder — their role is to facilitate the handover, not to advocate for you. An independent inspector in {city} catches items a first-time buyer would miss, particularly in mechanical, electrical, and building envelope systems." },
+      { q: "What is covered under Tarion warranty in {city}?", a: "Tarion provides a statutory warranty on all new homes in Ontario: 1 year on workmanship and materials, 2 years on electrical, plumbing, heating, water penetration, and building envelope, and 7 years on major structural defects. Items must be documented within the correct warranty window — the PDI and 30-day form are your primary tools for the first year." },
+      { q: "How many deficiencies are typical in a {city} new home PDI?", a: "Our inspectors typically document 30–80 deficiency items in a new construction home in {city}. Common findings include drywall nail pops, window hardware operation, HRV duct balancing, grading and drainage issues, and minor mechanical deficiencies. Catching these at PDI costs the builder to fix — discovering them post-closing means negotiation." },
+      { q: "How much does a PDI inspection cost in {city}?", a: "PDI inspection in {city} starts from $349 for a standard single-family home. Condo units and townhomes may be priced differently. Contact ASADS at (647) 801-9311 for a quote specific to your {city} property." },
+      { q: "Can I use ASADS for Tarion 30-day and 1-year inspections too?", a: "Yes. ASADS provides PDI, 30-day Tarion, and 1-year Tarion inspections in {city}. Booking all three with the same inspector provides continuity — your inspector knows your specific home's history and can compare current conditions against the original PDI documentation." },
+    ],
+    relatedServices: [
+      { name: "New Construction Inspection", slug: "new-construction" },
+      { name: "Pre-Purchase Inspection", slug: "pre-purchase" },
+      { name: "Thermal Imaging", slug: "thermal-imaging" },
+      { name: "Radon Testing", slug: "radon-testing" },
     ],
   },
 ];
