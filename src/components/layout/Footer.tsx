@@ -26,7 +26,7 @@ const quickLinks = [
   { title: "Pricing", href: "/pricing" },
   { title: "Blog", href: "/blog" },
   { title: "FAQ", href: "/faq" },
-  { title: "Testimonials", href: "/testimonials" },
+  { title: "Reviews", href: "/testimonials" },
   { title: "Book Online", href: "/booking" },
   { title: "Contact", href: "/contact" },
 ];

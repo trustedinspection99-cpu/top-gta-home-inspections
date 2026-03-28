@@ -3,13 +3,12 @@ import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { TrustBadges } from "@/components/home/TrustBadges";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
-import { CTASection } from "@/components/home/CTASection";
 import { SITE_URL } from "@/lib/seo";
 import { 
   CheckCircle2, Shield, Clock, MapPin, Search, Calendar,
   Home, Zap, Droplets, Thermometer, Construction, 
   AlertTriangle, BadgeCheck, FileText, BarChart, Info,
-  ChevronRight, Phone, Instagram, Facebook, Youtube, Twitter, Video,
+  ChevronRight, ChevronDown, Phone, Instagram, Facebook, Youtube, Twitter, Video,
   Award, Users, FileCheck, Building, ArrowRight, Star,
   DollarSign, Calculator, Download, BookOpen, CheckSquare,
   AlertCircle, Home as HomeIcon, BarChart3, Settings,
@@ -818,7 +817,7 @@ const Index = () => {
               ))}
             </div>
             <div className="text-center">
-              <a href="/booking" className="inline-flex items-center gap-2 bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition-all">
+              <a href="/booking" className="inline-flex items-center gap-2 bg-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:opacity-90 transition-all">
                 Book Your Inspection Now
                 <ArrowRight size={20} />
               </a>
@@ -918,11 +917,11 @@ const Index = () => {
           </div>
           
           <div className="space-y-4">
-            {homepageFaqs.map((faq, index) => (
+            {homepageFaqs.slice(0, 5).map((faq, index) => (
               <details key={index} className="group bg-gray-50 rounded-xl hover:bg-gray-100 transition-all">
                 <summary className="flex items-center justify-between p-6 cursor-pointer">
                   <h3 className="font-bold text-lg text-gray-900">{faq.question}</h3>
-                  <ChevronRight className="h-5 w-5 text-gray-400 group-open:rotate-90 transition-transform" />
+                  <ChevronDown className="h-5 w-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-6 pb-6 pt-0">
                   <p className="text-gray-600">{faq.answer}</p>
@@ -932,7 +931,7 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-12">
-            <a href="/faq" className="inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition-all">
+            <a href="/faq" className="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-lg font-bold hover:opacity-90 transition-all">
               View All 100+ Ontario Home Inspection FAQs
               <ArrowRight size={16} />
             </a>
@@ -944,7 +943,7 @@ const Index = () => {
       <TestimonialsSection />
 
       {/* ONTARIO SERVICE AREAS */}
-      <section className="py-20 bg-gray-900 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Home Inspector Near Me — Toronto, GTA & Ontario</h2>
@@ -1020,7 +1019,6 @@ const Index = () => {
         </div>
       </section>
 
-      <CTASection />
     </Layout>
   );
 };

@@ -155,6 +155,29 @@
   }
 }
 
+@layer base {
+  /* Fix 2: Visible focus indicators (WCAG 2.1 AA SC 2.4.7) */
+  :focus-visible {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Fix 3: Prevent sticky header obscuring focused elements (WCAG 2.2 SC 2.4.11) */
+  a, button, input, select, textarea, [tabindex] {
+    scroll-margin-top: 5rem;
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
 @layer utilities {
   .hero-gradient {
     background: linear-gradient(135deg, hsl(var(--hero-gradient-start)) 0%, hsl(var(--hero-gradient-end)) 100%);

@@ -33,10 +33,6 @@ export function Header() {
         <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link to="/" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", location.pathname === "/" && "bg-accent/50")}>Home</Link>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
               <Link to="/services" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", location.pathname.startsWith("/services") && "bg-accent/50")}>Services</Link>
             </NavigationMenuItem>
 
@@ -54,14 +50,6 @@ export function Header() {
 
             <NavigationMenuItem>
               <Link to="/blog" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", location.pathname.startsWith("/blog") && "bg-accent/50")}>Blog</Link>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <Link to="/testimonials" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", location.pathname === "/testimonials" && "bg-accent/50")}>Reviews</Link>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <Link to="/faq" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent", location.pathname === "/faq" && "bg-accent/50")}>FAQ</Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
@@ -93,17 +81,14 @@ export function Header() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t bg-background">
-          <nav className="container py-4 space-y-2" aria-label="Mobile navigation">
-            <Link to="/" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-            <Link to="/services" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-            <Link to="/locations" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Locations</Link>
-            <Link to="/pricing" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-            <Link to="/about" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
-            <Link to="/blog" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-            <Link to="/testimonials" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Reviews</Link>
-            <Link to="/faq" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
-            <Link to="/contact" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-            <Link to="/trusted-realtors" className="block py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>Trusted Realtors</Link>
+          <nav className="container py-4 space-y-1" aria-label="Mobile navigation">
+            <Link to="/services" className="flex items-center min-h-[44px] px-2 py-3 text-sm font-medium rounded-md hover:bg-accent/10" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+            <Link to="/locations" className="flex items-center min-h-[44px] px-2 py-3 text-sm font-medium rounded-md hover:bg-accent/10" onClick={() => setMobileMenuOpen(false)}>Locations</Link>
+            <Link to="/pricing" className="flex items-center min-h-[44px] px-2 py-3 text-sm font-medium rounded-md hover:bg-accent/10" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+            <Link to="/about" className="flex items-center min-h-[44px] px-2 py-3 text-sm font-medium rounded-md hover:bg-accent/10" onClick={() => setMobileMenuOpen(false)}>About</Link>
+            <Link to="/blog" className="flex items-center min-h-[44px] px-2 py-3 text-sm font-medium rounded-md hover:bg-accent/10" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+            <Link to="/contact" className="flex items-center min-h-[44px] px-2 py-3 text-sm font-medium rounded-md hover:bg-accent/10" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            <Link to="/faq" className="flex items-center min-h-[44px] px-2 py-3 text-sm font-medium rounded-md hover:bg-accent/10" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
             <div className="pt-4 border-t space-y-2">
               <Button asChild className="w-full">
                 <Link to="/booking" onClick={() => setMobileMenuOpen(false)}>Book Inspection</Link>
