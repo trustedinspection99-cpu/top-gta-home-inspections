@@ -1667,7 +1667,7 @@ export const blogPostsData: BlogPost[] = [
     featured: false,
     content: `
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a Home Inspection Cost in Ontario?</h2>
-      <p class="mb-4">In 2025, the typical cost of a standard residential home inspection in Ontario ranges from <strong>$400 to $650</strong> for a detached or semi-detached home. The most important factor is not finding the cheapest inspection — it's finding an inspector qualified to protect your largest investment. Here's what drives pricing and what you should expect for your money.</p>
+      <p class="mb-4">In 2026, the typical cost of a standard residential home inspection in Ontario ranges from <strong>$400 to $650</strong> for a detached or semi-detached home. The most important factor is not finding the cheapest inspection — it's finding an inspector qualified to protect your largest investment. Here's what drives pricing and what you should expect for your money.</p>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Factors That Affect Home Inspection Cost</h2>
 
@@ -1701,7 +1701,7 @@ export const blogPostsData: BlogPost[] = [
       </ul>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What's Included in an ASADS Inspection</h2>
-      <p class="mb-4">ASADS pre-purchase inspections include thermal imaging as standard — not as an add-on. This means every inspection uses a FLIR® infrared camera to check for hidden moisture, insulation voids, and electrical hotspots at no additional cost. Our inspectors are OAHI (Ontario Association of Home Inspectors) aligned and carry E&O insurance. Same-day digital reports with photographs are standard.</p>
+      <p class="mb-4">ASADS pre-purchase inspections include thermal imaging as standard — not as an add-on. This means every inspection uses a FLIR® infrared camera to check for hidden moisture, insulation voids, and electrical hotspots at no additional cost. Our inspectors are OAHI (Ontario Association of Home Inspectors) aligned and carry E&O insurance. Same-day digital reports with photographs are standard. Need an inspection today? See our <a href="/services/same-day-home-inspection" class="text-primary underline font-medium">same-day home inspection</a> service.</p>
       <p class="mb-4">Starting from $450 for a standard detached home in Toronto and the GTA. Call (647) 801-9311 or book online.</p>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What to Look for Beyond Price</h2>
