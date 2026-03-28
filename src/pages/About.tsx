@@ -1,9 +1,9 @@
-import { ShieldCheck, Search, FileText, UserCheck, Users, GraduationCap, Award, CheckCircle, ArrowRight, Phone, Building } from 'lucide-react';
+import { ShieldCheck, Search, FileText, UserCheck, GraduationCap, CheckCircle, ArrowRight, Phone } from 'lucide-react';
 import { Layout } from "@/components/layout/Layout";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { HeroBookingSection } from "@/components/HeroBookingSection";
+import { InlineBookingForm } from "@/components/InlineBookingForm";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -167,20 +167,43 @@ export default function About() {
         <script type="application/ld+json">{JSON.stringify(aboutPageSchema)}</script>
       </Helmet>
 
-      <HeroBookingSection
-        badge="OAHI & InterNACHI Certified · Since 2009 · 2,000+ Inspections"
-        title="Certified Home Inspector in Ontario"
-        subtitle="Looking for a certified home inspector in Ontario? ASADS has served buyers, sellers, and investors across 106 cities since 2009. OAHI & InterNACHI certified, same-day reports."
-        priceCards={[
-          { label: "Experience", price: "15+ Years" },
-          { label: "Inspections", price: "2,000+" },
-          { label: "Cities Served", price: "106" },
-          { label: "Same-Day", price: "Digital Report" },
-        ]}
-        defaultService="Pre-Purchase Home Inspection"
-        formTitle="Book Your Inspection"
-        ctaPrimary={{ text: "Book Your Inspection", href: "/booking" }}
-      />
+      {/* Hero — info only */}
+      <section className="bg-gradient-to-br from-blue-800 to-blue-900 py-14 md:py-20 text-white">
+        <div className="container mx-auto px-4 max-w-3xl text-center relative z-10">
+          <div className="inline-flex items-center gap-2 bg-blue-700/40 backdrop-blur-sm px-4 py-2 rounded-full mb-5 border border-blue-600/50 text-sm font-medium">
+            OAHI & InterNACHI Certified · Founded 2009 · 2,000+ Inspections
+          </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight leading-tight">
+            Certified Home Inspector in Ontario
+          </h1>
+          <p className="text-lg text-blue-100 mb-8 leading-relaxed max-w-2xl mx-auto">
+            We're a small, experienced team that takes home inspection seriously. Every inspection is led by a certified inspector who gives you straight answers — not vague observations — so you can make your decision with confidence.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6 text-sm mb-8">
+            {[
+              { value: "15+", label: "Years Experience" },
+              { value: "2,000+", label: "Inspections" },
+              { value: "106", label: "Cities Served" },
+              { value: "4.9★", label: "Avg. Rating" },
+            ].map(stat => (
+              <div key={stat.label} className="text-center">
+                <div className="text-2xl font-extrabold text-white">{stat.value}</div>
+                <div className="text-blue-200 text-xs uppercase tracking-wide">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+16478019311" className="bg-white text-blue-700 px-7 py-4 rounded-lg font-bold text-base hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center gap-2">
+              <Phone className="h-5 w-5" />
+              (647) 801-9311
+            </a>
+            <a href="/booking" className="bg-transparent border-2 border-white px-7 py-4 rounded-lg font-bold text-base hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+              Book an Inspection
+              <ArrowRight className="h-5 w-5" />
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Our Story */}
       <section className="py-16 md:py-24 bg-background" aria-labelledby="about-haroon">
@@ -215,30 +238,27 @@ export default function About() {
 
             <div className="order-1 lg:order-2 relative">
               <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl blur-2xl"></div>
-              <div className="relative bg-card border border-border p-8 md:p-12 rounded-2xl shadow-xl text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 text-primary mb-6">
-                  <GraduationCap className="h-10 w-10" />
+              <div className="relative bg-card border border-border p-8 rounded-2xl shadow-xl">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-5">
+                  <GraduationCap className="h-8 w-8" />
                 </div>
-                <h3 className="text-4xl font-bold text-foreground mb-2">15+ Years</h3>
-                <p className="text-muted-foreground font-semibold uppercase tracking-widest text-sm mb-6">Construction Advisory Experience</p>
-                <div className="space-y-4 pt-6 border-t border-border">
-                  <div className="flex items-center justify-center gap-2 text-primary font-bold">
-                    <span className="h-2 w-2 bg-primary rounded-full"></span>
-                    Ontario Building Code (OBC) Expert
-                  </div>
-                  <div className="flex justify-around pt-2">
-                    {[
-                      { value: "2,000+", label: "Inspections" },
-                      { value: "106", label: "Cities" },
-                      { value: "4.9★", label: "Rating" },
-                    ].map(item => (
-                      <div key={item.label} className="text-center">
-                        <div className="font-extrabold text-foreground">{item.value}</div>
-                        <div className="text-xs text-muted-foreground">{item.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <h3 className="font-bold text-lg text-foreground mb-1">Haroon Choudhry</h3>
+                <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-5">Master Inspector & Founder</p>
+                <ul className="space-y-3">
+                  {[
+                    "OAHI Member — Ontario Association of Home Inspectors",
+                    "InterNACHI Certified Professional Inspector",
+                    "WETT Certified Technician",
+                    "Ontario Building Code (OBC) Expert",
+                    "Thermography & Radon Certified",
+                    "15+ years in structural restoration & contracting",
+                  ].map(cred => (
+                    <li key={cred} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                      {cred}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
@@ -293,23 +313,20 @@ export default function About() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {team.map((member) => (
-              <Card key={member.name} className="overflow-hidden border-border/50 shadow-sm hover:shadow-md transition-shadow">
-                <div className={`aspect-[4/3] flex items-center justify-center relative ${member.founder ? 'bg-gradient-to-br from-primary/10 to-blue-600/10' : 'bg-gradient-to-br from-slate-100 to-slate-200'}`}>
-                  <div className={`h-24 w-24 rounded-full bg-white shadow-inner flex items-center justify-center border-4 ${member.founder ? 'border-primary/20' : 'border-slate-300'}`}>
-                    <Users className={`h-12 w-12 ${member.founder ? 'text-primary' : 'text-slate-400'}`} />
-                  </div>
-                  {member.founder && (
-                    <div className="absolute bottom-4 right-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest">
-                      Founder
-                    </div>
-                  )}
-                </div>
+              <Card key={member.name} className="border-border/50 shadow-sm hover:shadow-md transition-shadow">
                 <CardContent className="p-6">
-                  <h3 className="font-heading font-bold text-xl text-foreground mb-1">{member.name}</h3>
-                  <p className="text-primary font-bold text-sm mb-2 uppercase tracking-wide">{member.role}</p>
-                  <p className="text-foreground font-semibold text-sm mb-2 italic">{member.experience}</p>
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className={`h-14 w-14 rounded-full flex items-center justify-center flex-shrink-0 text-lg font-extrabold ${member.founder ? 'bg-primary text-primary-foreground' : 'bg-slate-200 text-slate-600'}`}>
+                      {member.name.split(" ").map(n => n[0]).join("")}
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-bold text-base text-foreground leading-tight">{member.name}</h3>
+                      <p className="text-primary font-semibold text-xs uppercase tracking-wide">{member.role}</p>
+                      <p className="text-muted-foreground text-xs">{member.experience}</p>
+                    </div>
+                  </div>
                   <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{member.bio}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5">
                     {member.certs.map((cert) => (
                       <span key={cert} className={`text-[10px] px-2 py-1 rounded-full font-bold uppercase border ${member.founder ? 'bg-primary/10 text-primary border-primary/20' : 'bg-slate-100 text-slate-600 border-slate-200'}`}>
                         {cert}
@@ -347,13 +364,15 @@ export default function About() {
       <section className="py-12 bg-muted/30 border-t border-border/50">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <h3 className="font-heading text-xl font-semibold text-foreground mb-6 text-center">Explore Our Services</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            <h3 className="font-heading text-xl font-semibold text-foreground mb-6 text-center">What We Inspect</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {[
                 { label: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
                 { label: "Pre-Listing Inspection",  href: "/services/pre-listing" },
+                { label: "Condo Inspection",        href: "/services/condo" },
                 { label: "Radon Testing",           href: "/services/radon-testing" },
                 { label: "Mold Inspection",         href: "/services/mold-inspection" },
+                { label: "WETT Inspection",         href: "/services/wett" },
               ].map(link => (
                 <Link key={link.href} to={link.href} className="p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
                   {link.label}
@@ -455,14 +474,8 @@ export default function About() {
                 <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
                 <span className="text-xs font-semibold text-green-600 uppercase tracking-wide">Same-Day Availability</span>
               </div>
-              <h3 className="text-xl font-extrabold text-slate-900 mb-1">Book Your Inspection</h3>
-              <p className="text-sm text-gray-500 mb-5">Confirmed instantly. We may call if a time adjustment is needed.</p>
-              <a href="/booking" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg text-center transition-colors text-sm">
-                Open Full Booking Form →
-              </a>
-              <p className="text-center text-xs text-gray-400 mt-3">
-                or call <a href="tel:6478019311" className="text-blue-600 font-semibold">(647) 801-9311</a> — 7 days a week
-              </p>
+              <h3 className="text-xl font-extrabold text-slate-900 mb-4">Book Your Inspection</h3>
+              <InlineBookingForm />
             </div>
           </div>
         </div>
