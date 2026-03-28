@@ -861,12 +861,13 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-burlington",
     city: "Burlington",
     region: "Halton Region",
-    metaTitle: "Home Inspector Burlington | From $399 | Same-Day | ASADS",
+    metaTitle: "Home Inspection Burlington | From $399 | Same-Day | ASADS",
     metaDescription: "Pre-purchase home inspection Burlington from $399. Infrared imaging, same-day booking & detailed PDF report. Serving Downtown Burlington, Aldershot & Tyandaga.",
     description: "Burlington's trusted waterfront property inspector specializing in Lake Ontario lakefront pre-purchase inspections, KITEC plumbing identification & thermal imaging diagnostics.",
     neighborhoods: [
       "Downtown Burlington", "Aldershot", "Tyandaga", "Roseland", "Orchard",
-      "Brant Hills", "Headon Forest", "Millcroft", "Palmer", "Shoreacres"
+      "Brant Hills", "Headon Forest", "Millcroft", "Palmer", "Shoreacres",
+      "Waterdown", "LaSalle Park", "Central Burlington", "Mountainside", "Elizabeth Gardens"
     ],
     phoneNumber: "(647) 801-9311",
     latitude: 43.3862,
@@ -887,6 +888,10 @@ export const locationData: LocationData[] = [
       {
         title: "Burlington Condo Growth & Fan Coil Inspections",
         content: "Downtown Burlington and the waterfront corridor have seen rapid high-rise condo development, with new towers along Brant Street and Lakeshore Road transforming the city centre. Fan coil HVAC units in these buildings require unit-level inspection of actuator performance, condensate drain condition, secondary drain pan integrity, and filter maintenance status — systems that building management handles in common areas but that individual owners are responsible for within their suites. Balcony membrane waterproofing condition determines whether water infiltration into suite interiors is occurring through balcony deck penetrations or the building envelope. Underground parking garage waterproofing and structural slab conditions are a leading source of building-wide special assessments costing hundreds of thousands of dollars. Pre-purchase condo inspections in Burlington should be paired with status certificate review to confirm reserve fund adequacy and surface any pending or proposed special assessments before conditions are waived."
+      },
+      {
+        title: "Commercial Inspection Burlington: QEW Corridor, Aldershot & Industrial",
+        content: "Burlington's commercial and industrial real estate spans the QEW-fronting office and industrial parks between Appleby Line and Walkers Line, the Aldershot GO station transit-oriented development corridor, and the mixed-use retail and hospitality strip along downtown Brant Street and the waterfront. Commercial inspection in Burlington covers office and retail tenancy condition assessments, flat roof membrane and drainage evaluation, HVAC rooftop unit performance, three-phase electrical service capacity, loading dock infrastructure, and the structural masonry condition of Burlington's older downtown commercial stock on Brant Street and the historic Aldershot area. Industrial buyers in Burlington's north-end employment zones require detailed documentation of concrete slab integrity, overhead door systems, mechanical mezzanine conditions, and fire suppression system status. Our Burlington commercial property inspections include thermal imaging of electrical panels and roof assemblies as standard. Investors acquiring multi-unit residential or mixed-use properties in Burlington's intensifying downtown core benefit from reserve fund adequacy assessment and building envelope inspection paired with status certificate review. Call (647) 801-9311 for commercial inspection across all of Burlington and Halton Region."
       }
     ],
     localExpertise: {
@@ -2218,10 +2223,10 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-hamilton",
     city: "Hamilton",
     region: "Hamilton-Niagara Region",
-    metaTitle: "Home Inspector Hamilton | From $399 | Same-Day | ASADS",
+    metaTitle: "Home Inspection Hamilton | From $399 | Same-Day | ASADS",
     metaDescription: "Home inspection Hamilton from $399. Pre-purchase & pre-listing certified inspector. Serving Stipley, North End, Kirkendall, Westdale & the Mountain.",
     description: "Hamilton's premier certified inspector specializing in escarpment slope stability assessments, century home structural inspections & thermal imaging diagnostics.",
-    neighborhoods: ["Stipley", "North End", "Kirkendall", "Westdale", "Durand", "Locke Street", "Ancaster Heights", "Mount Hope", "East Hamilton", "Crown Point"],
+    neighborhoods: ["Stipley", "North End", "Kirkendall", "Westdale", "Durand", "Locke Street", "Ancaster Heights", "Mount Hope", "East Hamilton", "Crown Point", "Binbrook", "Waterdown", "Dundas", "Flamborough", "Stoney Creek Mountain"],
     phoneNumber: "(647) 801-9311",
     latitude: 43.2557,
     longitude: -79.8711,
@@ -2249,10 +2254,14 @@ export const locationData: LocationData[] = [
       {
         title: "Hamilton Mountain New Construction & Soil Movement",
         content: "Hamilton's upper city — Ancaster, Waterdown, Binbrook, and the Meadowlands and Harmony Hall subdivisions — has seen extensive new construction on former agricultural land with variable soil conditions. Queenston Shale-derived clay soils on the Mountain and in Ancaster exhibit shrink-swell behaviour, expanding when saturated and contracting during dry periods, creating differential foundation settlement and interior drywall cracking that recurs even after cosmetic repair. New subdivisions built since 2010 require assessment at Tarion warranty milestones (30-Day, 1-Year, 2-Year) to document settlement-related deficiencies before warranty expiry. Our inspectors evaluate stair-step brick cracking, interior door binding, and basement slab cracking that signal active soil movement — distinguishing cosmetic shrinkage cracks from structural settlement requiring engineer review. For Mountain buyers in homes under five years old, we time inspections to Tarion warranty deadlines to maximize documentation of deficiencies while builder coverage remains active. ASADS inspects across Hamilton's full housing spectrum from North End century homes to Ancaster new builds. Call (647) 801-9311 to book."
+      },
+      {
+        title: "Commercial Property Inspection Hamilton: Industrial, Office & Multi-Unit",
+        content: "Hamilton's identity as a steel and manufacturing city creates one of Ontario's most active commercial property markets outside the GTA — from the Bayfront industrial corridor and James Street North arts district to the International Village commercial strip and mixed-use towers rising along King and Main. Commercial home inspection in Hamilton covers three-phase industrial electrical panel assessments, flat roof membrane condition and drainage evaluation, HVAC rooftop unit performance, loading dock infrastructure, multi-unit apartment building plumbing and electrical capacity, and structural masonry assessment of Hamilton's downtown heritage brick buildings. Ancaster and Stoney Creek industrial parks — including the Airport Employment Growth District near Mount Hope — represent some of Ontario's most active industrial real estate, with buyers requiring detailed condition documentation before acquisition. Our Hamilton commercial inspection reports include thermal imaging of all electrical panels and roof assemblies as standard, providing investors, business owners, and landlords with documented findings before committing to commercial or mixed-use acquisitions across all of Hamilton-Wentworth. Call (647) 801-9311 for same-day commercial inspection scheduling."
       }
     ],
     localExpertise: {
-      title: "Home Inspection Experience in Hamilton",
+      title: "Home Inspection Services in Hamilton, Ontario",
       paragraphs: [
         "Hamilton's housing stock is one of Ontario's most diverse, ranging from 1890s brick row houses in the North End and Durand neighbourhood to post-war bungalows in East Hamilton and new construction in the mountain communities. The city's steel town legacy created entire districts of worker housing built between 1910 and 1960, where lead paint, asbestos insulation, cast iron plumbing, and knob-and-tube wiring are not exceptions — they are the rule. Buyers purchasing in lower Hamilton must understand these risks before finalizing any offer.",
         "The Niagara Escarpment divides Hamilton into its distinctive upper and lower city zones. Properties along the escarpment face unique slope stability, retaining wall, and drainage challenges not encountered in flat suburban markets. Our inspectors have direct experience assessing hillside foundations, evaluating retaining wall conditions, and identifying subsurface drainage issues that can undermine foundations over time. Escarpment-area buyers benefit significantly from specialized inspection expertise.",
@@ -2516,8 +2525,8 @@ export const locationData: LocationData[] = [
     region: "Waterloo Region",
     metaTitle: "Home Inspector Guelph | From $399 | Commercial & Residential",
     metaDescription: "Pre-purchase home inspection Guelph from $399. Infrared imaging, same-day booking & detailed PDF report. Serving Old University, Grange Hill East & West Acres.",
-    description: "Guelph's premier certified inspector specializing in student rental property inspections, rural estate pre-purchase assessments & thermal imaging diagnostics.",
-    neighborhoods: ["Old University", "Grange Hill East", "West Acres", "Short Hills", "Arkell"],
+    description: "Guelph's premier certified inspector specializing in student rental property, commercial property, and rural estate pre-purchase inspections with thermal imaging.",
+    neighborhoods: ["Old University", "Grange Hill East", "West Acres", "Short Hills", "Arkell", "Ward", "Exhibition Park", "Kortright Hills", "Preservation", "Clairfields", "Hanlon Creek"],
     phoneNumber: "(647) 801-9311",
     latitude: 43.5448,
     longitude: -80.2482,
@@ -2537,6 +2546,10 @@ export const locationData: LocationData[] = [
       {
         title: "Pre-Listing Inspections Guelph: Wellington County Real Estate Market",
         content: "Guelph's strong employment base — anchored by the University of Guelph, Agriculture and Agri-Food Canada, and a diverse manufacturing sector — drives consistent residential real estate demand across all property types. Pre-listing inspection for Guelph sellers addresses the full range of the city's housing stock: Ward neighbourhood heritage properties where disclosed lead paint and electrical system status is expected, mid-century bungalow resales where mechanical system condition drives buyer negotiation, university district investor properties where compliance documentation is a prerequisite for informed buyer offers, and rural estate properties where private systems documentation simplifies conditional offer processes. Our pre-listing service provides Guelph sellers with complete condition transparency and repair cost estimates that enable confident pricing and smooth transactions in Wellington County's active market."
+      },
+      {
+        title: "Commercial Inspection Guelph: University, Agriculture & Industrial Properties",
+        content: "Guelph's commercial real estate market reflects the city's diverse economic drivers — University of Guelph campus buildings and research facilities, Agriculture and Agri-Food Canada operations, a strong manufacturing corridor along Stone Road and Woodlawn Road, and a growing downtown commercial district anchored by the GO transit connection to Toronto. Commercial property inspection in Guelph covers office and retail buildings, industrial warehouse and manufacturing facilities, mixed-use heritage structures in the downtown stone-architecture core, multi-unit investment properties in the university district, and agri-business properties in the Wellington County rural market. Our Guelph commercial inspections include infrared scanning of flat roof assemblies and electrical panels as standard, HVAC rooftop unit condition assessment, commercial sprinkler system review where accessible, and detailed structural assessment of Guelph's distinctive limestone and brick heritage buildings. Whether you are acquiring an investment property near campus, an industrial building on the Stone Road corridor, or a downtown heritage retail block, ASADS provides documented commercial inspection findings you can act on. Call (647) 801-9311 for same-day commercial inspection scheduling in Guelph and Wellington County."
       }
     ],
     localExpertise: {
@@ -3279,7 +3292,7 @@ export const locationData: LocationData[] = [
     metaTitle: "Home Inspection Cambridge | Commercial & Certified | ASADS",
     metaDescription: "Pre-purchase home inspection Cambridge from $399. Infrared imaging, same-day booking & detailed PDF report. Serving Galt West, Preston Heights & Hespeler.",
     description: "Cambridge's premier new construction inspector specializing in subdivision warranty inspections, family home pre-purchase & thermal imaging diagnostics.",
-    neighborhoods: ["Galt West", "Preston Heights", "Hespeler", "North Dumfries", "Furnivall"],
+    neighborhoods: ["Galt West", "Preston Heights", "Hespeler", "North Dumfries", "Furnivall", "Blair", "Saginaw", "Hespeler North", "Coronation Boulevard", "Shades Mills"],
     phoneNumber: "(647) 801-9311",
     latitude: 43.3603,
     longitude: -80.3112,
@@ -3306,7 +3319,7 @@ export const locationData: LocationData[] = [
       }
     ],
     localExpertise: {
-      title: "Home Inspection Experience in Cambridge",
+      title: "Home Inspection Services in Cambridge, Ontario",
       paragraphs: [
         "Cambridge is a tri-community city in Waterloo Region, formed by the amalgamation of Galt, Preston, and Hespeler. Each former town retains its own distinct character and housing stock, which means home inspectors working in Cambridge must be equipped to assess properties ranging from stone mill-era buildings in Galt's downtown core to contemporary suburban subdivisions on the city's north and west edges.",
         "Galt is the historic heart of Cambridge and contains some of the finest limestone and Credit Valley sandstone commercial and residential architecture in southwestern Ontario. Homes in the Galt core and adjacent streets date from the 1840s through early 1900s and regularly present foundation concerns due to shallow stone footings, masonry mortar deterioration, and the effects of the Grand River floodplain. Buyers considering heritage Galt properties should ensure thorough foundation assessment and moisture penetration evaluation is performed, as remediation costs can be substantial.",
