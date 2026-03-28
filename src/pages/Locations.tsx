@@ -17,6 +17,7 @@ import { useState, useMemo } from "react";
 import { OrphanLocationLinks } from "@/components/seo/OrphanLocationLinks";
 import { locationData } from "@/data/locationData";
 import { HeroBookingSection } from "@/components/HeroBookingSection";
+import { InlineBookingForm } from "@/components/InlineBookingForm";
 
 /* ─── Helpers ──────────────────────────────────────────────────────────────── */
 
@@ -47,18 +48,18 @@ const allCityList = allLocations.map(loc => ({
 }));
 
 const featuredCities = [
-  { name: "Toronto",       slug: "home-inspection-toronto",       tag: "Most Popular" },
-  { name: "Mississauga",   slug: "home-inspection-mississauga",   tag: "" },
-  { name: "Brampton",      slug: "home-inspection-brampton",      tag: "" },
-  { name: "Vaughan",       slug: "home-inspection-vaughan",       tag: "" },
-  { name: "Markham",       slug: "home-inspection-markham",       tag: "" },
-  { name: "Oakville",      slug: "home-inspection-oakville",      tag: "" },
-  { name: "Hamilton",      slug: "home-inspection-hamilton",      tag: "" },
-  { name: "Barrie",        slug: "home-inspection-barrie",        tag: "" },
-  { name: "Kitchener",     slug: "home-inspection-kitchener",     tag: "" },
-  { name: "Guelph",        slug: "home-inspection-guelph",        tag: "" },
-  { name: "Richmond Hill", slug: "home-inspection-richmond-hill", tag: "" },
-  { name: "Oshawa",        slug: "home-inspection-oshawa",        tag: "" },
+  { name: "Toronto",       slug: "home-inspection-toronto",       tag: "Most Popular", region: "GTA" },
+  { name: "Mississauga",   slug: "home-inspection-mississauga",   tag: "",             region: "GTA West" },
+  { name: "Brampton",      slug: "home-inspection-brampton",      tag: "",             region: "GTA West" },
+  { name: "Vaughan",       slug: "home-inspection-vaughan",       tag: "",             region: "GTA North" },
+  { name: "Markham",       slug: "home-inspection-markham",       tag: "",             region: "GTA East" },
+  { name: "Oakville",      slug: "home-inspection-oakville",      tag: "",             region: "Halton" },
+  { name: "Hamilton",      slug: "home-inspection-hamilton",      tag: "",             region: "Hamilton" },
+  { name: "Barrie",        slug: "home-inspection-barrie",        tag: "",             region: "Simcoe County" },
+  { name: "Kitchener",     slug: "home-inspection-kitchener",     tag: "",             region: "Waterloo Region" },
+  { name: "Guelph",        slug: "home-inspection-guelph",        tag: "",             region: "Wellington" },
+  { name: "Richmond Hill", slug: "home-inspection-richmond-hill", tag: "",             region: "York Region" },
+  { name: "Oshawa",        slug: "home-inspection-oshawa",        tag: "",             region: "Durham Region" },
 ];
 
 /* ─── Component ────────────────────────────────────────────────────────────── */
@@ -127,7 +128,9 @@ export default function Locations() {
         title="Home Inspection Service Areas in Ontario"
         subtitle={
           <>
-            ASADS certified home inspectors cover <strong className="text-white">106 cities</strong> across the Greater Toronto Area and Ontario — from Toronto and Mississauga to Barrie, Hamilton, Kitchener, and beyond. <strong className="text-white">Same-day digital reports</strong> delivered after every inspection.
+            Find your city below and book a trusted home inspection near you. Certified inspectors,
+            same-day reports, and service you can count on across{" "}
+            <strong className="text-white">106 cities</strong> in Ontario.
           </>
         }
         priceCards={[
@@ -190,7 +193,7 @@ export default function Locations() {
                 )}
                 <MapPin className="h-5 w-5 text-blue-500 mx-auto mb-2 group-hover:text-blue-700 transition-colors" />
                 <p className="text-sm font-semibold text-gray-800 group-hover:text-blue-700 transition-colors">{city.name}</p>
-                <p className="text-xs text-gray-400 mt-0.5">Home Inspector</p>
+                <p className="text-xs text-gray-400 mt-0.5">{city.region}</p>
               </Link>
             ))}
           </div>
@@ -241,8 +244,8 @@ export default function Locations() {
       <section id="all-cities" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Don't see your city above?</h2>
-            <p className="text-gray-500 text-sm">We serve {totalLocations} cities across Ontario — search yours below</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">Find Your City</h2>
+            <p className="text-gray-500 text-sm">Search all {totalLocations} Ontario service areas below</p>
           </div>
 
           {/* Search bar */}
@@ -308,40 +311,7 @@ export default function Locations() {
         </div>
       </section>
 
-      {/* 6. WHAT YOU GET ON EACH CITY PAGE */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">What's on Each City Page</h2>
-              <p className="text-gray-500 text-sm">Every location page is custom-built — not a template fill-in.</p>
-            </div>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {[
-                { icon: MapPin,    label: "Local Property Insights",  desc: "Common defects specific to that city's housing stock and era" },
-                { icon: Shield,    label: "Neighbourhood Coverage",   desc: "All neighbourhoods listed — we inspect every part of the city" },
-                { icon: FileText,  label: "Same-Day Report Details",  desc: "What your report includes and how to read it" },
-                { icon: CheckCircle, label: "14 Services Available",  desc: "Every specialty service is bookable in every city" },
-                { icon: Star,      label: "Local Reviews",            desc: "Verified client feedback from buyers in your area" },
-                { icon: Clock,     label: "Instant Booking",          desc: "Book directly on the city page — no phone tag required" },
-              ].map(item => {
-                const Icon = item.icon;
-                return (
-                  <div key={item.label} className="flex gap-3 p-4 rounded-xl border border-gray-100 bg-gray-50">
-                    <Icon className="h-5 w-5 text-blue-500 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="font-semibold text-gray-900 text-sm">{item.label}</p>
-                      <p className="text-gray-500 text-xs mt-0.5">{item.desc}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. BOTTOM CTA */}
+      {/* 6. BOTTOM CTA */}
       <section className="py-20 bg-gradient-to-br from-blue-800 to-blue-900 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -379,21 +349,8 @@ export default function Locations() {
                 <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
                 <span className="text-xs font-semibold text-green-600 uppercase tracking-wide">Same-Day Availability</span>
               </div>
-              <h3 className="text-xl font-extrabold text-slate-900 mb-1">Book Your Inspection</h3>
-              <p className="text-sm text-gray-500 mb-5">Confirmed instantly. We may call if a time adjustment is needed.</p>
-              <div className="space-y-3">
-                <a
-                  href="/booking"
-                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg text-center transition-colors text-sm"
-                >
-                  Open Full Booking Form →
-                </a>
-                <p className="text-center text-xs text-gray-400">
-                  or call{" "}
-                  <a href="tel:6478019311" className="text-blue-600 font-semibold">(647) 801-9311</a>
-                  {" "}— 7 days a week
-                </p>
-              </div>
+              <h3 className="text-xl font-extrabold text-slate-900 mb-4">Book Your Inspection</h3>
+              <InlineBookingForm />
             </div>
           </div>
         </div>
