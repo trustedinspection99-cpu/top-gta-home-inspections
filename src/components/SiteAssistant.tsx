@@ -369,7 +369,7 @@ const SiteAssistant: React.FC = () => {
       });
       if (error) throw error;
 
-      const reply: string = data.content ?? 'Sorry, something went wrong. Please try again.';
+      const reply: string = data.content ?? data.message ?? 'Sorry, something went wrong. Please try again.';
       setTyping(false);
       setMessages(prev => [...prev, { id: nid(), from: 'bot', text: reply }]);
       setMood('happy');
