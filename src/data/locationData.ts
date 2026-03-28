@@ -223,7 +223,7 @@ export const locationData: LocationData[] = [
     city: "Mississauga",
     region: "Peel Region",
     metaTitle: "Home Inspection Mississauga | From $399 | Same-Day | ASADS",
-    metaDescription: "Pre-purchase home inspection Mississauga from $399. Infrared imaging, same-day booking & detailed PDF report. Serving Port Credit, Streetsville & Clarkson.",
+    metaDescription: "Book home inspection Mississauga from $399. Certified inspector, thermal imaging, same-day report. Serving Port Credit, Streetsville & Clarkson.",
     description: "Mississauga's premier certified inspector for buyer pre-purchase inspections, seller pre-listing services, thermal imaging diagnostics, mold & asbestos testing throughout Peel Region.",
     neighborhoods: [
       "Port Credit", "Streetsville", "Clarkson", "Lorne Park", "Meadowvale",
@@ -265,7 +265,7 @@ export const locationData: LocationData[] = [
     city: "Brampton",
     region: "Peel Region",
     metaTitle: "Home Inspector Brampton | Thermal Roof Inspection | ASADS",
-    metaDescription: "Home inspection Brampton from $399. Thermal roof inspection, FLIR infrared & same-day report. Serving Fletcher's Creek & Heart Lake.",
+    metaDescription: "Book home inspection Brampton from $399. Thermal imaging, FLIR infrared, same-day report. Serving Fletcher's Creek, Heart Lake & Bramalea.",
     description: "Brampton's trusted certified home inspector providing comprehensive buyer inspections, thermal imaging diagnostics, mold testing and pre-listing seller services.",
     neighborhoods: [
       "Fletcher's Creek", "Heart Lake", "Bramalea City Centre", "Springdale",
@@ -1078,7 +1078,7 @@ export const locationData: LocationData[] = [
     city: "Milton",
     region: "Halton Region",
     metaTitle: "Home Inspection Milton | New Build Specialist | ASADS",
-    metaDescription: "Pre-purchase home inspection Milton from $399. Infrared imaging, same-day booking & detailed PDF report. Serving Scott, Harrison, Willmott, Beaty & Derry Green.",
+    metaDescription: "Book home inspection Milton from $399. Certified inspector, thermal imaging, same-day report. Serving Scott, Harrison, Willmott, Beaty & Derry Green.",
     description: "Milton's trusted certified inspector specializing in new home warranty inspections, clay soil foundation assessment, buyer pre-purchase services & thermal imaging diagnostics.",
     neighborhoods: [
       "Scott", "Harrison", "Willmott", "Beaty", "Derry Green",
