@@ -27,6 +27,7 @@ const quickLinks = [
   { title: "Blog", href: "/blog" },
   { title: "FAQ", href: "/faq" },
   { title: "Reviews", href: "/testimonials" },
+  { title: "For Realtors", href: "/trusted-realtors" },
   { title: "Book Online", href: "/booking" },
   { title: "Contact", href: "/contact" },
 ];
