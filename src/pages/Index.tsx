@@ -333,7 +333,7 @@ const Index = () => {
                       <option>Thermal Imaging — Included / Standalone Quoted</option>
                       <option>Sewer Scope — From $299</option>
                       <option>Asbestos Testing — From $299</option>
-                      <option>WETT Inspection — From $199</option>
+                      <option>WETT Inspection — From $249</option>
                       <option>Commercial Inspection</option>
                       <option>Air Quality Testing — From $299</option>
                       <option>Other / Not Sure</option>
@@ -489,6 +489,7 @@ const Index = () => {
               { name: "Condo Inspection", icon: Building, href: "/services/condo", description: "Unit-level inspection covering everything inside your condo or apartment." },
               { name: "Radon Testing", icon: Radio, href: "/services/radon-testing", description: "Long-term radon detection for Ontario basements. Health Canada compliant reports." },
               { name: "Mold Inspection", icon: Droplets, href: "/services/mold-inspection", description: "Air quality and surface sampling — especially important in Ontario's humid climate." },
+              { name: "Same-Day Inspection", icon: Zap, href: "/services/same-day-home-inspection", description: "Call before noon — inspector arrives today. No rush surcharge. 7 days a week across Ontario." },
             ].map((service, index) => {
               const Icon = service.icon;
               return (
