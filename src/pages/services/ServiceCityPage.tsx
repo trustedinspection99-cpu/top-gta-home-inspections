@@ -125,16 +125,6 @@ export default function ServiceCityPage() {
     },
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: service.faqs.map((faq) => ({
-      "@type": "Question",
-      name: fill(faq.q, city),
-      acceptedAnswer: { "@type": "Answer", text: fill(faq.a, city) },
-    })),
-  };
-
   const relatedForCity = service.relatedServices.map((r) => ({
     title: r.name,
     href: `/services/${r.slug}/${citySlug}`,
@@ -159,7 +149,6 @@ export default function ServiceCityPage() {
         <meta name="twitter:image" content={`${SITE_URL}/images/og-default.jpg`} />
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       {/* Hero with inline booking form */}

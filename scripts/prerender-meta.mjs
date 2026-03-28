@@ -439,10 +439,23 @@ for (const page of pages) {
     html = html.replace('</head>', () => `${breadcrumbSchema}\n</head>`);
   }
 
-  // NOTE: FAQPage JSON-LD injection removed entirely — all page types (service pages via
-  // ServicePageTemplate, service×city pages via ServiceCityPage, location pages via
-  // LocationPageTemplate) render their own FAQPage schema via React Helmet. Prerender
-  // injection was creating duplicate FAQPage schemas flagged as critical errors by Google.
+  // Inject FAQPage JSON-LD into <head> so Googlebot sees it without JS.
+  // React components do NOT render their own FAQPage — prerender is single source of truth.
+  let faqSchema = null;
+  if (parts[0] === 'services' && parts.length === 3) {
+    const sSlug = parts[1];
+    const cName = allCityNames[parts[2]] || parts[2];
+    faqSchema = buildFaqSchema(serviceFaqsMap[sSlug], cName);
+  } else if (parts[0] === 'services' && parts.length === 2) {
+    faqSchema = buildFaqSchema(serviceFaqsMap[parts[1]], 'Ontario');
+  } else if (parts[0] === 'locations' && parts.length === 2) {
+    const cSlug = parts[1].replace(/^home-inspection-/, '');
+    const cName = allCityNames[cSlug] || cSlug;
+    faqSchema = buildFaqSchema(locationPageFaqs, cName);
+  }
+  if (faqSchema) {
+    html = html.replace('</head>', () => `${faqSchema}\n</head>`);
+  }
 
   // Write file
   const dir = resolve(DIST, ...page.path.split('/').filter(Boolean));

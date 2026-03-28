@@ -184,82 +184,6 @@ export function LocationPageTemplate({
     [city, region, pageDescription, phoneNumber, address, postalCode, url, siteName, latitude, longitude]
   );
 
-
-  // FAQ Schema - 5 questions for rich snippets
-  const faqSchema = useMemo(
-    () => ({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: `How much does a home inspection cost in ${city}?`,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `Home inspection costs in ${city} typically range from $400-$600 for a standard single-family home. Condos usually cost $350-$450. Contact ASADS at ${phoneNumber} for a personalized quote.`
-          }
-        },
-        {
-          "@type": "Question",
-          name: `How long does a home inspection take in ${city}?`,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `A thorough home inspection in ${city} typically takes 2-4 hours depending on the property size and condition. You'll receive a same-day digital report.`
-          }
-        },
-        {
-          "@type": "Question",
-          name: `What areas of ${city} do you serve?`,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `We serve all neighborhoods in ${city}${neighborhoods.length > 0 ? ` including ${neighborhoods.slice(0, 5).join(", ")}` : ""}. Our certified inspectors are familiar with local building practices and common issues.`
-          }
-        },
-        {
-          "@type": "Question",
-          name: `Do I need to be present during my ${city} home inspection?`,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `While not required, we encourage ${city} buyers to attend the final hour of the inspection. This allows you to ask questions, see issues firsthand, and learn about the property's systems and maintenance needs.`
-          }
-        },
-        {
-          "@type": "Question",
-          name: `What does a home inspection in ${city} include?`,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `Our ${city} home inspections cover 400+ checkpoints including roof, foundation, plumbing, electrical, HVAC, insulation, windows, doors, and structural components. We also offer optional add-ons like radon testing, mold inspection, and thermal imaging.`
-          }
-        },
-        {
-          "@type": "Question",
-          name: `Are ASADS home inspectors certified in ${city}?`,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `Yes. ASADS inspectors are InterNACHI certified, carry $2M liability insurance, and follow the Canadian Association of Home & Property Inspectors (CAHPI) standards of practice. We serve ${city} and all surrounding ${region} communities.`
-          }
-        },
-        {
-          "@type": "Question",
-          name: `How soon can I get a home inspection in ${city}?`,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `ASADS offers same-day and next-day home inspection booking in ${city}. We are available 7 days a week including evenings. Book online or call ${phoneNumber} for immediate scheduling.`
-          }
-        },
-        {
-          "@type": "Question",
-          name: `Do you provide a written report after the ${city} home inspection?`,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `Yes. Every ${city} inspection includes a detailed digital PDF report with photos, prioritized findings, and maintenance recommendations — delivered the same day as the inspection, typically within 2–4 hours of completion.`
-          }
-        }
-      ]
-    }),
-    [city, phoneNumber, neighborhoods, region]
-  );
-
   // Service Schema with hasOfferCatalog
   const serviceSchema = useMemo(
     () => ({
@@ -365,7 +289,6 @@ export function LocationPageTemplate({
         )}
         
         <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
       </Helmet>
 
