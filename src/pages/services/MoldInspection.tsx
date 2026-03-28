@@ -59,7 +59,7 @@ export default function MoldInspection() {
           </div>
 
           <p>
-            Whether it's a water-damaged basement, attic mold, or a home being prepped for sale, our reports provide <strong>species identification</strong> and <strong>spore quantification</strong> to guide safe remediation.
+            Whether it's a water-damaged basement, attic mold, or a home being prepped for sale, our reports provide <strong>species identification</strong> and <strong>spore quantification</strong> to guide safe mold removal.
             We prioritize urgent, local cases with "mold inspection near me" and "emergency mold testing" options for fast bookings.
           </p>
 
@@ -142,7 +142,7 @@ export default function MoldInspection() {
                 {
                   step: "4",
                   title: "Written Report & Remediation Scope",
-                  body: "Results are compared to the outdoor baseline. If elevated, we provide a written remediation scope of work for contractor tender.",
+                  body: "Results are compared to the outdoor baseline. If elevated, we provide a written scope of work for mold removal contractors to tender.",
                 },
               ].map((item) => (
                 <li key={item.step} className="flex items-start gap-4">
@@ -275,9 +275,9 @@ export default function MoldInspection() {
             <ul className="space-y-2">
               {[
                 "Minor mold (under 1 m²) can often be cleaned by a homeowner following Health Canada guidelines.",
-                "Larger infestations require a licensed remediation contractor.",
+                "Larger infestations require a licensed mold removal contractor.",
                 "We provide the scope of work document contractors need to quote.",
-                "In real estate, a mold report is grounds for price reduction or seller-paid remediation.",
+                "In real estate, a mold report is grounds for price reduction or seller-paid mold removal.",
                 "We offer post-remediation clearance testing to confirm the job is complete.",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
@@ -306,7 +306,7 @@ export default function MoldInspection() {
       features={[
         {
           title: "PCR DNA Analysis",
-          description: "Identify the exact species for precise remediation and medical risk assessment."
+          description: "Identify the exact species for precise mold removal planning and medical risk assessment."
         },
         {
           title: "Infrared Moisture Mapping",
@@ -327,7 +327,7 @@ export default function MoldInspection() {
         "Same-Day Preliminary Results",
         "36+ Mold Species Tested",
         "ERMI & HERTSMI-2 Scoring",
-        "Detailed Remediation Roadmaps",
+        "Detailed Mold Removal Roadmaps",
         "Insurance-Ready Documentation",
         "Infrared Thermal Scanning & PCR DNA Testing",
       ]}

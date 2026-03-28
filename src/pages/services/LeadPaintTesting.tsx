@@ -39,7 +39,7 @@ export default function LeadPaintTesting() {
 
           <p>
             Whether you are planning a renovation, buying an older Ontario home, or are
-            concerned about child safety, our certified Lead Risk Assessors provide
+            concerned about child safety, our certified lead paint inspectors provide
             comprehensive testing that covers windowsills, baseboards, and exterior
             siding—the areas where lead concentration is typically highest.
           </p>
@@ -87,9 +87,9 @@ export default function LeadPaintTesting() {
             <ul className="space-y-3">
               {[
                 "If intact and undisturbed, encapsulation (painting over with a bonding primer) may be sufficient — full abatement is not always required",
-                "If surfaces will be disturbed during renovation, Ontario Regulation 278/05 requires abatement by a licensed abatement contractor before work begins",
+                "If surfaces will be disturbed during renovation, Ontario Regulation 278/05 requires removal by an Ontario-licensed abatement contractor before work begins",
                 "In real estate transactions, identified lead hazards can be used to negotiate a repair credit or price adjustment at closing",
-                "We provide a scope of work document suitable for tendering remediation to qualified abatement contractors",
+                "We provide a scope of work document suitable for tendering lead paint removal to Ontario-licensed contractors",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <AlertTriangle className="text-amber-500 mt-0.5 shrink-0" size={18} />
@@ -110,7 +110,7 @@ export default function LeadPaintTesting() {
                 },
                 {
                   city: "Lead Paint Testing — Hamilton & Older Ontario City Cores",
-                  body: "Hamilton's lower city, Dundas, and Waterdown contain some of Ontario's densest concentrations of pre-1940 housing where lead paint is present on essentially every painted surface. Hamilton's heritage residential streets — many dating from the late 1800s and early 1900s — have layered paint histories where lead-containing coatings are buried under multiple later paint applications. Sanding, stripping, or abrading these surfaces during renovation creates lead dust exposures that require Designated Substance Survey documentation and abatement contractor involvement under O.Reg 278/05. Other older Ontario city cores including Brantford, Guelph, Cambridge, and St. Catharines present similar pre-1940 heritage housing lead paint risks that XRF testing can rapidly document without surface disturbance.",
+                  body: "Hamilton's lower city, Dundas, and Waterdown contain some of Ontario's densest concentrations of pre-1940 housing where lead paint is present on essentially every painted surface. Hamilton's heritage residential streets — many dating from the late 1800s and early 1900s — have layered paint histories where lead-containing coatings are buried under multiple later paint applications. Sanding, stripping, or abrading these surfaces during renovation creates lead dust exposures that require Designated Substance Survey documentation and Ontario-licensed abatement contractor involvement under O.Reg 278/05. Other older Ontario city cores including Brantford, Guelph, Cambridge, and St. Catharines present similar pre-1940 heritage housing lead paint risks that XRF testing can rapidly document without surface disturbance.",
                 },
                 {
                   city: "Lead Paint Testing — Brampton, Mississauga & 1960s–1980s Housing",
@@ -158,8 +158,8 @@ export default function LeadPaintTesting() {
           description: "Our reports are legally compliant for contractors and homeowners planning renovations in pre-1978 buildings."
         },
         {
-          title: "Certified Risk Assessors",
-          description: "Inspections are performed by Radiation Safety Officer certified technicians following Ontario Ministry of Labour standards."
+          title: "Ontario-Certified Inspectors",
+          description: "Inspections are performed by certified technicians following Ontario Ministry of Labour and O.Reg 278/05 standards."
         },
       ]}
       benefits={[
