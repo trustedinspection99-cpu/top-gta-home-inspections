@@ -79,7 +79,6 @@ const featuredServices = [
   { name: "Air Quality Testing", slug: "air-quality" },
   { name: "Asbestos Testing", slug: "asbestos-testing" },
   { name: "Thermal Imaging", slug: "thermal-imaging" },
-  { name: "Sewer Scope", slug: "sewer-scope" },
   { name: "Well Water Testing", slug: "well-water-testing" },
   { name: "WETT Inspection", slug: "wett" },
   { name: "Lead Paint Testing", slug: "lead-paint-testing" },

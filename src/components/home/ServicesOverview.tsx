@@ -96,12 +96,6 @@ const specialtyServices = [
     description: "Comprehensive water quality for rural properties.",
     href: "/services/well-water-testing",
   },
-  {
-    icon: Search,
-    title: "Sewer Scope",
-    description: "Camera inspection of sewer lines.",
-    href: "/services/sewer-scope",
-  },
 ];
 
 export function ServicesOverview() {

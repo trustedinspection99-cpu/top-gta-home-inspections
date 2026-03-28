@@ -85,7 +85,6 @@ const ontarioServices = [
   { name: "Asbestos Testing", icon: ShieldAlert, href: "/services/asbestos-testing", description: "Material sampling & analysis" },
   { name: "Air Quality", icon: Wind, href: "/services/air-quality", description: "Indoor air quality testing" },
   { name: "Lead Paint Testing", icon: FlaskConical, href: "/services/lead-paint-testing", description: "Lead detection services" },
-  { name: "Sewer Scope", icon: Eye, href: "/services/sewer-scope", description: "Camera sewer line inspection" },
   { name: "Thermal Imaging", icon: ThermometerSun, href: "/services/thermal-imaging", description: "Infrared moisture detection" },
   { name: "WETT", icon: Zap, href: "/services/wett", description: "Wood energy technology transfer" },
   { name: "Well Water Testing", icon: WavesIcon, href: "/services/well-water-testing", description: "Water quality analysis" },

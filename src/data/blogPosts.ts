@@ -996,7 +996,7 @@ export const blogPostsData: BlogPost[] = [
       
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p class="mb-4">A sewer scope is a small investment that can reveal expensive hidden problems. For older homes especially, it's one of the smartest add-on inspections you can get.</p>
-      <p class="mb-4">Learn more about our <a href="/services/sewer-scope" class="text-primary underline font-medium">sewer scope inspection service</a>, or add it to your <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase home inspection</a> at a bundled rate. <a href="/booking" class="text-primary underline font-medium">Book online today.</a></p>
+      <p class="mb-4">Add it to your <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase home inspection</a> for comprehensive due diligence. <a href="/booking" class="text-primary underline font-medium">Book online today.</a></p>
     `,
   },
   {

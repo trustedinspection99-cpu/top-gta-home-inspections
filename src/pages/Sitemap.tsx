@@ -32,7 +32,6 @@ const services = [
   { name: "WETT Inspection", href: "/services/wett" },
   { name: "Lead Paint Testing", href: "/services/lead-paint-testing" },
   { name: "Well Water Testing", href: "/services/well-water-testing" },
-  { name: "Sewer Scope", href: "/services/sewer-scope" },
   { name: "Air Quality Testing", href: "/services/air-quality" },
 ];
 

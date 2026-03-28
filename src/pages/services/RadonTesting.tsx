@@ -214,7 +214,7 @@ export default function RadonTesting() {
       ]}
       relatedServices={[
         { title: "Mold Inspection", href: "/services/mold-inspection" },
-        { title: "Sewer Scope", href: "/services/sewer-scope" },
+        { title: "WETT Inspection", href: "/services/wett" },
         { title: "Asbestos Testing", href: "/services/asbestos-testing" },
         { title: "Thermal Imaging", href: "/services/thermal-imaging" },
       ]}

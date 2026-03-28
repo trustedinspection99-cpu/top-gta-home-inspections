@@ -157,13 +157,6 @@ const specialtyServices = [
     href: "/services/well-water-testing",
   },
   {
-    title: "Sewer Scope",
-    price: "$299",
-    duration: "Video inspection",
-    description: "Camera inspection of sewer lines",
-    href: "/services/sewer-scope",
-  },
-  {
     title: "Air Quality Testing",
     price: "$249+",
     duration: "Indoor air analysis",

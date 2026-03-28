@@ -15,7 +15,6 @@ const services = [
   { title: "Well Water Testing", href: "/services/well-water-testing" },
   { title: "Thermal Imaging", href: "/services/thermal-imaging" },
   { title: "Air Quality Testing", href: "/services/air-quality" },
-  { title: "Sewer Scope", href: "/services/sewer-scope" },
   { title: "WETT Inspection", href: "/services/wett" },
 ];
 

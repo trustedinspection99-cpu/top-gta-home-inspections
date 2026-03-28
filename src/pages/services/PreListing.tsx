@@ -105,7 +105,7 @@ const faqs = [
 ];
 
 const relatedServices = [
-  { title: "Sewer Scope Inspection", href: "/services/sewer-scope" },
+  { title: "WETT Inspection", href: "/services/wett" },
   { title: "Mold & Air Quality Audit", href: "/services/mold-inspection" },
   { title: "Thermal Imaging Scan", href: "/services/thermal-imaging" },
   { title: "Commercial Building Audit", href: "/services/commercial" },
