@@ -237,66 +237,72 @@ export default function Locations() {
         </div>
       </section>
 
-      {/* 5. SEARCH + ALL CITIES */}
+      {/* 5. SEARCH */}
       <section id="all-cities" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">All {totalLocations} Service Areas</h2>
-            <p className="text-gray-500 text-sm">Search your city or browse the full list</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">Don't see your city above?</h2>
+            <p className="text-gray-500 text-sm">We serve {totalLocations} cities across Ontario — search yours below</p>
           </div>
 
           {/* Search bar */}
-          <div className="max-w-xl mx-auto mb-8">
+          <div className="max-w-xl mx-auto">
             <div className="relative">
               <SearchIcon className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
               <Input
-                placeholder="Search your city or town…"
+                placeholder="Type your city or town…"
                 className="pl-10 py-3 text-base bg-white border-gray-200 focus:border-blue-400 rounded-xl"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
-            {searchQuery && (
+
+            {/* Empty state — no query */}
+            {!searchQuery && (
+              <p className="text-center text-gray-400 text-sm mt-4">
+                Serving Toronto, Hamilton, Kitchener, Barrie &amp; 102 more Ontario cities.{" "}
+                <a href="tel:6478019311" className="text-blue-600 font-semibold hover:underline">
+                  Call (647) 801-9311
+                </a>{" "}
+                if you don't find your area.
+              </p>
+            )}
+
+            {/* Results count */}
+            {searchQuery && filteredCities.length > 0 && (
               <p className="text-sm text-gray-500 mt-2 text-center">
                 {filteredCities.length} result{filteredCities.length !== 1 ? "s" : ""} for "{searchQuery}"
               </p>
             )}
           </div>
 
-          {/* Flat city grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2.5 max-w-6xl mx-auto">
-            {filteredCities.map((loc) => (
-              <Link
-                key={loc.slug}
-                to={loc.href}
-                className="flex items-center gap-2 px-3 py-2.5 bg-white border border-gray-100 hover:border-blue-300 hover:bg-blue-50 rounded-lg transition-all group text-sm"
-              >
-                <MapPin className="h-3.5 w-3.5 text-blue-400 flex-shrink-0 group-hover:text-blue-600" />
-                <span className="flex-1 truncate text-gray-700 group-hover:text-blue-700 font-medium">{loc.city}</span>
-                {loc.popular && (
-                  <span className="text-[9px] uppercase tracking-wider bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-bold flex-shrink-0">
-                    Top
-                  </span>
-                )}
-              </Link>
-            ))}
-          </div>
+          {/* City grid — only shown when searching */}
+          {searchQuery && filteredCities.length > 0 && (
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2.5 max-w-6xl mx-auto mt-6">
+              {filteredCities.map((loc) => (
+                <Link
+                  key={loc.slug}
+                  to={loc.href}
+                  className="flex items-center gap-2 px-3 py-2.5 bg-white border border-gray-100 hover:border-blue-300 hover:bg-blue-50 rounded-lg transition-all group text-sm"
+                >
+                  <MapPin className="h-3.5 w-3.5 text-blue-400 flex-shrink-0 group-hover:text-blue-600" />
+                  <span className="flex-1 truncate text-gray-700 group-hover:text-blue-700 font-medium">{loc.city}</span>
+                  {loc.popular && (
+                    <span className="text-[9px] uppercase tracking-wider bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-bold flex-shrink-0">
+                      Top
+                    </span>
+                  )}
+                </Link>
+              ))}
+            </div>
+          )}
 
-          {filteredCities.length === 0 && (
-            <p className="text-center text-gray-500 mt-8">
+          {/* No results */}
+          {searchQuery && filteredCities.length === 0 && (
+            <p className="text-center text-gray-500 mt-6">
               No cities match "{searchQuery}". Call{" "}
               <a href="tel:6478019311" className="text-blue-600 font-semibold">(647) 801-9311</a>
               {" "}— we may still serve your area.
-            </p>
-          )}
-
-          {!searchQuery && (
-            <p className="text-center text-gray-400 text-sm mt-8">
-              Don't see your city?{" "}
-              <a href="tel:6478019311" className="text-blue-600 font-semibold hover:underline">
-                Call (647) 801-9311
-              </a>{" "}
-              — we may still serve your area.
             </p>
           )}
         </div>
