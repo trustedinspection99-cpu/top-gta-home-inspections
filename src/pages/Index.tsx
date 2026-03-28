@@ -296,7 +296,7 @@ const Index = () => {
     <Layout>
       <Helmet>
         <link rel="canonical" href="https://www.asads.ca/" />
-        <title>Home Inspection Ontario | Certified Inspector | ASADS</title>
+        <title>Home Inspector Ontario | Home Inspection | ASADS</title>
         <meta name="description" content="Certified home inspection across Ontario from $399. OAHI & InterNACHI certified inspectors, same-day digital reports, 106 cities. Radon, mold, WETT & asbestos. Book online 24/7." />
         {/* Open Graph */}
         <meta property="og:title" content="Home Inspection Ontario | Certified Inspector | ASADS" />

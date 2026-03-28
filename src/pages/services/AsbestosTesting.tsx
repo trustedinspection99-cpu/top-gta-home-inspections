@@ -158,6 +158,40 @@ export default function AsbestosTesting() {
           </div>
 
           <div>
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Asbestos Testing Cost in Ontario</h3>
+            <p className="text-slate-700 mb-4">Asbestos testing prices vary by property size, number of suspect materials, and whether rush lab results are needed. All prices include the site visit, sample collection, accredited lab analysis, and written O.Reg 278/05 report.</p>
+            <div className="overflow-x-auto mb-4">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-orange-600 text-white">
+                    <th className="text-left p-3 rounded-tl-lg">Survey Type</th>
+                    <th className="text-left p-3">Samples</th>
+                    <th className="text-left p-3">Lab Turnaround</th>
+                    <th className="text-right p-3 rounded-tr-lg">Price</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-orange-100">
+                  {[
+                    { type: "Visual Assessment Only", samples: "0 (no sampling)", turnaround: "Same day", price: "From $199" },
+                    { type: "Standard Residential (1–3 samples)", samples: "1–3 bulk samples", turnaround: "48–72 hrs", price: "From $299" },
+                    { type: "Full Residential Survey (4–6 samples)", samples: "4–6 bulk samples", turnaround: "48–72 hrs", price: "From $449" },
+                    { type: "Pre-Demolition Type 2/3 Survey", samples: "6+ samples", turnaround: "72 hrs+", price: "Call for quote" },
+                    { type: "Rush Results (24-hour)", samples: "Any", turnaround: "24 hours", price: "+$99 add-on" },
+                  ].map((row) => (
+                    <tr key={row.type} className="bg-white hover:bg-orange-50 transition-colors">
+                      <td className="p-3 font-medium text-slate-900">{row.type}</td>
+                      <td className="p-3 text-slate-600">{row.samples}</td>
+                      <td className="p-3 text-slate-600">{row.turnaround}</td>
+                      <td className="p-3 text-right font-bold text-orange-700">{row.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-slate-500">HST not included. Commercial properties and complex sites quoted individually. Lab fees are included in all prices above.</p>
+          </div>
+
+          <div>
             <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Asbestos Testing Process</h3>
             <ol className="space-y-4">
               {[
