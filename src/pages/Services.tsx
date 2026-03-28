@@ -82,9 +82,9 @@ const mainServices = [
 ];
 
 const specialtyServices = [
-  { icon: Radio,         title: "Radon Testing",        description: "#1 cause of lung cancer in non-smokers. Long-term certified detector, Health Canada compliant report.",    href: "/services/radon-testing",       price: "From $149", duration: "90-day test" },
+  { icon: Radio,         title: "Radon Testing",        description: "#1 cause of lung cancer in non-smokers. Long-term certified detector, Health Canada compliant report.",    href: "/services/radon-testing",       price: "From $499", duration: "2-visit service" },
   { icon: Droplets,      title: "Mold Inspection",       description: "Air sampling + visual inspection. AIHA-accredited lab results. We don't do remediation — fully independent.", href: "/services/mold-inspection",      price: "From $299", duration: "2–3 hrs" },
-  { icon: ThermometerSun,title: "Thermal Imaging",       description: "FLIR infrared finds hidden moisture, insulation gaps, and electrical hotspots without opening a single wall.",  href: "/services/thermal-imaging",     price: "From $199", duration: "Add-on" },
+  { icon: ThermometerSun,title: "Thermal Imaging",       description: "FLIR infrared finds hidden moisture, insulation gaps, and electrical hotspots without opening a single wall. Included in all inspections.",  href: "/services/thermal-imaging",     price: "Included", duration: "Standalone quoted" },
   { icon: Flame,         title: "WETT Inspection",       description: "Required for home sales and insurance. Certified WETT inspection for fireplaces, wood stoves & inserts.",        href: "/services/wett",                price: "From $199", duration: "1–2 hrs" },
   { icon: Wind,          title: "Air Quality Testing",   description: "VOCs, CO2, particulates & allergens. AIHA-accredited lab. Residential & commercial. Written report.",             href: "/services/air-quality",         price: "From $299", duration: "2–4 hrs" },
   { icon: ShieldAlert,   title: "Asbestos Testing",      description: "Bulk sampling, O.Reg 278/05 compliant, accredited lab results. Pre-1990 homes & renovation projects.",           href: "/services/asbestos-testing",    price: "From $299", duration: "Lab 3–5 days" },
@@ -231,7 +231,7 @@ export default function Services() {
         priceCards={[
           { label: "Pre-Purchase", price: "From $399" },
           { label: "Condo", price: "From $299" },
-          { label: "Radon Testing", price: "From $149" },
+          { label: "Radon Testing", price: "From $499" },
           { label: "Mold Inspection", price: "From $299" },
         ]}
         formTitle="Book Any Service"

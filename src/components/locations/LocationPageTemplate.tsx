@@ -454,7 +454,7 @@ export function LocationPageTemplate({
                     </tbody>
                   </table>
                 </div>
-                <p className="mt-4 text-xs text-muted-foreground">* Thermal imaging included at no extra charge. Add-ons: Radon $199 · Asbestos from $249 · WETT $199. <Link to="/pricing" className="text-primary underline">Full pricing →</Link></p>
+                <p className="mt-4 text-xs text-muted-foreground">* Thermal imaging included at no extra charge. Add-ons: Radon $499+ (2 visits) · Asbestos from $249 · WETT $249. <Link to="/pricing" className="text-primary underline">Full pricing →</Link></p>
               </div>
 
               {/* What We Inspect */}

@@ -338,7 +338,7 @@ export default function SameDayInspection() {
               </tbody>
             </table>
             <p className="text-xs text-slate-500 p-4 border-t border-slate-200">
-              Thermal imaging included. Add-ons: Mold Screening $149 · Radon Testing $199 (48hr minimum) · Asbestos Sampling $249 · WETT $199
+              Thermal imaging included in all inspections. Add-ons: Mold Screening $149 · Radon Testing $499+ (2 visits required) · Asbestos Sampling $249 · WETT $249
             </p>
           </div>
         </section>

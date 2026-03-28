@@ -7,7 +7,7 @@ const INSPECTION_TYPES = [
   { label: "Condo Inspection — From $299", value: "Condo Inspection" },
   { label: "New Construction / PDI — From $449", value: "New Construction / PDI" },
   { label: "Mold Inspection & Testing — From $299", value: "Mold Inspection & Testing" },
-  { label: "Radon Testing — From $149", value: "Radon Testing" },
+  { label: "Radon Testing — From $499", value: "Radon Testing" },
   { label: "Thermal Imaging — From $199", value: "Thermal Imaging" },
   { label: "Sewer Scope — From $299", value: "Sewer Scope" },
   { label: "Asbestos Testing", value: "Asbestos Testing" },

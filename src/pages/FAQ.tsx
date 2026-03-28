@@ -116,7 +116,7 @@ const faqCategories = [
       },
       {
         question: "How much does radon testing cost in Ontario?",
-        answer: "A long-term radon test (90 days, which is the Health Canada recommended minimum) typically costs $150 to $300 when booked as a standalone service. When bundled with a home inspection, ASADS offers discounted add-on pricing. Short-term tests (48-72 hours) cost less but are less reliable. Call (647) 801-9311 to discuss radon testing options.",
+        answer: "ASADS radon testing starts from $499. Radon is a two-visit service — we drop off certified monitoring equipment at your property, leave it for the required monitoring period, then return to retrieve it and generate your certified report. This two-visit requirement and the cost of professional-grade equipment is why pricing is higher than mail-in kits. Call (647) 801-9311 to book.",
       },
       {
         question: "How much does a mold inspection cost?",

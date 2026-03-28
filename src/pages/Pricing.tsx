@@ -1,15 +1,15 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Check, ArrowRight, Phone } from "lucide-react";
+import { Check, ArrowRight, Phone, Trophy } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { HeroBookingSection } from "@/components/HeroBookingSection";
+import { InlineBookingForm } from "@/components/InlineBookingForm";
 
 const mainInspections = [
   {
     title: "Pre-Purchase Inspection",
-    description: "Complete home evaluation before buying",
+    description: "Complete home evaluation before buying — satisfaction guaranteed",
     prices: [
       { size: "Condo/Apartment", price: "$349" },
       { size: "Up to 1,500 sq ft", price: "$399" },
@@ -24,7 +24,7 @@ const mainInspections = [
       "Electrical and plumbing systems check",
       "HVAC system inspection",
       "Same-day digital report with photos",
-      "90-day warranty coverage",
+      "Money-back guarantee if report isn't detailed enough",
     ],
     href: "/services/pre-purchase",
     popular: true,
@@ -109,9 +109,9 @@ const mainInspections = [
 const specialtyServices = [
   {
     title: "Radon Testing",
-    price: "$199",
-    duration: "48-hour test",
-    description: "Detect harmful radon gas in your home",
+    price: "$499+",
+    duration: "2-visit · equipment left on-site",
+    description: "Detect harmful radon gas in your home. Requires drop-off + retrieval visit.",
     href: "/services/radon-testing",
   },
   {
@@ -137,9 +137,9 @@ const specialtyServices = [
   },
   {
     title: "Thermal Imaging",
-    price: "$149",
-    duration: "Add-on service",
-    description: "Infrared scan for hidden issues",
+    price: "Included",
+    duration: "Free in all inspections",
+    description: "FLIR infrared included with every inspection. Standalone-only booking quoted separately.",
     href: "/services/thermal-imaging",
   },
   {
@@ -234,20 +234,43 @@ export default function Pricing() {
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
-      <HeroBookingSection
-        badge="Transparent Pricing · No Hidden Fees · OAHI & InterNACHI Certified"
-        title="Home Inspection Cost in Ontario"
-        subtitle="Pre-purchase from $399. Condos from $299. All inspections include same-day digital reports with photos, severity ratings, and repair guidance."
-        priceCards={[
-          { label: "Pre-Purchase", price: "From $399" },
-          { label: "Condo", price: "From $299" },
-          { label: "New Construction", price: "From $399" },
-          { label: "Same-Day", price: "Digital Report" },
-        ]}
-        defaultService="Pre-Purchase Home Inspection"
-        formTitle="Get a Quote"
-        ctaPrimary={{ text: "Book Your Inspection", href: "/booking" }}
-      />
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-blue-800 to-blue-900 py-14 md:py-20 text-white">
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <div className="inline-flex items-center gap-2 bg-blue-700/40 backdrop-blur-sm px-4 py-2 rounded-full mb-5 border border-blue-600/50 text-sm font-medium">
+            Transparent Pricing · No Hidden Fees · OAHI &amp; InterNACHI Certified
+          </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+            Home Inspection Cost in Ontario
+          </h1>
+          <p className="text-lg text-blue-100 mb-6 leading-relaxed">
+            Pre-purchase from $399. Condos from $299. All inspections include same-day digital reports with photos, severity ratings, and repair guidance. Thermal imaging included at no extra charge.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {[
+              { label: "Pre-Purchase", price: "From $399" },
+              { label: "Condo", price: "From $299" },
+              { label: "New Construction", price: "From $399" },
+              { label: "Thermal Imaging", price: "Included Free" },
+            ].map((c) => (
+              <div key={c.label} className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-sm">
+                <span className="text-blue-200">{c.label} — </span>
+                <span className="font-bold text-green-300">{c.price}</span>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/booking" className="bg-white text-blue-700 px-7 py-4 rounded-lg font-bold text-base hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center gap-2">
+              Book Your Inspection
+              <ArrowRight className="h-5 w-5" />
+            </a>
+            <a href="tel:6478019311" className="bg-transparent border-2 border-white px-7 py-4 rounded-lg font-bold text-base hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+              <Phone className="h-5 w-5" />
+              (647) 801-9311
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Main Inspection Packages */}
       <section className="py-16 md:py-24">
@@ -417,7 +440,7 @@ export default function Pricing() {
                 { factor: "Property size", detail: "Square footage is the primary driver. A 500 sq ft condo costs less than a 4,000 sq ft detached home because the inspector covers more area, systems, and components." },
                 { factor: "Age of the home", detail: "Older homes (pre-1980) take longer to inspect due to complex plumbing, knob-and-tube wiring, and aging systems that require more documentation." },
                 { factor: "Property type", detail: "Condos, townhouses, semi-detached, and detached homes each have different scope. Commercial properties are priced separately based on size and system complexity." },
-                { factor: "Add-on services", detail: "Radon testing ($149+), mold inspection ($299+), thermal imaging ($149 add-on), and sewer scope ($299+) extend the inspection and increase total cost." },
+                { factor: "Add-on services", detail: "Radon testing ($499+ — 2 visits required), mold inspection ($299+), sewer scope ($299+), and asbestos testing ($299+) extend the inspection scope. Thermal imaging is included free in every inspection." },
                 { factor: "Location", detail: "Travel time to rural properties in Ontario may add a small surcharge. Most GTA and Southern Ontario locations are covered at the base rate." },
                 { factor: "Urgency", detail: "Same-day and rush inspections for tight closing deadlines are accommodated at no extra charge when availability allows." },
               ].map(({ factor, detail }) => (
@@ -490,34 +513,46 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 md:py-24 hero-gradient">
+      {/* Guarantee + $1,000 Challenge */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-blue-800 to-blue-900 text-white">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center text-primary-foreground">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-              Ready to Book Your Inspection?
-            </h2>
-            <p className="text-lg text-primary-foreground/90 mb-8">
-              Same-day reports available. Flexible scheduling to meet your closing deadlines.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <Link to="/booking">
-                  Book Online Now
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-              >
-                <a href="tel:+16478019311">
-                  <Phone className="mr-2 h-5 w-5" />
-                  (647) 801-9311
-                </a>
-              </Button>
+          <div className="max-w-4xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <Trophy className="h-8 w-8 text-yellow-400 flex-shrink-0" />
+                <h2 className="text-3xl font-bold">Our $1,000 Report Challenge</h2>
+              </div>
+              <p className="text-blue-100 text-lg mb-6 leading-relaxed">
+                We're so confident in the depth and detail of our inspection reports that we'll pay <strong className="text-white">$1,000</strong> to anyone who can show us a more detailed report from another certified Ontario inspector.
+              </p>
+              <div className="bg-white/10 border border-white/20 rounded-xl p-5 mb-6">
+                <h3 className="font-bold text-white mb-2">Satisfaction Guarantee</h3>
+                <p className="text-blue-100 text-sm leading-relaxed">
+                  If you feel our report isn't detailed enough — we'll refund your inspection fee. No questions asked. We back every report with our full satisfaction guarantee.
+                </p>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  "400+ checkpoints documented with photos",
+                  "Severity ratings on every finding",
+                  "AI-assisted report narration for clarity",
+                  "Same-day delivery — typically within 2 hours",
+                  "OAHI & InterNACHI Standards of Practice",
+                ].map(item => (
+                  <li key={item} className="flex items-center gap-3 text-blue-100 text-sm">
+                    <Check className="h-4 w-4 text-green-400 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-white rounded-2xl p-6 text-gray-900 shadow-2xl">
+              <div className="flex items-center gap-2 mb-1">
+                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-xs font-semibold text-green-600 uppercase tracking-wide">Same-Day Availability</span>
+              </div>
+              <h3 className="text-xl font-extrabold text-slate-900 mb-4">Book Your Inspection</h3>
+              <InlineBookingForm />
             </div>
           </div>
         </div>

@@ -329,8 +329,8 @@ const Index = () => {
                       <option>Condo Inspection — From $299</option>
                       <option>New Construction / PDI — From $449</option>
                       <option>Mold Inspection & Testing — From $299</option>
-                      <option>Radon Testing — From $149</option>
-                      <option>Thermal Imaging — From $199</option>
+                      <option>Radon Testing — From $499</option>
+                      <option>Thermal Imaging — Included / Standalone Quoted</option>
                       <option>Sewer Scope — From $299</option>
                       <option>Asbestos Testing — From $299</option>
                       <option>WETT Inspection — From $199</option>

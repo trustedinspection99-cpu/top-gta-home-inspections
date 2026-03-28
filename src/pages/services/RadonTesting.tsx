@@ -3,7 +3,7 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function RadonTesting() {
   const pageTitle = "Radon Testing Ontario | C-NRPP Certified | ASADS";
-  const schemaDescription = "C-NRPP certified radon testing Ontario. Health Canada monitoring. Protect your family from Canada's #1 cause of lung cancer in non-smokers. From $199.";
+  const schemaDescription = "C-NRPP certified radon testing Ontario. Health Canada monitoring. Protect your family from Canada's #1 cause of lung cancer in non-smokers. From $499.";
 
   return (
     <ServicePageTemplate
@@ -13,7 +13,7 @@ export default function RadonTesting() {
       heroTitle="Protect Your Home From Radioactive Radon Gas"
       heroSubtitle="Radon is the #1 cause of lung cancer in non-smokers. Our C-NRPP certified inspectors use professional-grade digital monitors to provide Health Canada compliant safety audits."
       icon={Radio}
-      price="From $199"
+      price="From $499"
       duration="48-Hour Digital or 91-Day Alpha Track"
       description={
         <div className="space-y-6">
@@ -197,7 +197,7 @@ export default function RadonTesting() {
         },
         {
           question: "How much does radon testing cost in Toronto?",
-          answer: "Professional radon testing in Toronto starts from $199 for a 48-hour digital test. Long-term 91-day alpha track testing is also available for comprehensive seasonal analysis."
+          answer: "Professional radon testing in Ontario starts from $499. Radon requires two site visits — drop-off and retrieval of the monitoring equipment — plus a certified report. Long-term 91-day alpha track testing is also available for comprehensive seasonal analysis."
         },
         {
           question: "How long does radon testing take?",
