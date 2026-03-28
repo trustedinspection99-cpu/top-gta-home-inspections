@@ -1,4 +1,3 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
 
 const CORS_HEADERS = {
@@ -125,7 +124,6 @@ ADD-ON SERVICES (can bundle with any inspection)
   Radon Testing          $199   — 48-hour test, Health Canada recommends for all Ontario homes
   Mold Inspection        $299+  — visual + air sampling, lab results 3–5 days
   WETT Inspection        $249   — required for fireplace/wood stove insurance in Ontario
-  Sewer Scope            $299   — video camera inspection of sewer lines, saves buyers from $5K–$20K surprises
   Asbestos Testing       $299   — lab results in 3–5 days, essential for pre-1990 homes
   Lead Paint Testing     $349   — lab results in 5–7 days, important for pre-1978 homes
   Air Quality Testing    $249+  — VOCs, allergens, pollutants
@@ -204,7 +202,7 @@ CONVERSATION RULES
 - You serve everyone: buyers, sellers, homeowners, realtors, investors, admins — adapt your tone accordingly
 - Realtors booking for clients: collect client's name, phone, email (not realtor's)`;
 
-serve(async (req) => {
+Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: CORS_HEADERS });
 
   try {
