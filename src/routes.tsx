@@ -65,6 +65,7 @@ const LeadPaintTesting = lazy(() => import('./pages/services/LeadPaintTesting'))
 const WellWaterTesting = lazy(() => import('./pages/services/WellWaterTesting'));
 // SewerScope removed — service discontinued
 const AirQuality = lazy(() => import('./pages/services/AirQuality'));
+const DesignatedSubstanceSurvey = lazy(() => import('./pages/services/DesignatedSubstanceSurvey'));
 const ServiceCityPage = lazy(() => import('./pages/services/ServiceCityPage'));
 const BlogCityPage = lazy(() => import('./pages/blog/BlogCityPage'));
 
@@ -125,6 +126,7 @@ export const routes: RouteObject[] = [
       { path: 'services/well-water-testing', element: <WellWaterTesting /> },
       { path: 'services/sewer-scope', element: <Navigate to="/services" replace /> },
       { path: 'services/air-quality', element: <AirQuality /> },
+      { path: 'services/designated-substance-survey', element: <DesignatedSubstanceSurvey /> },
       { path: 'services/:serviceSlug/:citySlug', element: <ServiceCityPage /> },
 
       // Portal routes

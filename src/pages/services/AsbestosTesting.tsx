@@ -319,7 +319,7 @@ export default function AsbestosTesting() {
         },
       ]}
       relatedServices={[
-        { title: "Air Quality Testing", href: "/services/air-quality" },
+        { title: "Designated Substance Survey", href: "/services/designated-substance-survey" },
         { title: "Lead Paint Testing", href: "/services/lead-paint-testing" },
         { title: "Mold Inspection", href: "/services/mold-inspection" },
         { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
