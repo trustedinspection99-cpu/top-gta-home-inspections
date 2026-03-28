@@ -668,7 +668,17 @@
     },
     {
       "source": "/sewer",
-      "destination": "/services/sewer-scope",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/sewer-scope",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/sewer-scope/:city",
+      "destination": "/services",
       "permanent": true
     },
     {

@@ -219,10 +219,10 @@ export default function Pricing() {
   return (
     <Layout>
       <Helmet>
-        <title>Home Inspection Cost Ontario 2026 | Pricing | ASADS</title>
+        <title>Home Inspection Prices Ontario | From $299 | ASADS</title>
         <meta
           name="description"
-          content="Home inspection cost Ontario: from $399 (condos $299). Infrared imaging, same-day PDF report & 90-day warranty included. No hidden fees. Get your price now."
+          content="Compare home inspection prices in Ontario. Pre-purchase from $399, condos from $299. Infrared imaging + same-day report included. No hidden fees. Book online."
         />
         <link rel="canonical" href="https://www.asads.ca/pricing" />
         <meta property="og:site_name" content="ASADS Home Inspection" />

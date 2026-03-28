@@ -60,7 +60,6 @@ export const serviceDefinitions: ServiceDef[] = [
       { name: "Thermal Imaging", slug: "thermal-imaging" },
       { name: "Mold Inspection", slug: "mold-inspection" },
       { name: "Radon Testing", slug: "radon-testing" },
-      { name: "Sewer Scope", slug: "sewer-scope" },
     ],
   },
   {
@@ -412,49 +411,6 @@ export const serviceDefinitions: ServiceDef[] = [
     ],
   },
   {
-    slug: "sewer-scope",
-    name: "Sewer Scope Inspection",
-    shortName: "Sewer Scope",
-    price: "From $299",
-    duration: "45–90 Minutes",
-    metaTitleTemplate: "Sewer Scope Inspection {city} | CCTV Drain Camera | ASADS",
-    metaDescTemplate:
-      "HD sewer camera inspection in {city} from $299. Detects root intrusion, bellied pipes & cracks before you buy. GPS mapping, same-day video report.",
-    heroTitle: "Sewer Scope Inspection in {city}",
-    whatWeCheck: [
-      "Root intrusion into clay & cast iron pipes",
-      "Bellied (sagging) sewer line sections",
-      "Cracked, broken or offset pipe joints",
-      "Grease or debris buildup",
-      "Pipe material identification (clay, ABS, cast iron)",
-      "Pipe diameter & flow assessment",
-      "Connection to municipal sewer",
-      "Distance & GPS mapping of issues",
-      "Backflow valve presence",
-      "Inspection access point condition",
-    ],
-    whyItMatters:
-      "Sewer line replacement in {city} typically costs $8,000–$25,000 or more, depending on depth, length, and access conditions — and it is one of the most common surprise expenses that buyers face in the first years of homeownership. A standard home inspection cannot assess the buried sewer line between the house and the municipal connection. That section is completely invisible without a camera. {city}'s older neighbourhoods are served by clay tile sewer laterals that were installed in the 1940s through 1970s. These pipes are now decades past their design life and are highly susceptible to root intrusion from mature street trees, joint separation from soil settlement, and longitudinal cracking. Even homes with newer ABS or PVC connecting pipes frequently have clay tile sections remaining in the run to the street. Bellied or sagging pipe sections trap grease and debris, causing recurring blockages that owners mistake for routine maintenance until they require full excavation. Our HD sewer scope inspection in {city} provides a real-time video of the entire lateral from cleanout to municipal connection, with GPS coordinates for all defects so excavation contractors can provide accurate bids. For $299, it is one of the highest-value add-ons available in a {city} real estate transaction.",
-    processSteps: [
-      { title: "Access the Cleanout", body: "Inspector locates the sewer cleanout access point — usually in the basement or exterior." },
-      { title: "Camera Insertion", body: "A waterproof HD camera is pushed through the sewer line from house to the municipal connection." },
-      { title: "Real-Time Recording", body: "Full HD video of the sewer interior is recorded, noting all defects, pipe material, and distance markers." },
-      { title: "Same-Day Report & Video", body: "You receive a GPS-mapped report and the full video file the same day." },
-    ],
-    faqs: [
-      { q: "Should I get a sewer scope in {city}?", a: "Yes — this is one of the highest-value add-ons available in a {city} real estate transaction, particularly for homes built before 1980. Older {city} neighbourhoods are served by clay tile sewer laterals that are now 50–80 years old and highly susceptible to root intrusion from mature street trees, joint separation from soil settlement, and longitudinal cracking. Sewer line replacement in {city} typically costs $8,000–$25,000 or more. A $299 camera inspection that reveals a failing lateral gives you documented grounds to negotiate a credit or require repair before closing — a return of 30-to-1 or better on your inspection investment." },
-      { q: "How much does a sewer inspection cost in {city}?", a: "Sewer scope inspection (also called a drain camera or CCTV sewer inspection) in {city} starts from $299. This includes insertion of the HD camera from the accessible cleanout to the municipal connection, real-time recording of the full sewer lateral, GPS mapping of all defect locations, and a same-day written report with the video file. At $299, it represents a small fraction of the $8,000–$25,000+ cost of sewer line replacement and repair — making it one of the most cost-effective due diligence steps available in a {city} home purchase." },
-      { q: "What is a bellied pipe?", a: "A bellied or sagging pipe section is a low point in the sewer lateral caused by soil settlement beneath the pipe. Rather than maintaining consistent slope toward the municipal sewer connection, the pipe dips downward and then rises again. This low point collects standing water, grease, and debris year-round. Homeowners with a bellied section in {city} often experience recurring slow drains and blockages that respond temporarily to snaking but return within months. Bellied pipes cannot be fixed from inside — they require excavation, removal, and re-bedding or replacement of the affected section. CCTV sewer inspection identifies the location and GPS coordinates precisely, allowing excavation contractors to provide accurate bids." },
-      { q: "Do you GPS map the sewer findings?", a: "Yes — GPS mapping of sewer defect locations is a standard part of every ASADS sewer scope report in {city}. The camera unit tracks distance from the insertion point continuously throughout the run, and GPS coordinates are recorded at each defect location. This allows excavation contractors to locate the precise point of root intrusion, pipe cracking, or bellying without exploratory digging. Accurate location data is the difference between a targeted repair at the defect point and a full-length trench along the entire sewer run. The GPS data is included in your same-day written report and video file." },
-    ],
-    relatedServices: [
-      { name: "Pre-Purchase Inspection", slug: "pre-purchase" },
-      { name: "Thermal Imaging", slug: "thermal-imaging" },
-      { name: "Well Water Testing", slug: "well-water-testing" },
-      { name: "Mold Inspection", slug: "mold-inspection" },
-    ],
-  },
-  {
     slug: "well-water-testing",
     name: "Well Water Testing",
     shortName: "Well Water Testing",
@@ -494,7 +450,7 @@ export const serviceDefinitions: ServiceDef[] = [
       { name: "Pre-Purchase Inspection", slug: "pre-purchase" },
       { name: "Radon Testing", slug: "radon-testing" },
       { name: "Air Quality Testing", slug: "air-quality" },
-      { name: "Sewer Scope", slug: "sewer-scope" },
+      { name: "Mold Inspection", slug: "mold-inspection" },
     ],
   },
   {

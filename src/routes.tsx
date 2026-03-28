@@ -63,7 +63,7 @@ const WETT = lazy(() => import('./pages/services/WETT'));
 const ThermalImaging = lazy(() => import('./pages/services/ThermalImaging'));
 const LeadPaintTesting = lazy(() => import('./pages/services/LeadPaintTesting'));
 const WellWaterTesting = lazy(() => import('./pages/services/WellWaterTesting'));
-const SewerScope = lazy(() => import('./pages/services/SewerScope'));
+// SewerScope removed — service discontinued
 const AirQuality = lazy(() => import('./pages/services/AirQuality'));
 const ServiceCityPage = lazy(() => import('./pages/services/ServiceCityPage'));
 const BlogCityPage = lazy(() => import('./pages/blog/BlogCityPage'));
@@ -123,7 +123,7 @@ export const routes: RouteObject[] = [
       { path: 'services/thermal-imaging', element: <ThermalImaging /> },
       { path: 'services/lead-paint-testing', element: <LeadPaintTesting /> },
       { path: 'services/well-water-testing', element: <WellWaterTesting /> },
-      { path: 'services/sewer-scope', element: <SewerScope /> },
+      { path: 'services/sewer-scope', element: <Navigate to="/services" replace /> },
       { path: 'services/air-quality', element: <AirQuality /> },
       { path: 'services/:serviceSlug/:citySlug', element: <ServiceCityPage /> },
 

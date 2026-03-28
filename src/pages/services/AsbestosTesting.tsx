@@ -305,6 +305,18 @@ export default function AsbestosTesting() {
           question: "How do I use an asbestos report in a real estate transaction?",
           answer: "If testing confirms asbestos-containing materials, you can request the seller perform abatement before closing, provide a price reduction to cover remediation costs, or use the report to walk away if the scope is beyond acceptable limits. We're available to explain findings to realtors and lawyers and can provide cost estimates for remediation tender."
         },
+        {
+          question: "How much does asbestos testing cost in Ontario?",
+          answer: "Asbestos testing in Ontario starts from $199 for a visual-only assessment with no sampling, and from $299 for a standard residential test covering 1–3 bulk samples. A full residential survey (4–6 samples) is from $449. All prices include the site visit, sample collection, accredited lab analysis, and a written O.Reg 278/05 report. Rush 24-hour lab results are available for an additional $99. Pre-demolition Type 2/3 surveys for larger or commercial properties are quoted individually."
+        },
+        {
+          question: "How much does asbestos inspection cost in Ontario?",
+          answer: "An asbestos inspection in Ontario typically costs $199–$449 for residential properties, depending on whether sampling is required and how many suspect materials are present. The $199 visual-only option is suitable when you need a professional assessment without disturbing any materials. The $299 standard test (1–3 samples) covers the most common suspect materials. The $449 full survey (4–6 samples) is recommended for pre-1980 homes with multiple suspect materials or before a major renovation. All prices include the written report. HST is additional."
+        },
+        {
+          question: "How long does asbestos testing take in Ontario?",
+          answer: "The on-site inspection takes 1–2 hours. Accredited laboratory analysis takes 48–72 hours as standard, or 24 hours with the rush turnaround add-on. The complete written O.Reg 278/05 report is delivered once lab results are received — making the total turnaround 2–4 business days for standard testing, or 1–2 days with rush service. Same-day scheduling is available across the GTA."
+        },
       ]}
       relatedServices={[
         { title: "Designated Substance Survey", href: "/services/designated-substance-survey" },
