@@ -2,8 +2,8 @@ import { Flame, ShieldCheck, Thermometer, FileText, CheckCircle2, AlertTriangle 
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function WETT() {
-  const pageTitle = "WETT Inspection Ontario | Insurance Certificate | ASADS";
-  const metaDescription = "Certified WETT & chimney inspection Ontario. Insurance-approved certificates for wood stoves & fireplaces. Thermal imaging included. Same-day report.";
+  const pageTitle = "WETT Inspection Ontario | Required for Insurance | $249";
+  const metaDescription = "WETT inspection Ontario — required by insurers for wood stoves & fireplaces. From $249. Thermal imaging included, same-day certificate. Call (647) 801-9311.";
 
   return (
     <ServicePageTemplate
