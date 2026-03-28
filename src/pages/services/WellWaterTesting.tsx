@@ -163,8 +163,8 @@ export default function WellWaterTesting() {
           answer: "The Maximum Acceptable Concentration (MAC) for Nitrate-Nitrogen is 10 mg/L. Levels above this pose a risk of 'Blue Baby Syndrome' (methemoglobinemia) in infants."
         },
         {
-          question: "How much does well water testing cost in the GTA?",
-          answer: "Well water testing starts from $199 for basic bacteria analysis. Our comprehensive 'Real Estate Full Analysis' package is priced higher and meets all lender requirements. Contact us at (647) 801-9311."
+          question: "How much does well water testing cost in Ontario?",
+          answer: "Well water testing in Ontario starts from $199 for bacteria-only analysis (E.coli & total coliform). Our Real Estate Full Analysis package — which includes bacteria, nitrates, arsenic, lead, hardness, and all lender-required parameters — is from $299. Includes sterile kit, sample collection, accredited lab analysis, and the written potability certificate. Call (647) 801-9311."
         },
         {
           question: "What happens if my well water fails the test?",
@@ -177,9 +177,9 @@ export default function WellWaterTesting() {
       ]}
       relatedServices={[
         { title: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
-        { title: "Sewer Scope Inspection", href: "/services/sewer-scope" },
         { title: "Radon Testing", href: "/services/radon-testing" },
         { title: "Mold Inspection", href: "/services/mold-inspection" },
+        { title: "Air Quality Testing", href: "/services/air-quality" },
       ]}
     />
   );
