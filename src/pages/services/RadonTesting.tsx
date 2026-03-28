@@ -3,7 +3,7 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function RadonTesting() {
   const pageTitle = "Radon Testing Ontario | C-NRPP Certified | ASADS";
-  const schemaDescription = "C-NRPP certified radon testing Ontario. Health Canada compliant monitoring. Protect your family from Canada's #1 cause of lung cancer in non-smokers. From $199.";
+  const schemaDescription = "C-NRPP certified radon testing Ontario. Health Canada monitoring. Protect your family from Canada's #1 cause of lung cancer in non-smokers. From $199.";
 
   return (
     <ServicePageTemplate

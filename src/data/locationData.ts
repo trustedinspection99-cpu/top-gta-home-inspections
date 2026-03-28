@@ -222,7 +222,7 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-mississauga",
     city: "Mississauga",
     region: "Peel Region",
-    metaTitle: "Home Inspector Mississauga | Book Inspection | ASADS",
+    metaTitle: "Home Inspection Mississauga | From $399 | Same-Day | ASADS",
     metaDescription: "Pre-purchase home inspection Mississauga from $399. Infrared imaging, same-day booking & detailed PDF report. Serving Port Credit, Streetsville & Clarkson.",
     description: "Mississauga's premier certified inspector for buyer pre-purchase inspections, seller pre-listing services, thermal imaging diagnostics, mold & asbestos testing throughout Peel Region.",
     neighborhoods: [
@@ -253,12 +253,11 @@ export const locationData: LocationData[] = [
     localExpertise: {
       title: "Home Inspection Experience in Mississauga",
       paragraphs: [
-        "Mississauga housing ranges from heritage properties in Port Credit to modern condos at Square One. Each area presents unique inspection challenges from Credit River flood zones to high-rise mechanical systems.",
-        "Newer subdivisions in Erin Mills and Churchill Meadows commonly require Tarion warranty inspections verifying spray foam insulation, HRV commissioning, and exterior envelope performance.",
-        "Our inspectors understand Mississauga's construction patterns from lakefront estates to family subdivisions, providing buyers and sellers with the detailed assessments needed for confident real estate decisions."
-      ,
+        "Mississauga is Ontario's third-largest city, and its housing stock reflects a 60-year arc of suburban construction from postwar bungalows in Port Credit and Cooksville to contemporary high-rises at Square One and new subdivisions still under construction in the city's north end. No two neighbourhoods present the same inspection profile, and buyers across all price ranges benefit from inspectors who understand Mississauga's specific construction eras, builder patterns, and neighbourhood-level risk factors.",
+        "Port Credit and Lakeview — Mississauga's oldest residential areas along Lake Ontario — contain pre-1960 housing where lead-based paint on interior trim, knob-and-tube or early aluminum wiring, and aging cast-iron drain systems are common inspection findings. These lakefront neighbourhoods command premium prices, and buyers frequently waive conditions in competitive markets. Pre-purchase inspection in Port Credit and Lakeview is essential due diligence given the potential capital cost of heritage-era mechanical and structural deficiencies.",
         "Mississauga's rapid residential growth from the 1970s through the 2000s created a diverse housing stock ranging from early townhomes and bungalows in Cooksville and Port Credit to large executive homes in Erin Mills, Lorne Park, and Mineola. KITEC plumbing installed in developments between 1997 and 2007 is a persistent concern in Mississauga, particularly in Streetsville, East Credit, and Churchill Meadows communities. Buyers in these areas should ensure KITEC investigation is part of their pre-purchase inspection process.",
-        "ASADS Home Inspection provides expert residential inspection services across all Mississauga communities. Our inspectors are familiar with the construction periods, builder practices, and neighbourhood-specific concerns that define Mississauga's housing market. Whether you're buying a condo near Square One or a detached home in Lakeview, ASADS delivers comprehensive reporting you can trust. Call (647) 801-9311 to book your Mississauga inspection with ASADS."]
+        "Newer subdivisions in Erin Mills, Churchill Meadows, and the Hurontario corridor commonly require Tarion new home warranty inspections verifying spray foam insulation continuity, HRV commissioning and airflow balancing, and exterior envelope performance including window flashing and weeping tile drainage. High-rise condo buyers at Square One should obtain and review reserve fund studies alongside a physical inspection that covers fan coil unit condition, in-suite plumbing, and balcony envelope performance.",
+        "ASADS provides pre-purchase, pre-listing, condo, and new construction inspections across all Mississauga communities. Our inspectors are familiar with the construction periods, builder practices, and neighbourhood-specific concerns across Port Credit, Square One, Erin Mills, Lorne Park, and all points between. Call (647) 801-9311 for same-day digital reports with thermal imaging standard."]
     }
   },
   {
@@ -2479,8 +2478,8 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-waterloo",
     city: "Waterloo",
     region: "Waterloo Region",
-    metaTitle: "Home Inspector Waterloo | From $399 | KITEC & Lead | ASADS",
-    metaDescription: "Certified home inspector Waterloo from $399. KITEC plumbing, lead paint & investment property inspections. Infrared imaging + same-day report. Book today.",
+    metaTitle: "Home Inspector Waterloo ON | From $399 | KITEC & Lead",
+    metaDescription: "Certified home inspector Waterloo, ON from $399. KITEC plumbing, lead paint & investment property inspections. Same-day report. Book today.",
     description: "Waterloo's trusted certified inspector for student rental property inspections, tech executive estate assessments & thermal imaging diagnostics.",
     neighborhoods: ["University District", "Uptown Waterloo", "Lincoln Heights", "Westmount", "Beechwood"],
     phoneNumber: "(647) 801-9311",
@@ -2509,7 +2508,7 @@ export const locationData: LocationData[] = [
       }
     ],
     localExpertise: {
-      title: "Home Inspection Experience in Waterloo",
+      title: "Home Inspection Experience in Waterloo, Ontario",
       paragraphs: [
         "Waterloo is Waterloo Region's smaller but culturally prominent twin city, home to two major universities — the University of Waterloo and Wilfrid Laurier University — and one of Canada's most concentrated technology industry clusters. The city's housing market reflects this dual identity: a substantial student and investment rental property sector surrounding both campuses, a growing condominium market along the LRT corridor, and established single-family neighbourhoods ranging from postwar bungalows to executive homes in Beechwood and Uptown.",
         "The University Avenue and Columbia Street corridors are dominated by rental properties that have undergone various levels of conversion and modification over decades of student tenancy. Pre-purchase inspections of investment properties in Waterloo's university district must account for the cumulative wear of high-occupancy rental use: plumbing systems stressed by above-average demand, electrical panels with added circuits, bathroom and kitchen wear, and deferred maintenance that accumulates between tenancy changes. Fire separation compliance between converted units is a consistent inspection priority.",
