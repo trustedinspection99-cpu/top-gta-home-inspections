@@ -76,6 +76,21 @@ export interface DbRankTracking {
   previous_position: number | null;
 }
 
+export type OutreachStatus = 'pending' | 'sent' | 'replied' | 'listed';
+
+export interface DbOutreach {
+  id: string;
+  name: string;
+  email: string;
+  city: string | null;
+  agency: string | null;
+  website: string | null;
+  status: OutreachStatus;
+  sent_at: string | null;
+  notes: string | null;
+  created_at: string;
+}
+
 export interface DbConversationLog {
   id: string;
   session_id: string;

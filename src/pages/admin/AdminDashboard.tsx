@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { supabase, DbJob, DbReport } from '@/lib/supabase';
 import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
-import { PlusCircle, FileText, Clock, CheckCircle2, Calendar, Users, DollarSign, Send, ListChecks, BadgeCheck, Link2, BarChart2, MessageCircle } from 'lucide-react';
+import { PlusCircle, FileText, Clock, CheckCircle2, Calendar, Users, DollarSign, Send, ListChecks, BadgeCheck, Link2, BarChart2, MessageCircle, Mail } from 'lucide-react';
 
 interface JobRow extends DbJob {
   report?: DbReport;
@@ -174,6 +174,12 @@ export default function AdminDashboard() {
           <p className="text-gray-500">ASADS inspection management</p>
         </div>
         <div className="flex items-center gap-2">
+          <Button asChild variant="outline" className="border-orange-300 text-orange-700">
+            <Link to="/admin/outreach" className="flex items-center gap-2">
+              <Mail className="h-4 w-4" />
+              Outreach
+            </Link>
+          </Button>
           <Button asChild variant="outline" className="border-green-300 text-green-700">
             <Link to="/admin/seo" className="flex items-center gap-2">
               <BarChart2 className="h-4 w-4" />
