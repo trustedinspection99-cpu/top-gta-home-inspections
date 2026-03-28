@@ -55,7 +55,6 @@ import WETT from "./pages/services/WETT";
 import ThermalImaging from "./pages/services/ThermalImaging";
 import LeadPaintTesting from "./pages/services/LeadPaintTesting";
 import WellWaterTesting from "./pages/services/WellWaterTesting";
-import SewerScope from "./pages/services/SewerScope";
 import AirQuality from "./pages/services/AirQuality";
 import DesignatedSubstanceSurvey from "./pages/services/DesignatedSubstanceSurvey";
 import PreDeliveryInspection from "./pages/services/PreDeliveryInspection";
@@ -108,7 +107,6 @@ const router = createBrowserRouter([
       { path: "/services/thermal-imaging", element: <ThermalImaging /> },
       { path: "/services/lead-paint-testing", element: <LeadPaintTesting /> },
       { path: "/services/well-water-testing", element: <WellWaterTesting /> },
-      { path: "/services/sewer-scope", element: <SewerScope /> },
       { path: "/services/air-quality", element: <AirQuality /> },
       { path: "/services/designated-substance-survey", element: <DesignatedSubstanceSurvey /> },
       { path: "/services/pdi-inspection", element: <PreDeliveryInspection /> },

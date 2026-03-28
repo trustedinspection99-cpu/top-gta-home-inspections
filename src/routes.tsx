@@ -124,7 +124,7 @@ export const routes: RouteObject[] = [
       { path: 'services/thermal-imaging', element: <ThermalImaging /> },
       { path: 'services/lead-paint-testing', element: <LeadPaintTesting /> },
       { path: 'services/well-water-testing', element: <WellWaterTesting /> },
-      { path: 'services/sewer-scope', element: <Navigate to="/services" replace /> },
+      { path: 'services/sewer-scope', element: <Navigate to="/services/pre-purchase" replace /> },
       { path: 'services/air-quality', element: <AirQuality /> },
       { path: 'services/designated-substance-survey', element: <DesignatedSubstanceSurvey /> },
       { path: 'services/:serviceSlug/:citySlug', element: <ServiceCityPage /> },

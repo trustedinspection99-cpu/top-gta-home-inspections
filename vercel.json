@@ -673,12 +673,12 @@
     },
     {
       "source": "/services/sewer-scope",
-      "destination": "/services",
+      "destination": "/services/pre-purchase",
       "permanent": true
     },
     {
       "source": "/services/sewer-scope/:city",
-      "destination": "/services",
+      "destination": "/services/pre-purchase",
       "permanent": true
     },
     {
