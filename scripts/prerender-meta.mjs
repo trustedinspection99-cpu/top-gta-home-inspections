@@ -439,21 +439,10 @@ for (const page of pages) {
     html = html.replace('</head>', () => `${breadcrumbSchema}\n</head>`);
   }
 
-  // Inject FAQPage JSON-LD into <head> so Googlebot sees it without JS
-  let faqSchema = null;
-  if (parts[0] === 'locations' && parts.length === 2) {
-    // NOTE: /services/:svc and /services/:svc/:city pages are intentionally excluded —
-    // ServicePageTemplate and ServiceCityPage both render their own FAQPage JSON-LD,
-    // so injecting here would create duplicate FAQPage schemas (Google critical error).
-    // Only location pages get FAQ injected here (LocationPageTemplate has no FAQ schema).
-    // /locations/home-inspection-:city — inject location FAQs with city substitution
-    const cSlug = parts[1].replace(/^home-inspection-/, '');
-    const cName = allCityNames[cSlug] || cSlug;
-    faqSchema = buildFaqSchema(locationPageFaqs, cName);
-  }
-  if (faqSchema) {
-    html = html.replace('</head>', () => `${faqSchema}\n</head>`);
-  }
+  // NOTE: FAQPage JSON-LD injection removed entirely — all page types (service pages via
+  // ServicePageTemplate, service×city pages via ServiceCityPage, location pages via
+  // LocationPageTemplate) render their own FAQPage schema via React Helmet. Prerender
+  // injection was creating duplicate FAQPage schemas flagged as critical errors by Google.
 
   // Write file
   const dir = resolve(DIST, ...page.path.split('/').filter(Boolean));
