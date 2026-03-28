@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
 import { SITE_URL } from "@/lib/seo";
 import { blogPostsData } from "@/data/blogPosts";
-import { HeroBookingSection } from "@/components/HeroBookingSection";
+import { InlineBookingForm } from "@/components/InlineBookingForm";
 import { useState, useMemo } from "react";
 
 const blogPosts = blogPostsData;
@@ -14,13 +14,10 @@ const blogPosts = blogPostsData;
 const categories = [
   "All Posts",
   "Buying Tips",
-  "Selling Tips",
   "Inspection Insights",
-  "Maintenance",
   "Health & Safety",
+  "Maintenance",
   "City Guides",
-  "Mold & Air Quality",
-  "Asbestos & Hazardous Materials",
 ];
 
 export default function Blog() {
@@ -86,20 +83,42 @@ export default function Blog() {
         })}</script>
       </Helmet>
 
-      <HeroBookingSection
-        badge="Home Inspection Blog · GTA & Ontario · Expert Guides"
-        title="Home Inspection Tips & Guides"
-        subtitle="Expert advice for GTA homebuyers, sellers, and homeowners — from common defects to buying strategies and local market insights."
-        priceCards={[
-          { label: "Articles", price: `${blogPosts.length}+` },
-          { label: "Categories", price: "10+" },
-          { label: "City Guides", price: "15+" },
-          { label: "Free", price: "Always" },
-        ]}
-        formTitle="Book Your Inspection"
-        ctaPrimary={{ text: "Browse Articles Below", href: "#articles" }}
-        defaultService="Pre-Purchase Home Inspection"
-      />
+      {/* Hero — content banner, no form */}
+      <section className="bg-gradient-to-br from-blue-800 to-blue-900 py-14 md:py-20 text-white">
+        <div className="container mx-auto px-4 max-w-3xl text-center relative z-10">
+          <div className="inline-flex items-center gap-2 bg-blue-700/40 backdrop-blur-sm px-4 py-2 rounded-full mb-5 border border-blue-600/50 text-sm font-medium">
+            Home Inspection Blog · GTA & Ontario · Free Guides
+          </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight leading-tight">
+            Home Inspection Tips & Guides
+          </h1>
+          <p className="text-lg text-blue-100 mb-8 leading-relaxed max-w-2xl mx-auto">
+            Practical advice for Ontario homebuyers and homeowners — written by certified inspectors who inspect these properties every day.
+          </p>
+          <div className="flex flex-wrap justify-center gap-8 text-sm mb-8">
+            {[
+              { value: `${blogPosts.length}+`, label: "Articles" },
+              { value: "6",   label: "Categories" },
+              { value: "15+", label: "City Guides" },
+              { value: "Free", label: "Always" },
+            ].map(stat => (
+              <div key={stat.label} className="text-center">
+                <div className="text-2xl font-extrabold text-white">{stat.value}</div>
+                <div className="text-blue-200 text-xs uppercase tracking-wide">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#articles" className="bg-white text-blue-700 px-7 py-4 rounded-lg font-bold text-base hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center gap-2">
+              Browse Articles
+              <ArrowRight className="h-5 w-5" />
+            </a>
+            <a href="/booking" className="bg-transparent border-2 border-white px-7 py-4 rounded-lg font-bold text-base hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+              Book an Inspection
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Featured Post */}
       {featuredPost && (
@@ -236,8 +255,8 @@ export default function Blog() {
                     </p>
                     <div className="flex items-center justify-between text-xs text-muted-foreground">
                       <span className="flex items-center gap-1">
-                        <Calendar className="h-3.5 w-3.5" />
-                        {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                        <User className="h-3.5 w-3.5" />
+                        {post.author}
                       </span>
                       <span className="flex items-center gap-1">
                         <Clock className="h-3.5 w-3.5" />
@@ -314,14 +333,8 @@ export default function Blog() {
                 <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
                 <span className="text-xs font-semibold text-green-600 uppercase tracking-wide">Same-Day Availability</span>
               </div>
-              <h3 className="text-xl font-extrabold text-slate-900 mb-1">Book Your Inspection</h3>
-              <p className="text-sm text-gray-500 mb-5">Confirmed instantly. We may call if a time adjustment is needed.</p>
-              <a href="/booking" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg text-center transition-colors text-sm">
-                Open Full Booking Form →
-              </a>
-              <p className="text-center text-xs text-gray-400 mt-3">
-                or call <a href="tel:6478019311" className="text-blue-600 font-semibold">(647) 801-9311</a> — 7 days a week
-              </p>
+              <h3 className="text-xl font-extrabold text-slate-900 mb-4">Book Your Inspection</h3>
+              <InlineBookingForm />
             </div>
           </div>
         </div>
