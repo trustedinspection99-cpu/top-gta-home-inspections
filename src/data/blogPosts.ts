@@ -3509,6 +3509,302 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">See also: <a href="/locations/home-inspection-toronto" class="text-primary hover:underline">Toronto Home Inspection Services</a> | <a href="/services/condo/toronto" class="text-primary hover:underline">Condo Inspection Toronto</a> | <a href="/services/pre-purchase/toronto" class="text-primary hover:underline">Pre-Purchase Inspection Toronto</a> | <a href="/pricing" class="text-primary hover:underline">Full Inspection Pricing</a></p>
     `,
   },
+  {
+    id: 60,
+    slug: "mold-inspection-toronto",
+    title: "Mold Inspection Toronto: Independent Testing, Not Remediation",
+    metaTitle: "Mold Inspection Toronto | Independent Testing",
+    metaDescription: "Toronto mold inspection by an independent inspector — we test and report, never remediate. Unbiased results, same-day air sampling, certified report.",
+    excerpt: "When you search for mold inspection in Toronto, most results are mold removal companies with a financial stake in finding problems. ASADS is different — we only test.",
+    category: "Mold & Air Quality",
+    author: "ASADS Team",
+    date: "2026-03-27",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Most "Mold Inspection" Companies in Toronto Have a Conflict of Interest</h2>
+      <p class="mb-4">Search "mold inspection Toronto" and you'll find page after page of mold removal companies. They offer "free inspections" or low-cost assessments — because their revenue comes from remediation, not testing. When the company that tests your home also sells you the fix, you have a conflict of interest built into the process.</p>
+      <p class="mb-4">ASADS Home Inspection is a certified home inspection firm. We do mold air quality testing, surface sampling, and moisture investigation — and that is where our work ends. We do not do mold remediation. We never will. Our business model is to give you an accurate, unbiased assessment of what is in your home's air and on its surfaces, so you can make informed decisions about next steps.</p>
+      <p class="mb-4">If we find a problem, we document it, photograph it, and explain your options. You choose your own remediation contractor — we have no financial stake in that decision.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What a Mold Inspection in Toronto Includes</h2>
+      <p class="mb-4">A full ASADS mold inspection covers:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Visual inspection:</strong> Systematic examination of basement, crawlspace, attic, bathrooms, kitchen, laundry area, and any areas with reported moisture history</li>
+        <li><strong>Moisture mapping:</strong> Non-invasive moisture meter readings at walls, floors, ceilings, and around windows to identify elevated moisture without opening walls</li>
+        <li><strong>Air sampling (cassette method):</strong> Spore trap air samples collected indoors and compared to an outdoor baseline sample — the lab result tells you what species are present and at what concentration versus what is normal for Toronto's outdoor air</li>
+        <li><strong>Surface swab sampling:</strong> Targeted sampling of visible suspect areas — results identify species and confirm whether visible discoloration is mold or another substance</li>
+        <li><strong>Thermal imaging:</strong> Infrared camera identifies hidden moisture behind finished walls and under flooring — common in Toronto's older semi-detached and rowhouse stock where interior drainage plane failures are frequent</li>
+      </ul>
+      <p class="mb-4">All air and surface samples are analyzed by an accredited third-party laboratory. Results are typically returned within 24–48 hours and are included in your full written report.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Where Mold Hides in Toronto Homes</h2>
+      <p class="mb-4">Toronto's climate — cold winters, humid summers, freeze-thaw cycling — creates specific conditions that drive mold growth in predictable locations:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Unfinished basements:</strong> Concrete block and poured concrete foundations absorb groundwater. The inside of the block cavities can harbour mold that isn't visible from the interior.</li>
+        <li><strong>Finished basement walls:</strong> Fibreglass batt insulation installed against a concrete foundation wall (very common in 1980s–1990s Toronto builds) traps moisture and feeds mold growth inside the wall cavity without any visible sign on the drywall face.</li>
+        <li><strong>Attic sheathing:</strong> Blocked soffit vents, bathroom exhaust fans vented into the attic, or insufficient ridge ventilation cause wintertime condensation that produces widespread mold on the roof sheathing. This is one of the most common findings in Toronto semi-detached homes.</li>
+        <li><strong>Behind shower surrounds:</strong> Failed caulk at the tub-shower transition allows water to infiltrate the wall cavity. In older Toronto homes with plaster-and-lath construction, this creates persistent hidden moisture.</li>
+        <li><strong>Around windows:</strong> Ice damming, condensation on single-pane windows, and failed window flashing allow water infiltration at the rough opening — leading to mold on the framing and drywall below the sill.</li>
+        <li><strong>Crawlspaces:</strong> Unconditioned crawlspaces in older Toronto stock, particularly in The Beaches, East York, and Leslieville, often have inadequate vapour barriers and poor air circulation — ideal mold conditions.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Health Implications of Mold Exposure in Toronto Homes</h2>
+      <p class="mb-4">Health Canada identifies mold exposure as a significant indoor air quality concern. Common symptoms of mold exposure include respiratory irritation, persistent cough, worsening asthma, allergic reactions, and eye and skin irritation. Children, the elderly, and immunocompromised individuals are most vulnerable.</p>
+      <p class="mb-4">Not all molds are equally hazardous. Cladosporium and Penicillium are common in Toronto homes and are problematic but manageable. Stachybotrys chartarum (commonly called "black mold") requires a sustained wet environment and is less common but more serious. The only way to know what species is present is laboratory analysis — visual identification is not reliable.</p>
+      <p class="mb-4">Ontario has no mandatory mold disclosure requirement for residential real estate transactions. However, if a seller knows about a mold condition and fails to disclose it, this can constitute a material latent defect — grounds for legal recourse after purchase. A pre-purchase mold inspection protects both buyers (from undisclosed conditions) and sellers (from post-sale claims).</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When to Book a Mold Inspection in Toronto</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Before purchasing any Toronto home built before 2000</strong> — particularly semi-detached, detached, and rowhouses in older neighbourhoods</li>
+        <li><strong>After any water damage</strong> — including basement flooding, roof leak, or plumbing failure — even if the visible water was dried quickly</li>
+        <li><strong>If you or a family member has unexplained respiratory symptoms</strong> that improve when away from home</li>
+        <li><strong>Before finishing a basement</strong> — to confirm no hidden moisture or mold in the existing structure before covering it with new walls</li>
+        <li><strong>After purchasing a home from an estate sale or vacancy</strong> — homes that sat without climate control often develop significant moisture and mold issues</li>
+        <li><strong>As part of an annual home maintenance inspection</strong> — attic and crawlspace conditions change seasonally</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mold Inspection Pricing in Toronto</h2>
+      <table class="w-full border-collapse border border-gray-300 mb-6">
+        <thead><tr class="bg-gray-100"><th class="border border-gray-300 p-3 text-left">Service</th><th class="border border-gray-300 p-3 text-left">Price</th></tr></thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-3">Visual inspection + moisture mapping</td><td class="border border-gray-300 p-3">From $299</td></tr>
+          <tr><td class="border border-gray-300 p-3">Air sampling (2 indoor + 1 outdoor control)</td><td class="border border-gray-300 p-3">From $299 (lab fees included)</td></tr>
+          <tr><td class="border border-gray-300 p-3">Surface swab sampling (per sample)</td><td class="border border-gray-300 p-3">From $99</td></tr>
+          <tr><td class="border border-gray-300 p-3">Thermal imaging add-on</td><td class="border border-gray-300 p-3">From $199</td></tr>
+          <tr><td class="border border-gray-300 p-3">Full mold inspection (visual + air + thermal)</td><td class="border border-gray-300 p-3">From $699</td></tr>
+        </tbody>
+      </table>
+      <p class="mb-4">Remediation quotes from third parties range from $1,500 for a small bathroom remediation to $15,000+ for attic or structural mold. An independent inspection report before engaging any contractor protects you from inflated remediation scopes.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your Toronto Mold Inspection</h2>
+      <p class="mb-4">ASADS Home Inspection provides certified mold testing across all Toronto neighbourhoods — Downtown, Midtown, North York, Scarborough, Etobicoke, East York, The Beaches, Leslieville, Roncesvalles, and beyond. Same-day availability, lab results within 48 hours, full written report.</p>
+      <p class="mb-4">Call <a href="tel:+16478019311" class="text-primary hover:underline">(647) 801-9311</a> or <a href="/booking" class="text-primary hover:underline">book your mold inspection online</a>.</p>
+      <p class="mb-4">See also: <a href="/services/mold-inspection/toronto" class="text-primary hover:underline">Mold Inspection Toronto Service Page</a> | <a href="/locations/home-inspection-toronto" class="text-primary hover:underline">Toronto Home Inspection</a> | <a href="/services/air-quality/toronto" class="text-primary hover:underline">Air Quality Testing Toronto</a></p>
+    `,
+  },
+  {
+    id: 61,
+    slug: "new-construction-home-inspection-toronto",
+    title: "New Construction Home Inspection Toronto: Why You Need One Before Closing",
+    metaTitle: "New Construction Inspection Toronto | Pre-Closing",
+    metaDescription: "New construction home inspection in Toronto before your Tarion PDI. Independent inspector finds deficiencies builders miss. Same-day report.",
+    excerpt: "Toronto new construction buyers have limited Tarion warranty windows. An independent inspection before your PDI gives you documented leverage with the builder — while you still have it.",
+    category: "New Construction",
+    author: "ASADS Team",
+    date: "2026-03-27",
+    readTime: "10 min read",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Biggest Misconception About New Construction in Toronto</h2>
+      <p class="mb-4">Many Toronto buyers assume a brand-new home is a defect-free home. After years of project delays, subcontractor shortages, and compressed construction timelines across the GTA, this assumption is costly. The average new construction inspection in Toronto reveals between 30 and 80 deficiencies — items ranging from missing insulation and improperly vented exhaust fans to grading defects, stair code violations, and incomplete waterproofing.</p>
+      <p class="mb-4">A new home being brand-new does not mean it was built to standard. It means it was built recently. The distinction matters enormously when you're about to sign off on one of the largest purchases of your life.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Understanding Your Tarion Warranty Timeline</h2>
+      <p class="mb-4">Ontario's Tarion Warranty Corporation provides mandatory statutory warranties on all new homes built by registered builders. The warranty structure has specific windows that govern when deficiencies must be reported:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Pre-Delivery Inspection (PDI):</strong> Conducted before closing. You and your builder walk through the home and document existing deficiencies on a PDI form. Items noted here become the builder's obligation to repair — but only if you document them correctly.</li>
+        <li><strong>30-Day Form:</strong> Submitted within 30 days of possession. Deficiencies discovered after you move in must be reported here to preserve your warranty rights.</li>
+        <li><strong>Year-End Form:</strong> Submitted in the 10th–12th month of occupancy. The one-year warranty covers workmanship, materials, Ontario Building Code compliance, and water penetration into the building envelope.</li>
+        <li><strong>Two-Year Warranty:</strong> Covers water penetration through the cladding, defects in electrical, plumbing, and heating systems, and Ontario Building Code violations.</li>
+        <li><strong>Seven-Year Major Structural Defect warranty:</strong> Covers structural failures, including foundation settlement, framing collapse, and related issues.</li>
+      </ul>
+      <p class="mb-4">Missing these windows means losing your warranty claim for that deficiency. Builders cannot waive Tarion rights in their contracts — but buyers who don't report deficiencies lose them by default.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What an Independent Inspector Does That You Can't at a Builder PDI</h2>
+      <p class="mb-4">At your Tarion PDI, the builder's representative walks through the home with you. This is not a neutral process — the builder's rep is trained to keep the deficiency list manageable. An independent inspection, conducted before or concurrent with your PDI, changes the dynamic entirely:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Attic inspection:</strong> Builder reps rarely offer access to the attic at PDI. Our inspector checks insulation depth and coverage, ventilation (soffit and ridge), vapour barrier continuity, and framing — common sources of energy loss and moisture problems in new Toronto builds.</li>
+        <li><strong>Mechanical systems:</strong> HVAC installation, ductwork connections, HRV (heat recovery ventilator) commissioning, water heater installation, and gas line connections — all checked for Ontario code compliance and operational status.</li>
+        <li><strong>Electrical:</strong> Panel labelling, arc-fault circuit interrupter (AFCI) requirements, ground fault (GFCI) protection in wet areas, and outlet function throughout.</li>
+        <li><strong>Grading and drainage:</strong> New construction lots often have inadequate final grading — meaning water runs toward the foundation rather than away. This is one of the highest-value items to catch before closing.</li>
+        <li><strong>Insulation voids:</strong> Thermal imaging identifies gaps in spray foam and batt insulation that are invisible to the naked eye but create significant heat loss and condensation risk over time.</li>
+        <li><strong>Stair and guard code compliance:</strong> Rise, run, and guard height requirements are specific in the Ontario Building Code. Non-compliant stairs must be rebuilt — builders prefer to fix this before it becomes an insurance issue.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">New Construction Deficiencies Common in Toronto Builds (2020–2026)</h2>
+      <p class="mb-4">Based on ASADS inspections of Toronto-area new construction in recent years, the most frequently found deficiencies include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Bathroom exhaust fans vented into the attic or roof cavity (not to exterior) — causes significant moisture damage over time</li>
+        <li>HRV not commissioned or improperly balanced — a common skip in rushed final stages</li>
+        <li>Spray foam insulation gaps at rim joist, window rough openings, and penetrations</li>
+        <li>Incorrect grading at the rear of the property and around window wells</li>
+        <li>Garage fire separation deficiencies — penetrations not fire-stopped between garage and living space</li>
+        <li>Dryer exhaust duct not connected or run to exterior</li>
+        <li>Incomplete or missing vapour barrier in the attic or at the foundation wall transition</li>
+        <li>Drywall fastener pops and nail pops (cosmetic but often indicate truss uplift)</li>
+        <li>Doors and windows not square — sticking or not latching properly on first inspection</li>
+        <li>Missing or improperly installed weeping tile discharge — at risk of backflow in heavy rain events</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When to Book Your Toronto New Construction Inspection</h2>
+      <p class="mb-4">The ideal timing for an independent inspection is <strong>2–5 days before your scheduled PDI</strong>. This gives you time to review the report and bring the findings to your PDI walkthrough as documented items on your PDI form. Your independent report becomes your paper trail if the builder disputes any items later.</p>
+      <p class="mb-4">If your closing has already occurred, the <strong>30-day form window</strong> is your next opportunity. We also provide post-occupancy inspections specifically designed to document items for the 30-day and year-end Tarion forms.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Toronto New Construction Neighbourhoods We Serve</h2>
+      <p class="mb-4">ASADS inspects new construction across all active Toronto development corridors:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>CityPlace, King West, and Liberty Village (high-rise condos)</li>
+        <li>North York (Bayview Village, Willowdale, Don Mills area — townhomes and stacked towns)</li>
+        <li>Scarborough (Rouge National Urban Park edge, Malvern, Agincourt — detached and semi-detached)</li>
+        <li>Etobicoke (Humber Valley, Islington-City Centre West — infill detached)</li>
+        <li>East York and Leslieville (laneway houses, infill semis)</li>
+        <li>Surrounding municipalities: Markham, Vaughan, Brampton, Mississauga, Oakville, Milton</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">New Construction Inspection Pricing</h2>
+      <table class="w-full border-collapse border border-gray-300 mb-6">
+        <thead><tr class="bg-gray-100"><th class="border border-gray-300 p-3 text-left">Property Type</th><th class="border border-gray-300 p-3 text-left">Price</th></tr></thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-3">Condo unit (new construction)</td><td class="border border-gray-300 p-3">From $299</td></tr>
+          <tr><td class="border border-gray-300 p-3">Townhouse or stacked townhouse</td><td class="border border-gray-300 p-3">From $399</td></tr>
+          <tr><td class="border border-gray-300 p-3">Semi-detached or link home</td><td class="border border-gray-300 p-3">From $449</td></tr>
+          <tr><td class="border border-gray-300 p-3">Detached home (up to 2,500 sq ft)</td><td class="border border-gray-300 p-3">From $499</td></tr>
+          <tr><td class="border border-gray-300 p-3">Detached home (2,500–4,000 sq ft)</td><td class="border border-gray-300 p-3">From $549</td></tr>
+          <tr><td class="border border-gray-300 p-3">Thermal imaging add-on</td><td class="border border-gray-300 p-3">From $199</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your New Construction Inspection in Toronto</h2>
+      <p class="mb-4">Same-day availability · Digital report same day · OAHI-certified inspector · Available 7 days a week including weekends for builder closing schedules.</p>
+      <p class="mb-4">Call <a href="tel:+16478019311" class="text-primary hover:underline">(647) 801-9311</a> or <a href="/booking" class="text-primary hover:underline">book your new construction inspection online</a>.</p>
+      <p class="mb-4">See also: <a href="/services/new-construction/toronto" class="text-primary hover:underline">New Construction Inspection Toronto</a> | <a href="/locations/home-inspection-toronto" class="text-primary hover:underline">Toronto Home Inspection</a> | <a href="/services/pre-purchase/toronto" class="text-primary hover:underline">Pre-Purchase Inspection Toronto</a> | <a href="/pricing" class="text-primary hover:underline">Full Inspection Pricing</a></p>
+    `,
+  },
+  {
+    id: 62,
+    slug: "home-inspection-north-york",
+    title: "Home Inspection North York: What Buyers Need to Know in 2026",
+    metaTitle: "Home Inspection North York | Local Buyer's Guide",
+    metaDescription: "Home inspection guide for North York buyers. Learn what inspectors find in Willowdale, Bayview Village, Don Mills homes — knob-and-tube, asbestos, UFFI.",
+    excerpt: "North York's housing stock spans six decades of construction — from 1950s post-war bungalows to 2020s luxury infills. Each era comes with its own inspection priorities.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-03-27",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">North York's Housing Stock: Six Decades of Risk Profiles</h2>
+      <p class="mb-4">North York is one of Toronto's most diverse real estate markets — not just in price point, but in construction era. From Willowdale's post-war bungalows to Don Mills' Modernist planned community homes, from Bayview Village's luxury detached to the mid-rise condo towers lining Yonge Street and Sheppard Avenue, each neighbourhood type carries a distinct inspection profile. Knowing which era your target property falls into prepares you for what a home inspection is most likely to find.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">1950s–1960s North York Homes: Willowdale, Newtonbrook, Lansing</h2>
+      <p class="mb-4">The post-war bungalows and two-storeys in Willowdale, Newtonbrook, and Lansing are North York's most common resale type. These homes are well-built for their era — solid framing, brick veneer — but come with age-related conditions that buyers must understand:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Knob-and-tube wiring:</strong> Homes built before approximately 1960 in North York frequently have original knob-and-tube wiring, either fully intact or in a mixed state with partial updates. Knob-and-tube is not inherently dangerous if in good condition, but most insurers will not write a policy — or will charge premium rates — for homes with active knob-and-tube. If you're purchasing in this era, budget for a full electrical update.</li>
+        <li><strong>Asbestos-containing materials:</strong> Homes built before 1985 may contain asbestos in floor tiles (9" vinyl floor tiles are almost always asbestos-containing), stippled ceilings, pipe insulation, furnace wrap, and duct insulation. Asbestos that is undisturbed is not a health risk — but any renovation must treat these materials appropriately under Ontario Regulation 278/05.</li>
+        <li><strong>Cast iron drains:</strong> The original drainage stack in 1950s–1960s North York homes is cast iron. By 70 years of age, cast iron can develop significant internal rust scale, joint failures, and root intrusion. A sewer scope inspection is strongly recommended.</li>
+        <li><strong>Basement waterproofing:</strong> Original poured concrete and concrete block foundations often lack modern dampproofing. Interior weeping tile is commonly added as a repair, but if the exterior drainage has not been addressed, water infiltration will recur.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">1970s–1980s North York Homes: Don Mills, Parkwoods, Victoria Village</h2>
+      <p class="mb-4">The 1970s and 1980s construction era introduced new problems while solving some of the older ones:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Aluminum wiring:</strong> Homes built between approximately 1965 and 1978 in North York may have aluminum branch circuit wiring — particularly in detached homes, bungalows, and two-storeys in Don Mills, Parkwoods, and Victoria Village. Aluminum wiring at connections expands and contracts differently than copper, creating loose connections over time that are a fire hazard. Inspection findings include aluminum at the panel, aluminum at device connections, or mixed aluminum-to-copper connections. Remediation involves either full rewiring or anti-oxidant compound and co-aluminum-rated devices at every connection.</li>
+        <li><strong>UFFI (Urea Formaldehyde Foam Insulation):</strong> Injected into wall cavities during the 1970s energy crisis and banned in 1980. UFFI itself degrades and releases formaldehyde over time; while Health Canada considers residual risk low in well-ventilated homes, the presence of UFFI must be disclosed and affects insurability and financing.</li>
+        <li><strong>Galvanized steel water supply:</strong> Galvanized pipes corrode from the inside out, reducing water pressure and releasing rust. By 40–50 years of age, galvanized plumbing is nearing end of life. Water pressure and discoloration at fixtures are key indicators.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">1990s–2000s North York Homes: Bayview Village, Yonge/Sheppard Condos</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>KITEC plumbing:</strong> The orange (hot) and blue (cold) flexible plastic plumbing installed between 1995 and 2007 under brand names including KITEC, IPEX, and PlumbBetter is now subject to a class action settlement. KITEC fittings fail prematurely — particularly at water heater connections — causing significant water damage. Every 1995–2007 era North York home should be checked for KITEC at the mechanical room and at visible supply lines.</li>
+        <li><strong>Mid-rise and condo buildings:</strong> The Yonge-Sheppard corridor and Bayview Avenue condos built in this era are entering major capital repair cycles. Balcony membrane replacement ($20,000–$40,000 per balcony to the condo corp), window replacement programs, and underground parking membrane replacement are common special assessment triggers. A status certificate review and condo inspection protects buyers from inheriting a coming special assessment.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">2010s–2020s North York Homes: Infill Detached, Townhomes, New Condos</h2>
+      <p class="mb-4">Even newly built North York homes require inspection. The infill bungalow-to-two-storey construction common throughout Willowdale frequently has grading issues (the lot was originally built for a bungalow footprint — the new two-storey fills more of it), inadequate drainage provisions, and rushed finishes. See our <a href="/blog/new-construction-home-inspection-toronto" class="text-primary hover:underline">new construction inspection guide</a> for full details on what to look for in recently built homes.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a Home Inspection Cost in North York?</h2>
+      <table class="w-full border-collapse border border-gray-300 mb-6">
+        <thead><tr class="bg-gray-100"><th class="border border-gray-300 p-3 text-left">Property Type</th><th class="border border-gray-300 p-3 text-left">Price</th></tr></thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-3">Condo / apartment unit</td><td class="border border-gray-300 p-3">From $299</td></tr>
+          <tr><td class="border border-gray-300 p-3">Townhouse or semi-detached</td><td class="border border-gray-300 p-3">From $399</td></tr>
+          <tr><td class="border border-gray-300 p-3">Detached (up to 2,000 sq ft)</td><td class="border border-gray-300 p-3">From $449</td></tr>
+          <tr><td class="border border-gray-300 p-3">Detached (2,000–3,000 sq ft)</td><td class="border border-gray-300 p-3">From $499</td></tr>
+          <tr><td class="border border-gray-300 p-3">Larger homes / estates</td><td class="border border-gray-300 p-3">From $549+</td></tr>
+          <tr><td class="border border-gray-300 p-3">Sewer scope add-on</td><td class="border border-gray-300 p-3">From $299</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your North York Home Inspection</h2>
+      <p class="mb-4">ASADS Home Inspection serves all North York neighbourhoods — Willowdale, Newtonbrook, Bayview Village, Don Mills, Parkwoods, Victoria Village, York Mills, Lansing, and all surrounding areas. Same-day availability, digital report same day, certified and insured inspectors.</p>
+      <p class="mb-4">Call <a href="tel:+16478019311" class="text-primary hover:underline">(647) 801-9311</a> or <a href="/booking" class="text-primary hover:underline">book your North York home inspection online</a>.</p>
+      <p class="mb-4">See also: <a href="/locations/home-inspection-north-york" class="text-primary hover:underline">North York Home Inspection Services</a> | <a href="/services/pre-purchase/north-york" class="text-primary hover:underline">Pre-Purchase Inspection North York</a> | <a href="/locations/home-inspection-toronto" class="text-primary hover:underline">Toronto Home Inspection</a></p>
+    `,
+  },
+  {
+    id: 63,
+    slug: "home-inspection-scarborough",
+    title: "Home Inspection Scarborough: A Buyer's Guide to Toronto's East End",
+    metaTitle: "Home Inspection Scarborough | Local Buyer's Guide",
+    metaDescription: "Home inspection guide for Scarborough buyers. Know what inspectors find in Agincourt, Malvern, Guildwood homes — KITEC, knob-and-tube, grading, and more.",
+    excerpt: "Scarborough's housing market offers some of Toronto's best value — and some of its most complex inspection profiles. Here's what to know before you buy.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-03-27",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Scarborough Homes Require Special Attention at Inspection</h2>
+      <p class="mb-4">Scarborough offers some of the GTA's most attractive home values — detached homes with large lots at prices that would buy a condo in downtown Toronto. But value and condition are not the same thing. Scarborough's housing stock is heavily concentrated in the 1950s–1990s construction window, an era that coincides with knob-and-tube wiring, aluminum wiring, asbestos-containing materials, KITEC plumbing, and the oldest active drainage systems in Toronto's suburban ring.</p>
+      <p class="mb-4">ASADS inspectors work extensively throughout Scarborough — Agincourt, Malvern, Rouge, Guildwood, Birchcliffe-Cliffside, Clairlea, Kennedy Park, Wexford, and beyond. The patterns we see repeat across these neighbourhoods with enough consistency to map them clearly for buyers.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Scarborough by Neighbourhood: What Inspectors Find</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Agincourt and Tam O'Shanter (1960s–1970s)</h3>
+      <p class="mb-4">Agincourt's detached and semi-detached homes were built largely between 1955 and 1975. This era carries the full suite of mid-century risks:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Aluminum branch circuit wiring</strong> is present in a significant share of Agincourt homes built 1965–1978. Panel identification (aluminum lugs) and spot checks at outlets during inspection can identify aluminum wiring before purchase.</li>
+        <li><strong>Original clay tile or cast iron drainage</strong> — now 50–70 years old — is prone to root intrusion, joint separation, and collapse. Agincourt sits on a mix of clay-heavy and sandy soils that accelerate root intrusion around the main drain. Sewer scope is a priority here.</li>
+        <li><strong>Flat-roofed attached garages</strong> — a signature of 1960s–1970s bungalow construction — frequently have failing waterproofing where the garage roof meets the house wall, causing water infiltration into the attached wall or interior garage ceiling.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Malvern and Rouge (1970s–1990s)</h3>
+      <p class="mb-4">Malvern and Rouge were developed primarily in the 1970s and 1980s. Key inspection priorities:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>KITEC plumbing</strong> is present in some Malvern and Rouge homes built or renovated between 1995 and 2007. The orange flexible supply lines are the key identifier. Any home in this era should have the mechanical room checked carefully.</li>
+        <li><strong>Sloped lots and grading:</strong> Malvern and Rouge National Urban Park border areas have more topographic variation than inner Scarborough. Homes on slopes or at the bottom of inclines frequently have chronic wet basement issues tied to inadequate grading and missing swales.</li>
+        <li><strong>Asbestos-containing floor tiles:</strong> 9" vinyl floor tiles, common in 1970s basement finishes in Malvern homes, are almost universally asbestos-containing. If the basement has been renovated and these tiles covered with laminate or carpet, they are likely still present underneath.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Guildwood and Birchcliffe-Cliffside (1940s–1960s)</h3>
+      <p class="mb-4">These mature Scarborough neighbourhoods along the Bluffs are among the area's oldest — and most sought after for their character and lake proximity:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Knob-and-tube wiring:</strong> Homes predating 1960 in Guildwood and Birchcliffe-Cliffside frequently have original knob-and-tube, often partially updated. Insurance companies increasingly refuse to underwrite or charge heavily for homes with active knob-and-tube.</li>
+        <li><strong>Bluffs-adjacent erosion:</strong> Properties within several hundred metres of the Scarborough Bluffs should be investigated for any erosion-related site issues. While the bluffs themselves are the concern of the City, soil conditions and lot drainage toward the bluff edge should be reviewed in the inspection.</li>
+        <li><strong>Old oil tanks:</strong> Decommissioned oil heating tanks — either above or below ground — are a concern in pre-1970 Guildwood and Birchcliffe homes that have since been converted to gas. Environmental liability from underground storage tank contamination is a material issue that affects property value and insurability.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Wexford and Clairlea-Birchmount (1950s–1960s)</h3>
+      <p class="mb-4">These solid post-war neighbourhoods are popular with first-time buyers drawn to the relatively lower prices. Common inspection findings:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Partially updated electrical:</strong> The most common scenario is a home where the panel has been replaced (60-amp or 100-amp fuse to 100-amp or 200-amp breaker) but the branch circuit wiring is still original knob-and-tube. The panel upgrade often conceals the continued presence of the old wiring throughout the home.</li>
+        <li><strong>Bungalow roof structure:</strong> Low-pitch bungalow roofs in Wexford and Clairlea frequently have inadequate attic ventilation — insufficient soffit area, no ridge vent, or bath fans vented into the attic. The result is moisture accumulation on the roof sheathing and, eventually, mold and early sheathing deterioration.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a Home Inspection Cost in Scarborough?</h2>
+      <table class="w-full border-collapse border border-gray-300 mb-6">
+        <thead><tr class="bg-gray-100"><th class="border border-gray-300 p-3 text-left">Property Type</th><th class="border border-gray-300 p-3 text-left">Price</th></tr></thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-3">Condo / apartment unit</td><td class="border border-gray-300 p-3">From $299</td></tr>
+          <tr><td class="border border-gray-300 p-3">Semi-detached or townhouse</td><td class="border border-gray-300 p-3">From $399</td></tr>
+          <tr><td class="border border-gray-300 p-3">Detached bungalow or two-storey</td><td class="border border-gray-300 p-3">From $449</td></tr>
+          <tr><td class="border border-gray-300 p-3">Larger detached (2,500+ sq ft)</td><td class="border border-gray-300 p-3">From $499</td></tr>
+          <tr><td class="border border-gray-300 p-3">Sewer scope add-on (recommended)</td><td class="border border-gray-300 p-3">From $299</td></tr>
+          <tr><td class="border border-gray-300 p-3">Aluminum wiring assessment</td><td class="border border-gray-300 p-3">Included in full inspection</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your Scarborough Home Inspection</h2>
+      <p class="mb-4">ASADS Home Inspection serves all Scarborough neighbourhoods — Agincourt, Malvern, Rouge, Guildwood, Birchcliffe-Cliffside, Clairlea, Kennedy Park, Wexford, Tam O'Shanter, and all surrounding areas. Same-day availability, digital report same day, certified and insured inspectors.</p>
+      <p class="mb-4">Call <a href="tel:+16478019311" class="text-primary hover:underline">(647) 801-9311</a> or <a href="/booking" class="text-primary hover:underline">book your Scarborough home inspection online</a>.</p>
+      <p class="mb-4">See also: <a href="/locations/home-inspection-scarborough" class="text-primary hover:underline">Scarborough Home Inspection Services</a> | <a href="/services/pre-purchase/scarborough" class="text-primary hover:underline">Pre-Purchase Inspection Scarborough</a> | <a href="/services/mold-inspection/scarborough" class="text-primary hover:underline">Mold Inspection Scarborough</a> | <a href="/locations/home-inspection-toronto" class="text-primary hover:underline">Toronto Home Inspection</a></p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
