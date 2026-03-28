@@ -23,7 +23,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { HeroBookingSection } from "@/components/HeroBookingSection";
 
 
 const serviceOptions = [
@@ -107,8 +106,8 @@ export default function Contact() {
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "08:00",
-          "closes": "20:00"
+          "opens": "07:00",
+          "closes": "22:00"
         }
       ]
     }
@@ -144,20 +143,37 @@ export default function Contact() {
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
-      <HeroBookingSection
-        badge="Fast Scheduling · 7 Days a Week · 106 Cities in Ontario"
-        title="Contact ASADS Home Inspectors in Ontario"
-        subtitle="Ready to book or have a question? Call, email, or send a message below. We respond within 24 hours and confirm bookings instantly."
-        priceCards={[
-          { label: "Pre-Purchase", price: "From $399", href: "/services/pre-purchase" },
-          { label: "Condo",        price: "From $299", href: "/services/condo" },
-          { label: "Available",    price: "7 Days/Week" },
-          { label: "Same-Day",     price: "Digital Report" },
-        ]}
-        formTitle="Send Us a Message"
-        ctaPrimary={{ text: "Book Online Now", href: "/booking" }}
-        defaultService="Pre-Purchase Home Inspection"
-      />
+      {/* Hero — info only, no form */}
+      <section className="bg-gradient-to-br from-blue-800 to-blue-900 py-14 md:py-20 text-white">
+        <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)", backgroundSize: "40px 40px" }} />
+        <div className="container mx-auto px-4 relative z-10 max-w-3xl text-center">
+          <div className="inline-flex items-center gap-2 bg-blue-700/40 backdrop-blur-sm px-4 py-2 rounded-full mb-5 border border-blue-600/50 text-sm font-medium">
+            Fast Scheduling · 7 Days a Week · 106 Cities in Ontario
+          </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+            Contact ASADS Home Inspectors in Ontario
+          </h1>
+          <p className="text-lg text-blue-100 mb-8 leading-relaxed">
+            Ready to book or have a question? Call us directly for the fastest response, or send a message below.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+16478019311"
+              className="bg-white text-blue-700 px-7 py-4 rounded-lg font-bold text-base hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center gap-2"
+            >
+              <Phone className="h-5 w-5" />
+              (647) 801-9311
+            </a>
+            <a
+              href="/booking"
+              className="bg-transparent border-2 border-white px-7 py-4 rounded-lg font-bold text-base hover:bg-white/10 transition-all flex items-center justify-center gap-2"
+            >
+              Book Online
+              <ArrowRight className="h-5 w-5" />
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Main Contact Section */}
       <section className="py-16 md:py-24 bg-background">
@@ -170,37 +186,23 @@ export default function Contact() {
                 Get in Touch
               </h2>
 
-              {/* Book Now — primary CTA */}
-              <div className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl p-6 text-white">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-xs font-semibold text-green-300 uppercase tracking-wide">Same-Day Availability</span>
+              {/* Phone — primary action */}
+              <a
+                href="tel:+16478019311"
+                className="flex items-center gap-4 bg-primary rounded-2xl p-5 text-primary-foreground hover:opacity-90 transition-opacity group"
+              >
+                <div className="h-12 w-12 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
+                  <Phone className="h-6 w-6" />
                 </div>
-                <h3 className="font-bold text-lg mb-1">Ready to Book?</h3>
-                <p className="text-blue-100 text-sm mb-4">
-                  Use our full booking form for fastest confirmation — pick your service, date, and property address.
-                </p>
-                <a
-                  href="/booking"
-                  className="flex items-center justify-center gap-2 w-full bg-white text-blue-700 font-bold py-3 rounded-lg hover:bg-gray-100 transition-colors text-sm"
-                >
-                  Open Full Booking Form
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-                <p className="text-center text-xs text-blue-200 mt-3">
-                  or call <a href="tel:6478019311" className="font-semibold text-white">(647) 801-9311</a>
-                </p>
-              </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wide opacity-80 mb-0.5">Fastest response</p>
+                  <p className="font-extrabold text-xl">(647) 801-9311</p>
+                  <p className="text-sm opacity-75">Call or text · 7am – 10pm, 7 days</p>
+                </div>
+              </a>
 
               {/* Contact info cards */}
               {[
-                {
-                  icon: Phone,
-                  title: "Phone",
-                  primary: "(647) 801-9311",
-                  secondary: "Call or text anytime",
-                  action: "tel:+16478019311",
-                },
                 {
                   icon: Mail,
                   title: "Email",
@@ -219,7 +221,7 @@ export default function Contact() {
                   icon: Clock,
                   title: "Hours",
                   primary: "7 Days a Week",
-                  secondary: "8am – 8pm",
+                  secondary: "7am – 10pm",
                   action: null,
                 },
               ].map((item) => (
@@ -238,6 +240,25 @@ export default function Contact() {
                   </div>
                 </div>
               ))}
+
+              {/* Book Online — secondary CTA */}
+              <div className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl p-5 text-white">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
+                  <span className="text-xs font-semibold text-green-300 uppercase tracking-wide">Same-Day Availability</span>
+                </div>
+                <h3 className="font-bold text-base mb-1">Prefer to Book Online?</h3>
+                <p className="text-blue-100 text-sm mb-4">
+                  Pick your service, date, and address — confirmed instantly.
+                </p>
+                <a
+                  href="/booking"
+                  className="flex items-center justify-center gap-2 w-full bg-white text-blue-700 font-bold py-3 rounded-lg hover:bg-gray-100 transition-colors text-sm"
+                >
+                  Open Full Booking Form
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
             </div>
 
             {/* Right: Contact form */}
@@ -304,8 +325,8 @@ export default function Contact() {
                         <Input id="propertyAddress" name="propertyAddress" placeholder="123 Main St, Toronto, ON" />
                       </div>
                       <div className="space-y-1.5">
-                        <Label htmlFor="message">Message *</Label>
-                        <Textarea id="message" name="message" placeholder="Tell us about your inspection needs..." rows={4} required />
+                        <Label htmlFor="message">Message (optional)</Label>
+                        <Textarea id="message" name="message" placeholder="Tell us about your inspection needs..." rows={4} />
                       </div>
                       <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
                         {isSubmitting ? "Sending…" : <><Send className="mr-2 h-5 w-5" />Send Message</>}
@@ -319,50 +340,6 @@ export default function Contact() {
                 )}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Service Areas */}
-      <section className="py-16 bg-muted/30">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="font-heading text-3xl font-bold text-foreground mb-3">
-              106 Cities Across Ontario
-            </h2>
-            <p className="text-muted-foreground">
-              Mobile inspectors — we come to you, anywhere across the GTA and Ontario.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-6">
-            {[
-              { name: "Toronto",       slug: "toronto" },
-              { name: "Mississauga",   slug: "mississauga" },
-              { name: "Brampton",      slug: "brampton" },
-              { name: "Vaughan",       slug: "vaughan" },
-              { name: "Markham",       slug: "markham" },
-              { name: "Richmond Hill", slug: "richmond-hill" },
-              { name: "Oakville",      slug: "oakville" },
-              { name: "Burlington",    slug: "burlington" },
-              { name: "Hamilton",      slug: "hamilton" },
-              { name: "Barrie",        slug: "barrie" },
-              { name: "Kitchener",     slug: "kitchener" },
-              { name: "Oshawa",        slug: "oshawa" },
-            ].map((loc) => (
-              <Link
-                key={loc.slug}
-                to={`/locations/home-inspection-${loc.slug}`}
-                className="flex items-center justify-center gap-2 p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm text-foreground"
-              >
-                <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
-                {loc.name}
-              </Link>
-            ))}
-          </div>
-          <div className="text-center">
-            <Link to="/locations" className="text-primary hover:underline text-sm font-medium">
-              View all 106 service areas →
-            </Link>
           </div>
         </div>
       </section>
