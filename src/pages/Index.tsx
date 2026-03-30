@@ -213,7 +213,17 @@ const Index = () => {
       </Helmet>
 
       {/* 1. ONTARIO-FOCUSED HERO */}
-      <section className="relative bg-gradient-to-br from-blue-800 to-blue-900 py-20 text-white overflow-hidden">
+      <section className="relative py-20 text-white overflow-hidden">
+        {/* Background photo */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1920&q=75&auto=format&fit=crop"
+            alt=""
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/92 to-blue-800/88" />
+        </div>
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid opacity-10"></div>
         <div className="container relative z-10 mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -489,7 +499,6 @@ const Index = () => {
               { name: "Condo Inspection", icon: Building, href: "/services/condo", description: "Unit-level inspection covering everything inside your condo or apartment." },
               { name: "Radon Testing", icon: Radio, href: "/services/radon-testing", description: "Long-term radon detection for Ontario basements. Health Canada compliant reports." },
               { name: "Mold Inspection", icon: Droplets, href: "/services/mold-inspection", description: "Air quality and surface sampling — especially important in Ontario's humid climate." },
-              { name: "Same-Day Inspection", icon: Zap, href: "/services/same-day-home-inspection", description: "Call before noon — inspector arrives today. No rush surcharge. 7 days a week across Ontario." },
             ].map((service, index) => {
               const Icon = service.icon;
               return (
@@ -509,6 +518,26 @@ const Index = () => {
               );
             })}
           </div>
+
+          {/* Same-Day — full-width featured card */}
+          <a
+            href="/services/same-day-home-inspection"
+            className="flex flex-col sm:flex-row items-center gap-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl p-6 mb-10 group hover:from-blue-700 hover:to-blue-800 transition-all shadow-md"
+          >
+            <div className="bg-white/20 p-4 rounded-xl shrink-0">
+              <Zap className="h-8 w-8 text-white" />
+            </div>
+            <div className="flex-1 text-center sm:text-left">
+              <div className="inline-flex items-center gap-1.5 bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-2">
+                <Zap className="h-3 w-3" /> Available Today
+              </div>
+              <h3 className="text-xl font-bold mb-1">Same-Day Home Inspection</h3>
+              <p className="text-blue-100 text-sm">Call before noon — inspector arrives today. No rush surcharge. 7 days a week across Ontario.</p>
+            </div>
+            <div className="flex items-center gap-2 bg-white text-blue-700 font-bold px-5 py-3 rounded-lg shrink-0 group-hover:bg-gray-100 transition-colors">
+              Book Now <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </a>
 
           <div className="text-center">
             <a href="/services" className="inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-800 transition-all">
@@ -534,18 +563,23 @@ const Index = () => {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
             {[
-              "Foundation Cracks (Freeze-Thaw)",
-              "Knob & Tube Wiring",
-              "Aluminum Wiring Hazards",
-              "Asbestos in Pre-1990 Homes",
-              "Basement Moisture & Mold",
-              "Roof Ice Dam Damage",
-            ].map((flag, i) => (
-              <div key={i} className="flex items-center gap-2 bg-red-50 rounded-lg px-3 py-2">
-                <AlertTriangle className="h-4 w-4 text-red-500 shrink-0" />
-                <span className="text-gray-700 text-sm font-medium">{flag}</span>
+              { label: "Foundation Cracks (Freeze-Thaw)", icon: AlertTriangle, color: "text-red-500 bg-red-50", border: "border-red-100" },
+              { label: "Knob & Tube Wiring", icon: Zap, color: "text-orange-500 bg-orange-50", border: "border-orange-100" },
+              { label: "Aluminum Wiring Hazards", icon: ShieldAlert, color: "text-yellow-600 bg-yellow-50", border: "border-yellow-100" },
+              { label: "Asbestos in Pre-1990 Homes", icon: FlaskConical, color: "text-purple-500 bg-purple-50", border: "border-purple-100" },
+              { label: "Basement Moisture & Mold", icon: Droplets, color: "text-blue-500 bg-blue-50", border: "border-blue-100" },
+              { label: "Roof Ice Dam Damage", icon: Waves, color: "text-cyan-600 bg-cyan-50", border: "border-cyan-100" },
+            ].map((flag, i) => {
+              const Icon = flag.icon;
+              return (
+              <div key={i} className={`flex items-center gap-3 ${flag.color.split(' ')[1]} border ${flag.border} rounded-lg px-4 py-3`}>
+                <div className={`${flag.color.split(' ')[0]} shrink-0`}>
+                  <Icon className="h-5 w-5" />
+                </div>
+                <span className="text-gray-800 text-sm font-semibold leading-tight">{flag.label}</span>
               </div>
-            ))}
+              );
+            })}
           </div>
           <a href="/blog/common-issues-toronto-homes" className="inline-flex items-center gap-2 text-blue-700 font-bold hover:text-blue-800 text-sm">
             See all red flags + what they cost to fix
@@ -554,6 +588,51 @@ const Index = () => {
         </div>
       </section>
 
+
+      {/* LIFESTYLE / TRUST PHOTO SECTION */}
+      <section className="py-0 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="rounded-2xl overflow-hidden grid md:grid-cols-2 shadow-xl">
+            {/* Photo */}
+            <div className="relative min-h-[320px]">
+              <img
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&q=80&auto=format&fit=crop"
+                alt="Certified home inspector examining a property in Ontario"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            {/* Content */}
+            <div className="bg-gray-900 text-white p-10 flex flex-col justify-center">
+              <div className="inline-flex items-center gap-2 bg-white/10 text-white text-sm font-bold px-3 py-1.5 rounded-full mb-5 w-fit">
+                <HardHat className="h-4 w-4" /> OAHI Certified Inspector
+              </div>
+              <h2 className="text-3xl font-bold mb-4 leading-tight">
+                What Happens During Your Inspection?
+              </h2>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Your inspector spends 2–4 hours examining every accessible system — roof, attic, foundation, electrical, plumbing, HVAC, and more. You're invited to walk through. Questions welcome.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "200+ point visual evaluation",
+                  "Thermal imaging + moisture meters included",
+                  "Digital report delivered within 24 hours",
+                  "Plain-language summary — no jargon",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-sm text-gray-200">
+                    <CheckCircle2 className="h-4 w-4 text-green-400 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a href="/booking" className="inline-flex items-center gap-2 bg-white text-gray-900 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors w-fit">
+                Book Your Inspection <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* 7. HOME INSPECTOR NEAR ME */}
       <section className="py-20 bg-white">
