@@ -331,10 +331,10 @@ export function ServicePageTemplate({
         <div className="container">
           <div className="text-center mb-8">
             <h2 className="font-heading text-2xl font-bold text-foreground mb-2">
-              {title} Available Throughout the GTA
+              {title} Available Across Ontario
             </h2>
             <p className="text-muted-foreground">
-              We provide {title.toLowerCase()} services across Toronto and surrounding areas
+              We provide {title.toLowerCase()} services across 106 cities throughout Ontario
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">

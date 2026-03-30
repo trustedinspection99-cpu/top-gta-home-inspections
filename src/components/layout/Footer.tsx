@@ -51,7 +51,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-primary-foreground/80 text-sm">
-              Professional home inspection services throughout the Greater Toronto Area. 
+              Certified home inspection services across Ontario — 106 cities, same-day availability.
             </p>
             <div className="flex gap-4">
               <a href="https://www.facebook.com/share/1ZhWQk97YY/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="Facebook">

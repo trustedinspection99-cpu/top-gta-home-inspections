@@ -371,12 +371,20 @@ export default function About() {
             <h3 className="font-heading text-xl font-semibold text-foreground mb-6 text-center">What We Inspect</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {[
-                { label: "Pre-Purchase Inspection", href: "/services/pre-purchase" },
-                { label: "Pre-Listing Inspection",  href: "/services/pre-listing" },
-                { label: "Condo Inspection",        href: "/services/condo" },
-                { label: "Radon Testing",           href: "/services/radon-testing" },
-                { label: "Mold Inspection",         href: "/services/mold-inspection" },
-                { label: "WETT Inspection",         href: "/services/wett" },
+                { label: "Pre-Purchase Inspection",   href: "/services/pre-purchase" },
+                { label: "Pre-Listing Inspection",    href: "/services/pre-listing" },
+                { label: "Condo Inspection",          href: "/services/condo" },
+                { label: "New Construction / PDI",    href: "/services/new-construction" },
+                { label: "Radon Testing",             href: "/services/radon-testing" },
+                { label: "Mold Inspection",           href: "/services/mold-inspection" },
+                { label: "Asbestos Testing",          href: "/services/asbestos-testing" },
+                { label: "WETT Inspection",           href: "/services/wett" },
+                { label: "Thermal Imaging",           href: "/services/thermal-imaging" },
+                { label: "Air Quality Testing",       href: "/services/air-quality-testing" },
+                { label: "Lead Paint Testing",        href: "/services/lead-paint-testing" },
+                { label: "Well Water Testing",        href: "/services/well-water-testing" },
+                { label: "Commercial Inspection",     href: "/services/commercial" },
+                { label: "Same-Day Inspection",       href: "/services/same-day-home-inspection" },
               ].map(link => (
                 <Link key={link.href} to={link.href} className="p-3 rounded-lg bg-background border border-border/50 hover:border-primary/50 text-sm text-center hover:bg-primary/5 transition-colors">
                   {link.label}
