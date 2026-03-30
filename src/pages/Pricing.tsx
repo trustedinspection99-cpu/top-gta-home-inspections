@@ -288,8 +288,9 @@ export default function Pricing() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mainInspections.map((inspection) => (
+          {/* Render helper */}
+          {(() => {
+            const renderCard = (inspection: typeof mainInspections[0]) => (
               <Card
                 key={inspection.title}
                 className={`relative ${inspection.popular ? 'border-primary shadow-lg' : ''}`}
@@ -332,8 +333,18 @@ export default function Pricing() {
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+            );
+            return (
+              <>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                  {mainInspections.slice(0, 3).map(renderCard)}
+                </div>
+                <div className="grid md:grid-cols-2 gap-8 lg:w-2/3 mx-auto">
+                  {mainInspections.slice(3).map(renderCard)}
+                </div>
+              </>
+            );
+          })()}
         </div>
       </section>
 
@@ -349,8 +360,8 @@ export default function Pricing() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {specialtyServices.map((service) => (
+          {(() => {
+            const renderSpecialty = (service: typeof specialtyServices[0]) => (
               <Card key={service.title} className="hover:shadow-md transition-shadow">
                 <CardContent className="pt-6">
                   <div className="flex justify-between items-start mb-3">
@@ -366,8 +377,18 @@ export default function Pricing() {
                   </Button>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+            );
+            return (
+              <>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                  {specialtyServices.slice(0, 6).map(renderSpecialty)}
+                </div>
+                <div className="grid sm:grid-cols-2 gap-6 lg:w-2/3 mx-auto">
+                  {specialtyServices.slice(6).map(renderSpecialty)}
+                </div>
+              </>
+            );
+          })()}
         </div>
       </section>
 
@@ -445,7 +466,7 @@ export default function Pricing() {
                 { factor: "Age of the home", detail: "Older homes (pre-1980) take longer to inspect due to complex plumbing, knob-and-tube wiring, and aging systems that require more documentation." },
                 { factor: "Property type", detail: "Condos, townhouses, semi-detached, and detached homes each have different scope. Commercial properties are priced separately based on size and system complexity." },
                 { factor: "Add-on services", detail: "Radon testing ($499+ — 2 visits required), mold inspection ($299+), sewer scope ($299+), and asbestos testing ($299+) extend the inspection scope. Thermal imaging is included free in every inspection." },
-                { factor: "Location", detail: "Travel time to rural properties in Ontario may add a small surcharge. Most GTA and Southern Ontario locations are covered at the base rate." },
+                { factor: "Location", detail: "Travel time to rural properties in Ontario may add a small surcharge. Most Ontario locations are covered at the base rate." },
                 { factor: "Urgency", detail: "Same-day and rush inspections for tight closing deadlines are accommodated at no extra charge when availability allows." },
               ].map(({ factor, detail }) => (
                 <div key={factor} className="flex gap-3">
@@ -481,7 +502,7 @@ export default function Pricing() {
                 },
                 {
                   q: "Can I get a same-day home inspection in Ontario?",
-                  a: "Yes. ASADS offers same-day booking and same-day report delivery across the GTA and Southern Ontario. Call (647) 801-9311 or book online — we accommodate urgent inspection requests for tight closing deadlines 7 days a week."
+                  a: "Yes. ASADS offers same-day booking and same-day report delivery across Ontario. Call (647) 801-9311 or book online — we accommodate urgent inspection requests for tight closing deadlines 7 days a week."
                 },
                 {
                   q: "How much does a mold inspection cost in Ontario?",
