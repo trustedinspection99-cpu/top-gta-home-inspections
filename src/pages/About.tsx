@@ -215,11 +215,11 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h2 id="about-haroon" className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-                Master Home Inspection & Structural Expertise in the GTA
+                Master Home Inspection & Structural Expertise in Ontario
               </h2>
               <div className="space-y-5 text-muted-foreground text-lg">
                 <p>
-                  <strong>ASADS Home Inspection</strong> is led by Haroon Choudhry, a <strong>Master Home Inspector</strong> with over 15 years of deep-rooted experience in the Greater Toronto Area's construction and inspection sectors.
+                  <strong>ASADS Home Inspection</strong> is led by Haroon Choudhry, a <strong>Master Home Inspector</strong> with over 15 years of deep-rooted experience in Ontario's construction and inspection sectors.
                 </p>
                 <p>
                   With a professional foundation as the former Owner and Principal Contractor of <strong>Aro Construction Inc.</strong>, Haroon provides a rare "inside-out" perspective. His background in <strong>structural restorations</strong> and general contracting allows him to identify critical mechanical and structural issues that standard inspections often overlook.
@@ -277,7 +277,7 @@ export default function About() {
               Accuracy, Transparency & Experience
             </h2>
             <p className="text-lg text-muted-foreground">
-              Guided by over 15 years of hands-on structural expertise in the Greater Toronto Area.
+              Guided by over 15 years of hands-on structural expertise across Ontario.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -461,7 +461,7 @@ export default function About() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Work With Us?</h2>
               <p className="text-blue-100 text-lg mb-6 leading-relaxed">
-                Experience the ASADS difference. Book your inspection today and see why thousands of GTA homeowners trust us.
+                Experience the ASADS difference. Book your inspection today and see why thousands of Ontario homeowners trust us.
               </p>
               <ul className="space-y-3 mb-8">
                 {[

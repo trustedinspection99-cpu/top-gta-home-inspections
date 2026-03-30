@@ -91,8 +91,6 @@ const specialtyServices = [
   { icon: FlaskConical,  title: "Lead Paint Testing",    description: "XRF screening and lab analysis. Essential for pre-1980 homes, renovations, and child safety.",                    href: "/services/lead-paint-testing",  price: "From $199", duration: "Lab 5–7 days" },
   { icon: Waves,         title: "Well Water Testing",    description: "MOH-certified test for E.coli, bacteria, nitrates & arsenic. Private wells, cottages & rural Ontario.",          href: "/services/well-water-testing",  price: "From $199", duration: "Lab 5–7 days" },
   { icon: Package,       title: "PDI Inspection",         description: "Independent pre-delivery inspection before Tarion closing. We catch builder deficiencies before you take possession.",                href: "/services/pdi-inspection",      price: "From $349", duration: "2–3 hrs" },
-  { icon: Zap,           title: "Same-Day Inspection",    description: "Need an inspection today? Call before noon — inspector arrives same day. No rush surcharge. 106 Ontario cities, 7 days a week.",            href: "/services/same-day-home-inspection", price: "From $299", duration: "Same day" },
-  { icon: ShieldAlert,   title: "Designated Substance Survey", description: "Legally required under Ontario OHSA before renovation or demolition. Covers all 11 designated substances. O.Reg 278/05 compliant.", href: "/services/designated-substance-survey", price: "From $399", duration: "Lab 3–5 days" },
 ];
 
 const trustItems = [

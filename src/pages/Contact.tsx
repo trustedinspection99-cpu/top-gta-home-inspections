@@ -144,7 +144,11 @@ export default function Contact() {
       </Helmet>
 
       {/* Hero — info only, no form */}
-      <section className="bg-gradient-to-br from-blue-800 to-blue-900 py-14 md:py-20 text-white">
+      <section className="relative py-14 md:py-20 text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=70&auto=format&fit=crop" alt="" className="w-full h-full object-cover" loading="eager" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/93 to-blue-800/90" />
+        </div>
         <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)", backgroundSize: "40px 40px" }} />
         <div className="container mx-auto px-4 relative z-10 max-w-3xl text-center">
           <div className="inline-flex items-center gap-2 bg-blue-700/40 backdrop-blur-sm px-4 py-2 rounded-full mb-5 border border-blue-600/50 text-sm font-medium">
