@@ -170,7 +170,7 @@ export default function About() {
       {/* Hero — info only */}
       <section className="relative py-14 md:py-20 text-white overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&q=70&auto=format&fit=crop" alt="" className="w-full h-full object-cover" loading="eager" />
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1920&q=70&auto=format&fit=crop" alt="" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/93 to-blue-800/90" />
         </div>
         <div className="container mx-auto px-4 max-w-3xl text-center relative z-10">
