@@ -91,6 +91,7 @@ const specialtyServices = [
   { icon: FlaskConical,  title: "Lead Paint Testing",    description: "XRF screening and lab analysis. Essential for pre-1980 homes, renovations, and child safety.",                    href: "/services/lead-paint-testing",  price: "From $199", duration: "Lab 5–7 days" },
   { icon: Waves,         title: "Well Water Testing",    description: "MOH-certified test for E.coli, bacteria, nitrates & arsenic. Private wells, cottages & rural Ontario.",          href: "/services/well-water-testing",  price: "From $199", duration: "Lab 5–7 days" },
   { icon: Package,       title: "PDI Inspection",         description: "Independent pre-delivery inspection before Tarion closing. We catch builder deficiencies before you take possession.",                href: "/services/pdi-inspection",      price: "From $349", duration: "2–3 hrs" },
+  { icon: Zap,           title: "Same-Day Inspection",    description: "Need an inspection today? Call before noon — inspector arrives same day. No rush surcharge. 106 Ontario cities, 7 days a week.",            href: "/services/same-day-home-inspection", price: "From $299", duration: "Same day" },
 ];
 
 const trustItems = [
@@ -400,10 +401,11 @@ export default function Services() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {specialtyServices.map((service) => {
+            {specialtyServices.map((service, index) => {
               const Icon = service.icon;
+              const isLoneLastItem = index === specialtyServices.length - 1 && specialtyServices.length % 3 === 1;
               return (
-                <div key={service.title} className="bg-white rounded-xl border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all p-5 flex gap-4">
+                <div key={service.title} className={`bg-white rounded-xl border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all p-5 flex gap-4 ${isLoneLastItem ? 'sm:col-span-2 lg:col-span-3' : ''}`}>
                   <div className="h-11 w-11 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
                     <Icon className="h-5 w-5 text-blue-600" />
                   </div>
