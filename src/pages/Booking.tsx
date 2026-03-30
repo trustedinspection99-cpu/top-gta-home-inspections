@@ -178,8 +178,12 @@ export default function Booking() {
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
-      <section className="py-16 md:py-24 hero-gradient text-primary-foreground">
-        <div className="container">
+      <section className="relative py-16 md:py-24 text-primary-foreground overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=70&auto=format&fit=crop" alt="" className="w-full h-full object-cover" loading="eager" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/93 to-blue-800/90" />
+        </div>
+        <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">
               Schedule a Home Inspection in Ontario

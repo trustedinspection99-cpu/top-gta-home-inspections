@@ -87,7 +87,17 @@ export function HeroBookingSection({
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-800 to-blue-900 py-16 md:py-20 text-white overflow-hidden">
+    <section className="relative py-16 md:py-20 text-white overflow-hidden">
+      {/* Background photo */}
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=70&auto=format&fit=crop"
+          alt=""
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/93 to-blue-800/90" />
+      </div>
       {/* subtle grid texture */}
       <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)", backgroundSize: "40px 40px" }} />
 
