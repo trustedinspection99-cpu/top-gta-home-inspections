@@ -596,7 +596,7 @@ const Index = () => {
             {/* Photo */}
             <div className="relative min-h-[320px]">
               <img
-                src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=80&auto=format&fit=crop"
+                src="/images/thermal-inspection.jpg"
                 alt="Certified home inspector examining a property in Ontario"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
