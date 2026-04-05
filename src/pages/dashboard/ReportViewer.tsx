@@ -50,8 +50,21 @@ export default function ReportViewer() {
         const inspectionDate = j?.completed_at
           ? new Date(j.completed_at).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })
           : new Date().toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
+        // Normalize mobile JSON to match buildReportHtml schema
+        const normalizedData = {
+          ...rep.report_data,
+          notInspected: rep.report_data.notInspected ?? [],
+          sections: (rep.report_data.sections ?? []).map((s: any) => ({
+            ...s,
+            satisfactory: s.satisfactory ?? [],
+            findings: (s.findings ?? []).map((f: any) => ({
+              ...f,
+              implication: f.implication ?? f.observation ?? '',
+            })),
+          })),
+        };
         const html = buildReportHtml(
-          rep.report_data,
+          normalizedData,
           {
             address: j?.address ?? '',
             city: j?.city ?? '',
