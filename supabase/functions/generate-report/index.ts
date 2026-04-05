@@ -142,11 +142,18 @@ Deno.serve(async (req) => {
   try {
     const { mode, messages, jobContext, photoUrls, photoUrl, context } = await req.json();
 
-    const apiKey = Deno.env.get('CLAUDE_API_KEY');
+    const apiKey = Deno.env.get('ANTHROPIC_API_KEY') ?? Deno.env.get('CLAUDE_API_KEY');
     if (!apiKey) {
-      return new Response(JSON.stringify({ error: 'CLAUDE_API_KEY not set' }), {
+      return new Response(JSON.stringify({ error: 'No API key found — set ANTHROPIC_API_KEY in Supabase secrets' }), {
         headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
         status: 500,
+      });
+    }
+
+    if (!Array.isArray(messages)) {
+      return new Response(JSON.stringify({ error: 'messages must be an array' }), {
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+        status: 400,
       });
     }
 
@@ -191,18 +198,34 @@ Deno.serve(async (req) => {
     if (mode === 'summarize') {
       const cleanedMessages = claudeMessages
         .filter((m: { role: string; content: string }) =>
-          !m.content.includes('<!DOCTYPE') && !m.content.includes('<html')
+          m.content &&
+          m.content.trim() !== '' &&
+          !m.content.startsWith('__REPORT__') &&
+          !m.content.includes('<!DOCTYPE') &&
+          !m.content.includes('<html')
         )
+        .filter((m: { role: string; content: string }) => m.role === 'user' || m.role === 'assistant')
         .map((m: { role: string; content: string }) => ({
-          ...m,
+          role: m.role as 'user' | 'assistant',
           content: m.content.length > 2000 ? m.content.slice(0, 2000) + '…' : m.content,
         }));
 
       // Anthropic requires first message to be user — strip any leading assistant messages
-      const firstUserIdx = cleanedMessages.findIndex((m: { role: string; content: string }) => m.role === 'user');
-      const trimmedMessages = firstUserIdx > 0 ? cleanedMessages.slice(firstUserIdx) : cleanedMessages;
+      const firstUserIdx = cleanedMessages.findIndex((m: { role: string }) => m.role === 'user');
+      const sliced = firstUserIdx > 0 ? cleanedMessages.slice(firstUserIdx) : cleanedMessages;
 
-      // Bridge: prevent two consecutive user messages and signal Claude to skip completion check
+      // Collapse consecutive same-role messages (Anthropic rejects these)
+      const deduped: { role: 'user' | 'assistant'; content: string }[] = [];
+      for (const msg of sliced) {
+        if (deduped.length > 0 && deduped[deduped.length - 1].role === msg.role) {
+          deduped[deduped.length - 1].content += '\n' + msg.content;
+        } else {
+          deduped.push({ ...msg });
+        }
+      }
+      const trimmedMessages = deduped;
+
+      // Bridge: ensure last message before extraction prompt is from assistant
       if (trimmedMessages.length > 0 && trimmedMessages[trimmedMessages.length - 1].role === 'user') {
         trimmedMessages.push({ role: 'assistant', content: 'All sections reviewed. Extracting findings as structured JSON now.' });
       }
@@ -263,8 +286,22 @@ Only include sections that have findings. Return ONLY the raw JSON object.`,
     }
 
     // Chat mode — strip leading assistant messages (greeting) so first message is user
-    const firstUserIdx = claudeMessages.findIndex((m: { role: string; content: string }) => m.role === 'user');
-    const chatMessages = firstUserIdx > 0 ? claudeMessages.slice(firstUserIdx) : claudeMessages;
+    const validChat = claudeMessages
+      .filter((m: { role: string; content: string }) =>
+        m.content && m.content.trim() !== '' && !m.content.startsWith('__REPORT__') &&
+        (m.role === 'user' || m.role === 'assistant')
+      );
+    const firstUserIdx = validChat.findIndex((m: { role: string; content: string }) => m.role === 'user');
+    const slicedChat = firstUserIdx > 0 ? validChat.slice(firstUserIdx) : validChat;
+    // Collapse consecutive same-role messages
+    const chatMessages: { role: string; content: string }[] = [];
+    for (const msg of slicedChat) {
+      if (chatMessages.length > 0 && chatMessages[chatMessages.length - 1].role === msg.role) {
+        chatMessages[chatMessages.length - 1].content += '\n' + msg.content;
+      } else {
+        chatMessages.push({ ...msg });
+      }
+    }
 
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
