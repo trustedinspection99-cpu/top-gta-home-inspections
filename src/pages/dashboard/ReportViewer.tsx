@@ -81,14 +81,18 @@ export default function ReportViewer() {
       }
 
       // Fetch HTML from storage URL
-      const res = await fetch(rep.storage_url);
-      if (!res.ok) {
-        setError('Could not load report file.');
-        setLoading(false);
-        return;
+      try {
+        const res = await fetch(rep.storage_url);
+        if (!res.ok) {
+          setError('Could not load report file.');
+          setLoading(false);
+          return;
+        }
+        const html = await res.text();
+        setHtmlContent(html);
+      } catch {
+        setError('Could not load report file. Check your connection.');
       }
-      const html = await res.text();
-      setHtmlContent(html);
       setLoading(false);
     }
     load();
