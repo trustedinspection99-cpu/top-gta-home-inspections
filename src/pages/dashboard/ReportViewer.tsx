@@ -72,8 +72,8 @@ export default function ReportViewer() {
             inspectionDate,
             inspector: 'Haroon Chaudhary',
           },
-          [],
-          ''
+          normalizedData.photoUrls ?? [],
+          normalizedData.photoUrls?.[0] ?? ''
         );
         setHtmlContent(html);
         setLoading(false);
