@@ -67,6 +67,7 @@ const WellWaterTesting = lazy(() => import('./pages/services/WellWaterTesting'))
 const SameDayInspection = lazy(() => import('./pages/services/SameDayInspection'));
 const AirQuality = lazy(() => import('./pages/services/AirQuality'));
 const DesignatedSubstanceSurvey = lazy(() => import('./pages/services/DesignatedSubstanceSurvey'));
+const ContractorOversight = lazy(() => import('./pages/services/ContractorOversight'));
 const ServiceCityPage = lazy(() => import('./pages/services/ServiceCityPage'));
 const BlogCityPage = lazy(() => import('./pages/blog/BlogCityPage'));
 
@@ -132,6 +133,7 @@ export const routes: RouteObject[] = [
       { path: 'services/sewer-scope', element: <Navigate to="/services/pre-purchase" replace /> },
       { path: 'services/air-quality', element: <AirQuality /> },
       { path: 'services/designated-substance-survey', element: <DesignatedSubstanceSurvey /> },
+      { path: 'services/contractor-oversight', element: <ContractorOversight /> },
       { path: 'services/same-day-home-inspection', element: <SameDayInspection /> },
       { path: 'services/:serviceSlug/:citySlug', element: <ServiceCityPage /> },
 

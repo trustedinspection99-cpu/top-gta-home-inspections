@@ -674,6 +674,80 @@ export const serviceDefinitions: ServiceDef[] = [
       { name: "Radon Testing", slug: "radon-testing" },
     ],
   },
+  {
+    slug: "contractor-oversight",
+    name: "Forensic Renovation Inspection & Contractor Oversight",
+    shortName: "Forensic Renovation",
+    price: "From $249/Visit",
+    duration: "1–2 Hours Per Visit",
+    metaTitleTemplate: "Forensic Renovation Inspection {city} | ASADS",
+    metaDescTemplate:
+      "Forensic renovation inspection in {city}. Verify contractor licences, OBC compliance & build court-ready evidence. Per-visit from $249. (647) 801-9311.",
+    heroTitle:
+      "Forensic Renovation Inspection {city} — Verify Licences, Build Court-Ready Evidence, Stop Contractor Fraud",
+    whatWeCheck: [
+      "Contractor licence & insurance verification (ECRA, TSSA)",
+      "Building permit status — confirmed pulled & posted on site",
+      "Ontario Building Code compliance at each milestone stage",
+      "Foundation, formwork & concrete work (pre-pour)",
+      "Structural framing, sheathing & load-bearing compliance",
+      "Electrical rough-in — ESA/ECRA licensed trade verification",
+      "Plumbing rough-in — TSSA licensed trade & code compliance",
+      "HVAC installation, venting & gas connections",
+      "Insulation & vapour barrier (pre-drywall stage)",
+      "Materials match contracted specs",
+      "Milestone progress photo documentation",
+      "Deficiency punch list with corrective-action recommendations",
+    ],
+    whyItMatters:
+      "Homeowners in {city} hire contractors trusting that the work will be done properly, legally, and to code. In reality, Ontario has tens of thousands of active contractor disputes every year — unlicensed trades, permits pulled but never inspected, and deficiencies buried behind drywall. ASADS forensic renovation inspections in {city} produce evidence-grade documentation at every critical stage: licence verification, OBC compliance checks, and timestamped photo reports written to legal evidentiary standards. This forensic documentation is what forces contractors to correct deficiencies before payment — and what wins disputes in Small Claims Court and Ontario Superior Court. Our inspector is available for affidavits and court appearances against {city} contractors.",
+    processSteps: [
+      {
+        title: "Project Assessment",
+        body: "Tell us your renovation scope, contract value, and trade schedule. We recommend the right number of ASADS inspection visits and provide a fixed per-visit quote.",
+      },
+      {
+        title: "ASADS On-Site Inspection",
+        body: "Inspector visits at critical stages — pre-pour, rough-in, pre-drywall, final — verifying licences, permits, OBC compliance, and workmanship.",
+      },
+      {
+        title: "Same-Day Site Report",
+        body: "Written report delivered the same day with timestamped photos, pass/fail per trade, OBC-cited deficiencies, and corrective-action requirements.",
+      },
+      {
+        title: "Legal Support if Needed",
+        body: "If disputes arise, our reports are legally defensible. We provide affidavits and inspector court appearances for {city} legal proceedings.",
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does contractor oversight cost in {city}?",
+        a: "ASADS contractor oversight visits in {city} start from $249 per inspection. A rough-in + pre-drywall package (2 visits) starts at $449, and a full 4-visit renovation package starts at $849. Re-inspections after contractor corrections are $149. The per-visit cost is a small fraction of what a single buried deficiency typically costs to fix after the fact — particularly in {city}'s renovation market where correcting work behind closed walls often costs $5,000–$25,000.",
+      },
+      {
+        q: "Can you verify my contractor's licence in {city}?",
+        a: "Yes. Ontario's ECRA and TSSA maintain public registries we check at every visit. An electrician in {city} working without ECRA registration is performing illegal work — any electrical fire caused by unlicensed wiring will be denied by your homeowner insurance. We document the licence verification result in every inspection report.",
+      },
+      {
+        q: "What if I'm already having problems with my contractor in {city}?",
+        a: "It's never too late. A mid-project or post-completion inspection in {city} establishes a documented baseline — what has been done, what is deficient, and what remains. This report is what enables you to legally withhold payment, file a complaint with the applicable trades board, or initiate Small Claims Court action. We can also investigate suspected buried deficiencies using thermal imaging when walls are already closed.",
+      },
+      {
+        q: "Is this different from the city of {city}'s building permit inspection?",
+        a: "Significantly different. Municipal building inspectors in {city} verify minimum OBC compliance at scheduled milestones — they do not advocate for you, they don't produce written reports you own, and they only check pass/fail against code minimums. ASADS goes further: we verify workmanship quality, trade licences, insurance, contract compliance, and material specs — and deliver a detailed report with photos that is yours to use in negotiations or court.",
+      },
+      {
+        q: "Can your inspector appear in court in {city}?",
+        a: "Yes. ASADS provides inspector court appearances for Small Claims Court (up to $35,000) and Ontario Superior Court proceedings involving contractor disputes in {city}. Our forensic inspection reports are written to evidentiary standards — timestamped photos, specific OBC citations, and plain-language deficiency descriptions a judge can follow. Many {city} contractor disputes are resolved before trial once the opposing party's lawyer reviews a properly prepared forensic inspection report. Court appearance fees are quoted separately.",
+      },
+    ],
+    relatedServices: [
+      { name: "New Construction Inspection", slug: "new-construction" },
+      { name: "Pre-Purchase Inspection", slug: "pre-purchase" },
+      { name: "Commercial Inspection", slug: "commercial" },
+      { name: "Asbestos Testing", slug: "asbestos-testing" },
+    ],
+  },
 ];
 
 /** Lookup map: serviceSlug → ServiceDef */
