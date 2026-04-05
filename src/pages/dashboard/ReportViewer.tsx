@@ -106,7 +106,14 @@ export default function ReportViewer() {
         </Button>
         {report && (
           <Button size="sm" variant="outline" className="border-blue-300 text-blue-700 hover:bg-blue-50"
-            onClick={() => window.print()}>
+            onClick={() => {
+            const win = window.open('', '_blank');
+            if (!win) return;
+            win.document.write(htmlContent);
+            win.document.close();
+            win.focus();
+            setTimeout(() => { win.print(); }, 500);
+          }}>
             <Printer className="h-4 w-4 mr-2" />
             Print / Save PDF
           </Button>
