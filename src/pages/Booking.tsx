@@ -30,6 +30,7 @@ const inspectionTypes = [
   { value: "lead-paint", label: "Lead Paint Testing", price: "$349+" },
   { value: "air-quality", label: "Air Quality Testing", price: "$249+" },
   { value: "well-water", label: "Well Water Testing", price: "$199+" },
+  { value: "contractor-oversight", label: "Forensic Renovation Inspection", price: "$249+/visit" },
 ];
 
 const timeSlots = [

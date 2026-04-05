@@ -16,6 +16,7 @@ const INSPECTION_TYPES = [
   { label: "Well Water Testing — From $199", value: "Well Water Testing" },
   { label: "Lead Paint Testing", value: "Lead Paint Testing" },
   { label: "Commercial Inspection", value: "Commercial Inspection" },
+  { label: "Forensic Renovation Inspection — From $249/visit", value: "Forensic Renovation Inspection" },
   { label: "Other / Not Sure", value: "Other / Not Sure" },
 ];
 
