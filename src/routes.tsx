@@ -89,6 +89,10 @@ const AsadAnalyticsPage = lazy(() => import('./pages/admin/AsadAnalyticsPage'));
 const TrustedRealtorsPage = lazy(() => import('./pages/TrustedRealtorsPage'));
 const RealtorProfilePage = lazy(() => import('./pages/RealtorProfilePage'));
 
+// Public client-facing pages (no auth required)
+const AgreementPage = lazy(() => import('./pages/AgreementPage'));
+const ReportPortalPage = lazy(() => import('./pages/ReportPortalPage'));
+
 export const routes: RouteObject[] = [
   {
     path: '/',
@@ -150,6 +154,10 @@ export const routes: RouteObject[] = [
       { path: 'admin/asad', element: <ProtectedRoute role="admin"><AsadAnalyticsPage /></ProtectedRoute> },
       { path: 'trusted-realtors', element: <TrustedRealtorsPage /> },
       { path: 'trusted-realtors/:slug', element: <RealtorProfilePage /> },
+
+      // Public client-facing pages
+      { path: 'agreement/:token', element: <AgreementPage /> },
+      { path: 'report/:id', element: <ReportPortalPage /> },
 
       { path: '*', element: <NotFound /> },
     ],
