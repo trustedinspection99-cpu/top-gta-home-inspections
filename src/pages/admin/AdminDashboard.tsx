@@ -46,10 +46,10 @@ export default function AdminDashboard() {
 
     const jobList = (jobData as DbJob[]) ?? [];
 
-    // Fetch reports for completed jobs
-    const completedIds = jobList.filter(j => j.status === 'completed').map(j => j.id);
-    const { data: reportData } = completedIds.length > 0
-      ? await supabase.from('reports').select('*').in('job_id', completedIds)
+    // Fetch reports for all jobs
+    const allJobIds = jobList.map(j => j.id);
+    const { data: reportData } = allJobIds.length > 0
+      ? await supabase.from('reports').select('*').in('job_id', allJobIds)
       : { data: [] };
 
     const reportMap = Object.fromEntries((reportData ?? []).map((r: DbReport) => [r.job_id, r]));
