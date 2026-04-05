@@ -14,6 +14,7 @@ import {
   Flame,
   Wind,
   ShieldAlert,
+  ShieldCheck,
   FlaskConical,
   Waves,
   Eye,
@@ -92,6 +93,7 @@ const specialtyServices = [
   { icon: Waves,         title: "Well Water Testing",    description: "MOH-certified test for E.coli, bacteria, nitrates & arsenic. Private wells, cottages & rural Ontario.",          href: "/services/well-water-testing",  price: "From $199", duration: "Lab 5–7 days" },
   { icon: Package,       title: "PDI Inspection",         description: "Independent pre-delivery inspection before Tarion closing. We catch builder deficiencies before you take possession.",                href: "/services/pdi-inspection",      price: "From $349", duration: "2–3 hrs" },
   { icon: Zap,           title: "Same-Day Inspection",    description: "Need an inspection today? Call before noon — inspector arrives same day. No rush surcharge. 106 Ontario cities, 7 days a week.",            href: "/services/same-day-home-inspection", price: "From $299", duration: "Same day" },
+  { icon: ShieldCheck,   title: "Forensic Renovation Inspection", description: "Protect your renovation from contractor fraud. Licence verification, OBC compliance at every stage, and forensic-grade reports admissible in court.", href: "/services/contractor-oversight",     price: "From $249/Visit", duration: "Per visit" },
 ];
 
 const trustItems = [
