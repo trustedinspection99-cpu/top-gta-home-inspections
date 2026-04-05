@@ -148,6 +148,7 @@ export const routes: RouteObject[] = [
       { path: 'admin', element: <ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute> },
       { path: 'admin/jobs/new', element: <ProtectedRoute role="admin"><NewJobPage /></ProtectedRoute> },
       { path: 'admin/jobs/:id/report', element: <ProtectedRoute role="admin"><ReportGeneratorPage /></ProtectedRoute> },
+      { path: 'admin/reports/:id', element: <ProtectedRoute role="admin"><ReportViewer /></ProtectedRoute> },
       { path: 'admin/realtors', element: <ProtectedRoute role="admin"><AdminRealtorsPage /></ProtectedRoute> },
       { path: 'admin/outreach', element: <ProtectedRoute role="admin"><OutreachPage /></ProtectedRoute> },
       { path: 'admin/seo', element: <ProtectedRoute role="admin"><SeoRankingsPage /></ProtectedRoute> },

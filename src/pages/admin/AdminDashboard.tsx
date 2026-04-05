@@ -277,6 +277,15 @@ export default function AdminDashboard() {
                       </span>
                     )}
 
+                    {job.report && (job.report.storage_url === 'mobile' ? !!job.report.report_data : true) && (
+                      <Button asChild size="sm" variant="outline" className="border-slate-300 text-slate-700 text-xs h-7 hover:bg-slate-50">
+                        <Link to={`/admin/reports/${job.report.id}`} className="flex items-center gap-1">
+                          <FileText className="h-3 w-3" />
+                          View Report
+                        </Link>
+                      </Button>
+                    )}
+
                     {/* Mark Paid button — shown when report is sent but not yet visible */}
                     {job.report && (job.report.status === 'sent' || job.report.status === 'paid') && (
                       <Button

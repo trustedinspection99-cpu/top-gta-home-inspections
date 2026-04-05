@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import { supabase, DbReport, DbJob } from '@/lib/supabase';
 import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Printer, AlertCircle } from 'lucide-react';
+import { buildReportHtml } from '@/lib/reportTemplate';
 
 export default function ReportViewer() {
   const { id } = useParams<{ id: string }>();
+  const location = useLocation();
+  const isAdmin = location.pathname.startsWith('/admin');
   const [report, setReport] = useState<DbReport | null>(null);
   const [job, setJob] = useState<DbJob | null>(null);
   const [htmlContent, setHtmlContent] = useState<string>('');
@@ -41,7 +44,30 @@ export default function ReportViewer() {
         document.title = `ASADS Inspection Report - ${j.address}, ${j.city}${date ? ` - ${date}` : ''}`;
       }
 
-      // Fetch HTML from storage
+      // Mobile-generated report: render from report_data JSON
+      if (rep.storage_url === 'mobile' && rep.report_data) {
+        const j = jobData as DbJob | null;
+        const inspectionDate = j?.completed_at
+          ? new Date(j.completed_at).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })
+          : new Date().toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
+        const html = buildReportHtml(
+          rep.report_data,
+          {
+            address: j?.address ?? '',
+            city: j?.city ?? '',
+            inspectionType: j?.inspection_type ?? '',
+            inspectionDate,
+            inspector: 'Haroon Chaudhary',
+          },
+          [],
+          ''
+        );
+        setHtmlContent(html);
+        setLoading(false);
+        return;
+      }
+
+      // Fetch HTML from storage URL
       const res = await fetch(rep.storage_url);
       if (!res.ok) {
         setError('Could not load report file.');
@@ -60,7 +86,7 @@ export default function ReportViewer() {
     <PortalLayout>
       <div className="flex items-center justify-between mb-6">
         <Button asChild variant="ghost" size="sm">
-          <Link to="/dashboard" className="flex items-center gap-2 text-gray-600">
+          <Link to={isAdmin ? '/admin' : '/dashboard'} className="flex items-center gap-2 text-gray-600">
             <ArrowLeft className="h-4 w-4" />
             Back to Dashboard
           </Link>
