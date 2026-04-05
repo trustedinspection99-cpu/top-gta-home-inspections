@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { supabase } from '../lib/supabase';
+import { supabase, DbJob } from '../lib/supabase';
+import { buildReportHtml } from '@/lib/reportTemplate';
 
 export default function ReportPortalPage() {
   const { id } = useParams<{ id: string }>();
@@ -13,27 +14,65 @@ export default function ReportPortalPage() {
   useEffect(() => {
     if (!id) { setError('Invalid report link.'); setLoading(false); return; }
 
-    supabase
-      .from('reports')
-      .select('html_content, report_data, created_at')
-      .eq('id', id)
-      .single()
-      .then(({ data, error: err }) => {
-        if (err || !data) {
-          setError('Report not found. The link may have expired or is invalid.');
-        } else {
-          setHtmlContent(data.html_content ?? '');
-          // Extract address from email subject: "Inspection Report — 123 Main St, Toronto"
-          const subject: string = (data.report_data as any)?.clientEmail?.subject ?? '';
-          const match = subject.match(/—\s*(.+)$/);
-          if (match) setAddress(match[1].trim());
-        }
+    (async () => {
+      const { data: rep, error: repErr } = await supabase
+        .from('reports')
+        .select('*')
+        .eq('id', id)
+        .single();
+
+      if (repErr || !rep) {
+        setError('Report not found. The link may have expired or is invalid.');
         setLoading(false);
-      });
+        return;
+      }
+
+      const { data: jobData } = await supabase
+        .from('jobs').select('*').eq('id', rep.job_id).single();
+      const job = jobData as DbJob | null;
+
+      if (job) setAddress(`${job.address}, ${job.city}`);
+
+      if (rep.storage_url === 'mobile' && rep.report_data) {
+        // Mobile-generated report — build HTML from report_data JSON
+        const inspectionDate = job?.completed_at
+          ? new Date(job.completed_at).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })
+          : new Date().toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
+        const normalized = {
+          ...rep.report_data,
+          notInspected: rep.report_data.notInspected ?? [],
+          sections: (rep.report_data.sections ?? []).map((s: any) => ({
+            ...s,
+            satisfactory: s.satisfactory ?? [],
+            findings: (s.findings ?? []).map((f: any) => ({
+              ...f,
+              implication: f.implication ?? f.observation ?? '',
+            })),
+          })),
+        };
+        setHtmlContent(buildReportHtml(
+          normalized,
+          { address: job?.address ?? '', city: job?.city ?? '', inspectionType: job?.inspection_type ?? '', inspectionDate, inspector: 'Haroon Chaudhary' },
+          normalized.photoUrls ?? [],
+          normalized.photoUrls?.[0] ?? ''
+        ));
+      } else if (rep.storage_url && rep.storage_url !== 'mobile') {
+        // Legacy: fetch HTML from storage URL
+        const res = await fetch(rep.storage_url);
+        setHtmlContent(res.ok ? await res.text() : '');
+      }
+
+      setLoading(false);
+    })();
   }, [id]);
 
   function handlePrint() {
-    window.print();
+    const win = window.open('', '_blank');
+    if (!win) return;
+    win.document.write(htmlContent);
+    win.document.close();
+    win.focus();
+    setTimeout(() => { win.print(); }, 500);
   }
 
   if (loading) return (
