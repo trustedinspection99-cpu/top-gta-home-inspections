@@ -134,12 +134,6 @@ const localBusinessSchema = {
     "name": "Ontario",
     "addressCountry": "CA"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": 4.9,
-    "reviewCount": 1500,
-    "bestRating": "5"
-  },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],

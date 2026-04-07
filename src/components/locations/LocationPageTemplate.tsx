@@ -167,13 +167,6 @@ export function LocationPageTemplate({
           name: region
         }
       },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: 4.9,
-        reviewCount: 247,
-        bestRating: 5,
-        worstRating: 1,
-      },
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],

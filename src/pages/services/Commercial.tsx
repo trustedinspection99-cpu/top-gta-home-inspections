@@ -153,12 +153,7 @@ export default function Commercial() {
       "opens": "07:00",
       "closes": "22:00"
     },
-    "priceRange": "$$$",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": 4.9,
-      "reviewCount": 247
-    }
+    "priceRange": "$$$"
   };
 
   // Schema 2: Service
@@ -329,13 +324,6 @@ export default function Commercial() {
     "url": serviceUrl,
     "paymentAccepted": "Cash, Credit Card, Debit, E-Transfer, Corporate Billing",
     "openingHours": "Mo-Su 07:00-22:00",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": 4.9,
-      "bestRating": 5,
-      "worstRating": 1,
-      "reviewCount": 247
-    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Commercial Inspection Services",

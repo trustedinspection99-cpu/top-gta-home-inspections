@@ -136,8 +136,7 @@ export default function NewConstruction() {
     },
     "geo": { "@type": "GeoCoordinates", "latitude": 43.3990, "longitude": -80.3271 },
     "areaServed": featuredLocations.map(loc => ({ "@type": "City", "name": loc.name })),
-    "priceRange": "$$",
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 247 }
+    "priceRange": "$$"
   };
 
   // Schema 2: Service
@@ -202,8 +201,7 @@ export default function NewConstruction() {
       "postalCode": "N3H 0C1",
       "addressCountry": "CA"
     },
-    "url": serviceUrl,
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.9, "bestRating": 5, "worstRating": 1, "reviewCount": 247 }
+    "url": serviceUrl
   };
 
   return (

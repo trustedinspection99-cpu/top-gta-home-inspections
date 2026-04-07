@@ -145,14 +145,9 @@
        "opens": "07:00",
        "closes": "22:00"
      },
-     "priceRange": "$$",
-     "aggregateRating": {
-       "@type": "AggregateRating",
-       "ratingValue": 4.9,
-       "reviewCount": 247
-     }
+     "priceRange": "$$"
    };
- 
+
    // Schema 2: Service
    const serviceSchema = {
      "@context": "https://schema.org",
@@ -315,13 +310,6 @@
      "url": serviceUrl,
      "paymentAccepted": "Cash, Credit Card, Debit, E-Transfer",
      "openingHours": "Mo-Su 07:00-22:00",
-     "aggregateRating": {
-       "@type": "AggregateRating",
-       "ratingValue": 4.9,
-       "bestRating": "5",
-       "worstRating": "1",
-       "reviewCount": 247
-     },
      "review": [
        {
          "@type": "Review",

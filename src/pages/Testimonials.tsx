@@ -57,13 +57,6 @@ export default function Testimonials() {
       "postalCode": "N3H 0C1",
       "addressCountry": "CA"
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": 4.9,
-      "reviewCount": testimonialsData.length.toString(),
-      "bestRating": "5",
-      "worstRating": "1"
-    },
     "review": schemaReviews.map(t => ({
       "@type": "Review",
       "author": {
@@ -77,14 +70,6 @@ export default function Testimonials() {
         "ratingValue": t.rating.toString(),
         "bestRating": "5",
         "worstRating": "1"
-      },
-      "itemReviewed": {
-        "@type": "Service",
-        "name": t.service,
-        "provider": {
-          "@type": "LocalBusiness",
-          "name": "ASADS Home Inspection"
-        }
       }
     }))
   };
