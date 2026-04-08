@@ -6,12 +6,51 @@ import { Button } from '@/components/ui/button';
 import {
   PlusCircle, FileText, Clock, CheckCircle2, Calendar, Users, DollarSign,
   Send, ListChecks, BadgeCheck, Link2, BarChart2, MessageCircle, Mail,
-  Bell, ChevronDown, ChevronUp, XCircle,
+  Bell, ChevronDown, ChevronUp, XCircle, Eye,
 } from 'lucide-react';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 interface JobRow extends DbJob { report?: DbReport; }
+
+interface VisitorEvent {
+  id: string; session_id: string; created_at: string; type: string; page: string | null; data: any;
+}
+
+interface VisitorSession {
+  id: string; created_at: string; entry_page: string; referrer: string | null;
+  utm_source: string | null; utm_medium: string | null; utm_campaign: string | null;
+  utm_term: string | null; source: string;
+  visitor_events: VisitorEvent[];
+  // computed
+  page_count: number; converted: boolean; is_live: boolean;
+}
+
+const SOURCE_META: Record<string, { icon: string; label: string }> = {
+  organic:  { icon: '🔍', label: 'Organic Search' },
+  direct:   { icon: '🔗', label: 'Direct' },
+  referral: { icon: '↗️', label: 'Referral' },
+  paid:     { icon: '💰', label: 'Paid Ads' },
+  social:   { icon: '📱', label: 'Social' },
+};
+
+const EVENT_ICONS: Record<string, string> = {
+  page_view:      '📄',
+  booking_start:  '📋',
+  booking_submit: '✅',
+  cta_click:      '🖱',
+  leave:          '👋',
+};
+
+const fmtRelative = (iso: string) => {
+  const diff = Date.now() - new Date(iso).getTime();
+  const mins = Math.floor(diff / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return `${mins}m ago`;
+  const hrs = Math.floor(mins / 60);
+  if (hrs < 24) return `${hrs}h ago`;
+  return `${Math.floor(hrs / 24)}d ago`;
+};
 
 const JOB_STATUS_COLORS: Record<string, string> = {
   scheduled: 'bg-blue-100 text-blue-700',
@@ -27,7 +66,7 @@ const REPORT_STATUS_COLORS: Record<string, string> = {
   visible: 'bg-green-100 text-green-700',
 };
 
-type Tab = 'jobs' | 'asad' | 'notifications';
+type Tab = 'jobs' | 'asad' | 'visitors' | 'notifications';
 
 const LAST_SEEN_KEY = 'pt_asads_admin_last_seen';
 
@@ -46,6 +85,12 @@ export default function AdminDashboard() {
   const [attachUrl, setAttachUrl] = useState('');
   const [attachSaving, setAttachSaving] = useState(false);
   const [attachError, setAttachError] = useState('');
+
+  // Visitors
+  const [visitors, setVisitors] = useState<VisitorSession[]>([]);
+  const [liveCount, setLiveCount] = useState(0);
+  const [visitorsLoaded, setVisitorsLoaded] = useState(false);
+  const [expandedSession, setExpandedSession] = useState<string | null>(null);
 
   // Notifications = Asad bookings since last seen
   const lastSeenRef = useRef<string>(sessionStorage.getItem(LAST_SEEN_KEY) ?? new Date(0).toISOString());
@@ -90,6 +135,34 @@ export default function AdminDashboard() {
       asadBooked: logs.length,
     });
     setLoading(false);
+  }
+
+  async function loadVisitors() {
+    const { data } = await supabase
+      .from('visitor_sessions')
+      .select('*, visitor_events(*)')
+      .order('created_at', { ascending: false })
+      .limit(200);
+
+    if (!data) return;
+
+    const FIVE_MIN = 5 * 60 * 1000;
+    const now = Date.now();
+
+    const enriched: VisitorSession[] = (data as any[]).map(s => {
+      const events: VisitorEvent[] = (s.visitor_events ?? []).sort(
+        (a: VisitorEvent, b: VisitorEvent) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime()
+      );
+      const lastEvent = events.at(-1);
+      const isLive = lastEvent ? (now - new Date(lastEvent.created_at).getTime()) < FIVE_MIN : false;
+      const pageCount = events.filter(e => e.type === 'page_view').length;
+      const converted = events.some(e => ['booking_submit', 'quote_submit'].includes(e.type));
+      return { ...s, visitor_events: events, page_count: pageCount, converted, is_live: isLive };
+    });
+
+    setVisitors(enriched);
+    setLiveCount(enriched.filter(s => s.is_live).length);
+    setVisitorsLoaded(true);
   }
 
   useEffect(() => {
@@ -279,6 +352,7 @@ export default function AdminDashboard() {
           { label: 'Active', value: stats.pending, icon: <Clock className="h-5 w-5 text-amber-600" />, bg: 'bg-amber-50' },
           { label: 'Completed', value: stats.completed, icon: <CheckCircle2 className="h-5 w-5 text-green-600" />, bg: 'bg-green-50' },
           { label: 'Asad Bookings', value: stats.asadBooked, icon: <MessageCircle className="h-5 w-5 text-indigo-600" />, bg: 'bg-indigo-50' },
+          { label: 'Live Visitors', value: liveCount, icon: <Eye className="h-5 w-5 text-rose-600" />, bg: 'bg-rose-50' },
           { label: 'Listed Realtors', value: stats.realtors, icon: <Users className="h-5 w-5 text-purple-600" />, bg: 'bg-purple-50' },
         ].map(s => (
           <div key={s.label} className={`${s.bg} rounded-xl p-5`}>
@@ -296,11 +370,16 @@ export default function AdminDashboard() {
         {([
           { id: 'jobs', label: 'Jobs', count: stats.total },
           { id: 'asad', label: 'Asad Bookings', count: stats.asadBooked },
+          { id: 'visitors', label: 'Visitors', count: liveCount },
           { id: 'notifications', label: 'Notifications', count: unreadCount },
         ] as { id: Tab; label: string; count: number }[]).map(t => (
           <button
             key={t.id}
-            onClick={() => t.id === 'notifications' ? openNotificationsTab() : setTab(t.id)}
+            onClick={() => {
+              if (t.id === 'notifications') { openNotificationsTab(); return; }
+              setTab(t.id as Tab);
+              if (t.id === 'visitors' && !visitorsLoaded) loadVisitors();
+            }}
             className={`px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors relative ${
               tab === t.id
                 ? 'text-blue-600 border-b-2 border-blue-600 bg-white'
@@ -308,12 +387,17 @@ export default function AdminDashboard() {
             }`}
           >
             {t.label}
-            {t.count > 0 && t.id === 'notifications' && unreadCount > 0 && (
+            {t.id === 'notifications' && unreadCount > 0 && (
               <span className="ml-1.5 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5 font-bold">
-                {t.count}
+                {unreadCount}
               </span>
             )}
-            {t.count > 0 && t.id !== 'notifications' && (
+            {t.id === 'visitors' && liveCount > 0 && (
+              <span className="ml-1.5 bg-green-500 text-white text-xs rounded-full px-1.5 py-0.5 font-bold">
+                {liveCount}
+              </span>
+            )}
+            {t.id !== 'notifications' && t.id !== 'visitors' && t.count > 0 && (
               <span className="ml-1.5 bg-gray-100 text-gray-600 text-xs rounded-full px-1.5 py-0.5">
                 {t.count}
               </span>
@@ -512,6 +596,121 @@ export default function AdminDashboard() {
                   )}
                 </div>
               ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* ── Tab: Visitors ── */}
+      {tab === 'visitors' && (
+        <div className="space-y-4">
+          {/* Live indicator */}
+          <div className={`flex items-center gap-3 px-5 py-3 rounded-xl border ${liveCount > 0 ? 'bg-green-50 border-green-200' : 'bg-white border-gray-200'}`}>
+            <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${liveCount > 0 ? 'bg-green-500 animate-pulse' : 'bg-gray-300'}`} />
+            <p className="text-sm font-semibold text-gray-800">
+              {liveCount > 0 ? `${liveCount} visitor${liveCount > 1 ? 's' : ''} on the site right now` : 'No visitors online right now'}
+            </p>
+            <span className="text-xs text-gray-400 ml-auto">Active within 5 min</span>
+            <button
+              onClick={loadVisitors}
+              className="text-xs text-blue-600 hover:underline"
+            >
+              Refresh
+            </button>
+          </div>
+
+          {!visitorsLoaded ? (
+            <div className="p-10 text-center text-gray-400">
+              <Eye className="h-8 w-8 mx-auto mb-3 opacity-30" />
+              <p>Loading visitor data…</p>
+            </div>
+          ) : visitors.length === 0 ? (
+            <div className="bg-white border border-gray-200 rounded-xl p-10 text-center text-gray-400">
+              <Eye className="h-8 w-8 mx-auto mb-3 opacity-30" />
+              <p className="font-medium text-gray-600 mb-1">No visitor data yet</p>
+              <p className="text-sm">Run the SQL migration below to create the tracking tables, then visitors will appear here.</p>
+            </div>
+          ) : (
+            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+              <div className="px-5 py-4 border-b border-gray-100">
+                <h2 className="font-semibold text-gray-900">Recent Sessions</h2>
+                <p className="text-xs text-gray-400 mt-0.5">{visitors.length} sessions — click to see page journey</p>
+              </div>
+              <div className="divide-y divide-gray-100">
+                {visitors.map(session => {
+                  const sourceMeta = SOURCE_META[session.source] ?? { icon: '🌐', label: session.source };
+                  const expanded = expandedSession === session.id;
+                  const lastEvent = session.visitor_events.at(-1);
+                  return (
+                    <div key={session.id} className={`${session.is_live ? 'bg-green-50/50' : ''}`}>
+                      <button
+                        className="w-full px-5 py-3.5 flex items-center gap-4 text-left hover:bg-gray-50 transition-colors"
+                        onClick={() => setExpandedSession(expanded ? null : session.id)}
+                      >
+                        <span className={`w-2 h-2 rounded-full shrink-0 ${session.is_live ? 'bg-green-500 animate-pulse' : 'bg-gray-300'}`} />
+                        <span className="text-lg shrink-0">{sourceMeta.icon}</span>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span className="text-xs font-mono text-gray-700 truncate">{session.entry_page}</span>
+                            {session.page_count > 1 && <span className="text-xs text-gray-400">→ {session.page_count - 1} more</span>}
+                            {session.converted && (
+                              <span className="text-xs bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full font-semibold">✅ Converted</span>
+                            )}
+                            {session.is_live && (
+                              <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold">● Live</span>
+                            )}
+                          </div>
+                          <div className="flex items-center gap-2 mt-0.5">
+                            <span className="text-xs text-gray-400">{sourceMeta.label}</span>
+                            {session.utm_source && (
+                              <span className="text-xs text-gray-400">· {session.utm_source}{session.utm_campaign ? ` / ${session.utm_campaign}` : ''}</span>
+                            )}
+                            {session.referrer && !session.utm_source && (
+                              <span className="text-xs text-gray-400 truncate max-w-xs">· from {session.referrer.replace(/^https?:\/\//, '').split('/')[0]}</span>
+                            )}
+                          </div>
+                        </div>
+                        <div className="text-right shrink-0">
+                          <p className="text-xs text-gray-500">{session.page_count} page{session.page_count !== 1 ? 's' : ''}</p>
+                          <p className="text-xs text-gray-400 mt-0.5">{fmtRelative(lastEvent?.created_at ?? session.created_at)}</p>
+                        </div>
+                        <span className={`text-gray-400 shrink-0 transition-transform ${expanded ? 'rotate-180' : ''}`}>
+                          <ChevronDown className="h-4 w-4" />
+                        </span>
+                      </button>
+
+                      {expanded && (
+                        <div className="border-t border-gray-100 px-5 py-4 bg-gray-50">
+                          <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Session Journey</p>
+                          <div className="space-y-1.5 max-h-64 overflow-y-auto">
+                            {session.visitor_events.map(event => (
+                              <div key={event.id} className="flex items-start gap-2.5 text-xs">
+                                <span className="text-base shrink-0 mt-0.5">{EVENT_ICONS[event.type] ?? '•'}</span>
+                                <div className="flex-1 min-w-0">
+                                  <span className={`font-medium ${
+                                    event.type === 'leave' ? 'text-gray-400' :
+                                    ['booking_submit', 'quote_submit'].includes(event.type) ? 'text-green-600' :
+                                    'text-gray-700'
+                                  }`}>
+                                    {event.type === 'page_view' ? (event.page || '/') : event.type.replace(/_/g, ' ')}
+                                  </span>
+                                  {event.data && Object.keys(event.data).length > 0 && (
+                                    <span className="text-gray-400 ml-2">· {Object.values(event.data).join(', ')}</span>
+                                  )}
+                                </div>
+                                <span className="text-gray-400 shrink-0">{fmtRelative(event.created_at)}</span>
+                              </div>
+                            ))}
+                            {session.visitor_events.length === 0 && (
+                              <p className="text-gray-400">No events recorded.</p>
+                            )}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           )}
         </div>
