@@ -109,6 +109,9 @@ export default function AdminDashboard() {
   const [liveCount, setLiveCount] = useState(0);
   const [visitorsLoaded, setVisitorsLoaded] = useState(false);
   const [expandedSession, setExpandedSession] = useState<string | null>(null);
+  const [visitorTimeFilter, setVisitorTimeFilter] = useState<'today' | '7d' | '30d' | 'all'>('7d');
+  const [visitorSourceFilter, setVisitorSourceFilter] = useState('all');
+  const [showConvertedOnly, setShowConvertedOnly] = useState(false);
 
   // Notifications
   const lastSeenRef = useRef<string>(sessionStorage.getItem(LAST_SEEN_KEY) ?? new Date(0).toISOString());
@@ -172,24 +175,33 @@ export default function AdminDashboard() {
     setLoading(false);
   }
 
-  async function loadVisitors() {
-    const { data } = await supabase
-      .from('visitor_sessions')
-      .select('*, visitor_events(*)')
-      .order('created_at', { ascending: false })
-      .limit(200);
+  async function loadVisitors(range: 'today' | '7d' | '30d' | 'all' = visitorTimeFilter) {
+    setVisitorsLoaded(false);
+    const now = new Date();
+    let startDate: string | null = null;
+    if (range === 'today') {
+      const d = new Date(now); d.setHours(0, 0, 0, 0); startDate = d.toISOString();
+    } else if (range === '7d') {
+      startDate = new Date(now.getTime() - 7 * 86400000).toISOString();
+    } else if (range === '30d') {
+      startDate = new Date(now.getTime() - 30 * 86400000).toISOString();
+    }
 
-    if (!data) return;
+    let q = supabase.from('visitor_sessions').select('*, visitor_events(*)').order('created_at', { ascending: false }).limit(500);
+    if (startDate) q = q.gte('created_at', startDate);
+
+    const { data } = await q;
+    if (!data) { setVisitorsLoaded(true); return; }
 
     const FIVE_MIN = 5 * 60 * 1000;
-    const now = Date.now();
+    const nowMs = Date.now();
 
     const enriched: VisitorSession[] = (data as any[]).map(s => {
       const events: VisitorEvent[] = (s.visitor_events ?? []).sort(
         (a: VisitorEvent, b: VisitorEvent) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime()
       );
       const lastEvent = events.at(-1);
-      const isLive = lastEvent ? (now - new Date(lastEvent.created_at).getTime()) < FIVE_MIN : false;
+      const isLive = lastEvent ? (nowMs - new Date(lastEvent.created_at).getTime()) < FIVE_MIN : false;
       const pageCount = events.filter(e => e.type === 'page_view').length;
       const converted = events.some(e => ['booking_submit', 'quote_submit'].includes(e.type));
       return { ...s, visitor_events: events, page_count: pageCount, converted, is_live: isLive };
@@ -491,7 +503,7 @@ export default function AdminDashboard() {
             onClick={() => {
               if (t.id === 'notifications') { openNotificationsTab(); return; }
               setTab(t.id as Tab);
-              if (t.id === 'visitors' && !visitorsLoaded) loadVisitors();
+              if (t.id === 'visitors' && !visitorsLoaded) loadVisitors(visitorTimeFilter);
               if (t.id === 'clients' && !clientsLoaded) loadClients();
               if (t.id === 'revenue' && !revenueLoaded) loadRevenue();
             }}
@@ -748,113 +760,266 @@ export default function AdminDashboard() {
       )}
 
       {/* ── Tab: Visitors ── */}
-      {tab === 'visitors' && (
-        <div className="space-y-4">
-          <div className={`flex items-center gap-3 px-5 py-3 rounded-xl border ${liveCount > 0 ? 'bg-green-50 border-green-200' : 'bg-white border-gray-200'}`}>
-            <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${liveCount > 0 ? 'bg-green-500 animate-pulse' : 'bg-gray-300'}`} />
-            <p className="text-sm font-semibold text-gray-800">
-              {liveCount > 0 ? `${liveCount} visitor${liveCount > 1 ? 's' : ''} on the site right now` : 'No visitors online right now'}
-            </p>
-            <span className="text-xs text-gray-400 ml-auto">Active within 5 min</span>
-            <button onClick={loadVisitors} className="text-xs text-blue-600 hover:underline">Refresh</button>
-          </div>
+      {tab === 'visitors' && (() => {
+        // Derived stats
+        const filtered = visitors.filter(s => {
+          if (visitorSourceFilter !== 'all' && s.source !== visitorSourceFilter) return false;
+          if (showConvertedOnly && !s.converted) return false;
+          return true;
+        });
+        const conversions = filtered.filter(s => s.converted).length;
+        const convRate = filtered.length > 0 ? ((conversions / filtered.length) * 100).toFixed(1) : '0';
+        const avgPages = filtered.length > 0
+          ? (filtered.reduce((a, s) => a + s.page_count, 0) / filtered.length).toFixed(1)
+          : '0';
 
-          {!visitorsLoaded ? (
-            <div className="p-10 text-center text-gray-400">
-              <Eye className="h-8 w-8 mx-auto mb-3 opacity-30" />
-              <p>Loading visitor data…</p>
-            </div>
-          ) : visitors.length === 0 ? (
-            <div className="bg-white border border-gray-200 rounded-xl p-10 text-center text-gray-400">
-              <Eye className="h-8 w-8 mx-auto mb-3 opacity-30" />
-              <p className="font-medium text-gray-600 mb-1">No visitor data yet</p>
-              <p className="text-sm">Run the SQL migration to create the tracking tables.</p>
-            </div>
-          ) : (
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-              <div className="px-5 py-4 border-b border-gray-100">
-                <h2 className="font-semibold text-gray-900">Recent Sessions</h2>
-                <p className="text-xs text-gray-400 mt-0.5">{visitors.length} sessions — click to see page journey</p>
+        // Source breakdown (from all visitors, not filtered)
+        const sourceCounts: Record<string, number> = {};
+        for (const s of visitors) sourceCounts[s.source] = (sourceCounts[s.source] ?? 0) + 1;
+        const sourceList = Object.entries(sourceCounts).sort((a, b) => b[1] - a[1]);
+
+        // Top pages from all page_view events across loaded sessions
+        const pageCounts: Record<string, number> = {};
+        for (const s of visitors) {
+          for (const e of s.visitor_events) {
+            if (e.type === 'page_view' && e.page) {
+              pageCounts[e.page] = (pageCounts[e.page] ?? 0) + 1;
+            }
+          }
+        }
+        const topPages = Object.entries(pageCounts).sort((a, b) => b[1] - a[1]).slice(0, 10);
+        const maxPageCount = topPages[0]?.[1] ?? 1;
+
+        return (
+          <div className="space-y-4">
+            {/* Live bar + time filter */}
+            <div className="flex items-center gap-3 flex-wrap">
+              <div className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl border flex-1 min-w-48 ${liveCount > 0 ? 'bg-green-50 border-green-200' : 'bg-white border-gray-200'}`}>
+                <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${liveCount > 0 ? 'bg-green-500 animate-pulse' : 'bg-gray-300'}`} />
+                <p className="text-sm font-semibold text-gray-800">
+                  {liveCount > 0 ? `${liveCount} live now` : 'No live visitors'}
+                </p>
+                <span className="text-xs text-gray-400">· active within 5 min</span>
               </div>
-              <div className="divide-y divide-gray-100">
-                {visitors.map(session => {
-                  const sourceMeta = SOURCE_META[session.source] ?? { icon: '🌐', label: session.source };
-                  const expanded = expandedSession === session.id;
-                  const lastEvent = session.visitor_events.at(-1);
-                  return (
-                    <div key={session.id} className={`${session.is_live ? 'bg-green-50/50' : ''}`}>
-                      <button
-                        className="w-full px-5 py-3.5 flex items-center gap-4 text-left hover:bg-gray-50 transition-colors"
-                        onClick={() => setExpandedSession(expanded ? null : session.id)}
-                      >
-                        <span className={`w-2 h-2 rounded-full shrink-0 ${session.is_live ? 'bg-green-500 animate-pulse' : 'bg-gray-300'}`} />
-                        <span className="text-lg shrink-0">{sourceMeta.icon}</span>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2 flex-wrap">
-                            <span className="text-xs font-mono text-gray-700 truncate">{session.entry_page}</span>
-                            {session.page_count > 1 && <span className="text-xs text-gray-400">→ {session.page_count - 1} more</span>}
-                            {session.converted && (
-                              <span className="text-xs bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full font-semibold">✅ Converted</span>
-                            )}
-                            {session.is_live && (
-                              <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold">● Live</span>
-                            )}
-                          </div>
-                          <div className="flex items-center gap-2 mt-0.5">
-                            <span className="text-xs text-gray-400">{sourceMeta.label}</span>
-                            {session.utm_source && (
-                              <span className="text-xs text-gray-400">· {session.utm_source}{session.utm_campaign ? ` / ${session.utm_campaign}` : ''}</span>
-                            )}
-                            {session.referrer && !session.utm_source && (
-                              <span className="text-xs text-gray-400 truncate max-w-xs">· from {session.referrer.replace(/^https?:\/\//, '').split('/')[0]}</span>
-                            )}
-                          </div>
-                        </div>
-                        <div className="text-right shrink-0">
-                          <p className="text-xs text-gray-500">{session.page_count} page{session.page_count !== 1 ? 's' : ''}</p>
-                          <p className="text-xs text-gray-400 mt-0.5">{fmtRelative(lastEvent?.created_at ?? session.created_at)}</p>
-                        </div>
-                        <span className={`text-gray-400 shrink-0 transition-transform ${expanded ? 'rotate-180' : ''}`}>
-                          <ChevronDown className="h-4 w-4" />
-                        </span>
-                      </button>
+              <div className="flex gap-1">
+                {(['today', '7d', '30d', 'all'] as const).map(r => (
+                  <button
+                    key={r}
+                    onClick={() => { setVisitorTimeFilter(r); loadVisitors(r); }}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                      visitorTimeFilter === r ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    }`}
+                  >
+                    {r === 'all' ? 'All time' : r}
+                  </button>
+                ))}
+              </div>
+              <button onClick={() => loadVisitors(visitorTimeFilter)} className="text-xs text-blue-600 hover:underline px-2">
+                Refresh
+              </button>
+            </div>
 
-                      {expanded && (
-                        <div className="border-t border-gray-100 px-5 py-4 bg-gray-50">
-                          <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Session Journey</p>
-                          <div className="space-y-1.5 max-h-64 overflow-y-auto">
-                            {session.visitor_events.map(event => (
-                              <div key={event.id} className="flex items-start gap-2.5 text-xs">
-                                <span className="text-base shrink-0 mt-0.5">{EVENT_ICONS[event.type] ?? '•'}</span>
-                                <div className="flex-1 min-w-0">
-                                  <span className={`font-medium ${
-                                    event.type === 'leave' ? 'text-gray-400' :
-                                    ['booking_submit', 'quote_submit'].includes(event.type) ? 'text-green-600' :
-                                    'text-gray-700'
-                                  }`}>
-                                    {event.type === 'page_view' ? (event.page || '/') : event.type.replace(/_/g, ' ')}
-                                  </span>
-                                  {event.data && Object.keys(event.data).length > 0 && (
-                                    <span className="text-gray-400 ml-2">· {Object.values(event.data).join(', ')}</span>
-                                  )}
-                                </div>
-                                <span className="text-gray-400 shrink-0">{fmtRelative(event.created_at)}</span>
+            {!visitorsLoaded ? (
+              <div className="p-10 text-center text-gray-400">
+                <Eye className="h-8 w-8 mx-auto mb-3 opacity-30" />
+                <p>Loading visitor data…</p>
+              </div>
+            ) : visitors.length === 0 ? (
+              <div className="bg-white border border-gray-200 rounded-xl p-10 text-center text-gray-400">
+                <Eye className="h-8 w-8 mx-auto mb-3 opacity-30" />
+                <p className="font-medium text-gray-600 mb-1">No visitor data yet</p>
+                <p className="text-sm">Try a wider time range or check your tracking tables.</p>
+              </div>
+            ) : (
+              <>
+                {/* Summary stats */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+                  {[
+                    { label: 'Sessions', value: filtered.length, sub: `of ${visitors.length} total` },
+                    { label: 'Conversions', value: conversions, sub: `${convRate}% rate` },
+                    { label: 'Avg Pages', value: avgPages, sub: 'per session' },
+                    { label: 'Live Now', value: liveCount, sub: 'active < 5 min' },
+                  ].map(s => (
+                    <div key={s.label} className="bg-white border border-gray-200 rounded-xl px-5 py-4">
+                      <p className="text-2xl font-bold text-gray-900">{s.value}</p>
+                      <p className="text-xs font-semibold text-gray-600 mt-1">{s.label}</p>
+                      <p className="text-xs text-gray-400">{s.sub}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Source breakdown + Top pages side by side */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                  {/* Source breakdown */}
+                  <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                    <div className="px-5 py-3 border-b border-gray-100">
+                      <h3 className="text-sm font-semibold text-gray-900">Traffic Sources</h3>
+                    </div>
+                    <div className="p-4 space-y-2">
+                      {sourceList.map(([src, count]) => {
+                        const meta = SOURCE_META[src] ?? { icon: '🌐', label: src };
+                        const pct = Math.round((count / visitors.length) * 100);
+                        return (
+                          <button
+                            key={src}
+                            onClick={() => setVisitorSourceFilter(visitorSourceFilter === src ? 'all' : src)}
+                            className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
+                              visitorSourceFilter === src ? 'bg-blue-50 border border-blue-200' : 'hover:bg-gray-50'
+                            }`}
+                          >
+                            <span>{meta.icon}</span>
+                            <span className="flex-1 text-left text-gray-700 font-medium">{meta.label}</span>
+                            <div className="flex items-center gap-2 shrink-0">
+                              <div className="w-20 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                                <div className="h-full bg-blue-500 rounded-full" style={{ width: `${pct}%` }} />
                               </div>
-                            ))}
-                            {session.visitor_events.length === 0 && (
-                              <p className="text-gray-400">No events recorded.</p>
-                            )}
+                              <span className="text-xs text-gray-500 w-8 text-right">{count}</span>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Top pages */}
+                  <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                    <div className="px-5 py-3 border-b border-gray-100">
+                      <h3 className="text-sm font-semibold text-gray-900">Top Pages</h3>
+                    </div>
+                    <div className="p-4 space-y-2">
+                      {topPages.length === 0 ? (
+                        <p className="text-xs text-gray-400 py-2">No page view data yet.</p>
+                      ) : topPages.map(([page, count]) => (
+                        <div key={page} className="flex items-center gap-3 text-sm">
+                          <span className="flex-1 font-mono text-xs text-gray-700 truncate">{page}</span>
+                          <div className="flex items-center gap-2 shrink-0">
+                            <div className="w-20 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                              <div className="h-full bg-indigo-400 rounded-full" style={{ width: `${Math.round((count / maxPageCount) * 100)}%` }} />
+                            </div>
+                            <span className="text-xs text-gray-500 w-8 text-right">{count}</span>
                           </div>
                         </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Session list */}
+                <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                  <div className="px-5 py-3 border-b border-gray-100 flex items-center gap-3 flex-wrap">
+                    <h3 className="text-sm font-semibold text-gray-900">Sessions</h3>
+                    <span className="text-xs text-gray-400">{filtered.length} shown</span>
+                    <div className="ml-auto flex items-center gap-2">
+                      <button
+                        onClick={() => setShowConvertedOnly(!showConvertedOnly)}
+                        className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+                          showConvertedOnly ? 'bg-green-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        }`}
+                      >
+                        ✅ Converted only
+                      </button>
+                      {visitorSourceFilter !== 'all' && (
+                        <button
+                          onClick={() => setVisitorSourceFilter('all')}
+                          className="px-3 py-1 rounded-lg text-xs bg-blue-100 text-blue-700 font-medium"
+                        >
+                          {SOURCE_META[visitorSourceFilter]?.label ?? visitorSourceFilter} ✕
+                        </button>
                       )}
                     </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-        </div>
-      )}
+                  </div>
+
+                  {filtered.length === 0 ? (
+                    <div className="p-8 text-center text-gray-400 text-sm">No sessions match the current filters.</div>
+                  ) : (
+                    <div className="divide-y divide-gray-100">
+                      {filtered.map(session => {
+                        const sourceMeta = SOURCE_META[session.source] ?? { icon: '🌐', label: session.source };
+                        const expanded = expandedSession === session.id;
+                        const lastEvent = session.visitor_events.at(-1);
+                        const firstTs = session.visitor_events[0]?.created_at ?? session.created_at;
+                        const lastTs = lastEvent?.created_at ?? session.created_at;
+                        const durationMs = new Date(lastTs).getTime() - new Date(firstTs).getTime();
+                        const durationStr = durationMs < 60000
+                          ? `${Math.round(durationMs / 1000)}s`
+                          : `${Math.floor(durationMs / 60000)}m ${Math.round((durationMs % 60000) / 1000)}s`;
+                        return (
+                          <div key={session.id} className={`${session.is_live ? 'bg-green-50/50' : ''}`}>
+                            <button
+                              className="w-full px-5 py-3.5 flex items-center gap-4 text-left hover:bg-gray-50 transition-colors"
+                              onClick={() => setExpandedSession(expanded ? null : session.id)}
+                            >
+                              <span className={`w-2 h-2 rounded-full shrink-0 ${session.is_live ? 'bg-green-500 animate-pulse' : 'bg-gray-300'}`} />
+                              <span className="text-lg shrink-0">{sourceMeta.icon}</span>
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center gap-2 flex-wrap">
+                                  <span className="text-xs font-mono text-gray-700 truncate">{session.entry_page}</span>
+                                  {session.page_count > 1 && <span className="text-xs text-gray-400">→ {session.page_count - 1} more</span>}
+                                  {session.converted && (
+                                    <span className="text-xs bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full font-semibold">✅ Converted</span>
+                                  )}
+                                  {session.is_live && (
+                                    <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold">● Live</span>
+                                  )}
+                                </div>
+                                <div className="flex items-center gap-2 mt-0.5">
+                                  <span className="text-xs text-gray-400">{sourceMeta.label}</span>
+                                  {session.utm_source && (
+                                    <span className="text-xs text-gray-400">· {session.utm_source}{session.utm_campaign ? ` / ${session.utm_campaign}` : ''}</span>
+                                  )}
+                                  {session.referrer && !session.utm_source && (
+                                    <span className="text-xs text-gray-400 truncate max-w-xs">· from {session.referrer.replace(/^https?:\/\//, '').split('/')[0]}</span>
+                                  )}
+                                </div>
+                              </div>
+                              <div className="text-right shrink-0">
+                                <p className="text-xs text-gray-500">{session.page_count} page{session.page_count !== 1 ? 's' : ''} · {durationStr}</p>
+                                <p className="text-xs text-gray-400 mt-0.5">{fmtRelative(lastEvent?.created_at ?? session.created_at)}</p>
+                              </div>
+                              <span className={`text-gray-400 shrink-0 transition-transform ${expanded ? 'rotate-180' : ''}`}>
+                                <ChevronDown className="h-4 w-4" />
+                              </span>
+                            </button>
+
+                            {expanded && (
+                              <div className="border-t border-gray-100 px-5 py-4 bg-gray-50">
+                                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Session Journey</p>
+                                <div className="space-y-1.5 max-h-64 overflow-y-auto">
+                                  {session.visitor_events.map(event => (
+                                    <div key={event.id} className="flex items-start gap-2.5 text-xs">
+                                      <span className="text-base shrink-0 mt-0.5">{EVENT_ICONS[event.type] ?? '•'}</span>
+                                      <div className="flex-1 min-w-0">
+                                        <span className={`font-medium ${
+                                          event.type === 'leave' ? 'text-gray-400' :
+                                          ['booking_submit', 'quote_submit'].includes(event.type) ? 'text-green-600' :
+                                          'text-gray-700'
+                                        }`}>
+                                          {event.type === 'page_view' ? (event.page || '/') : event.type.replace(/_/g, ' ')}
+                                        </span>
+                                        {event.data && Object.keys(event.data).length > 0 && (
+                                          <span className="text-gray-400 ml-2">· {Object.values(event.data).join(', ')}</span>
+                                        )}
+                                      </div>
+                                      <span className="text-gray-400 shrink-0">{fmtRelative(event.created_at)}</span>
+                                    </div>
+                                  ))}
+                                  {session.visitor_events.length === 0 && (
+                                    <p className="text-gray-400">No events recorded.</p>
+                                  )}
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              </>
+            )}
+          </div>
+        );
+      })()}
 
       {/* ── Tab: Notifications ── */}
       {tab === 'notifications' && (
