@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import {
   PlusCircle, FileText, Clock, CheckCircle2, Calendar, Users, DollarSign,
   Send, ListChecks, BadgeCheck, Link2, BarChart2, MessageCircle, Mail,
-  Bell, ChevronDown, ChevronUp, XCircle, Eye,
+  Bell, ChevronDown, ChevronUp, XCircle, Eye, Search, Radio,
 } from 'lucide-react';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -22,8 +22,22 @@ interface VisitorSession {
   utm_source: string | null; utm_medium: string | null; utm_campaign: string | null;
   utm_term: string | null; source: string;
   visitor_events: VisitorEvent[];
-  // computed
   page_count: number; converted: boolean; is_live: boolean;
+}
+
+interface Client {
+  id: string; name: string | null; email: string | null; phone: string | null;
+  created_at: string; jobs: { count: number }[];
+}
+
+interface PaidReport {
+  id: string; status: string; paid_at: string | null;
+  jobs: { client_name: string | null; city: string | null; inspection_type: string | null; scheduled_at: string | null } | null;
+}
+
+interface PendingReport {
+  id: string;
+  jobs: { client_name: string | null; city: string | null; inspection_type: string | null } | null;
 }
 
 const SOURCE_META: Record<string, { icon: string; label: string }> = {
@@ -66,7 +80,7 @@ const REPORT_STATUS_COLORS: Record<string, string> = {
   visible: 'bg-green-100 text-green-700',
 };
 
-type Tab = 'jobs' | 'asad' | 'visitors' | 'notifications';
+type Tab = 'jobs' | 'asad' | 'visitors' | 'notifications' | 'clients' | 'revenue' | 'broadcast';
 
 const LAST_SEEN_KEY = 'pt_asads_admin_last_seen';
 
@@ -86,15 +100,36 @@ export default function AdminDashboard() {
   const [attachSaving, setAttachSaving] = useState(false);
   const [attachError, setAttachError] = useState('');
 
+  // Job search / filter
+  const [jobSearch, setJobSearch] = useState('');
+  const [jobStatusFilter, setJobStatusFilter] = useState('all');
+
   // Visitors
   const [visitors, setVisitors] = useState<VisitorSession[]>([]);
   const [liveCount, setLiveCount] = useState(0);
   const [visitorsLoaded, setVisitorsLoaded] = useState(false);
   const [expandedSession, setExpandedSession] = useState<string | null>(null);
 
-  // Notifications = Asad bookings since last seen
+  // Notifications
   const lastSeenRef = useRef<string>(sessionStorage.getItem(LAST_SEEN_KEY) ?? new Date(0).toISOString());
   const [unreadCount, setUnreadCount] = useState(0);
+
+  // Clients
+  const [clients, setClients] = useState<Client[]>([]);
+  const [clientSearch, setClientSearch] = useState('');
+  const [clientsLoaded, setClientsLoaded] = useState(false);
+
+  // Revenue
+  const [paidReports, setPaidReports] = useState<PaidReport[]>([]);
+  const [pendingReports, setPendingReports] = useState<PendingReport[]>([]);
+  const [revenueLoaded, setRevenueLoaded] = useState(false);
+  const [priceMap, setPriceMap] = useState<Record<string, string>>({});
+
+  // Broadcast
+  const [bSubject, setBSubject] = useState('');
+  const [bBody, setBBody] = useState('');
+  const [bSending, setBSending] = useState(false);
+  const [bResult, setBResult] = useState<string | null>(null);
 
   async function load() {
     const [
@@ -103,7 +138,7 @@ export default function AdminDashboard() {
       { count: pendingCount },
       { data: logData },
     ] = await Promise.all([
-      supabase.from('jobs').select('*').order('scheduled_at', { ascending: false }).limit(50),
+      supabase.from('jobs').select('*').order('scheduled_at', { ascending: false }).limit(200),
       supabase.from('realtors').select('*', { count: 'exact', head: true }).eq('listed', true),
       supabase.from('realtors').select('*', { count: 'exact', head: true }).eq('backlink_verified', true).eq('approved', false),
       supabase.from('conversation_logs').select('*').eq('booked', true).order('started_at', { ascending: false }).limit(100),
@@ -165,10 +200,70 @@ export default function AdminDashboard() {
     setVisitorsLoaded(true);
   }
 
+  async function loadClients() {
+    const { data } = await supabase
+      .from('users')
+      .select('id, name, email, phone, created_at, jobs(count)')
+      .eq('role', 'homeowner')
+      .order('created_at', { ascending: false });
+    setClients((data as Client[]) ?? []);
+    setClientsLoaded(true);
+  }
+
+  async function loadRevenue() {
+    const [{ data: paid }, { data: pending }] = await Promise.all([
+      supabase
+        .from('reports')
+        .select('id, status, paid_at, jobs(client_name, city, inspection_type, scheduled_at)')
+        .in('status', ['paid', 'visible'])
+        .order('paid_at', { ascending: false }),
+      supabase
+        .from('reports')
+        .select('id, jobs(client_name, city, inspection_type)')
+        .eq('status', 'sent'),
+    ]);
+
+    setPaidReports((paid as PaidReport[]) ?? []);
+    setPendingReports((pending as PendingReport[]) ?? []);
+
+    // Build price map from conversation_logs (email → price)
+    const { data: logs } = await supabase
+      .from('conversation_logs')
+      .select('client_email, price')
+      .eq('booked', true)
+      .not('price', 'is', null);
+
+    const map: Record<string, string> = {};
+    for (const l of logs ?? []) {
+      if (l.client_email && l.price) map[l.client_email] = l.price;
+    }
+    setPriceMap(map);
+    setRevenueLoaded(true);
+  }
+
+  async function sendBroadcast() {
+    if (!bSubject.trim() || !bBody.trim()) return;
+    if (!confirm(`Send to all registered homeowners?\n\nSubject: ${bSubject}`)) return;
+    setBSending(true);
+    setBResult(null);
+    try {
+      const r = await fetch('/api/notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'broadcast', subject: bSubject, body: bBody }),
+      });
+      const json = await r.json();
+      if (json.ok) setBResult(`Sent to ${json.sent} homeowners`);
+      else setBResult('Error: ' + (json.error ?? 'unknown'));
+    } catch (e: any) {
+      setBResult('Error: ' + e.message);
+    }
+    setBSending(false);
+  }
+
   useEffect(() => {
     load();
 
-    // Realtime — new Asad bookings
     const channel = supabase
       .channel('asad-bookings')
       .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'conversation_logs' }, (payload) => {
@@ -289,6 +384,21 @@ export default function AdminDashboard() {
     await load();
   }
 
+  // ── Derived ───────────────────────────────────────────────────────────────
+
+  const filteredJobs = jobs.filter(j => {
+    const q = jobSearch.toLowerCase();
+    const matchSearch = !q || j.address?.toLowerCase().includes(q) ||
+      j.client_name?.toLowerCase().includes(q) || j.client_email?.toLowerCase().includes(q);
+    const matchStatus = jobStatusFilter === 'all' || j.status === jobStatusFilter;
+    return matchSearch && matchStatus;
+  });
+
+  const filteredClients = clients.filter(c => {
+    const q = clientSearch.toLowerCase();
+    return !q || c.name?.toLowerCase().includes(q) || c.email?.toLowerCase().includes(q) || c.phone?.toLowerCase().includes(q);
+  });
+
   // ── Render ────────────────────────────────────────────────────────────────
 
   return (
@@ -325,7 +435,6 @@ export default function AdminDashboard() {
               )}
             </Link>
           </Button>
-          {/* Notifications bell */}
           <button
             onClick={openNotificationsTab}
             className="relative p-2 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors"
@@ -346,7 +455,7 @@ export default function AdminDashboard() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4 mb-6">
         {[
           { label: 'Total Jobs', value: stats.total, icon: <FileText className="h-5 w-5 text-blue-600" />, bg: 'bg-blue-50' },
           { label: 'Active', value: stats.pending, icon: <Clock className="h-5 w-5 text-amber-600" />, bg: 'bg-amber-50' },
@@ -354,6 +463,7 @@ export default function AdminDashboard() {
           { label: 'Asad Bookings', value: stats.asadBooked, icon: <MessageCircle className="h-5 w-5 text-indigo-600" />, bg: 'bg-indigo-50' },
           { label: 'Live Visitors', value: liveCount, icon: <Eye className="h-5 w-5 text-rose-600" />, bg: 'bg-rose-50' },
           { label: 'Listed Realtors', value: stats.realtors, icon: <Users className="h-5 w-5 text-purple-600" />, bg: 'bg-purple-50' },
+          { label: 'Clients', value: clients.length, icon: <Users className="h-5 w-5 text-teal-600" />, bg: 'bg-teal-50' },
         ].map(s => (
           <div key={s.label} className={`${s.bg} rounded-xl p-5`}>
             <div className="flex items-center justify-between mb-2">
@@ -366,12 +476,15 @@ export default function AdminDashboard() {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-1 mb-4 border-b border-gray-200">
+      <div className="flex gap-1 mb-4 border-b border-gray-200 overflow-x-auto">
         {([
           { id: 'jobs', label: 'Jobs', count: stats.total },
           { id: 'asad', label: 'Asad Bookings', count: stats.asadBooked },
           { id: 'visitors', label: 'Visitors', count: liveCount },
           { id: 'notifications', label: 'Notifications', count: unreadCount },
+          { id: 'clients', label: 'Clients', count: clients.length },
+          { id: 'revenue', label: 'Revenue', count: paidReports.length },
+          { id: 'broadcast', label: 'Broadcast', count: 0 },
         ] as { id: Tab; label: string; count: number }[]).map(t => (
           <button
             key={t.id}
@@ -379,8 +492,10 @@ export default function AdminDashboard() {
               if (t.id === 'notifications') { openNotificationsTab(); return; }
               setTab(t.id as Tab);
               if (t.id === 'visitors' && !visitorsLoaded) loadVisitors();
+              if (t.id === 'clients' && !clientsLoaded) loadClients();
+              if (t.id === 'revenue' && !revenueLoaded) loadRevenue();
             }}
-            className={`px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors relative ${
+            className={`px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors relative whitespace-nowrap ${
               tab === t.id
                 ? 'text-blue-600 border-b-2 border-blue-600 bg-white'
                 : 'text-gray-500 hover:text-gray-700'
@@ -397,7 +512,7 @@ export default function AdminDashboard() {
                 {liveCount}
               </span>
             )}
-            {t.id !== 'notifications' && t.id !== 'visitors' && t.count > 0 && (
+            {!['notifications', 'visitors', 'broadcast'].includes(t.id) && t.count > 0 && (
               <span className="ml-1.5 bg-gray-100 text-gray-600 text-xs rounded-full px-1.5 py-0.5">
                 {t.count}
               </span>
@@ -409,21 +524,52 @@ export default function AdminDashboard() {
       {/* ── Tab: Jobs ── */}
       {tab === 'jobs' && (
         <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-          <div className="px-5 py-4 border-b border-gray-100">
-            <h2 className="font-semibold text-gray-900">Jobs</h2>
+          {/* Search + filter bar */}
+          <div className="px-5 py-4 border-b border-gray-100 space-y-3">
+            <div className="flex items-center gap-3 flex-wrap">
+              <div className="relative flex-1 min-w-48">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search by address, client name or email…"
+                  value={jobSearch}
+                  onChange={e => setJobSearch(e.target.value)}
+                  className="w-full pl-9 pr-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div className="flex gap-1 flex-wrap">
+                {(['all', 'scheduled', 'in_progress', 'completed', 'cancelled'] as const).map(s => (
+                  <button
+                    key={s}
+                    onClick={() => setJobStatusFilter(s)}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                      jobStatusFilter === s
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    }`}
+                  >
+                    {s === 'all' ? 'All' : s.replace('_', ' ')}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <p className="text-xs text-gray-400">{filteredJobs.length} of {jobs.length} jobs</p>
           </div>
+
           {loading ? (
             <div className="p-6 space-y-3">
               {[1, 2, 3].map(i => <div key={i} className="h-12 bg-gray-100 rounded-lg animate-pulse" />)}
             </div>
-          ) : jobs.length === 0 ? (
+          ) : filteredJobs.length === 0 ? (
             <div className="p-10 text-center text-gray-500">
-              No jobs yet.{' '}
-              <Link to="/admin/jobs/new" className="text-blue-600 hover:underline">Create the first one.</Link>
+              {jobs.length === 0
+                ? <><p>No jobs yet.</p><Link to="/admin/jobs/new" className="text-blue-600 hover:underline">Create the first one.</Link></>
+                : <p>No jobs match your search.</p>
+              }
             </div>
           ) : (
             <div className="divide-y divide-gray-100">
-              {jobs.map(job => (
+              {filteredJobs.map(job => (
                 <div key={job.id} className="px-5 py-4 hover:bg-gray-50">
                   <div className="flex items-center gap-3 flex-wrap">
                     <div className="flex-1 min-w-0">
@@ -604,19 +750,13 @@ export default function AdminDashboard() {
       {/* ── Tab: Visitors ── */}
       {tab === 'visitors' && (
         <div className="space-y-4">
-          {/* Live indicator */}
           <div className={`flex items-center gap-3 px-5 py-3 rounded-xl border ${liveCount > 0 ? 'bg-green-50 border-green-200' : 'bg-white border-gray-200'}`}>
             <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${liveCount > 0 ? 'bg-green-500 animate-pulse' : 'bg-gray-300'}`} />
             <p className="text-sm font-semibold text-gray-800">
               {liveCount > 0 ? `${liveCount} visitor${liveCount > 1 ? 's' : ''} on the site right now` : 'No visitors online right now'}
             </p>
             <span className="text-xs text-gray-400 ml-auto">Active within 5 min</span>
-            <button
-              onClick={loadVisitors}
-              className="text-xs text-blue-600 hover:underline"
-            >
-              Refresh
-            </button>
+            <button onClick={loadVisitors} className="text-xs text-blue-600 hover:underline">Refresh</button>
           </div>
 
           {!visitorsLoaded ? (
@@ -628,7 +768,7 @@ export default function AdminDashboard() {
             <div className="bg-white border border-gray-200 rounded-xl p-10 text-center text-gray-400">
               <Eye className="h-8 w-8 mx-auto mb-3 opacity-30" />
               <p className="font-medium text-gray-600 mb-1">No visitor data yet</p>
-              <p className="text-sm">Run the SQL migration below to create the tracking tables, then visitors will appear here.</p>
+              <p className="text-sm">Run the SQL migration to create the tracking tables.</p>
             </div>
           ) : (
             <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
@@ -763,6 +903,230 @@ export default function AdminDashboard() {
               ))}
             </div>
           )}
+        </div>
+      )}
+
+      {/* ── Tab: Clients ── */}
+      {tab === 'clients' && (
+        <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <div className="px-5 py-4 border-b border-gray-100 space-y-3">
+            <div className="flex items-center justify-between">
+              <h2 className="font-semibold text-gray-900">Registered Homeowners</h2>
+              <span className="text-sm text-gray-400">{filteredClients.length} clients</span>
+            </div>
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search by name, email or phone…"
+                value={clientSearch}
+                onChange={e => setClientSearch(e.target.value)}
+                className="w-full pl-9 pr-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          {!clientsLoaded ? (
+            <div className="p-6 space-y-3">
+              {[1, 2, 3].map(i => <div key={i} className="h-10 bg-gray-100 rounded-lg animate-pulse" />)}
+            </div>
+          ) : filteredClients.length === 0 ? (
+            <div className="p-10 text-center text-gray-400">
+              <Users className="h-8 w-8 mx-auto mb-3 opacity-30" />
+              <p>{clients.length === 0 ? 'No registered homeowners yet.' : 'No clients match your search.'}</p>
+            </div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead className="bg-gray-50 text-xs text-gray-500 uppercase tracking-wide">
+                  <tr>
+                    <th className="px-5 py-3 text-left">Name</th>
+                    <th className="px-5 py-3 text-left">Email</th>
+                    <th className="px-5 py-3 text-left">Phone</th>
+                    <th className="px-5 py-3 text-center">Inspections</th>
+                    <th className="px-5 py-3 text-left">Joined</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {filteredClients.map(c => (
+                    <tr key={c.id} className="hover:bg-gray-50">
+                      <td className="px-5 py-3 font-medium text-gray-900">{c.name ?? '—'}</td>
+                      <td className="px-5 py-3 text-gray-600">{c.email ?? '—'}</td>
+                      <td className="px-5 py-3 text-gray-600">{c.phone ?? '—'}</td>
+                      <td className="px-5 py-3 text-center">
+                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">
+                          {c.jobs?.[0]?.count ?? 0}
+                        </span>
+                      </td>
+                      <td className="px-5 py-3 text-gray-400 text-xs">
+                        {new Date(c.created_at).toLocaleDateString('en-CA', { month: 'short', day: 'numeric', year: 'numeric' })}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* ── Tab: Revenue ── */}
+      {tab === 'revenue' && (
+        <div className="space-y-4">
+          {/* KPI row */}
+          <div className="grid grid-cols-3 gap-4">
+            {[
+              { label: 'Paid Reports', value: paidReports.length, color: 'text-green-700', bg: 'bg-green-50 border-green-100' },
+              { label: 'Awaiting Payment', value: pendingReports.length, color: 'text-amber-700', bg: 'bg-amber-50 border-amber-100' },
+              {
+                label: 'Est. Revenue (Asad)',
+                value: (() => {
+                  const prices = Object.values(priceMap).map(p => parseFloat(p.replace(/[^0-9.]/g, ''))).filter(n => !isNaN(n));
+                  const total = prices.reduce((a, b) => a + b, 0);
+                  return total > 0 ? `$${total.toLocaleString('en-CA', { minimumFractionDigits: 0 })}` : '—';
+                })(),
+                color: 'text-blue-700', bg: 'bg-blue-50 border-blue-100',
+              },
+            ].map(k => (
+              <div key={k.label} className={`rounded-xl border p-5 ${k.bg}`}>
+                <p className={`text-2xl font-bold ${k.color}`}>{k.value}</p>
+                <p className="text-sm text-gray-600 mt-1">{k.label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Paid reports table */}
+          <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <div className="px-5 py-4 border-b border-gray-100">
+              <h2 className="font-semibold text-gray-900">Paid Inspections</h2>
+              <p className="text-xs text-gray-400 mt-0.5">Reports marked paid or visible</p>
+            </div>
+
+            {!revenueLoaded ? (
+              <div className="p-6 space-y-3">
+                {[1, 2, 3].map(i => <div key={i} className="h-10 bg-gray-100 rounded-lg animate-pulse" />)}
+              </div>
+            ) : paidReports.length === 0 ? (
+              <div className="p-10 text-center text-gray-400">
+                <DollarSign className="h-8 w-8 mx-auto mb-3 opacity-30" />
+                <p>No paid reports yet.</p>
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead className="bg-gray-50 text-xs text-gray-500 uppercase tracking-wide">
+                    <tr>
+                      <th className="px-5 py-3 text-left">Paid At</th>
+                      <th className="px-5 py-3 text-left">Client</th>
+                      <th className="px-5 py-3 text-left">City</th>
+                      <th className="px-5 py-3 text-left">Service</th>
+                      <th className="px-5 py-3 text-left">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {paidReports.map(r => (
+                      <tr key={r.id} className="hover:bg-gray-50">
+                        <td className="px-5 py-3 text-gray-400 text-xs whitespace-nowrap">
+                          {r.paid_at ? new Date(r.paid_at).toLocaleDateString('en-CA', { month: 'short', day: 'numeric', year: 'numeric' }) : '—'}
+                        </td>
+                        <td className="px-5 py-3 font-medium text-gray-900">{r.jobs?.client_name ?? '—'}</td>
+                        <td className="px-5 py-3 text-gray-600">{r.jobs?.city ?? '—'}</td>
+                        <td className="px-5 py-3 text-gray-600">{r.jobs?.inspection_type ?? '—'}</td>
+                        <td className="px-5 py-3">
+                          <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${REPORT_STATUS_COLORS[r.status] ?? 'bg-gray-100 text-gray-600'}`}>
+                            {r.status}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+
+          {/* Pending payment */}
+          {pendingReports.length > 0 && (
+            <div className="bg-white border border-amber-200 rounded-xl overflow-hidden">
+              <div className="px-5 py-4 border-b border-amber-100 bg-amber-50">
+                <h2 className="font-semibold text-amber-800">Awaiting Payment ({pendingReports.length})</h2>
+                <p className="text-xs text-amber-600 mt-0.5">Reports sent but not yet marked paid</p>
+              </div>
+              <div className="divide-y divide-gray-100">
+                {pendingReports.map(r => (
+                  <div key={r.id} className="px-5 py-3 flex items-center gap-3">
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-gray-900">{r.jobs?.client_name ?? '—'}</p>
+                      <p className="text-xs text-gray-500">{r.jobs?.city} · {r.jobs?.inspection_type}</p>
+                    </div>
+                    <span className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">sent</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* ── Tab: Broadcast ── */}
+      {tab === 'broadcast' && (
+        <div className="max-w-2xl">
+          <div className="bg-white border border-gray-200 rounded-xl p-6">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="p-2 bg-indigo-50 rounded-lg">
+                <Radio className="h-5 w-5 text-indigo-600" />
+              </div>
+              <div>
+                <h2 className="font-semibold text-gray-900">Broadcast Email</h2>
+                <p className="text-xs text-gray-400">Send a message to all registered homeowners</p>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block text-xs font-semibold text-gray-700 mb-1">Subject</label>
+                <input
+                  type="text"
+                  value={bSubject}
+                  onChange={e => setBSubject(e.target.value)}
+                  placeholder="e.g. Spring home maintenance tips from ASADS"
+                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-semibold text-gray-700 mb-1">
+                  Body <span className="font-normal text-gray-400">— use <code className="bg-gray-100 px-1 rounded">{'{name}'}</code> to personalize</span>
+                </label>
+                <textarea
+                  rows={10}
+                  value={bBody}
+                  onChange={e => setBBody(e.target.value)}
+                  placeholder={`Hi {name},\n\nSpring is a great time to check your home for…\n\n— ASADS Home Inspection Team`}
+                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono"
+                />
+              </div>
+
+              {bResult && (
+                <div className={`px-4 py-3 rounded-lg text-sm font-medium ${bResult.startsWith('Error') ? 'bg-red-50 text-red-700' : 'bg-green-50 text-green-700'}`}>
+                  {bResult}
+                </div>
+              )}
+
+              <Button
+                onClick={sendBroadcast}
+                disabled={bSending || !bSubject.trim() || !bBody.trim()}
+                className="bg-indigo-600 hover:bg-indigo-700 w-full"
+              >
+                <Send className="h-4 w-4 mr-2" />
+                {bSending ? 'Sending…' : 'Send to all homeowners'}
+              </Button>
+
+              <p className="text-xs text-gray-400 text-center">
+                Emails are sent via Resend from <code>no-reply@asads.ca</code>.
+                Recipients are all users with role = homeowner in your database.
+              </p>
+            </div>
+          </div>
         </div>
       )}
 
