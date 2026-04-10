@@ -1,40 +1,49 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Stripe from 'stripe';
 
-interface LineItem { name: string; amount: number; }
-
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') return res.status(405).end();
 
-  const { lineItems, customerName, customerEmail }: { lineItems: LineItem[]; customerName: string; customerEmail: string } = req.body;
+  const { reportId, baseCents, taxCents, description, customerEmail } = req.body ?? {};
+  if (!reportId || !baseCents) return res.status(400).json({ url: null, error: 'Missing required fields' });
 
   const key = process.env.STRIPE_SECRET_KEY;
-  if (!key) return res.status(200).json({ url: null }); // graceful fallback if key not set
-
-  const validItems = lineItems.filter(i => i.amount > 0);
-  if (validItems.length === 0) return res.status(200).json({ url: null });
+  if (!key) return res.status(200).json({ url: null });
 
   try {
     const stripe = new Stripe(key);
+
+    const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = [
+      {
+        price_data: {
+          currency: 'cad',
+          product_data: { name: description || 'Home Inspection' },
+          unit_amount: baseCents,
+        },
+        quantity: 1,
+      },
+    ];
+
+    if (taxCents > 0) {
+      lineItems.push({
+        price_data: {
+          currency: 'cad',
+          product_data: { name: 'HST (13%)' },
+          unit_amount: taxCents,
+        },
+        quantity: 1,
+      });
+    }
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       mode: 'payment',
       customer_email: customerEmail || undefined,
-      payment_intent_data: {
-        statement_descriptor: 'ASADS HOME INSP',
-      },
-      line_items: validItems.map(item => ({
-        price_data: {
-          currency: 'cad',
-          product_data: { name: item.name },
-          unit_amount: item.amount,
-        },
-        quantity: 1,
-      })),
-      success_url: 'https://www.asads.ca/booking?payment=success',
-      cancel_url: 'https://www.asads.ca/?payment=cancelled',
-      metadata: { customerName: customerName || '' },
+      payment_intent_data: { statement_descriptor: 'ASADS HOME INSP' },
+      line_items: lineItems,
+      success_url: 'https://www.asads.ca/dashboard?payment=success&session_id={CHECKOUT_SESSION_ID}',
+      cancel_url: 'https://www.asads.ca/dashboard',
+      metadata: { report_id: reportId },
     });
 
     res.status(200).json({ url: session.url });

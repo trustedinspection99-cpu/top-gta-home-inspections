@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase, DbJob, DbReport } from '@/lib/supabase';
 import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
-import { Calendar, FileText, Clock, CheckCircle2, AlertCircle, PhoneCall, CreditCard } from 'lucide-react';
+import { Calendar, FileText, Clock, CheckCircle2, PhoneCall, CreditCard, Loader2 } from 'lucide-react';
 
 function openChat() { window.dispatchEvent(new Event('open-scout-chat')); }
 
@@ -16,42 +16,84 @@ export default function HomeownerDashboard() {
   const { dbUser } = useAuth();
   const [jobs, setJobs] = useState<JobWithReport[]>([]);
   const [loading, setLoading] = useState(true);
+  const [payingId, setPayingId] = useState<string | null>(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  async function load() {
+    if (!dbUser) return;
+    const { data: jobData } = await supabase
+      .from('jobs')
+      .select('*')
+      .or(`homeowner_id.eq.${dbUser.id},client_email.eq.${dbUser.email}`)
+      .order('scheduled_at', { ascending: false });
+
+    if (!jobData) { setLoading(false); return; }
+
+    const jobsWithReports = await Promise.all(
+      (jobData as DbJob[]).map(async job => {
+        const { data: rep } = await supabase
+          .from('reports')
+          .select('*')
+          .eq('job_id', job.id)
+          .order('generated_at', { ascending: false })
+          .limit(1)
+          .maybeSingle();
+        return { ...job, report: rep ?? undefined } as JobWithReport;
+      })
+    );
+
+    setJobs(jobsWithReports);
+    setLoading(false);
+  }
+
+  // Confirm payment on redirect back from Stripe
+  useEffect(() => {
+    const paymentStatus = searchParams.get('payment');
+    const sessionId = searchParams.get('session_id');
+    if (paymentStatus !== 'success' || !sessionId) return;
+
+    setSearchParams({}, { replace: true });
+
+    fetch('/api/confirm-payment-asads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sessionId }),
+    }).then(() => load()).catch(() => {});
+  }, []);
 
   useEffect(() => {
-    if (!dbUser) return;
-    async function load() {
-      // Match by homeowner_id (linked account) OR client_email (job created before account)
-      const { data: jobData } = await supabase
-        .from('jobs')
-        .select('*')
-        .or(`homeowner_id.eq.${dbUser!.id},client_email.eq.${dbUser!.email}`)
-        .order('scheduled_at', { ascending: false });
-
-      if (!jobData) { setLoading(false); return; }
-
-      const jobsWithReports = await Promise.all(
-        (jobData as DbJob[]).map(async job => {
-          const { data: rep } = await supabase
-            .from('reports')
-            .select('*')
-            .eq('job_id', job.id)
-            .order('generated_at', { ascending: false })
-            .limit(1)
-            .maybeSingle();
-          return { ...job, report: rep ?? undefined } as JobWithReport;
-        })
-      );
-
-      setJobs(jobsWithReports);
-      setLoading(false);
-    }
-    load();
+    if (dbUser) load();
   }, [dbUser]);
 
+  async function handlePayNow(job: JobWithReport) {
+    if (!job.report) return;
+    setPayingId(job.report.id);
+    try {
+      const summary = job.report.report_data?.summary ?? {};
+      const baseCents = summary.baseCents ?? 39900;
+      const taxCents = summary.taxCents ?? 5187;
+      const description = `Home Inspection — ${job.address}`;
+
+      const res = await fetch('/api/create-checkout-asads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          reportId: job.report.id,
+          baseCents,
+          taxCents,
+          description,
+          customerEmail: dbUser?.email,
+        }),
+      });
+      const { url } = await res.json();
+      if (url) window.location.href = url;
+    } finally {
+      setPayingId(null);
+    }
+  }
+
   const activeJob = jobs.find(j => j.status === 'scheduled' || j.status === 'in_progress');
-  // Only show reports that have been unlocked (payment confirmed)
   const visibleReports = jobs.filter(j => j.report?.status === 'visible');
-  // Jobs where report is sent but payment not yet confirmed
   const pendingPayment = jobs.filter(j => j.report?.status === 'sent' || j.report?.status === 'paid');
 
   return (
@@ -125,19 +167,34 @@ export default function HomeownerDashboard() {
             <div>
               <h2 className="text-lg font-semibold text-gray-900 mb-3">Pending Payment</h2>
               <div className="space-y-3">
-                {pendingPayment.map(job => (
-                  <div key={job.id} className="bg-amber-50 border border-amber-200 rounded-xl p-5 flex items-center justify-between gap-3">
-                    <div>
-                      <p className="font-medium text-gray-900">{job.address}</p>
-                      <p className="text-sm text-gray-500">{job.city} · {job.inspection_type}</p>
-                      <p className="text-xs text-amber-700 mt-1">Your report is ready — it will be unlocked once payment is confirmed.</p>
+                {pendingPayment.map(job => {
+                  const summary = job.report?.report_data?.summary ?? {};
+                  const price = summary.price ?? null;
+                  const isLoading = payingId === job.report?.id;
+                  return (
+                    <div key={job.id} className="bg-amber-50 border border-amber-200 rounded-xl p-5 flex items-center justify-between gap-3">
+                      <div>
+                        <p className="font-medium text-gray-900">{job.address}</p>
+                        <p className="text-sm text-gray-500">{job.city} · {job.inspection_type}</p>
+                        <p className="text-xs text-amber-700 mt-1">
+                          Your report is ready. Pay to unlock instant access.
+                          {price && <span className="font-semibold ml-1">{price} CAD (incl. HST)</span>}
+                        </p>
+                      </div>
+                      <Button
+                        size="sm"
+                        className="bg-amber-500 hover:bg-amber-600 text-white shrink-0 flex items-center gap-1.5"
+                        onClick={() => handlePayNow(job)}
+                        disabled={isLoading}
+                      >
+                        {isLoading
+                          ? <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                          : <CreditCard className="h-3.5 w-3.5" />}
+                        {isLoading ? 'Loading…' : 'Pay Now'}
+                      </Button>
                     </div>
-                    <div className="flex items-center gap-1.5 text-amber-600 shrink-0">
-                      <CreditCard className="h-4 w-4" />
-                      <span className="text-sm font-medium">Payment Pending</span>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}

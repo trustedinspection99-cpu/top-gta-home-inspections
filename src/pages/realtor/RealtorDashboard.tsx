@@ -247,16 +247,46 @@ export default function RealtorDashboard() {
             <div>
               <h2 className="text-lg font-semibold text-gray-900 mb-3">Pending Payment</h2>
               <div className="space-y-3">
-                {pendingPayment.map(job => (
-                  <div key={job.id} className="bg-amber-50 border border-amber-200 rounded-xl p-5 flex items-center justify-between gap-3">
-                    <div>
-                      <p className="font-medium text-gray-900">{job.address}</p>
-                      <p className="text-sm text-gray-500">{job.city} · {job.inspection_type}</p>
-                      <p className="text-xs text-amber-700 mt-1">Report ready — unlocked once payment is confirmed.</p>
+                {pendingPayment.map(job => {
+                  const summary = (job as any).report?.report_data?.summary ?? {};
+                  const price = summary.price ?? null;
+                  return (
+                    <div key={job.id} className="bg-amber-50 border border-amber-200 rounded-xl p-5 flex items-center justify-between gap-3">
+                      <div>
+                        <p className="font-medium text-gray-900">{job.address}</p>
+                        <p className="text-sm text-gray-500">{job.city} · {job.inspection_type}</p>
+                        <p className="text-xs text-amber-700 mt-1">
+                          Report ready — pay to unlock instant access.
+                          {price && <span className="font-semibold ml-1">{price} CAD (incl. HST)</span>}
+                        </p>
+                      </div>
+                      <Button
+                        size="sm"
+                        className="bg-amber-500 hover:bg-amber-600 text-white shrink-0 flex items-center gap-1.5"
+                        onClick={async () => {
+                          const report = (job as any).report;
+                          if (!report) return;
+                          const res = await fetch('/api/create-checkout-asads', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                              reportId: report.id,
+                              baseCents: summary.baseCents ?? 39900,
+                              taxCents: summary.taxCents ?? 5187,
+                              description: `Home Inspection — ${job.address}`,
+                              customerEmail: dbUser?.email,
+                            }),
+                          });
+                          const { url } = await res.json();
+                          if (url) window.location.href = url;
+                        }}
+                      >
+                        <CreditCard className="h-3.5 w-3.5" />
+                        Pay Now
+                      </Button>
                     </div>
-                    <CreditCard className="h-4 w-4 text-amber-600 shrink-0" />
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}
