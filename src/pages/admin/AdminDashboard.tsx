@@ -32,12 +32,21 @@ interface Client {
 
 interface PaidReport {
   id: string; status: string; paid_at: string | null;
+  report_data: any | null;
   jobs: { client_name: string | null; city: string | null; inspection_type: string | null; scheduled_at: string | null } | null;
 }
 
 interface PendingReport {
   id: string;
+  report_data: any | null;
   jobs: { client_name: string | null; city: string | null; inspection_type: string | null } | null;
+}
+
+interface ActionItem {
+  label: string;
+  detail: string;
+  count: number;
+  color: 'red' | 'amber' | 'blue';
 }
 
 const SOURCE_META: Record<string, { icon: string; label: string }> = {
@@ -128,6 +137,13 @@ export default function AdminDashboard() {
   const [revenueLoaded, setRevenueLoaded] = useState(false);
   const [priceMap, setPriceMap] = useState<Record<string, string>>({});
 
+  // Revenue intelligence
+  const [totalConvCount, setTotalConvCount] = useState(0);
+  const [actionItems, setActionItems] = useState<ActionItem[]>([]);
+  const [totalRevenueCad, setTotalRevenueCad] = useState(0);
+  const [mtdRevenueCad, setMtdRevenueCad] = useState(0);
+  const [monthlyRevenue, setMonthlyRevenue] = useState<{ month: string; cad: number }[]>([]);
+
   // Broadcast
   const [bSubject, setBSubject] = useState('');
   const [bBody, setBBody] = useState('');
@@ -135,19 +151,30 @@ export default function AdminDashboard() {
   const [bResult, setBResult] = useState<string | null>(null);
 
   async function load() {
+    const now = new Date();
+    const in24h = new Date(now.getTime() + 24 * 3600000).toISOString();
+    const threeDaysAgo = new Date(now.getTime() - 3 * 86400000).toISOString();
+
     const [
       { data: jobData },
       { count: realtorCount },
       { count: pendingCount },
       { data: logData },
+      { count: totalConvs },
+      { data: overdueReports },
+      { data: upcoming24h },
     ] = await Promise.all([
       supabase.from('jobs').select('*').order('scheduled_at', { ascending: false }).limit(200),
       supabase.from('realtors').select('*', { count: 'exact', head: true }).eq('listed', true),
       supabase.from('realtors').select('*', { count: 'exact', head: true }).eq('backlink_verified', true).eq('approved', false),
       supabase.from('conversation_logs').select('*').eq('booked', true).order('started_at', { ascending: false }).limit(100),
+      supabase.from('conversation_logs').select('*', { count: 'exact', head: true }),
+      supabase.from('reports').select('id, generated_at, jobs(client_name)').eq('status', 'sent').lt('generated_at', threeDaysAgo),
+      supabase.from('jobs').select('id, address, city, scheduled_at').in('status', ['scheduled']).gte('scheduled_at', now.toISOString()).lte('scheduled_at', in24h),
     ]);
 
     setPendingRealtors(pendingCount ?? 0);
+    setTotalConvCount(totalConvs ?? 0);
 
     const jobList = (jobData as DbJob[]) ?? [];
     const allJobIds = jobList.map(j => j.id);
@@ -158,6 +185,38 @@ export default function AdminDashboard() {
     const reportMap = Object.fromEntries((reportData ?? []).map((r: DbReport) => [r.job_id, r]));
     const enriched = jobList.map(j => ({ ...j, report: reportMap[j.id] }));
     setJobs(enriched);
+
+    // Action items
+    const items: ActionItem[] = [];
+    const overdueCount = (overdueReports ?? []).length;
+    if (overdueCount > 0) {
+      items.push({
+        label: `${overdueCount} unpaid report${overdueCount > 1 ? 's' : ''} — 3+ days`,
+        detail: 'Follow up with clients to collect payment',
+        count: overdueCount,
+        color: 'red',
+      });
+    }
+    const upcomingCount = (upcoming24h ?? []).length;
+    if (upcomingCount > 0) {
+      items.push({
+        label: `${upcomingCount} job${upcomingCount > 1 ? 's' : ''} in next 24 hours`,
+        detail: (upcoming24h as any[]).map(j => j.address).join(', '),
+        count: upcomingCount,
+        color: 'blue',
+      });
+    }
+    // Jobs completed with no report
+    const noReportCompleted = jobList.filter(j => j.status === 'completed' && !reportMap[j.id]).length;
+    if (noReportCompleted > 0) {
+      items.push({
+        label: `${noReportCompleted} completed job${noReportCompleted > 1 ? 's' : ''} without a report`,
+        detail: 'Generate and attach reports for these inspections',
+        count: noReportCompleted,
+        color: 'amber',
+      });
+    }
+    setActionItems(items);
 
     const logs = (logData as DbConversationLog[]) ?? [];
     setAsadLogs(logs);
@@ -222,34 +281,62 @@ export default function AdminDashboard() {
     setClientsLoaded(true);
   }
 
+  function centsToReport(r: PaidReport): number {
+    const s = r.report_data?.summary;
+    if (!s) return 0;
+    if (s.baseCents !== undefined) return (s.baseCents ?? 0) + (s.taxCents ?? 0);
+    if (s.price) {
+      const n = parseFloat(String(s.price).replace(/[^0-9.]/g, ''));
+      return isNaN(n) ? 0 : Math.round(n * 100);
+    }
+    return 0;
+  }
+
   async function loadRevenue() {
     const [{ data: paid }, { data: pending }] = await Promise.all([
       supabase
         .from('reports')
-        .select('id, status, paid_at, jobs(client_name, city, inspection_type, scheduled_at)')
+        .select('id, status, paid_at, report_data, jobs(client_name, city, inspection_type, scheduled_at)')
         .in('status', ['paid', 'visible'])
         .order('paid_at', { ascending: false }),
       supabase
         .from('reports')
-        .select('id, jobs(client_name, city, inspection_type)')
+        .select('id, report_data, jobs(client_name, city, inspection_type)')
         .eq('status', 'sent'),
     ]);
 
-    setPaidReports((paid as PaidReport[]) ?? []);
+    const paidList = (paid as PaidReport[]) ?? [];
+    setPaidReports(paidList);
     setPendingReports((pending as PendingReport[]) ?? []);
 
-    // Build price map from conversation_logs (email → price)
-    const { data: logs } = await supabase
-      .from('conversation_logs')
-      .select('client_email, price')
-      .eq('booked', true)
-      .not('price', 'is', null);
+    // Compute revenue totals from report_data
+    const nowMs = Date.now();
+    const mtdStart = new Date(new Date().getFullYear(), new Date().getMonth(), 1).getTime();
+    let total = 0;
+    let mtd = 0;
+    const byMonth: Record<string, number> = {};
 
-    const map: Record<string, string> = {};
-    for (const l of logs ?? []) {
-      if (l.client_email && l.price) map[l.client_email] = l.price;
+    for (const r of paidList) {
+      const cents = centsToReport(r);
+      total += cents;
+      const paidMs = r.paid_at ? new Date(r.paid_at).getTime() : 0;
+      if (paidMs >= mtdStart) mtd += cents;
+      if (r.paid_at) {
+        const monthKey = r.paid_at.slice(0, 7); // YYYY-MM
+        byMonth[monthKey] = (byMonth[monthKey] ?? 0) + cents;
+      }
     }
-    setPriceMap(map);
+
+    setTotalRevenueCad(total);
+    setMtdRevenueCad(mtd);
+
+    // Build sorted monthly series (last 6 months)
+    const months = Object.entries(byMonth)
+      .sort(([a], [b]) => a.localeCompare(b))
+      .slice(-6)
+      .map(([month, cents]) => ({ month, cad: cents / 100 }));
+    setMonthlyRevenue(months);
+
     setRevenueLoaded(true);
   }
 
@@ -475,7 +562,12 @@ export default function AdminDashboard() {
           { label: 'Asad Bookings', value: stats.asadBooked, icon: <MessageCircle className="h-5 w-5 text-indigo-600" />, bg: 'bg-indigo-50' },
           { label: 'Live Visitors', value: liveCount, icon: <Eye className="h-5 w-5 text-rose-600" />, bg: 'bg-rose-50' },
           { label: 'Listed Realtors', value: stats.realtors, icon: <Users className="h-5 w-5 text-purple-600" />, bg: 'bg-purple-50' },
-          { label: 'Clients', value: clients.length, icon: <Users className="h-5 w-5 text-teal-600" />, bg: 'bg-teal-50' },
+          {
+            label: 'Revenue MTD',
+            value: mtdRevenueCad > 0 ? `$${(mtdRevenueCad / 100).toLocaleString('en-CA', { minimumFractionDigits: 0 })}` : '—',
+            icon: <DollarSign className="h-5 w-5 text-emerald-600" />,
+            bg: 'bg-emerald-50',
+          },
         ].map(s => (
           <div key={s.label} className={`${s.bg} rounded-xl p-5`}>
             <div className="flex items-center justify-between mb-2">
@@ -486,6 +578,29 @@ export default function AdminDashboard() {
           </div>
         ))}
       </div>
+
+      {/* Action Required */}
+      {actionItems.length > 0 && (
+        <div className="mb-4 space-y-2">
+          {actionItems.map((item, i) => {
+            const colorMap = {
+              red: 'bg-red-50 border-red-200 text-red-800',
+              amber: 'bg-amber-50 border-amber-200 text-amber-800',
+              blue: 'bg-blue-50 border-blue-200 text-blue-800',
+            };
+            const dotMap = { red: 'bg-red-500', amber: 'bg-amber-500', blue: 'bg-blue-500' };
+            return (
+              <div key={i} className={`flex items-start gap-3 px-4 py-3 rounded-xl border ${colorMap[item.color]}`}>
+                <span className={`mt-1.5 w-2 h-2 rounded-full shrink-0 ${dotMap[item.color]}`} />
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold">{item.label}</p>
+                  <p className="text-xs opacity-75 truncate">{item.detail}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
 
       {/* Tabs */}
       <div className="flex gap-1 mb-4 border-b border-gray-200 overflow-x-auto">
@@ -589,14 +704,21 @@ export default function AdminDashboard() {
                       <p className="text-sm text-gray-500">
                         {job.client_name} · {job.client_email} · {job.city} · {job.inspection_type}
                       </p>
-                      {job.scheduled_at && (
-                        <p className="text-xs text-gray-400 flex items-center gap-1 mt-0.5">
-                          <Calendar className="h-3 w-3" />
-                          {new Date(job.scheduled_at).toLocaleDateString('en-CA', {
-                            weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit',
-                          })}
-                        </p>
-                      )}
+                      <div className="flex items-center gap-3 mt-0.5 flex-wrap">
+                        {job.scheduled_at && (
+                          <p className="text-xs text-gray-400 flex items-center gap-1">
+                            <Calendar className="h-3 w-3" />
+                            {new Date(job.scheduled_at).toLocaleDateString('en-CA', {
+                              weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit',
+                            })}
+                          </p>
+                        )}
+                        {job.report?.report_data?.summary?.price && (
+                          <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+                            {job.report.report_data.summary.price} CAD
+                          </span>
+                        )}
+                      </div>
                     </div>
 
                     <div className="flex items-center gap-2 flex-wrap shrink-0">
@@ -683,6 +805,40 @@ export default function AdminDashboard() {
 
       {/* ── Tab: Asad Bookings ── */}
       {tab === 'asad' && (
+        <div className="space-y-4">
+          {/* Conversion funnel KPIs */}
+          <div className="grid grid-cols-3 gap-4">
+            {[
+              {
+                label: 'Total Conversations',
+                value: totalConvCount,
+                sub: 'all time',
+                color: 'text-gray-900',
+                bg: 'bg-white border border-gray-200',
+              },
+              {
+                label: 'Bookings Completed',
+                value: stats.asadBooked,
+                sub: `${totalConvCount > 0 ? ((stats.asadBooked / totalConvCount) * 100).toFixed(1) : '0'}% conversion`,
+                color: 'text-green-700',
+                bg: 'bg-green-50 border border-green-100',
+              },
+              {
+                label: 'Drop-offs',
+                value: Math.max(0, totalConvCount - stats.asadBooked),
+                sub: 'left before booking',
+                color: 'text-amber-700',
+                bg: 'bg-amber-50 border border-amber-100',
+              },
+            ].map(k => (
+              <div key={k.label} className={`rounded-xl p-5 ${k.bg}`}>
+                <p className={`text-2xl font-bold ${k.color}`}>{k.value}</p>
+                <p className="text-sm text-gray-700 font-medium mt-1">{k.label}</p>
+                <p className="text-xs text-gray-500 mt-0.5">{k.sub}</p>
+              </div>
+            ))}
+          </div>
+
         <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
           <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
             <div>
@@ -756,6 +912,7 @@ export default function AdminDashboard() {
               ))}
             </div>
           )}
+        </div>
         </div>
       )}
 
@@ -1139,26 +1296,79 @@ export default function AdminDashboard() {
       {tab === 'revenue' && (
         <div className="space-y-4">
           {/* KPI row */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { label: 'Paid Reports', value: paidReports.length, color: 'text-green-700', bg: 'bg-green-50 border-green-100' },
-              { label: 'Awaiting Payment', value: pendingReports.length, color: 'text-amber-700', bg: 'bg-amber-50 border-amber-100' },
               {
-                label: 'Est. Revenue (Asad)',
-                value: (() => {
-                  const prices = Object.values(priceMap).map(p => parseFloat(p.replace(/[^0-9.]/g, ''))).filter(n => !isNaN(n));
-                  const total = prices.reduce((a, b) => a + b, 0);
-                  return total > 0 ? `$${total.toLocaleString('en-CA', { minimumFractionDigits: 0 })}` : '—';
-                })(),
+                label: 'Total Revenue',
+                value: totalRevenueCad > 0 ? `$${(totalRevenueCad / 100).toLocaleString('en-CA', { minimumFractionDigits: 2 })}` : '—',
+                sub: 'all paid reports',
+                color: 'text-green-700', bg: 'bg-green-50 border-green-100',
+              },
+              {
+                label: 'Revenue MTD',
+                value: mtdRevenueCad > 0 ? `$${(mtdRevenueCad / 100).toLocaleString('en-CA', { minimumFractionDigits: 2 })}` : '—',
+                sub: 'this calendar month',
+                color: 'text-emerald-700', bg: 'bg-emerald-50 border-emerald-100',
+              },
+              {
+                label: 'Avg Deal Size',
+                value: paidReports.length > 0 && totalRevenueCad > 0
+                  ? `$${((totalRevenueCad / 100) / paidReports.length).toLocaleString('en-CA', { minimumFractionDigits: 2 })}`
+                  : '—',
+                sub: 'per paid inspection',
                 color: 'text-blue-700', bg: 'bg-blue-50 border-blue-100',
+              },
+              {
+                label: 'Pipeline',
+                value: (() => {
+                  const total = pendingReports.reduce((sum, r) => {
+                    const s = r.report_data?.summary;
+                    if (!s) return sum;
+                    if (s.baseCents !== undefined) return sum + (s.baseCents ?? 0) + (s.taxCents ?? 0);
+                    const n = parseFloat(String(s.price ?? '').replace(/[^0-9.]/g, ''));
+                    return sum + (isNaN(n) ? 0 : Math.round(n * 100));
+                  }, 0);
+                  return total > 0 ? `$${(total / 100).toLocaleString('en-CA', { minimumFractionDigits: 2 })}` : `${pendingReports.length} pending`;
+                })(),
+                sub: 'awaiting payment',
+                color: 'text-amber-700', bg: 'bg-amber-50 border-amber-100',
               },
             ].map(k => (
               <div key={k.label} className={`rounded-xl border p-5 ${k.bg}`}>
                 <p className={`text-2xl font-bold ${k.color}`}>{k.value}</p>
-                <p className="text-sm text-gray-600 mt-1">{k.label}</p>
+                <p className="text-sm text-gray-700 font-medium mt-1">{k.label}</p>
+                <p className="text-xs text-gray-500 mt-0.5">{k.sub}</p>
               </div>
             ))}
           </div>
+
+          {/* Monthly revenue chart */}
+          {monthlyRevenue.length > 1 && (
+            <div className="bg-white border border-gray-200 rounded-xl p-5">
+              <h3 className="text-sm font-semibold text-gray-900 mb-4">Monthly Revenue</h3>
+              <div className="flex items-end gap-3 h-28">
+                {monthlyRevenue.map(({ month, cad }) => {
+                  const maxCad = Math.max(...monthlyRevenue.map(m => m.cad), 1);
+                  const pct = Math.round((cad / maxCad) * 100);
+                  const label = new Date(month + '-01').toLocaleDateString('en-CA', { month: 'short', year: '2-digit' });
+                  return (
+                    <div key={month} className="flex-1 flex flex-col items-center gap-1">
+                      <span className="text-xs text-gray-500 font-medium">
+                        {cad > 0 ? `$${(cad / 1000).toFixed(1)}k` : '—'}
+                      </span>
+                      <div className="w-full bg-gray-100 rounded-t-md overflow-hidden" style={{ height: '72px' }}>
+                        <div
+                          className="w-full bg-emerald-500 rounded-t-md transition-all"
+                          style={{ height: `${pct}%`, marginTop: `${100 - pct}%` }}
+                        />
+                      </div>
+                      <span className="text-xs text-gray-400">{label}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {/* Paid reports table */}
           <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
@@ -1185,11 +1395,14 @@ export default function AdminDashboard() {
                       <th className="px-5 py-3 text-left">Client</th>
                       <th className="px-5 py-3 text-left">City</th>
                       <th className="px-5 py-3 text-left">Service</th>
+                      <th className="px-5 py-3 text-right">Amount</th>
                       <th className="px-5 py-3 text-left">Status</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-100">
-                    {paidReports.map(r => (
+                    {paidReports.map(r => {
+                      const cents = centsToReport(r);
+                      return (
                       <tr key={r.id} className="hover:bg-gray-50">
                         <td className="px-5 py-3 text-gray-400 text-xs whitespace-nowrap">
                           {r.paid_at ? new Date(r.paid_at).toLocaleDateString('en-CA', { month: 'short', day: 'numeric', year: 'numeric' }) : '—'}
@@ -1197,13 +1410,20 @@ export default function AdminDashboard() {
                         <td className="px-5 py-3 font-medium text-gray-900">{r.jobs?.client_name ?? '—'}</td>
                         <td className="px-5 py-3 text-gray-600">{r.jobs?.city ?? '—'}</td>
                         <td className="px-5 py-3 text-gray-600">{r.jobs?.inspection_type ?? '—'}</td>
+                        <td className="px-5 py-3 text-right">
+                          {cents > 0
+                            ? <span className="font-semibold text-emerald-700">${(cents / 100).toFixed(2)}</span>
+                            : <span className="text-gray-300">—</span>
+                          }
+                        </td>
                         <td className="px-5 py-3">
                           <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${REPORT_STATUS_COLORS[r.status] ?? 'bg-gray-100 text-gray-600'}`}>
                             {r.status}
                           </span>
                         </td>
                       </tr>
-                    ))}
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
@@ -1218,15 +1438,21 @@ export default function AdminDashboard() {
                 <p className="text-xs text-amber-600 mt-0.5">Reports sent but not yet marked paid</p>
               </div>
               <div className="divide-y divide-gray-100">
-                {pendingReports.map(r => (
+                {pendingReports.map(r => {
+                  const s = r.report_data?.summary;
+                  const cents = s?.baseCents !== undefined ? (s.baseCents + (s.taxCents ?? 0)) : 0;
+                  const priceStr = s?.price ?? (cents > 0 ? `$${(cents / 100).toFixed(2)}` : null);
+                  return (
                   <div key={r.id} className="px-5 py-3 flex items-center gap-3">
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-gray-900">{r.jobs?.client_name ?? '—'}</p>
                       <p className="text-xs text-gray-500">{r.jobs?.city} · {r.jobs?.inspection_type}</p>
                     </div>
+                    {priceStr && <span className="text-xs font-semibold text-amber-700">{priceStr}</span>}
                     <span className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">sent</span>
                   </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}
