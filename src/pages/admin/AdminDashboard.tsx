@@ -31,7 +31,7 @@ interface Client {
 }
 
 interface PaidReport {
-  id: string; status: string; paid_at: string | null;
+  id: string; status: string; paid_at: string | null; generated_at: string | null;
   report_data: any | null;
   jobs: { client_name: string | null; city: string | null; inspection_type: string | null; scheduled_at: string | null } | null;
 }
@@ -143,6 +143,8 @@ export default function AdminDashboard() {
   const [totalRevenueCad, setTotalRevenueCad] = useState(0);
   const [mtdRevenueCad, setMtdRevenueCad] = useState(0);
   const [monthlyRevenue, setMonthlyRevenue] = useState<{ month: string; cad: number }[]>([]);
+  const [avgDaysToCollect, setAvgDaysToCollect] = useState<number | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   // Broadcast
   const [bSubject, setBSubject] = useState('');
@@ -151,12 +153,14 @@ export default function AdminDashboard() {
   const [bResult, setBResult] = useState<string | null>(null);
 
   async function load() {
+    setLoadError(null);
     const now = new Date();
     const in24h = new Date(now.getTime() + 24 * 3600000).toISOString();
     const threeDaysAgo = new Date(now.getTime() - 3 * 86400000).toISOString();
 
+    try {
     const [
-      { data: jobData },
+      { data: jobData, error: jobErr },
       { count: realtorCount },
       { count: pendingCount },
       { data: logData },
@@ -169,9 +173,11 @@ export default function AdminDashboard() {
       supabase.from('realtors').select('*', { count: 'exact', head: true }).eq('backlink_verified', true).eq('approved', false),
       supabase.from('conversation_logs').select('*').eq('booked', true).order('started_at', { ascending: false }).limit(100),
       supabase.from('conversation_logs').select('*', { count: 'exact', head: true }),
-      supabase.from('reports').select('id, generated_at, jobs(client_name)').eq('status', 'sent').lt('generated_at', threeDaysAgo),
+      supabase.from('reports').select('id, generated_at').eq('status', 'sent').lt('generated_at', threeDaysAgo),
       supabase.from('jobs').select('id, address, city, scheduled_at').in('status', ['scheduled']).gte('scheduled_at', now.toISOString()).lte('scheduled_at', in24h),
     ]);
+
+    if (jobErr) { setLoadError(`Failed to load jobs: ${jobErr.message}`); setLoading(false); return; }
 
     setPendingRealtors(pendingCount ?? 0);
     setTotalConvCount(totalConvs ?? 0);
@@ -232,6 +238,10 @@ export default function AdminDashboard() {
       asadBooked: logs.length,
     });
     setLoading(false);
+    } catch (e: any) {
+      setLoadError(`Unexpected error: ${e.message}`);
+      setLoading(false);
+    }
   }
 
   async function loadVisitors(range: 'today' | '7d' | '30d' | 'all' = visitorTimeFilter) {
@@ -296,7 +306,7 @@ export default function AdminDashboard() {
     const [{ data: paid }, { data: pending }] = await Promise.all([
       supabase
         .from('reports')
-        .select('id, status, paid_at, report_data, jobs(client_name, city, inspection_type, scheduled_at)')
+        .select('id, status, paid_at, generated_at, report_data, jobs(client_name, city, inspection_type, scheduled_at)')
         .in('status', ['paid', 'visible'])
         .order('paid_at', { ascending: false }),
       supabase
@@ -329,6 +339,12 @@ export default function AdminDashboard() {
 
     setTotalRevenueCad(total);
     setMtdRevenueCad(mtd);
+
+    // Time-to-collect: avg days from generated_at → paid_at
+    const collectTimes = paidList
+      .filter(r => r.paid_at && r.generated_at)
+      .map(r => (new Date(r.paid_at!).getTime() - new Date(r.generated_at!).getTime()) / 86400000);
+    setAvgDaysToCollect(collectTimes.length > 0 ? collectTimes.reduce((a, b) => a + b, 0) / collectTimes.length : null);
 
     // Build sorted monthly series (last 6 months)
     const months = Object.entries(byMonth)
@@ -364,15 +380,18 @@ export default function AdminDashboard() {
     load();
 
     const channel = supabase
-      .channel('asad-bookings')
+      .channel('admin-live')
       .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'conversation_logs' }, (payload) => {
         const log = payload.new as DbConversationLog;
+        setTotalConvCount(prev => prev + 1);
         if (log.booked) {
           setAsadLogs(prev => [log, ...prev]);
           setUnreadCount(prev => prev + 1);
           setStats(prev => ({ ...prev, asadBooked: prev.asadBooked + 1 }));
         }
       })
+      .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'jobs' }, () => load())
+      .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'jobs' }, () => load())
       .subscribe();
 
     return () => { supabase.removeChannel(channel); };
@@ -446,11 +465,25 @@ export default function AdminDashboard() {
   }
 
   async function markPaid(report: DbReport) {
+    const paidAt = new Date().toISOString();
+    // Optimistic: update local state immediately so UI responds instantly
+    setJobs(prev => prev.map(j =>
+      j.report?.id === report.id
+        ? { ...j, report: { ...j.report!, status: 'visible', paid_at: paidAt } }
+        : j
+    ));
     setMarkingPaid(report.id);
-    await supabase.from('reports')
-      .update({ status: 'visible', paid_at: new Date().toISOString() })
+    const { error } = await supabase.from('reports')
+      .update({ status: 'visible', paid_at: paidAt })
       .eq('id', report.id);
-    await load();
+    if (error) {
+      // Revert on failure
+      setJobs(prev => prev.map(j =>
+        j.report?.id === report.id
+          ? { ...j, report: { ...j.report!, status: report.status, paid_at: report.paid_at } }
+          : j
+      ));
+    }
     setMarkingPaid('');
   }
 
@@ -578,6 +611,14 @@ export default function AdminDashboard() {
           </div>
         ))}
       </div>
+
+      {/* Load error */}
+      {loadError && (
+        <div className="mb-4 px-4 py-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700 flex items-center gap-2">
+          <span className="font-semibold">Error:</span> {loadError}
+          <button onClick={load} className="ml-auto text-red-600 underline text-xs">Retry</button>
+        </div>
+      )}
 
       {/* Action Required */}
       {actionItems.length > 0 && (
@@ -1369,6 +1410,102 @@ export default function AdminDashboard() {
               </div>
             </div>
           )}
+
+          {/* Service mix + City breakdown + Time-to-collect */}
+          {revenueLoaded && jobs.length > 0 && (() => {
+            const completedJobs = jobs.filter(j => j.status === 'completed');
+
+            // Service mix from all completed jobs
+            const byService: Record<string, number> = {};
+            for (const j of completedJobs) {
+              const k = j.inspection_type ?? 'Other';
+              byService[k] = (byService[k] ?? 0) + 1;
+            }
+            const serviceList = Object.entries(byService).sort((a, b) => b[1] - a[1]).slice(0, 6);
+            const maxService = serviceList[0]?.[1] ?? 1;
+
+            // City breakdown
+            const byCity: Record<string, number> = {};
+            for (const j of completedJobs) {
+              const k = j.city ?? 'Unknown';
+              byCity[k] = (byCity[k] ?? 0) + 1;
+            }
+            const cityList = Object.entries(byCity).sort((a, b) => b[1] - a[1]).slice(0, 8);
+            const maxCity = cityList[0]?.[1] ?? 1;
+
+            return (
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                {/* Service mix */}
+                <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                  <div className="px-5 py-3 border-b border-gray-100">
+                    <h3 className="text-sm font-semibold text-gray-900">Service Mix</h3>
+                    <p className="text-xs text-gray-400">Completed jobs by type</p>
+                  </div>
+                  <div className="p-4 space-y-2">
+                    {serviceList.length === 0 ? <p className="text-xs text-gray-400">No data yet</p> : serviceList.map(([svc, count]) => (
+                      <div key={svc} className="flex items-center gap-2 text-sm">
+                        <span className="flex-1 text-gray-700 text-xs truncate">{svc}</span>
+                        <div className="w-24 h-1.5 bg-gray-100 rounded-full overflow-hidden shrink-0">
+                          <div className="h-full bg-blue-500 rounded-full" style={{ width: `${Math.round((count / maxService) * 100)}%` }} />
+                        </div>
+                        <span className="text-xs text-gray-500 w-4 text-right shrink-0">{count}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* City breakdown */}
+                <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                  <div className="px-5 py-3 border-b border-gray-100">
+                    <h3 className="text-sm font-semibold text-gray-900">Top Cities</h3>
+                    <p className="text-xs text-gray-400">Completed jobs by city</p>
+                  </div>
+                  <div className="p-4 space-y-2">
+                    {cityList.length === 0 ? <p className="text-xs text-gray-400">No data yet</p> : cityList.map(([city, count]) => (
+                      <div key={city} className="flex items-center gap-2 text-sm">
+                        <span className="flex-1 text-gray-700 text-xs truncate">{city}</span>
+                        <div className="w-24 h-1.5 bg-gray-100 rounded-full overflow-hidden shrink-0">
+                          <div className="h-full bg-indigo-400 rounded-full" style={{ width: `${Math.round((count / maxCity) * 100)}%` }} />
+                        </div>
+                        <span className="text-xs text-gray-500 w-4 text-right shrink-0">{count}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Cash flow metrics */}
+                <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                  <div className="px-5 py-3 border-b border-gray-100">
+                    <h3 className="text-sm font-semibold text-gray-900">Cash Flow</h3>
+                    <p className="text-xs text-gray-400">Collection efficiency</p>
+                  </div>
+                  <div className="p-4 space-y-4">
+                    <div>
+                      <p className="text-2xl font-bold text-gray-900">
+                        {avgDaysToCollect !== null ? `${avgDaysToCollect.toFixed(1)}d` : '—'}
+                      </p>
+                      <p className="text-xs text-gray-600 font-medium mt-0.5">Avg days to collect</p>
+                      <p className="text-xs text-gray-400">From report sent → paid</p>
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold text-gray-900">{pendingReports.length}</p>
+                      <p className="text-xs text-gray-600 font-medium mt-0.5">Outstanding invoices</p>
+                      <p className="text-xs text-gray-400">Reports sent, not yet paid</p>
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold text-gray-900">
+                        {paidReports.length + pendingReports.length > 0
+                          ? `${Math.round((paidReports.length / (paidReports.length + pendingReports.length)) * 100)}%`
+                          : '—'}
+                      </p>
+                      <p className="text-xs text-gray-600 font-medium mt-0.5">Collection rate</p>
+                      <p className="text-xs text-gray-400">Paid ÷ (paid + outstanding)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })()}
 
           {/* Paid reports table */}
           <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
