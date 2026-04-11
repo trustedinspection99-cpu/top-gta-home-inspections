@@ -5,6 +5,7 @@ import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Printer, AlertCircle } from 'lucide-react';
 import { buildReportHtml } from '@/lib/reportTemplate';
+import { buildWettReportHtml } from '@/lib/wettReportTemplate';
 
 export default function ReportViewer() {
   const { id } = useParams<{ id: string }>();
@@ -75,6 +76,14 @@ export default function ReportViewer() {
           normalizedData.photoUrls ?? [],
           normalizedData.photoUrls?.[0] ?? ''
         );
+        setHtmlContent(html);
+        setLoading(false);
+        return;
+      }
+
+      // WETT report: render from stored form data
+      if (rep.storage_url === 'wett' && rep.report_data) {
+        const html = rep.report_data.htmlCache ?? buildWettReportHtml(rep.report_data.wettForm ?? rep.report_data);
         setHtmlContent(html);
         setLoading(false);
         return;

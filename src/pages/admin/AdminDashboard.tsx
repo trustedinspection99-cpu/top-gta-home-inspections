@@ -829,11 +829,18 @@ export default function AdminDashboard() {
                       )}
 
                       {job.status !== 'cancelled' && (
-                        <Button asChild size="sm" variant="outline" className="border-blue-300 text-blue-700 text-xs h-7">
-                          <Link to={`/admin/jobs/${job.id}/report`} className="flex items-center gap-1">
-                            {job.report ? <><Send className="h-3 w-3" />Scout / Update Report</> : <><FileText className="h-3 w-3" />Start Scout</>}
-                          </Link>
-                        </Button>
+                        <div className="flex items-center gap-1">
+                          <Button asChild size="sm" variant="outline" className="border-blue-300 text-blue-700 text-xs h-7">
+                            <Link to={`/admin/jobs/${job.id}/report`} className="flex items-center gap-1">
+                              {job.report ? <><Send className="h-3 w-3" />Scout / Update Report</> : <><FileText className="h-3 w-3" />Start Scout</>}
+                            </Link>
+                          </Button>
+                          <Button asChild size="sm" variant="outline" className="border-orange-300 text-orange-700 text-xs h-7">
+                            <Link to={`/admin/jobs/${job.id}/wett`} className="flex items-center gap-1">
+                              <FileText className="h-3 w-3" />WETT
+                            </Link>
+                          </Button>
+                        </div>
                       )}
                     </div>
                   </div>

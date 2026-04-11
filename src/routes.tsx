@@ -83,6 +83,7 @@ const RealtorDashboard = lazy(() => import('./pages/realtor/RealtorDashboard'));
 const AdminDashboard = lazy(() => import('./pages/admin/AdminDashboard'));
 const NewJobPage = lazy(() => import('./pages/admin/NewJobPage'));
 const ReportGeneratorPage = lazy(() => import('./pages/admin/ReportGeneratorPage'));
+const WettReportPage = lazy(() => import('./pages/admin/WettReportPage'));
 const AdminRealtorsPage = lazy(() => import('./pages/admin/AdminRealtorsPage'));
 const OutreachPage = lazy(() => import('./pages/admin/OutreachPage'));
 const SeoRankingsPage = lazy(() => import('./pages/admin/SeoRankingsPage'));
@@ -150,6 +151,7 @@ export const routes: RouteObject[] = [
       { path: 'admin', element: <ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute> },
       { path: 'admin/jobs/new', element: <ProtectedRoute role="admin"><NewJobPage /></ProtectedRoute> },
       { path: 'admin/jobs/:id/report', element: <ProtectedRoute role="admin"><ReportGeneratorPage /></ProtectedRoute> },
+      { path: 'admin/jobs/:id/wett', element: <ProtectedRoute role="admin"><WettReportPage /></ProtectedRoute> },
       { path: 'admin/reports/:id', element: <ProtectedRoute role="admin"><ReportViewer /></ProtectedRoute> },
       { path: 'admin/realtors', element: <ProtectedRoute role="admin"><AdminRealtorsPage /></ProtectedRoute> },
       { path: 'admin/outreach', element: <ProtectedRoute role="admin"><OutreachPage /></ProtectedRoute> },
