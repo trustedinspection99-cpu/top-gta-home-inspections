@@ -3943,6 +3943,411 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">Health Canada recommends maintaining indoor relative humidity between 30% and 50% year-round. Above 60% humidity, mould growth risk increases significantly. In Ontario winters, maintaining 30–40% humidity prevents both condensation on windows (which feeds mould) and static electricity discomfort. Use a hygrometer to monitor your home's humidity and adjust your HRV or humidifier settings accordingly.</p>
     `,
   },
+  {
+    id: 65,
+    slug: "home-inspection-cost-ontario-2026",
+    title: "Home Inspection Cost Ontario 2026: Full Price Breakdown",
+    metaTitle: "Home Inspection Cost Ontario 2026 | ASADS",
+    metaDescription: "How much does a home inspection cost in Ontario? Full 2026 price breakdown by home size, add-ons (mold, radon, asbestos), and what's included. Book from $399.",
+    category: "Home Inspection Tips",
+    date: "2026-04-12",
+    readTime: "7 min read",
+    author: "ASADS Home Inspection",
+    excerpt: "Home inspection costs in Ontario range from $399 to $700+ depending on home size and add-on services. Here's the complete 2026 price breakdown.",
+    content: `
+      <p class="mb-4">Home inspection costs in Ontario in 2026 typically range from <strong>$399 to $700+</strong> for a standard single-family home, depending on size, age, and any add-on services. Understanding exactly what you're paying for — and what's included — helps you make a better decision when booking an inspector.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Cost Ontario: By Home Size (2026)</h2>
+      <p class="mb-4">The most common pricing factor is square footage. Larger homes take longer to inspect and therefore cost more. Here's what you can expect to pay in Ontario:</p>
+
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse text-sm">
+          <thead><tr class="bg-gray-100"><th class="border border-gray-300 px-4 py-2 text-left">Home Size</th><th class="border border-gray-300 px-4 py-2 text-left">Typical Price Range (Ontario)</th><th class="border border-gray-300 px-4 py-2 text-left">Inspection Time</th></tr></thead>
+          <tbody>
+            <tr><td class="border border-gray-300 px-4 py-2">Condo / Apartment</td><td class="border border-gray-300 px-4 py-2">$349 – $449</td><td class="border border-gray-300 px-4 py-2">1.5 – 2.5 hours</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2">Up to 1,500 sq ft</td><td class="border border-gray-300 px-4 py-2">$399 – $499</td><td class="border border-gray-300 px-4 py-2">2 – 3 hours</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">1,500 – 2,500 sq ft</td><td class="border border-gray-300 px-4 py-2">$449 – $549</td><td class="border border-gray-300 px-4 py-2">2.5 – 3.5 hours</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2">2,500 – 3,500 sq ft</td><td class="border border-gray-300 px-4 py-2">$499 – $599</td><td class="border border-gray-300 px-4 py-2">3 – 4 hours</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">3,500 sq ft+</td><td class="border border-gray-300 px-4 py-2">$599 – $750+</td><td class="border border-gray-300 px-4 py-2">4+ hours</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2">Commercial Property</td><td class="border border-gray-300 px-4 py-2">$799 – $1,500+</td><td class="border border-gray-300 px-4 py-2">4 – 8 hours</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mb-4">ASADS starts at <strong>$399</strong> for homes up to 1,500 sq ft with a same-day digital report included. There are no hidden travel or report fees.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What's Included in a Standard Home Inspection</h2>
+      <p class="mb-4">A standard home inspection in Ontario covers all major structural and mechanical systems of the home. Under OAHI (Ontario Association of Home Inspectors) standards, a complete inspection includes:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Roof:</strong> Shingles, flashing, fascia, soffits, gutters, chimney caps</li>
+        <li><strong>Exterior:</strong> Siding, windows, doors, grading, walkways, deck/porch</li>
+        <li><strong>Foundation and Structure:</strong> Basement walls, visible foundation, evidence of water infiltration</li>
+        <li><strong>Attic:</strong> Insulation R-value, ventilation, evidence of moisture or mould</li>
+        <li><strong>Electrical:</strong> Panel, breakers, visible wiring, outlets, GFCI protection</li>
+        <li><strong>Plumbing:</strong> Supply and drain lines, fixtures, water heater, shut-offs</li>
+        <li><strong>HVAC:</strong> Furnace, A/C, ductwork, filters, heat exchanger</li>
+        <li><strong>Interior:</strong> Walls, ceilings, floors, windows, doors, stairs</li>
+      </ul>
+      <p class="mb-4">Your report should include <strong>photos of every deficiency</strong> with a severity rating (safety concern, major defect, or maintenance item) and recommended action. ASADS reports are delivered same-day in PDF format.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Add-On Costs in Ontario</h2>
+      <p class="mb-4">Standard inspections don't include testing for environmental hazards. These are priced separately because they require specialized equipment and laboratory analysis:</p>
+
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse text-sm">
+          <thead><tr class="bg-gray-100"><th class="border border-gray-300 px-4 py-2 text-left">Add-On Service</th><th class="border border-gray-300 px-4 py-2 text-left">Cost (Ontario, 2026)</th><th class="border border-gray-300 px-4 py-2 text-left">Who Needs It</th></tr></thead>
+          <tbody>
+            <tr><td class="border border-gray-300 px-4 py-2">Mold Inspection (Air Sampling)</td><td class="border border-gray-300 px-4 py-2">From $299</td><td class="border border-gray-300 px-4 py-2">Musty smell, water history, finished basement</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2">Asbestos Testing</td><td class="border border-gray-300 px-4 py-2">From $299</td><td class="border border-gray-300 px-4 py-2">Pre-1985 homes, renovation plans</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">Radon Testing (90-day)</td><td class="border border-gray-300 px-4 py-2">From $199</td><td class="border border-gray-300 px-4 py-2">All Ontario homes — radon is the #2 cause of lung cancer</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2">Thermal Imaging</td><td class="border border-gray-300 px-4 py-2">From $149 add-on</td><td class="border border-gray-300 px-4 py-2">Detect hidden moisture, insulation gaps, electrical hot spots</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">WETT Inspection (Fireplace/Wood Stove)</td><td class="border border-gray-300 px-4 py-2">From $199</td><td class="border border-gray-300 px-4 py-2">Required by most Ontario insurers for wood-burning appliances</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2">Lead Paint Testing</td><td class="border border-gray-300 px-4 py-2">From $249</td><td class="border border-gray-300 px-4 py-2">Pre-1978 homes, renovation plans with children</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">Well Water Testing</td><td class="border border-gray-300 px-4 py-2">From $199</td><td class="border border-gray-300 px-4 py-2">Rural properties with private wells</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Pre-Purchase vs. Pre-Listing Inspections: Is There a Price Difference?</h2>
+      <p class="mb-4"><strong>Pre-purchase inspections</strong> (buyer inspections) and <strong>pre-listing inspections</strong> (seller inspections) are priced the same — the difference is timing and purpose, not the inspection itself. Both involve a complete assessment of the property with a same-day report.</p>
+      <p class="mb-4">Pre-listing inspections are increasingly common in Ontario's competitive markets: sellers get ahead of potential buyer concerns by identifying issues before listing, allowing them to repair or disclose accordingly. This prevents deal collapses late in the transaction and typically recovers more than its cost by strengthening a listing's credibility.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Are Some Inspectors $200 Cheaper?</h2>
+      <p class="mb-4">Ontario does not require mandatory licensing for home inspectors (as of 2026 — the Home Inspection Act has been passed but regulations are still being phased in). This means pricing varies widely:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Inexperienced or part-time inspectors may price at $250–$350 to attract clients</li>
+        <li>Lower prices often mean faster inspections (1–1.5 hours vs. 3 hours) with shorter, checkbox-style reports</li>
+        <li>Volume-focused inspectors may complete 5–6 inspections per day — less time per client</li>
+        <li>Some low-cost inspectors don't carry Errors and Omissions (E&amp;O) insurance, limiting your recourse if something is missed</li>
+      </ul>
+      <p class="mb-4">The cost of a missed deficiency — a failed heat exchanger, undisclosed water damage, or faulty electrical — can easily exceed $5,000–$30,000. The difference between a $350 and a $499 inspection is $149. The difference in thoroughness and liability protection is significant.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is a Home Inspection Worth the Cost?</h2>
+      <p class="mb-4">For most Ontario home buyers, a home inspection is one of the highest-ROI expenditures in the entire transaction. A $499 inspection that identifies a $15,000 roof replacement need, a cracked heat exchanger ($3,000–$6,000), or active basement water infiltration gives buyers either the ability to negotiate a price reduction or the information to walk away from a bad purchase.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Book a Home Inspection in Ontario</h2>
+      <p class="mb-4">ASADS Home Inspection serves all 109 cities across Ontario. Book online or call <a href="tel:+16478019311" class="text-primary hover:underline">(647) 801-9311</a>. Same-day and next-day appointments available.</p>
+      <p class="mb-4"><a href="/booking" class="text-primary hover:underline">Book your home inspection online</a> | <a href="/pricing" class="text-primary hover:underline">View full pricing</a> | <a href="/services/pre-purchase" class="text-primary hover:underline">Pre-Purchase Inspection Ontario</a></p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Frequently Asked Questions: Home Inspection Costs Ontario</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How much does a home inspection cost in Ontario?</h3>
+      <p class="mb-4">Home inspection costs in Ontario range from $399 to $700+ for a standard residential property, depending on home size. Condos start at $349. Commercial inspections start at $799. Add-on services like mold testing, asbestos testing, and radon testing are priced separately.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What is included in a home inspection in Ontario?</h3>
+      <p class="mb-4">A standard Ontario home inspection covers roof, exterior, foundation, attic, electrical, plumbing, HVAC, and all interior rooms. You receive a detailed written report with photos and repair recommendations. Environmental testing (mold, asbestos, radon) is a separate add-on service.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How long does a home inspection take?</h3>
+      <p class="mb-4">A typical home inspection takes 2.5 to 3.5 hours for a standard 1,500–2,500 sq ft home. Larger homes take 4+ hours. You should be present during the inspection so the inspector can walk you through all findings in real time. The written report is typically delivered the same day.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Do I need a home inspection in Ontario?</h3>
+      <p class="mb-4">Home inspections are not legally required in Ontario but are strongly recommended for all buyers. In competitive markets, some buyers waive inspections to win bidding wars — this carries significant risk. A pre-listing inspection from the seller can substitute in some cases, though buyers should use an inspector of their own choosing when possible.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Are home inspectors licensed in Ontario?</h3>
+      <p class="mb-4">The Ontario Home Inspection Act has been passed and licensing is being phased in. As of 2026, mandatory licensing is not yet fully enforced. Look for inspectors with recognized certifications from OAHI (Ontario Association of Home Inspectors) or CAHPI, and confirm they carry Errors and Omissions (E&amp;O) insurance.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Can I negotiate a home price after an inspection?</h3>
+      <p class="mb-4">Yes. Home inspection findings are commonly used to negotiate purchase price reductions or seller credits in Ontario real estate transactions. Major deficiencies — HVAC issues, roof replacement, foundation cracks, electrical hazards — are typically negotiable. Minor maintenance items usually are not. Your inspector's written report with cost estimates is the basis for negotiation.</p>
+    `,
+  },
+  {
+    id: 66,
+    slug: "asbestos-banned-canada",
+    title: "When Was Asbestos Banned in Canada? What Ontario Homeowners Need to Know",
+    metaTitle: "When Was Asbestos Banned in Canada? | ASADS",
+    metaDescription: "Canada fully banned asbestos in 2018, but millions of pre-1990 Ontario homes still contain it. Learn where it hides, health risks, and when to test.",
+    category: "Asbestos & Hazardous Materials",
+    date: "2026-04-12",
+    readTime: "7 min read",
+    author: "ASADS Home Inspection",
+    excerpt: "Canada banned asbestos in 2018, but homes built before 1990 still commonly contain it. Here's what Ontario homeowners need to know.",
+    content: `
+      <p class="mb-4">Canada officially banned asbestos in 2018 — but that ban does not remove asbestos from the millions of homes built before that date. In Ontario, homes constructed before 1990 have a high probability of containing asbestos-containing materials (ACMs) in insulation, flooring, drywall compound, pipe wrapping, and other building materials. Undisturbed, asbestos poses minimal risk. Disturbed during renovations, it becomes a serious health hazard.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When Was Asbestos Banned in Canada?</h2>
+      <p class="mb-4">Canada's relationship with asbestos is complex. Here is the key timeline:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Pre-1970s:</strong> Asbestos was widely used in construction across Canada. Canada was also one of the world's largest producers of chrysotile asbestos, primarily from Quebec's Thetford Mines region.</li>
+        <li><strong>1979:</strong> Health Canada began restricting some applications of asbestos, but widespread use continued in building materials.</li>
+        <li><strong>1986:</strong> Spray-applied asbestos insulation was banned. Many other uses continued.</li>
+        <li><strong>Late 1980s–early 1990s:</strong> Asbestos was phased out of most new construction materials, though it was not yet legally banned. Homes built after approximately 1990 have significantly lower risk.</li>
+        <li><strong>2016:</strong> Canada announced its intention to ban all forms of asbestos.</li>
+        <li><strong>December 30, 2018:</strong> <strong>Canada's full asbestos ban took effect</strong> under the Prohibition of Asbestos and Products Containing Asbestos Regulations. The manufacture, import, sale, and use of asbestos and asbestos-containing products became illegal.</li>
+        <li><strong>2024–present:</strong> Canada continues to phase in additional regulations covering management and disposal of existing asbestos in buildings.</li>
+      </ul>
+      <p class="mb-4">The 2018 ban prevents new asbestos from entering Canada — but it does not retroactively remove asbestos already present in buildings constructed before the ban.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Year Were Ontario Homes Most Likely to Contain Asbestos?</h2>
+      <p class="mb-4">The highest-risk period for asbestos in Ontario residential construction is approximately <strong>1930 to 1990</strong>. Use of asbestos peaked in the 1950s–1970s and declined through the 1980s.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Built before 1945:</strong> High risk. Pipe insulation, boiler insulation, floor tiles.</li>
+        <li><strong>Built 1950–1979:</strong> Very high risk. Peak asbestos use. Found in ceiling tiles, textured coatings, drywall compound, vinyl floor tiles, pipe wrap, duct insulation, and exterior siding (Transite).</li>
+        <li><strong>Built 1980–1990:</strong> Moderate risk. Asbestos was being phased out but still present in some materials, particularly floor tiles, roofing materials, and drywall joint compound.</li>
+        <li><strong>Built after 1990:</strong> Low risk. Asbestos had been largely eliminated from mainstream building materials by this point.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Where Is Asbestos Found in Ontario Homes?</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Insulation</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Vermiculite attic insulation</strong> — Vermiculite mined from Libby, Montana (distributed under the "Zonolite" brand) was heavily contaminated with asbestos. If your attic has grey, pebble-like insulation, assume it may contain asbestos until tested.</li>
+        <li><strong>Pipe and duct insulation</strong> — White, grey, or tan wrapping on heating pipes, especially in older boiler systems and furnace ductwork.</li>
+        <li><strong>Boiler/furnace insulation</strong> — Blanket or cement insulation around old oil or gas boilers.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Flooring</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>9x9 inch vinyl floor tiles</strong> — A strong indicator of asbestos. These small tiles were almost universally made with asbestos binders. Common in basements, kitchens, and utility rooms of 1950s–1970s homes.</li>
+        <li><strong>12x12 inch vinyl tiles (pre-1980)</strong> — High probability of asbestos content.</li>
+        <li><strong>Floor tile adhesive (black mastic)</strong> — Even if tiles have been replaced, the black adhesive beneath may contain asbestos.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Drywall and Plaster</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Drywall joint compound (mud)</strong> — Pre-1980 joint compound frequently contained asbestos. Sanding old drywall seams releases fibres.</li>
+        <li><strong>Textured ceiling coatings ("popcorn ceiling")</strong> — Spray-applied ceiling textures used before 1979 commonly contained asbestos.</li>
+        <li><strong>Plaster walls</strong> — Older plaster mixtures sometimes included asbestos for strength and fire resistance.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Exterior Materials</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Asbestos cement siding ("Transite")</strong> — Flat, rigid grey siding panels or shingles common on mid-century Ontario homes. When intact, minimal risk. When cut or drilled, fibres are released.</li>
+        <li><strong>Roof shingles (asbestos-cement)</strong> — Some older pitched roofs used cement shingles containing asbestos.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is Asbestos Dangerous If Left Alone?</h2>
+      <p class="mb-4">Asbestos that is <strong>non-friable</strong> (bound in a solid matrix, intact, not crumbling) poses minimal risk in normal living conditions. Fibres cannot become airborne from intact materials. <strong>Friable asbestos</strong> — material that can be crumbled by hand pressure — is an immediate health hazard.</p>
+      <p class="mb-4">The health effects of asbestos exposure are serious: <strong>mesothelioma</strong> (a rare cancer caused almost exclusively by asbestos), <strong>asbestosis</strong> (progressive scarring of lung tissue), and increased risk of lung cancer. Symptoms typically appear 20–40 years after exposure.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Do You Need Asbestos Testing Before Renovating?</h2>
+      <p class="mb-4"><strong>Yes.</strong> Ontario's Occupational Health and Safety Act (OHSA) requires asbestos testing before disturbing any suspect material in a workplace. Best practice for residential renovations is the same. Contractors working on pre-1990 homes should request an asbestos survey before cutting into any walls, ceilings, floors, or pipe insulation.</p>
+      <p class="mb-4">If you are buying a pre-1990 Ontario home, an asbestos inspection adds peace of mind and negotiating leverage. Knowing the location and condition of any ACMs before you purchase allows you to negotiate appropriately, budget for future renovation costs, and plan renovations safely.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Asbestos Testing in Ontario</h2>
+      <p class="mb-4">ASADS provides certified asbestos testing across Ontario. Our inspection includes visual assessment of suspect materials, collection of bulk samples, submission to an accredited laboratory, and a written report with results and recommendations. Starting from $299 with same-day report delivery.</p>
+      <p class="mb-4"><a href="/services/asbestos-testing" class="text-primary hover:underline">Asbestos Testing Ontario</a> | <a href="/services/asbestos-testing/toronto" class="text-primary hover:underline">Toronto</a> | <a href="/services/asbestos-testing/hamilton" class="text-primary hover:underline">Hamilton</a> | <a href="/services/asbestos-testing/mississauga" class="text-primary hover:underline">Mississauga</a></p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Frequently Asked Questions: Asbestos in Canadian Homes</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">When was asbestos banned in Canada?</h3>
+      <p class="mb-4">Canada fully banned asbestos on December 30, 2018, under the Prohibition of Asbestos and Products Containing Asbestos Regulations. The ban covers manufacture, import, sale, and use of asbestos and asbestos-containing products. However, asbestos already present in existing buildings is not removed by the ban.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What year were homes built with asbestos in Canada?</h3>
+      <p class="mb-4">Canadian homes built between approximately 1930 and 1990 have the highest probability of containing asbestos-containing materials. The peak period was 1950–1979. Homes built after 1990 have very low risk.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How do I know if my house has asbestos?</h3>
+      <p class="mb-4">You cannot tell by looking. Asbestos fibres are microscopic, and many materials containing asbestos look identical to those that don't. The only way to confirm whether a material contains asbestos is through laboratory analysis of a bulk sample collected by a certified inspector.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Is it safe to live in a house with asbestos?</h3>
+      <p class="mb-4">Yes, if the asbestos-containing materials are intact and not being disturbed. Non-friable asbestos does not release fibres in normal living conditions. The risk increases significantly when materials are disturbed during renovation or demolition. Friable (crumbling) asbestos should be addressed promptly by a licensed abatement contractor.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Do I need asbestos testing when buying a house in Ontario?</h3>
+      <p class="mb-4">Testing is not legally required for a home purchase in Ontario, but it is strongly recommended for pre-1990 homes, especially if you plan to renovate. Knowing whether asbestos is present allows you to negotiate appropriately and plan renovation work safely. ASADS asbestos testing starts from $299 with same-day report delivery.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What does asbestos abatement cost in Ontario?</h3>
+      <p class="mb-4">Asbestos abatement costs in Ontario vary widely. Small areas (pipe insulation in one section) may cost $1,500–$3,000. Attic vermiculite removal commonly runs $3,000–$8,000 or more. Full textured ceiling removal in a 2,000 sq ft home can run $4,000–$10,000. Get testing first — non-friable ACMs may be safely encapsulated rather than removed.</p>
+    `,
+  },
+  {
+    id: 67,
+    slug: "mold-removal-cost-ontario",
+    title: "Mold Removal Cost Ontario 2026: What You'll Actually Pay",
+    metaTitle: "Mold Removal Cost Ontario 2026 | ASADS",
+    metaDescription: "Mold removal costs in Ontario range from $500 to $25,000+. Full 2026 breakdown by location, area size, and what affects the final price. Get tested first.",
+    category: "Mold & Air Quality",
+    date: "2026-04-12",
+    readTime: "7 min read",
+    author: "ASADS Home Inspection",
+    excerpt: "Mold removal in Ontario ranges from $500 for small bathroom patches to $25,000+ for extensive attic or basement contamination. Here's the full breakdown.",
+    content: `
+      <p class="mb-4">Mold removal costs in Ontario vary widely — from <strong>$500 for a small bathroom patch</strong> to <strong>$25,000+ for extensive attic or basement contamination</strong>. The key cost drivers are the size of the affected area, the type of material involved, and whether the moisture source has been addressed. This guide gives you accurate 2026 pricing so you can budget appropriately and avoid overpaying.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mold Removal Cost Ontario: By Location and Severity (2026)</h2>
+
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse text-sm">
+          <thead><tr class="bg-gray-100"><th class="border border-gray-300 px-4 py-2 text-left">Location / Scenario</th><th class="border border-gray-300 px-4 py-2 text-left">Typical Cost (Ontario 2026)</th><th class="border border-gray-300 px-4 py-2 text-left">Notes</th></tr></thead>
+          <tbody>
+            <tr><td class="border border-gray-300 px-4 py-2">Small surface mold (bathroom tile, under sink)</td><td class="border border-gray-300 px-4 py-2">$500 – $1,500</td><td class="border border-gray-300 px-4 py-2">Often DIY-manageable if under 1 sq metre and source resolved</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2">Crawl space mold (joists, subfloor)</td><td class="border border-gray-300 px-4 py-2">$1,500 – $4,000</td><td class="border border-gray-300 px-4 py-2">Access difficulty adds cost; vapour barrier replacement common</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">Basement wall mold (drywall, concrete)</td><td class="border border-gray-300 px-4 py-2">$2,000 – $6,000</td><td class="border border-gray-300 px-4 py-2">Drywall removal and replacement adds material + labour cost</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2">HVAC / ductwork mold</td><td class="border border-gray-300 px-4 py-2">$2,000 – $5,000</td><td class="border border-gray-300 px-4 py-2">Requires duct cleaning + HEPA treatment + reassembly</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">Attic mold (roof sheathing)</td><td class="border border-gray-300 px-4 py-2">$3,000 – $10,000</td><td class="border border-gray-300 px-4 py-2">Containment, HEPA, soda-blasting or sanding of sheathing</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2">Extensive structural mold (multiple areas)</td><td class="border border-gray-300 px-4 py-2">$8,000 – $25,000+</td><td class="border border-gray-300 px-4 py-2">Full protocol with clearance testing required</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Factors Affect Mold Remediation Costs?</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Size of the Affected Area</h3>
+      <p class="mb-4">Mold remediation in Ontario is typically priced at roughly <strong>$10–$30 per square foot</strong> of affected material, plus containment setup, HEPA air scrubbing, and disposal. A 200 sq ft basement section with mold throughout the drywall and framing could run $4,000–$8,000 depending on material replacement.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Material Type</h3>
+      <p class="mb-4">Porous materials (drywall, insulation, subfloor, carpet) cannot be cleaned — they must be removed and replaced. Non-porous materials (concrete, metal, glass, solid wood framing) can typically be HEPA-vacuumed, soda-blasted, or treated with antimicrobial agents and left in place. Attic plywood sheathing is a common porous material that is either sanded, soda-blasted, or encapsulated depending on severity.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. Containment and Air Scrubbing</h3>
+      <p class="mb-4">Proper mold remediation requires containment — polyethylene barriers isolating the work area — and HEPA air scrubbers running continuously. This prevents cross-contamination to other areas of the home. Containment setup typically adds $500–$1,500 to any project.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. Clearance Air Testing After Remediation</h3>
+      <p class="mb-4">For larger remediation projects, clearance testing (post-remediation air sampling) is required to confirm that spore counts have returned to acceptable levels. This is typically conducted by an independent inspector — not the remediation company — at a cost of $299–$499. Without clearance testing, you cannot confirm the remediation was successful.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">5. Moisture Source Resolution</h3>
+      <p class="mb-4">Remediation without fixing the moisture source is temporary. If the leak, condensation problem, or drainage issue that caused the mold is not resolved, mold returns within weeks. Source resolution costs — plumbing repair, exterior waterproofing, attic ventilation improvement — must be factored into total project cost and are often separate from remediation.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Warning: Free Mold Inspections from Remediation Companies</h2>
+      <p class="mb-4">A common pattern in the Ontario mold remediation industry: a company offers a "free mold inspection" and follows it immediately with a quote for $5,000–$15,000 in remediation services. This is not an independent assessment — it is a sales call. Companies that both test and remediate have a financial incentive to find mold that requires their services.</p>
+      <p class="mb-4"><strong>ASADS is a testing and inspection company only.</strong> We do not offer mold remediation. Our air sampling reports are completely objective — we identify what is present, where it is, and at what concentration, then you obtain competitive quotes from licensed remediation contractors. This eliminates the conflict of interest entirely.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is Mold Covered by Home Insurance in Ontario?</h2>
+      <p class="mb-4">Mold remediation is covered by Ontario home insurance only when the mold resulted from a sudden, accidental event covered by your policy — such as a burst pipe or appliance failure. Mold from long-term moisture infiltration, poor ventilation, or maintenance neglect is almost always excluded from coverage.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Cost of Not Testing: The Hidden Risk</h2>
+      <p class="mb-4">Many Ontario homeowners discover extensive mold during renovation — only after contractors have opened walls. What started as a kitchen update becomes a $12,000 remediation project when contaminated insulation and subfloor are exposed. A <strong>$299 mold inspection before renovation</strong> identifies affected areas so you can plan and budget accurately, not discover problems mid-project.</p>
+      <p class="mb-4">For home buyers: a mold inspection finding that reveals $4,000–$8,000 in remediation need gives you negotiating leverage far exceeding the inspection cost.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book an Independent Mold Inspection in Ontario</h2>
+      <p class="mb-4">Before spending thousands on remediation, get an independent assessment. ASADS provides AIHA-accredited air sampling across all 109 Ontario service areas — same-day report, no conflict of interest. Starting from $299.</p>
+      <p class="mb-4"><a href="/services/mold-inspection" class="text-primary hover:underline">Mold Inspection Ontario</a> | <a href="/services/mold-inspection/toronto" class="text-primary hover:underline">Toronto</a> | <a href="/services/mold-inspection/hamilton" class="text-primary hover:underline">Hamilton</a> | <a href="/services/mold-inspection/mississauga" class="text-primary hover:underline">Mississauga</a> | <a href="/booking" class="text-primary hover:underline">Book Online</a></p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Frequently Asked Questions: Mold Removal Cost Ontario</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How much does mold removal cost in Ontario?</h3>
+      <p class="mb-4">Mold removal in Ontario ranges from $500–$1,500 for small surface areas to $3,000–$10,000 for attic mold or moderate basement contamination, and $8,000–$25,000+ for extensive multi-area contamination requiring full remediation protocol. Cost depends on affected area size, material type, and whether containment and clearance testing are included.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Does Ontario home insurance cover mold removal?</h3>
+      <p class="mb-4">Ontario home insurance covers mold remediation only when it results from a sudden, accidental, insured event (e.g., burst pipe). Long-term moisture, condensation, or maintenance-related mold is typically excluded. Document the cause thoroughly and consult your broker before filing a claim.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Can I remove mold myself in Ontario?</h3>
+      <p class="mb-4">Small areas of mold (under 1 sq metre) on non-porous surfaces can often be cleaned by homeowners using N95 respirators, gloves, and appropriate biocidal cleaners — provided the moisture source is resolved. Health Canada recommends professional remediation for larger areas, extensive contamination, or when occupants have respiratory conditions. Porous materials (drywall, insulation) with mold growth should be removed by professionals.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How long does mold remediation take?</h3>
+      <p class="mb-4">Small-to-moderate remediation jobs (bathroom, under-sink, small basement section) typically take 1–3 days. Attic mold remediation commonly takes 2–4 days. Extensive multi-area projects can take 1–2 weeks. Post-remediation clearance testing should follow 24–48 hours after completion to allow air to settle.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What's the difference between mold testing and mold inspection?</h3>
+      <p class="mb-4">A mold inspection is a visual assessment by a certified inspector looking for signs of mold growth, moisture, and conducive conditions. Mold testing involves collecting air samples or bulk samples and submitting them to an accredited lab for spore identification and concentration measurement. ASADS combines both — visual inspection plus AIHA-accredited air sampling — in a single service starting from $299.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How do I find a reputable mold remediation company in Ontario?</h3>
+      <p class="mb-4">Look for companies with IICRC (Institute of Inspection, Cleaning and Restoration Certification) S520 certification and appropriate liability insurance. Get at least 3 quotes from different contractors. Use an independent testing company (not the same company doing remediation) to verify results before and after remediation is complete.</p>
+    `,
+  },
+  {
+    id: 68,
+    slug: "what-is-wett-inspection",
+    title: "What Is a WETT Inspection in Ontario? Everything Homeowners Need to Know",
+    metaTitle: "What Is a WETT Inspection Ontario? | ASADS",
+    metaDescription: "A WETT inspection is a certified assessment of wood-burning fireplaces and stoves required by Ontario insurers. Costs from $199. Book same-day with ASADS.",
+    category: "Specialty Inspections",
+    date: "2026-04-12",
+    readTime: "6 min read",
+    author: "ASADS Home Inspection",
+    excerpt: "A WETT inspection is a certified safety assessment of wood-burning appliances required by most Ontario home insurers. Here's what it covers and when you need one.",
+    content: `
+      <p class="mb-4">A WETT inspection is a certified safety assessment of wood-burning heating appliances — fireplaces, wood stoves, fireplace inserts, and chimneys — conducted by a WETT-certified inspector. WETT stands for <strong>Wood Energy Technology Transfer</strong>, the Canadian organization that sets standards and certifies inspectors for wood-burning systems.</p>
+      <p class="mb-4">In Ontario, a WETT inspection is required by most home insurance providers before they will insure or renew coverage on a property with a wood-burning appliance. It is also commonly required by buyers and their lawyers as a condition of sale.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a WETT Inspection Cover?</h2>
+      <p class="mb-4">A WETT inspection assesses the entire wood-burning system — not just the visible fireplace or stove — for compliance with CSA B365 (Installation Code for Solid-Fuel-Burning Appliances and Equipment) and local building code requirements. A thorough WETT inspection includes:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Heating Appliance Assessment</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Make, model, and CSA/ULC certification status of the appliance</li>
+        <li>Age, condition, and visible damage (cracks, rust, warping)</li>
+        <li>Door gaskets, glass, and air controls</li>
+        <li>Ash door condition and door seals</li>
+        <li>Catalytic combustor condition (if equipped)</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Chimney and Flue Assessment</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Chimney liner condition (clay tile, metal liner, or masonry)</li>
+        <li>Creosote buildup level (Stage 1, 2, or 3 — Stage 3 is a fire hazard)</li>
+        <li>Chimney cap and spark arrester</li>
+        <li>Flue sizing relative to appliance BTU rating</li>
+        <li>Chimney height and clearance above roofline</li>
+        <li>Flashing condition at roof penetration</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Clearances to Combustibles</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Clearance from appliance to combustible walls, ceilings, and floors</li>
+        <li>Hearth pad dimensions and non-combustible construction</li>
+        <li>Mantel clearances above fireplace opening</li>
+        <li>Combustible materials near chimney penetrations through floors and walls</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Loss Prevention and Safety</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Combustion air availability (adequate air supply for safe burning)</li>
+        <li>Carbon monoxide and smoke detector placement</li>
+        <li>Chimney blockages (bird nests, debris, deteriorated liner)</li>
+        <li>Overall assessment: pass/fail with detailed deficiency notes</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When Do You Need a WETT Inspection in Ontario?</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Home Insurance</h3>
+      <p class="mb-4">The most common trigger. When you purchase a new home insurance policy — or when an insurer becomes aware of a wood-burning appliance on renewal — they will often require a WETT inspection before extending coverage. Without a valid WETT certificate, your insurer may exclude fire damage caused by the appliance.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Home Purchase</h3>
+      <p class="mb-4">Buyers purchasing a home with a fireplace or wood stove should include a WETT inspection as a condition of sale, or request documentation of a recent WETT inspection from the seller. Deficiencies found during a WETT inspection — Stage 2–3 creosote buildup, deteriorated chimney liners, clearance violations — can cost $1,500–$6,000 to rectify and are entirely negotiable.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. After a Chimney Fire or Incident</h3>
+      <p class="mb-4">Insurance companies require a WETT inspection after any chimney fire or suspected chimney incident. The inspection determines whether the system is safe to use and identifies damage that resulted from the event.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. Before Installing or Modifying a Wood-Burning System</h3>
+      <p class="mb-4">Adding a wood stove, converting a fireplace to a wood-burning insert, or installing a new chimney liner typically requires WETT certification upon completion to confirm the installation meets CSA B365 requirements.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does a WETT Inspection Cost in Ontario?</h2>
+      <p class="mb-4">WETT inspection costs in Ontario typically range from <strong>$199 to $350</strong> for a Site Basic inspection (the standard residential inspection used for insurance purposes). Factors affecting price:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Number of appliances:</strong> Each additional fireplace or wood stove adds to the inspection fee</li>
+        <li><strong>Chimney camera inspection:</strong> A Level II inspection using a chimney camera is required by some insurers and adds $150–$250 to assess the liner condition fully</li>
+        <li><strong>Same-day availability:</strong> Rushed inspections for same-day insurance deadlines may carry a premium</li>
+        <li><strong>Location:</strong> Rural properties outside major urban areas may have travel fees</li>
+      </ul>
+      <p class="mb-4">ASADS WETT inspections start from <strong>$199</strong> with a same-day written report accepted by all major Ontario insurance providers.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Happens If Your WETT Inspection Fails?</h2>
+      <p class="mb-4">A WETT inspection "failure" means deficiencies were identified that prevent the inspector from certifying the system as safe. Common reasons for failing include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Stage 2 or Stage 3 creosote:</strong> Heavy buildup in the flue is a fire hazard. Stage 2 requires professional chemical treatment; Stage 3 requires liner replacement.</li>
+        <li><strong>Clearance violations:</strong> Combustible materials too close to the appliance or flue pipe.</li>
+        <li><strong>Deteriorated chimney liner:</strong> Cracked clay tile liners allow heat transfer to combustibles and permit carbon monoxide to enter the home.</li>
+        <li><strong>Missing or inadequate hearth pad:</strong> Non-combustible floor protection of insufficient size.</li>
+        <li><strong>Uncertified appliance:</strong> A wood stove or fireplace insert without CSA/ULC certification cannot be insured.</li>
+      </ul>
+      <p class="mb-4">The inspection report details all deficiencies. After repairs, the inspector typically returns for a re-inspection to issue the certificate.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Long Is a WETT Certificate Valid in Ontario?</h2>
+      <p class="mb-4">There is no standard expiry date for a WETT certificate. Most Ontario insurance companies accept a WETT inspection completed within the <strong>last 2–5 years</strong>, depending on the insurer. Some require re-inspection every 2 years for older appliances.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a WETT Inspection in Ontario</h2>
+      <p class="mb-4">ASADS WETT-certified inspectors serve all 109 cities across Ontario — Toronto, Hamilton, Barrie, Kitchener-Waterloo, and rural communities throughout cottage country and Grey-Bruce-Owen Sound. Same-day and next-day appointments available. Reports accepted by all major Ontario home insurers.</p>
+      <p class="mb-4">Call <a href="tel:+16478019311" class="text-primary hover:underline">(647) 801-9311</a> or <a href="/booking" class="text-primary hover:underline">book your WETT inspection online</a>.</p>
+      <p class="mb-4"><a href="/services/wett" class="text-primary hover:underline">WETT Inspection Ontario</a> | <a href="/services/wett/toronto" class="text-primary hover:underline">Toronto</a> | <a href="/services/wett/barrie" class="text-primary hover:underline">Barrie</a> | <a href="/services/wett/hamilton" class="text-primary hover:underline">Hamilton</a> | <a href="/services/pre-purchase" class="text-primary hover:underline">Pre-Purchase Home Inspection</a></p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Frequently Asked Questions: WETT Inspections Ontario</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What does WETT stand for?</h3>
+      <p class="mb-4">WETT stands for Wood Energy Technology Transfer — a Canadian not-for-profit organization that trains and certifies technicians and inspectors to work on wood-burning heating systems. WETT-certified inspectors follow Canadian standards (CSA B365) for assessing fireplaces, wood stoves, chimney liners, and related components.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Is a WETT inspection required in Ontario?</h3>
+      <p class="mb-4">A WETT inspection is not legally required by Ontario law, but it is required by most Ontario home insurance providers as a condition of coverage for properties with wood-burning appliances. It is also commonly required by buyers as a condition of sale and by lawyers completing real estate transactions involving fireplaces or wood stoves.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How long does a WETT inspection take?</h3>
+      <p class="mb-4">A standard WETT Site Basic inspection takes 1–2 hours for a single appliance and chimney. Homes with multiple fireplaces or a wood stove take 2–3 hours. A Level II chimney camera inspection adds 30–60 minutes.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What's the difference between a WETT inspection and a chimney cleaning?</h3>
+      <p class="mb-4">A WETT inspection is a safety assessment and certification — it documents the condition of the system and issues a formal report accepted by insurers. A chimney sweep/cleaning is a maintenance service that removes creosote and debris. They are separate services. If a WETT inspection finds Stage 2 or 3 creosote, chimney cleaning is required before re-inspection, but the cleaning itself does not constitute a WETT inspection.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Can a home inspector do a WETT inspection?</h3>
+      <p class="mb-4">A general home inspector cannot issue a WETT certificate unless they also hold a separate WETT certification. WETT certification requires specific training and examination through the WETT organization. Always confirm that your inspector is WETT-certified before booking, and ask for their WETT registration number to verify with WETT Inc.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What is the difference between a Level 1 and Level 2 WETT inspection?</h3>
+      <p class="mb-4">A WETT Site Basic (similar to a "Level 1") is a visual inspection of accessible components — the standard for insurance purposes. A Level 2 inspection includes a chimney camera to assess the interior of the flue liner, required when a property is being sold, after a chimney fire, or when the basic inspection cannot confirm liner condition. Level 2 is required by some insurers for older chimneys.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
