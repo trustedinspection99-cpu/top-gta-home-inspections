@@ -3805,6 +3805,144 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">See also: <a href="/locations/home-inspection-scarborough" class="text-primary hover:underline">Scarborough Home Inspection Services</a> | <a href="/services/pre-purchase/scarborough" class="text-primary hover:underline">Pre-Purchase Inspection Scarborough</a> | <a href="/services/mold-inspection/scarborough" class="text-primary hover:underline">Mold Inspection Scarborough</a> | <a href="/locations/home-inspection-toronto" class="text-primary hover:underline">Toronto Home Inspection</a></p>
     `,
   },
+  {
+    id: 64,
+    slug: "mould-vs-mold-canada",
+    title: "Mould vs Mold: What's the Difference and Why It Matters",
+    metaTitle: "Mould vs Mold: What's the Difference?",
+    metaDescription: "Mould and mold are the same thing — just spelled differently. Learn what causes it, what health risks it poses, and when to call an inspector in Ontario.",
+    excerpt: "Canadians write 'mould' — Americans write 'mold.' Same fungus, same health risk. Here's everything Ontario homeowners need to know about finding and testing for it.",
+    category: "Mold & Air Quality",
+    author: "ASADS Team",
+    date: "2026-04-12",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mould vs Mold: Same Thing, Different Spelling</h2>
+      <p class="mb-4">If you've ever searched online for information about fungal growth in your home, you've probably seen both spellings: <strong>mould</strong> and <strong>mold</strong>. In Canada and the UK, the standard spelling is <strong>mould</strong>. In the United States, the standard spelling is <strong>mold</strong>. Both words refer to exactly the same thing — a type of fungus that grows in multicellular filaments called hyphae, thriving in damp, poorly ventilated conditions.</p>
+      <p class="mb-4">There is no scientific or practical difference between mould and mold. If you're a homeowner in Ontario searching for either term, you're looking for the same answer: what is this growth in my home, is it dangerous, and what do I do about it?</p>
+      <p class="mb-4">This guide covers exactly that.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is Mould (Mold)?</h2>
+      <p class="mb-4">Mould is a category of fungi that reproduces by releasing microscopic spores into the air. These spores are present in virtually every indoor and outdoor environment — they become a problem when they land on a moist surface and begin to colonize. Mould growth in a home requires three things:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Moisture</strong> — the most critical factor. Mould cannot grow without water.</li>
+        <li><strong>A food source</strong> — drywall paper, wood, insulation, dust, and most organic building materials serve as food.</li>
+        <li><strong>Temperature</strong> — most household mould species grow between 4°C and 38°C, which covers virtually all occupied living spaces.</li>
+      </ul>
+      <p class="mb-4">In Ontario homes, mould is most commonly found in basements (moisture infiltration), bathrooms (chronic humidity), around windows (condensation), attics (roof leaks or inadequate ventilation), and anywhere a plumbing leak has gone undetected.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Common Types of Household Mould in Ontario</h2>
+      <p class="mb-4">Several mould species appear regularly in Ontario home inspections:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Cladosporium</h3>
+      <p class="mb-4">One of the most common indoor moulds — appears black or olive-green, often on window frames, damp walls, and HVAC components. Generally considered low-toxicity but can trigger respiratory irritation and allergic reactions in sensitive individuals.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Penicillium</h3>
+      <p class="mb-4">Blue-green mould frequently found on water-damaged materials, insulation, and building materials. Produces a musty odour and can cause allergic reactions and sinus irritation.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Aspergillus</h3>
+      <p class="mb-4">A very common household mould with many species, ranging from low-risk to moderate health concern. Often found on drywall, insulation, and around HVAC systems. Certain species can cause lung infections in immunocompromised individuals.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Stachybotrys Chartarum (Black Mould)</h3>
+      <p class="mb-4">The most discussed household mould — often referred to simply as "black mould." Stachybotrys requires chronic, severe moisture to grow and is most commonly found on water-damaged drywall, ceiling tiles, and wood that has been consistently wet for weeks or months. It produces mycotoxins and is associated with more serious health effects, particularly for people with respiratory conditions, children, and the elderly. Not all black-coloured mould is Stachybotrys — laboratory testing is the only reliable way to identify species.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Health Effects of Mould Exposure</h2>
+      <p class="mb-4">The health impact of mould exposure depends on the species, concentration of spores, duration of exposure, and individual sensitivity. Common symptoms include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Nasal and sinus congestion</li>
+        <li>Throat irritation and coughing</li>
+        <li>Eye irritation and watering</li>
+        <li>Skin rashes</li>
+        <li>Worsening asthma or allergy symptoms</li>
+        <li>Headaches and fatigue (in higher-concentration environments)</li>
+      </ul>
+      <p class="mb-4">Children, elderly individuals, pregnant women, and people with compromised immune systems or existing respiratory conditions are at greater risk from mould exposure than healthy adults. Health Canada and Ontario's Ministry of Health both recommend that any visible mould growth be addressed promptly regardless of species.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Tell If You Have Mould in Your Home</h2>
+      <p class="mb-4">Mould is not always visible. Here are the warning signs Ontario homeowners should watch for:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Visible Signs</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Discolouration on walls, ceilings, or floors — black, green, grey, or white patches</li>
+        <li>Staining around window frames, especially at the corners</li>
+        <li>Fuzzy or powdery growth on basement walls, joists, or subfloor</li>
+        <li>Peeling or bubbling paint on walls (often indicates moisture behind)</li>
+        <li>Efflorescence (white salt deposits) on concrete basement walls — a sign of moisture movement</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Non-Visible Signs</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Musty odour</strong> — the most reliable indicator of hidden mould. A persistent musty smell in a basement, bathroom, or closet almost always indicates active growth somewhere.</li>
+        <li>Unexplained respiratory symptoms that improve when you leave the house</li>
+        <li>History of water damage, leaks, or flooding — even if dried out, mould may have established within wall cavities</li>
+        <li>Chronic window condensation that creates perpetually damp frames and sills</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Causes Mould in Ontario Homes?</h2>
+      <p class="mb-4">Ontario's climate — with cold, wet winters and humid summers — creates several recurring mould conditions in residential housing:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Basement water infiltration</strong> — clay soils throughout the GTA and Hamilton area retain and transmit moisture against foundation walls. Older weeping tile systems fail over decades. Water-damaged basement finishing conceals chronic moisture.</li>
+        <li><strong>Attic condensation</strong> — insufficient attic ventilation causes warm, humid air from the living space to condense on cold roof sheathing in winter, creating ideal mould conditions that go undetected for years.</li>
+        <li><strong>Roof leaks</strong> — water from damaged shingles or failed flashing enters wall cavities and sits for extended periods before becoming visible as ceiling staining.</li>
+        <li><strong>Plumbing leaks</strong> — slow drips behind vanities, under kitchen sinks, and at dishwasher connections wet cabinet interiors and subfloor for months before discovery.</li>
+        <li><strong>Bathroom and kitchen humidity</strong> — poorly ventilated bathrooms with inadequate exhaust fans allow shower steam to condense on walls repeatedly, creating chronic moisture in wall cavities and under tile.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Do Home Inspections Test for Mould?</h2>
+      <p class="mb-4">Standard home inspections include a visual assessment for mould evidence — inspectors look for visible growth, moisture staining, active leaks, and elevated humidity. However, visual inspection cannot identify mould inside wall cavities, inside HVAC ducts, or beneath flooring.</p>
+      <p class="mb-4"><strong>Dedicated mould inspection</strong> goes further: ASADS uses AIHA-accredited air sampling to measure spore concentrations in the indoor air, compare them to outdoor baseline samples, and identify species present — even when no mould is visible. Air sampling is the only reliable method for confirming whether mould is present in areas that cannot be seen directly.</p>
+      <p class="mb-4">For Ontario home buyers, adding a mould inspection to a pre-purchase inspection is especially valuable for:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Homes with finished basements where moisture history is unknown</li>
+        <li>Properties with visible water staining, efflorescence, or past flooding disclosures</li>
+        <li>Older homes (pre-1990) with original building envelopes more prone to moisture infiltration</li>
+        <li>Any property where occupants report or have reported respiratory symptoms</li>
+        <li>Homes with chronic window condensation or musty odours</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mould Testing vs. Mould Remediation — An Important Distinction</h2>
+      <p class="mb-4">A critical point that buyers and homeowners should understand: <strong>there is a conflict of interest when the same company both tests for mould and offers to remove it.</strong></p>
+      <p class="mb-4">ASADS is a testing and inspection company only. We do not do mould remediation. This means our air sample results and written reports are completely objective — we have no financial incentive to find mould where none exists. When our lab results confirm mould above acceptable thresholds, we provide a detailed written report that you can take to any licensed remediation contractor of your choice for competitive quotes.</p>
+      <p class="mb-4">If a company offers to "test for free" and then immediately quotes you for $5,000–$15,000 in remediation, ask whether their testing was truly independent. Free testing from a remediation company is a lead generation tool, not an unbiased assessment.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does Mould Removal Cost in Ontario?</h2>
+      <p class="mb-4">Mould remediation costs in Ontario vary significantly based on the affected area and severity:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Small surface mould (bathroom, under-sink):</strong> $500–$1,500. Often DIY-manageable if under 1 sq metre and the moisture source is resolved.</li>
+        <li><strong>Basement wall mould with containment:</strong> $2,000–$6,000 depending on affected area and material type (drywall vs. concrete).</li>
+        <li><strong>Attic mould (roof sheathing):</strong> $3,000–$10,000. Attic access, containment, HEPA treatment, and soda-blasting of affected sheathing.</li>
+        <li><strong>Extensive structural mould (wall cavities, multiple areas):</strong> $8,000–$25,000+. Requires full remediation protocol with air clearance testing after completion.</li>
+      </ul>
+      <p class="mb-4">This is why identifying mould early — before it spreads — is so important. A mould inspection that finds early-stage growth allows for targeted remediation at a fraction of the cost of extensive contamination.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Mould Inspection in Ontario</h2>
+      <p class="mb-4">ASADS provides certified mould inspection with AIHA-accredited air sampling across all 109 cities in our Ontario service area — from Toronto and Hamilton to Kitchener, London, and the Niagara Region. Our independent testing means you get objective results with no conflict of interest.</p>
+      <p class="mb-4">Call <a href="tel:+16478019311" class="text-primary hover:underline">(647) 801-9311</a> or <a href="/booking" class="text-primary hover:underline">book your mould inspection online</a>.</p>
+      <p class="mb-4">See also: <a href="/services/mold-inspection/toronto" class="text-primary hover:underline">Mold Inspection Toronto</a> | <a href="/services/mold-inspection/hamilton" class="text-primary hover:underline">Mold Inspection Hamilton</a> | <a href="/services/mold-inspection/mississauga" class="text-primary hover:underline">Mold Inspection Mississauga</a> | <a href="/services/asbestos-testing/toronto" class="text-primary hover:underline">Asbestos Testing Toronto</a> | <a href="/services/air-quality-testing/toronto" class="text-primary hover:underline">Air Quality Testing Ontario</a></p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Frequently Asked Questions: Mould vs Mold</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Is mould the same as mold?</h3>
+      <p class="mb-4">Yes. Mould (Canadian/British spelling) and mold (American spelling) refer to the exact same thing — a type of fungus that grows in damp environments. There is no scientific difference between them.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How do I know if I have mould in my house?</h3>
+      <p class="mb-4">Signs include visible discolouration on walls, ceilings, or floors; a persistent musty odour (especially in basements or bathrooms); unexplained respiratory symptoms that improve when you leave home; and a history of water damage or leaks. Hidden mould inside wall cavities can only be confirmed through air sampling.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Do home inspections test for mold?</h3>
+      <p class="mb-4">Standard home inspections include a visual assessment for mould evidence. Dedicated mould inspection with AIHA-accredited air sampling is a separate service that measures spore concentrations and identifies species — even when mould is not visible. ASADS offers both as part of a combined inspection or standalone.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How much is a mold inspection in Ontario?</h3>
+      <p class="mb-4">ASADS mould inspections start from $299, including visual assessment and air sampling with AIHA-accredited laboratory analysis. A written report with findings, species identification, and remediation guidance is delivered the same day. Add-on to a pre-purchase inspection for a combined inspection discount.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Can you get a free mold inspection?</h3>
+      <p class="mb-4">Some remediation companies offer "free" testing — but this is typically a sales tool, not an independent assessment. Companies that test for free almost always quote expensive remediation immediately after. An independent mould inspection from a testing-only company like ASADS gives you unbiased results with no conflict of interest.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What is the ideal indoor humidity level to prevent mould?</h3>
+      <p class="mb-4">Health Canada recommends maintaining indoor relative humidity between 30% and 50% year-round. Above 60% humidity, mould growth risk increases significantly. In Ontario winters, maintaining 30–40% humidity prevents both condensation on windows (which feeds mould) and static electricity discomfort. Use a hygrometer to monitor your home's humidity and adjust your HRV or humidifier settings accordingly.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)

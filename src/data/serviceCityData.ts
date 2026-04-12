@@ -748,6 +748,49 @@ export const serviceDefinitions: ServiceDef[] = [
       { name: "Asbestos Testing", slug: "asbestos-testing" },
     ],
   },
+  {
+    slug: "insurance-inspection",
+    name: "Insurance Home Inspection",
+    shortName: "Insurance Inspection",
+    price: "From $249",
+    duration: "1–2 Hours",
+    metaTitleTemplate: "Insurance Home Inspection {city} | Certified | ASADS",
+    metaDescTemplate:
+      "Insurance home inspection in {city} from $249. Certified inspector provides condition report for insurance renewals, new policies & hard-to-insure homes. Same-day report.",
+    heroTitle: "Insurance Home Inspection in {city}",
+    whatWeCheck: [
+      "Roof condition, age & remaining life estimate",
+      "Electrical panel type & wiring (knob-and-tube, aluminum, fuse)",
+      "Plumbing material & supply condition (galvanized, KITEC, polybutylene)",
+      "Furnace & water heater age and condition",
+      "Foundation condition & evidence of water infiltration",
+      "Exterior cladding, eavestroughs & grading",
+      "Evidence of past or present mould",
+      "Structural concerns affecting insurability",
+      "Smoke & CO detector presence",
+      "Overall property maintenance condition",
+    ],
+    whyItMatters:
+      "Ontario insurance companies increasingly require a condition inspection before issuing or renewing home insurance — particularly for older homes, properties that have changed hands, or homes flagged for high-risk features like knob-and-tube wiring, aluminum wiring, polybutylene plumbing, older roofs, or oil heating. If your insurer has requested an inspection letter, declined your renewal, or you're shopping for new coverage on a {city} property, ASADS provides certified insurance inspection reports that document your home's current condition across all the factors insurers evaluate. Our written report details roofing age and condition, electrical system type, plumbing materials, heating equipment, and any visible deficiencies — giving your broker the documentation needed to bind or renew coverage. We are fully certified, carry E&O insurance, and our reports are accepted by all major Ontario insurance providers.",
+    processSteps: [
+      { title: "Book Online or Call", body: "Tell us your insurer's specific requirements. We confirm what the report needs to cover." },
+      { title: "On-Site Assessment", body: "Certified inspector assesses all insurer-critical components: roof, electrical, plumbing, heating, structure." },
+      { title: "Same-Day Report", body: "Written PDF report with photos delivered same day — ready to send to your broker." },
+      { title: "Follow-Up Support", body: "We answer broker questions and can provide supplemental documentation if your insurer requires clarification." },
+    ],
+    faqs: [
+      { q: "What is an insurance home inspection?", a: "An insurance home inspection is a condition assessment requested by an insurance company before they will issue, renew, or maintain a home insurance policy. Insurers require these inspections for older homes (typically pre-1970), properties with known high-risk features (knob-and-tube wiring, aluminum wiring, polybutylene or KITEC plumbing, older oil furnaces), or when a home changes ownership. The inspector documents roof age and condition, electrical system type, plumbing materials, heating equipment age, and overall property condition. The resulting report gives your broker the documentation needed to bind coverage." },
+      { q: "How much does an insurance inspection cost in {city}?", a: "ASADS insurance home inspections in {city} start from $249, with pricing based on home size and scope. Most standard detached homes run $249–$349. The inspection takes 1–2 hours. The same-day report is included. This is significantly less expensive than a full pre-purchase inspection because the scope focuses specifically on the components insurers evaluate rather than every system in the home." },
+      { q: "My insurance company said I need a home inspection — what do I do?", a: "Call ASADS at (647) 801-9311 or book online. Tell us which insurance company is requesting the inspection and what specific concerns they flagged (e.g., knob-and-tube wiring, old roof, KITEC plumbing). We tailor the report to address those specific items. Our report is provided in writing with photographs and will include the inspector's certification details — everything your broker needs to submit to the insurer. We can typically schedule within 24–48 hours." },
+      { q: "What triggers an insurance company to require a home inspection?", a: "Ontario insurers typically require an inspection when: the home is over 40–50 years old; the property has changed ownership and the insurer wants documented condition; the home has known high-risk features (knob-and-tube wiring, aluminum wiring, KITEC/polybutylene plumbing, oil heating, older roofs); the policy is up for renewal and the insurer has flagged concerns; or the home has had significant claims history. Insurers are increasingly declining renewal on older {city} homes without documented evidence of electrical, plumbing, and roofing condition." },
+      { q: "Will the inspector tell my insurance company everything they find?", a: "The report goes to you — not directly to your insurer. You review the findings first and share the report with your broker. If deficiencies are found (e.g., active knob-and-tube wiring), your broker will advise how to present the findings. In some cases, addressing a specific deficiency (electrical panel upgrade, roof replacement) before submitting the report is the better path. We are happy to discuss findings with you before you share the report." },
+    ],
+    relatedServices: [
+      { name: "Pre-Purchase Inspection", slug: "pre-purchase" },
+      { name: "Thermal Imaging", slug: "thermal-imaging" },
+      { name: "Mold Inspection", slug: "mold-inspection" },
+    ],
+  },
 ];
 
 /** Lookup map: serviceSlug → ServiceDef */

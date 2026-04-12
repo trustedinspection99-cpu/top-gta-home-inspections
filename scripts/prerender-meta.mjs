@@ -63,6 +63,7 @@ const servicePages = [
   { path: '/services/wett',            title: 'WETT Inspection Ontario | Required for Insurance | $249',               desc: 'WETT inspection Ontario — required by insurers for wood stoves & fireplaces. From $249. Thermal imaging included, same-day certificate. Call (647) 801-9311.' },
   { path: '/services/designated-substance-survey', title: 'Designated Substance Survey Ontario | O.Reg 278/05 | ASADS', desc: 'Certified Designated Substance Survey Ontario. Required before renovation or demolition. All 11 substances under OHSA. From $399. Same-day scheduling.' },
   { path: '/services/same-day-home-inspection', title: 'Same-Day Home Inspection Ontario | Book Today',             desc: 'Need a home inspection today in Ontario? ASADS offers same-day home inspections across the GTA — certified inspectors, thermal imaging, digital report in hours.' },
+  { path: '/services/insurance-inspection',     title: 'Insurance Home Inspection Ontario | From $249 | ASADS',    desc: 'Insurance home inspection Ontario from $249. Certified condition report for insurer renewals, new policies & hard-to-insure homes. Same-day report. Call (647) 801-9311.' },
 ];
 
 // ─── Static pages ─────────────────────────────────────────────────────────────

@@ -40,6 +40,7 @@ const serviceSlugs = [
   'pre-purchase', 'pre-listing', 'condo', 'new-construction', 'commercial',
   'thermal-imaging', 'mold-inspection', 'asbestos-testing', 'radon-testing',
   'sewer-scope', 'well-water-testing', 'lead-paint-testing', 'air-quality', 'wett',
+  'insurance-inspection',
 ];
 
 // ─── URL builder ──────────────────────────────────────────────────────────────
