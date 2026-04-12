@@ -129,6 +129,74 @@ LANGUAGE RULES FOR FINDINGS:
 - Never speculate on causes, costs, remaining life, or code compliance
 - Never recommend specific contractors`;
 
+// ── WETT Inspector System Prompt ──────────────────────────────────────────────
+const WETT_SYSTEM = `You are Scout WETT — a certified WETT (Wood Energy Technology Transfer Inc.) inspector assistant. Your job is to conduct a structured interview covering all fields required by the CSIO H0910ESFQ Solid Fuel Heating Questionnaire, which insurance companies require for solid fuel heating appliances.
+
+Work through these 5 sections in order. Ask 1-3 related questions at a time. After each answer confirm: "Got it — [brief summary]." then continue.
+
+SECTION 3 — HEATING UNIT
+Ask: Primary or auxiliary heating unit?
+Ask: Year of manufacture?
+Ask: Make (manufacturer) and model?
+Ask: Is the unit certified? (CSA / ULC / OTL / WH / uncertified)
+Ask: Type of unit? (Woodstove Airtight / Woodstove Not Airtight / Fireplace Insert / Fireplace Zero Clearance / Masonry Fireplace / Pellet Stove / Wood Furnace / Wood Furnace Add-On / Wood-Oil Combo / Coal Stove / Other)
+Ask: Fuel type? (wood / pellets / coal / multi-fuel)
+Ask: Wood usage — approximately how many cords per year? Face cord or standard cord?
+Ask: Hours per day on average? Days per year?
+
+SECTION 4 — INSTALLATION
+Ask: Who installed the unit?
+Ask: Was the installer WETT certified? If yes, their certificate number?
+Ask: Is the unit inside the home, outside, or outside but insulated?
+
+SECTION 5 — CHIMNEY
+Ask: Masonry chimney or factory-built metal chimney?
+If masonry: Masonry block or poured concrete? Built from ground or from foundation? Liner type: flue tile / stainless steel / other?
+If metal: Factory double-wall or other? Year? Manufacturer? Who installed it? WETT certified installer? Rated for 650°C?
+Ask: Times per year cleaned? By whom? When was it last cleaned?
+Ask: Is the chimney inside the home, outside, or outside-insulated?
+Ask: Does it share a flue with another appliance?
+
+SECTION 7 — STOVE PIPE & CLEARANCES
+Ask: Is there a thimble?
+Ask: Total stove pipe length and number of elbows?
+Ask: Pipe construction: double-wall / single-wall / galvanized / other?
+Ask: Does the stove pipe pass through any concealed space?
+Ask: Is there a non-combustible pad under the stove?
+Ask: Distance to nearest furniture?
+
+Collect ACTUAL vs REQUIRED measurements (from manufacturer's manual):
+Ask for each: "What is the actual [measurement] and what does the manual require?"
+- Stove to back wall | Stove to side wall | Stove to corner | Stove to ceiling
+- Stove pipe to back wall | Stove pipe to side wall | Stove pipe to ceiling
+- Floor pad: front | left | right | back
+
+Ask: Back wall, side wall, and ceiling construction material?
+Ask: Is there shielding? (sheet metal / ceramic tile / brick / concrete / none)
+If shielding: permanent? non-combustible spacers? air space behind?
+If shielding: collect wall-to-shield, top-stove-to-top-shield, shield-to-floor, bottom-stove-to-floor (actual/required each)
+
+SECTION 8 — LOSS PREVENTION
+Ask: Ashes stored in closed metal container with lid? Inside or outside? On non-flammable surface?
+Ask: Any WETT inspection done since installation? If yes, inspector certificate number?
+Ask: Any modifications to unit or chimney since installation?
+Ask: Any previous chimney fires? If yes, cause?
+Ask: How far is stored fuel from the appliance? (feet or metres)
+Ask: Smoke detector in room? CO detector? Fire extinguisher accessible?
+
+SIGN-OFF
+Ask: Overall result: Pass / Pass with Deficiencies / Fail?
+Ask: Any deficiencies to note?
+Ask: Any additional remarks?
+
+When ALL sections are done, say exactly: "All fields collected. Tap the **Generate Report** button to create your WETT certificate."
+
+RULES:
+- Ask 1-3 related questions per message
+- Always confirm each answer before moving on
+- Accept rough answers — inspector can always update the form later
+- Keep responses brief — inspector is in the field`;
+
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response('ok', {
@@ -163,6 +231,170 @@ Deno.serve(async (req) => {
       role: m.role,
       content: m.content,
     }));
+
+    // ── WETT chat mode ────────────────────────────────────────────────────────
+    if (mode === 'wett-chat') {
+      const validChat = claudeMessages
+        .filter((m: { role: string; content: string }) => m.content && m.content.trim() && (m.role === 'user' || m.role === 'assistant'));
+      const firstUserIdx = validChat.findIndex((m: { role: string }) => m.role === 'user');
+      const sliced = firstUserIdx > 0 ? validChat.slice(firstUserIdx) : validChat;
+      const chatMsgs: { role: string; content: string }[] = [];
+      for (const msg of sliced) {
+        if (chatMsgs.length > 0 && chatMsgs[chatMsgs.length - 1].role === msg.role) {
+          chatMsgs[chatMsgs.length - 1].content += '\n' + msg.content;
+        } else {
+          chatMsgs.push({ ...msg });
+        }
+      }
+      const res = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: { 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+        body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 1024, system: WETT_SYSTEM, messages: chatMsgs }),
+      });
+      if (!res.ok) {
+        const errBody = await res.text();
+        return new Response(JSON.stringify({ error: `Anthropic error ${res.status}: ${errBody}` }), { headers: CORS, status: 500 });
+      }
+      const data = await res.json();
+      return new Response(JSON.stringify({ reply: data.content?.[0]?.text ?? '' }), { headers: CORS });
+    }
+
+    // ── WETT summarize mode ───────────────────────────────────────────────────
+    if (mode === 'wett-summarize') {
+      const cleaned = claudeMessages
+        .filter((m: { role: string; content: string }) => m.content && m.content.trim() && (m.role === 'user' || m.role === 'assistant'))
+        .map((m: { role: string; content: string }) => ({ role: m.role as 'user' | 'assistant', content: m.content.length > 2000 ? m.content.slice(0, 2000) + '…' : m.content }));
+      const firstUser = cleaned.findIndex((m: { role: string }) => m.role === 'user');
+      const sliced = firstUser > 0 ? cleaned.slice(firstUser) : cleaned;
+      const deduped: { role: 'user' | 'assistant'; content: string }[] = [];
+      for (const msg of sliced) {
+        if (deduped.length > 0 && deduped[deduped.length - 1].role === msg.role) {
+          deduped[deduped.length - 1].content += '\n' + msg.content;
+        } else {
+          deduped.push({ ...msg });
+        }
+      }
+      if (deduped.length > 0 && deduped[deduped.length - 1].role === 'user') {
+        deduped.push({ role: 'assistant', content: 'All WETT fields collected. Extracting as JSON now.' });
+      }
+      deduped.push({
+        role: 'user',
+        content: `Extract all WETT inspection data from this conversation and return ONLY a valid JSON object (no markdown, no code fences) with these fields. Use "" for anything not mentioned. Use "Y"/"N" for yes/no fields:
+
+{
+  "unitRole": "primary"|"auxiliary"|"",
+  "unitYear": "",
+  "unitMake": "",
+  "unitModel": "",
+  "unitCertified": "Y"|"N"|"",
+  "certLabel": "CSA"|"ULC"|"OTL"|"WH"|"other"|"",
+  "heatingUnitType": "",
+  "fuel": "",
+  "cordsPerYear": "",
+  "cordType": "face"|"standard"|"",
+  "hoursPerDay": "",
+  "daysPerYear": "",
+  "installedBy": "",
+  "installerWettCertified": "Y"|"N"|"",
+  "installerWettNumber": "",
+  "unitLocation": "inside"|"outside"|"outside-insulated"|"",
+  "chimneyType": "masonry"|"metal"|"",
+  "masonrySubtype": "masonry"|"concrete"|"other"|"",
+  "builtFrom": "ground"|"foundation"|"",
+  "chimneyLining": "flue-tile"|"stainless-steel"|"other"|"",
+  "metalChimneySubtype": "factory-double-wall"|"other"|"",
+  "metalYear": "",
+  "metalManufacturer": "",
+  "metalInstalledBy": "",
+  "metalWettCertified": "Y"|"N"|"",
+  "ratedFor650": "Y"|"N"|"",
+  "clearanceToNearest": "",
+  "clearanceUnit": "inches"|"cm",
+  "cleaningTimesPerYear": "",
+  "cleaningByWhom": "",
+  "lastCleaningDate": "",
+  "chimneyInstalledLocation": "inside"|"outside"|"outside-insulated"|"",
+  "sharesFlue": "Y"|"N"|"",
+  "sharesFlueDetails": "",
+  "thimble": "Y"|"N"|"",
+  "stovePipeTotalLength": "",
+  "stovePipeElbows": "",
+  "stovePipeConstruction": "double-wall"|"single-wall"|"galvanized"|"other"|"",
+  "stovePipeThroughConcealed": "Y"|"N"|"",
+  "nonCombustiblePad": "Y"|"N"|"",
+  "distanceToFurniture": "",
+  "measurementUnit": "inches"|"cm",
+  "stoveToBackwallActual": "", "stoveToBackwallRequired": "",
+  "stoveToSidewallActual": "", "stoveToSidewallRequired": "",
+  "stoveToCornerActual": "", "stoveToCornerRequired": "",
+  "stoveToCeilingActual": "", "stoveToCeilingRequired": "",
+  "pipeToBackwallActual": "", "pipeToBackwallRequired": "",
+  "pipeToSidewallActual": "", "pipeToSidewallRequired": "",
+  "pipeToCeilingActual": "", "pipeToCeilingRequired": "",
+  "floorPadFrontActual": "", "floorPadFrontRequired": "",
+  "floorPadLeftActual": "", "floorPadLeftRequired": "",
+  "floorPadRightActual": "", "floorPadRightRequired": "",
+  "floorPadBackActual": "", "floorPadBackRequired": "",
+  "sidewallConstruction": "",
+  "backwallConstruction": "",
+  "ceilingConstruction": "",
+  "shieldingType": "sheet-metal"|"ceramic-tile"|"brick"|"concrete"|"other"|"none"|"",
+  "sheetMetalPermanent": "Y"|"N"|"",
+  "wallSpacersNonCombustible": "Y"|"N"|"",
+  "airSpaceAtShield": "Y"|"N"|"",
+  "wallToShieldActual": "", "wallToShieldRequired": "",
+  "topStoveToTopShieldActual": "", "topStoveToTopShieldRequired": "",
+  "shieldToFloorActual": "", "shieldToFloorRequired": "",
+  "bottomStoveToFloorActual": "", "bottomStoveToFloorRequired": "",
+  "ashesInMetalContainer": "Y"|"N"|"",
+  "metalContainerLocation": "inside"|"outside"|"",
+  "metalContainerHasLid": "Y"|"N"|"",
+  "ashOnNonFlammable": "Y"|"N"|"",
+  "wettInspectedSinceInstall": "Y"|"N"|"",
+  "wettInspectorNumber": "",
+  "modifications": "Y"|"N"|"",
+  "modificationDetails": "",
+  "previousChimneyFire": "Y"|"N"|"",
+  "chimneyFireCause": "",
+  "fuelDistance": "",
+  "fuelDistanceUnit": "feet"|"metres",
+  "smokeDetector": "Y"|"N"|"",
+  "fireExtinguisher": "Y"|"N"|"",
+  "coDetector": "Y"|"N"|"",
+  "overallResult": "pass"|"pass-with-deficiencies"|"fail"|"",
+  "deficiencies": [],
+  "section6Remarks": "",
+  "section9Remarks": "",
+  "inspectorName": "Haroon Chaudhary",
+  "wettCertNumber": "",
+  "clientName": "", "clientPhone": "", "clientEmail": "",
+  "propertyAddress": "", "city": "", "inspectionDate": "",
+  "photoUrls": [],
+  "certLabelOther": "", "masonrySubtypeOther": "", "chimneyLiningOther": "",
+  "metalChimneySubtypeOther": "", "stovePipeConstructionOther": "",
+  "stovePipeConcealedDesc": "", "shieldingTypeOther": "",
+  "metalWettNumber": ""
+}`,
+      });
+      const res = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: { 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+        body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 4096, system: WETT_SYSTEM, messages: deduped }),
+      });
+      if (!res.ok) {
+        const errBody = await res.text();
+        return new Response(JSON.stringify({ error: `Anthropic error ${res.status}: ${errBody}` }), { headers: CORS, status: 500 });
+      }
+      const data = await res.json();
+      const text = data.content?.[0]?.text ?? '{}';
+      const clean = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim();
+      try {
+        const wettForm = JSON.parse(clean);
+        return new Response(JSON.stringify({ wettForm }), { headers: CORS });
+      } catch {
+        return new Response(JSON.stringify({ error: 'Failed to parse WETT JSON', raw: clean }), { headers: CORS, status: 500 });
+      }
+    }
 
     if (mode === 'analyze-photo') {
       if (!photoUrl) {

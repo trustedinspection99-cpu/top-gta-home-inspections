@@ -5,6 +5,7 @@ import PortalLayout from '@/components/PortalLayout';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Sparkles, CheckCircle2, AlertCircle, Send, ImagePlus, Mic, MicOff, Loader2, Camera } from 'lucide-react';
 import { buildReportHtml, ReportData } from '@/lib/reportTemplate';
+import { buildWettReportHtml } from '@/lib/wettReportTemplate';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -12,7 +13,16 @@ interface Message {
   photoUrls?: string[]; // Supabase Storage URLs
 }
 
+function isWettJob(job?: DbJob | null) {
+  return (job?.inspection_type ?? '').toLowerCase().includes('wett');
+}
+
 function greeting(job?: DbJob | null) {
+  if (isWettJob(job)) {
+    return `Hi! I'm Scout WETT — your WETT inspection assistant.\n\n${
+      job ? `This is a **WETT inspection** at **${job.address}, ${job.city}**.\n\n` : ''
+    }I'll guide you through the full CSIO questionnaire step by step. Just answer each question and I'll confirm as we go.\n\nLet's start — **Is this the primary or auxiliary heating unit?**`;
+  }
   return `Hi! I'm Scout, your AI inspection assistant.\n\n${
     job ? `This is a **${job.inspection_type}** at **${job.address}, ${job.city}**.\n\n` : ''
   }Tap the mic and walk me through each system. After I confirm each finding, tap **Tag photo** to attach your photo right then — no separate photo step at the end.\n\nWhen all 10 sections are covered, tap **Generate Report** — the report will auto-save instantly.`;
@@ -59,6 +69,7 @@ export default function ReportGeneratorPage() {
   const recognitionRef = useRef<SpeechRecognition | null>(null);
   const pendingInputRef = useRef('');
   const alreadySentRef = useRef(false);
+  const isWettRef = useRef(false);
 
   // ── Load job + restore draft ──
   useEffect(() => {
@@ -86,6 +97,7 @@ export default function ReportGeneratorPage() {
     supabase.from('jobs').select('*').eq('id', jobId).single().then(({ data }) => {
       const j = data as DbJob | null;
       setJob(j);
+      isWettRef.current = isWettJob(j);
       restore(j);
     });
     // Load existing report — store ID and restore findings into Scout context
@@ -215,7 +227,7 @@ export default function ReportGeneratorPage() {
           // Send only text to Claude — photos are referenced by URL, not bytes
           const { data, error: fnErr } = await supabase.functions.invoke('generate-report', {
             body: {
-              mode: 'chat',
+              mode: isWettRef.current ? 'wett-chat' : 'chat',
               messages: updated.map(m => ({ role: m.role, content: m.content })),
             },
           });
@@ -341,8 +353,78 @@ export default function ReportGeneratorPage() {
     return covered;
   }
 
+  // ── WETT topic coverage tracker ──
+  const WETT_TOPICS = ['Heating Unit', 'Chimney', 'Clearances', 'Loss Prevention'];
+  function coveredWettTopics(msgs: Message[]): Set<string> {
+    const text = msgs.filter(m => m.role === 'assistant').map(m => m.content).join(' ');
+    const covered = new Set<string>();
+    if (/\b(make|model|manufacturer|primary|auxiliary|airtight|pellet|fuel type|cords per year)\b/i.test(text)) covered.add('Heating Unit');
+    if (/\b(chimney|masonry|metal|liner|flue|cleaned|ULC|inside the home|shares a flue)\b/i.test(text)) covered.add('Chimney');
+    if (/\b(clearance|actual|required|stove pipe|floor pad|thimble|measurement)\b/i.test(text)) covered.add('Clearances');
+    if (/\b(smoke detector|CO detector|ash|extinguisher|fuel stored|modifications|chimney fire)\b/i.test(text)) covered.add('Loss Prevention');
+    return covered;
+  }
+
+  // ── Generate WETT report ──────────────────────────────────────────────────
+  async function generateWettReport() {
+    setGenerating(true);
+    setError('');
+
+    const { data, error: fnErr } = await supabase.functions.invoke('generate-report', {
+      body: { mode: 'wett-summarize', messages: messages.map(m => ({ role: m.role, content: m.content })) },
+    });
+
+    if (fnErr || !data?.wettForm) {
+      setError(fnErr?.message ?? 'Could not extract WETT data from conversation.');
+      setGenerating(false);
+      return;
+    }
+
+    const wf = { ...data.wettForm };
+
+    // Pre-fill from job
+    if (job) {
+      wf.clientName = wf.clientName || job.client_name || '';
+      wf.clientEmail = wf.clientEmail || job.client_email || '';
+      wf.propertyAddress = wf.propertyAddress || job.address || '';
+      wf.city = wf.city || job.city || '';
+      if (!wf.inspectionDate && job.scheduled_at) {
+        wf.inspectionDate = new Date(job.scheduled_at).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
+      }
+    }
+    if (!wf.inspectorName) wf.inspectorName = 'Haroon Chaudhary';
+    wf.photoUrls = messages.flatMap((m: Message) => m.photoUrls ?? []);
+
+    const html = buildWettReportHtml(wf);
+    setReportHtml(html);
+
+    if (jobId) {
+      setSaving(true);
+      const existingId = existingReportIdRef.current || savedReportId;
+      const reportPayload = {
+        storage_url: 'wett',
+        report_data: { type: 'wett', wettForm: wf, htmlCache: html },
+        generated_at: new Date().toISOString(),
+      };
+      if (existingId) {
+        await supabase.from('reports').update(reportPayload).eq('id', existingId);
+        setSavedReportId(existingId);
+      } else {
+        const { data: row } = await supabase.from('reports')
+          .insert({ job_id: jobId, status: 'saved', ...reportPayload })
+          .select('id').single();
+        if (row) setSavedReportId(row.id);
+        await supabase.from('jobs').update({ status: 'completed', completed_at: new Date().toISOString() }).eq('id', jobId);
+      }
+      setSaving(false);
+    }
+
+    setGenerating(false);
+  }
+
   // ── Generate report → auto-assign photos → auto-build → auto-save ──
   async function generateReport() {
+    if (isWettRef.current) { generateWettReport(); return; }
     setGenerating(true);
     setError('');
     let rd: ReportData | null = null;
@@ -666,7 +748,7 @@ export default function ReportGeneratorPage() {
           </Link>
         </Button>
         <div className="text-center">
-          <p className="font-semibold text-gray-900">Scout AI</p>
+          <p className="font-semibold text-gray-900">{isWettRef.current ? 'Scout WETT' : 'Scout AI'}</p>
           {job && <p className="text-xs text-gray-500">{job.address}</p>}
         </div>
         {!photoStep && !reportHtml && (
@@ -832,6 +914,18 @@ export default function ReportGeneratorPage() {
 
       {/* Section coverage tracker */}
       {!reportHtml && messages.length > 1 && (() => {
+        if (isWettRef.current) {
+          const covered = coveredWettTopics(messages);
+          return (
+            <div className="flex flex-wrap gap-1.5 mb-3 px-1">
+              {WETT_TOPICS.map(s => (
+                <span key={s} className={`text-xs px-2 py-0.5 rounded-full font-medium border ${covered.has(s) ? 'bg-orange-50 text-orange-700 border-orange-200' : 'bg-gray-50 text-gray-400 border-gray-200'}`}>
+                  {covered.has(s) ? '✓' : '○'} {s}
+                </span>
+              ))}
+            </div>
+          );
+        }
         const covered = coveredSections(messages);
         return (
           <div className="flex flex-wrap gap-1.5 mb-3 px-1">
