@@ -5349,6 +5349,274 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">To discuss your commercial inspection requirements, call (647) 801-9311 or <a href="/booking" class="text-primary underline">book online</a>. We can typically accommodate commercial inspections within 2–3 business days.</p>
     `,
   },
+  {
+    id: 82,
+    slug: "mould-vs-mold-ontario",
+    title: "Mould vs Mold in Ontario: What's the Difference?",
+    metaTitle: "Mould vs Mold in Ontario: What's the Difference?",
+    metaDescription: "Mould or mold — same thing. Learn what causes mold growth in Ontario homes, when it's a health risk, and what a professional mold inspection finds.",
+    excerpt: 'Canadians spell it "mould" while Americans spell it "mold" — but both words describe the same fungal growth. Here\'s what Ontario homeowners need to know.',
+    author: "ASADS Home Inspection",
+    date: "2026-04-13",
+    readTime: "7 min read",
+    category: "Mold & Air Quality",
+    image: "/blog-images/mould-vs-mold-ontario.jpg",
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mould or Mold — Is There a Difference?</h2>
+      <p class="mb-4">No. "Mould" is the Canadian and British English spelling; "mold" is the American spelling. Both words refer to the same thing: multicellular fungi that grow as filaments called hyphae, reproduce via spores, and thrive in moist, warm environments. In Ontario, you'll see both spellings used interchangeably by inspectors, insurance companies, and public health agencies — they mean exactly the same thing.</p>
+      <p class="mb-4">The same applies to "black mould" vs "black mold" — again, identical meaning. The colour alone does not determine toxicity. Many non-toxic mold species are black, dark green, or grey, while some genuinely harmful species may appear white or light-coloured.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mold vs Mildew: What's the Difference?</h2>
+      <p class="mb-4">Mildew is a specific subset of mold — typically a surface-growing, powdery or fluffy fungus that appears white or grey and is commonly found on shower tiles, window frames, and bathroom ceilings. Mildew is generally less harmful than deeper mold growths and is often manageable with standard cleaning products.</p>
+      <p class="mb-4">Mold, broadly speaking, includes all multicellular fungi and can penetrate porous materials like drywall, wood framing, insulation, and subfloor panels. Once mold has colonized structural materials, surface cleaning alone is not sufficient — the affected material typically needs to be removed and replaced.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Mildew:</strong> Surface-level, powdery, white or grey, easy to wipe off tile or glass</li>
+        <li><strong>Mold:</strong> Penetrates porous materials, may appear any colour, requires professional remediation when established in structural elements</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Common Mold Species Found in Ontario Homes</h2>
+      <p class="mb-4">Ontario's climate — cold winters, humid summers, and significant freeze-thaw cycling — creates conditions that favour mold growth in basements, attics, and wall cavities. The most commonly encountered species in Ontario home inspections include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Cladosporium:</strong> Olive-green to black; extremely common in Ontario; found on window condensation, fabric, and HVAC ducts. Allergenic but not typically toxigenic.</li>
+        <li><strong>Penicillium:</strong> Blue-green; common in water-damaged insulation and drywall. Can produce mycotoxins in large concentrations. Allergenic at low exposures.</li>
+        <li><strong>Aspergillus:</strong> Green, yellow, or white; grows on food, dust, and building materials. Some species produce aflatoxins. Health risk depends on species and exposure level.</li>
+        <li><strong>Stachybotrys chartarum ("black mold"):</strong> Black or dark green; grows on paper-faced drywall and wood with sustained moisture. Produces trichothecene mycotoxins. Requires professional remediation.</li>
+        <li><strong>Chaetomium:</strong> White-to-olive; appears in chronically wet drywall, often in the same locations as Stachybotrys. Produces mycotoxins and is frequently overlooked.</li>
+        <li><strong>Serpula lacrymans (dry rot):</strong> Technically a wood-decaying fungus rather than mold; causes structural damage to floor joists and wood framing in damp basements.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Where Mold Grows in Ontario Homes</h2>
+      <p class="mb-4">Mold requires four things: moisture, a food source (organic material), oxygen, and temperatures above freezing. Ontario homes provide ideal conditions in several locations:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Attic:</strong> Inadequate ventilation causes warm, humid air from the living space to condense on cold roof sheathing — the most common location for extensive mold growth in Ontario homes, often hidden from view during standard inspections without attic access.</li>
+        <li><strong>Basement rim joist and sill plate:</strong> Thermal bridging at the foundation wall creates cold spots where interior humidity condenses, particularly in older homes with uninsulated rim joists.</li>
+        <li><strong>Behind bathroom and kitchen walls:</strong> Plumbing leaks, tile grout failures, and shower pan leaks allow moisture to accumulate in wall cavities without visible signs until mold is well-established.</li>
+        <li><strong>HVAC systems:</strong> Cooling coils, drain pans, and ductwork in humid conditions. Air handler units circulate mold spores throughout the entire home when colonized.</li>
+        <li><strong>Crawl spaces:</strong> Dirt crawl spaces in older Ontario homes are extremely prone to mold growth on floor joists and subfloor panels without a proper vapour barrier.</li>
+        <li><strong>Window frames and sills:</strong> Condensation from single-pane or failed double-pane windows creates persistent moisture on surrounding wood framing.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is Black Mold (Stachybotrys) Dangerous?</h2>
+      <p class="mb-4">The media-amplified fear of "toxic black mold" is partially warranted but often overstated. Stachybotrys chartarum is a genuinely concerning mold species that produces mycotoxins linked to respiratory symptoms, neurological effects, and immune suppression at high exposure levels. However:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Not all black-coloured mold is Stachybotrys — the vast majority of black mold visible in Ontario homes is Cladosporium or Aspergillus, which are far less harmful</li>
+        <li>Stachybotrys requires sustained, chronic moisture to establish — it does not grow from brief or intermittent dampness</li>
+        <li>Species identification requires laboratory air sampling or tape-lift sampling — visual inspection alone cannot confirm Stachybotrys</li>
+        <li>All extensive mold growth (regardless of species) should be professionally remediated — the remediation process is the same whether or not Stachybotrys is confirmed</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a Professional Mold Inspection Include?</h2>
+      <p class="mb-4">A professional mold inspection goes far beyond a visual check. ASADS mold inspections include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Infrared thermal imaging:</strong> Detects moisture behind walls, ceilings, and floors without destructive access — identifies hidden moisture sources that visual inspection misses entirely.</li>
+        <li><strong>Moisture mapping:</strong> Penetrating and non-penetrating moisture meters measure elevated moisture content in building materials throughout the home.</li>
+        <li><strong>Air sampling:</strong> Spore trap cassettes capture airborne spore concentrations inside the home and outdoors for comparison. Results are analysed by an accredited laboratory.</li>
+        <li><strong>Surface sampling:</strong> Tape-lift or bulk samples from visible mold colonies identify species and confirm the type of remediation required.</li>
+        <li><strong>Source identification:</strong> Every mold problem has a moisture source. Our inspectors identify the root cause — roof leak, plumbing failure, condensation, or grading — so remediation addresses the cause, not just the symptom.</li>
+      </ul>
+      <p class="mb-4">After the inspection, you receive a detailed written report identifying all mold locations, affected materials, moisture sources, and remediation recommendations — including whether the affected areas require professional remediation or whether the issue can be managed by a homeowner.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mold Inspection vs Air Quality Test: What's the Difference?</h2>
+      <p class="mb-4">An air quality test (spore trap sampling) measures the concentration of airborne mold spores in your home. It answers the question: "How much mold is in the air right now?" It does not identify the location, extent, or cause of mold growth. A full mold inspection combines physical investigation, moisture testing, thermal imaging, and air or surface sampling to answer the complete question: "Do I have mold, where is it, what caused it, and what needs to happen?"</p>
+      <p class="mb-4">If you're a buyer purchasing a home with suspected moisture history, or if you have symptoms (persistent cough, headaches, eye irritation) that worsen at home, a full mold inspection is the appropriate service — not just an air quality test.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mold Inspection Cost in Ontario</h2>
+      <p class="mb-4">ASADS mold inspections start at $299 for a residential property in the GTA and surrounding Ontario communities. This includes the full physical inspection with thermal imaging and moisture mapping. Laboratory air sampling is available as an add-on and is recommended when visible mold is found or when health symptoms are present.</p>
+      <p class="mb-4">To book a mold inspection — spelled any way you like — call (647) 801-9311 or <a href="/booking" class="text-primary underline">book online</a>. We serve all of the GTA, Hamilton, Kitchener-Waterloo, Guelph, Barrie, and surrounding Ontario communities.</p>
+    `,
+  },
+  {
+    id: 83,
+    slug: "ice-dams-roof-ontario",
+    title: "Ice Dams on Your Roof: Ontario Homeowner's Guide",
+    metaTitle: "Ice Dams on Your Roof: Ontario Homeowner's Guide",
+    metaDescription: "Ice dams form at the eaves when heat escapes through the roof. Learn what causes ice damming in Ontario, the damage it does, and how to prevent it.",
+    excerpt: "Ice dams are a leading cause of winter roof and attic damage across Ontario. Understanding what causes them — and what to do — can prevent costly repairs.",
+    author: "ASADS Home Inspection",
+    date: "2026-04-13",
+    readTime: "7 min read",
+    category: "Roof & Exterior",
+    image: "/blog-images/ice-dams-roof-ontario.jpg",
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is an Ice Dam?</h2>
+      <p class="mb-4">An ice dam is a ridge of ice that forms at the edge of a roof — typically at the eaves or in valleys — and prevents melting snow from draining properly. Water backed up behind the ice dam can seep under shingles, into the roof deck, through the attic insulation, and eventually into the ceiling and walls of the living space. Ice dams are one of the most common causes of winter water damage in Ontario homes.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Causes Ice Damming?</h2>
+      <p class="mb-4">Ice dams form from a specific combination of conditions:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Warm roof deck:</strong> Heat escaping from the conditioned living space through inadequate attic insulation warms the roof deck above freezing, melting the snow sitting on it</li>
+        <li><strong>Cold eaves:</strong> The overhang (soffit/eave area) is not over heated living space — it stays at or below ambient temperature</li>
+        <li><strong>Freeze at the eave:</strong> Meltwater flowing down the warm roof deck reaches the cold eave, freezes, and begins building up an ice ridge</li>
+        <li><strong>Backup flooding:</strong> As the ice ridge grows, subsequent meltwater pools behind it. Under wind pressure and capillary action, this water migrates under shingles and into the roof assembly</li>
+      </ul>
+      <p class="mb-4">The icicles hanging from your eavestroughs are a visible symptom of ice dam formation — not the ice dam itself. Large icicles indicate significant meltwater runoff from the roof, which is a signal that heat is escaping through the roof deck.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Damage Ice Dams Cause in Ontario Homes</h2>
+      <p class="mb-4">Water intrusion from ice dams can cause extensive and expensive damage:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Shingle damage:</strong> Water forced under shingles deteriorates the asphalt and lifts shingles from the deck, requiring premature replacement</li>
+        <li><strong>Roof deck damage:</strong> Sustained wetting rots the oriented strand board (OSB) or plywood sheathing, creating soft spots and structural weakness</li>
+        <li><strong>Attic mold:</strong> Moisture intrusion into the attic saturates insulation and creates ideal conditions for mold growth on roof sheathing — an extremely common finding in Ontario home inspections after severe winters</li>
+        <li><strong>Ceiling staining and collapse:</strong> Water that breaks through the roof assembly stains drywall ceilings and, in severe cases, can cause ceiling panels to sag or collapse</li>
+        <li><strong>Wall damage:</strong> Water tracking down walls inside insulated cavities saturates insulation, rots wood framing, and causes mold growth in the wall assembly</li>
+        <li><strong>Eaves trough damage:</strong> Heavy ice accumulation in and on eavestroughs can rip them from the fascia entirely</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Which Ontario Homes Are Most Vulnerable?</h2>
+      <p class="mb-4">Ice damming is most severe in homes where warm air freely escapes into the attic space. The highest-risk homes include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Older homes (pre-1980) with minimal attic insulation — the original R-12 to R-20 batts were far below current code requirements of R-60</li>
+        <li>Homes with bypasses between the living space and attic — recessed pot lights (without airtight covers), plumbing chases, wall top plates, and attic hatches are major air leakage paths</li>
+        <li>Cathedral ceiling sections and shed dormers, where the roof cavity depth limits insulation capacity</li>
+        <li>Homes with complex rooflines containing many valleys, which create natural traps for ice accumulation</li>
+        <li>Homes where the attic ventilation (soffit and ridge vents) has been blocked by insulation pushed to the eaves</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Prevent Ice Dams</h2>
+      <p class="mb-4">The correct solution to ice dams addresses the root cause — heat escaping through the roof — rather than just removing ice after it forms. Effective prevention includes:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Air sealing the attic floor:</strong> Sealing all penetrations from the living space into the attic (pot light boxes, plumbing stacks, electrical runs, wall top plates) is the single most effective measure and must be done before adding insulation</li>
+        <li><strong>Upgrading attic insulation:</strong> Ontario Building Code requires R-60 attic insulation in new construction; most Ontario homes built before 1990 are significantly below this target</li>
+        <li><strong>Maintaining proper attic ventilation:</strong> Adequate airflow from soffit to ridge keeps the attic cold and prevents the roof deck from warming above ambient temperature — insulation baffles at the eaves prevent blockage</li>
+        <li><strong>Ice and water shield:</strong> A self-adhering waterproof membrane applied at the eave line during roof replacement provides protection even when ice dam formation occurs — required by Ontario Building Code at the eave zone</li>
+        <li><strong>Heat cables:</strong> Electric resistance cables installed along the eaves are a last-resort measure for problematic sections — they address the symptom, not the cause, and consume significant electricity</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What a Home Inspection Looks For</h2>
+      <p class="mb-4">During a home inspection in Ontario, ASADS inspectors look for evidence of past or current ice dam damage:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Attic sheathing staining, mold, or rot at the eave line — the most common indicator of recurring ice dam intrusion</li>
+        <li>Inadequate attic insulation depth and coverage, particularly at the eave zone where insulation is most often thin or missing</li>
+        <li>Blocked soffit venting that prevents cold air flow along the roof deck</li>
+        <li>Missing or damaged ice and water shield at eave areas (visible during roof replacement)</li>
+        <li>Water staining on ceilings, particularly along exterior walls near the eave line, which indicates historic or current ice dam intrusion</li>
+        <li>Separated, lifted, or buckling shingles along the lower roof sections</li>
+        <li>Thermal imaging during a winter or early spring inspection can identify active heat loss through the roof deck — a predictor of future ice dam formation</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Ice Dam Damage and Home Insurance in Ontario</h2>
+      <p class="mb-4">Most Ontario home insurance policies cover sudden and accidental water damage, which can include ice dam intrusion if the event is discrete and well-documented. However, insurers may deny claims where ice dam damage is attributable to long-standing inadequate insulation or maintenance neglect. When purchasing a home, understanding the attic insulation condition and any history of ice dam damage is important information — both for your insurance and for your renovation budget.</p>
+      <p class="mb-4">If you're buying a home in Ontario and want a thorough assessment of attic insulation, ventilation, and any history of ice dam damage, call ASADS at (647) 801-9311 or <a href="/booking" class="text-primary underline">book an inspection online</a>. We serve the entire GTA, Hamilton, Kitchener-Waterloo, Barrie, and surrounding communities.</p>
+    `,
+  },
+  {
+    id: 84,
+    slug: "polybutylene-pipes-ontario",
+    title: "Polybutylene Pipes Ontario: What Home Buyers Must Know",
+    metaTitle: "Polybutylene Pipes Ontario: What Home Buyers Must Know",
+    metaDescription: "Polybutylene (poly-B) pipes were installed in Ontario homes from the 1970s to 1990s and are prone to failure. Learn what to do if your home has poly-B plumbing.",
+    excerpt: "Polybutylene (poly-B) pipes were installed in hundreds of thousands of Ontario homes and are known to fail without warning. Here's what buyers need to know.",
+    author: "ASADS Home Inspection",
+    date: "2026-04-13",
+    readTime: "6 min read",
+    category: "Plumbing",
+    image: "/blog-images/polybutylene-pipes-ontario.jpg",
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is Polybutylene Pipe?</h2>
+      <p class="mb-4">Polybutylene (trade names: Poly-B, PB, Quest pipe) is a grey plastic pipe material used extensively for residential water supply plumbing in Canada and the US from approximately 1975 to 1995. It was popular because it was cheap, flexible, and easy to install. An estimated 6 million homes in North America had polybutylene plumbing installed before it was phased out of production — and many of those homes are in Ontario.</p>
+      <p class="mb-4">Polybutylene pipes are grey in colour (occasionally blue or black), flexible, and typically 1/2" to 1" in diameter. They are joined with grey, blue, or copper fittings using crimp rings. If you see grey plastic pipe running from the water meter or water heater in a home built between 1975 and 1995, it is likely polybutylene.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Is Polybutylene Problematic?</h2>
+      <p class="mb-4">Polybutylene reacts chemically with oxidants — particularly chlorine — in municipal water supplies. Over time, this reaction causes the pipe material to become brittle, develop micro-fractures, and eventually fail catastrophically. The deterioration happens from the inside out, which means the pipe can appear intact externally while its interior surface is severely degraded.</p>
+      <p class="mb-4">The key issues with poly-B plumbing in Ontario homes:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Unpredictable failure:</strong> Pipes can fail at any age once degradation begins — there is no reliable way to determine remaining service life from external inspection alone</li>
+        <li><strong>Fitting failures:</strong> The plastic fittings used with poly-B (particularly acetal fittings) are prone to cracking at the crimp points, often the first failure location</li>
+        <li><strong>Hidden damage:</strong> Most poly-B runs through walls, floors, and ceilings — a pipe failure in a wall cavity can cause major water damage before it's noticed</li>
+        <li><strong>Insurance implications:</strong> Many Ontario home insurance providers will not insure properties with polybutylene plumbing, or will add significant exclusions and premium surcharges. This can complicate the purchase of a home with poly-B</li>
+        <li><strong>Financing implications:</strong> Some mortgage lenders require confirmation that poly-B is absent or has been replaced as a condition of financing</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Which Ontario Homes May Have Poly-B?</h2>
+      <p class="mb-4">Homes built or renovated between approximately 1978 and 1995 are the most likely to contain polybutylene plumbing. In Ontario, this includes a large proportion of:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Suburban subdivision homes in Mississauga, Brampton, Scarborough, North York, and Richmond Hill built during the 1980s housing boom</li>
+        <li>Townhouses and condominiums developed in the GTA during the late 1970s through early 1990s</li>
+        <li>Homes in Hamilton, Kitchener-Waterloo, Barrie, and other Ontario cities developed during this era</li>
+        <li>Older homes that had their plumbing partially replaced during the 1980s — a home from the 1960s may have a mix of copper and poly-B if it was replumbed</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Is Poly-B Identified During a Home Inspection?</h2>
+      <p class="mb-4">A qualified home inspector will look for polybutylene pipe at all accessible locations:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>At the water meter shutoff in the basement or utility room — where the supply enters the home</li>
+        <li>At the water heater — both the cold supply inlet and hot outlet connections</li>
+        <li>Under bathroom vanities, kitchen sinks, and laundry connections where shutoff valves and supply lines are accessible</li>
+        <li>In unfinished basement or mechanical room sections where plumbing is exposed</li>
+        <li>At fixture supply connections in bathrooms and kitchens</li>
+      </ul>
+      <p class="mb-4">Inspectors report on the visible plumbing material type, note the presence of polybutylene, and flag any visible signs of past leaks, repairs, or fitting degradation. However, plumbing concealed in walls cannot be confirmed without destructive access — if visible sections are poly-B, assume the entire system is poly-B.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What to Do If a Home Has Poly-B Plumbing</h2>
+      <p class="mb-4">Finding poly-B during a pre-purchase inspection does not mean you cannot buy the home — but it does require a plan:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Request a price reduction:</strong> Full poly-B replacement typically costs $4,000–$10,000 for a standard Ontario home, depending on the scope and home layout. This is a legitimate negotiation item.</li>
+        <li><strong>Confirm insurability:</strong> Before waiving conditions, confirm that your intended insurance provider will insure the property with poly-B present — get this in writing.</li>
+        <li><strong>Get a plumbing contractor assessment:</strong> A licensed plumber can assess the extent of poly-B in the home and provide a replacement quote. Some poly-B systems are partial (basement to first floor, with copper elsewhere) and can be replaced at lower cost.</li>
+        <li><strong>Replace with PEX or copper:</strong> Modern PEX (cross-linked polyethylene) pipe is the most common replacement material — flexible, durable, and compatible with standard fittings. Copper is also acceptable but more expensive.</li>
+        <li><strong>Do not rely on fitting replacement alone:</strong> Replacing only the crimp fittings while leaving the poly-B pipe in place is a short-term measure, not a solution — the pipe material itself is degraded.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Poly-B and the Ontario Home Inspection Report</h2>
+      <p class="mb-4">When ASADS identifies polybutylene plumbing during a pre-purchase inspection, it is flagged as a significant finding with a recommendation for evaluation by a licensed plumber and confirmation of insurance coverage prior to closing. We identify the material, note the locations observed, and document any visible signs of degradation or previous leaks.</p>
+      <p class="mb-4">If you're purchasing a home in Ontario and want a thorough inspection that specifically addresses plumbing material types, call (647) 801-9311 or <a href="/booking" class="text-primary underline">book online</a>. We inspect homes across the GTA, Hamilton, Kitchener-Waterloo, Guelph, Barrie, and surrounding communities.</p>
+    `,
+  },
+  {
+    id: 85,
+    slug: "cold-room-cold-cellar-ontario",
+    title: "Cold Room & Cold Cellar in Ontario Homes: What Inspectors Find",
+    metaTitle: "Cold Room & Cold Cellar Ontario: What Inspectors Find",
+    metaDescription: "Cold rooms and cold cellars are common in Ontario homes — and frequently cause moisture, mold, and pest problems. Learn what a home inspector looks for.",
+    excerpt: "Cold rooms are a beloved Ontario home feature that often becomes a moisture and mold problem. Here's what home inspectors find — and what you should know.",
+    author: "ASADS Home Inspection",
+    date: "2026-04-13",
+    readTime: "6 min read",
+    category: "Basement & Foundation",
+    image: "/blog-images/cold-room-cold-cellar-ontario.jpg",
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is a Cold Room (Cold Cellar)?</h2>
+      <p class="mb-4">A cold room — also called a cold cellar, root cellar, or fruit cellar — is an unheated, uninsulated room typically located in the basement of an Ontario home along the exterior foundation wall. It is deliberately kept cold by the exterior foundation walls and the natural ground temperature, providing a low-cost storage space for preserves, wine, root vegetables, and other items that benefit from cool, stable temperatures.</p>
+      <p class="mb-4">Cold rooms are extremely common in older Ontario homes — particularly those built before 1970 — and were a standard architectural feature in suburban homes throughout the GTA, Hamilton, and southern Ontario from the 1940s through the 1970s. They remain a desirable feature in many older homes.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Cold Rooms Cause Problems</h2>
+      <p class="mb-4">While cold rooms are useful in theory, they are one of the most common sources of moisture, mold, and pest issues that home inspectors find in Ontario basements. The problems stem from the physics of cold surfaces meeting warm, humid interior air:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condensation:</strong> When warm, humid air from the rest of the basement enters the cold room, it contacts the cold concrete walls and ceiling and drops its moisture as condensation. In summer, this condensation can be significant — you may find water literally dripping from the concrete ceiling.</li>
+        <li><strong>Mold growth:</strong> The persistent moisture on the concrete surfaces and any wood shelving, door frame, or stored organic material creates ideal mold conditions. Cold room mold is one of the most common inspection findings in Ontario homes built before 1990.</li>
+        <li><strong>Pest entry:</strong> Cold rooms frequently have deteriorated door seals, unscreened vents, or gaps at the foundation that allow rodents and insects to enter. Mice entering through cold room venting is extremely common.</li>
+        <li><strong>Humidity spillover:</strong> Mold spores and high humidity from a cold room spread into the adjacent finished basement, affecting air quality throughout the home.</li>
+        <li><strong>Structural concerns:</strong> Water infiltration through the exterior wall behind the cold room can cause efflorescence, spalling concrete, and in severe cases, seepage — which is often misattributed to the cold room being "damp" when the real issue is foundation water intrusion.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Home Inspectors Look for in Cold Rooms</h2>
+      <p class="mb-4">During a home inspection, ASADS inspectors evaluate the cold room or cold cellar as part of the basement assessment:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Visible mold:</strong> White, grey, green, or black mold on concrete walls, wooden shelves, door frames, or the ceiling — extremely common in older Ontario cold rooms</li>
+        <li><strong>Efflorescence:</strong> White mineral deposits on the concrete walls indicate water has been migrating through the foundation block or poured concrete</li>
+        <li><strong>Active seepage or staining:</strong> Water stains at the base of the walls, on the floor, or at wall-floor joints indicate foundation water infiltration</li>
+        <li><strong>Door condition:</strong> The cold room door should be insulated and well-sealed to prevent warm air from the heated basement from continuously flowing into the cold space — many cold room doors are hollow-core or have deteriorated weatherstripping</li>
+        <li><strong>Vent condition:</strong> Cold room vents that open to the exterior should have functional screens and dampers — open, unscreened vents are a pest entry point</li>
+        <li><strong>Moisture meter readings:</strong> We use penetrating moisture meters to assess moisture content in concrete walls and any wood components</li>
+        <li><strong>Thermal imaging:</strong> In winter, thermal imaging can identify cold air infiltration pathways and temperature differentials that predict condensation issues</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Improving a Cold Room in Your Ontario Home</h2>
+      <p class="mb-4">If you own a home with a problematic cold room, several improvements can significantly reduce moisture and mold issues:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Replace the door:</strong> Install an insulated, weatherstripped exterior-grade door with a proper threshold — this reduces warm air infiltration dramatically</li>
+        <li><strong>Seal the vent:</strong> Install a dampered, screened vent that can be closed in summer to prevent warm humid outdoor air from entering the cold room during the high-humidity months</li>
+        <li><strong>Improve drainage:</strong> Ensure the exterior grading slopes away from the foundation wall adjacent to the cold room, and that eavestroughs are properly draining away from the house</li>
+        <li><strong>Apply waterproofing paint:</strong> Crystalline waterproofing products applied to the interior concrete walls can reduce moisture migration through the foundation — not a substitute for exterior waterproofing but helpful for minor seepage</li>
+        <li><strong>Remove mold:</strong> Mold on concrete can be addressed with appropriate antifungal treatments, but mold on wood shelving or framing requires removal and replacement of the affected material</li>
+        <li><strong>Consider converting:</strong> Many homeowners convert cold rooms to insulated storage rooms or wine cellars with proper humidity control — eliminating the cold-surface condensation problem entirely</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Cold Rooms and Home Buyers in Ontario</h2>
+      <p class="mb-4">If you're purchasing an Ontario home with a cold room, have it inspected carefully. What appears to be a charming original feature can mask significant moisture issues that spread beyond the cold room itself. At ASADS, we inspect cold rooms as part of every pre-purchase home inspection — assessing moisture levels, mold presence, foundation condition, and pest entry risks.</p>
+      <p class="mb-4">To book a home inspection in Ontario, call (647) 801-9311 or <a href="/booking" class="text-primary underline">book online</a>. We serve the GTA, Hamilton, Kitchener-Waterloo, Guelph, Barrie, London, and surrounding communities.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
