@@ -4348,6 +4348,344 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">A WETT Site Basic (similar to a "Level 1") is a visual inspection of accessible components — the standard for insurance purposes. A Level 2 inspection includes a chimney camera to assess the interior of the flue liner, required when a property is being sold, after a chimney fire, or when the basic inspection cannot confirm liner condition. Level 2 is required by some insurers for older chimneys.</p>
     `,
   },
+  {
+    id: 69,
+    slug: "mould-vs-mold",
+    title: "Mould vs Mold: What's the Difference? (And Why It Matters in Ontario Homes)",
+    metaTitle: "Mould vs Mold: What's the Difference? | ASADS",
+    metaDescription: "Mould and mold are the same fungus — just spelled differently. Learn what causes mould in Ontario homes, health risks, and when to call a professional inspector.",
+    excerpt: "Mould and mold are the same fungus — just Canadian vs American spelling. But the risks are identical. Here's what every Ontario homeowner needs to know.",
+    category: "Mold & Air Quality",
+    author: "ASADS Home Inspection",
+    date: "2026-04-12",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <p class="mb-4">If you've ever Googled "mould" and gotten results about "mold" — or vice versa — you may have wondered whether these are actually different things. They're not. <strong>Mould and mold are the same organism</strong>, just spelled differently: "mould" is the standard Canadian and British spelling, while "mold" is the American spelling. Ontario homeowners use both interchangeably, and so do we.</p>
+      <p class="mb-4">What matters isn't the spelling — it's the growth itself, what causes it, and what to do about it. This guide covers everything Ontario homeowners need to know about mould in residential properties.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is Mould / Mold?</h2>
+      <p class="mb-4">Mould is a type of fungus that grows in multicellular filaments called hyphae. It reproduces by releasing microscopic spores into the air, which then land on surfaces and germinate when moisture, oxygen, and an organic food source (wood, drywall paper, insulation, dust) are present. Mould is found naturally outdoors and in low concentrations indoors — it becomes a problem when it grows in colonies inside a home.</p>
+      <p class="mb-4">There are thousands of mould species. In Ontario homes, the most common include <strong>Cladosporium</strong> (usually green or black, found on walls and fabric), <strong>Penicillium</strong> (blue-green, often behind wallpaper or in water-damaged areas), <strong>Aspergillus</strong> (found in HVAC systems and insulation), and <strong>Stachybotrys chartarum</strong> — commonly called black mold — which requires sustained, heavy moisture to grow and is less common than media coverage suggests.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Causes Mould in Ontario Homes?</h2>
+      <p class="mb-4">Ontario's climate — cold, damp winters and humid summers — creates year-round conditions for mould growth if homes aren't properly managed. The single most important factor is <strong>moisture</strong>. Without it, mould cannot grow regardless of temperature or food source. Common sources of indoor moisture in Ontario homes include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Basement water intrusion:</strong> Foundation cracks, window well leaks, and inadequate drainage are the leading cause of mould in Ontario basements, particularly in clay-soil areas like Hamilton, Mississauga, and the GTA.</li>
+        <li><strong>Condensation:</strong> Cold surfaces (concrete basement walls, metal window frames, poorly insulated exterior walls) condense warm interior air — particularly in older, poorly insulated homes from the 1960s–1980s.</li>
+        <li><strong>Roof leaks:</strong> Attic mould is extremely common in Ontario and is often undetected for years. Inadequate attic ventilation causes moisture-laden air to condense on the underside of the roof deck.</li>
+        <li><strong>Plumbing leaks:</strong> Slow leaks behind walls or under bathroom and kitchen floors can sustain mould colonies for months before being discovered.</li>
+        <li><strong>Poor ventilation:</strong> Bathrooms and kitchens without proper exhaust fans, or exhaust fans venting into the attic instead of outside, create persistent humidity that feeds mould growth.</li>
+        <li><strong>Flooding and water damage:</strong> Any water event — burst pipes, sump pump failure, ice dam backup — that isn't dried within 24–48 hours will typically result in mould growth in drywall, insulation, and wood framing.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Health Effects of Mould Exposure</h2>
+      <p class="mb-4">Health Canada and Ontario's Ministry of Health both recognize indoor mould as a significant health concern. The severity of health effects depends on the type and quantity of mould, duration of exposure, and individual sensitivity. Common health effects include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Respiratory symptoms:</strong> Nasal congestion, sneezing, coughing, wheezing, and shortness of breath — particularly in individuals with asthma or existing respiratory conditions.</li>
+        <li><strong>Allergic reactions:</strong> Eye irritation, skin rash, and flu-like symptoms in sensitive individuals.</li>
+        <li><strong>Worsening asthma:</strong> Mould is a well-documented asthma trigger. Children living in mould-affected homes show higher rates of asthma development and more frequent attacks.</li>
+        <li><strong>Mycotoxin exposure:</strong> Certain mould species — including Stachybotrys (black mold) — produce mycotoxins that, with sustained exposure, can cause neurological symptoms, immune suppression, and severe respiratory illness. However, clinical mycotoxin poisoning from residential exposure is relatively rare.</li>
+      </ul>
+      <p class="mb-4">Healthy adults often tolerate low-level mould exposure with minimal symptoms. However, young children, the elderly, pregnant women, and immunocompromised individuals face greater risk and should not be exposed to active mould growth.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Identify Mould in Your Home</h2>
+      <p class="mb-4">Visible mould is straightforward — colonies appear as fuzzy or powdery patches in shades of green, black, white, grey, or brown. But mould is often hidden. Signs of mould you may not be able to see directly include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Musty odour:</strong> A persistent musty or earthy smell, especially in basements, closets, or rooms with exterior walls, is a strong indicator of hidden mould growth.</li>
+        <li><strong>Staining or discolouration:</strong> Water stains on ceilings, walls, or floors often indicate past or ongoing leaks — and where there's sustained moisture, mould typically follows.</li>
+        <li><strong>Bubbling or peeling paint or wallpaper:</strong> Moisture behind walls causes paint to bubble and wallpaper to separate from the wall surface.</li>
+        <li><strong>Warped or cupped flooring:</strong> Hardwood floors that cup or warp are absorbing moisture from below, often from a basement moisture problem or subfloor leak.</li>
+        <li><strong>Persistent health symptoms:</strong> If household members experience ongoing respiratory symptoms, headaches, or fatigue that improve when away from home, mould should be investigated.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mould Inspection vs Mould Testing: What's the Difference?</h2>
+      <p class="mb-4">These terms are often confused. A <strong>mould inspection</strong> is a visual and moisture assessment conducted by a certified inspector who examines the property for signs of mould growth, moisture intrusion, and conditions conducive to mould. The inspector uses moisture meters, infrared thermal imaging, and knowledge of building science to identify problem areas — without necessarily taking laboratory samples.</p>
+      <p class="mb-4"><strong>Mould testing</strong> (also called mould sampling or air quality testing) involves collecting samples — air samples, surface swab samples, or bulk material samples — that are sent to an accredited laboratory for analysis. Testing identifies the type and concentration of mould spores present and compares them against outdoor baseline levels.</p>
+      <p class="mb-4">A professional mould inspection is the appropriate starting point for most homeowners. Testing is warranted when the source of mould is unclear, when post-remediation verification is needed, or when legal or insurance documentation requires laboratory evidence.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Can You Remove Mould Yourself?</h2>
+      <p class="mb-4">Minor surface mould on non-porous surfaces (bathroom tile grout, window frames) can be cleaned with appropriate products. Health Canada recommends that mould covering less than one square metre (about 10 square feet) on non-porous surfaces can be addressed by a healthy adult using proper protective equipment — N95 respirator, safety glasses, and disposable gloves.</p>
+      <p class="mb-4">However, mould on porous materials — drywall, wood framing, insulation, ceiling tiles — cannot be cleaned. It must be removed and the affected materials replaced. For larger areas (over 1 square metre), mould behind walls, or any situation involving HVAC contamination, professional mould remediation is required. Attempting to clean large-scale mould growth without containment can spread spores throughout the home.</p>
+      <p class="mb-4"><strong>Important:</strong> Never paint over mould. The mould will continue to grow beneath the paint and the problem will worsen.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does a Mould Inspection Cost in Ontario?</h2>
+      <p class="mb-4">A professional mould inspection in Ontario typically costs <strong>$299–$499</strong> for a standard residential property, depending on size and scope. Inspections that include air sampling and laboratory analysis run higher — typically $500–$900 including lab fees. ASADS mould inspections start from <strong>$299</strong> with same-day reporting.</p>
+      <p class="mb-4">Be cautious of any company offering "free" mould inspections. Free inspections are typically marketing tools for remediation companies who have a financial incentive to find (and sometimes overstate) mould problems — and then sell you their remediation services. An independent inspection from a certified inspector with no remediation services to sell provides unbiased findings.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Is mould covered by home insurance in Ontario?</h3>
+      <p class="mb-4">Most standard Ontario home insurance policies cover mould only when it results directly from a sudden and accidental covered loss — for example, mould developing after a burst pipe that was promptly reported. Mould resulting from long-term neglect, gradual leaks, or maintenance issues is almost universally excluded. Flood-related mould is also excluded from standard policies unless you have add-on overland water coverage.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What's the difference between black mold and regular mold?</h3>
+      <p class="mb-4">The term "black mold" most commonly refers to <em>Stachybotrys chartarum</em>, a slow-growing mould that requires sustained heavy moisture (typically from flooding or chronic leaks) to establish itself. It has a distinctive dark greenish-black colour and slimy texture. While Stachybotrys is a legitimate health concern, many other common moulds are also dark-coloured — including Cladosporium and Aspergillus niger. You cannot identify mould species by colour alone; laboratory testing is required for definitive identification.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How long does mould take to grow after water damage?</h3>
+      <p class="mb-4">Under ideal conditions (warm temperature, high humidity, organic food source), mould can begin to colonize within <strong>24 to 48 hours</strong> of a water event. Visible growth typically appears within 3–7 days. This is why rapid drying — using dehumidifiers, fans, and professional water extraction equipment — within the first 24–48 hours after flooding or a major leak is critical to preventing mould growth.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Should I disclose mould when selling my home in Ontario?</h3>
+      <p class="mb-4">Yes. Under Ontario's real property disclosure requirements and the principle of material latent defect disclosure, sellers are required to disclose known mould problems that are not obvious on a visual inspection. Failure to disclose can expose sellers to legal liability after closing. Remediating confirmed mould issues — with documentation from a certified inspector — before listing is the recommended approach.</p>
+    `,
+  },
+  {
+    id: 70,
+    slug: "when-was-asbestos-used-in-homes-canada",
+    title: "When Was Asbestos Used in Canadian Homes? A Complete Timeline",
+    metaTitle: "When Was Asbestos Used in Homes in Canada? | ASADS",
+    metaDescription: "Asbestos was used in Canadian homes from the 1920s through the late 1980s. Learn which materials contain asbestos, when to test, and what to do if you find it.",
+    excerpt: "Canadian homes built before 1990 may contain asbestos in dozens of building materials. This timeline shows when it was used and where to look in your home.",
+    category: "Asbestos",
+    author: "ASADS Home Inspection",
+    date: "2026-04-12",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <p class="mb-4">If your home was built before 1990, there is a meaningful chance it contains asbestos-containing materials (ACMs). Canada was one of the world's largest producers and consumers of asbestos throughout the 20th century, and the mineral was incorporated into dozens of common building products — many of which are still in place in Ontario homes today.</p>
+      <p class="mb-4">Understanding when asbestos was used, in which materials, and what to do if you find it is essential for any homeowner, renovator, or buyer of an older property.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Asbestos Use in Canada: A Timeline</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1920s–1940s: Early Widespread Use</h3>
+      <p class="mb-4">Asbestos began appearing in Canadian residential construction in the 1920s. Its fire resistance, durability, and insulating properties made it attractive for use in pipe insulation, boiler insulation, and spray-applied fireproofing. During World War II, construction demand surged and asbestos use expanded significantly. Homes from this era may contain asbestos in pipe wrap, boiler insulation, and floor tiles.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1950s–1960s: Peak Use in Post-War Housing Boom</h3>
+      <p class="mb-4">The post-war housing boom — which produced the vast majority of Ontario's suburban housing stock in communities like Brampton, Mississauga, Hamilton, and the older Toronto suburbs — coincided with peak asbestos use in residential construction. During this period, asbestos was incorporated into:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Ceiling tiles and textured "popcorn" ceiling coatings</li>
+        <li>Vinyl floor tiles (9" × 9" tiles were almost universally asbestos-containing)</li>
+        <li>Floor tile adhesive (mastic)</li>
+        <li>Pipe and duct insulation</li>
+        <li>Exterior cladding (asbestos cement siding and shingles)</li>
+        <li>Roofing felt and shingles</li>
+        <li>Joint compound (drywall mud)</li>
+        <li>Vermiculite attic insulation (from the Libby, Montana mine — heavily contaminated with tremolite asbestos)</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1970s: Growing Awareness, Continued Use</h3>
+      <p class="mb-4">Health research linking asbestos exposure to mesothelioma, lung cancer, and asbestosis began reaching the public in the 1970s. However, regulatory action was slow, and asbestos continued to be used in most of the same applications through this decade. Many 1970s homes in Ontario contain asbestos in HVAC duct wrap, acoustic ceiling tiles, and resilient flooring.</p>
+      <p class="mb-4">Canada did begin restricting some asbestos applications in the mid-1970s — spray-applied asbestos insulation was banned in 1975 — but most uses continued into the 1980s.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1980s: Phase-Out and Substitution</h3>
+      <p class="mb-4">Through the 1980s, the Canadian construction industry began phasing out asbestos materials as liability concerns grew and alternative products became available. Chrysotile asbestos continued to be used in certain products — notably floor tiles, roofing, and friction materials — until the late 1980s. Homes built up to approximately <strong>1988–1990</strong> should be considered potentially asbestos-containing in certain applications.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1990s–2000s: Near-Complete Phase-Out</h3>
+      <p class="mb-4">By the early 1990s, most asbestos-containing construction products had been removed from the Canadian market, though the actual regulations were slow to follow. Canada maintained a position of "controlled use" through the 2000s, primarily because of its chrysotile mining industry (mainly in Quebec). A near-total ban on asbestos was implemented incrementally through the 2010s, with the final regulations under the Canadian Environmental Protection Act coming into effect in 2018.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Where Is Asbestos Found in Ontario Homes?</h2>
+      <p class="mb-4">The following materials commonly contained asbestos in homes built before 1990. The presence of asbestos in any of these materials cannot be confirmed by appearance alone — laboratory testing of a sample is required.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">High-Priority Locations</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Vermiculite attic insulation:</strong> Loose, silver-gold pebble-like insulation. Up to 70% of Canada's vermiculite supply prior to 1990 came from the Libby, Montana mine, which was contaminated with tremolite asbestos — the most dangerous form. Any vermiculite attic insulation should be assumed to contain asbestos.</li>
+        <li><strong>Pipe and duct insulation:</strong> White or grey corrugated or smooth wrap around heating pipes, and grey or white wrap around HVAC ducts. Very common in homes with hot water or steam heating systems.</li>
+        <li><strong>Floor tiles:</strong> 9" × 9" vinyl floor tiles from the 1950s–1980s almost universally contain asbestos. Larger format tiles (12" × 12") from the same era also frequently contain asbestos. The black adhesive (mastic) beneath the tiles is often also asbestos-containing.</li>
+        <li><strong>Popcorn / acoustic ceilings:</strong> Spray-applied textured ceiling coatings were commonly made with asbestos through the late 1970s. Sanding or scraping these surfaces is extremely high risk.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Other Common Locations</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Drywall joint compound (taping mud) — especially pre-1980 homes</li>
+        <li>Exterior asbestos cement siding and roof shingles</li>
+        <li>Insulation board around furnaces and boilers</li>
+        <li>Millboard around fireplace surrounds</li>
+        <li>Roofing felt underlayment</li>
+        <li>Gaskets in older furnaces and boilers</li>
+        <li>Transite flue pipes (grey cement-like pipe used for furnace exhaust)</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is Asbestos in Your Home Dangerous?</h2>
+      <p class="mb-4">Asbestos is only hazardous when fibres become airborne and are inhaled. This occurs when asbestos-containing materials are disturbed, damaged, or deteriorated — a state referred to as <strong>"friable"</strong> (easily crumbled by hand pressure). Asbestos-containing materials in good condition, left undisturbed, do not typically release fibres and may be safely managed in place.</p>
+      <p class="mb-4">The risk escalates significantly during renovation. Drilling, cutting, sanding, or demolishing materials containing asbestos without proper containment and protective equipment can release large quantities of fibres. This is why Ontario's Occupational Health and Safety Act requires asbestos surveys before demolition or significant renovation of pre-1990 buildings.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Should You Do If You Suspect Asbestos?</h2>
+      <p class="mb-4"><strong>Do not disturb the material.</strong> If you suspect a material contains asbestos, leave it alone until it can be tested. Do not sand, scrape, drill, or break the material.</p>
+      <p class="mb-4">Contact a certified asbestos inspector to conduct an asbestos survey. The inspector will visually assess suspected materials and collect small samples for laboratory analysis. The lab test will confirm the presence and type of asbestos fibres.</p>
+      <p class="mb-4">If asbestos is confirmed, you have two options: <strong>encapsulation</strong> (sealing the material to prevent fibre release, appropriate for undamaged ACMs) or <strong>abatement</strong> (professional removal by a licensed asbestos abatement contractor, required for damaged, friable, or high-disturbance-risk materials). In Ontario, asbestos abatement is regulated under the Occupational Health and Safety Act and must be performed by licensed contractors using proper containment, respiratory protection, and waste disposal procedures.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does Asbestos Testing Cost in Ontario?</h2>
+      <p class="mb-4">Asbestos testing in Ontario typically costs <strong>$299–$499</strong> for a standard residential inspection and sampling. This includes the site inspection, sample collection from suspected materials, and laboratory analysis. ASADS asbestos testing services start from <strong>$299</strong> with certified results typically available within 3–5 business days, or rush results in 24 hours.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">When did Canada ban asbestos?</h3>
+      <p class="mb-4">Canada progressively restricted asbestos use from the 1970s onward but maintained a "controlled use" position due to its chrysotile mining industry until relatively recently. The final regulations prohibiting most uses of asbestos under the <em>Prohibition of Asbestos and Products Containing Asbestos Regulations</em> came into force on <strong>December 30, 2018</strong>. However, homes built before this date — particularly before 1990 — should still be assessed for existing asbestos-containing materials.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Do all homes built before 1990 have asbestos?</h3>
+      <p class="mb-4">Not necessarily in every material, but the probability is high enough that pre-1990 homes should be assumed to contain asbestos until confirmed otherwise — particularly if any renovation work is planned. The specific materials present depend on the construction methods, builder, and renovation history of the individual home.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Can I test for asbestos myself?</h3>
+      <p class="mb-4">DIY asbestos test kits are available, but they require you to collect a sample of the suspected material yourself — which disturbs the material and can release fibres. Professional asbestos inspectors are trained to collect samples safely using wet methods and protective equipment, minimizing fibre release. For most homeowners, professional sampling is the safer and more reliable option.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Does my home insurance cover asbestos removal?</h3>
+      <p class="mb-4">Standard home insurance policies do not cover the cost of asbestos testing or abatement as a maintenance or pre-existing condition issue. Coverage may be available if asbestos is discovered as a result of a covered loss — for example, if a pipe bursts and the resulting repair reveals asbestos insulation on adjacent pipes. Check your specific policy and speak with your broker about environmental endorsements if your home is older.</p>
+    `,
+  },
+  {
+    id: 71,
+    slug: "do-popcorn-ceilings-have-asbestos",
+    title: "Do Popcorn Ceilings Have Asbestos? What Ontario Homeowners Need to Know",
+    metaTitle: "Do Popcorn Ceilings Have Asbestos? | Ontario Guide | ASADS",
+    metaDescription: "Popcorn ceilings installed before 1980 in Ontario often contain asbestos. Learn how to tell, what the risks are, and whether to remove or encapsulate.",
+    excerpt: "Textured popcorn ceilings applied before 1980 frequently contain asbestos. Before scraping or renovating, get them tested — disturbing asbestos releases dangerous fibres.",
+    category: "Asbestos",
+    author: "ASADS Home Inspection",
+    date: "2026-04-12",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <p class="mb-4">Popcorn ceilings — also called acoustic ceilings, cottage cheese ceilings, or textured ceilings — were one of the most common interior finishes in Canadian homes from the 1950s through the early 1980s. They were popular because they were cheap to apply, required no painting or finishing, and helped absorb sound. They were also, in many cases, made with asbestos.</p>
+      <p class="mb-4">If your home was built or last renovated before approximately 1980, and it has original textured ceilings, they should be treated as potentially asbestos-containing until tested by a certified inspector.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Did Popcorn Ceilings Contain Asbestos?</h2>
+      <p class="mb-4">Spray-applied acoustic ceiling texture was typically made from a mixture of Zonolite (vermiculite) or other aggregates combined with a binder — and in many formulations, chrysotile asbestos fibres were added to improve texture, adhesion, and fire resistance. Asbestos made the coating more durable, easier to spray, and helped it achieve the characteristic lumpy texture that gave popcorn ceilings their name.</p>
+      <p class="mb-4">In Canada, spray-applied asbestos products were <strong>banned in 1975</strong>. However, existing stock continued to be used after the ban, and some products remained in use through the late 1970s. Homes built or renovated between <strong>1950 and approximately 1980</strong> are the highest risk for asbestos-containing popcorn ceilings. Homes built after 1980 are lower risk but not zero risk — products may have varied.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Do You Know If Your Popcorn Ceiling Contains Asbestos?</h2>
+      <p class="mb-4"><strong>You cannot tell by looking at it.</strong> Asbestos fibres are microscopic — invisible to the naked eye — and asbestos-containing popcorn ceilings look identical to non-asbestos versions. The texture, colour, and feel provide no reliable indication of asbestos content.</p>
+      <p class="mb-4">The only way to confirm whether a popcorn ceiling contains asbestos is to have a small sample collected and analyzed at an accredited laboratory. A certified asbestos inspector will collect a sample — using wet methods to suppress fibre release — and submit it to a lab for polarized light microscopy (PLM) analysis, which can identify asbestos fibres and their type. Results are typically available in 3–5 business days.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">When Was Your Home Built?</h3>
+      <p class="mb-4">As a rough guide for Ontario homeowners:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Built before 1975:</strong> High likelihood of asbestos in popcorn ceilings. Test before any disturbance.</li>
+        <li><strong>Built 1975–1980:</strong> Moderate to high risk. Spray-applied asbestos was banned in 1975 but product use continued. Test before disturbing.</li>
+        <li><strong>Built 1980–1990:</strong> Lower risk but still possible, particularly if the textured ceiling was applied in the early 1980s with older product stock. Testing is advisable before renovation.</li>
+        <li><strong>Built after 1990:</strong> Asbestos in popcorn ceilings is very unlikely. Non-asbestos textures were standard by this period.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Are the Risks of Asbestos in Popcorn Ceilings?</h2>
+      <p class="mb-4">Asbestos-containing popcorn ceilings in good condition — not damaged, crumbling, or peeling — are generally considered low-risk as long as they are not disturbed. The fibres remain bound within the texture coating and are not readily released into the air.</p>
+      <p class="mb-4">The risk becomes significant when the ceiling is:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Scraped or sanded:</strong> This is the highest-risk scenario. Scraping a popcorn ceiling to remove the texture — a common DIY renovation project — releases enormous quantities of asbestos fibres if the ceiling contains asbestos. A single DIY scraping session in an average-sized room can contaminate an entire home and require professional decontamination costing $5,000–$15,000.</li>
+        <li><strong>Damaged:</strong> Water damage from roof leaks, ice dams, or plumbing leaks can cause asbestos-containing popcorn ceiling material to become friable (crumbly), releasing fibres. Water-stained or sagging textured ceilings in pre-1980 homes should be treated as a potential asbestos hazard.</li>
+        <li><strong>Penetrated:</strong> Drilling through or cutting into the ceiling for pot lights, fan boxes, or ceiling fixtures releases fibres at the point of penetration.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Are Your Options If the Ceiling Tests Positive?</h2>
+      <p class="mb-4">If laboratory analysis confirms asbestos in your popcorn ceiling, you have several options depending on the condition of the ceiling and your renovation plans:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Leave It In Place (Management)</h3>
+      <p class="mb-4">If the ceiling is in good condition (not damaged, peeling, or water-stained) and you don't plan to renovate, leaving it in place is a safe option. The ceiling is not a health hazard when undisturbed. This is the recommended approach for occupied homes where no renovation is planned.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Encapsulation</h3>
+      <p class="mb-4">Painting over the textured ceiling with a sealant-type paint encapsulates the asbestos fibres and prevents release. This is a cost-effective option when the ceiling is in reasonably good condition. The asbestos remains in place but is sealed. Note: standard latex paint does not constitute adequate encapsulation — purpose-made encapsulant products or primer-sealers are required.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. Drywalling Over</h3>
+      <p class="mb-4">Installing new drywall directly over the existing textured ceiling (without disturbing the asbestos-containing material) is a practical renovation option that covers the popcorn ceiling, improves the appearance, and encapsulates the asbestos without requiring abatement. This is increasingly popular in Ontario home renovations. It does add ceiling weight, so structural assessment may be needed in older homes.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. Professional Abatement and Removal</h3>
+      <p class="mb-4">If you want the ceiling completely removed, it must be done by a licensed asbestos abatement contractor using full containment, negative air pressure, appropriate respiratory protection (powered air-purifying respirators), and HEPA vacuuming. In Ontario, asbestos abatement is regulated under the <em>Occupational Health and Safety Act</em> (O. Reg. 278/05). The work area must be sealed, the building's occupants must be evacuated, and waste must be disposed of at an approved facility.</p>
+      <p class="mb-4">Professional asbestos ceiling removal in Ontario typically costs <strong>$3–$8 per square foot</strong> of ceiling area, depending on the scope of work, containment requirements, and local contractor rates.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Can I paint over popcorn ceiling without testing first?</h3>
+      <p class="mb-4">Applying paint or a roller over an intact popcorn ceiling is low-risk since you are not disturbing the material. However, if you plan to scrape, sand, or drill into the ceiling at any point, test first. And be aware that painting over the ceiling makes future testing more complicated, as the paint layer needs to be included in the sample.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Do I need to disclose asbestos in popcorn ceilings when selling?</h3>
+      <p class="mb-4">In Ontario, sellers must disclose known latent defects — defects that are not visible on a reasonable inspection and that would affect the value or safety of the property. Confirmed asbestos in a material that is at risk of disturbance during normal renovation would likely qualify as a material latent defect requiring disclosure. If you have tested and confirmed asbestos, speak with your real estate lawyer about your disclosure obligations.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How much does asbestos testing cost for a popcorn ceiling?</h3>
+      <p class="mb-4">Testing a single material (one sample) for asbestos typically costs <strong>$150–$300</strong> for the site visit and lab analysis. A full residential asbestos survey — which tests multiple suspect materials throughout the home — typically runs <strong>$299–$499</strong>. ASADS offers certified asbestos testing starting from $299, including site inspection, sample collection, and laboratory analysis.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Can a home inspector tell me if my ceiling has asbestos?</h3>
+      <p class="mb-4">A general home inspector can identify textured ceilings in pre-1980 homes and flag them as potentially asbestos-containing based on age and appearance. However, a general home inspection does not include laboratory sampling or asbestos testing. If you want a definitive answer, you need a certified asbestos inspector to collect and analyze a sample. ASADS provides both general home inspections and certified asbestos testing.</p>
+    `,
+  },
+  {
+    id: 72,
+    slug: "friable-vs-non-friable-asbestos",
+    title: "Friable vs Non-Friable Asbestos: What's the Difference and Why It Matters",
+    metaTitle: "Friable vs Non-Friable Asbestos: Ontario Guide | ASADS",
+    metaDescription: "Friable asbestos crumbles easily and releases fibres — non-friable is bound in material. Learn the key differences, Ontario regulations, and when each requires abatement.",
+    excerpt: "Friable asbestos crumbles at hand pressure and releases dangerous fibres easily. Non-friable is bonded in a matrix and is lower risk — until disturbed during renovation.",
+    category: "Asbestos",
+    author: "ASADS Home Inspection",
+    date: "2026-04-12",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <p class="mb-4">When asbestos professionals and Ontario regulations refer to asbestos-containing materials (ACMs), they distinguish between two broad categories: <strong>friable</strong> and <strong>non-friable</strong>. This distinction matters because it directly determines the risk level of the material, the regulatory requirements for handling it, and whether professional abatement is required.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is Friable Asbestos?</h2>
+      <p class="mb-4">Friable asbestos refers to any material containing asbestos that can be <strong>crumbled, pulverized, or reduced to powder by hand pressure</strong>. When friable ACMs are disturbed — even slightly — they release asbestos fibres into the air. These airborne fibres are what pose the health risk.</p>
+      <p class="mb-4">Examples of friable asbestos-containing materials commonly found in Ontario homes:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Pipe and duct insulation:</strong> The corrugated or smooth wrap around heating pipes and HVAC ducts is often highly friable, particularly when aged or damaged.</li>
+        <li><strong>Spray-applied fireproofing and acoustic coatings:</strong> This includes the spray-applied popcorn/acoustic ceiling texture common in pre-1980 Ontario homes, which can become friable with water damage or aging.</li>
+        <li><strong>Vermiculite attic insulation:</strong> The loose-fill pebble-like insulation contaminated with tremolite asbestos from the Libby, Montana mine is considered friable because it is loose and easily disturbed.</li>
+        <li><strong>Boiler and furnace insulation:</strong> Millboard, block, and spray insulation around older heating equipment is typically friable and in poor condition in older homes.</li>
+        <li><strong>Deteriorated pipe lagging:</strong> Older pipe wrap that is cracking, flaking, or has been previously damaged is actively releasing fibres and is an immediate hazard.</li>
+      </ul>
+      <p class="mb-4">Friable materials in poor condition are considered the highest risk category and typically require professional abatement — not just encapsulation — under Ontario's regulations.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is Non-Friable Asbestos?</h2>
+      <p class="mb-4">Non-friable asbestos refers to materials where asbestos fibres are firmly bound within a matrix — typically cement, vinyl, resin, or other binder — and <strong>cannot be crumbled by hand pressure</strong>. In their intact, undisturbed state, non-friable materials do not readily release asbestos fibres and are generally considered lower risk.</p>
+      <p class="mb-4">Examples of non-friable asbestos-containing materials:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Vinyl floor tiles:</strong> The 9×9 inch floor tiles common in Ontario basements and kitchens from the 1950s–1980s are non-friable when intact. The tiles themselves are hard and do not release fibres unless mechanically broken, ground, or sanded.</li>
+        <li><strong>Asbestos cement products:</strong> Exterior siding panels, roofing shingles, and Transite pipe (used for furnace flue venting) are non-friable. The asbestos fibres are tightly bound in a cement matrix.</li>
+        <li><strong>Floor tile adhesive (mastic):</strong> The black adhesive beneath vinyl floor tiles often contains asbestos but is firmly adhered and non-friable in its intact state.</li>
+        <li><strong>Asbestos cement board:</strong> Used around fireplace surrounds and near furnaces as a fire barrier — non-friable in good condition.</li>
+        <li><strong>Roofing felt:</strong> Asphalt-based roofing underlay with asbestos reinforcement is non-friable.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Does the Distinction Matter?</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Risk Profile</h3>
+      <p class="mb-4">Friable materials actively release fibres with minimal disturbance — a brush of a hand, vibration from machinery, or air movement can dislodge fibres from deteriorated pipe insulation or damaged spray coatings. Non-friable materials require mechanical action (cutting, drilling, grinding, breaking) to release fibres. The practical risk difference is significant: an intact vinyl floor tile poses minimal daily exposure risk; deteriorated pipe wrap does not.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Ontario Regulatory Requirements</h3>
+      <p class="mb-4">Ontario's <em>Occupational Health and Safety Act</em>, specifically <strong>O. Reg. 278/05 (Designated Substance — Asbestos on Construction Projects and in Buildings and Repair Operations)</strong>, classifies asbestos work into three types based on the risk level of the operation:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Type 1 (lowest risk):</strong> Minor work with non-friable ACMs — for example, removing a small area of vinyl floor tiles intact without breaking them. Specific controls are required but a licensed abatement contractor is not mandated for all Type 1 work.</li>
+        <li><strong>Type 2 (moderate risk):</strong> Work with non-friable ACMs that involves breaking, cutting, or drilling — for example, cutting asbestos cement pipe or drilling through asbestos-containing drywall compound. Licensed abatement procedures are required.</li>
+        <li><strong>Type 3 (highest risk):</strong> Any work with friable ACMs — removal of pipe insulation, spray-applied coatings, or vermiculite — regardless of quantity. Full containment, licensed contractors, and specific decontamination procedures are mandatory.</li>
+      </ul>
+      <p class="mb-4">For homeowners and renovators: any work involving friable ACMs must be done by a licensed asbestos abatement contractor in Ontario. Attempting Type 3 work without proper licensing, containment, and respiratory protection is illegal under Ontario law and creates serious liability exposure.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Can Non-Friable Become Friable?</h2>
+      <p class="mb-4">Yes — and this is an important point. Non-friable materials can become friable when:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Mechanically broken:</strong> Drilling, cutting, grinding, or breaking non-friable materials converts them to a friable state at the point of disturbance — releasing fibres into the air.</li>
+        <li><strong>Weathered or aged:</strong> Asbestos cement siding and roofing that has been subjected to freeze-thaw cycles, UV exposure, and physical impact over decades can become increasingly friable.</li>
+        <li><strong>Water-damaged:</strong> Water intrusion can soften asbestos-containing drywall compound and other binders, increasing friability.</li>
+        <li><strong>Improperly removed:</strong> Attempting to remove non-friable materials incorrectly — breaking floor tiles instead of lifting them intact — converts a manageable Type 1 situation into a higher-risk scenario.</li>
+      </ul>
+      <p class="mb-4">This is why the condition assessment component of an asbestos inspection matters as much as identification. A certified inspector doesn't just identify which materials contain asbestos — they assess the current condition and friability of each material to determine the actual risk and appropriate management strategy.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Happens During an Asbestos Survey?</h2>
+      <p class="mb-4">A certified asbestos inspector conducting a survey will:</p>
+      <ol class="list-decimal pl-6 mb-4 space-y-2">
+        <li>Conduct a systematic visual inspection of all suspect materials throughout the property</li>
+        <li>Assess the condition and friability of each suspect material</li>
+        <li>Collect samples of suspect materials using wet methods (to suppress fibre release) and appropriate PPE</li>
+        <li>Submit samples to an accredited laboratory for polarized light microscopy (PLM) analysis</li>
+        <li>Provide a written report identifying all ACMs, their location, condition, friability classification, and recommended management strategy</li>
+      </ol>
+      <p class="mb-4">ASADS certified asbestos surveys start from <strong>$299</strong> and cover all common suspect materials in pre-1990 Ontario homes. Results are typically available within 3–5 business days, with rush 24-hour turnaround available.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Does non-friable asbestos need to be removed?</h3>
+      <p class="mb-4">Not necessarily. Non-friable ACMs in good condition can often be managed in place or encapsulated rather than removed. The decision depends on the material's condition, future renovation plans, and the specific requirements of your situation (sale, insurance, renovation). A certified asbestos inspector can provide specific guidance based on the materials in your home.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Can I remove non-friable asbestos myself in Ontario?</h3>
+      <p class="mb-4">Ontario's O. Reg. 278/05 allows homeowners to do limited Type 1 asbestos work on their own primary residence without a licensed contractor — for example, carefully removing intact vinyl floor tiles in a small area. However, any operation that breaks, grinds, or cuts asbestos-containing materials is Type 2 or higher and requires licensed contractors. Given the serious long-term health consequences of asbestos exposure, even legally permissible DIY asbestos work should be approached with extreme caution and proper PPE — at minimum an N100 respirator, disposable coveralls, and proper waste disposal.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How do I know if my floor tiles contain asbestos?</h3>
+      <p class="mb-4">The only reliable method is laboratory testing. However, the age and size of the tiles are strong indicators: <strong>9×9 inch floor tiles installed before 1985</strong> in Canada have an extremely high probability of containing asbestos. 12×12 tiles from the same era also frequently contain asbestos. Never sand, grind, or dry-scrape suspect floor tiles — if you need to remove them, attempt to lift them intact and have a sample tested first.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What is a designated substance survey (DSS)?</h3>
+      <p class="mb-4">A Designated Substance Survey is a comprehensive assessment required under Ontario's OHSA before demolition or major renovation of a building. It identifies the presence and location of all designated substances — including asbestos, lead, mercury, and silica — that workers may be exposed to during the project. A DSS is legally required before issuing permits for significant renovation or demolition of pre-1990 buildings in Ontario. ASADS provides DSS reports for residential and commercial properties.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
