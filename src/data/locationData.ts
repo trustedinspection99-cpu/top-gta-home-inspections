@@ -4379,7 +4379,46 @@ export const locationData: LocationData[] = [
         "Paris, Ontario — known as the Cobblestone Capital of Canada — is one of Brant County's most desirable communities, offering buyers a stunning collection of cobblestone heritage buildings and Victorian residential properties in the historic downtown, alongside newer developments that have expanded the town significantly. Heritage properties in the Paris core require specific assessment of masonry construction, original mechanical and electrical systems, and the foundation conditions associated with properties built in the 1800s and early 1900s. Newer developments require attention to drainage and builder-standard systems.",
         "ASADS Home Inspection provides expert certified inspection services in Paris and across Brant County. Our inspectors are experienced with Paris's unique heritage housing stock, including cobblestone construction assessment, and with the newer residential developments expanding the community. Comprehensive written reports with detailed photography are provided following each inspection. Call (647) 801-9311 to schedule your Paris inspection with ASADS."]
     }
-  }
+  },
+  {
+    slug: "home-inspection-london-ontario",
+    city: "London",
+    region: "Southwestern Ontario",
+    metaTitle: "Home Inspection London Ontario | Certified | ASADS",
+    metaDescription: "Pre-purchase home inspection London Ontario from $399. Certified inspector, infrared imaging, same-day booking & detailed PDF report. Serving Old North, Byron & Wortley Village.",
+    description: "London Ontario's certified home inspector for Old North heritage properties, Byron executive homes & University District investment condos.",
+    neighborhoods: ["Old North", "Byron", "Wortley Village", "Masonville", "Old East Village"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 42.9849,
+    longitude: -81.2453,
+    localInsights: [
+      {
+        title: "Old North & Wortley Village Heritage Homes: Pre-1940 Inspection Priorities",
+        content: "London's Old North and Wortley Village neighbourhoods contain some of the finest heritage residential architecture in Ontario — a dense collection of pre-1940 brick, stone, and frame homes that require specific inspection expertise. Knob-and-tube electrical wiring remains live in many Old North homes, creating insurance complications and fire risk that buyers must document before closing. Lead-based paint on interior woodwork, trim, and wall surfaces is standard in pre-1945 London properties. Galvanized steel water supply lines with internal scaling, clay tile sewer laterals susceptible to root intrusion, solid masonry foundations exhibiting mortar joint deterioration, and asbestos-containing pipe insulation and floor tile from mid-century renovations are all commonly found and require thorough documentation. Our heritage home inspection in Old North and Wortley Village covers all of these systems with photographic evidence and clear remediation recommendations."
+      },
+      {
+        title: "Byron & Masonville Executive Homes: 1970s–1990s Inspection Issues",
+        content: "Byron and Masonville represent London's established executive residential markets — predominantly 1970s to early 1990s construction where a specific set of deficiencies applies. Polybutylene (Poly-B) grey plastic water supply plumbing was installed in the majority of London homes built between 1978 and 1995 and is now prone to fitting failure and sudden pipe rupture. Many London insurers have added exclusions or premium surcharges for homes with poly-B plumbing, and some refuse coverage entirely. KITEC plumbing — orange and blue flexible piping with brass fittings — was installed in London homes through the early 2000s and is similarly problematic. Aluminum branch circuit wiring requiring ESA inspection, original clay or asbestos cement sewer laterals in older Byron streets, and attic insulation aged well below current R-60 code requirements are additional findings we routinely document in London's 1970s–1990s housing stock."
+      },
+      {
+        title: "University District Investment Properties & Condos",
+        content: "London's University District — surrounding Western University in Old North and the Richmond Street corridor — contains a high concentration of converted multi-unit investment properties and student rental housing where deferred maintenance and unauthorized conversion work creates significant inspection findings. Basement apartment conversions without permits, fire separation deficiencies between units, overloaded electrical panels with tandem breakers, inadequate mechanical ventilation, and evidence of mold from chronic basement moisture are extremely common findings in University District investment properties. ASADS provides detailed multi-unit investment property inspections that document all deficiencies across every suite — essential information for accurate investment underwriting and repair budget planning. We also inspect the increasing volume of condo units surrounding downtown London and the Western University area."
+      },
+      {
+        title: "Thames River Flood Risk & Foundation Assessment",
+        content: "London's Thames River and its tributaries create genuine flood risk for properties throughout Old East Village, Carling Heights, and Riverside areas, with the Upper Thames River Conservation Authority maintaining detailed flood plain mapping that affects mortgage eligibility, renovation permitting, and insurance availability for affected properties. The severe 2019 Thames River flooding event and the February 2018 ice jam flooding demonstrated the real risk for properties in designated floodplain areas. Foundation waterproofing performance, backwater valve installation status, sump pump capacity and battery backup, and surface drainage grade are critical inspection priorities for any London property near the Thames or its upstream tributaries. Our inspectors assess and document all of these flood risk mitigation systems with clear condition ratings."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection Experience in London Ontario",
+      paragraphs: [
+        "London is Ontario's sixth-largest city and one of the province's most active real estate markets — a diverse mix of Victorian heritage properties in the established core, post-war suburban housing, 1970s–1990s executive neighbourhoods, and ongoing new construction throughout the city's northern and eastern growth areas.",
+        "Heritage properties in Old North and Wortley Village require assessment of century-old electrical, plumbing, and structural systems. The 1978–1995 era polybutylene plumbing issue affects a significant portion of London's mid-century housing stock, with insurance and financing implications buyers must understand before closing.",
+        "University District investment properties require multi-unit inspection expertise covering fire separation, electrical capacity, suite conversion legality, and mold risk. Thames River flood plain properties require flood risk assessment and drainage system evaluation beyond standard inspection scope.",
+        "ASADS Home Inspection provides certified pre-purchase, pre-listing, new construction, mold, asbestos, WETT, and radon inspection services across London Ontario and surrounding Middlesex County. Call (647) 801-9311 or book online to schedule your London inspection."
+      ]
+    }
+  },
 ];
 
 /**
