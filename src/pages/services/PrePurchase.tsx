@@ -865,15 +865,23 @@
                <Button asChild size="lg" variant="secondary">
                  <Link to="/booking">Book Online Now</Link>
                </Button>
-               <Button 
-                 asChild 
-                 size="lg" 
+               <Button
+                 asChild
+                 size="lg"
                  variant="outline"
                  className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
                >
                  <a href="tel:+16478019311">(647) 801-9311</a>
                </Button>
              </div>
+             <p className="text-sm text-primary-foreground/60 mt-5">
+               See also:{" "}
+               <Link to="/sample-report" className="underline hover:text-primary-foreground">Sample report</Link>
+               {" · "}
+               <Link to="/our-promise" className="underline hover:text-primary-foreground">Our independence promise</Link>
+               {" · "}
+               <Link to="/for-first-time-buyers" className="underline hover:text-primary-foreground">First-time buyer guide</Link>
+             </p>
            </div>
          </div>
        </section>

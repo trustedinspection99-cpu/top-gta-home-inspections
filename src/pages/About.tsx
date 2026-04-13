@@ -399,6 +399,8 @@ export default function About() {
               <Link to="/testimonials" className="text-primary hover:underline">Customer Reviews</Link>
               <span className="text-border">•</span>
               <Link to="/faq"          className="text-primary hover:underline">FAQ</Link>
+              <span className="text-border">•</span>
+              <Link to="/our-promise"  className="text-primary hover:underline">Independence Promise</Link>
             </div>
           </div>
         </div>

@@ -90,6 +90,7 @@ const staticPages = [
   { path: '/urgent-home-inspection',    title: 'Urgent Home Inspection Ontario | Same-Day & Next-Day Booking', desc: 'Need a home inspection fast in Ontario? ASADS offers same-day and next-day appointments across the GTA. Condition expiring? Call (647) 801-9311 now.' },
   { path: '/for-first-time-buyers',    title: 'First-Time Home Buyer Inspection Ontario | ASADS',            desc: 'First home in Ontario? ASADS walks first-time buyers through every step — what we check, what findings mean, and what to ask. Same-day GTA booking.' },
   { path: '/environmental-screening',  title: 'Environmental Home Inspection Ontario | Mold Asbestos Radon', desc: 'ASADS screens for mold, asbestos, radon, and air quality during Ontario home inspections. We test and refer to accredited labs — no conflict of interest.' },
+  { path: '/bundled-inspection',       title: 'Bundled Home Inspection Ontario | Mold Radon Asbestos',       desc: 'Book your home inspection plus mold, radon, asbestos, or air quality testing in one visit. ASADS bundles specialty tests with every inspection across Ontario.' },
 ];
 
 // ─── Build page map ───────────────────────────────────────────────────────────
