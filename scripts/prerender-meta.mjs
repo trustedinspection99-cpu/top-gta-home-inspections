@@ -249,8 +249,9 @@ const blogTitles    = Object.fromEntries(blogs.map(b => [b.slug, b.title]));
 // Links for static hub pages
 const staticNavLinks = {
   '/': nav([
-    ['Our services', aLinks(allServiceSlugs.slice(0, 8).map(s => [`/services/${s}`, serviceNames[s]]))],
-    ['Service areas', aLinks(allCitySlugs.slice(0, 8).map(c => [`/locations/home-inspection-${c}`, allCityNames[c]]))],
+    ['Our services', aLinks(allServiceSlugs.map(s => [`/services/${s}`, serviceNames[s]]))],
+    ['Service areas — GTA', aLinks(allCitySlugs.slice(0, 30).map(c => [`/locations/home-inspection-${c}`, allCityNames[c]]))],
+    ['Service areas — Ontario', aLinks(allCitySlugs.slice(30).map(c => [`/locations/home-inspection-${c}`, allCityNames[c]]))],
     ['Pages', aLinks([['/services','Services'],['/locations','Locations'],['/blog','Blog'],['/pricing','Pricing'],['/booking','Book Now'],['/about','About'],['/contact','Contact'],['/faq','FAQ']])],
   ]),
   '/services': nav([
@@ -362,36 +363,32 @@ for (const page of pages) {
   const parts = page.path.split('/').filter(Boolean);
 
   if (parts[0] === 'services' && parts.length === 2) {
-    // /services/:slug — link to top cities + related services
+    // /services/:slug — link to ALL cities + related services
     const sSlug = parts[1];
-    const si = allServiceSlugs.indexOf(sSlug);
-    const related = allServiceSlugs.filter(s => s !== sSlug).slice(0, 4);
+    const related = allServiceSlugs.filter(s => s !== sSlug);
     linksHtml = nav([
-      [`${serviceNames[sSlug] || sSlug} near you`, aLinks(allCitySlugs.slice(0, 12).map(c => [`/services/${sSlug}/${c}`, allCityNames[c]]))],
+      [`${serviceNames[sSlug] || sSlug} — GTA cities`, aLinks(allCitySlugs.slice(0, 30).map(c => [`/services/${sSlug}/${c}`, allCityNames[c]]))],
+      [`${serviceNames[sSlug] || sSlug} — Ontario cities`, aLinks(allCitySlugs.slice(30).map(c => [`/services/${sSlug}/${c}`, allCityNames[c]]))],
       ['Related services', aLinks(related.map(s => [`/services/${s}`, serviceNames[s]]))],
       ['Home', aLinks([['/', 'Home'],['/services','All Services'],['/locations','All Cities']])],
     ]);
 
   } else if (parts[0] === 'services' && parts.length === 3) {
-    // /services/:svc/:city — nearby cities + related services
+    // /services/:svc/:city — all cities for this service + all services for this city
     const sSlug = parts[1];
     const cSlug = parts[2];
     const ci = allCitySlugs.indexOf(cSlug);
+    // 12 nearby cities (wrap around)
     const nearby = [];
-    for (let d = 1; d <= 3; d++) {
+    for (let d = 1; d <= 6; d++) {
       nearby.push(allCitySlugs[(ci - d + allCitySlugs.length) % allCitySlugs.length]);
       nearby.push(allCitySlugs[(ci + d) % allCitySlugs.length]);
     }
-    const si = allServiceSlugs.indexOf(sSlug);
-    const relSvcs = [];
-    for (let d = 1; d <= 2; d++) {
-      relSvcs.push(allServiceSlugs[(si - d + allServiceSlugs.length) % allServiceSlugs.length]);
-      relSvcs.push(allServiceSlugs[(si + d) % allServiceSlugs.length]);
-    }
     linksHtml = nav([
-      ['Also serving', aLinks(nearby.map(c => [`/services/${sSlug}/${c}`, allCityNames[c]]))],
-      ['Related services', aLinks(relSvcs.map(s => [`/services/${s}/${cSlug}`, serviceNames[s]]))],
-      ['Home', aLinks([['/', 'Home'],['/services','All Services'],['/locations','All Cities']])],
+      [`${serviceNames[sSlug] || sSlug} in nearby cities`, aLinks(nearby.map(c => [`/services/${sSlug}/${c}`, allCityNames[c]]))],
+      ['All services in this city', aLinks(allServiceSlugs.map(s => [`/services/${s}/${cSlug}`, serviceNames[s]]))],
+      [`All ${serviceNames[sSlug] || sSlug} locations`, aLinks(allCitySlugs.filter(c => c !== cSlug).map(c => [`/services/${sSlug}/${c}`, allCityNames[c]]))],
+      ['Home', aLinks([['/', 'Home'],[`/services/${sSlug}`, serviceNames[sSlug] || sSlug],[`/locations/home-inspection-${cSlug}`, allCityNames[cSlug] || cSlug]])],
     ]);
 
   } else if (parts[0] === 'locations' && parts.length === 2) {
@@ -412,14 +409,17 @@ for (const page of pages) {
     ]);
 
   } else if (parts[0] === 'blog' && parts.length === 2) {
-    // /blog/:slug — related posts + service links
+    // /blog/:slug — related posts + service links + service×city for top cities
     const bSlug = parts[1];
     const bi = allBlogSlugs.indexOf(bSlug);
-    const relPosts = [1, 2, 3].map(d => allBlogSlugs[(bi + d) % allBlogSlugs.length]);
+    const relPosts = [1, 2, 3, 4, 5].map(d => allBlogSlugs[(bi + d) % allBlogSlugs.length]);
+    const topCities = allCitySlugs.slice(0, 10); // Toronto, Mississauga, Brampton, etc.
     linksHtml = nav([
-      ['Related articles', aLinks(relPosts.map(s => [`/blog/${s}`, (blogTitles[s] || s).slice(0, 35) + '...']))],
-      ['Our services', aLinks(allServiceSlugs.slice(0, 6).map(s => [`/services/${s}`, serviceNames[s]]))],
-      ['Home', aLinks([['/', 'Home'],['/blog','All Articles'],['/services','Services']])],
+      ['Related articles', aLinks(relPosts.map(s => [`/blog/${s}`, (blogTitles[s] || s).slice(0, 40) + '...']))],
+      ['Our services', aLinks(allServiceSlugs.map(s => [`/services/${s}`, serviceNames[s]]))],
+      ['Book an inspection', aLinks(topCities.map(c => [`/services/pre-purchase/${c}`, `Home Inspection ${allCityNames[c]}`]))],
+      ['Service areas', aLinks(allCitySlugs.slice(0, 20).map(c => [`/locations/home-inspection-${c}`, allCityNames[c]]))],
+      ['Home', aLinks([['/', 'Home'],['/blog','All Articles'],['/services','Services'],['/locations','All Cities']])],
     ]);
   }
 
