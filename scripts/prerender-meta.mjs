@@ -87,7 +87,9 @@ const staticPages = [
   { path: '/our-promise',            title: 'ASADS Independence Promise | Conflict-Free Inspection Ontario', desc: 'ASADS is 100% conflict-free. No remediation, no realtor referral fees, no financial stake in findings. Our only job is to tell you the truth.' },
   { path: '/for-condo-buyers',       title: 'Condo Home Inspection Ontario | ASADS Condo Specialists',     desc: 'Buying a condo in Ontario? ASADS condo inspections start at $299. Thermal imaging included, same-day report. We know what most inspectors miss.' },
   { path: '/for-investors',          title: 'Home Inspection for Investors Ontario | Multi-Unit & Portfolio', desc: 'Real estate investors trust ASADS for multi-unit, duplex, triplex, and portfolio inspections. Volume pricing, investor-focused reports. Call (647) 801-9311.' },
-  { path: '/urgent-home-inspection', title: 'Urgent Home Inspection Ontario | Same-Day & Next-Day Booking', desc: 'Need a home inspection fast in Ontario? ASADS offers same-day and next-day appointments across the GTA. Condition expiring? Call (647) 801-9311 now.' },
+  { path: '/urgent-home-inspection',    title: 'Urgent Home Inspection Ontario | Same-Day & Next-Day Booking', desc: 'Need a home inspection fast in Ontario? ASADS offers same-day and next-day appointments across the GTA. Condition expiring? Call (647) 801-9311 now.' },
+  { path: '/for-first-time-buyers',    title: 'First-Time Home Buyer Inspection Ontario | ASADS',            desc: 'First home in Ontario? ASADS walks first-time buyers through every step — what we check, what findings mean, and what to ask. Same-day GTA booking.' },
+  { path: '/environmental-screening',  title: 'Environmental Home Inspection Ontario | Mold Asbestos Radon', desc: 'ASADS screens for mold, asbestos, radon, and air quality during Ontario home inspections. We test and refer to accredited labs — no conflict of interest.' },
 ];
 
 // ─── Build page map ───────────────────────────────────────────────────────────

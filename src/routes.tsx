@@ -98,6 +98,8 @@ const OurPromise = lazy(() => import('./pages/OurPromise'));
 const ForCondoBuyers = lazy(() => import('./pages/ForCondoBuyers'));
 const ForInvestors = lazy(() => import('./pages/ForInvestors'));
 const UrgentInspection = lazy(() => import('./pages/UrgentInspection'));
+const ForFirstTimeBuyers = lazy(() => import('./pages/ForFirstTimeBuyers'));
+const EnvironmentalScreening = lazy(() => import('./pages/EnvironmentalScreening'));
 
 // Public client-facing pages (no auth required)
 const AgreementPage = lazy(() => import('./pages/AgreementPage'));
@@ -153,6 +155,8 @@ export const routes: RouteObject[] = [
       { path: 'for-condo-buyers', element: <ForCondoBuyers /> },
       { path: 'for-investors', element: <ForInvestors /> },
       { path: 'urgent-home-inspection', element: <UrgentInspection /> },
+      { path: 'for-first-time-buyers', element: <ForFirstTimeBuyers /> },
+      { path: 'environmental-screening', element: <EnvironmentalScreening /> },
 
       // Portal routes
       { path: 'login', element: <LoginPage /> },
