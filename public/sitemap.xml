@@ -24,11 +24,10 @@
   <url><loc>https://www.asads.ca/services/wett</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.asads.ca/services/lead-paint-testing</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.asads.ca/services/well-water-testing</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.asads.ca/services/air-quality</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.asads.ca/services/same-day-home-inspection</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.asads.ca/services/pdi-inspection</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.asads.ca/services/designated-substance-survey</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.asads.ca/services/insurance-inspection</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
   <url><loc>https://www.asads.ca/locations/home-inspection-toronto</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.asads.ca/locations/home-inspection-north-york</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -1184,113 +1183,6 @@
   <url><loc>https://www.asads.ca/services/radon-testing/tillsonburg</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.asads.ca/services/radon-testing/paris</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.asads.ca/services/radon-testing/london-ontario</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-
-  <url><loc>https://www.asads.ca/services/sewer-scope/toronto</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/north-york</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/scarborough</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/etobicoke</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/mississauga</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/brampton</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/markham</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/vaughan</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/richmond-hill</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/aurora</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/bolton</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/halton-hills</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/caledon</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/oakville</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/oshawa</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/barrie</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/whitby</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/peterborough</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/newmarket</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/burlington</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/ajax</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/collingwood</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/stouffville</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/thornhill</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/milton</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/pickering</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/clarington</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/orillia</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/uxbridge</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/beaverton</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/cannington</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/cobourg</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/east-york</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/king-city</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/georgina</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/keswick</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/sutton</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/east-gwillimbury</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/unionville</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/kleinburg</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/maple</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/woodbridge</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/concord</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/georgetown</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/acton</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/scugog</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/port-perry</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/brock</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/bowmanville</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/innisfil</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/wasaga-beach</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/midland</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/hamilton</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/stoney-creek</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/ancaster</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/niagara-falls</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/st-catharines</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/kitchener</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/waterloo</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/guelph</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/penetanguishene</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/springwater</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/new-tecumseth</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/alliston</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/bradford</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/essa</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/clearview</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/stayner</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/dundas</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/flamborough</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/grimsby</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/niagara-on-the-lake</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/welland</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/thorold</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/fort-erie</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/port-colborne</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/lincoln</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/beamsville</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/cambridge</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/brantford</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/orangeville</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/pelham</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/wainfleet</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/west-lincoln</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/woolwich</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/wilmot</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/north-dumfries</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/wellesley</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/centre-wellington</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/erin</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/guelph-eramosa</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/mapleton</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/puslinch</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/wellington-north</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/minto</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/adelaide-metcalfe</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/severn</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/tiny-township</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/tay-township</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/shelburne</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/mono</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/woodstock</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/ingersoll</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/tillsonburg</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/paris</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.asads.ca/services/sewer-scope/london-ontario</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <url><loc>https://www.asads.ca/services/well-water-testing/toronto</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.asads.ca/services/well-water-testing/north-york</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>

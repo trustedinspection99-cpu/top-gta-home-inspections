@@ -39,8 +39,9 @@ const blogSlugs     = extractField(blogRaw, 'slug');
 const serviceSlugs = [
   'pre-purchase', 'pre-listing', 'condo', 'new-construction', 'commercial',
   'thermal-imaging', 'mold-inspection', 'asbestos-testing', 'radon-testing',
-  'sewer-scope', 'well-water-testing', 'lead-paint-testing', 'air-quality', 'wett',
+  'well-water-testing', 'lead-paint-testing', 'air-quality', 'wett',
   'insurance-inspection',
+  // sewer-scope excluded: not offered by ASADS (redirects to pre-purchase)
 ];
 
 // ─── URL builder ──────────────────────────────────────────────────────────────
@@ -72,8 +73,10 @@ lines.push('');
 const servicePages = [
   'pre-purchase', 'pre-listing', 'new-construction', 'condo', 'commercial',
   'radon-testing', 'mold-inspection', 'asbestos-testing', 'thermal-imaging',
-  'wett', 'lead-paint-testing', 'well-water-testing', 'sewer-scope', 'air-quality',
-  'same-day-home-inspection', 'pdi-inspection', 'designated-substance-survey'
+  'wett', 'lead-paint-testing', 'well-water-testing', 'air-quality',
+  'same-day-home-inspection', 'designated-substance-survey', 'insurance-inspection',
+  // sewer-scope: not offered — redirects to /services/pre-purchase
+  // pdi-inspection: no route exists — redirected to /services/new-construction
 ];
 servicePages.forEach(s => lines.push(url(`/services/${s}`, '0.9')));
 lines.push('');

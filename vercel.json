@@ -16,6 +16,8 @@
   ],
   "redirects": [
     { "source": "/:path+/", "destination": "/:path+", "permanent": true },
+    { "source": "/services/pdi-inspection", "destination": "/services/new-construction", "permanent": true },
+    { "source": "/services/pdi-inspection/:city", "destination": "/services/new-construction/:city", "permanent": true },
     {
       "source": "/locations/toronto",
       "destination": "/locations/home-inspection-toronto",
