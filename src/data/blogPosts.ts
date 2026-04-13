@@ -1000,7 +1000,7 @@ export const blogPostsData: BlogPost[] = [
     `,
   },
   {
-    id: 11,
+    id: 16,
     slug: "thermal-imaging-benefits",
     title: "How Thermal Imaging Reveals Hidden Home Problems",
     metaTitle: "What Does Thermal Imaging Find in a Home Inspection? | ASADS",
@@ -1075,7 +1075,7 @@ export const blogPostsData: BlogPost[] = [
     `,
   },
   {
-    id: 12,
+    id: 17,
     slug: "what-to-expect-home-inspection",
     title: "What to Expect During Your Home Inspection",
     metaTitle: "What to Expect During a Home Inspection | ASADS Toronto",
@@ -1410,10 +1410,10 @@ export const blogPostsData: BlogPost[] = [
   },
   {
     id: 22,
-    slug: "knob-and-tube-wiring-ontario",
-    title: "Knob and Tube Wiring in Ontario Homes: Risks, Insurance & Your Options",
-    metaTitle: "Knob & Tube Wiring Ontario | Insurance & Replacement | ASADS",
-    metaDescription: "Knob and tube wiring is still found in thousands of pre-1950 Toronto homes. Learn the fire risks, why insurers reject it, and what replacement costs in the GTA.",
+    slug: "knob-and-tube-wiring-gta",
+    title: "Knob and Tube Wiring in GTA Homes: Risks, Insurance & Your Options",
+    metaTitle: "Knob & Tube Wiring GTA | Insurance & Replacement | ASADS",
+    metaDescription: "Knob and tube wiring is still found in thousands of pre-1950 GTA homes. Learn the fire risks, why insurers reject it, and what replacement costs in the GTA.",
     excerpt: "Knob and tube wiring is present in many pre-1950 GTA homes and creates serious insurance and safety challenges for buyers. Here's what you need to know.",
     category: "Electrical Safety",
     author: "ASADS Team",
