@@ -54,6 +54,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 const PrePurchase = lazy(() => import('./pages/services/PrePurchase'));
 const PreListing = lazy(() => import('./pages/services/PreListing'));
 const NewConstruction = lazy(() => import('./pages/services/NewConstruction'));
+const PreDeliveryInspection = lazy(() => import('./pages/services/PreDeliveryInspection'));
 const Condo = lazy(() => import('./pages/services/Condo'));
 const Commercial = lazy(() => import('./pages/services/Commercial'));
 const RadonTesting = lazy(() => import('./pages/services/RadonTesting'));
@@ -121,6 +122,7 @@ export const routes: RouteObject[] = [
       { path: 'services/pre-purchase', element: <PrePurchase /> },
       { path: 'services/pre-listing', element: <PreListing /> },
       { path: 'services/new-construction', element: <NewConstruction /> },
+      { path: 'services/pdi-inspection', element: <PreDeliveryInspection /> },
       { path: 'services/condo', element: <Condo /> },
       { path: 'services/commercial', element: <Commercial /> },
       { path: 'services/radon-testing', element: <RadonTesting /> },

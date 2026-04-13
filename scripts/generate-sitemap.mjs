@@ -71,12 +71,11 @@ lines.push('');
 
 // Service pages
 const servicePages = [
-  'pre-purchase', 'pre-listing', 'new-construction', 'condo', 'commercial',
+  'pre-purchase', 'pre-listing', 'new-construction', 'pdi-inspection', 'condo', 'commercial',
   'radon-testing', 'mold-inspection', 'asbestos-testing', 'thermal-imaging',
   'wett', 'lead-paint-testing', 'well-water-testing', 'air-quality',
   'same-day-home-inspection', 'designated-substance-survey', 'insurance-inspection',
   // sewer-scope: not offered — redirects to /services/pre-purchase
-  // pdi-inspection: no route exists — redirected to /services/new-construction
 ];
 servicePages.forEach(s => lines.push(url(`/services/${s}`, '0.9')));
 lines.push('');
