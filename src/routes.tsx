@@ -101,6 +101,8 @@ const UrgentInspection = lazy(() => import('./pages/UrgentInspection'));
 const ForFirstTimeBuyers = lazy(() => import('./pages/ForFirstTimeBuyers'));
 const EnvironmentalScreening = lazy(() => import('./pages/EnvironmentalScreening'));
 const BundledInspection = lazy(() => import('./pages/BundledInspection'));
+const WhatWeFind = lazy(() => import('./pages/WhatWeFind'));
+const InsuranceInspection = lazy(() => import('./pages/services/InsuranceInspection'));
 
 // Public client-facing pages (no auth required)
 const AgreementPage = lazy(() => import('./pages/AgreementPage'));
@@ -148,6 +150,7 @@ export const routes: RouteObject[] = [
       { path: 'services/designated-substance-survey', element: <DesignatedSubstanceSurvey /> },
       { path: 'services/contractor-oversight', element: <ContractorOversight /> },
       { path: 'services/same-day-home-inspection', element: <SameDayInspection /> },
+      { path: 'services/insurance-home-inspection', element: <InsuranceInspection /> },
       { path: 'services/:serviceSlug/:citySlug', element: <ServiceCityPage /> },
 
       // AI visibility / brand pages
@@ -159,6 +162,7 @@ export const routes: RouteObject[] = [
       { path: 'for-first-time-buyers', element: <ForFirstTimeBuyers /> },
       { path: 'environmental-screening', element: <EnvironmentalScreening /> },
       { path: 'bundled-inspection', element: <BundledInspection /> },
+      { path: 'what-we-find', element: <WhatWeFind /> },
 
       // Portal routes
       { path: 'login', element: <LoginPage /> },
