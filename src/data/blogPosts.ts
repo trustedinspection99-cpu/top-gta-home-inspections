@@ -4686,6 +4686,669 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">A Designated Substance Survey is a comprehensive assessment required under Ontario's OHSA before demolition or major renovation of a building. It identifies the presence and location of all designated substances — including asbestos, lead, mercury, and silica — that workers may be exposed to during the project. A DSS is legally required before issuing permits for significant renovation or demolition of pre-1990 buildings in Ontario. ASADS provides DSS reports for residential and commercial properties.</p>
     `,
   },
+
+  // ── id 73 ─────────────────────────────────────────────────────────────────
+  {
+    id: 73,
+    slug: "knob-and-tube-wiring-ontario",
+    title: "Knob and Tube Wiring in Ontario Homes: Dangers & Insurance Impact",
+    metaTitle: "Knob and Tube Wiring in Ontario Homes | ASADS",
+    metaDescription: "Knob and tube wiring in Ontario homes: fire risks, insurance problems, and what to do. Learn how to identify it and when to replace it.",
+    excerpt: "Knob and tube wiring was standard in Ontario homes built before 1950. Here's why it's a serious concern for buyers, sellers, and insurers — and what you need to know before buying or renovating.",
+    category: "Electrical",
+    author: "ASADS Home Inspection",
+    date: "2026-04-13",
+    readTime: "6 min read",
+    image: "/blog/knob-and-tube-wiring.jpg",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is Knob and Tube Wiring?</h2>
+      <p class="mb-4">Knob and tube (K&T) wiring was the standard electrical system in Canadian homes built roughly between 1880 and 1950. It gets its name from the two components that make it up: ceramic <strong>knobs</strong> that anchor the wire to joists and studs, and ceramic <strong>tubes</strong> that protect the wire where it passes through wood framing.</p>
+      <p class="mb-4">Unlike modern wiring, knob and tube runs two separate conductors — a hot wire and a neutral wire — spaced several inches apart through open air. There is no ground wire. The insulation is cloth or rubber, which degrades and becomes brittle over time.</p>
+      <p class="mb-4">In Ontario, knob and tube was phased out after the 1950s as grounded two-wire and eventually three-wire systems became code. However, it remains in tens of thousands of older homes across the province — particularly in Toronto, Hamilton, Kitchener, and other cities with significant pre-war housing stock.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Is Knob and Tube Wiring Dangerous?</h2>
+      <p class="mb-4">Knob and tube wiring itself — when original and in good condition — is not inherently more dangerous than modern wiring. The problems arise from what happens to it over 70–100 years of service:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Insulation deterioration:</strong> The original rubber and cloth insulation becomes brittle and cracks with age, heat cycling, and exposure to rodents. Cracked insulation on live wires is a direct fire and shock hazard.</li>
+        <li><strong>Improper modifications:</strong> The most dangerous knob and tube situations are almost always the result of amateur modifications — spliced connections in walls, unapproved junction boxes, extension cords wired directly to K&T runs, or modern wiring spliced incorrectly into old K&T circuits.</li>
+        <li><strong>Insulation contact:</strong> Knob and tube relies on air circulation for cooling. When blown-in or batt insulation is packed directly against K&T wire (very common in energy retrofits), the wire can overheat and ignite the surrounding insulation. This is one of the leading causes of K&T-related house fires.</li>
+        <li><strong>No ground:</strong> The absence of a ground conductor means no protection against electrical surges and a shock risk with modern three-prong appliances.</li>
+        <li><strong>Overloaded circuits:</strong> Original K&T circuits were designed for the electrical loads of 1930s homes — a few lights and outlets. Modern kitchens, home offices, and entertainment systems draw far more current than these circuits were designed to handle.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Knob and Tube Wiring and Home Insurance in Ontario</h2>
+      <p class="mb-4">This is where knob and tube becomes a serious practical problem for Ontario homeowners and buyers. Most major insurers — including Intact, Aviva, Economical, and others — either refuse to insure homes with active knob and tube wiring or charge significantly higher premiums.</p>
+      <p class="mb-4">Some insurers will insure a K&T home only if:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>A licensed electrician certifies the wiring is in good condition and meets current standards</li>
+        <li>The K&T has been fully replaced in high-risk areas (kitchen, bathroom, attic)</li>
+        <li>The electrical panel has been upgraded from the original fuse box to a modern breaker panel</li>
+      </ul>
+      <p class="mb-4">If you're buying a pre-1950 Ontario home, confirm with your insurance broker whether they'll cover it and on what terms before removing your inspection condition. Discovering an uninsurable home after closing is a costly surprise.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Identify Knob and Tube Wiring</h2>
+      <p class="mb-4">Knob and tube wiring is most visible in unfinished basements and attics, where you can see the open framing. Look for:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>White or grey ceramic spools (knobs) nailed to joists with wire running through them</li>
+        <li>White ceramic tubes where wire passes through framing</li>
+        <li>Two separate wires running parallel, 4–6 inches apart, rather than a single sheathed cable</li>
+        <li>Cloth or rubber insulation that appears dried, cracked, or flaking</li>
+        <li>A fuse box (rather than a circuit breaker panel) — common in K&T-era homes</li>
+      </ul>
+      <p class="mb-4">A certified home inspector will identify knob and tube wiring during a standard inspection and note its condition, any modifications, and any contact with insulation. This is one reason attending your home inspection is so valuable — your inspector can show you exactly what they found and where.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Should You Do About Knob and Tube Wiring?</h2>
+      <p class="mb-4">The right course of action depends on the condition of the wiring, the extent of coverage remaining, and your renovation plans:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Full replacement:</strong> The safest and most insurance-friendly option. A licensed Ontario electrician replaces all K&T with modern grounded wiring. Cost typically runs $8,000–$20,000 depending on home size and how much of the K&T remains active.</li>
+        <li><strong>Partial replacement:</strong> High-risk circuits (kitchen, bathroom, attic) are replaced first. May be acceptable to some insurers as a phase-in approach.</li>
+        <li><strong>Electrical certification:</strong> An Electrical Safety Authority (ESA) inspection certifying the existing K&T meets current safety standards. Some insurers will accept this, but not all.</li>
+        <li><strong>Leave in place (if decommissioned):</strong> If the K&T has been properly disconnected and replaced — and is only visible as remnant hardware — it is not a concern.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Knob and Tube Wiring and Your Home Inspection</h2>
+      <p class="mb-4">ASADS inspectors identify knob and tube wiring as part of every standard pre-purchase home inspection. We document the location, condition, any signs of modification or insulation contact, and the panel type. This gives buyers the information needed to negotiate repairs, request an ESA inspection, or make an informed decision before closing.</p>
+      <p class="mb-4">If you're buying an older Ontario home — particularly anything built before 1960 — assume K&T is present until proven otherwise. Our <a href="/services/pre-purchase" class="text-primary underline">pre-purchase home inspection</a> gives you a complete picture of the electrical system and every other major component before you commit.</p>
+    `,
+  },
+
+  // ── id 74 ─────────────────────────────────────────────────────────────────
+  {
+    id: 74,
+    slug: "what-does-home-inspection-include",
+    title: "What Does a Home Inspection Include? Complete Ontario Checklist",
+    metaTitle: "What Does a Home Inspection Include? | Ontario",
+    metaDescription: "Full Ontario home inspection checklist: what inspectors check, how long it takes, what to expect, and questions to ask. ASADS certified inspectors.",
+    excerpt: "A home inspection covers hundreds of components across every major system of the property. Here's exactly what a certified Ontario inspector examines — and what they don't.",
+    category: "Home Inspection",
+    author: "ASADS Home Inspection",
+    date: "2026-04-13",
+    readTime: "7 min read",
+    image: "/blog/home-inspection-checklist.jpg",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is a Home Inspection?</h2>
+      <p class="mb-4">A home inspection is a professional visual examination of a property's major systems and components, performed by a certified inspector. In Ontario, home inspectors are regulated under the Home Inspection Act, 2017, and must meet education, licensing, and insurance requirements before they can inspect a property for a client.</p>
+      <p class="mb-4">A standard inspection covers every accessible system: from the roof to the foundation, and everything in between. The goal is to identify existing defects, safety concerns, and maintenance issues — and provide the buyer with a clear, written report before they complete the purchase.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Complete Home Inspection Checklist — What Gets Inspected</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Roof</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li>Shingle condition, age, and remaining life</li>
+        <li>Flashing at chimneys, skylights, and roof-to-wall transitions</li>
+        <li>Gutters, downspouts, and drainage direction</li>
+        <li>Fascia, soffits, and eaves ventilation</li>
+        <li>Chimney cap, crown, and mortar condition</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Exterior</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li>Cladding condition (brick, siding, stucco, EIFS)</li>
+        <li>Foundation walls — visible cracks, efflorescence, settlement</li>
+        <li>Grading and drainage away from the house</li>
+        <li>Walkways, steps, and decks</li>
+        <li>Garage structure, door operation, and auto-reverse safety</li>
+        <li>Window and door frames, seals, and caulking</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. Attic</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li>Insulation type, depth, and coverage (R-value estimate)</li>
+        <li>Ventilation — passive vents, baffles, ridge vents</li>
+        <li>Roof deck condition — staining, rot, delamination</li>
+        <li>Signs of moisture, mold, or ice damming</li>
+        <li>Bathroom and kitchen exhaust fans (are they venting outside or into attic?)</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. Electrical System</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li>Main electrical panel — brand, amperage, breaker condition</li>
+        <li>Wiring type — copper, aluminum, knob and tube, or mixed</li>
+        <li>GFCI protection in kitchens, bathrooms, garages, and outdoors</li>
+        <li>Outlet functionality and grounding</li>
+        <li>Visible wiring in basement and attic</li>
+        <li>Smoke and carbon monoxide detector presence</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">5. Plumbing</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li>Water supply pipe material (copper, galvanized, PEX, CPVC)</li>
+        <li>Drain and waste pipe material (ABS, PVC, cast iron, clay)</li>
+        <li>Water heater — age, condition, temperature and pressure relief valve</li>
+        <li>Visible leaks, water staining, and corrosion</li>
+        <li>Water pressure and flow at fixtures</li>
+        <li>Sump pump presence and operation</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">6. Heating & Cooling (HVAC)</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li>Furnace age, condition, and heat exchanger (visible portion)</li>
+        <li>Air conditioner condition and approximate age</li>
+        <li>Ductwork — distribution, condition, insulation</li>
+        <li>Thermostat operation</li>
+        <li>Flue venting and combustion air supply</li>
+        <li>Fireplaces and wood stoves (visual inspection; WETT inspection is separate)</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">7. Basement & Foundation</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li>Foundation wall type and condition (poured concrete, block, stone)</li>
+        <li>Active or historic water infiltration</li>
+        <li>Efflorescence, staining, and crack patterns</li>
+        <li>Floor drain functionality</li>
+        <li>Beam and post condition</li>
+        <li>Insulation and vapour barrier where present</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">8. Interior</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li>Walls, ceilings, and floors — visible defects, moisture staining, settlement</li>
+        <li>Windows — operation, seals, condensation between panes</li>
+        <li>Doors — operation, weatherstripping, and fire ratings on garage doors</li>
+        <li>Stairs and railings — structural condition and safety</li>
+        <li>Kitchen — cabinet condition, appliances (if included in sale)</li>
+        <li>Bathrooms — tile, caulking, exhaust fans, fixture operation</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is NOT Included in a Standard Home Inspection?</h2>
+      <p class="mb-4">A standard inspection is visual only — inspectors do not open walls, test behind finished surfaces, or operate systems that appear unsafe. The following are typically not included and require separate specialists:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Asbestos testing</strong> — requires lab sampling of suspect materials</li>
+        <li><strong>Mold testing</strong> — air quality sampling or surface testing by certified inspector</li>
+        <li><strong>Radon testing</strong> — requires a long-term (minimum 48-hour) detector</li>
+        <li><strong>WETT inspection</strong> — wood energy technology transfer inspection of fireplaces and wood stoves</li>
+        <li><strong>Sewer scope</strong> — camera inspection of underground drain lines</li>
+        <li><strong>Well water testing</strong> — laboratory testing of potable water quality</li>
+        <li><strong>Pest inspection</strong> — for wood-destroying insects and rodents</li>
+        <li><strong>Environmental testing</strong> — lead paint, underground oil tanks, urea formaldehyde insulation</li>
+      </ul>
+      <p class="mb-4">ASADS offers many of these as add-on services during the same visit — including <a href="/services/asbestos-testing" class="text-primary underline">asbestos testing</a>, <a href="/services/mold-inspection" class="text-primary underline">mold inspection</a>, <a href="/services/radon-testing" class="text-primary underline">radon testing</a>, and <a href="/services/wett" class="text-primary underline">WETT inspection</a>.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Long Does a Home Inspection Take?</h2>
+      <p class="mb-4">Inspection time depends on the size, age, and condition of the property:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo or apartment (under 1,000 sq ft):</strong> 1–1.5 hours</li>
+        <li><strong>Townhouse or semi-detached (1,000–1,800 sq ft):</strong> 1.5–2.5 hours</li>
+        <li><strong>Standard detached home (1,800–2,500 sq ft):</strong> 2–3 hours</li>
+        <li><strong>Larger home (2,500–4,000 sq ft):</strong> 3–4 hours</li>
+        <li><strong>Older homes (pre-1970):</strong> Add 30–60 minutes for knob and tube wiring, galvanized plumbing, stone foundations, and other era-specific concerns</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Questions to Ask Your Home Inspector</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>What are the most urgent findings — what needs immediate attention?</li>
+        <li>What maintenance should I budget for in the next 1–3 years?</li>
+        <li>How old is the furnace, water heater, and roof? What's their remaining life?</li>
+        <li>Is there any evidence of past water infiltration in the basement or attic?</li>
+        <li>Are there any safety concerns I should address before moving in?</li>
+        <li>Is there anything that warrants a specialist's evaluation (structural engineer, electrician, etc.)?</li>
+      </ul>
+      <p class="mb-4">At ASADS, we walk you through the home at the end of every inspection — not just hand you a report. You should leave with a clear understanding of every finding and what it means for your purchase decision.</p>
+    `,
+  },
+
+  // ── id 75 ─────────────────────────────────────────────────────────────────
+  {
+    id: 75,
+    slug: "mold-removal-after-inspection",
+    title: "Mold Removal in Ontario: What to Do After a Mold Inspection",
+    metaTitle: "Mold Removal in Ontario: After Your Inspection | ASADS",
+    metaDescription: "Mold found in your Ontario home? Learn what happens after a mold inspection, remediation steps, costs in Hamilton, Toronto, Mississauga, and more.",
+    excerpt: "A mold inspection identifies the problem — but what comes next? Here's what Ontario homeowners need to know about mold removal, remediation costs, and when to hire a professional.",
+    category: "Mold",
+    author: "ASADS Home Inspection",
+    date: "2026-04-13",
+    readTime: "6 min read",
+    image: "/blog/mold-removal-ontario.jpg",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mold Inspection vs Mold Removal: Understanding the Process</h2>
+      <p class="mb-4">A mold inspection determines <em>whether</em> mold is present, <em>where</em> it is, what <em>type</em> it is, and how <em>much</em> there is. A mold inspector uses air quality sampling, surface swabs, moisture meters, and visual assessment to document the scope of contamination and produce a written report with remediation recommendations.</p>
+      <p class="mb-4">Mold removal (remediation) is the physical process of eliminating the mold — containment, removal of contaminated materials, treatment of surfaces, and post-remediation verification. These are two separate steps, and in Ontario it's best practice to have them performed by different companies so the inspector who writes the clearance report is independent from the contractor who did the work.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Happens After a Mold Inspection?</h2>
+      <p class="mb-4">Your mold inspection report will typically classify findings and provide recommendations:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Minor surface mold (under 1 sq ft):</strong> Often eligible for DIY remediation with appropriate PPE, a HEPA vacuum, and an antimicrobial solution. Common in bathrooms and around window frames.</li>
+        <li><strong>Moderate contamination (1–10 sq ft):</strong> May be manageable by a careful homeowner, but professional remediation is recommended. Proper containment and disposal are critical to avoid spreading spores.</li>
+        <li><strong>Significant contamination (over 10 sq ft) or hidden mold:</strong> Requires professional remediation with containment barriers, negative air pressure, full PPE, and certified disposal. Attempting DIY remediation at this scale typically spreads contamination to other areas.</li>
+        <li><strong>Black mold (Stachybotrys) or highly elevated air spore counts:</strong> Always requires professional remediation and post-clearance air testing.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Mold Remediation Process</h2>
+      <p class="mb-4">A professional mold remediation in an Ontario home typically follows these steps:</p>
+      <ol class="list-decimal pl-6 mb-4 space-y-2">
+        <li><strong>Assessment and scope of work:</strong> Remediation contractor reviews the inspection report and identifies all affected areas.</li>
+        <li><strong>Containment:</strong> Plastic sheeting seals off the work area to prevent spore migration. Negative air pressure machines exhaust contaminated air outside.</li>
+        <li><strong>Removal:</strong> All porous materials with active mold growth (drywall, insulation, subfloor) are removed and double-bagged for disposal as per Ontario regulations.</li>
+        <li><strong>HEPA vacuuming and antimicrobial treatment:</strong> All surfaces in the containment zone are HEPA vacuumed and treated with an EPA-registered antimicrobial agent.</li>
+        <li><strong>Drying:</strong> Industrial dehumidifiers and fans dry the structure to below 16% moisture content — the threshold below which mold cannot grow.</li>
+        <li><strong>Reconstruction:</strong> New drywall, insulation, and finishing materials are installed. Many remediation companies handle reconstruction as well.</li>
+        <li><strong>Post-remediation verification:</strong> An independent inspector (ideally the same company that did the original inspection) performs air quality testing to confirm spore counts have returned to normal levels. This clearance report protects you if the issue ever resurfaces.</li>
+      </ol>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mold Removal Cost in Ontario</h2>
+      <p class="mb-4">Remediation costs in Ontario vary significantly based on the size of the contamination area, the materials affected, and the location in the home:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Small bathroom mold (under 10 sq ft):</strong> $500–$1,500</li>
+        <li><strong>Attic mold (common after improper bathroom fan venting):</strong> $2,500–$6,000 depending on attic size and wood treatment required</li>
+        <li><strong>Basement mold (crawl space or finished basement):</strong> $1,500–$8,000</li>
+        <li><strong>Whole-house or multi-room contamination:</strong> $8,000–$20,000+</li>
+        <li><strong>Post-remediation clearance testing (independent):</strong> $400–$800</li>
+      </ul>
+      <p class="mb-4">In Hamilton, Toronto, Mississauga, and the GTA, expect quotes at the higher end of these ranges due to labour costs. In smaller Ontario cities like London, Barrie, and Cambridge, costs are typically 10–20% lower.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Does Home Insurance Cover Mold Remediation in Ontario?</h2>
+      <p class="mb-4">This depends entirely on the cause. Insurance will typically cover mold remediation if it results from a sudden and accidental covered event — for example, a burst pipe that caused water damage which led to mold. Insurance will generally not cover mold that results from:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Long-term moisture problems or neglected maintenance</li>
+        <li>Chronic high humidity without a specific covered cause</li>
+        <li>Pre-existing conditions known at the time of purchase</li>
+        <li>Flooding from external water ingress (typically requires separate overland water coverage)</li>
+      </ul>
+      <p class="mb-4">Document everything with your mold inspection report before filing a claim — insurers will ask for evidence of the cause and extent of contamination.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Preventing Mold After Remediation</h2>
+      <p class="mb-4">Mold returns if the moisture source isn't addressed. After remediation, ensure:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Bathroom and kitchen exhaust fans vent <em>outside</em> — not into the attic</li>
+        <li>Basement humidity is kept below 50% with a dehumidifier</li>
+        <li>Any grading or drainage issues that allow water to penetrate the foundation are corrected</li>
+        <li>Window condensation is managed — see our guide on <a href="/blog/condensation-on-windows-winter" class="text-primary underline">condensation on windows in winter</a></li>
+      </ul>
+      <p class="mb-4">If you're buying a home and concerned about mold, a <a href="/services/mold-inspection" class="text-primary underline">mold inspection</a> can be added to your pre-purchase inspection for complete peace of mind.</p>
+    `,
+  },
+
+  // ── id 76 ─────────────────────────────────────────────────────────────────
+  {
+    id: 76,
+    slug: "condensation-on-windows-winter",
+    title: "Condensation on Windows in Winter: Ontario Homeowner's Guide",
+    metaTitle: "Condensation on Windows in Winter | Ontario Guide",
+    metaDescription: "Window condensation in winter: when it's normal, when it signals a problem, and how to prevent mold and damage in Ontario homes. ASADS guide.",
+    excerpt: "Some window condensation in winter is normal. But persistent moisture on your windows can signal hidden mold risk, insulation problems, or ventilation failures. Here's what to watch for.",
+    category: "Moisture & Mold",
+    author: "ASADS Home Inspection",
+    date: "2026-04-13",
+    readTime: "5 min read",
+    image: "/blog/condensation-on-windows-winter.jpg",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Does Condensation Form on Windows in Winter?</h2>
+      <p class="mb-4">Condensation forms when warm, humid indoor air contacts a cold surface — like a window pane in winter. When the surface temperature drops below the dew point of the air inside, moisture precipitates out as liquid water. This is the same reason a cold glass sweats on a humid summer day.</p>
+      <p class="mb-4">In Ontario winters, outdoor temperatures regularly drop to -10°C to -25°C, making window surfaces significantly colder than the interior air — especially on older single-pane or poorly sealed double-pane windows. The result is the condensation many homeowners see on their windows on cold mornings.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When Is Window Condensation Normal?</h2>
+      <p class="mb-4">Occasional light condensation on windows during extreme cold snaps — particularly in kitchens and bathrooms where cooking and bathing add moisture to the air — is normal and not cause for concern. It typically evaporates as indoor temperatures rise or as the window warms up.</p>
+      <p class="mb-4">Condensation that forms on the <strong>outside</strong> of the window is also normal and harmless — it simply means the exterior glass is colder than the outdoor dew point, which happens on mild, humid days.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When Is Window Condensation a Problem?</h2>
+      <p class="mb-4">Condensation becomes a concern when:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>It's persistent every cold morning</strong> — suggests chronically high indoor relative humidity, usually above 50%. This level of humidity supports mold growth on any cool surface, not just windows.</li>
+        <li><strong>It's pooling on the sill and running down the wall</strong> — sustained water on wood window frames and drywall leads to rot, paint failure, and mold. If you're seeing dark staining on window frames or sills, mold is likely already present.</li>
+        <li><strong>It's forming between the panes of a double-pane window</strong> — this means the sealed unit has failed. The gas fill has escaped, condensation forms in the cavity, and the window's insulating value is compromised. The seal cannot be repaired — the glass unit must be replaced.</li>
+        <li><strong>It's appearing on walls near exterior corners</strong> — this can indicate thermal bridging through the framing, inadequate insulation, or air leakage — all of which create cold spots where condensation and mold form behind finished surfaces.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Common Causes of Excessive Window Condensation in Ontario Homes</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Inadequate ventilation:</strong> Bathroom and kitchen exhaust fans that don't move enough air — or that vent into the attic instead of outside — allow moisture to accumulate indoors all winter.</li>
+        <li><strong>New construction or recent renovation:</strong> New homes and fresh concrete, drywall, and lumber release significant moisture for 1–2 years. This is normal but requires active ventilation management (HRV use, spot fans).</li>
+        <li><strong>Overhumidification:</strong> Whole-home humidifiers set too high for the outdoor temperature will drive condensation. Ontario winters require reducing humidity as outdoor temperatures fall — generally below 35% RH at -15°C outdoors.</li>
+        <li><strong>Poorly sealed air vapour barrier:</strong> Air leaks in the building envelope allow warm, moist indoor air to reach cold exterior surfaces, causing condensation inside wall cavities where it's invisible and very damaging.</li>
+        <li><strong>Older single or low-quality double-pane windows:</strong> Windows with higher U-values (lower insulating value) have colder interior surfaces and condense more aggressively.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Reduce Window Condensation</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Use bathroom exhaust fans during and for 20–30 minutes after every shower</li>
+        <li>Run kitchen range hood when cooking</li>
+        <li>Set your humidifier based on outdoor temperature (most modern humidistats have an outdoor temperature setting)</li>
+        <li>Open windows briefly on mild days to flush moisture-laden air</li>
+        <li>Run your HRV (heat recovery ventilator) continuously in winter if you have one</li>
+        <li>Keep furniture away from exterior walls to allow air circulation</li>
+        <li>Check that all exhaust fans actually vent to the exterior (a common deficiency found during home inspections)</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When to Get a Home Inspection for Condensation Issues</h2>
+      <p class="mb-4">If you're seeing persistent window condensation combined with any of the following, it's worth having a certified inspector assess the property:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Musty or earthy smell in any room</li>
+        <li>Dark staining on window frames, sills, or drywall near exterior walls</li>
+        <li>Peeling paint or wallpaper on exterior walls</li>
+        <li>Visible mold anywhere in the home</li>
+        <li>Allergy symptoms that improve when you're away from the house</li>
+      </ul>
+      <p class="mb-4">A <a href="/services/mold-inspection" class="text-primary underline">mold inspection</a> with air quality sampling will tell you whether airborne spore counts are elevated — often revealing hidden mold in walls and attics that visible inspection alone can't find. Our inspectors serve all of Ontario including Toronto, Hamilton, Mississauga, Kitchener, and surrounding areas.</p>
+    `,
+  },
+
+  // ── id 77 ─────────────────────────────────────────────────────────────────
+  {
+    id: 77,
+    slug: "asbestos-in-ontario-homes-materials",
+    title: "Asbestos in Ontario Homes: Stucco Ceilings, Floor Tiles, Pipes & More",
+    metaTitle: "Asbestos in Ontario Homes: Stucco, Tiles, Pipes | ASADS",
+    metaDescription: "Where is asbestos found in older Ontario homes? Popcorn ceilings, stucco, floor tiles, pipe insulation, ductwork, and more. Certified asbestos testing from ASADS.",
+    excerpt: "Asbestos was used in dozens of building materials in Ontario homes built before 1990. This guide covers every material where asbestos may be present — by decade and by location in the home.",
+    category: "Asbestos",
+    author: "ASADS Home Inspection",
+    date: "2026-04-13",
+    readTime: "8 min read",
+    image: "/blog/asbestos-ontario-homes.jpg",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Asbestos Was Used So Widely in Canadian Construction</h2>
+      <p class="mb-4">Canada was one of the world's largest asbestos producers for most of the 20th century, with major mines in Quebec's Eastern Townships and British Columbia. This domestic supply made asbestos cheap, available, and ubiquitous in Canadian building materials from the 1920s through the late 1980s.</p>
+      <p class="mb-4">Asbestos was prized for its fire resistance, durability, tensile strength, and excellent insulating properties — qualities that made it ideal for everything from pipe insulation to floor tiles to exterior stucco. It wasn't until the 1970s that the severe health consequences (mesothelioma, asbestosis, lung cancer) became widely understood and regulations began tightening.</p>
+      <p class="mb-4">In Ontario, the use of asbestos in most building materials was phased out by the late 1980s, and Health Canada issued a final ban on chrysotile asbestos imports and use in 2018. However, any home built or renovated before 1990 may contain asbestos-containing materials (ACMs) somewhere.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Where Asbestos Is Found in Ontario Homes — By Location</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Ceilings</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Popcorn / acoustic spray-texture ceilings:</strong> Applied by spraying in the 1960s–1980s, these textured finishes frequently contained chrysotile asbestos. If your home has a spray-texture ceiling and was built before 1985, assume it contains asbestos until tested. See our detailed guide: <a href="/blog/do-popcorn-ceilings-have-asbestos" class="text-primary underline">Do Popcorn Ceilings Have Asbestos?</a></li>
+        <li><strong>Stippled / stucco ceilings:</strong> The trowel-applied stucco texture common in Ontario bungalows and two-storeys from the 1950s–1980s also frequently contained asbestos. Unlike spray texture, stucco is generally non-friable (harder, denser) — but any sanding, scraping, or drilling releases fibres.</li>
+        <li><strong>Ceiling tiles (suspended / drop ceilings):</strong> Fibre-reinforced ceiling tiles used in basements and commercial spaces often contained asbestos. 12×12 and 24×48 tiles from the 1950s–1975 era are particularly suspect.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Floors</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Vinyl floor tiles (VFT):</strong> The 9×9 inch vinyl floor tile — extremely common in Ontario basements, kitchens, and bathrooms from the 1950s to 1980s — has an extremely high probability of containing asbestos. Chrysotile was added as a binder and reinforcing agent. Never sand, scrape, or grind suspect floor tiles. The adhesive (mastic) used to install them also frequently contained asbestos.</li>
+        <li><strong>Sheet vinyl flooring:</strong> Older sheet vinyl and the backing material beneath it often contained asbestos. The vinyl surface itself may be asbestos-free, but the backing layer should be tested before any removal or sanding.</li>
+        <li><strong>Vinyl floor mastic (adhesive):</strong> Even if tiles themselves have been removed, the black adhesive residue left on concrete subfloors often contains asbestos. Never grind or sand old black mastic.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Walls & Exterior</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Exterior stucco cladding:</strong> Three-coat Portland cement stucco applied before 1980 frequently contained asbestos fibre as a reinforcing agent. Stucco in good condition is non-friable and generally low risk, but any drilling, cutting, or renovation work requires testing first.</li>
+        <li><strong>Asbestos cement board (transite):</strong> Used for exterior siding, soffits, fascia, and garage board in the 1930s–1970s. Looks like flat grey panels, similar to modern fibre cement but harder and more brittle. Drilling or cutting creates highly respirable dust.</li>
+        <li><strong>Joint compound / drywall mud:</strong> Some pre-1978 joint compound products contained chrysotile asbestos. Sanding old drywall in pre-1978 construction should be done with care — test if renovating.</li>
+        <li><strong>Plaster walls and ceilings:</strong> Some older multi-coat plaster used asbestos fibre as a reinforcing agent in the base coat (scratch coat). This is more common in commercial and institutional buildings but does appear in Ontario residential construction from the 1940s–1960s.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Mechanical Systems (Basement & Utility Areas)</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Pipe insulation:</strong> Corrugated grey or white wrap around hot water and steam pipes is the most visually distinctive asbestos-containing material. Chrysotile or amosite asbestos wrap was applied to supply pipes from the 1920s to the 1980s. Even partially deteriorated pipe insulation releases significant friable fibre. Never disturb or attempt to remove without professional assessment.</li>
+        <li><strong>Duct insulation and duct tape:</strong> HVAC ducts in older homes — particularly furnace plenums and the first few feet of supply and return ducts — were often wrapped in asbestos-containing insulation. Some duct tape from the pre-1980 era also contained asbestos fibres.</li>
+        <li><strong>Furnace and boiler insulation:</strong> Older oil and gas furnaces used asbestos blanket insulation around combustion chambers. Vermiculite poured insulation in attics or walls (particularly Zonolite brand) may be contaminated with tremolite asbestos from the Libby, Montana mine.</li>
+        <li><strong>Boiler and pipe gaskets:</strong> Many commercial and residential boiler systems used asbestos gaskets at pipe joints and access panels. These are almost always friable and high-risk.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Roofing</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Asbestos cement roofing shingles:</strong> Flat grey or weathered shingles, common on pre-1970 Ontario homes, often contain asbestos. They are generally non-friable and low risk when intact, but cutting or breaking them is hazardous.</li>
+        <li><strong>Roofing felt and underlayment:</strong> Some older roofing felt used in the 1950s–1970s contained asbestos fibre. Normally encapsulated under shingles and low risk unless the roof is being torn off.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Do I Know If My Ontario Home Has Asbestos?</h2>
+      <p class="mb-4">Visual identification is not reliable — asbestos fibres are microscopic and asbestos-containing materials often look identical to non-asbestos versions. The only way to confirm whether a material contains asbestos is laboratory analysis of a physical sample.</p>
+      <p class="mb-4">ASADS performs <a href="/services/asbestos-testing" class="text-primary underline">certified asbestos testing</a> across Ontario, including sampling of suspect materials, laboratory analysis, and a written report identifying ACMs and their friability classification under Ontario's O. Reg. 278/05. We serve Toronto, Hamilton, Mississauga, Kitchener, Guelph, Cambridge, Barrie, and all surrounding communities.</p>
+      <p class="mb-4">For pre-renovation work in buildings constructed before 1990, a Designated Substance Survey (DSS) may be legally required before permits are issued. Contact us to discuss whether your project requires a DSS report.</p>
+    `,
+  },
+
+  // ── id 78 ─────────────────────────────────────────────────────────────────
+  {
+    id: 78,
+    slug: "wett-inspection-cost-ontario",
+    title: "WETT Inspection Cost in Ontario 2026: What to Expect",
+    metaTitle: "WETT Inspection Cost Ontario 2026 | What to Expect",
+    metaDescription: "How much does a WETT inspection cost in Ontario? Prices, what's included, insurance requirements, and how to find a certified WETT inspector near you.",
+    excerpt: "A WETT inspection is required by most Ontario home insurers before they'll cover a wood-burning fireplace or stove. Here's what it costs, what's included, and what to expect from the process.",
+    category: "WETT",
+    author: "ASADS Home Inspection",
+    date: "2026-04-13",
+    readTime: "5 min read",
+    image: "/blog/wett-inspection-cost.jpg",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is a WETT Inspection?</h2>
+      <p class="mb-4">WETT stands for Wood Energy Technology Transfer — a national certification program for inspectors who evaluate solid-fuel heating systems including wood-burning fireplaces, wood stoves, pellet stoves, fireplace inserts, and wood-burning cookstoves.</p>
+      <p class="mb-4">A WETT inspection assesses whether your solid-fuel burning appliance and chimney system comply with applicable codes and manufacturer specifications. The inspector evaluates installation clearances, chimney liner condition, creosote buildup, combustion air supply, and structural integrity of all components — and issues a written report with a pass/fail determination.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Is a WETT Inspection Required in Ontario?</h2>
+      <p class="mb-4">Most Ontario home insurance providers require a WETT inspection report before they will insure a property with a wood-burning appliance. Without a valid WETT certificate, you may find your home uninsurable — or discover that a fire-related claim is denied because the fireplace or stove was not properly inspected.</p>
+      <p class="mb-4">A WETT inspection is also typically required when:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Buying or selling a home with a wood-burning fireplace, stove, or insert</li>
+        <li>Installing a new wood stove or pellet stove</li>
+        <li>Switching insurance providers</li>
+        <li>Renewing your home insurance policy (some insurers now request updates every 5 years)</li>
+        <li>After a chimney fire or other incident involving the appliance</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does a WETT Inspection Cost in Ontario?</h2>
+      <p class="mb-4">WETT inspection costs in Ontario in 2026 typically range as follows:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Basic Level 1 WETT inspection (visual, single appliance):</strong> $150–$250</li>
+        <li><strong>Level 2 WETT inspection (with basic chimney camera or more detailed assessment):</strong> $250–$400</li>
+        <li><strong>Multiple appliances (second fireplace or stove added to same visit):</strong> Usually $75–$150 additional per appliance</li>
+        <li><strong>WETT inspection combined with home inspection:</strong> $199–$299 add-on when bundled — the most cost-effective option for buyers</li>
+      </ul>
+      <p class="mb-4">ASADS offers WETT inspections as a standalone service or bundled with any pre-purchase home inspection. Book through our <a href="/services/wett" class="text-primary underline">WETT inspection page</a> or call (647) 801-9311.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a WETT Inspector Look For?</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Clearances to combustibles:</strong> The distance from the appliance and stovepipe to walls, floors, ceilings, and furniture must meet manufacturer specs and applicable codes (CSA B365, NFPA 211).</li>
+        <li><strong>Chimney liner condition:</strong> The flue liner must be intact, correctly sized for the appliance, and free of cracks, spalling, or deterioration. Stainless steel liners are inspected for corrosion and proper insulation.</li>
+        <li><strong>Creosote buildup:</strong> Heavy creosote deposits are a leading cause of chimney fires. The inspector notes buildup level and recommends sweeping if significant.</li>
+        <li><strong>Combustion air supply:</strong> Modern airtight homes often lack sufficient combustion air for efficient and safe wood burning. The inspector checks whether adequate fresh air supply is available.</li>
+        <li><strong>Appliance condition:</strong> Door gaskets, firebricks, baffle plates, and all other components are visually assessed for wear and defects.</li>
+        <li><strong>Exterior chimney:</strong> Brick or stone chimney condition, cap, crown, and flashing are inspected from ground level (or with binoculars or drone if needed).</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Happens If My WETT Inspection Fails?</h2>
+      <p class="mb-4">A failed WETT inspection — or a report noting deficiencies — does not mean your appliance must be immediately decommissioned. The report identifies specific issues that need correction. Common deficiencies include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Insufficient clearances (correctable by adding a heat shield)</li>
+        <li>Chimney requiring sweeping and cleaning (done by a certified chimney sweep)</li>
+        <li>Deteriorated flue liner requiring relining (most significant cost: $2,000–$6,000)</li>
+        <li>Missing or deteriorated chimney cap ($150–$400)</li>
+      </ul>
+      <p class="mb-4">After corrections are made, a re-inspection confirms compliance and a new certificate can be issued. Most insurers allow a 30–60 day window to complete repairs if deficiencies are noted at the time of purchase.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Finding a WETT Inspector Near You in Ontario</h2>
+      <p class="mb-4">WETT inspectors must be certified by WETT Inc. — you can verify credentials at the WETT Inc. directory. ASADS WETT inspectors are certified and serve all of Ontario including Toronto, Hamilton, Kitchener-Waterloo, Guelph, Barrie, Cambridge, and surrounding communities.</p>
+      <p class="mb-4"><a href="/services/wett" class="text-primary underline">Book your WETT inspection online</a> or call (647) 801-9311 for availability. Same-day and next-day appointments are often available.</p>
+    `,
+  },
+
+  // ── id 79 ─────────────────────────────────────────────────────────────────
+  {
+    id: 79,
+    slug: "how-long-does-home-inspection-take",
+    title: "How Long Does a Home Inspection Take in Ontario?",
+    metaTitle: "How Long Does a Home Inspection Take? | Ontario",
+    metaDescription: "How long does a home inspection take in Ontario? Times by property type, size, and age. What to expect and how to prepare for your ASADS inspection.",
+    excerpt: "Home inspection time depends on the size, age, and condition of the property. Here's exactly how long to expect — and why a thorough inspection always takes as long as it takes.",
+    category: "Home Inspection",
+    author: "ASADS Home Inspection",
+    date: "2026-04-13",
+    readTime: "4 min read",
+    image: "/blog/how-long-home-inspection.jpg",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Times by Property Type</h2>
+      <p class="mb-4">The single biggest factor in inspection duration is property size. Here are typical times for an ASADS inspection in Ontario:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo or apartment (under 900 sq ft):</strong> 1 – 1.5 hours</li>
+        <li><strong>Condo (900–1,400 sq ft):</strong> 1.5 – 2 hours</li>
+        <li><strong>Townhouse or semi-detached:</strong> 2 – 2.5 hours</li>
+        <li><strong>Standard detached home (1,500–2,500 sq ft):</strong> 2.5 – 3 hours</li>
+        <li><strong>Large home (2,500–4,000 sq ft):</strong> 3 – 4 hours</li>
+        <li><strong>Very large home (4,000+ sq ft) or multi-unit:</strong> 4 – 5+ hours</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Age Affects Inspection Time</h2>
+      <p class="mb-4">Older Ontario homes — particularly those built before 1970 — typically take 30–60 minutes longer than newer construction of the same size. Here's why:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Knob and tube wiring:</strong> Documenting the extent, condition, and any modifications to old electrical systems takes time. See our guide: <a href="/blog/knob-and-tube-wiring-ontario" class="text-primary underline">Knob and Tube Wiring in Ontario Homes</a>.</li>
+        <li><strong>Galvanized steel plumbing:</strong> Older galvanized pipes need to be assessed for corrosion, flow restriction, and active leaks at every accessible joint.</li>
+        <li><strong>Stone or block foundations:</strong> Older foundation systems require careful examination of mortar, drainage patterns, and settlement cracks.</li>
+        <li><strong>Potential asbestos-containing materials:</strong> Inspectors note and document suspect materials — pipe insulation, floor tiles, stucco ceilings — which adds time and documentation.</li>
+        <li><strong>Deferred maintenance:</strong> Older homes frequently have more items to document, photograph, and assess across all systems.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Add-On Services and Additional Time</h2>
+      <p class="mb-4">If you've booked additional services alongside your home inspection, add the following approximate times:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Thermal imaging / infrared scan:</strong> +30–45 minutes</li>
+        <li><strong>Mold inspection (air sampling + moisture mapping):</strong> +45–60 minutes</li>
+        <li><strong>Asbestos sampling:</strong> +20–30 minutes (sampling only; lab results take 2–5 business days)</li>
+        <li><strong>WETT inspection (single fireplace or stove):</strong> +45–60 minutes</li>
+        <li><strong>Radon test deployment:</strong> +10–15 minutes (test device left for 48–96 hours)</li>
+        <li><strong>Well water sampling:</strong> +15–20 minutes</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Should You Attend the Inspection?</h2>
+      <p class="mb-4">Yes — and you should plan to be there for the full duration. Attending your inspection is one of the most valuable uses of time in any home purchase. You'll:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Hear findings explained in real time and ask questions as issues are discovered</li>
+        <li>Learn the location of shutoffs, panels, and key systems</li>
+        <li>Understand which deficiencies are urgent vs. cosmetic</li>
+        <li>Receive a walkthrough debrief at the end covering all priority items</li>
+      </ul>
+      <p class="mb-4">Block out the full inspection window in your calendar. If you're touring the home with your agent beforehand, arrive at the start of the inspection, not partway through — the exterior and attic findings are often the most significant.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When Will I Receive the Report?</h2>
+      <p class="mb-4">ASADS delivers a same-day digital report — typically within 2–4 hours of inspection completion. The report is photo-rich, clearly organized by system, and uses a priority rating system (Safety Concern / Major Deficiency / Maintenance Item / Observation) so you can quickly identify what matters most.</p>
+      <p class="mb-4">Ready to book? Our <a href="/booking" class="text-primary underline">online booking</a> takes 2 minutes and confirms your appointment instantly. We serve all of Ontario with same-day and next-day availability in most areas.</p>
+    `,
+  },
+
+  // ── id 80 ─────────────────────────────────────────────────────────────────
+  {
+    id: 80,
+    slug: "mold-testing-vs-mold-inspection",
+    title: "Mold Testing vs Mold Inspection in Ontario: What's the Difference?",
+    metaTitle: "Mold Testing vs Mold Inspection Ontario | ASADS",
+    metaDescription: "Mold testing and mold inspection are not the same thing. Learn the difference, when you need each, and how ASADS tests for mold in Ontario homes.",
+    excerpt: "People use 'mold testing' and 'mold inspection' interchangeably — but they're different services. Here's what each involves, when you need them, and what to expect from the results.",
+    category: "Mold",
+    author: "ASADS Home Inspection",
+    date: "2026-04-13",
+    readTime: "5 min read",
+    image: "/blog/mold-testing-vs-inspection.jpg",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mold Inspection vs Mold Testing: Key Definitions</h2>
+      <p class="mb-4">These terms are used interchangeably in casual conversation but describe different — and often complementary — services:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Mold inspection:</strong> A visual assessment of the property by a certified inspector. The inspector checks for visible mold growth, moisture sources, water staining, condensation patterns, and conditions that promote mold growth. This is observation-based — no samples are collected.</li>
+        <li><strong>Mold testing:</strong> Laboratory analysis of samples collected from the property. This can include air sampling (spore trap cassettes measuring airborne spore concentrations), surface swabs (tape lifts or bulk samples identifying mold species on surfaces), or ERMI/MSQPCR dust sampling. Testing requires a laboratory to produce quantitative results.</li>
+      </ul>
+      <p class="mb-4">In practice, a comprehensive mold assessment typically combines both: the inspector visually assesses the property and collects targeted samples from suspect areas, which are then sent to an accredited laboratory for analysis. The written report combines the visual findings with the lab data.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Do I Need a Mold Inspection or Mold Testing?</h2>
+      <p class="mb-4">Use this guide to determine what you need:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>You can see or smell mold:</strong> A visual inspection alone may be sufficient to document the issue — but air sampling confirms the extent of contamination beyond what's visible. Testing is recommended if mold is widespread or if the source is unclear.</li>
+        <li><strong>You suspect hidden mold but can't see it:</strong> Air sampling is the most reliable way to detect elevated spore concentrations from hidden mold inside walls, under flooring, or in the HVAC system. A skilled inspector can also use moisture meters and thermal imaging to pinpoint likely mold locations before any sampling.</li>
+        <li><strong>You're buying a home:</strong> A mold inspection (with targeted testing if conditions warrant) protects you from inheriting a mold problem. Pre-purchase mold assessment is particularly important for older homes, homes with basement water history, and homes in areas with heavy clay soils.</li>
+        <li><strong>You want clearance after remediation:</strong> Post-remediation testing is essential. An independent inspector collects air samples to confirm that spore counts have returned to normal levels. Without clearance testing, you have no objective proof that remediation was successful.</li>
+        <li><strong>You have health symptoms:</strong> If occupants are experiencing unexplained respiratory symptoms, testing can identify whether airborne mold is a contributing factor. Consult a physician alongside environmental testing.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Types of Mold Testing</h2>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Air Sampling (Most Common)</h3>
+      <p class="mb-4">A calibrated pump draws a measured volume of air through a spore trap cassette, which captures airborne particles including mold spores. The cassette is analyzed by a laboratory under a microscope, producing spore counts per cubic metre and identifying spore types. An outdoor control sample is always collected alongside indoor samples to establish a baseline.</p>
+      <p class="mb-4">Air sampling detects mold that has become airborne — which happens when mold is actively growing or disturbed. It can miss dormant or encapsulated mold that isn't releasing spores.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Surface Sampling (Swabs and Tape Lifts)</h3>
+      <p class="mb-4">Physical samples are collected from visible growth areas or suspect surfaces using a sterile swab or adhesive tape. Lab analysis identifies the genus/species of mold present. Surface sampling confirms whether a visible discolouration is mold (vs. dirt, mineral deposits, or other staining) and identifies the specific mold type.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">ERMI / Dust Testing</h3>
+      <p class="mb-4">ERMI (Environmental Relative Moldiness Index) uses PCR DNA analysis of a settled dust sample to detect a wide range of mold species, including those that may not be actively sporulating. More sensitive than traditional air sampling and useful for investigating historical mold events. Generally used for complex cases or legal matters.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does Mold Testing Cost in Ontario?</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Visual mold inspection (no sampling):</strong> $200–$350</li>
+        <li><strong>Inspection + 2–3 air samples:</strong> $350–$550 (most common for pre-purchase or insurance purposes)</li>
+        <li><strong>Inspection + comprehensive sampling (5+ locations):</strong> $500–$900</li>
+        <li><strong>Post-remediation clearance testing:</strong> $300–$600</li>
+        <li><strong>Surface swab (per sample, lab fee):</strong> $50–$100 additional</li>
+      </ul>
+      <p class="mb-4">ASADS performs mold inspections and air quality testing across Ontario including <a href="/services/mold-inspection/toronto" class="text-primary underline">Toronto</a>, <a href="/services/mold-inspection/mississauga" class="text-primary underline">Mississauga</a>, <a href="/services/mold-inspection/hamilton" class="text-primary underline">Hamilton</a>, <a href="/services/mold-inspection/kitchener" class="text-primary underline">Kitchener</a>, and all surrounding communities. Our reports are accepted by insurance companies, real estate lawyers, and remediation contractors.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Should Normal Mold Levels Be in a Home?</h2>
+      <p class="mb-4">There is no universally accepted "safe" threshold for indoor mold spore counts, but interpretive guidelines are well established in the industry. In general:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Indoor spore counts should be <strong>lower than outdoor control samples</strong> of the same spore types</li>
+        <li>Indoor counts significantly higher than outdoor — especially for water-indicator species like Stachybotrys, Chaetomium, or Aspergillus/Penicillium — indicate an active indoor mold source</li>
+        <li>Stachybotrys (black mold) at any detectable indoor level warrants investigation, as it is not normally present in outdoor air</li>
+      </ul>
+      <p class="mb-4">Your inspector will interpret lab results in the context of outdoor control samples, the time of year (outdoor spore counts vary seasonally in Ontario), and the specific spore types detected.</p>
+    `,
+  },
+
+  // ── id 81 ─────────────────────────────────────────────────────────────────
+  {
+    id: 81,
+    slug: "commercial-property-inspection-ontario",
+    title: "Commercial Property Inspection in Ontario: What to Expect",
+    metaTitle: "Commercial Property Inspection Ontario | ASADS",
+    metaDescription: "Commercial property inspection in Ontario: what's included, who needs one, cost, and how it differs from a residential inspection. ASADS certified inspectors.",
+    excerpt: "Buying or leasing a commercial property in Ontario? A commercial inspection protects your investment by identifying structural, mechanical, and code issues before you sign. Here's what to expect.",
+    category: "Commercial",
+    author: "ASADS Home Inspection",
+    date: "2026-04-13",
+    readTime: "6 min read",
+    image: "/blog/commercial-property-inspection.jpg",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is a Commercial Property Inspection?</h2>
+      <p class="mb-4">A commercial property inspection is a professional assessment of a commercial building's physical condition — covering structural components, building envelope, mechanical systems, electrical, plumbing, and life safety systems. It is typically performed before the purchase, lease, or renewal of a commercial property.</p>
+      <p class="mb-4">Commercial inspections in Ontario follow ASTM E2018 standards (Property Condition Assessment guidelines) for larger transactions, or a simplified scope similar to a detailed residential inspection for smaller properties like retail units, small office buildings, and multi-unit residential.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Who Needs a Commercial Property Inspection?</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Buyers:</strong> Anyone purchasing a commercial building, plaza, office space, warehouse, or mixed-use property. Commercial real estate purchases rarely include standard inspection conditions — buyers must proactively arrange their own due diligence.</li>
+        <li><strong>Tenants signing long-term leases:</strong> If you're responsible for maintaining or repairing the property under a net or gross lease, knowing the building's current condition protects you from inheriting costly deficiencies.</li>
+        <li><strong>Landlords and property managers:</strong> Regular condition assessments establish a baseline for maintenance planning and capital reserve forecasting.</li>
+        <li><strong>Lenders and investors:</strong> Many commercial lenders require a Property Condition Assessment (PCA) as part of the due diligence package for mortgage approval on commercial properties.</li>
+        <li><strong>Sellers preparing a property for market:</strong> A pre-listing commercial inspection identifies issues before buyers' inspectors find them — giving you time to address deficiencies or price the property accordingly.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a Commercial Inspection Include?</h2>
+      <p class="mb-4">ASADS commercial inspections cover all accessible systems and components:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Site and structure:</strong> Parking lot, drainage, retaining walls, loading docks, structural frame condition</li>
+        <li><strong>Building envelope:</strong> Roof system (flat or sloped), wall cladding, foundation, windows and glazing, sealants and flashings</li>
+        <li><strong>Mechanical systems:</strong> HVAC — rooftop units (RTUs), split systems, boilers, exhaust fans, make-up air units. Water heaters and hot water systems.</li>
+        <li><strong>Electrical:</strong> Service entrance, main and distribution panels, wiring types, lighting systems, emergency and exit lighting</li>
+        <li><strong>Plumbing:</strong> Water supply, waste and vent stacks, grease traps (food service), floor drains</li>
+        <li><strong>Life safety:</strong> Fire suppression systems (sprinklers), fire alarm panels, exit signage, emergency lighting, accessibility compliance (AODA) — noted but not tested by the inspector</li>
+        <li><strong>Interior:</strong> Visible condition of tenant spaces, ceilings, floors, walls, demising walls</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Does Commercial Inspection Differ from Residential?</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Scope:</strong> Commercial buildings have more complex mechanical systems — rooftop HVAC units, three-phase electrical, industrial plumbing, fire suppression — that require specialized knowledge to assess.</li>
+        <li><strong>Standards:</strong> Commercial inspections may follow ASTM E2018 (Property Condition Assessment) rather than the residential Standards of Practice.</li>
+        <li><strong>Report format:</strong> Commercial reports often include cost-to-remedy estimates for each deficiency and a capital expenditure forecast — essential for investment underwriting.</li>
+        <li><strong>Designated substances:</strong> Commercial buildings require a Designated Substance Survey (DSS) before renovation or demolition. This identifies asbestos, lead, PCBs, mercury, and other regulated materials.</li>
+        <li><strong>Time and cost:</strong> A commercial inspection takes longer and costs more than residential — typically $600–$2,500+ depending on building size and complexity.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Commercial Inspection Cost in Ontario</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Small retail unit or office (under 2,000 sq ft):</strong> $500–$900</li>
+        <li><strong>Medium commercial building (2,000–10,000 sq ft):</strong> $900–$1,800</li>
+        <li><strong>Large commercial or industrial (10,000–50,000 sq ft):</strong> $1,800–$4,000+</li>
+        <li><strong>Full ASTM E2018 Property Condition Assessment:</strong> $3,000–$10,000+ (includes cost-to-remedy estimates and capital expenditure forecast)</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Commercial Inspections Across Ontario</h2>
+      <p class="mb-4">ASADS performs commercial property inspections across Ontario — including Cambridge, Guelph, Kitchener-Waterloo, Hamilton, Mississauga, Toronto, Barrie, London, and surrounding communities. We have particular experience with the industrial and mixed-use commercial inventory in the Waterloo Region and Hamilton-Niagara corridor.</p>
+      <p class="mb-4">We also perform <a href="/services/asbestos-testing" class="text-primary underline">Designated Substance Surveys (DSS)</a> for pre-renovation compliance, and <a href="/services/mold-inspection" class="text-primary underline">mold and air quality assessments</a> for commercial tenants and landlords.</p>
+      <p class="mb-4">To discuss your commercial inspection requirements, call (647) 801-9311 or <a href="/booking" class="text-primary underline">book online</a>. We can typically accommodate commercial inspections within 2–3 business days.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
