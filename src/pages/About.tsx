@@ -33,7 +33,7 @@ const organizationSchema = {
   },
   "numberOfEmployees": {
     "@type": "QuantitativeValue",
-    "value": 3
+    "value": 4
   },
   "slogan": "Protecting Your Investment, Giving You Peace of Mind",
   "knowsAbout": [
@@ -193,15 +193,23 @@ const team = [
     role: "Senior Inspector",
     experience: "10+ Years Experience",
     certs: ["OAHI", "Thermal Imaging", "Mold Certified"],
-    bio: "Kapil specializes in thermal imaging and advanced moisture detection. His meticulous attention to detail has helped countless clients avoid costly structural repairs through proactive identification.",
+    bio: "Kapil specializes in thermal imaging and advanced moisture detection, with a mold certification that brings extra rigour to every moisture and air quality assessment. His meticulous approach has helped countless clients avoid costly structural repairs.",
     founder: false,
   },
   {
     name: "Rashid Hussain",
     role: "Commercial Inspector",
     experience: "12+ Years Experience",
-    certs: ["InterNACHI", "Commercial Facility Expert"],
-    bio: "Rashid leads our commercial division, specializing in multi-unit residential complexes and commercial facility assessments, ensuring large-scale investments meet strict municipal standards.",
+    certs: ["InterNACHI", "P.Eng", "Civil Engineer"],
+    bio: "Rashid leads our commercial division and brings a rare depth of structural knowledge as a licensed Professional Engineer (P.Eng) with a civil engineering background. He specializes in multi-unit residential and commercial facility assessments, applying engineering-level analysis to every inspection.",
+    founder: false,
+  },
+  {
+    name: "Prince Badwal",
+    role: "Inspector",
+    experience: "1 Year Experience",
+    certs: ["WETT Certified", "Thermal Imaging", "Termite Certified"],
+    bio: "Prince brings specialized expertise in WETT inspections, thermal imaging, and termite detection. His certification across three disciplines makes him a strong asset on solid fuel heating, moisture, and wood-destroying pest assessments.",
     founder: false,
   },
 ];
@@ -379,7 +387,7 @@ export default function About() {
               Our certified Master Inspectors bring decades of structural and technical experience to every property assessment.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member) => (
               <Card key={member.name} className="border-border/50 shadow-sm hover:shadow-md transition-shadow">
                 <CardContent className="p-6">
