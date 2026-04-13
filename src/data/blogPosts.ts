@@ -7095,6 +7095,382 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">See our <a href="/locations/home-inspection-newmarket" class="text-primary underline font-medium">Newmarket home inspection page</a> for more detail.</p>
     `,
   },
+  {
+    id: 106,
+    slug: "asbestos-vermiculite-insulation-ontario-homes",
+    title: "Asbestos and Vermiculite Insulation in Ontario Homes: What Every Buyer Needs to Know",
+    metaTitle: "Asbestos & Vermiculite Insulation Ontario Homes",
+    metaDescription: "Vermiculite insulation in Ontario homes often contains asbestos. Learn how to identify it, what it means for buyers, and when to test.",
+    excerpt: "Vermiculite insulation found in Ontario attics often contains Zonolite — a product linked to asbestos contamination. Here's what buyers need to know before purchasing a pre-1990 home.",
+    category: "Health & Safety",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is Vermiculite Insulation?</h2>
+      <p class="mb-4">Vermiculite is a naturally occurring mineral that expands when heated, creating a lightweight, fire-resistant material that was widely used as attic insulation from the 1940s through the late 1980s. In Ontario, it's most commonly found in homes built or renovated between 1950 and 1990.</p>
+      <p class="mb-4">The problem: the majority of the world's vermiculite supply during this period came from a single mine in Libby, Montana — operated under the brand name <strong>Zonolite</strong>. That mine was contaminated with naturally occurring asbestos. Health Canada estimates that approximately 70% of all vermiculite insulation installed in Canadian homes before 1990 came from Libby.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Identify Vermiculite Insulation</h2>
+      <p class="mb-4">Vermiculite has a distinctive appearance that sets it apart from other insulation types:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Color:</strong> Grey, silver, or gold pebble-like granules — sometimes with a shiny, mica-like appearance</li>
+        <li><strong>Texture:</strong> Loose-fill, similar to gravel or coarse sand — not fluffy like fibreglass or cellulose</li>
+        <li><strong>Size:</strong> Typically 3–10mm in diameter, irregularly shaped</li>
+        <li><strong>Location:</strong> Most commonly in attic floors between joists, sometimes used as wall cavity fill in block construction</li>
+      </ul>
+      <p class="mb-4">If you see grey-gold granular material in an attic of a pre-1990 home, assume it may be vermiculite until confirmed otherwise.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is All Vermiculite Dangerous?</h2>
+      <p class="mb-4">Not all vermiculite contains asbestos — but Health Canada's position is that all vermiculite insulation should be <strong>treated as though it contains asbestos until tested</strong>. This is because:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Zonolite-sourced material cannot be identified visually — it looks identical to uncontaminated product</li>
+        <li>Some batches have higher asbestos content than others from the same source</li>
+        <li>Even low-level asbestos fibre release during disturbance can pose long-term risk</li>
+      </ul>
+      <p class="mb-4">The asbestos minerals found in Libby vermiculite — primarily tremolite, actinolite, and richterite — are among the most hazardous forms due to their needle-like fibre structure.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What This Means for Ontario Home Buyers</h2>
+      <p class="mb-4">If vermiculite is identified during a home inspection, buyers should understand several implications:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Insurance Complications</h3>
+      <p class="mb-4">Many Ontario insurers will flag or surcharge policies on homes with confirmed vermiculite insulation. Some will require asbestos testing or remediation as a condition of coverage. This is worth addressing before closing.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Renovation Restrictions</h3>
+      <p class="mb-4">Vermiculite insulation must not be disturbed. Any attic renovation — adding pot lights, running HVAC ducts, attic conversions — requires abatement by a licensed asbestos contractor first. Ontario's Regulation 278/05 governs asbestos work on buildings.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Disclosure Requirements</h3>
+      <p class="mb-4">Sellers in Ontario are required to disclose known material latent defects. If vermiculite is identified and the seller is aware, non-disclosure can create legal liability. In practice, many sellers genuinely don't know it's there — it sits undisturbed in attics for decades.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Should You Get the Insulation Tested?</h2>
+      <p class="mb-4">Yes — before closing, if vermiculite is identified. Asbestos testing typically costs $200–$500 for a bulk sample sent to an accredited lab. Results take 2–5 business days. This fits within most conditional inspection periods.</p>
+      <p class="mb-4">Note: collecting the sample itself requires care. Health Canada recommends having a qualified professional take the sample rather than disturbing the material yourself. A home inspector can document and photograph the material; a designated substance surveyor or asbestos testing firm takes the formal sample.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Remediation Costs in Ontario</h2>
+      <p class="mb-4">If asbestos is confirmed, there are two options:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Encapsulation / leave in place:</strong> If the attic is sealed, undisturbed, and no renovation work is planned, it can sometimes remain with monitoring. Not accepted by all insurers.</li>
+        <li><strong>Abatement (removal):</strong> Typically $3,000–$12,000 depending on attic size and accessibility. Requires a licensed Ontario asbestos abatement contractor and post-clearance air testing.</li>
+      </ul>
+      <p class="mb-4">A documented finding during inspection becomes legitimate negotiating leverage — a seller credit or price reduction is a reasonable outcome when abatement costs are quantified before the condition expires.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What ASADS Inspectors Check For</h2>
+      <p class="mb-4">During every home inspection on a pre-1990 property, ASADS inspectors specifically look for:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Vermiculite insulation in attic spaces — documented with photos and noted in the report</li>
+        <li>Suspicious textured ceiling materials (popcorn ceilings pre-1980 may contain asbestos)</li>
+        <li>Vinyl floor tiles and sheet flooring from the 1950s–1970s (backing and adhesive may contain asbestos)</li>
+        <li>Pipe insulation wrapping on older furnace ducts and boiler systems</li>
+        <li>Asbestos-containing duct tape and duct wrap on HVAC systems</li>
+      </ul>
+      <p class="mb-4">We flag suspected asbestos-containing materials (ACM) in the inspection report and recommend follow-up testing when warranted. We do not perform destructive sampling — that requires a designated substance surveyor — but we document everything visible.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Ontario Homes Most Likely to Have Vermiculite</h2>
+      <p class="mb-4">Highest-risk properties based on construction era and common regional renovation patterns:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Toronto older neighbourhoods:</strong> East York, Scarborough, North York, Leaside — 1950s–1970s bungalows and semis</li>
+        <li><strong>Hamilton Mountain homes:</strong> 1950s–1960s construction, vermiculite was a common insulation upgrade into the 1980s</li>
+        <li><strong>Kitchener-Waterloo older stock:</strong> Pre-1980 homes in downtown Kitchener, Waterloo core, and older Cambridge/Galt</li>
+        <li><strong>Ottawa 1960s–1970s builds:</strong> Bungalows throughout Alta Vista, Carlington, Overbrook</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book an Asbestos-Aware Home Inspection</h2>
+      <p class="mb-4">ASADS Home Inspection serves the GTA and surrounding Ontario. Our inspectors are trained to identify suspected asbestos-containing materials including vermiculite insulation, and we document every finding with photos in your same-day report.</p>
+      <p class="mb-4">For asbestos testing and designated substance surveys, we can refer you to licensed Ontario DSS professionals. Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book online</a>.</p>
+      <p class="mb-4">See our <a href="/services/asbestos-testing" class="text-primary underline font-medium">asbestos testing service page</a> for more information on what ASADS includes and when formal testing is recommended.</p>
+    `,
+  },
+  {
+    id: 107,
+    slug: "home-indoor-air-quality-ontario",
+    title: "Home Indoor Air Quality in Ontario: What Home Inspectors Test and When to Be Concerned",
+    metaTitle: "Home Indoor Air Quality Ontario | What to Test For",
+    metaDescription: "Indoor air quality issues in Ontario homes — radon, mould, VOCs, CO. What home inspectors check and when you need specialist testing.",
+    excerpt: "Indoor air quality is invisible but measurable. Here's what Ontario home buyers should know about radon, mould, carbon monoxide, and VOCs — and what a home inspection covers.",
+    category: "Health & Safety",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "10 min read",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Indoor Air Quality Matters for Ontario Home Buyers</h2>
+      <p class="mb-4">Canadians spend an average of 90% of their time indoors. The indoor environment of a home — its air quality, moisture levels, and contaminant load — has direct health implications that don't show up in a visual inspection alone.</p>
+      <p class="mb-4">Ontario homes face specific air quality risks that buyers should understand before purchasing, particularly in older housing stock where building materials and construction practices created conditions that accumulate over decades.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Main Indoor Air Quality Concerns in Ontario Homes</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Radon Gas</h3>
+      <p class="mb-4">Radon is a naturally occurring radioactive gas that forms from the decay of uranium in soil and rock. It seeps into homes through foundation cracks, floor drains, and construction joints. Health Canada identifies radon as the <strong>second leading cause of lung cancer in Canada</strong>, responsible for approximately 3,200 deaths per year.</p>
+      <p class="mb-4">Ontario has areas of elevated radon concentration, particularly in the granite-rich Canadian Shield regions, but radon levels vary significantly even within the same neighbourhood. The only way to know if a home has elevated radon is to test.</p>
+      <p class="mb-4"><strong>Health Canada action level:</strong> 200 Bq/m³. Homes above this level should be mitigated. Long-term radon testing (90 days minimum) is the gold standard — short-term tests are directional only.</p>
+      <p class="mb-4"><strong>Testing cost:</strong> $25–$60 for a long-term charcoal test kit. Professional radon mitigation systems (sub-slab depressurization) cost $1,500–$3,000 if needed.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Mould and Biological Contaminants</h3>
+      <p class="mb-4">Mould grows wherever moisture and organic material meet. In Ontario homes, the most common locations are:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Basement walls and rim joists (chronic humidity, especially in homes without proper vapour barriers)</li>
+        <li>Attic sheathing (bathroom fans venting into the attic space rather than outside — extremely common)</li>
+        <li>Under kitchen and bathroom sinks (slow leaks that go unnoticed for months)</li>
+        <li>Behind finished basement walls (water infiltration concealed by drywall)</li>
+        <li>Around windows with poor seals or condensation issues</li>
+      </ul>
+      <p class="mb-4">Visible mould is documented in the inspection report. Hidden mould — detectable via musty odours, moisture readings, or thermal imaging anomalies — warrants further investigation. Air quality testing for mould (spore counts, species identification) is a specialist service separate from a standard home inspection.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. Carbon Monoxide</h3>
+      <p class="mb-4">CO is produced by incomplete combustion from gas furnaces, water heaters, fireplaces, and attached garages. It's odourless and colourless — detector alarms are the only reliable warning system.</p>
+      <p class="mb-4">Key inspection findings related to CO risk:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Cracked heat exchanger</strong> — allows combustion gases to mix with circulated air. A serious finding requiring immediate furnace replacement</li>
+        <li>Back-drafting on furnaces and water heaters</li>
+        <li>Missing or non-functional CO detectors (required within 15 feet of sleeping areas under Ontario's CO Detector Act)</li>
+        <li>Blocked flue venting</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. Volatile Organic Compounds (VOCs)</h3>
+      <p class="mb-4">VOCs are emitted as gases from certain solids and liquids — paints, varnishes, wax, cleaning products, building materials, and furnishings. In a home inspection context, the most significant sources are:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Urea-formaldehyde foam insulation (UFFI)</strong> — injected into wall cavities in some 1970s–1980s Ontario homes as an energy retrofit. Banned in Canada in 1980 for residential use due to off-gassing. Still present in some older homes.</li>
+        <li>New construction or recently renovated spaces with high off-gassing from materials</li>
+        <li>Attached garages with vehicle exhaust migration</li>
+        <li>Underground storage tanks (if fuel oil heat was converted) — petroleum VOC contamination</li>
+      </ul>
+      <p class="mb-4">VOC testing requires air sampling sent to a lab — this is beyond the scope of a standard home inspection but can be arranged through environmental testing firms.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">5. Asbestos Fibres</h3>
+      <p class="mb-4">Asbestos-containing materials in good condition and undisturbed don't typically release fibres. The air quality risk arises when materials are deteriorated, damaged, or disturbed during renovation. Pre-1990 homes may contain asbestos in insulation, floor tiles, duct wrap, and ceiling textures. See our guide on <a href="/blog/asbestos-vermiculite-insulation-ontario-homes" class="text-primary underline font-medium">vermiculite and asbestos insulation in Ontario homes</a>.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What a Standard Home Inspection Covers (and What It Doesn't)</h2>
+      <p class="mb-4">A home inspection is a visual assessment. Here's what's in scope for air quality:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Included in a Standard ASADS Inspection</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Visible mould documentation with photos</li>
+        <li>Moisture readings in basement, bathroom, kitchen, and anywhere moisture staining is visible</li>
+        <li>Thermal imaging to identify cold spots suggesting hidden moisture accumulation</li>
+        <li>Furnace heat exchanger assessment (visual + carbon monoxide detector test near register)</li>
+        <li>CO and smoke detector presence and function check</li>
+        <li>Identification of suspected asbestos-containing materials (visual only — no sampling)</li>
+        <li>HRV/ERV ventilation system assessment</li>
+        <li>Attic ventilation balance check (connected to moisture and air quality)</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Requires Specialist Testing (Beyond Standard Inspection)</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Radon testing:</strong> Long-term test kit or professional continuous monitor. Recommend for any home with a basement in Ontario.</li>
+        <li><strong>Mould air sampling:</strong> Spore counts and species identification require lab analysis. Relevant when hidden mould is suspected.</li>
+        <li><strong>Asbestos sampling:</strong> Bulk or air sampling by a designated substance surveyor (required under Ontario Regulation 278/05).</li>
+        <li><strong>VOC air testing:</strong> Environmental sampling firm. Relevant for UFFI homes, near underground tanks, or heavily renovated spaces.</li>
+        <li><strong>Water quality testing:</strong> Separate from air quality but important for well-water properties.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Thermal Imaging and Indoor Air Quality</h2>
+      <p class="mb-4">Infrared thermal imaging is one of the most valuable tools for identifying air quality risk factors before they're visible. ASADS includes thermal imaging in every inspection at no extra charge. What it finds:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Cold spots in walls and ceilings indicating moisture accumulation — often the first sign of hidden mould</li>
+        <li>Basement wall temperature differentials showing water infiltration paths</li>
+        <li>Gaps in building envelope where outside air (and soil gases including radon) infiltrate more easily</li>
+        <li>Missing insulation creating condensation zones where biological growth can begin</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Questions to Ask Before Buying a Pre-1990 Ontario Home</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Has radon testing ever been done? What were the results?</li>
+        <li>Has there ever been moisture infiltration, flooding, or mould remediation in the basement?</li>
+        <li>Was the home ever insulated with urea-formaldehyde foam (UFFI)?</li>
+        <li>Is there vermiculite insulation in the attic?</li>
+        <li>Were any underground fuel oil tanks removed — and do you have documentation of the removal and soil testing?</li>
+        <li>What year was the furnace installed, and has the heat exchanger been inspected recently?</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Home Inspection in Ontario</h2>
+      <p class="mb-4">ASADS Home Inspection serves the GTA and surrounding Ontario communities. Thermal imaging is included in every inspection. Our inspectors document air quality risk factors — visible mould, suspected ACM, CO safety concerns, ventilation deficiencies — in a same-day written report.</p>
+      <p class="mb-4">For specialist air quality testing (radon, mould sampling, VOCs), we can refer you to accredited Ontario labs and environmental consultants. Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book your inspection online</a>.</p>
+    `,
+  },
+  {
+    id: 108,
+    slug: "mould-remediation-canada-what-buyers-need-to-know",
+    title: "Mould Remediation in Canada: What Home Buyers Need to Know Before Closing",
+    metaTitle: "Mould Remediation Canada | Home Buyer's Guide",
+    metaDescription: "Mould found during a home inspection in Canada — what it means, what remediation costs, and how to use it as negotiating leverage before closing.",
+    excerpt: "Mould found during a home inspection doesn't always mean walk away. Here's how to assess the severity, understand remediation costs, and negotiate effectively in Ontario.",
+    category: "Health & Safety",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mould During a Home Inspection: Don't Panic, But Don't Ignore It</h2>
+      <p class="mb-4">Mould is one of the most common inspection findings in Ontario homes — and one of the most misunderstood. Buyers who see "mould noted" in an inspection report often either overreact (walk away from a fixable problem) or underreact (ignore something that genuinely affects health and structural integrity).</p>
+      <p class="mb-4">This guide explains how to assess mould findings accurately, understand what remediation actually costs in Canada, and use documented findings as leverage before your condition expires.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Where Mould Is Commonly Found in Ontario Homes</h2>
+      <p class="mb-4">Mould requires three things: moisture, organic material, and time. Ontario's climate — humid summers, cold winters, freeze-thaw cycles — creates conditions that generate moisture intrusion in predictable locations:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Attic sheathing:</strong> The #1 mould location in Ontario homes. Usually caused by bathroom fans, kitchen exhaust fans, or dryer vents terminating into the attic rather than through the roof or wall. Humid air condenses on the cold roof deck. Extremely common — affects an estimated 15–25% of Ontario homes.</li>
+        <li><strong>Basement rim joists and foundation walls:</strong> Ground-contact moisture, condensation on cold surfaces in summer, and bulk water intrusion all contribute.</li>
+        <li><strong>Under sinks and behind appliances:</strong> Slow pinhole leaks that drip onto wood subfloor and cabinet bottoms for months or years.</li>
+        <li><strong>Finished basement walls:</strong> Moisture from the exterior migrates through the foundation and gets trapped behind drywall. Often not visible until the drywall is removed.</li>
+        <li><strong>Window frames and rough openings:</strong> Failed window seals, improper flashing, or ice damming in winter can allow water behind the exterior cladding.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Assessing Severity: What Actually Matters</h2>
+      <p class="mb-4">Not all mould findings are equal. The key factors that determine severity:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Is the Moisture Source Eliminated?</h3>
+      <p class="mb-4">Active mould — where moisture is ongoing — is more serious than historical staining where the source was corrected. An attic with mould staining and a <em>corrected</em> bathroom fan (now venting outside) may need cleaning but no structural repairs. An attic with active moisture infiltration still occurring is a different situation entirely.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Surface Mould vs. Structural Penetration</h3>
+      <p class="mb-4">Mould on the surface of OSB or plywood sheathing that hasn't penetrated the wood grain can often be treated with antimicrobial cleaning and addressed with improved ventilation. Mould that has penetrated structural framing — causing wood rot or structural softening — requires wood replacement, not just cleaning.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. Total Affected Area</h3>
+      <p class="mb-4">Health Canada and the Canada Mortgage and Housing Corporation (CMHC) use 1 square metre as a general threshold — areas under this size can typically be addressed by a homeowner. Areas over 1 m² should involve a qualified remediation contractor. Full attic mould — affecting 50–200+ m² of sheathing — is a significant remediation project.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mould Remediation Costs in Ontario (2025–2026)</h2>
+      <p class="mb-4">Actual costs vary based on scope, access, and species — but realistic ranges for common scenarios:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Small isolated areas (under sink, around window):</strong> $500–$1,500. Often includes containment, cleaning, antimicrobial treatment, affected drywall replacement.</li>
+        <li><strong>Attic mould — surface treatment only:</strong> $1,500–$4,000. Dry ice blasting or soda blasting the sheathing, antimicrobial application, ventilation corrections.</li>
+        <li><strong>Attic mould — structural involvement or large attic:</strong> $4,000–$12,000+. May require partial or full sheathing replacement, new roofing underlayment, ventilation upgrades.</li>
+        <li><strong>Basement mould behind finished walls:</strong> $3,000–$15,000 depending on scope — includes demo, remediation, reconstruction, and addressing the water source.</li>
+        <li><strong>Full mould remediation with air quality clearance testing:</strong> Add $500–$1,500 for post-remediation air sampling confirming successful clearance.</li>
+      </ul>
+      <p class="mb-4">These are contractor-performed remediation costs. DIY approaches are sometimes appropriate for small, isolated, non-structural surface mould — but buyers purchasing a home shouldn't inherit a mould problem and plan to DIY it without understanding the full scope first.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Use a Mould Finding as Negotiating Leverage</h2>
+      <p class="mb-4">If your home inspector documents mould, here's how to use it effectively during the condition period:</p>
+      <ol class="list-decimal pl-6 mb-4 space-y-2">
+        <li><strong>Get a remediation quote before the condition expires.</strong> Call two remediation contractors and get written estimates. "The inspection found attic mould — remediation quotes came in at $3,200 to $4,800" is a specific, defensible ask.</li>
+        <li><strong>Ask whether the source has been corrected.</strong> If the bathroom fan was already redirected, say so — it strengthens your negotiating position because the scope is known.</li>
+        <li><strong>Request either a price reduction or a seller credit at closing</strong> — not a seller repair. You don't know the quality of work a motivated seller will do to close quickly.</li>
+        <li><strong>Get mould air testing if hidden mould is suspected</strong> beyond what's visible. Test results before closing protect you from discovering worse problems after you've taken possession.</li>
+      </ol>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When Mould Is a Reason to Walk Away</h2>
+      <p class="mb-4">Most mould findings are manageable. Walk away — or negotiate very hard — when:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>The moisture source is active, significant, and expensive to fix (foundation waterproofing + mould remediation = $20,000+)</li>
+        <li>There's evidence of concealment — fresh paint over obvious staining, very recent drywall over a wet basement</li>
+        <li>Structural framing members are rotted or compromised</li>
+        <li>The seller refuses to negotiate at all given documented findings</li>
+        <li>Air quality testing reveals toxic mould species (Stachybotrys — "black mould") in significant concentrations</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">ASADS and Mould Detection</h2>
+      <p class="mb-4">ASADS inspectors check all high-risk mould locations and document findings with photos. Thermal imaging — included in every ASADS inspection at no extra charge — is especially valuable for detecting hidden moisture accumulation behind walls and under floors before mould becomes visible.</p>
+      <p class="mb-4">We clearly distinguish in the report between: active moisture conditions, visible mould, mould staining from historical moisture, and areas warranting further investigation. We don't provide mould species identification (that requires air or surface sampling by a qualified industrial hygienist), but we document what's there and what it likely means.</p>
+      <p class="mb-4">For specialist mould testing and remediation referrals in Ontario, call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book your home inspection online</a>. See our <a href="/services/mold-inspection" class="text-primary underline font-medium">mould inspection service page</a> for more detail.</p>
+    `,
+  },
+  {
+    id: 109,
+    slug: "canadian-home-inspection-guide-what-to-expect",
+    title: "Canadian Home Inspection Guide: What to Expect, What's Covered, and How to Choose an Inspector",
+    metaTitle: "Canadian Home Inspection Guide 2026 | What to Expect",
+    metaDescription: "Complete guide to home inspections in Canada — what's included, provincial licensing, how to choose an inspector, and what to do with the report.",
+    excerpt: "Everything Canadian home buyers need to know about the home inspection process — from booking to report, what's covered, and how to choose a qualified inspector in your province.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "11 min read",
+    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is a Canadian Home Inspection?</h2>
+      <p class="mb-4">A home inspection is a professional, visual assessment of a property's physical condition. An inspector examines the accessible components of a home — from foundation to roof — and produces a written report documenting findings, deficiencies, and recommendations.</p>
+      <p class="mb-4">In Canada, home inspections are almost always completed as part of a conditional offer on a resale property. The buyer hires the inspector, the inspection is completed during the condition period (typically 3–5 business days), and the buyer then decides whether to proceed, negotiate, or walk away with the deposit returned.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Licensing in Canada: Provincial Variation</h2>
+      <p class="mb-4">Canada has no national licensing standard for home inspectors. Regulation varies significantly by province:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>British Columbia:</strong> Licensed — regulated under the Business Practices and Consumer Protection Act since 2018. Inspectors must be registered with Consumer Protection BC.</li>
+        <li><strong>Alberta:</strong> Licensed — regulated under the Government Organization Act with mandatory licensing and standards.</li>
+        <li><strong>Ontario:</strong> <strong>Not yet licensed.</strong> The Home Inspection Act, 2017 was passed but never proclaimed in force. There is currently no mandatory licensing for home inspectors in Ontario. Credentials from InterNACHI or OAHI are the only quality signals.</li>
+        <li><strong>Quebec:</strong> Regulated — inspectors must be members of AIBQ (Association des inspecteurs en bâtiments du Québec) or another recognized organization.</li>
+        <li><strong>Other provinces:</strong> Generally unregulated. Manitoba, Saskatchewan, Nova Scotia, New Brunswick, PEI, Newfoundland — no mandatory licensing as of 2026.</li>
+      </ul>
+      <p class="mb-4">The absence of mandatory licensing in Ontario makes credentials more important, not less. When there's no regulatory floor, any person can call themselves a home inspector. Certification from recognized bodies provides the quality assurance that licensing would otherwise require.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What a Home Inspection Covers in Canada</h2>
+      <p class="mb-4">A standard Canadian home inspection, following InterNACHI or Canadian Association of Home and Property Inspectors (CAHPI) standards, covers nine major systems:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Roofing System</h3>
+      <p class="mb-4">Shingle condition and estimated remaining life, flashings at chimneys, vents, valleys and penetrations, gutters, downspouts, and soffits. Flat roofing where applicable.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Exterior</h3>
+      <p class="mb-4">Cladding condition (brick, vinyl, stucco, wood), grading and drainage away from foundation, driveways, walkways, decks, porches, windows and doors, garage doors.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. Foundation and Structure</h3>
+      <p class="mb-4">Visible foundation (poured concrete, block, stone), basement walls for cracks and water staining, floor joists and beams, evidence of movement or settlement, sump pump and drainage tile.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. Electrical System</h3>
+      <p class="mb-4">Electrical panel capacity and condition, wiring type throughout (copper vs aluminum vs knob-and-tube), grounding, GFCI protection in wet areas, visible outlets and switches. In Ontario, aluminum wiring (1965–1978) and knob-and-tube (pre-1950) are common insurance-impacting findings.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">5. Plumbing System</h3>
+      <p class="mb-4">Pipe materials throughout (copper, Kitec, galvanized steel, poly-B, PVC), water heater age and condition, all fixtures tested for flow and drainage, shutoff valves, water pressure. Kitec plumbing (1995–2007 Ontario builds) is an insurance and liability concern.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">6. Heating and Cooling (HVAC)</h3>
+      <p class="mb-4">Furnace age, condition, and heat exchanger integrity (CO risk if cracked), air conditioner condition and approximate age, ductwork, HRV/ERV ventilation systems, fireplaces and wood stoves (visual — WETT certification is a separate inspection).</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">7. Insulation and Ventilation</h3>
+      <p class="mb-4">Attic insulation type and depth, attic ventilation balance, exhaust fan termination points, vapour barriers, basement insulation, and energy efficiency observations.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">8. Interior</h3>
+      <p class="mb-4">Ceilings, walls, floors for staining, damage or deformation, window operation and seals, door function, stairways, railings, smoke and CO detector presence.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">9. Garage</h3>
+      <p class="mb-4">Structural condition, door operation and auto-reverse function, firewall integrity between garage and living space.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What's NOT Included in a Standard Canadian Home Inspection</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Invasive or destructive investigation (behind walls, under concrete slabs)</li>
+        <li>Radon testing (requires separate long-term test)</li>
+        <li>Asbestos sampling (requires a designated substance surveyor)</li>
+        <li>Mould air quality testing (requires industrial hygienist)</li>
+        <li>Sewer scope inspection (camera inspection of underground drain line — often worth adding)</li>
+        <li>WETT (wood energy technology transfer) inspection of fireplaces and wood stoves</li>
+        <li>Well water testing</li>
+        <li>Pest/termite inspection (some inspectors offer this as an add-on)</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Choose a Home Inspector in Canada</h2>
+      <p class="mb-4">In provinces without mandatory licensing (including Ontario), focus on these:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>InterNACHI certification</strong> — the International Association of Certified Home Inspectors. Largest inspector certifying body in North America, requires ongoing education. Look for the InterNACHI logo and verify at nachi.org.</li>
+        <li><strong>OAHI/CAHPI membership</strong> (Ontario) — the Ontario Association of Home Inspectors and Canadian Association of Home and Property Inspectors. Older organizations with rigorous entrance requirements.</li>
+        <li><strong>Errors & Omissions (E&O) insurance</strong> — essential. If an inspector misses something significant, E&O insurance is your recourse. Always ask.</li>
+        <li><strong>Thermal imaging included</strong> — infrared cameras are one of the most valuable inspection tools, catching moisture and insulation deficiencies invisible to the naked eye. Some inspectors charge $150–$200 extra; others include it.</li>
+        <li><strong>Same-day report</strong> — you need the written report before your condition expires.</li>
+        <li><strong>Time on site</strong> — a proper inspection of a standard detached home takes 2.5–4 hours. Anyone finishing in 90 minutes is not being thorough.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Costs Across Canada (2025–2026)</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo / stacked townhouse:</strong> $299–$399</li>
+        <li><strong>Semi-detached or row townhouse:</strong> $380–$480</li>
+        <li><strong>Detached home under 2,500 sq ft:</strong> $430–$560</li>
+        <li><strong>Larger or older detached (pre-1970, 3,000+ sq ft):</strong> $500–$750+</li>
+      </ul>
+      <p class="mb-4">Prices are slightly higher in Vancouver and Toronto compared to smaller markets. The difference between a $280 inspector and a $480 inspector is not worth optimizing on a $700,000–$1.5M purchase.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Understanding Your Home Inspection Report</h2>
+      <p class="mb-4">Inspection reports list deficiencies — every home has them. Focus on severity:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Safety hazards:</strong> Require action regardless of negotiations — cracked heat exchangers, live exposed wiring, structural instability, missing CO detectors</li>
+        <li><strong>Major defects ($5,000+):</strong> Foundation issues, roof near end of life, Kitec plumbing, aluminum wiring, knob-and-tube, active basement water — these are negotiating chips</li>
+        <li><strong>Maintenance items:</strong> Aging caulking, dirty HVAC filter, dripping faucet — factor into your ownership budget, not deal-breakers</li>
+      </ul>
+      <p class="mb-4">Always attend the inspection. The walkthrough with the inspector at the end is more valuable than the written report alone. Ask: "What are the two or three things that actually concern you?"</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Home Inspection in Ontario</h2>
+      <p class="mb-4">ASADS Home Inspection is InterNACHI certified, carries full E&O insurance, and includes thermal imaging in every inspection at no extra charge. We serve the GTA and surrounding Ontario with same-day reports and next-day availability.</p>
+      <p class="mb-4">Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book your inspection online</a>. For a full list of service areas, see our <a href="/locations" class="text-primary underline font-medium">Ontario locations page</a>.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
