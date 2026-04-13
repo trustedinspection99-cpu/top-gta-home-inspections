@@ -714,6 +714,8 @@ const Index = () => {
             <p className="text-sm text-gray-500 mt-6">
               ASADS does not perform remediation, accept realtor referral fees, or have any financial stake in what we find.{" "}
               <a href="/our-promise" className="text-primary font-medium hover:underline">Read our independence promise →</a>
+              {" · "}
+              <a href="/what-we-find" className="text-primary font-medium hover:underline">See what we find →</a>
             </p>
           </div>
         </div>

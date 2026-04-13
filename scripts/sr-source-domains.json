@@ -1,0 +1,602 @@
+[
+  {
+    "domain": "youtube.com",
+    "sourceUrls": "116",
+    "mentions": "88",
+    "traffic": "36.5K"
+  },
+  {
+    "domain": "carsondunlop.com",
+    "sourceUrls": "46",
+    "mentions": "77",
+    "traffic": "128.3K"
+  },
+  {
+    "domain": "nachi.org",
+    "sourceUrls": "33",
+    "mentions": "51",
+    "traffic": "6.9K"
+  },
+  {
+    "domain": "reddit.com",
+    "sourceUrls": "41",
+    "mentions": "51",
+    "traffic": "4.6K"
+  },
+  {
+    "domain": "canada.ca",
+    "sourceUrls": "3",
+    "mentions": "46",
+    "traffic": "16.1K"
+  },
+  {
+    "domain": "hiabc.ca",
+    "sourceUrls": "13",
+    "mentions": "46",
+    "traffic": "12.1K"
+  },
+  {
+    "domain": "cahpi.ca",
+    "sourceUrls": "21",
+    "mentions": "43",
+    "traffic": "12K"
+  },
+  {
+    "domain": "winrightlaw.com",
+    "sourceUrls": "2",
+    "mentions": "41",
+    "traffic": "21.7K"
+  },
+  {
+    "domain": "cibc.com",
+    "sourceUrls": "1",
+    "mentions": "39",
+    "traffic": "21.4K"
+  },
+  {
+    "domain": "consumerprotectionbc.ca",
+    "sourceUrls": "6",
+    "mentions": "37",
+    "traffic": "15.2K"
+  },
+  {
+    "domain": "homeinspectortraining.ca",
+    "sourceUrls": "7",
+    "mentions": "37",
+    "traffic": "15.3K"
+  },
+  {
+    "domain": "icaschool.com",
+    "sourceUrls": "14",
+    "mentions": "36",
+    "traffic": "638"
+  },
+  {
+    "domain": "nait.ca",
+    "sourceUrls": "1",
+    "mentions": "34",
+    "traffic": "21.3K"
+  },
+  {
+    "domain": "stepaboveinspections.com",
+    "sourceUrls": "3",
+    "mentions": "32",
+    "traffic": "6.1K"
+  },
+  {
+    "domain": "alberta.ca",
+    "sourceUrls": "8",
+    "mentions": "31",
+    "traffic": "12.8K"
+  },
+  {
+    "domain": "homestars.com",
+    "sourceUrls": "14",
+    "mentions": "31",
+    "traffic": "12.5K"
+  },
+  {
+    "domain": "zolo.ca",
+    "sourceUrls": "4",
+    "mentions": "31",
+    "traffic": "868"
+  },
+  {
+    "domain": "justinhavre.com",
+    "sourceUrls": "2",
+    "mentions": "29",
+    "traffic": "4.7K"
+  },
+  {
+    "domain": "durhamcollege.ca",
+    "sourceUrls": "2",
+    "mentions": "28",
+    "traffic": "8.6K"
+  },
+  {
+    "domain": "oahi.com",
+    "sourceUrls": "6",
+    "mentions": "27",
+    "traffic": "5.5K"
+  },
+  {
+    "domain": "sait.ca",
+    "sourceUrls": "1",
+    "mentions": "25",
+    "traffic": "19.1K"
+  },
+  {
+    "domain": "inspectionsupport.com",
+    "sourceUrls": "18",
+    "mentions": "22",
+    "traffic": "43"
+  },
+  {
+    "domain": "spectora.com",
+    "sourceUrls": "16",
+    "mentions": "22",
+    "traffic": "7.3K"
+  },
+  {
+    "domain": "theholmesacademy.com",
+    "sourceUrls": "9",
+    "mentions": "22",
+    "traffic": "1.2K"
+  },
+  {
+    "domain": "indeed.com",
+    "sourceUrls": "11",
+    "mentions": "21",
+    "traffic": "1.8K"
+  },
+  {
+    "domain": "mikeholmesinspections.com",
+    "sourceUrls": "12",
+    "mentions": "21",
+    "traffic": "1.8K"
+  },
+  {
+    "domain": "homegauge.com",
+    "sourceUrls": "14",
+    "mentions": "20",
+    "traffic": "632"
+  },
+  {
+    "domain": "theinspectors.org",
+    "sourceUrls": "3",
+    "mentions": "20",
+    "traffic": "495"
+  },
+  {
+    "domain": "homedepot.com",
+    "sourceUrls": "4",
+    "mentions": "19",
+    "traffic": "1.6K"
+  },
+  {
+    "domain": "nerdwallet.com",
+    "sourceUrls": "4",
+    "mentions": "19",
+    "traffic": "28"
+  },
+  {
+    "domain": "orkin.com",
+    "sourceUrls": "17",
+    "mentions": "19",
+    "traffic": "13.2K"
+  },
+  {
+    "domain": "orkincanada.ca",
+    "sourceUrls": "7",
+    "mentions": "19",
+    "traffic": "24.3K"
+  },
+  {
+    "domain": "robgolfi.com",
+    "sourceUrls": "3",
+    "mentions": "19",
+    "traffic": "5.2K"
+  },
+  {
+    "domain": "zillow.com",
+    "sourceUrls": "5",
+    "mentions": "19",
+    "traffic": "32"
+  },
+  {
+    "domain": "terminix.com",
+    "sourceUrls": "11",
+    "mentions": "18",
+    "traffic": "12.2K"
+  },
+  {
+    "domain": "daylightinspect.ca",
+    "sourceUrls": "5",
+    "mentions": "17",
+    "traffic": "291"
+  },
+  {
+    "domain": "georgebrown.ca",
+    "sourceUrls": "5",
+    "mentions": "17",
+    "traffic": "4.1K"
+  },
+  {
+    "domain": "inspectionworks.ca",
+    "sourceUrls": "6",
+    "mentions": "17",
+    "traffic": "9"
+  },
+  {
+    "domain": "assiniboine.net",
+    "sourceUrls": "3",
+    "mentions": "16",
+    "traffic": "578"
+  },
+  {
+    "domain": "inspect4canada.ca",
+    "sourceUrls": "6",
+    "mentions": "16",
+    "traffic": "1.5K"
+  },
+  {
+    "domain": "justo.ca",
+    "sourceUrls": "5",
+    "mentions": "16",
+    "traffic": "423"
+  },
+  {
+    "domain": "abuyerschoice.com",
+    "sourceUrls": "6",
+    "mentions": "15",
+    "traffic": "262"
+  },
+  {
+    "domain": "ecolinewindows.ca",
+    "sourceUrls": "1",
+    "mentions": "15",
+    "traffic": "1K"
+  },
+  {
+    "domain": "enercare.ca",
+    "sourceUrls": "2",
+    "mentions": "15",
+    "traffic": "636"
+  },
+  {
+    "domain": "gta-homes.com",
+    "sourceUrls": "1",
+    "mentions": "15",
+    "traffic": "405"
+  },
+  {
+    "domain": "homeinspectioninstitute.com",
+    "sourceUrls": "7",
+    "mentions": "15",
+    "traffic": "252"
+  },
+  {
+    "domain": "opendoor.com",
+    "sourceUrls": "3",
+    "mentions": "15",
+    "traffic": "225"
+  },
+  {
+    "domain": "mohawkcollege.ca",
+    "sourceUrls": "1",
+    "mentions": "14",
+    "traffic": "3.5K"
+  },
+  {
+    "domain": "rew.ca",
+    "sourceUrls": "1",
+    "mentions": "14",
+    "traffic": "1K"
+  },
+  {
+    "domain": "juriscorplaw.ca",
+    "sourceUrls": "1",
+    "mentions": "13",
+    "traffic": "832"
+  },
+  {
+    "domain": "rocketmortgage.com",
+    "sourceUrls": "6",
+    "mentions": "13",
+    "traffic": "169"
+  },
+  {
+    "domain": "brookstoneinspection.com",
+    "sourceUrls": "4",
+    "mentions": "12",
+    "traffic": "56"
+  },
+  {
+    "domain": "calprogroup.com",
+    "sourceUrls": "5",
+    "mentions": "12",
+    "traffic": "523"
+  },
+  {
+    "domain": "carsondunlop.ca",
+    "sourceUrls": "12",
+    "mentions": "12",
+    "traffic": "815"
+  },
+  {
+    "domain": "conestogac.on.ca",
+    "sourceUrls": "1",
+    "mentions": "12",
+    "traffic": "2.5K"
+  },
+  {
+    "domain": "dal.ca",
+    "sourceUrls": "2",
+    "mentions": "12",
+    "traffic": "2.8K"
+  },
+  {
+    "domain": "homeinspector.org",
+    "sourceUrls": "9",
+    "mentions": "12",
+    "traffic": "16"
+  },
+  {
+    "domain": "jcehrlich.com",
+    "sourceUrls": "4",
+    "mentions": "12",
+    "traffic": "216"
+  },
+  {
+    "domain": "moneysense.ca",
+    "sourceUrls": "2",
+    "mentions": "12",
+    "traffic": "0"
+  },
+  {
+    "domain": "bobvila.com",
+    "sourceUrls": "6",
+    "mentions": "11",
+    "traffic": "2"
+  },
+  {
+    "domain": "fullviewdigital.com",
+    "sourceUrls": "5",
+    "mentions": "11",
+    "traffic": "1"
+  },
+  {
+    "domain": "stclaircollege.ca",
+    "sourceUrls": "1",
+    "mentions": "11",
+    "traffic": "605"
+  },
+  {
+    "domain": "angi.com",
+    "sourceUrls": "10",
+    "mentions": "10",
+    "traffic": "25"
+  },
+  {
+    "domain": "canadianhomeinspection.com",
+    "sourceUrls": "7",
+    "mentions": "10",
+    "traffic": "1.6K"
+  },
+  {
+    "domain": "getnested.ca",
+    "sourceUrls": "1",
+    "mentions": "10",
+    "traffic": "280"
+  },
+  {
+    "domain": "gov.bc.ca",
+    "sourceUrls": "5",
+    "mentions": "10",
+    "traffic": "310"
+  },
+  {
+    "domain": "sonnet.ca",
+    "sourceUrls": "1",
+    "mentions": "10",
+    "traffic": "310"
+  },
+  {
+    "domain": "wowa.ca",
+    "sourceUrls": "1",
+    "mentions": "10",
+    "traffic": "3.5K"
+  },
+  {
+    "domain": "bcit.ca",
+    "sourceUrls": "2",
+    "mentions": "9",
+    "traffic": "830"
+  },
+  {
+    "domain": "homeinspectionscalgary.ca",
+    "sourceUrls": "4",
+    "mentions": "9",
+    "traffic": "242"
+  },
+  {
+    "domain": "legalline.ca",
+    "sourceUrls": "1",
+    "mentions": "9",
+    "traffic": "207"
+  },
+  {
+    "domain": "mosehomeinspection.com",
+    "sourceUrls": "2",
+    "mentions": "9",
+    "traffic": "513"
+  },
+  {
+    "domain": "niagaracollege.ca",
+    "sourceUrls": "1",
+    "mentions": "9",
+    "traffic": "621"
+  },
+  {
+    "domain": "sifton.com",
+    "sourceUrls": "1",
+    "mentions": "9",
+    "traffic": "180"
+  },
+  {
+    "domain": "stlawrencecollege.ca",
+    "sourceUrls": "1",
+    "mentions": "9",
+    "traffic": "1.2K"
+  },
+  {
+    "domain": "totalhomeinspection.com",
+    "sourceUrls": "1",
+    "mentions": "9",
+    "traffic": "2.6K"
+  },
+  {
+    "domain": "algonquincollege.com",
+    "sourceUrls": "1",
+    "mentions": "8",
+    "traffic": "4.5K"
+  },
+  {
+    "domain": "ateaseinspections.ca",
+    "sourceUrls": "6",
+    "mentions": "8",
+    "traffic": "2"
+  },
+  {
+    "domain": "flemingcollege.ca",
+    "sourceUrls": "1",
+    "mentions": "8",
+    "traffic": "1.5K"
+  },
+  {
+    "domain": "homeguide.com",
+    "sourceUrls": "3",
+    "mentions": "8",
+    "traffic": "0"
+  },
+  {
+    "domain": "homeinspectorpro.com",
+    "sourceUrls": "7",
+    "mentions": "8",
+    "traffic": "1.2K"
+  },
+  {
+    "domain": "scotthomeinspection.com",
+    "sourceUrls": "2",
+    "mentions": "8",
+    "traffic": "0"
+  },
+  {
+    "domain": "windowscanada.com",
+    "sourceUrls": "1",
+    "mentions": "8",
+    "traffic": "80"
+  },
+  {
+    "domain": "xplortek.ca",
+    "sourceUrls": "3",
+    "mentions": "8",
+    "traffic": "441"
+  },
+  {
+    "domain": "ezhomeinspectionsoftware.com",
+    "sourceUrls": "4",
+    "mentions": "7",
+    "traffic": "0"
+  },
+  {
+    "domain": "forbes.com",
+    "sourceUrls": "3",
+    "mentions": "7",
+    "traffic": "0"
+  },
+  {
+    "domain": "jagsidhu.com",
+    "sourceUrls": "1",
+    "mentions": "7",
+    "traffic": "798"
+  },
+  {
+    "domain": "jobbank.gc.ca",
+    "sourceUrls": "3",
+    "mentions": "7",
+    "traffic": "1.1K"
+  },
+  {
+    "domain": "redfin.com",
+    "sourceUrls": "6",
+    "mentions": "7",
+    "traffic": "4"
+  },
+  {
+    "domain": "themortgagereports.com",
+    "sourceUrls": "1",
+    "mentions": "7",
+    "traffic": "917"
+  },
+  {
+    "domain": "amerispec.ca",
+    "sourceUrls": "7",
+    "mentions": "6",
+    "traffic": "10.1K"
+  },
+  {
+    "domain": "atihomeinspectortraining.com",
+    "sourceUrls": "4",
+    "mentions": "6",
+    "traffic": "16"
+  },
+  {
+    "domain": "capterra.ca",
+    "sourceUrls": "7",
+    "mentions": "6",
+    "traffic": "93"
+  },
+  {
+    "domain": "centris.ca",
+    "sourceUrls": "2",
+    "mentions": "6",
+    "traffic": "318"
+  },
+  {
+    "domain": "coursecompare.ca",
+    "sourceUrls": "4",
+    "mentions": "6",
+    "traffic": "0"
+  },
+  {
+    "domain": "ellingwoodpro.com",
+    "sourceUrls": "2",
+    "mentions": "6",
+    "traffic": "0"
+  },
+  {
+    "domain": "georgiancollege.ca",
+    "sourceUrls": "1",
+    "mentions": "6",
+    "traffic": "90"
+  },
+  {
+    "domain": "getapp.com",
+    "sourceUrls": "8",
+    "mentions": "6",
+    "traffic": "0"
+  },
+  {
+    "domain": "homeinspecto.com",
+    "sourceUrls": "5",
+    "mentions": "6",
+    "traffic": "0"
+  },
+  {
+    "domain": "myaccuratehomeservices.com",
+    "sourceUrls": "3",
+    "mentions": "6",
+    "traffic": "112"
+  }
+]

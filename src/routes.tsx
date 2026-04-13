@@ -103,6 +103,7 @@ const EnvironmentalScreening = lazy(() => import('./pages/EnvironmentalScreening
 const BundledInspection = lazy(() => import('./pages/BundledInspection'));
 const WhatWeFind = lazy(() => import('./pages/WhatWeFind'));
 const InsuranceInspection = lazy(() => import('./pages/services/InsuranceInspection'));
+const TermiteInspection = lazy(() => import('./pages/services/TermiteInspection'));
 
 // Public client-facing pages (no auth required)
 const AgreementPage = lazy(() => import('./pages/AgreementPage'));
@@ -151,6 +152,7 @@ export const routes: RouteObject[] = [
       { path: 'services/contractor-oversight', element: <ContractorOversight /> },
       { path: 'services/same-day-home-inspection', element: <SameDayInspection /> },
       { path: 'services/insurance-home-inspection', element: <InsuranceInspection /> },
+      { path: 'services/termite-inspection', element: <TermiteInspection /> },
       { path: 'services/:serviceSlug/:citySlug', element: <ServiceCityPage /> },
 
       // AI visibility / brand pages

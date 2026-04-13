@@ -23,15 +23,30 @@ if (!keyMatch) { console.error('No SERP_API_KEY in .env.local'); process.exit(1)
 const KEY = keyMatch[1].trim();
 
 const competitors = [
-  { name: 'Carson Dunlop',         domain: 'carsondunlop.com' },
-  { name: 'Mike Holmes Inspections', domain: 'mikeholmesinspections.com' },
-  { name: 'EH Inspections',         domain: 'ehinspections.ca' },
-  { name: 'Rankin Inspection',       domain: 'rankininspection.ca' },
-  { name: 'Twin Peaks Inspections',  domain: 'twinpeaksinspections.ca' },
-  { name: 'Pillar To Post',          domain: 'pillartopost.com' },
-  { name: 'Inch by Inch',            domain: 'inchinch.ca' },
-  { name: 'Amerispec Canada',        domain: 'amerispec.ca' },
-  { name: 'ASADS (us)',              domain: 'asads.ca' },
+  // National / Franchise
+  { name: 'Mike Holmes Inspections',    domain: 'mikeholmesinspections.com' },
+  { name: 'AmeriSpec Canada',           domain: 'amerispec.ca' },
+  { name: 'Pillar To Post',             domain: 'pillartopost.com' },
+  { name: "A Buyer's Choice",           domain: 'abuyerschoice.com' },
+  { name: 'Carson Dunlop',              domain: 'carsondunlop.ca' },
+  // GTA / Multi-City
+  { name: 'Inch by Inch',               domain: 'inchbyinchinspections.com' },
+  { name: 'Twin Peaks',                 domain: 'twinpeaksinspections.ca' },
+  { name: 'Solex Group',                domain: 'solexgroup.ca' },
+  { name: 'GPI Home Inspections',       domain: 'gpiweb.ca' },
+  { name: 'Smart Choice Home & Mold',   domain: 'smartchoicehomeandmold.com' },
+  { name: 'Inspection Services Group',  domain: 'inspectionservicesgroup.com' },
+  // City-Specific
+  { name: 'HouseMaster Toronto',        domain: 'housemastertoronto.com' },
+  { name: 'EH Inspections',             domain: 'ehinspections.ca' },
+  { name: 'Rankin Home Inspections',    domain: 'rankinhomeinspections.ca' },
+  { name: 'MDHI Hamilton',              domain: 'mdhi.ca' },
+  { name: 'Robles Home Inspections',    domain: 'robleshomeinspections.com' },
+  { name: 'Legacy Home Inspection',     domain: 'legacyhomeinspection.ca' },
+  { name: 'Building Insights',          domain: 'building-insights.com' },
+  { name: '1st Call Home Inspections',  domain: '1stcallhomeinspections.com' },
+  // Us
+  { name: 'ASADS (us)',                 domain: 'asads.ca' },
 ];
 
 async function serpFetch(params) {

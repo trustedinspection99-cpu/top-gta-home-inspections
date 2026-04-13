@@ -1,0 +1,2828 @@
+{
+  "topicMeta": {
+    "aiVolume": "42.4K",
+    "totalBrands": 437,
+    "totalSourceDomains": 872,
+    "totalPrompts": 326,
+    "intentBreakdown": {
+      "informational": "54%",
+      "commercial": "17%",
+      "navigational": "15%",
+      "transactional": "7%",
+      "task": "4%"
+    }
+  },
+  "topBrandsPage1": [
+    {
+      "brand": "carson dunlop",
+      "mentions": 91,
+      "sourceDomains": 151
+    },
+    {
+      "brand": "cahpi",
+      "mentions": 63,
+      "sourceDomains": 154
+    },
+    {
+      "brand": "internachi",
+      "mentions": 55,
+      "sourceDomains": 238
+    },
+    {
+      "brand": "consumer protection bc",
+      "mentions": 38,
+      "sourceDomains": 71
+    },
+    {
+      "brand": "oahi",
+      "mentions": 36,
+      "sourceDomains": 90
+    },
+    {
+      "brand": "canadian institute of home inspectors",
+      "mentions": 26,
+      "sourceDomains": 53
+    },
+    {
+      "brand": "spectora",
+      "mentions": 24,
+      "sourceDomains": 130
+    },
+    {
+      "brand": "nait",
+      "mentions": 24,
+      "sourceDomains": 57
+    },
+    {
+      "brand": "sait",
+      "mentions": 24,
+      "sourceDomains": 57
+    },
+    {
+      "brand": "youtube",
+      "mentions": 22,
+      "sourceDomains": 128
+    }
+  ],
+  "topicsWithVolume": [
+    {
+      "topic": "Canadian Home Inspection",
+      "volume": 29000
+    },
+    {
+      "topic": "Home Inspection Checklists",
+      "volume": 4200
+    },
+    {
+      "topic": "Canadian Home Inspection Courses",
+      "volume": 3000
+    },
+    {
+      "topic": "BC Home Inspection & Training",
+      "volume": 1400
+    },
+    {
+      "topic": "Termite Signs & Home Inspection",
+      "volume": 1400
+    },
+    {
+      "topic": "Home Inspection Costs",
+      "volume": 1000
+    },
+    {
+      "topic": "Home Inspection Duration",
+      "volume": 901
+    },
+    {
+      "topic": "Carson Dunlop Home Inspection & Training",
+      "volume": 690
+    },
+    {
+      "topic": "Home Inspection Groups",
+      "volume": 389
+    },
+    {
+      "topic": "Home/Inspection Tools & Equipment",
+      "volume": 309
+    }
+  ],
+  "allBrandsScraped": [
+    {
+      "brand": "ble",
+      "mentions": 91,
+      "sourceDomains": 151,
+      "promptExample": "carson dunlop BC Home Inspection & Training"
+    },
+    {
+      "brand": "cahpi",
+      "mentions": 63,
+      "sourceDomains": 154,
+      "promptExample": "What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "internachi",
+      "mentions": 55,
+      "sourceDomains": 238,
+      "promptExample": "Home/Inspection Tools & Equipment"
+    },
+    {
+      "brand": "consumer protection bc",
+      "mentions": 38,
+      "sourceDomains": 71,
+      "promptExample": "BC Home Inspection & Training"
+    },
+    {
+      "brand": "oahi",
+      "mentions": 36,
+      "sourceDomains": 90,
+      "promptExample": "how to become home inspector"
+    },
+    {
+      "brand": "canadian institute of home inspectors",
+      "mentions": 26,
+      "sourceDomains": 53,
+      "promptExample": "home inspection course ontario"
+    },
+    {
+      "brand": "spectora",
+      "mentions": 24,
+      "sourceDomains": 130,
+      "promptExample": "Home/Inspection Tools & Equipment"
+    },
+    {
+      "brand": "nait",
+      "mentions": 24,
+      "sourceDomains": 57,
+      "promptExample": "how to become home inspector"
+    },
+    {
+      "brand": "sait",
+      "mentions": 24,
+      "sourceDomains": 57,
+      "promptExample": "how to become home inspector"
+    },
+    {
+      "brand": "youtube",
+      "mentions": 22,
+      "sourceDomains": 128,
+      "promptExample": "What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 21,
+      "sourceDomains": 75,
+      "promptExample": "ontario association of home inspectors home inspection training ontario"
+    },
+    {
+      "brand": "bcit",
+      "mentions": 19,
+      "sourceDomains": 44,
+      "promptExample": "BC Home Inspection & Training"
+    },
+    {
+      "brand": "the holmes academy",
+      "mentions": 19,
+      "sourceDomains": 38,
+      "promptExample": "BC Home Inspection & Training"
+    },
+    {
+      "brand": "inspect4canada",
+      "mentions": 16,
+      "sourceDomains": 44,
+      "promptExample": "BC Home Inspection & Training"
+    },
+    {
+      "brand": "ashi",
+      "mentions": 16,
+      "sourceDomains": 120,
+      "promptExample": "home inspection course ontario"
+    },
+    {
+      "brand": "george brown college",
+      "mentions": 15,
+      "sourceDomains": 45,
+      "promptExample": "how do i become a home inspector in ontario"
+    },
+    {
+      "brand": "reddit",
+      "mentions": 15,
+      "sourceDomains": 101,
+      "promptExample": "how long should a home inspection take"
+    },
+    {
+      "brand": "durham college",
+      "mentions": 15,
+      "sourceDomains": 50,
+      "promptExample": "how to become home inspector"
+    },
+    {
+      "brand": "hiabc",
+      "mentions": 14,
+      "sourceDomains": 46,
+      "promptExample": "home inspector course bc"
+    },
+    {
+      "brand": "mohawk college",
+      "mentions": 11,
+      "sourceDomains": 38,
+      "promptExample": "home inspection training ontario"
+    },
+    {
+      "brand": "ble",
+      "mentions": 11,
+      "sourceDomains": 49,
+      "promptExample": "home inspectors association bc BC Home Inspection & Training"
+    },
+    {
+      "brand": "assiniboine college",
+      "mentions": 10,
+      "sourceDomains": 42,
+      "promptExample": "how to become home inspector"
+    },
+    {
+      "brand": "home inspector pro",
+      "mentions": 10,
+      "sourceDomains": 51,
+      "promptExample": "What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "canadian association of home & property inspectors",
+      "mentions": 10,
+      "sourceDomains": 48,
+      "promptExample": "how to become home inspector"
+    },
+    {
+      "brand": "algonquin college",
+      "mentions": 9,
+      "sourceDomains": 45,
+      "promptExample": "Which cities in Canada have the best accredited home inspection programs (e.g., Winnipeg, Calgary, Edmonton, Alberta)?"
+    },
+    {
+      "brand": "the inspector training academy",
+      "mentions": 9,
+      "sourceDomains": 25,
+      "promptExample": "house inspection course bc"
+    },
+    {
+      "brand": "homegauge",
+      "mentions": 9,
+      "sourceDomains": 67,
+      "promptExample": "What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "cihi",
+      "mentions": 9,
+      "sourceDomains": 39,
+      "promptExample": "home inspection course ontario"
+    },
+    {
+      "brand": "ashton college",
+      "mentions": 9,
+      "sourceDomains": 30,
+      "promptExample": "how to become a home inspector in ontario canada"
+    },
+    {
+      "brand": "conestoga college",
+      "mentions": 9,
+      "sourceDomains": 31,
+      "promptExample": "home inspection training ontario"
+    },
+    {
+      "brand": "ble",
+      "mentions": 8,
+      "sourceDomains": 36,
+      "promptExample": "seneca home inspection course ontario"
+    },
+    {
+      "brand": "service alberta",
+      "mentions": 8,
+      "sourceDomains": 29,
+      "promptExample": "How do I compare different home inspection courses in Canada in terms of curriculum, duration, and cost?"
+    },
+    {
+      "brand": "seneca college",
+      "mentions": 8,
+      "sourceDomains": 27,
+      "promptExample": "how do i become a home inspector"
+    },
+    {
+      "brand": "innovation, science and economic development canada",
+      "mentions": 8,
+      "sourceDomains": 60,
+      "promptExample": "what does home inspection cover"
+    },
+    {
+      "brand": "inspector toolbelt",
+      "mentions": 8,
+      "sourceDomains": 41,
+      "promptExample": "What are the must-have features to look for in home inspection software for a professional practice?"
+    },
+    {
+      "brand": "inspection support network",
+      "mentions": 7,
+      "sourceDomains": 49,
+      "promptExample": "What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "cibc",
+      "mentions": 7,
+      "sourceDomains": 45,
+      "promptExample": "what does home inspection cover"
+    },
+    {
+      "brand": "klein tools",
+      "mentions": 6,
+      "sourceDomains": 64,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "winright law",
+      "mentions": 6,
+      "sourceDomains": 42,
+      "promptExample": "house inspection"
+    },
+    {
+      "brand": "cpbc",
+      "mentions": 6,
+      "sourceDomains": 18,
+      "promptExample": "BC Home Inspection & Training"
+    },
+    {
+      "brand": "ble",
+      "mentions": 6,
+      "sourceDomains": 52,
+      "promptExample": "flir Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "nhicc",
+      "mentions": 6,
+      "sourceDomains": 45,
+      "promptExample": "What are the most common issues found in house inspections in Canada, and how should I prioritize repairs?"
+    },
+    {
+      "brand": "homestars",
+      "mentions": 6,
+      "sourceDomains": 43,
+      "promptExample": "home inspection british columbia"
+    },
+    {
+      "brand": "mike holmes inspections",
+      "mentions": 6,
+      "sourceDomains": 41,
+      "promptExample": "cost of home inspection ontario"
+    },
+    {
+      "brand": "phii",
+      "mentions": 6,
+      "sourceDomains": 31,
+      "promptExample": "home inspection course edmonton"
+    },
+    {
+      "brand": "ica school",
+      "mentions": 6,
+      "sourceDomains": 50,
+      "promptExample": "home inspection course edmonton"
+    },
+    {
+      "brand": "rocket mortgage",
+      "mentions": 5,
+      "sourceDomains": 53,
+      "promptExample": "How do home inspection prices vary by location and home size?"
+    },
+    {
+      "brand": "wett",
+      "mentions": 5,
+      "sourceDomains": 19,
+      "promptExample": "What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "american society of home inspectors",
+      "mentions": 5,
+      "sourceDomains": 41,
+      "promptExample": "What are the essential home inspection tools every inspector should own?"
+    },
+    {
+      "brand": "fleming college",
+      "mentions": 5,
+      "sourceDomains": 27,
+      "promptExample": "house inspector training"
+    },
+    {
+      "brand": "ble",
+      "mentions": 5,
+      "sourceDomains": 26,
+      "promptExample": "amerispec house inspection services"
+    },
+    {
+      "brand": "humber",
+      "mentions": 5,
+      "sourceDomains": 19,
+      "promptExample": "home inspection course ontario"
+    },
+    {
+      "brand": "niagara college",
+      "mentions": 5,
+      "sourceDomains": 32,
+      "promptExample": "how can i become a home inspector"
+    },
+    {
+      "brand": "orkin",
+      "mentions": 4,
+      "sourceDomains": 22,
+      "promptExample": "how do i tell if i have termites"
+    },
+    {
+      "brand": "zolo",
+      "mentions": 4,
+      "sourceDomains": 34,
+      "promptExample": "house inspection checklist ontario"
+    },
+    {
+      "brand": "lambton college",
+      "mentions": 4,
+      "sourceDomains": 19,
+      "promptExample": "home inspection course ontario"
+    },
+    {
+      "brand": "professional home inspection institute",
+      "mentions": 4,
+      "sourceDomains": 20,
+      "promptExample": "BC Home Inspection & Training"
+    },
+    {
+      "brand": "canadian association of home and property inspectors",
+      "mentions": 4,
+      "sourceDomains": 28,
+      "promptExample": "What should I look for during a home inspection checklist and how can I prepare for it?"
+    },
+    {
+      "brand": "north 49 home inspections",
+      "mentions": 4,
+      "sourceDomains": 41,
+      "promptExample": "Hey, what’s the best way to choose a reliable home inspection group in Edmonton?"
+    },
+    {
+      "brand": "national home inspector certification council",
+      "mentions": 4,
+      "sourceDomains": 27,
+      "promptExample": "How do I compare different home inspection courses in Canada in terms of curriculum, duration, and cost?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 4,
+      "sourceDomains": 25,
+      "promptExample": "scribeware What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "triplett",
+      "mentions": 4,
+      "sourceDomains": 24,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "cannachi",
+      "mentions": 4,
+      "sourceDomains": 17,
+      "promptExample": "What should I look for when selecting a Vancouver BC home inspector training course (duration, cost, curriculum)?"
+    },
+    {
+      "brand": "st. lawrence college",
+      "mentions": 4,
+      "sourceDomains": 23,
+      "promptExample": "home inspection course ontario"
+    },
+    {
+      "brand": "tarion",
+      "mentions": 4,
+      "sourceDomains": 28,
+      "promptExample": "house inspection services"
+    },
+    {
+      "brand": "seneca polytechnic",
+      "mentions": 4,
+      "sourceDomains": 29,
+      "promptExample": "How do I compare different home inspection courses in Canada in terms of curriculum, duration, and cost?"
+    },
+    {
+      "brand": "a step above inspections",
+      "mentions": 4,
+      "sourceDomains": 34,
+      "promptExample": "home inspection british columbia"
+    },
+    {
+      "brand": "a buyer's choice home inspections",
+      "mentions": 3,
+      "sourceDomains": 32,
+      "promptExample": "Home Inspection Duration"
+    },
+    {
+      "brand": "depstech",
+      "mentions": 3,
+      "sourceDomains": 40,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "st. clair college",
+      "mentions": 3,
+      "sourceDomains": 19,
+      "promptExample": "home inspection training ontario"
+    },
+    {
+      "brand": "ble",
+      "mentions": 3,
+      "sourceDomains": 24,
+      "promptExample": "federal pacific Can you recommend the best ways to save on a home inspection without sacrificing quality?"
+    },
+    {
+      "brand": "google",
+      "mentions": 3,
+      "sourceDomains": 20,
+      "promptExample": "how to become a home inspector in ontario canada"
+    },
+    {
+      "brand": "reed instruments",
+      "mentions": 3,
+      "sourceDomains": 31,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "rew",
+      "mentions": 3,
+      "sourceDomains": 20,
+      "promptExample": "ontario home inspection checklist"
+    },
+    {
+      "brand": "academy of learning",
+      "mentions": 3,
+      "sourceDomains": 20,
+      "promptExample": "home inspector course alberta"
+    },
+    {
+      "brand": "service alberta",
+      "mentions": 3,
+      "sourceDomains": 15,
+      "promptExample": "how to become a home inspector in alberta"
+    },
+    {
+      "brand": "ica",
+      "mentions": 3,
+      "sourceDomains": 25,
+      "promptExample": "home inspection course in ontario"
+    },
+    {
+      "brand": "carson dunlop & associates",
+      "mentions": 3,
+      "sourceDomains": 18,
+      "promptExample": "home inspection certified"
+    },
+    {
+      "brand": "mike holmes",
+      "mentions": 3,
+      "sourceDomains": 15,
+      "promptExample": "holmes inspection checklist"
+    },
+    {
+      "brand": "isn",
+      "mentions": 3,
+      "sourceDomains": 23,
+      "promptExample": "What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 3,
+      "sourceDomains": 40,
+      "promptExample": "teslong Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "bow valley college",
+      "mentions": 3,
+      "sourceDomains": 15,
+      "promptExample": "home inspector course alberta"
+    },
+    {
+      "brand": "dalhousie university",
+      "mentions": 3,
+      "sourceDomains": 23,
+      "promptExample": "house inspector training"
+    },
+    {
+      "brand": "gemini",
+      "mentions": 3,
+      "sourceDomains": 16,
+      "promptExample": "What are the best Carson Dunlop courses for someone new to home inspections?"
+    },
+    {
+      "brand": "alis",
+      "mentions": 3,
+      "sourceDomains": 18,
+      "promptExample": "home inspection course edmonton"
+    },
+    {
+      "brand": "angi",
+      "mentions": 3,
+      "sourceDomains": 37,
+      "promptExample": "How do home inspection prices vary by location and home size?"
+    },
+    {
+      "brand": "eneris",
+      "mentions": 3,
+      "sourceDomains": 8,
+      "promptExample": "What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "ridgid",
+      "mentions": 3,
+      "sourceDomains": 40,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "the home depot",
+      "mentions": 3,
+      "sourceDomains": 23,
+      "promptExample": "house inspection list"
+    },
+    {
+      "brand": "certified master inspector",
+      "mentions": 3,
+      "sourceDomains": 14,
+      "promptExample": "home inspection certified"
+    },
+    {
+      "brand": "ble",
+      "mentions": 3,
+      "sourceDomains": 12,
+      "promptExample": "pillar to post house inspection services"
+    },
+    {
+      "brand": "georgian college",
+      "mentions": 3,
+      "sourceDomains": 26,
+      "promptExample": "How do I compare different home inspection courses in Canada in terms of curriculum, duration, and cost?"
+    },
+    {
+      "brand": "national home inspector examination",
+      "mentions": 3,
+      "sourceDomains": 17,
+      "promptExample": "how to become home inspector"
+    },
+    {
+      "brand": "george brown",
+      "mentions": 3,
+      "sourceDomains": 23,
+      "promptExample": "home inspection course in ontario"
+    },
+    {
+      "brand": "inspecus",
+      "mentions": 3,
+      "sourceDomains": 34,
+      "promptExample": "Hey, what’s the best way to choose a reliable home inspection group in Edmonton?"
+    },
+    {
+      "brand": "holmes academy",
+      "mentions": 3,
+      "sourceDomains": 25,
+      "promptExample": "home inspection course edmonton"
+    },
+    {
+      "brand": "asttbc",
+      "mentions": 3,
+      "sourceDomains": 14,
+      "promptExample": "building inspector course bc"
+    },
+    {
+      "brand": "government of alberta",
+      "mentions": 3,
+      "sourceDomains": 19,
+      "promptExample": "home inspector certification"
+    },
+    {
+      "brand": "redfin",
+      "mentions": 3,
+      "sourceDomains": 35,
+      "promptExample": "How long does a typical home inspection usually take, and what factors affect the duration?"
+    },
+    {
+      "brand": "a buyer's choice",
+      "mentions": 2,
+      "sourceDomains": 10,
+      "promptExample": "Hey, what’s the best way to choose a reliable home inspection group in Edmonton?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 2,
+      "sourceDomains": 13,
+      "promptExample": "boabc how to become a building inspector in bc"
+    },
+    {
+      "brand": "bc home inspection & training",
+      "mentions": 2,
+      "sourceDomains": 10,
+      "promptExample": "BC Home Inspection & Training"
+    },
+    {
+      "brand": "palmtech",
+      "mentions": 2,
+      "sourceDomains": 13,
+      "promptExample": "How does Home Inspector Pro compare to other home inspection software options in terms of reporting and ease of use?"
+    },
+    {
+      "brand": "canadian national association of certified home inspectors",
+      "mentions": 2,
+      "sourceDomains": 17,
+      "promptExample": "What certifications or licenses are typically required after completing a Canadian home inspection course and how do I pursue them?"
+    },
+    {
+      "brand": "inspector preston",
+      "mentions": 2,
+      "sourceDomains": 13,
+      "promptExample": "how to become home inspector"
+    },
+    {
+      "brand": "terminix",
+      "mentions": 2,
+      "sourceDomains": 15,
+      "promptExample": "indication of termites"
+    },
+    {
+      "brand": "alberta property inspection",
+      "mentions": 2,
+      "sourceDomains": 20,
+      "promptExample": "house inspection"
+    },
+    {
+      "brand": "teledyne",
+      "mentions": 2,
+      "sourceDomains": 20,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "ez home inspection software",
+      "mentions": 2,
+      "sourceDomains": 32,
+      "promptExample": "Home Inspection Software"
+    },
+    {
+      "brand": "amerisave",
+      "mentions": 2,
+      "sourceDomains": 24,
+      "promptExample": "What should I look for during a home inspection checklist and how can I prepare for it?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 2,
+      "sourceDomains": 9,
+      "promptExample": "indeed how much do home inspectors make"
+    },
+    {
+      "brand": "lower.com",
+      "mentions": 2,
+      "sourceDomains": 50,
+      "promptExample": "How do home inspection prices vary by location and home size?"
+    },
+    {
+      "brand": "calpro inspection",
+      "mentions": 2,
+      "sourceDomains": 22,
+      "promptExample": "Home Inspection Duration"
+    },
+    {
+      "brand": "mohawk",
+      "mentions": 2,
+      "sourceDomains": 16,
+      "promptExample": "home inspection course in ontario"
+    },
+    {
+      "brand": "canadian home inspection exams",
+      "mentions": 2,
+      "sourceDomains": 9,
+      "promptExample": "house inspection course bc"
+    },
+    {
+      "brand": "odds on home inspection",
+      "mentions": 2,
+      "sourceDomains": 14,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "access home inspection services",
+      "mentions": 2,
+      "sourceDomains": 27,
+      "promptExample": "Hey, what’s the best way to choose a reliable home inspection group in Edmonton?"
+    },
+    {
+      "brand": "zapier",
+      "mentions": 2,
+      "sourceDomains": 16,
+      "promptExample": "What are the must-have features to look for in home inspection software for a professional practice?"
+    },
+    {
+      "brand": "sonnet insurance",
+      "mentions": 2,
+      "sourceDomains": 16,
+      "promptExample": "house inspection list"
+    },
+    {
+      "brand": "canadian home inspection services",
+      "mentions": 2,
+      "sourceDomains": 9,
+      "promptExample": "how long should a home inspection take"
+    },
+    {
+      "brand": "ble",
+      "mentions": 2,
+      "sourceDomains": 10,
+      "promptExample": "cabin to castle Hey, what’s the best way to choose a reliable home inspection group in Edmonton?"
+    },
+    {
+      "brand": "clearview home & property inspections",
+      "mentions": 2,
+      "sourceDomains": 18,
+      "promptExample": "home inspection toronto gta"
+    },
+    {
+      "brand": "home inspection association of bc",
+      "mentions": 2,
+      "sourceDomains": 8,
+      "promptExample": "How can I become a certified home inspector in BC and what are the prerequisites?"
+    },
+    {
+      "brand": "international association of certified home inspectors",
+      "mentions": 2,
+      "sourceDomains": 22,
+      "promptExample": "home inspection report"
+    },
+    {
+      "brand": "national home inspector exam",
+      "mentions": 2,
+      "sourceDomains": 10,
+      "promptExample": "Which cities in Canada have the best accredited home inspection programs (e.g., Winnipeg, Calgary, Edmonton, Alberta)?"
+    },
+    {
+      "brand": "alberta",
+      "mentions": 2,
+      "sourceDomains": 11,
+      "promptExample": "how do i become a home inspector"
+    },
+    {
+      "brand": "home depot",
+      "mentions": 2,
+      "sourceDomains": 3,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "home depot",
+      "mentions": 2,
+      "sourceDomains": 25,
+      "promptExample": "What should I expect to pay for a typical 3-bedroom house inspection in my area?"
+    },
+    {
+      "brand": "internachi school",
+      "mentions": 2,
+      "sourceDomains": 23,
+      "promptExample": "house inspector course bc"
+    },
+    {
+      "brand": "western pacific property inspection institute",
+      "mentions": 2,
+      "sourceDomains": 12,
+      "promptExample": "What should I look for when selecting a Vancouver BC home inspector training course (duration, cost, curriculum)?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 2,
+      "sourceDomains": 19,
+      "promptExample": "national property inspections Home Inspection Groups"
+    },
+    {
+      "brand": "humber college",
+      "mentions": 2,
+      "sourceDomains": 15,
+      "promptExample": "Canadian Home Inspection Courses"
+    },
+    {
+      "brand": "csa",
+      "mentions": 2,
+      "sourceDomains": 11,
+      "promptExample": "Do inspections groups typically offer commercial and residential services, and which should I pick for my property?"
+    },
+    {
+      "brand": "justin havre real estate team",
+      "mentions": 2,
+      "sourceDomains": 22,
+      "promptExample": "house inspection price"
+    },
+    {
+      "brand": "inspection certification associates",
+      "mentions": 2,
+      "sourceDomains": 13,
+      "promptExample": "how to become house inspector"
+    },
+    {
+      "brand": "fluke",
+      "mentions": 2,
+      "sourceDomains": 48,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "ashton college bcit",
+      "mentions": 2,
+      "sourceDomains": 9,
+      "promptExample": "house inspection course bc"
+    },
+    {
+      "brand": "fanshawe college",
+      "mentions": 2,
+      "sourceDomains": 17,
+      "promptExample": "class home inspection"
+    },
+    {
+      "brand": "lowe's",
+      "mentions": 2,
+      "sourceDomains": 3,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "enercare",
+      "mentions": 2,
+      "sourceDomains": 15,
+      "promptExample": "ontario home inspection checklist"
+    },
+    {
+      "brand": "ble",
+      "mentions": 2,
+      "sourceDomains": 11,
+      "promptExample": "tap inspect What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "conestoga",
+      "mentions": 2,
+      "sourceDomains": 17,
+      "promptExample": "home inspection course ontario"
+    },
+    {
+      "brand": "zinsco",
+      "mentions": 2,
+      "sourceDomains": 19,
+      "promptExample": "Which items on a home inspection checklist most affect resale value or future repairs?"
+    },
+    {
+      "brand": "canadian home inspection exam",
+      "mentions": 2,
+      "sourceDomains": 6,
+      "promptExample": "What certifications or licenses are typically required after completing a Canadian home inspection course and how do I pursue them?"
+    },
+    {
+      "brand": "consumer reports",
+      "mentions": 2,
+      "sourceDomains": 41,
+      "promptExample": "Can you recommend the best ways to save on a home inspection without sacrificing quality?"
+    },
+    {
+      "brand": "phpic",
+      "mentions": 2,
+      "sourceDomains": 0,
+      "promptExample": "What questions should I ask a home inspectors group before scheduling an inspection?"
+    },
+    {
+      "brand": "phpic",
+      "mentions": 2,
+      "sourceDomains": 13,
+      "promptExample": "What are the must-have features to look for in home inspection software for a professional practice?"
+    },
+    {
+      "brand": "inspection works",
+      "mentions": 2,
+      "sourceDomains": 29,
+      "promptExample": "home inspection course edmonton"
+    },
+    {
+      "brand": "consumer protection",
+      "mentions": 2,
+      "sourceDomains": 22,
+      "promptExample": "Are there province-specific considerations I should know when following a home inspection checklist in Canada?"
+    },
+    {
+      "brand": "zillow",
+      "mentions": 2,
+      "sourceDomains": 30,
+      "promptExample": "What should I look for during a home inspection checklist and how can I prepare for it?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 2,
+      "sourceDomains": 14,
+      "promptExample": "british columbia institute of technology Which cities in Canada have the best accredited home inspection programs (e.g., Winnipeg, Calgary, Edmonton, "
+    },
+    {
+      "brand": "milwaukee",
+      "mentions": 2,
+      "sourceDomains": 20,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "reed",
+      "mentions": 2,
+      "sourceDomains": 23,
+      "promptExample": "Can you compare top inspection tool sets for a comprehensive home inspection?"
+    },
+    {
+      "brand": "quickbooks",
+      "mentions": 2,
+      "sourceDomains": 21,
+      "promptExample": "What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "bosch",
+      "mentions": 2,
+      "sourceDomains": 43,
+      "promptExample": "Can you compare top inspection tool sets for a comprehensive home inspection?"
+    },
+    {
+      "brand": "jobber",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "rocky mountain home inspections",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "mose home inspection",
+      "mentions": 1,
+      "sourceDomains": 9,
+      "promptExample": "home inspection career"
+    },
+    {
+      "brand": "zoom",
+      "mentions": 1,
+      "sourceDomains": 19,
+      "promptExample": "Canadian Home Inspection Courses"
+    },
+    {
+      "brand": "carson dunlop canada",
+      "mentions": 1,
+      "sourceDomains": 15,
+      "promptExample": "Canadian Home Inspection Courses"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 16,
+      "promptExample": "inspect montana Do inspections groups typically offer commercial and residential services, and which should I pick for my property?"
+    },
+    {
+      "brand": "hikmicro",
+      "mentions": 1,
+      "sourceDomains": 23,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "centennial college",
+      "mentions": 1,
+      "sourceDomains": 14,
+      "promptExample": "Which cities in Canada have the best accredited home inspection programs (e.g., Winnipeg, Calgary, Edmonton, Alberta)?"
+    },
+    {
+      "brand": "hitittoday.com",
+      "mentions": 1,
+      "sourceDomains": 4,
+      "promptExample": "Can you compare top inspection tool sets for a comprehensive home inspection?"
+    },
+    {
+      "brand": "homebase credit union",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Is there a difference in time between a condo inspection and a single-family home inspection?"
+    },
+    {
+      "brand": "aolcbrampton",
+      "mentions": 1,
+      "sourceDomains": 4,
+      "promptExample": "house inspection classes"
+    },
+    {
+      "brand": "remax",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "how much is a home inspection in ontario"
+    },
+    {
+      "brand": "scott home inspection",
+      "mentions": 1,
+      "sourceDomains": 6,
+      "promptExample": "home inspection tools"
+    },
+    {
+      "brand": "humber polytechnic",
+      "mentions": 1,
+      "sourceDomains": 4,
+      "promptExample": "What are the top online and in-person Canadian courses to become a certified home inspector?"
+    },
+    {
+      "brand": "gta-homes",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "house inspection list"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 3,
+      "promptExample": "husky Can you compare top inspection tool sets for a comprehensive home inspection?"
+    },
+    {
+      "brand": "whittinspections",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Is there a difference in time between a condo inspection and a single-family home inspection?"
+    },
+    {
+      "brand": "nationwide mutual insurance",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "what is a home inspection"
+    },
+    {
+      "brand": "job bank",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "how much do home inspectors make in ontario"
+    },
+    {
+      "brand": "blythwood homes",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "what to look for in a home inspection"
+    },
+    {
+      "brand": "tri-county inspections",
+      "mentions": 1,
+      "sourceDomains": 31,
+      "promptExample": "Can you recommend the best ways to save on a home inspection without sacrificing quality?"
+    },
+    {
+      "brand": "accurate home inspection",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "sheridan caps",
+      "mentions": 1,
+      "sourceDomains": 10,
+      "promptExample": "home inspection classes"
+    },
+    {
+      "brand": "mikeholmesinspections",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "how much is a home inspection in ontario"
+    },
+    {
+      "brand": "southern alberta institute of tech",
+      "mentions": 1,
+      "sourceDomains": 4,
+      "promptExample": "What are the top online and in-person Canadian courses to become a certified home inspector?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "inspect canada what does a house inspector do"
+    },
+    {
+      "brand": "century 21",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "what to look for in a home inspection"
+    },
+    {
+      "brand": "loyalistcollege",
+      "mentions": 1,
+      "sourceDomains": 10,
+      "promptExample": "home inspection classes"
+    },
+    {
+      "brand": "ontariocolleges",
+      "mentions": 1,
+      "sourceDomains": 4,
+      "promptExample": "house inspection classes"
+    },
+    {
+      "brand": "home-check home inspections",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "streamlight",
+      "mentions": 1,
+      "sourceDomains": 4,
+      "promptExample": "Can you compare top inspection tool sets for a comprehensive home inspection?"
+    },
+    {
+      "brand": "defelsko",
+      "mentions": 1,
+      "sourceDomains": 20,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "cpbc",
+      "mentions": 1,
+      "sourceDomains": 6,
+      "promptExample": "How can I become a certified home inspector in BC and what are the prerequisites?"
+    },
+    {
+      "brand": "northern alberta institute of technology",
+      "mentions": 1,
+      "sourceDomains": 15,
+      "promptExample": "Canadian Home Inspection Courses"
+    },
+    {
+      "brand": "master inspector canada",
+      "mentions": 1,
+      "sourceDomains": 9,
+      "promptExample": "Home Inspection Groups"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "allstate Home Inspection Checklists"
+    },
+    {
+      "brand": "trustanalytica",
+      "mentions": 1,
+      "sourceDomains": 12,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "arag",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "What questions should I ask a home inspectors group before scheduling an inspection?"
+    },
+    {
+      "brand": "at ease property inspections",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "What should I expect to pay for a typical 3-bedroom house inspection in my area?"
+    },
+    {
+      "brand": "twin peaks",
+      "mentions": 1,
+      "sourceDomains": 15,
+      "promptExample": "home inspection toronto gta"
+    },
+    {
+      "brand": "a peace of home inspections",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "dentec pest management",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "how to tell if you have white ants"
+    },
+    {
+      "brand": "homeadvisor",
+      "mentions": 1,
+      "sourceDomains": 10,
+      "promptExample": "What factors influence the cost of a home inspection and how can I estimate my total expense?"
+    },
+    {
+      "brand": "wagner meters",
+      "mentions": 1,
+      "sourceDomains": 6,
+      "promptExample": "home inspection tools"
+    },
+    {
+      "brand": "heamar",
+      "mentions": 1,
+      "sourceDomains": 25,
+      "promptExample": "How do I choose the right inspection tools for different materials and building types?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 13,
+      "promptExample": "vigilant inspection services how to get into home inspections"
+    },
+    {
+      "brand": "leica",
+      "mentions": 1,
+      "sourceDomains": 25,
+      "promptExample": "How do I choose the right inspection tools for different materials and building types?"
+    },
+    {
+      "brand": "assiniboine community college",
+      "mentions": 1,
+      "sourceDomains": 7,
+      "promptExample": "Which cities in Canada have the best accredited home inspection programs (e.g., Winnipeg, Calgary, Edmonton, Alberta)?"
+    },
+    {
+      "brand": "zoro.com",
+      "mentions": 1,
+      "sourceDomains": 4,
+      "promptExample": "Can you compare top inspection tool sets for a comprehensive home inspection?"
+    },
+    {
+      "brand": "scribd",
+      "mentions": 1,
+      "sourceDomains": 16,
+      "promptExample": "What should I look for during a home inspection checklist and how can I prepare for it?"
+    },
+    {
+      "brand": "solterra",
+      "mentions": 1,
+      "sourceDomains": 16,
+      "promptExample": "What should I look for during a home inspection checklist and how can I prepare for it?"
+    },
+    {
+      "brand": "green giant home & commercial",
+      "mentions": 1,
+      "sourceDomains": 13,
+      "promptExample": "how do i tell if i have termites"
+    },
+    {
+      "brand": "royal lepage",
+      "mentions": 1,
+      "sourceDomains": 14,
+      "promptExample": "what does a home inspection include"
+    },
+    {
+      "brand": "brookstone inspection",
+      "mentions": 1,
+      "sourceDomains": 12,
+      "promptExample": "home inspection course edmonton"
+    },
+    {
+      "brand": "kms tools",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 6,
+      "promptExample": "aolcc home inspection course winnipeg"
+    },
+    {
+      "brand": "ecoline windows",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "what to look for in a home inspection"
+    },
+    {
+      "brand": "diy pest control",
+      "mentions": 1,
+      "sourceDomains": 7,
+      "promptExample": "what does termites look like"
+    },
+    {
+      "brand": "advantage inspection service",
+      "mentions": 1,
+      "sourceDomains": 31,
+      "promptExample": "Can you recommend the best ways to save on a home inspection without sacrificing quality?"
+    },
+    {
+      "brand": "wowa.ca",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "how much does it cost to inspect a house"
+    },
+    {
+      "brand": "freestone properties",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "what does a house inspector do"
+    },
+    {
+      "brand": "tri-countyinspections.com",
+      "mentions": 1,
+      "sourceDomains": 31,
+      "promptExample": "Can you recommend the best ways to save on a home inspection without sacrificing quality?"
+    },
+    {
+      "brand": "phic",
+      "mentions": 1,
+      "sourceDomains": 6,
+      "promptExample": "home inspector classes"
+    },
+    {
+      "brand": "drrc",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "how to become home inspector in ontario"
+    },
+    {
+      "brand": "elite group home inspections",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "Home Inspection Groups"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "cornerstonehi Is there a difference in time between a condo inspection and a single-family home inspection?"
+    },
+    {
+      "brand": "progressive",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "what is a home inspection"
+    },
+    {
+      "brand": "home inspection act",
+      "mentions": 1,
+      "sourceDomains": 7,
+      "promptExample": "house inspection license"
+    },
+    {
+      "brand": "pillar to post home inspectors",
+      "mentions": 1,
+      "sourceDomains": 12,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "homeguide",
+      "mentions": 1,
+      "sourceDomains": 21,
+      "promptExample": "How do home inspection prices vary by location and home size?"
+    },
+    {
+      "brand": "bob vila",
+      "mentions": 1,
+      "sourceDomains": 23,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "the spruce",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "how to tell if you have white ants"
+    },
+    {
+      "brand": "dmc home inspections",
+      "mentions": 1,
+      "sourceDomains": 21,
+      "promptExample": "How do home inspection prices vary by location and home size?"
+    },
+    {
+      "brand": "astm",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "Do inspections groups typically offer commercial and residential services, and which should I pick for my property?"
+    },
+    {
+      "brand": "vevor",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 20,
+      "promptExample": "rolson Can you compare top inspection tool sets for a comprehensive home inspection?"
+    },
+    {
+      "brand": "extech",
+      "mentions": 1,
+      "sourceDomains": 20,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "albertaachi",
+      "mentions": 1,
+      "sourceDomains": 13,
+      "promptExample": "house inspector certification"
+    },
+    {
+      "brand": "certified commercial property inspectors association",
+      "mentions": 1,
+      "sourceDomains": 16,
+      "promptExample": "Do inspections groups typically offer commercial and residential services, and which should I pick for my property?"
+    },
+    {
+      "brand": "angie's list",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "What questions should I ask a home inspectors group before scheduling an inspection?"
+    },
+    {
+      "brand": "digital camera world",
+      "mentions": 1,
+      "sourceDomains": 23,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "iirt",
+      "mentions": 1,
+      "sourceDomains": 23,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "mattei realty",
+      "mentions": 1,
+      "sourceDomains": 9,
+      "promptExample": "home inspector certification ontario"
+    },
+    {
+      "brand": "a-action home inspection",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "what does a house inspector do"
+    },
+    {
+      "brand": "amazonbasics",
+      "mentions": 1,
+      "sourceDomains": 20,
+      "promptExample": "Can you compare top inspection tool sets for a comprehensive home inspection?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "ica home inspection classes online"
+    },
+    {
+      "brand": "ica",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "ontario home inspector course"
+    },
+    {
+      "brand": "ica",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "how to become house inspector"
+    },
+    {
+      "brand": "ica",
+      "mentions": 1,
+      "sourceDomains": 6,
+      "promptExample": "What are the best Carson Dunlop courses for someone new to home inspections?"
+    },
+    {
+      "brand": "the steamboat",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "what does a house inspector do"
+    },
+    {
+      "brand": "polybutylene",
+      "mentions": 1,
+      "sourceDomains": 13,
+      "promptExample": "Which items on a home inspection checklist most affect resale value or future repairs?"
+    },
+    {
+      "brand": "apollo tools",
+      "mentions": 1,
+      "sourceDomains": 3,
+      "promptExample": "Can you compare top inspection tool sets for a comprehensive home inspection?"
+    },
+    {
+      "brand": "1st reporting",
+      "mentions": 1,
+      "sourceDomains": 25,
+      "promptExample": "How do I choose the right inspection tools for different materials and building types?"
+    },
+    {
+      "brand": "prospections",
+      "mentions": 1,
+      "sourceDomains": 3,
+      "promptExample": "inspection home"
+    },
+    {
+      "brand": "pacific rim early childhood institute",
+      "mentions": 1,
+      "sourceDomains": 4,
+      "promptExample": "house inspection classes"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "rbq How do I compare different home inspection courses in Canada in terms of curriculum, duration, and cost?"
+    },
+    {
+      "brand": "quickbooks online",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "clearview",
+      "mentions": 1,
+      "sourceDomains": 15,
+      "promptExample": "home inspection toronto gta"
+    },
+    {
+      "brand": "algonquin",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "How do I compare different home inspection courses in Canada in terms of curriculum, duration, and cost?"
+    },
+    {
+      "brand": "first choice inspectors",
+      "mentions": 1,
+      "sourceDomains": 12,
+      "promptExample": "Hey, what’s the best way to choose a reliable home inspection group in Edmonton?"
+    },
+    {
+      "brand": "pest doctors",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "how to tell if you have white ants"
+    },
+    {
+      "brand": "today's homeowner",
+      "mentions": 1,
+      "sourceDomains": 21,
+      "promptExample": "How do home inspection prices vary by location and home size?"
+    },
+    {
+      "brand": "peer review inspection",
+      "mentions": 1,
+      "sourceDomains": 12,
+      "promptExample": "home inspector license"
+    },
+    {
+      "brand": "saskatchewan polytechnic",
+      "mentions": 1,
+      "sourceDomains": 9,
+      "promptExample": "home inspection course fees"
+    },
+    {
+      "brand": "brookstoneinspection.com",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "house inspection list"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 10,
+      "promptExample": "ac online online home inspection course"
+    },
+    {
+      "brand": "northstar inspections",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "how long does it take for a home inspection"
+    },
+    {
+      "brand": "business training media",
+      "mentions": 1,
+      "sourceDomains": 12,
+      "promptExample": "house inspector classes"
+    },
+    {
+      "brand": "sun life",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "what does home inspection cover"
+    },
+    {
+      "brand": "wexford insurance",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "What are the essential home inspection tools every inspector should own?"
+    },
+    {
+      "brand": "team realty",
+      "mentions": 1,
+      "sourceDomains": 14,
+      "promptExample": "what does a home inspection include"
+    },
+    {
+      "brand": "thegenesisgroup.ca",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "house inspection list"
+    },
+    {
+      "brand": "city of toronto",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "toronto home inspection"
+    },
+    {
+      "brand": "rebound hammer",
+      "mentions": 1,
+      "sourceDomains": 25,
+      "promptExample": "How do I choose the right inspection tools for different materials and building types?"
+    },
+    {
+      "brand": "geico",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "house inspection"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "columbia Home Inspection Checklists"
+    },
+    {
+      "brand": "jagsidhu",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "how much is a home inspection in ontario"
+    },
+    {
+      "brand": "canadian national home inspector certification council",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "ontario home inspector course"
+    },
+    {
+      "brand": "elevate inspection",
+      "mentions": 1,
+      "sourceDomains": 16,
+      "promptExample": "What should I look for during a home inspection checklist and how can I prepare for it?"
+    },
+    {
+      "brand": "international certification association",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "ontario home inspector course"
+    },
+    {
+      "brand": "durham",
+      "mentions": 1,
+      "sourceDomains": 14,
+      "promptExample": "home inspection course in ontario"
+    },
+    {
+      "brand": "wall to wall home inspection services",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Is there a difference in time between a condo inspection and a single-family home inspection?"
+    },
+    {
+      "brand": "robgolfi",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "how much is a home inspection in ontario"
+    },
+    {
+      "brand": "fct",
+      "mentions": 1,
+      "sourceDomains": 12,
+      "promptExample": "home inspection checklist ontario"
+    },
+    {
+      "brand": "high-tech home inspect",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 25,
+      "promptExample": "yardlink How do I choose the right inspection tools for different materials and building types?"
+    },
+    {
+      "brand": "hippo insurance",
+      "mentions": 1,
+      "sourceDomains": 13,
+      "promptExample": "Which items on a home inspection checklist most affect resale value or future repairs?"
+    },
+    {
+      "brand": "d-tec pest solutions",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "how to tell if you have white ants"
+    },
+    {
+      "brand": "inspectortools",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "inspection tools"
+    },
+    {
+      "brand": "bankrate",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "Home Inspection Costs"
+    },
+    {
+      "brand": "housemaster home inspections",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "toronto home inspection"
+    },
+    {
+      "brand": "forbest",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "king industrial",
+      "mentions": 1,
+      "sourceDomains": 20,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "sencha",
+      "mentions": 1,
+      "sourceDomains": 16,
+      "promptExample": "What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "aphis",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "house inspection"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "az property inspections Home Inspection Costs"
+    },
+    {
+      "brand": "allgeo",
+      "mentions": 1,
+      "sourceDomains": 16,
+      "promptExample": "Home Inspection Software"
+    },
+    {
+      "brand": "u.s. news real estate",
+      "mentions": 1,
+      "sourceDomains": 12,
+      "promptExample": "Hey, what’s the best way to choose a reliable home inspection group in Edmonton?"
+    },
+    {
+      "brand": "enzosolution",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "What are the must-have features to look for in home inspection software for a professional practice?"
+    },
+    {
+      "brand": "preferred home inspections",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "Do inspectors provide a written timeline after the inspection, and how should I plan my day around it?"
+    },
+    {
+      "brand": "home-check",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "province of british columbia",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "home inspection british columbia"
+    },
+    {
+      "brand": "va",
+      "mentions": 1,
+      "sourceDomains": 13,
+      "promptExample": "Which items on a home inspection checklist most affect resale value or future repairs?"
+    },
+    {
+      "brand": "stripe",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "What are the must-have features to look for in home inspection software for a professional practice?"
+    },
+    {
+      "brand": "dewalt",
+      "mentions": 1,
+      "sourceDomains": 3,
+      "promptExample": "Can you compare top inspection tool sets for a comprehensive home inspection?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 14,
+      "promptExample": "the real estate 101 podcast home inspection course in ontario"
+    },
+    {
+      "brand": "internachi canada",
+      "mentions": 1,
+      "sourceDomains": 9,
+      "promptExample": "Canadian Home Inspection Courses"
+    },
+    {
+      "brand": "st. lawrence",
+      "mentions": 1,
+      "sourceDomains": 10,
+      "promptExample": "online home inspection course"
+    },
+    {
+      "brand": "accurate home and commercial services",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "home inspection british columbia"
+    },
+    {
+      "brand": "inspector training academy",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "building inspector course bc"
+    },
+    {
+      "brand": "travelers",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "What are typical career paths and earning potential for home inspectors in British Columbia?"
+    },
+    {
+      "brand": "sterling backcheck",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "How can I become a certified home inspector in BC and what are the prerequisites?"
+    },
+    {
+      "brand": "home check inspection",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "Home Inspection Groups"
+    },
+    {
+      "brand": "xtreme inspections",
+      "mentions": 1,
+      "sourceDomains": 12,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "maximum",
+      "mentions": 1,
+      "sourceDomains": 20,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 21,
+      "promptExample": "win home inspection How do home inspection prices vary by location and home size?"
+    },
+    {
+      "brand": "national association of realtors®",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "What questions should I ask a home inspectors group before scheduling an inspection?"
+    },
+    {
+      "brand": "guardian home inspections",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "ised-isde.canada",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "how much is a home inspection in ontario"
+    },
+    {
+      "brand": "coastal point",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Is there a difference in time between a condo inspection and a single-family home inspection?"
+    },
+    {
+      "brand": "legault-dubois inspection batiment",
+      "mentions": 1,
+      "sourceDomains": 12,
+      "promptExample": "Hey, what’s the best way to choose a reliable home inspection group in Edmonton?"
+    },
+    {
+      "brand": "georgian",
+      "mentions": 1,
+      "sourceDomains": 14,
+      "promptExample": "home inspection course in ontario"
+    },
+    {
+      "brand": "niagara",
+      "mentions": 1,
+      "sourceDomains": 10,
+      "promptExample": "home inspection course ontario"
+    },
+    {
+      "brand": "canadian tire",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "realtor.com",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "What questions should I ask a home inspectors group before scheduling an inspection?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 14,
+      "promptExample": "nationwide what does a home inspection include"
+    },
+    {
+      "brand": "bc consumer protection office",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "Which cities in Canada have the best accredited home inspection programs (e.g., Winnipeg, Calgary, Edmonton, Alberta)?"
+    },
+    {
+      "brand": "vancouver island university",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "house inspector course bc"
+    },
+    {
+      "brand": "csa",
+      "mentions": 1,
+      "sourceDomains": 10,
+      "promptExample": "Are there province-specific considerations I should know when following a home inspection checklist in Canada?"
+    },
+    {
+      "brand": "better business bureau",
+      "mentions": 1,
+      "sourceDomains": 14,
+      "promptExample": "Do Canadian home inspectors require specific licensing or certifications, and how can I verify a qualified inspector?"
+    },
+    {
+      "brand": "assiniboine",
+      "mentions": 1,
+      "sourceDomains": 9,
+      "promptExample": "home inspection course fees"
+    },
+    {
+      "brand": "npi",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "Home Inspection Groups"
+    },
+    {
+      "brand": "xplortek",
+      "mentions": 1,
+      "sourceDomains": 4,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "tradeupbc",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "building inspector course bc"
+    },
+    {
+      "brand": "farm bureau financial services",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "what to look for in a home inspection"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 31,
+      "promptExample": "homeworx services Can you recommend the best ways to save on a home inspection without sacrificing quality?"
+    },
+    {
+      "brand": "fastexpert",
+      "mentions": 1,
+      "sourceDomains": 13,
+      "promptExample": "Which items on a home inspection checklist most affect resale value or future repairs?"
+    },
+    {
+      "brand": "red river college polytechnic",
+      "mentions": 1,
+      "sourceDomains": 7,
+      "promptExample": "Which cities in Canada have the best accredited home inspection programs (e.g., Winnipeg, Calgary, Edmonton, Alberta)?"
+    },
+    {
+      "brand": "wppii",
+      "mentions": 1,
+      "sourceDomains": 6,
+      "promptExample": "BC Home Inspection & Training"
+    },
+    {
+      "brand": "expertphotography",
+      "mentions": 1,
+      "sourceDomains": 23,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "academy of learning career college",
+      "mentions": 1,
+      "sourceDomains": 9,
+      "promptExample": "home inspection career"
+    },
+    {
+      "brand": "access home inspections",
+      "mentions": 1,
+      "sourceDomains": 7,
+      "promptExample": "Hey, what’s the best way to choose a reliable home inspection group in Edmonton?"
+    },
+    {
+      "brand": "steelpro peb",
+      "mentions": 1,
+      "sourceDomains": 25,
+      "promptExample": "How do I choose the right inspection tools for different materials and building types?"
+    },
+    {
+      "brand": "solex",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "toronto home inspection"
+    },
+    {
+      "brand": "solex",
+      "mentions": 1,
+      "sourceDomains": 15,
+      "promptExample": "home inspection toronto gta"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "taskrabbit how much is a home inspection in ontario"
+    },
+    {
+      "brand": "dalhousie",
+      "mentions": 1,
+      "sourceDomains": 9,
+      "promptExample": "home inspection course fees"
+    },
+    {
+      "brand": "guardian",
+      "mentions": 1,
+      "sourceDomains": 7,
+      "promptExample": "Can home inspection software streamline client communication and generate professional, compliant reports efficiently?"
+    },
+    {
+      "brand": "edge",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "how to inspection"
+    },
+    {
+      "brand": "ab home inspection",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "globaltestsupply.com",
+      "mentions": 1,
+      "sourceDomains": 4,
+      "promptExample": "Can you compare top inspection tool sets for a comprehensive home inspection?"
+    },
+    {
+      "brand": "google pay",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "What are the must-have features to look for in home inspection software for a professional practice?"
+    },
+    {
+      "brand": "horizon software",
+      "mentions": 1,
+      "sourceDomains": 3,
+      "promptExample": "How do I access the Carson Dunlop training portal and login area?"
+    },
+    {
+      "brand": "national home inspection exam",
+      "mentions": 1,
+      "sourceDomains": 7,
+      "promptExample": "house inspection license"
+    },
+    {
+      "brand": "national certification exam",
+      "mentions": 1,
+      "sourceDomains": 12,
+      "promptExample": "home inspector license"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 16,
+      "promptExample": "strouse home inspections Do inspections groups typically offer commercial and residential services, and which should I pick for my property?"
+    },
+    {
+      "brand": "the mortgage reports",
+      "mentions": 1,
+      "sourceDomains": 14,
+      "promptExample": "what does a home inspection include"
+    },
+    {
+      "brand": "jotform",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "holmes inspection checklist"
+    },
+    {
+      "brand": "tiger home & building inspections",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "Do inspectors provide a written timeline after the inspection, and how should I plan my day around it?"
+    },
+    {
+      "brand": "princess auto",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "gtguard",
+      "mentions": 1,
+      "sourceDomains": 23,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "lambton",
+      "mentions": 1,
+      "sourceDomains": 7,
+      "promptExample": "how to become a home inspector ontario"
+    },
+    {
+      "brand": "fha",
+      "mentions": 1,
+      "sourceDomains": 13,
+      "promptExample": "Which items on a home inspection checklist most affect resale value or future repairs?"
+    },
+    {
+      "brand": "abuyerschoice",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "how much is a home inspection in ontario"
+    },
+    {
+      "brand": "homehubzone",
+      "mentions": 1,
+      "sourceDomains": 16,
+      "promptExample": "Home Inspection Software"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 12,
+      "promptExample": "cmhc house inspection report"
+    },
+    {
+      "brand": "homeinspecto",
+      "mentions": 1,
+      "sourceDomains": 20,
+      "promptExample": "How does Home Inspector Pro compare to other home inspection software options in terms of reporting and ease of use?"
+    },
+    {
+      "brand": "access",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "deboer inspection services",
+      "mentions": 1,
+      "sourceDomains": 31,
+      "promptExample": "Can you recommend the best ways to save on a home inspection without sacrificing quality?"
+    },
+    {
+      "brand": "cabin to castle property inspections",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "amazon.ca",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "apple pay",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "What are the must-have features to look for in home inspection software for a professional practice?"
+    },
+    {
+      "brand": "supplyapp.com",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "What are the essential home inspection tools every inspector should own?"
+    },
+    {
+      "brand": "centris",
+      "mentions": 1,
+      "sourceDomains": 14,
+      "promptExample": "what does a home inspection include"
+    },
+    {
+      "brand": "professional home inspectors of canada",
+      "mentions": 1,
+      "sourceDomains": 6,
+      "promptExample": "home inspector classes"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "north 49 Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "alliston home inspector",
+      "mentions": 1,
+      "sourceDomains": 7,
+      "promptExample": "home inspector training ontario"
+    },
+    {
+      "brand": "british columbia institute of tech",
+      "mentions": 1,
+      "sourceDomains": 4,
+      "promptExample": "What are the top online and in-person Canadian courses to become a certified home inspector?"
+    },
+    {
+      "brand": "plantin",
+      "mentions": 1,
+      "sourceDomains": 7,
+      "promptExample": "what does termites look like"
+    },
+    {
+      "brand": "proskit",
+      "mentions": 1,
+      "sourceDomains": 20,
+      "promptExample": "Can you compare top inspection tool sets for a comprehensive home inspection?"
+    },
+    {
+      "brand": "the ce shop",
+      "mentions": 1,
+      "sourceDomains": 7,
+      "promptExample": "home inspector training ontario"
+    },
+    {
+      "brand": "palmtech home inspection software",
+      "mentions": 1,
+      "sourceDomains": 16,
+      "promptExample": "Home Inspection Software"
+    },
+    {
+      "brand": "house to home inspections",
+      "mentions": 1,
+      "sourceDomains": 9,
+      "promptExample": "what is house to house inspection"
+    },
+    {
+      "brand": "grainger",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    },
+    {
+      "brand": "cahpi-alberta",
+      "mentions": 1,
+      "sourceDomains": 9,
+      "promptExample": "Home Inspection Groups"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 12,
+      "promptExample": "castle pointe inspections Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "safetyculture",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "house inspection list"
+    },
+    {
+      "brand": "planet friendly pest control",
+      "mentions": 1,
+      "sourceDomains": 16,
+      "promptExample": "Termite Signs & Home Inspection"
+    },
+    {
+      "brand": "ipm pest",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "how to tell if you have white ants"
+    },
+    {
+      "brand": "gemini apps activity",
+      "mentions": 1,
+      "sourceDomains": 4,
+      "promptExample": "What are the top online and in-person Canadian courses to become a certified home inspector?"
+    },
+    {
+      "brand": "general tools",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "What are the essential home inspection tools every inspector should own?"
+    },
+    {
+      "brand": "keybotic",
+      "mentions": 1,
+      "sourceDomains": 25,
+      "promptExample": "How do I choose the right inspection tools for different materials and building types?"
+    },
+    {
+      "brand": "neighborly",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "what does a house inspector do"
+    },
+    {
+      "brand": "first american",
+      "mentions": 1,
+      "sourceDomains": 21,
+      "promptExample": "How do home inspection prices vary by location and home size?"
+    },
+    {
+      "brand": "university of british columbia",
+      "mentions": 1,
+      "sourceDomains": 10,
+      "promptExample": "online home inspection course"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 7,
+      "promptExample": "rob golfi cost of home inspection ontario"
+    },
+    {
+      "brand": "cahpi-manitoba",
+      "mentions": 1,
+      "sourceDomains": 9,
+      "promptExample": "Home Inspection Groups"
+    },
+    {
+      "brand": "sheridan college",
+      "mentions": 1,
+      "sourceDomains": 19,
+      "promptExample": "Canadian Home Inspection Courses"
+    },
+    {
+      "brand": "tru inspections",
+      "mentions": 1,
+      "sourceDomains": 15,
+      "promptExample": "home inspection toronto gta"
+    },
+    {
+      "brand": "chie",
+      "mentions": 1,
+      "sourceDomains": 3,
+      "promptExample": "home inspector course bc"
+    },
+    {
+      "brand": "elitemga",
+      "mentions": 1,
+      "sourceDomains": 16,
+      "promptExample": "Do inspections groups typically offer commercial and residential services, and which should I pick for my property?"
+    },
+    {
+      "brand": "chrome",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "how to inspection"
+    },
+    {
+      "brand": "sofi",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "home inspection british columbia"
+    },
+    {
+      "brand": "fleming",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "home inspection certified"
+    },
+    {
+      "brand": "building officials' association of bc",
+      "mentions": 1,
+      "sourceDomains": 10,
+      "promptExample": "What are typical career paths and earning potential for home inspectors in British Columbia?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 6,
+      "promptExample": "strata How can I customize a home inspection checklist for a townhouse versus a detached home?"
+    },
+    {
+      "brand": "thermal imaging cameras",
+      "mentions": 1,
+      "sourceDomains": 25,
+      "promptExample": "How do I choose the right inspection tools for different materials and building types?"
+    },
+    {
+      "brand": "consumer protection",
+      "mentions": 1,
+      "sourceDomains": 9,
+      "promptExample": "What are typical career paths and earning potential for home inspectors in British Columbia?"
+    },
+    {
+      "brand": "patriotinspect",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Is there a difference in time between a condo inspection and a single-family home inspection?"
+    },
+    {
+      "brand": "ontario learn",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "how to become home inspector in ontario"
+    },
+    {
+      "brand": "national home inspector",
+      "mentions": 1,
+      "sourceDomains": 7,
+      "promptExample": "house inspection license"
+    },
+    {
+      "brand": "global property inspections",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "Home Inspection Groups"
+    },
+    {
+      "brand": "spyglass realty",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "what does a house inspector do"
+    },
+    {
+      "brand": "truview inspections",
+      "mentions": 1,
+      "sourceDomains": 16,
+      "promptExample": "Do inspections groups typically offer commercial and residential services, and which should I pick for my property?"
+    },
+    {
+      "brand": "justo real estate brokerage",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "how much does it cost to inspect a house"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 6,
+      "promptExample": "home inspection institute home inspector classes"
+    },
+    {
+      "brand": "state farm",
+      "mentions": 1,
+      "sourceDomains": 14,
+      "promptExample": "what does a home inspection include"
+    },
+    {
+      "brand": "facebook",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "What factors should I consider when choosing home inspection software for my business (pricing, templates, mobile apps, support)?"
+    },
+    {
+      "brand": "holmes",
+      "mentions": 1,
+      "sourceDomains": 4,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "fanshawe",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "home inspection certified"
+    },
+    {
+      "brand": "full view home inspector marketing",
+      "mentions": 1,
+      "sourceDomains": 10,
+      "promptExample": "How does Home Inspector Pro compare to other home inspection software options in terms of reporting and ease of use?"
+    },
+    {
+      "brand": "rentokil",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "how to tell if you have white ants"
+    },
+    {
+      "brand": "the golfi team",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "how much should a home inspection cost"
+    },
+    {
+      "brand": "homesight",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "what does a house inspector do"
+    },
+    {
+      "brand": "gocanvas",
+      "mentions": 1,
+      "sourceDomains": 16,
+      "promptExample": "Home Inspection Software"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "columbiahomeinspector Can home inspection software streamline client communication and generate professional, compliant reports efficiently?"
+    },
+    {
+      "brand": "advantage home inspections",
+      "mentions": 1,
+      "sourceDomains": 5,
+      "promptExample": "Home Inspection Groups"
+    },
+    {
+      "brand": "canadian standards association",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "house inspection canada"
+    },
+    {
+      "brand": "inspector outlet",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "inspection tools"
+    },
+    {
+      "brand": "core diagnostic tools",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "What are the essential home inspection tools every inspector should own?"
+    },
+    {
+      "brand": "homestead inspections",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "habitation investigation",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "Do inspectors provide a written timeline after the inspection, and how should I plan my day around it?"
+    },
+    {
+      "brand": "ziprecruiter",
+      "mentions": 1,
+      "sourceDomains": 8,
+      "promptExample": "how much do home inspectors make"
+    },
+    {
+      "brand": "totalhomeinspection.com",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "house inspection list"
+    },
+    {
+      "brand": "condominium",
+      "mentions": 1,
+      "sourceDomains": 6,
+      "promptExample": "How can I customize a home inspection checklist for a townhouse versus a detached home?"
+    },
+    {
+      "brand": "ble",
+      "mentions": 1,
+      "sourceDomains": 3,
+      "promptExample": "xtend+climb Can you compare top inspection tool sets for a comprehensive home inspection?"
+    },
+    {
+      "brand": "aibq",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "Canadian Home Inspection"
+    },
+    {
+      "brand": "eh2z home inspections",
+      "mentions": 1,
+      "sourceDomains": 17,
+      "promptExample": "Can you compare the top home inspection groups in Alberta and tell me which one offers the best value?"
+    },
+    {
+      "brand": "aepowerhousetv",
+      "mentions": 1,
+      "sourceDomains": 11,
+      "promptExample": "house inspection list"
+    },
+    {
+      "brand": "twin peaks property inspections",
+      "mentions": 1,
+      "sourceDomains": 15,
+      "promptExample": "home inspection toronto gta"
+    },
+    {
+      "brand": "ashl",
+      "mentions": 1,
+      "sourceDomains": 3,
+      "promptExample": "Carson Dunlop Home Inspection & Training"
+    },
+    {
+      "brand": "walmart",
+      "mentions": 1,
+      "sourceDomains": 0,
+      "promptExample": "Which brands offer reliable and affordable inspection equipment for beginners and professionals?"
+    }
+  ],
+  "allDomainsScraped": [],
+  "competitors": [
+    {
+      "domain": "mikeholmesinspections.com",
+      "score": null,
+      "mentions": null,
+      "citations": null,
+      "citedPages": null,
+      "snippet": "Skip to content | More | A | AI Visibility | Win Every Search | From Traditional SEO to AI Discovery | Track your brand visibility, fix gaps, and grow across Google and AI search—all from one trusted platform. | Check AI Visibility | Last checked: | asads.ca | See how you rank in AI search | and where to grow | Track your brand’s AI visibility | See your overall visibility and share of voice across AI platforms, along with clear priorities for improvement. | Get insights on competitors | Spot the prompts, mentions, and sources where rivals appear but you don’t, and find ways to close the gap. "
+    },
+    {
+      "domain": "carsondunlop.com",
+      "score": null,
+      "mentions": null,
+      "citations": null,
+      "citedPages": null,
+      "snippet": "Skip to content | asads.ca | More | A | Home | AI Visibility | Visibility Overview | Send feedback | Visibility Overview: | asads.ca | How it works | Export to PDF | Worldwide | US | UK | CA | All AI platforms | AI Visibility | Main Metrics | Monthly Audience | AI Visibility | Mentions | Citations | Cited Pages | Distribution by LLM | Mentions | Cited Pages | ChatGPT | AI Overview | AI Mode"
+    },
+    {
+      "domain": "pillartopost.com",
+      "score": null,
+      "mentions": null,
+      "citations": null,
+      "citedPages": null,
+      "snippet": "Skip to content | More | A | AI Visibility | Win Every Search | From Traditional SEO to AI Discovery | Track your brand visibility, fix gaps, and grow across Google and AI search—all from one trusted platform. | Check AI Visibility | Last checked: | asads.ca | See how you rank in AI search | and where to grow | Track your brand’s AI visibility | See your overall visibility and share of voice across AI platforms, along with clear priorities for improvement. | Get insights on competitors | Spot the prompts, mentions, and sources where rivals appear but you don’t, and find ways to close the gap. "
+    },
+    {
+      "domain": "amerispec.ca",
+      "score": null,
+      "mentions": null,
+      "citations": null,
+      "citedPages": null,
+      "snippet": "Skip to content | asads.ca | More | A | Home | AI Visibility | Visibility Overview | Send feedback | Visibility Overview: | asads.ca | How it works | Export to PDF | Worldwide | US | UK | CA | All AI platforms | AI Visibility | Main Metrics | Monthly Audience | AI Visibility | Mentions | Citations | Cited Pages | Distribution by LLM | Mentions | Cited Pages | ChatGPT | AI Overview | AI Mode"
+    },
+    {
+      "domain": "inchbyinchinspections.com",
+      "score": null,
+      "mentions": null,
+      "citations": null,
+      "citedPages": null,
+      "snippet": "Skip to content | More | A | AI Visibility | Win Every Search | From Traditional SEO to AI Discovery | Track your brand visibility, fix gaps, and grow across Google and AI search—all from one trusted platform. | Check AI Visibility | Last checked: | asads.ca | See how you rank in AI search | and where to grow | Track your brand’s AI visibility | See your overall visibility and share of voice across AI platforms, along with clear priorities for improvement. | Get insights on competitors | Spot the prompts, mentions, and sources where rivals appear but you don’t, and find ways to close the gap. "
+    }
+  ],
+  "asadsRaw": [
+    "Skip to content",
+    "asads.ca",
+    "More",
+    "A",
+    "Home",
+    "AI Visibility",
+    "Visibility Overview",
+    "Send feedback",
+    "Visibility Overview:",
+    "asads.ca",
+    "How it works",
+    "Export to PDF",
+    "Worldwide",
+    "US",
+    "UK",
+    "CA",
+    "All AI platforms",
+    "Data as of Apr 12, 2026",
+    "AI Visibility",
+    "Worldwide Visibility",
+    "16 /100",
+    "Low",
+    "Rarely mentioned in LLM outputs compared to competitors",
+    "Main Metrics",
+    "Monthly Audience",
+    "AI Visibility",
+    "Mentions",
+    "5",
+    "Citations",
+    "24",
+    "-4%",
+    "Cited Pages",
+    "18",
+    "+12.5%",
+    "0",
+    "5",
+    "10",
+    "15",
+    "20",
+    "25",
+    "Nov 2025",
+    "Dec 2025",
+    "Jan 2026",
+    "Feb 2026",
+    "Mar 2026",
+    "Apr 2026",
+    "Press \"Tab\" to enable graphical charts accessibility module.",
+    "Distribution by LLM",
+    "Mentions",
+    "Cited Pages"
+  ]
+}

@@ -10,6 +10,7 @@
     "monitor": "node scripts/monitor-competitors.mjs",
     "city-intel": "node scripts/city-intel.mjs",
     "backlink-intel": "node scripts/backlink-intel.mjs",
+    "semrush-backlinks": "node scripts/semrush-backlinks.mjs",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -85,6 +86,7 @@
     "globals": "^15.15.0",
     "lovable-tagger": "^1.1.13",
     "postcss": "^8.5.6",
+    "puppeteer": "^24.40.0",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0",

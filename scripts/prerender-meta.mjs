@@ -93,6 +93,7 @@ const staticPages = [
   { path: '/bundled-inspection',       title: 'Bundled Home Inspection Ontario | Mold Radon Asbestos',       desc: 'Book your home inspection plus mold, radon, asbestos, or air quality testing in one visit. ASADS bundles specialty tests with every inspection across Ontario.' },
   { path: '/what-we-find',             title: 'What Home Inspectors Find in Ontario | ASADS Data',            desc: 'What do Ontario home inspectors actually find? ASADS data on common deficiencies by home era, property type, and region. Real findings, real frequency.' },
   { path: '/services/insurance-home-inspection', title: 'Insurance Home Inspection Ontario | Insurer Required', desc: 'Ontario insurer requiring a home inspection before coverage? ASADS provides insurance-compliant inspections for older homes. Same-day report. Call (647) 801-9311.' },
+  { path: '/services/termite-inspection', title: 'Termite Inspection Ontario | Wood-Destroying Pest Inspection', desc: 'Termite and wood-destroying insect inspection in Ontario. Certified WDI inspector, same-day report. No pest control affiliation. Call (647) 801-9311.' },
 ];
 
 // ─── Build page map ───────────────────────────────────────────────────────────

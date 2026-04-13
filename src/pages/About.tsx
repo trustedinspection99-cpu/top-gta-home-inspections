@@ -177,6 +177,7 @@ const certifications = [
   "Thermography Certified",
   "Radon Measurement Professional",
   "Mold Assessment Technician",
+  "Termite & Wood-Destroying Insect (WDI) Certified",
 ];
 
 const team = [

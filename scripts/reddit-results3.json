@@ -1,0 +1,27 @@
+[
+  {
+    "thread": "r-waterloo",
+    "url": "https://www.reddit.com/r/waterloo/comments/1iiec1i/home_inspector_recommendations/",
+    "success": false
+  },
+  {
+    "thread": "r-cambridgeont",
+    "url": "https://www.reddit.com/r/cambridgeont/comments/121oxur/recommendation_for_home_inspector/",
+    "success": true
+  },
+  {
+    "thread": "r-TorontoRealEstate",
+    "url": "https://www.reddit.com/r/TorontoRealEstate/comments/1gtdqs4/recommendations_for_best_home_inspector/",
+    "success": true
+  },
+  {
+    "thread": "r-ontario",
+    "url": "https://www.reddit.com/r/ontario/comments/1llsqln/how_much_does_home_inspection_in_ontario_cost/",
+    "success": false
+  },
+  {
+    "thread": "r-RealEstateCanada",
+    "url": "https://www.reddit.com/r/RealEstateCanada/comments/1kquugm/home_inspection_conditionam_scared/",
+    "success": true
+  }
+]

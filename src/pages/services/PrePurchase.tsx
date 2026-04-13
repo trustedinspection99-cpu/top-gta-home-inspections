@@ -881,6 +881,8 @@
                <Link to="/our-promise" className="underline hover:text-primary-foreground">Our independence promise</Link>
                {" · "}
                <Link to="/for-first-time-buyers" className="underline hover:text-primary-foreground">First-time buyer guide</Link>
+               {" · "}
+               <Link to="/what-we-find" className="underline hover:text-primary-foreground">What we find</Link>
              </p>
            </div>
          </div>
