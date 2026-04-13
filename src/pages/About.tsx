@@ -27,6 +27,7 @@ const organizationSchema = {
   },
   "founder": {
     "@type": "Person",
+    "@id": "https://www.asads.ca/#haroon-choudhry",
     "name": "Haroon Choudhry",
     "jobTitle": "Founder & Master Inspector"
   },
@@ -107,6 +108,68 @@ const aboutPageSchema = {
   }
 };
 
+const haroonSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.asads.ca/#haroon-choudhry",
+  "name": "Haroon Choudhry",
+  "jobTitle": "Master Home Inspector & Founder",
+  "description": "Founder of ASADS Home Inspection. 15+ years experience as a certified home inspector in Ontario. OAHI member, InterNACHI Certified Professional Inspector, WETT Certified Technician. Former principal contractor at Aro Construction Inc.",
+  "worksFor": {
+    "@type": "Organization",
+    "@id": "https://www.asads.ca/#organization"
+  },
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "OAHI Member",
+      "credentialCategory": "Professional Membership",
+      "recognizedBy": { "@type": "Organization", "name": "Ontario Association of Home Inspectors (OAHI)" }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "InterNACHI Certified Professional Inspector (CPI)",
+      "credentialCategory": "Professional Certification",
+      "recognizedBy": { "@type": "Organization", "name": "International Association of Certified Home Inspectors (InterNACHI)" }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "WETT Certified Technician",
+      "credentialCategory": "Professional Certification",
+      "recognizedBy": { "@type": "Organization", "name": "Wood Energy Technology Transfer Inc. (WETT)" }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Thermography Certified Inspector",
+      "credentialCategory": "Professional Certification"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Radon Measurement Professional",
+      "credentialCategory": "Professional Certification"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Mold Assessment Technician",
+      "credentialCategory": "Professional Certification"
+    }
+  ],
+  "knowsAbout": [
+    "Home Inspection", "Pre-Purchase Home Inspection", "Pre-Listing Inspection",
+    "WETT Inspection", "Thermal Imaging", "Radon Testing", "Mold Inspection",
+    "Asbestos Testing", "Commercial Property Inspection", "Structural Assessment",
+    "Kitec Plumbing", "Aluminum Wiring", "Knob and Tube Wiring"
+  ],
+  "telephone": "+16478019311",
+  "email": "info@asads.ca",
+  "url": "https://www.asads.ca/about",
+  "sameAs": [
+    "https://www.instagram.com/asads_home_inspection",
+    "https://youtube.com/@asadshomeinspection",
+    "https://x.com/AsadsInspection"
+  ]
+};
+
 const certifications = [
   "Ontario Association of Home Inspectors (OAHI)",
   "InterNACHI Certified Professional Inspector",
@@ -165,6 +228,7 @@ export default function About() {
         <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(aboutPageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(haroonSchema)}</script>
       </Helmet>
 
       {/* Hero — info only */}
