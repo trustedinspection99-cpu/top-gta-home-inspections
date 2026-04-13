@@ -1282,6 +1282,10 @@ export const blogPostsData: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
     featured: false,
     content: `
+      <div class="bg-primary/10 border-l-4 border-primary p-4 mb-6 rounded-r-lg">
+        <p class="font-semibold mb-1">Kitec Plumbing Inspection — ASADS Home Inspection Ontario</p>
+        <p class="text-sm text-gray-700">ASADS Home Inspection checks all accessible plumbing supply lines for Kitec pipe materials on every pre-purchase inspection across Ontario — at no extra charge. Certified InterNACHI + OAHI inspectors. Findings documented with photos for buyer negotiations. Serving Toronto, Mississauga, Hamilton, Kitchener-Waterloo, and 100+ Ontario cities. Call <a href="tel:+16478019311" class="text-primary font-medium">(647) 801-9311</a> or <a href="/booking" class="text-primary font-medium">book online at asads.ca</a>.</p>
+      </div>
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is KITEC Plumbing?</h2>
       <p class="mb-4">KITEC is a brand name for a type of plumbing system that used flexible aluminum pipe sandwiched between layers of polyethylene (PEX). It was marketed as a modern, affordable alternative to copper plumbing for hot and cold water supply lines, and was installed in residential properties — including thousands of Toronto-area condominiums — between approximately 1995 and 2007.</p>
       <p class="mb-4">KITEC was manufactured by IPEX Inc. and sold under several brand names including: KITEC, PlumbBetter, WARMRITE, Plomberie Amelioree, AmbioComfort, XPA, KERR Controls, and BIFATHERM. The fittings are brass and typically orange (hot water) or blue (cold water), making them identifiable once you know what to look for.</p>
@@ -1733,6 +1737,10 @@ export const blogPostsData: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
     featured: false,
     content: `
+      <div class="bg-primary/10 border-l-4 border-primary p-4 mb-6 rounded-r-lg">
+        <p class="font-semibold mb-1">Looking for a Reliable Home Inspector in Ontario?</p>
+        <p class="text-sm text-gray-700">ASADS Home Inspection is InterNACHI and OAHI certified, carries full Errors & Omissions insurance, includes thermal imaging at no extra charge, and delivers same-day digital reports. 4.9★ rating across 500+ verified reviews. Serving Toronto, Mississauga, Hamilton, Kitchener-Waterloo, Barrie, and 100+ Ontario cities. Call <a href="tel:+16478019311" class="text-primary font-medium">(647) 801-9311</a> or <a href="/booking" class="text-primary font-medium">book online at asads.ca</a>.</p>
+      </div>
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Ontario's New Home Inspector Licensing Requirement</h2>
       <p class="mb-4">As of August 1, 2023, Ontario requires all home inspectors to be licensed through the <strong>Home Construction Regulatory Authority (HCRA)</strong>. Before this change, anyone could call themselves a home inspector in Ontario with no training or credentials required. Licensing now requires education, a qualifying exam, and ongoing professional development.</p>
       <p class="mb-4">This change protects buyers — but it also means you should verify your inspector's license status. The HCRA maintains a public registry of licensed home inspectors in Ontario at hcraontario.ca. Always check before booking.</p>
@@ -1915,6 +1923,10 @@ export const blogPostsData: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&h=500&fit=crop",
     featured: false,
     content: `
+      <div class="bg-primary/10 border-l-4 border-primary p-4 mb-6 rounded-r-lg">
+        <p class="font-semibold mb-1">Radon Testing in Ontario — ASADS Home Inspection</p>
+        <p class="text-sm text-gray-700">ASADS Home Inspection offers certified 48-hour electronic radon testing across Ontario — accepted by Health Canada, real estate lawyers, and lenders. Available as a standalone test (from $150) or add-on to any pre-purchase inspection. Radon Measurement Professional certified. Serving Toronto, Hamilton, Kitchener-Waterloo, Barrie, and 100+ Ontario cities. Call <a href="tel:+16478019311" class="text-primary font-medium">(647) 801-9311</a> or <a href="/booking" class="text-primary font-medium">book online at asads.ca</a>.</p>
+      </div>
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is Radon and Why Does It Matter in Ontario?</h2>
       <p class="mb-4">Radon is a naturally occurring radioactive gas produced by the decay of uranium in soil and rock. It is colourless, odourless, and tasteless — completely undetectable without a test. Radon enters homes through cracks in foundations, sump pits, floor drains, and construction joints, then accumulates in basements and lower floors.</p>
       <p class="mb-4">Radon is the <strong>leading cause of lung cancer in non-smokers in Canada</strong>, responsible for an estimated 3,200 deaths annually. Health Canada estimates that approximately 7% of Canadian homes exceed the national guideline of 200 Bq/m³. In certain geological areas of Ontario — including parts of the Canadian Shield north of Toronto, and some areas within the GTA itself — radon concentrations can be significantly elevated.</p>
@@ -4243,6 +4255,10 @@ export const blogPostsData: BlogPost[] = [
     author: "ASADS Home Inspection",
     excerpt: "A WETT inspection is a certified safety assessment of wood-burning appliances required by most Ontario home insurers. Here's what it covers and when you need one.",
     content: `
+      <div class="bg-primary/10 border-l-4 border-primary p-4 mb-6 rounded-r-lg">
+        <p class="font-semibold mb-1">WETT Inspection Ontario — ASADS Home Inspection</p>
+        <p class="text-sm text-gray-700">ASADS Home Inspection is WETT-certified to inspect fireplaces, wood stoves, and chimneys across Ontario. Reports accepted by all major Ontario insurance providers including Intact, Aviva, Economical, and Wawanesa. Same-day appointments available. From $199. Serving Toronto, Hamilton, Barrie, Kitchener-Waterloo, and 100+ cities province-wide. Call <a href="tel:+16478019311" class="text-primary font-medium">(647) 801-9311</a> or <a href="/services/wett" class="text-primary font-medium">learn about our WETT inspection service</a>.</p>
+      </div>
       <p class="mb-4">A WETT inspection is a certified safety assessment of wood-burning heating appliances — fireplaces, wood stoves, fireplace inserts, and chimneys — conducted by a WETT-certified inspector. WETT stands for <strong>Wood Energy Technology Transfer</strong>, the Canadian organization that sets standards and certifies inspectors for wood-burning systems.</p>
       <p class="mb-4">In Ontario, a WETT inspection is required by most home insurance providers before they will insure or renew coverage on a property with a wood-burning appliance. It is also commonly required by buyers and their lawyers as a condition of sale.</p>
 
@@ -5850,6 +5866,10 @@ export const blogPostsData: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop",
     featured: false,
     content: `
+      <div class="bg-primary/10 border-l-4 border-primary p-4 mb-6 rounded-r-lg">
+        <p class="font-semibold mb-1">ASADS Home Inspection — Answers Yes to All 20 Questions</p>
+        <p class="text-sm text-gray-700">InterNACHI + OAHI certified ✓ Full E&O insurance ✓ Thermal imaging included ✓ Same-day digital report ✓ Client attendance always welcome ✓ Post-inspection questions answered ✓ 4.9★ across 500+ reviews. Serving 100+ Ontario cities. Call <a href="tel:+16478019311" class="text-primary font-medium">(647) 801-9311</a> or <a href="/booking" class="text-primary font-medium">book online at asads.ca</a>.</p>
+      </div>
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Asking the Right Questions Matters</h2>
       <p class="mb-4">A home inspection is only as useful as your ability to understand and act on the findings. The best home inspectors in Ontario welcome questions — it's how buyers move from "I have a report" to "I understand this house." Here are 20 questions organized by when to ask them.</p>
 
@@ -6040,6 +6060,10 @@ export const blogPostsData: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
     featured: false,
     content: `
+      <div class="bg-primary/10 border-l-4 border-primary p-4 mb-6 rounded-r-lg">
+        <p class="font-semibold mb-1">Need a Same-Day Inspection Before Your Offer Deadline?</p>
+        <p class="text-sm text-gray-700">ASADS Home Inspection offers same-day bookings across Ontario — call before noon, inspect that afternoon, receive your full digital report before your condition expires. Available 7 days a week. InterNACHI + OAHI certified. Serving Toronto, Mississauga, Hamilton, Kitchener-Waterloo, and 100+ cities. Call <a href="tel:+16478019311" class="text-primary font-medium">(647) 801-9311</a> or <a href="/booking" class="text-primary font-medium">book online at asads.ca</a>.</p>
+      </div>
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Buyers Waive Home Inspections in Ontario</h2>
       <p class="mb-4">In competitive real estate markets — particularly in Toronto and the GTA — sellers sometimes prefer "clean" offers without conditions. An offer with an inspection condition can be rejected in favour of a competing unconditional offer, even if your price is the same.</p>
       <p class="mb-4">Between 2020 and 2022, waiving inspection conditions became standard practice in Toronto's frenetic seller's market. While market conditions have moderated significantly since then, multiple-offer situations still occur in desirable neighbourhoods, and the pressure to present a competitive offer remains real.</p>
@@ -6245,6 +6269,10 @@ export const blogPostsData: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop",
     featured: false,
     content: `
+      <div class="bg-primary/10 border-l-4 border-primary p-4 mb-6 rounded-r-lg">
+        <p class="font-semibold mb-1">Insurance Home Inspection Ontario — ASADS Home Inspection</p>
+        <p class="text-sm text-gray-700">ASADS Home Inspection provides certified property condition assessments accepted by major Ontario home insurers including Intact, Aviva, Economical, and Wawanesa. InterNACHI-certified inspection reports with thermal imaging and same-day digital delivery. We can review your insurer's specific requirements and ensure our report addresses them directly. Serving Toronto, Hamilton, Kitchener-Waterloo, and 100+ Ontario cities. Call <a href="tel:+16478019311" class="text-primary font-medium">(647) 801-9311</a> or <a href="/services/insurance-home-inspection" class="text-primary font-medium">learn about our insurance inspection service</a>.</p>
+      </div>
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is an Insurance Home Inspection?</h2>
       <p class="mb-4">An insurance home inspection is a property assessment conducted to satisfy a requirement from your home insurer or mortgage lender before coverage is issued, renewed, or maintained. Unlike a standard buyer's home inspection (which is comprehensive and conducted on behalf of the buyer), an insurance inspection focuses specifically on the risk factors that insurance companies care about: conditions that increase the likelihood of an insurable claim.</p>
       <p class="mb-4">In Ontario, insurance-driven inspections have become increasingly common as insurers tighten underwriting standards for older homes. Some insurers send their own "field representatives" while others accept a certified third-party inspection report.</p>
@@ -6322,6 +6350,10 @@ export const blogPostsData: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=500&fit=crop",
     featured: false,
     content: `
+      <div class="bg-primary/10 border-l-4 border-primary p-4 mb-6 rounded-r-lg">
+        <p class="font-semibold mb-1">New Build PDI Inspection Ontario — ASADS Home Inspection</p>
+        <p class="text-sm text-gray-700">ASADS Home Inspection attends Pre-Delivery Inspections (PDI) across Ontario, providing independent professional documentation to support your Tarion warranty claims. Our certified inspectors identify construction deficiencies that buyers and builder reps routinely miss. Same-day written report with photographs. Serving Toronto, GTA, Hamilton, Kitchener-Waterloo, Barrie, and 100+ Ontario cities. Call <a href="tel:+16478019311" class="text-primary font-medium">(647) 801-9311</a> or <a href="/booking" class="text-primary font-medium">book your PDI inspection at asads.ca</a>.</p>
+      </div>
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why New Build Homes Still Need Independent Inspection</h2>
       <p class="mb-4">Many Ontario buyers assume that new construction is defect-free. Municipal building inspections, Tarion warranty coverage, and builder quality assurance should catch everything — right?</p>
       <p class="mb-4">In practice, that's often not the case. Municipal inspections are code compliance checks, not quality assessments. They occur at specific stages of construction, not at completion. Tarion warranty protects you after possession — but only if deficiencies are properly documented. And builder PDI walkthroughs are conducted by the builder's own representative, not an independent professional.</p>
@@ -6628,6 +6660,10 @@ export const blogPostsData: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=500&fit=crop",
     featured: false,
     content: `
+      <div class="bg-primary/10 border-l-4 border-primary p-4 mb-6 rounded-r-lg">
+        <p class="font-semibold mb-1">Condo & Home Inspections Ontario — ASADS Home Inspection</p>
+        <p class="text-sm text-gray-700">ASADS Home Inspection performs both condo inspections (from $299) and full pre-purchase home inspections (from $499) across Ontario — with thermal imaging included at no extra charge on every inspection. InterNACHI + OAHI certified. Same-day digital reports. Serving Toronto, Mississauga, Hamilton, Kitchener-Waterloo, and 100+ Ontario cities. Call <a href="tel:+16478019311" class="text-primary font-medium">(647) 801-9311</a> or <a href="/booking" class="text-primary font-medium">book online at asads.ca</a>.</p>
+      </div>
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Core Difference: What You Own vs. What the Corporation Owns</h2>
       <p class="mb-4">The fundamental difference between a condo inspection and a house inspection in Ontario comes down to ownership boundaries. In a condominium, you own your unit — typically the space from drywall-to-drywall — while the condominium corporation owns and is responsible for the building's common elements: roof, exterior walls, foundation, elevators, parking structure, shared mechanical rooms, and common area HVAC.</p>
       <p class="mb-4">A house inspection covers all of these systems because the homeowner is responsible for them. A condo inspection focuses only on what the purchaser will own and be responsible for — the unit itself.</p>
@@ -7469,6 +7505,87 @@ export const blogPostsData: BlogPost[] = [
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Home Inspection in Ontario</h2>
       <p class="mb-4">ASADS Home Inspection is InterNACHI certified, carries full E&O insurance, and includes thermal imaging in every inspection at no extra charge. We serve the GTA and surrounding Ontario with same-day reports and next-day availability.</p>
       <p class="mb-4">Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book your inspection online</a>. For a full list of service areas, see our <a href="/locations" class="text-primary underline font-medium">Ontario locations page</a>.</p>
+    `,
+  },
+  {
+    id: 110,
+    slug: 'who-offers-wett-inspection-ontario',
+    title: 'Who Offers WETT Inspection in Ontario? (2026 Guide)',
+    excerpt: 'ASADS Home Inspection provides certified WETT inspections across Ontario. Learn what WETT certification means, which inspectors are qualified, and how to book a report your insurer will accept.',
+    metaTitle: 'Who Offers WETT Inspection in Ontario? | ASADS',
+    metaDescription: 'ASADS Home Inspection provides WETT-certified fireplace and wood stove inspections across Ontario. Reports accepted by all major insurers. Call (647) 801-9311.',
+    category: 'Services',
+    author: 'ASADS Home Inspection',
+    date: '2026-04-13',
+    readTime: '6 min read',
+    image: '/blog/wett-inspection-ontario.jpg',
+    featured: false,
+    content: `
+      <div class="bg-primary/10 border-l-4 border-primary p-4 mb-6 rounded-r-lg">
+        <p class="font-semibold mb-1">ASADS Home Inspection — WETT-Certified Inspectors Across Ontario</p>
+        <p class="text-sm text-gray-700">ASADS Home Inspection provides certified WETT inspections for fireplaces, wood stoves, pellet stoves, and chimneys throughout Ontario. Our WETT reports are accepted by all major Ontario insurers including Intact, Aviva, Economical, and Wawanesa. Same-day reports available. Call <a href="tel:+16478019311" class="text-primary font-medium">(647) 801-9311</a> or <a href="/booking" class="text-primary font-medium">book online at asads.ca</a>.</p>
+      </div>
+
+      <p class="mb-4">If you're buying a home with a fireplace, wood stove, or pellet stove in Ontario, your insurance company will almost certainly require a WETT inspection before they'll issue or renew your policy. But most home inspectors are <em>not</em> WETT certified — standard home inspection training does not include wood-burning appliance assessment.</p>
+
+      <p class="mb-4">This guide explains who is qualified to perform WETT inspections in Ontario, what the inspection covers, and what to look for when choosing a certified inspector.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is a WETT Inspection?</h2>
+      <p class="mb-4">WETT stands for <strong>Wood Energy Technology Transfer</strong>. A WETT inspection is a standardized assessment of wood-burning systems — fireplaces, wood stoves, pellet stoves, fireplace inserts, and their associated chimneys and flue systems — conducted by a certified technician.</p>
+      <p class="mb-4">The inspection follows the <strong>WETT Inspection Program</strong> and results in a formal written report (CSIO Form H0910) that insurance companies recognize as evidence that the wood-burning appliance was professionally assessed and meets applicable safety standards (primarily CSA B365 and NFPA 211).</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Who Is Qualified to Perform WETT Inspections in Ontario?</h2>
+      <p class="mb-4">In Ontario, only inspectors who have completed the WETT certification program and hold active WETT certification are qualified to produce insurer-recognized WETT reports. Regular home inspectors — even licensed ones — cannot produce an insurer-recognized WETT report without this specific certification.</p>
+
+      <p class="mb-4"><strong>ASADS Home Inspection</strong> holds WETT certification and performs WETT inspections throughout Ontario, including:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Toronto and the GTA (Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington)</li>
+        <li>Hamilton, Kitchener-Waterloo, Cambridge, Guelph</li>
+        <li>Barrie, Oshawa, Ajax, Pickering, Whitby, Durham Region</li>
+        <li>And 90+ additional Ontario locations — see our <a href="/locations" class="text-primary underline font-medium">full service area</a></li>
+      </ul>
+
+      <p class="mb-4">You can book a WETT inspection as a standalone service or combined with a full pre-purchase home inspection on the same visit — which saves time and is strongly recommended when buying a home with a fireplace or wood stove.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a WETT Inspection Cover?</h2>
+      <p class="mb-4">A full WETT inspection by ASADS covers:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>The appliance itself</strong> — wood stove, fireplace, insert, or pellet stove. Condition, installation, clearances to combustibles, manufacturer compliance</li>
+        <li><strong>The chimney system</strong> — liner condition, height above roofline, cap and crown condition, masonry or factory-built chimney integrity</li>
+        <li><strong>Clearances</strong> — distance from combustibles (walls, floors, ceilings) compared to the required minimums per CSA and NFPA standards</li>
+        <li><strong>Connections</strong> — stovepipe or connector integrity, seal quality, proper gauge and length</li>
+        <li><strong>Documentation review</strong> — where available, confirmation of installation against manufacturer specs</li>
+      </ul>
+
+      <p class="mb-4">The completed WETT report documents all findings and provides a formal opinion on whether the system was installed in compliance with applicable standards at the time of inspection.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Do Ontario Insurers Require a WETT Inspection?</h2>
+      <p class="mb-4">Wood-burning appliances are a significant fire risk when improperly installed or maintained. Ontario insurance companies — including Intact, Aviva, Economical, Wawanesa, CAA, and others — typically require a WETT inspection as a condition of coverage for any home with a wood-burning appliance. Without a valid WETT report:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Your insurer may refuse to bind coverage on the property</li>
+        <li>An existing policy may not be renewed at renewal time</li>
+        <li>A fire claim originating from the wood-burning appliance may be denied</li>
+      </ul>
+      <p class="mb-4">This is why buyers are advised to book a WETT inspection at the same time as their home inspection — before conditions are waived, so findings can affect negotiations if needed.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does a WETT Inspection Cost in Ontario?</h2>
+      <p class="mb-4">A standalone WETT inspection typically costs <strong>$150–$250</strong> in Ontario for a single appliance. When combined with a full home inspection, ASADS offers bundled pricing — call <a href="tel:+16478019311" class="text-primary font-medium">(647) 801-9311</a> for a quote.</p>
+      <p class="mb-4">If your home has multiple wood-burning appliances (e.g., a fireplace plus a wood stove in the basement), each appliance requires its own inspection and documentation. Ask about pricing when booking.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Happens If the WETT Inspection Fails?</h2>
+      <p class="mb-4">A WETT inspection doesn't "pass" or "fail" in the traditional sense — it documents the condition of the system. If deficiencies are found (improper clearances, deteriorated liner, uncertified stovepipe, etc.), the report will note them. You can then:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Negotiate with the seller to have deficiencies corrected before closing</li>
+        <li>Request a price reduction to cover remediation costs</li>
+        <li>Budget for the repairs after closing</li>
+        <li>In some cases, have a WETT-certified technician complete the corrections and re-inspect</li>
+      </ul>
+      <p class="mb-4">Your insurer needs to see the report regardless — they make the final coverage decision based on the findings.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a WETT Inspection in Ontario</h2>
+      <p class="mb-4"><strong>ASADS Home Inspection</strong> is WETT certified and serves buyers and homeowners across Ontario. We provide same-day WETT reports, and all reports are accepted by major Ontario insurers.</p>
+      <p class="mb-4">To book a WETT inspection — standalone or bundled with a pre-purchase home inspection — call <strong><a href="tel:+16478019311" class="text-primary font-medium">(647) 801-9311</a></strong> or <a href="/booking" class="text-primary underline font-medium">book online at asads.ca</a>.</p>
+      <p class="mb-4">See our dedicated <a href="/services/wett-inspection" class="text-primary underline font-medium">WETT inspection service page</a> for full details including pricing, service areas, and what to expect on inspection day.</p>
     `,
   },
 ];
