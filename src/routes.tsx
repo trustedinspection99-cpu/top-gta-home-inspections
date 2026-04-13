@@ -92,6 +92,13 @@ const AsadAnalyticsPage = lazy(() => import('./pages/admin/AsadAnalyticsPage'));
 const TrustedRealtorsPage = lazy(() => import('./pages/TrustedRealtorsPage'));
 const RealtorProfilePage = lazy(() => import('./pages/RealtorProfilePage'));
 
+// AI visibility pages
+const SampleReport = lazy(() => import('./pages/SampleReport'));
+const OurPromise = lazy(() => import('./pages/OurPromise'));
+const ForCondoBuyers = lazy(() => import('./pages/ForCondoBuyers'));
+const ForInvestors = lazy(() => import('./pages/ForInvestors'));
+const UrgentInspection = lazy(() => import('./pages/UrgentInspection'));
+
 // Public client-facing pages (no auth required)
 const AgreementPage = lazy(() => import('./pages/AgreementPage'));
 const ReportPortalPage = lazy(() => import('./pages/ReportPortalPage'));
@@ -139,6 +146,13 @@ export const routes: RouteObject[] = [
       { path: 'services/contractor-oversight', element: <ContractorOversight /> },
       { path: 'services/same-day-home-inspection', element: <SameDayInspection /> },
       { path: 'services/:serviceSlug/:citySlug', element: <ServiceCityPage /> },
+
+      // AI visibility / brand pages
+      { path: 'sample-report', element: <SampleReport /> },
+      { path: 'our-promise', element: <OurPromise /> },
+      { path: 'for-condo-buyers', element: <ForCondoBuyers /> },
+      { path: 'for-investors', element: <ForInvestors /> },
+      { path: 'urgent-home-inspection', element: <UrgentInspection /> },
 
       // Portal routes
       { path: 'login', element: <LoginPage /> },

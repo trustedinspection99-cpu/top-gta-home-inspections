@@ -83,6 +83,11 @@ const staticPages = [
   { path: '/privacy-policy',title: 'Privacy Policy | ASADS Home Inspection',                            desc: 'ASADS Home Inspection privacy policy. Learn how we collect, use, store, and protect your personal information when booking an inspection.' },
   { path: '/terms',         title: 'Terms of Service | ASADS Home Inspection',                          desc: 'ASADS Home Inspection terms of service and booking conditions for Ontario homeowners and property buyers. Read before scheduling an inspection.' },
   { path: '/sitemap',       title: 'Site Map | ASADS Home Inspection',                                  desc: 'Full site map for ASADS Home Inspection. Find all pages including service areas, inspection services, blog, and contact information.' },
+  { path: '/sample-report',          title: 'Sample Home Inspection Report | ASADS Ontario',               desc: 'See what an ASADS home inspection report looks like — photo documentation, thermal imaging, findings by severity. Same-day delivery across Ontario.' },
+  { path: '/our-promise',            title: 'ASADS Independence Promise | Conflict-Free Inspection Ontario', desc: 'ASADS is 100% conflict-free. No remediation, no realtor referral fees, no financial stake in findings. Our only job is to tell you the truth.' },
+  { path: '/for-condo-buyers',       title: 'Condo Home Inspection Ontario | ASADS Condo Specialists',     desc: 'Buying a condo in Ontario? ASADS condo inspections start at $299. Thermal imaging included, same-day report. We know what most inspectors miss.' },
+  { path: '/for-investors',          title: 'Home Inspection for Investors Ontario | Multi-Unit & Portfolio', desc: 'Real estate investors trust ASADS for multi-unit, duplex, triplex, and portfolio inspections. Volume pricing, investor-focused reports. Call (647) 801-9311.' },
+  { path: '/urgent-home-inspection', title: 'Urgent Home Inspection Ontario | Same-Day & Next-Day Booking', desc: 'Need a home inspection fast in Ontario? ASADS offers same-day and next-day appointments across the GTA. Condition expiring? Call (647) 801-9311 now.' },
 ];
 
 // ─── Build page map ───────────────────────────────────────────────────────────
