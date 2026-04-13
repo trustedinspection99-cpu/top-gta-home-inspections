@@ -5617,6 +5617,1484 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">To book a home inspection in Ontario, call (647) 801-9311 or <a href="/booking" class="text-primary underline">book online</a>. We serve the GTA, Hamilton, Kitchener-Waterloo, Guelph, Barrie, London, and surrounding communities.</p>
     `,
   },
+  // ─── BATCH 1–4: AI-Visibility Posts ───
+  {
+    id: 86,
+    slug: "termites-ontario-homes-guide",
+    title: "Termites in Ontario Homes: Signs, Risks & What Inspectors Find",
+    metaTitle: "Termites in Ontario Homes: Signs & Inspection Guide",
+    metaDescription: "How to spot termites in Ontario homes. Signs of Eastern Subterranean Termites, what a home inspection covers, and when to call for a termite inspection.",
+    excerpt: "Ontario's Eastern Subterranean Termites cause billions in damage annually — and most homeowners never see them until it's too late. Here's how to spot the signs and what a home inspection reveals.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Do Termites Exist in Ontario?</h2>
+      <p class="mb-4">Yes — and they're far more common than most Ontario homeowners realize. The <strong>Eastern Subterranean Termite (<em>Reticulitermes flavipes</em>)</strong> is the primary termite species in Ontario, particularly active in southern Ontario cities including Toronto, Hamilton, Niagara, Windsor, and the Kitchener-Waterloo region. Unlike tropical termites, Ontario's subterranean species live underground and access structures through soil contact — making them extremely difficult to detect without a professional inspection.</p>
+      <p class="mb-4">Termites in Canada cause an estimated $600 million in property damage annually. A mature colony of 200,000–2,000,000 workers can consume a linear foot of 2×4 pine in as little as six months — entirely from the inside. By the time visible damage appears, structural systems are often already compromised.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Early Signs of Termites in an Ontario Home</h2>
+      <p class="mb-4">Termites eat wood from the inside out, which is why most homeowners miss them until significant damage has occurred. During a home inspection, ASADS inspectors actively look for the following indicators:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Mud Tubes on Foundation Walls</h3>
+      <p class="mb-4">The most reliable sign of subterranean termites. These pencil-sized tunnels (approximately 6–12 mm wide) run along foundation walls, piers, floor joists, and sill plates. Termites build these shelter tubes to maintain humidity as they travel between the soil and your home's wood framing. Finding mud tubes — active or abandoned — confirms termite presence or prior infestation.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Hollow-Sounding or Damaged Wood</h3>
+      <p class="mb-4">When you tap suspected areas with a screwdriver handle, termite-damaged wood produces a hollow, papery sound instead of a solid thud. Internally, the wood will show maze-like galleries and tunnels packed with soil — the Eastern Subterranean Termite's characteristic feeding pattern. This differs from carpenter ant damage, which leaves clean, smooth galleries.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. Discarded Wings (Swarmers)</h3>
+      <p class="mb-4">Each spring (typically April–June in Ontario), reproductive termites — called "swarmers" or alates — emerge in large numbers to establish new colonies. After a brief flight, they shed their wings, leaving small piles of translucent wings near windowsills, doorways, and light fixtures. Finding discarded wings is a strong indicator of an active colony nearby or within the structure.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. Frass (Termite Droppings)</h3>
+      <p class="mb-4">Unlike subterranean termites (which incorporate droppings into their mud tubes), drywood termites leave behind small, hexagonal pellets called frass — resembling fine sawdust or pepper. While drywood termites are less common in Ontario than subterranean species, frass found beneath wood furniture or structural elements warrants investigation.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">5. Stuck Doors and Windows</h3>
+      <p class="mb-4">As termites damage wood framing and floor joists, the resulting structural movement can cause doors and windows to stick or warp in their frames — similar to the effect of moisture swelling. This is a late-stage sign; if combined with other indicators, treat it seriously.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">6. Blistered or Buckling Floors</h3>
+      <p class="mb-4">Termite damage to subfloor materials and floor joists can cause hardwood or laminate flooring to blister, sag, or feel spongy underfoot. This is often mistaken for moisture damage — and a professional inspection is needed to determine the cause.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a Home Inspection Cover for Termites in Ontario?</h2>
+      <p class="mb-4">A standard home inspection in Ontario includes a <strong>visual examination for evidence of wood-destroying insects</strong>, including termites and carpenter ants. Inspectors examine:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Foundation walls and exposed sill plates (where wood meets concrete or soil)</li>
+        <li>Floor joists and beam ends in the basement or crawlspace</li>
+        <li>Window and door framing on the ground floor</li>
+        <li>Deck ledger boards, porch framing, and wood fence posts contacting soil</li>
+        <li>Attic framing for evidence of carpenter ants (a related but distinct problem)</li>
+        <li>Any wood that shows staining, softness, or unusual discoloration</li>
+      </ul>
+      <p class="mb-4">Important: a standard home inspection is <strong>visual and non-invasive</strong>. Inspectors cannot open walls or drill into framing. If signs of termites are found, we recommend a specialized pest inspection by a licensed exterminator before firming up any purchase agreement.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Termites vs. Carpenter Ants: How to Tell the Difference</h2>
+      <p class="mb-4">Ontario homes are more commonly affected by carpenter ants than termites, but both cause structural wood damage. Key differences during inspection:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Wood galleries:</strong> Termite tunnels contain soil and are rough/muddy. Carpenter ant galleries are clean, smooth, and sand-papery.</li>
+        <li><strong>Frass:</strong> Carpenter ants push coarse sawdust, insect parts, and debris outside their galleries (visible under infested wood). Termites don't leave debris piles.</li>
+        <li><strong>Swarmers:</strong> Termite swarmers have equal-length wings and straight antennae. Carpenter ant swarmers have larger front wings, elbowed antennae, and a pinched waist.</li>
+        <li><strong>Location:</strong> Carpenter ants prefer moist, already-rotted wood. Termites consume both wet and dry sound wood.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">High-Risk Areas in Ontario for Termites</h2>
+      <p class="mb-4">Eastern Subterranean Termites are most prevalent in warmer, more humid southern Ontario regions. Highest-risk areas include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Hamilton and Niagara Region</strong> — one of the highest termite densities in Canada, particularly in older pre-war housing stock</li>
+        <li><strong>Windsor and Essex County</strong> — warm microclimate supports large colonies</li>
+        <li><strong>Toronto (older neighbourhoods)</strong> — Riverdale, Leslieville, East York, and Scarborough homes built before 1970 are at elevated risk</li>
+        <li><strong>Kitchener-Waterloo</strong> — growing documented incidence in older brick-and-frame construction</li>
+        <li><strong>London and Sarnia</strong> — active termite zones in southwestern Ontario</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What to Do If Your Home Inspection Finds Termite Evidence</h2>
+      <ol class="list-decimal pl-6 mb-4 space-y-2">
+        <li><strong>Don't panic — but do act quickly.</strong> Finding mud tubes or evidence of prior activity doesn't necessarily mean the colony is active today. A pest inspector can determine if the infestation is current.</li>
+        <li><strong>Commission a specialized pest inspection</strong> before closing. Make it a condition of your offer if termite evidence is found during the home inspection.</li>
+        <li><strong>Get treatment quotes</strong> from two or three licensed exterminators. Eastern Subterranean Termites are typically treated with liquid termiticide barrier treatments or baiting systems.</li>
+        <li><strong>Negotiate the purchase price</strong> or require seller remediation and structural repairs as a condition of sale.</li>
+        <li><strong>After purchase:</strong> eliminate wood-to-soil contact around the foundation, fix moisture issues, and schedule annual visual inspections.</li>
+      </ol>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Home Inspection in Ontario That Checks for Termites</h2>
+      <p class="mb-4">Every ASADS <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase home inspection</a> includes a visual examination for termite evidence, wood-destroying insects, and wood rot throughout the accessible structure. We serve the entire GTA and Ontario — including high-risk areas like Hamilton, Windsor, Toronto, Kitchener, and Niagara.</p>
+      <p class="mb-4">Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book your inspection online</a>. Same-day appointments available.</p>
+    `,
+  },
+  {
+    id: 87,
+    slug: "is-home-inspection-mandatory-ontario",
+    title: "Is a Home Inspection Mandatory in Ontario? What Buyers Must Know",
+    metaTitle: "Is Home Inspection Mandatory in Ontario? 2026 Guide",
+    metaDescription: "Home inspections are not legally required in Ontario — but waiving one can cost you tens of thousands. Here's what the law says and what buyers should do.",
+    excerpt: "No, a home inspection is not legally mandatory in Ontario — but skipping one is one of the costliest mistakes a buyer can make. Here's the full picture for 2026.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is a Home Inspection Legally Required in Ontario?</h2>
+      <p class="mb-4">No. As of 2026, <strong>home inspections are not legally mandatory</strong> when buying a property in Ontario. There is no provincial law, regulation, or municipal bylaw that requires a buyer to obtain a home inspection before completing a real estate purchase.</p>
+      <p class="mb-4">Ontario's <em>Home Inspection Act, 2017</em> received Royal Assent — but has never been proclaimed into force. The Act would have introduced licensing requirements for home inspectors and standard reporting requirements, but implementation was repeatedly delayed and remains pending. As a result, the home inspection industry in Ontario is currently self-regulated through voluntary associations like InterNACHI Canada and OAHI (Ontario Association of Home Inspectors).</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Do Mortgage Lenders Require a Home Inspection in Ontario?</h2>
+      <p class="mb-4">Generally, <strong>no — mortgage lenders do not typically require a home inspection</strong> as a condition of mortgage approval for standard residential properties in Ontario. This is different from the United States, where some lenders mandate inspections for certain loan types.</p>
+      <p class="mb-4">Exceptions do exist:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>CMHC-insured mortgages on older properties:</strong> CMHC may require an inspection or appraisal with condition assessment for high-ratio insured mortgages on homes with known deficiencies.</li>
+        <li><strong>Private lenders and B-lenders:</strong> May require an inspection or appraisal as part of their risk assessment, particularly for older homes or properties with deferred maintenance.</li>
+        <li><strong>Construction and renovation mortgages:</strong> Almost always require inspections at draw stages to verify completion.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is Home Inspection Required for Condos in Ontario?</h2>
+      <p class="mb-4">Condo purchases have a mandatory 10-day cooling-off period in Ontario under the <em>Condominium Act, 1998</em> — but this does not require an inspection. The cooling-off period gives buyers time to review the Status Certificate, reserve fund study, and financial statements. A <a href="/services/condo-inspection" class="text-primary underline font-medium">condo inspection</a> is still strongly recommended during this period, even though it's not legally required.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Should You Get a Home Inspection Even If It's Not Required?</h2>
+      <p class="mb-4"><strong>Absolutely yes.</strong> The absence of a legal requirement doesn't reduce the financial risk of buying a home without knowing its condition. Consider:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>The average GTA home costs $1,000,000+. A home inspection costs $400–$600. That's 0.04–0.06% of the purchase price.</li>
+        <li>ASADS inspections routinely identify deferred maintenance and deficiencies worth $10,000–$80,000+ in older Ontario homes.</li>
+        <li>Common hidden issues in Ontario — knob-and-tube wiring, Kitec plumbing, vermiculite insulation, foundation movement, asbestos-containing materials — are invisible to the untrained eye.</li>
+        <li>A seller is only obligated to disclose known defects in Ontario. They're not required to discover or investigate latent issues.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What About Waiving the Inspection Condition?</h2>
+      <p class="mb-4">During the 2020–2022 GTA real estate frenzy, many buyers waived inspection conditions to make offers more competitive. This practice has declined significantly as the market cooled, but it remains common in multiple-offer situations.</p>
+      <p class="mb-4">If you're considering waiving your inspection condition, understand the risks:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>You assume full responsibility for all defects, known or unknown, once the deal closes.</li>
+        <li>Sellers are NOT required to remediate defects or reduce the price after a no-condition offer closes.</li>
+        <li>Recourse through the courts is expensive, slow, and limited — you must prove the seller had knowledge of concealed defects.</li>
+      </ul>
+      <p class="mb-4">Alternative for competitive markets: book a <a href="/services/same-day-home-inspection" class="text-primary underline font-medium">same-day home inspection</a> before your offer deadline. ASADS provides rapid booking, and your agent can use the inspection findings to make a more informed offer — sometimes without a formal inspection condition.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is a Home Inspector Required to Be Licensed in Ontario?</h2>
+      <p class="mb-4">Not yet. Because the Home Inspection Act, 2017 has not been proclaimed into force, <strong>anyone can legally call themselves a home inspector in Ontario</strong> without any formal training or certification. This makes it critical to verify credentials when hiring.</p>
+      <p class="mb-4">When choosing a home inspector, look for:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Membership in InterNACHI (International Association of Certified Home Inspectors) or OAHI (Ontario Association of Home Inspectors)</li>
+        <li>E&O (Errors and Omissions) insurance — protects you if the inspector misses something significant</li>
+        <li>A written inspection agreement and sample report before booking</li>
+        <li>Thermal imaging capability for detecting moisture and insulation deficiencies invisible to the naked eye</li>
+      </ul>
+      <p class="mb-4">ASADS inspectors are InterNACHI-certified, carry full E&O insurance, and provide same-day digital reports with thermal imaging included on every inspection. <a href="/booking" class="text-primary underline font-medium">Book online</a> or call <strong>(647) 801-9311</strong>.</p>
+    `,
+  },
+  {
+    id: 88,
+    slug: "home-inspection-red-flags-buyers-guide",
+    title: "Home Inspection Red Flags: 15 Issues That Should Worry Buyers",
+    metaTitle: "Home Inspection Red Flags: 15 Warning Signs for Buyers",
+    metaDescription: "What are the biggest home inspection red flags in Ontario? From foundation cracks to knob-and-tube wiring, here are the 15 issues that warrant serious concern.",
+    excerpt: "Not every inspection finding is equal. These 15 red flags found during Ontario home inspections signal expensive repairs, safety risks, or deal-breakers buyers need to know.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "10 min read",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Makes a Home Inspection Finding a "Red Flag"?</h2>
+      <p class="mb-4">A home inspection report lists all observed deficiencies — from missing caulk to structural movement. Most findings are minor maintenance items that cost hundreds to address. <strong>Red flags are different:</strong> they signal potential safety hazards, expensive repairs ($5,000–$100,000+), insurance problems, or issues that indicate larger hidden defects.</p>
+      <p class="mb-4">Here are the 15 home inspection red flags ASADS inspectors see most frequently in Ontario — and what they mean for buyers.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">1. Foundation Cracks (Especially Horizontal)</h2>
+      <p class="mb-4">Not all foundation cracks are equal. <strong>Hairline vertical cracks</strong> from concrete curing are usually minor. <strong>Diagonal cracks</strong> from settlement require monitoring. <strong>Horizontal cracks</strong> in poured concrete or block foundations are serious — they indicate lateral soil pressure that can lead to wall failure. Stair-step cracks in block foundations also signal significant movement. Any crack wider than 6mm or showing signs of water infiltration requires a structural engineer's assessment before purchase.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">2. Active Water Infiltration in the Basement</h2>
+      <p class="mb-4">Water staining on walls and floors can be historic and resolved, or active and ongoing. ASADS uses moisture meters and thermal imaging to distinguish between old and current moisture. Active water in the basement signals failed waterproofing, grading problems, or failed weeping tile — repairs that range from $3,000 (exterior grading) to $30,000+ (full exterior waterproofing with new weeping tile).</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">3. Knob-and-Tube Wiring</h2>
+      <p class="mb-4">Found in Ontario homes built before the 1950s, knob-and-tube (K&T) wiring is ungrounded, lacks insulation ratings for modern usage, and poses fire risks if improperly extended or covered with insulation. Most home insurance companies will not insure a home with active K&T wiring, or will charge significantly higher premiums. Full rewiring costs $8,000–$20,000+ for a detached home. <a href="/blog/knob-and-tube-wiring-ontario" class="text-primary underline font-medium">Learn more about K&T wiring in Ontario homes.</a></p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">4. Aluminum Wiring</h2>
+      <p class="mb-4">Common in Ontario homes built 1965–1978, aluminum branch circuit wiring expands and contracts more than copper, causing loose connections at outlets and switches that create arcing and fire hazards. Insurance coverage is difficult to obtain without remediation (either full copper replacement or approved aluminum-rated devices at every connection point — called "pig-tailing"). <a href="/blog/aluminum-wiring-toronto-homes" class="text-primary underline font-medium">See our full aluminum wiring guide.</a></p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">5. Kitec Plumbing</h2>
+      <p class="mb-4">Installed between 1995–2007, Kitec plastic piping (identifiable by its orange hot-water and blue cold-water pipes) is subject to premature failure — fittings corrode and burst, causing catastrophic water damage. A class-action settlement fund existed but has expired. Replacement costs $3,000–$8,000 for a typical house. Many insurers will not cover homes with active Kitec. <a href="/blog/kitec-plumbing-toronto-guide" class="text-primary underline font-medium">Full Kitec plumbing guide here.</a></p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">6. Evidence of Mold (Especially Hidden)</h2>
+      <p class="mb-4">Surface mold in a bathroom is usually cosmetic. Mold discovered in the attic, inside wall cavities, or in the HVAC system is a serious red flag indicating moisture problems that may not be fully visible. Mold remediation costs $2,000–$20,000+ depending on scope. More importantly, visible mold suggests moisture conditions that may be causing structural damage as well. ASADS recommends professional <a href="/services/mold-inspection" class="text-primary underline font-medium">mold testing</a> when evidence is found.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">7. Asbestos-Containing Materials (Pre-1990 Homes)</h2>
+      <p class="mb-4">Homes built or renovated before 1990 frequently contain asbestos in insulation, floor tiles, drywall compound, textured ceilings (popcorn), pipe insulation, and more. Intact asbestos is not an immediate health hazard, but if you plan to renovate — or if materials are already deteriorating — an <a href="/services/asbestos-testing" class="text-primary underline font-medium">asbestos inspection</a> is essential. Disturbance of asbestos-containing materials requires licensed abatement contractors under Ontario regulations.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">8. Failing or Aged Roof (Under 5 Years Remaining)</h2>
+      <p class="mb-4">Roof replacement is one of the largest single expenses in home ownership — $8,000–$25,000+ depending on size and material. An inspector can assess visible shingle condition, flashing integrity, and estimate remaining service life. A roof with less than 5 years of life, missing flashing, or multiple layers of shingles (re-roofing over old shingles) is a significant capital expenditure that should factor heavily into your offer price.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">9. Inadequate Attic Ventilation and Insulation</h2>
+      <p class="mb-4">Poor attic ventilation causes moisture buildup in winter, leading to condensation, mold growth on the underside of the roof deck, and premature shingle deterioration. In Ontario's climate, this is one of the most consistently observed deficiencies. Combined with inadequate insulation (below current code R-60 for most Ontario zones), buyers can expect higher energy costs and eventual roof deck replacement.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">10. Furnace or HVAC System at End of Life</h2>
+      <p class="mb-4">Gas furnaces typically last 15–25 years. Central AC units last 10–15 years. An inspection that reveals an HVAC system that's 20+ years old, has cracked heat exchangers (a carbon monoxide risk), or hasn't been serviced in years is a significant finding. Furnace replacement costs $3,500–$7,000; full HVAC replacement $7,000–$15,000+.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">11. Polybutylene or Lead Water Service Lines</h2>
+      <p class="mb-4">Lead water service pipes (connecting the municipal water main to the house) are found in Toronto, Hamilton, and older Ontario municipalities in homes built before the mid-1950s. Lead pipes leach lead into drinking water — a serious health concern. Replacement costs $3,000–$8,000 and often requires coordination with the municipality. Some cities offer cost-sharing programs.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">12. Unpermitted Additions and Renovations</h2>
+      <p class="mb-4">Finished basements, added bathrooms, garage conversions, and structural modifications done without permits create serious problems: insurance claims may be denied, the work may not meet code, and municipalities can order demolition or bring-to-code remediation at the owner's cost. Inspectors flag work that appears newer than the home's original construction and may not match building standards.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">13. Grading Sloping Toward the Foundation</h2>
+      <p class="mb-4">Landscaping and soil that slopes toward rather than away from the foundation channels water directly against basement walls — a primary cause of chronic basement water infiltration. While grading correction alone is inexpensive ($500–$2,000), if it's been this way for years, the foundation, weeping tile, and basement interior may already have sustained damage requiring far more extensive remediation.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">14. Sump Pump Issues or Missing Sump in High Water Table Areas</h2>
+      <p class="mb-4">A sump pump that's old, lacks a battery backup, or is absent in an area with high water tables or a history of basement flooding represents real risk. Flooding events cost $10,000–$50,000+ in Toronto and GTA — and are becoming more frequent with increasing extreme rainfall events.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">15. Evidence of Termites or Carpenter Ants</h2>
+      <p class="mb-4">Mud tubes, hollow-sounding floor joists, coarse sawdust beneath structural members, or sagging floors can all indicate active wood-destroying insect activity. In southern Ontario — particularly Hamilton, Niagara, Windsor, and older Toronto neighbourhoods — termite presence is more common than most buyers expect. <a href="/blog/termites-ontario-homes-guide" class="text-primary underline font-medium">See our full termite guide for Ontario.</a></p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What to Do When Your Inspector Finds Red Flags</h2>
+      <ol class="list-decimal pl-6 mb-4 space-y-2">
+        <li><strong>Don't cancel immediately.</strong> Almost every home has some deficiencies. The severity and cost matter.</li>
+        <li><strong>Get specialist opinions.</strong> Your inspector identifies and flags — engineers, electricians, and contractors quantify cost and scope.</li>
+        <li><strong>Negotiate.</strong> Use findings to request price reductions, seller repairs, or closing credits.</li>
+        <li><strong>Know your walk-away threshold.</strong> If total remediation costs exceed your risk tolerance, it's a valid reason to exercise your inspection condition.</li>
+      </ol>
+      <p class="mb-4">Book an ASADS <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase home inspection</a> across Ontario. Every inspection includes thermal imaging, detailed digital report, and same-day delivery. Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book online</a>.</p>
+    `,
+  },
+  {
+    id: 89,
+    slug: "questions-to-ask-home-inspector-ontario",
+    title: "20 Questions to Ask Your Home Inspector in Ontario",
+    metaTitle: "20 Questions to Ask Your Home Inspector | Ontario Guide",
+    metaDescription: "The best questions to ask a home inspector before, during, and after your inspection in Ontario. Get the most out of your inspection with this expert checklist.",
+    excerpt: "Most buyers don't know what to ask their home inspector — and miss critical information as a result. These 20 questions ensure you leave with everything you need to make a confident decision.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Asking the Right Questions Matters</h2>
+      <p class="mb-4">A home inspection is only as useful as your ability to understand and act on the findings. The best home inspectors in Ontario welcome questions — it's how buyers move from "I have a report" to "I understand this house." Here are 20 questions organized by when to ask them.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Before the Inspection: Questions to Ask When Booking</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. What certifications and insurance do you carry?</h3>
+      <p class="mb-4">Look for InterNACHI certification (the gold standard in North America) or OAHI membership, plus Errors & Omissions (E&O) insurance. Because Ontario has not yet implemented mandatory licensing under the Home Inspection Act, 2017, certifications and insurance are the primary quality signals available to buyers.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Does the inspection include thermal imaging?</h3>
+      <p class="mb-4">Infrared thermal cameras detect moisture behind walls, missing insulation, and electrical hot spots invisible to the naked eye. ASADS includes thermal imaging on every inspection at no extra charge — but many inspectors charge $100–$200 extra or don't offer it at all.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. Can I see a sample report?</h3>
+      <p class="mb-4">A quality inspection report should include photos, clear deficiency descriptions, severity ratings, and maintenance recommendations. If an inspector provides only a checklist with checkmarks, that's a red flag for quality.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. How long will the inspection take?</h3>
+      <p class="mb-4">A thorough inspection of a standard 3-bedroom detached home takes 2.5–4 hours. Anything under 90 minutes for a house (not a condo) should raise concerns about thoroughness.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">5. Should I attend the inspection?</h3>
+      <p class="mb-4">Always yes. Being present — especially for the last walkthrough — allows you to see findings firsthand, ask questions in context, and hear the inspector's priorities verbally. The written report is more useful when you've seen the issues in person.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">During the Inspection: Questions to Ask On-Site</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">6. What's the most significant issue you've found so far?</h3>
+      <p class="mb-4">Ask this near the end of the walkthrough. Experienced inspectors will give you a verbal priority list. This helps you focus on what matters most rather than treating every finding equally.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">7. Is this a safety issue or a maintenance item?</h3>
+      <p class="mb-4">Not all findings are equal. Understanding whether something needs immediate attention (missing GFCI protection, a cracked heat exchanger) versus future maintenance (aging roof, old water heater) helps you assess urgency and cost.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">8. What type of wiring does this house have?</h3>
+      <p class="mb-4">In Ontario, this question matters for homes built before 1985. Knob-and-tube (pre-1950s), aluminum branch circuit wiring (1965–1978), or mixed wiring systems can affect insurability and require remediation. Ask the inspector to identify what's in the panel and throughout the house.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">9. What kind of plumbing does this home have?</h3>
+      <p class="mb-4">The answer tells you a lot. Galvanized steel (pre-1960s, corrosion and flow restriction), copper (standard, generally reliable), Kitec (orange/blue plastic, 1995–2007, liability for failure), PEX (modern, good), or poly-B (grey plastic, 1978–1995, failure risk). Each has different implications for insurance and future repairs.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">10. How old are the major systems — roof, furnace, water heater, AC?</h3>
+      <p class="mb-4">This tells you what capital expenses are coming and when. A furnace that's 22 years old and a roof with 3 years of life remaining means you're looking at $15,000–$25,000 in replacements within the first five years of ownership.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">11. Can you see evidence of past water in the basement?</h3>
+      <p class="mb-4">Historic water staining, efflorescence (white mineral deposits on concrete), sump pump use, and floor cracks all tell a story about this home's moisture history. Ask for the inspector's read on whether moisture is historical and resolved, or ongoing.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">12. Is there any sign of asbestos or vermiculite in this home?</h3>
+      <p class="mb-4">For pre-1990 homes, this is critical. Inspectors cannot confirm asbestos without lab testing, but they can identify materials that commonly contain it (popcorn ceilings, old floor tiles, pipe wrap, drywall compound). Vermiculite attic insulation (Zonolite) is particularly concerning as it may contain asbestos.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">13. Do you see any signs of pests?</h3>
+      <p class="mb-4">Ask specifically about evidence of mice (droppings, gnawed insulation), carpenter ants (coarse sawdust at structural members), and termites (mud tubes, hollow wood, discarded wings). These are all visual findings but easy to overlook if you don't know what to look for.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">14. Is this work permitted? Does it look like it meets code?</h3>
+      <p class="mb-4">When you see a finished basement, added bathroom, or structural changes, ask whether it appears to have been done properly and with permits. Inspectors can't verify permits (that requires a city records search), but they can identify work that appears non-compliant with Ontario Building Code standards.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">15. Would you buy this house?</h3>
+      <p class="mb-4">A great home inspector won't tell you whether to buy — that's your decision. But they can give you context: "For a 1965 home, this is in better-than-average condition" or "This foundation concerns me enough that I'd want a structural engineer's opinion before proceeding." Listen for honest context, not reassurance.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">After the Inspection: Questions to Ask About the Report</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">16. Which items in the report require immediate action?</h3>
+      <p class="mb-4">Ask your inspector to walk you through the report's priority items — not just read it on your own. Inspectors can differentiate between "fix this before possession" versus "budget for this in year 3."</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">17. What specialists should I consult based on what you found?</h3>
+      <p class="mb-4">If the inspector found foundation concerns, they may recommend a structural engineer. Electrical issues may need a licensed electrician's quote. Moisture in the attic may require an insulation contractor. Ask for specific referrals or types of specialists.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">18. What's a ballpark repair cost for the major items?</h3>
+      <p class="mb-4">Inspectors aren't contractors and can't provide formal quotes, but experienced ones can provide order-of-magnitude estimates ("foundation crack injection typically runs $500–$1,500 per crack; full perimeter waterproofing is $20,000–$35,000"). This is useful context for negotiations.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">19. Are there limitations to this inspection I should know about?</h3>
+      <p class="mb-4">Inspectors can only assess what's visible and accessible. Ask what was excluded — areas concealed by storage, inaccessible crawlspaces, flat roofs not safely walkable, etc. For areas not inspected, you may want specialist assessments.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">20. Are you available if I have questions after reviewing the report?</h3>
+      <p class="mb-4">A professional inspector should be reachable after delivery to clarify findings. ASADS inspectors are available by phone and email after every inspection to answer follow-up questions from both buyers and their agents.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your Inspection with ASADS</h2>
+      <p class="mb-4">ASADS inspectors are InterNACHI-certified, carry full E&O insurance, include thermal imaging on every inspection, and deliver same-day digital reports. We welcome questions throughout the process and provide follow-up support after every inspection.</p>
+      <p class="mb-4">Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book online</a>. Serving the GTA and all of Ontario.</p>
+    `,
+  },
+  {
+    id: 90,
+    slug: "how-to-prepare-home-for-inspection-sellers",
+    title: "How to Prepare Your Home for a Home Inspection (Seller's Guide)",
+    metaTitle: "How Sellers Should Prepare for a Home Inspection | Ontario",
+    metaDescription: "Sellers: how to prepare your home for a buyer's inspection in Ontario. What to fix, what to leave, and how to avoid common surprises that derail deals.",
+    excerpt: "A buyer's home inspection doesn't have to be stressful for sellers. These preparation steps help you avoid surprises, protect your deal, and present your home in the best light.",
+    category: "Selling Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Seller Preparation Matters</h2>
+      <p class="mb-4">A buyer's home inspection can make or break a deal — even on a healthy home. Inspectors evaluate every accessible area, and common oversights by sellers (cluttered utility rooms, locked electrical panels, burned-out light bulbs) can create inspection report items that look worse than they are, triggering unnecessary buyer concerns or negotiating demands.</p>
+      <p class="mb-4">This guide covers what Ontario sellers should do in the days before a buyer's inspection to protect the deal and avoid avoidable findings.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Access: Give the Inspector Full Access to Everything</h2>
+      <p class="mb-4">The single biggest mistake sellers make is restricting access — intentionally or not. Anything an inspector cannot access gets flagged in the report with language like "inaccessible — recommend further evaluation." In a buyer's mind, that means hidden problems.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Electrical panel:</strong> Must be unlocked and accessible. Clear storage from in front of it.</li>
+        <li><strong>Furnace and water heater:</strong> Clear at least 3 feet of clearance around all HVAC equipment.</li>
+        <li><strong>Attic hatch:</strong> Make sure it opens and isn't painted shut. Clear closets below attic hatches.</li>
+        <li><strong>Crawlspace:</strong> Clear the access hatch and provide a flashlight if the space is unlit.</li>
+        <li><strong>Sub-panel and disconnect switches:</strong> Leave all electrical panels, sub-panels, and disconnects accessible.</li>
+        <li><strong>All rooms:</strong> Unlock interior doors, including storage rooms, utility rooms, and garage access doors.</li>
+        <li><strong>Basement:</strong> Clear boxes and stored items from perimeter walls so the inspector can see the foundation.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Utilities: Leave All Services On</h2>
+      <p class="mb-4">All utilities — gas, electricity, and water — must be active and operational on the day of inspection. If the home is vacant and utilities have been disconnected, the inspector cannot test the heating system, check for gas leaks at appliances, run water for plumbing testing, or verify electrical circuit operation. This triggers a follow-up inspection requirement that delays closing.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Turn the gas back on (requires a Enbridge/Utilities Kingston tech visit) at least 48 hours before inspection</li>
+        <li>Pilot lights on furnace, water heater, and fireplace should be lit</li>
+        <li>Water at the main shutoff should be on</li>
+        <li>All circuit breakers should be in the "on" position</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Quick Fixes That Make a Significant Difference</h2>
+      <p class="mb-4">These low-cost items appear in inspection reports and create buyer concern disproportionate to their actual significance:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Electrical</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Replace all burned-out light bulbs — a non-working light may be reported as a possible wiring issue</li>
+        <li>Install cover plates on any open junction boxes or missing outlet/switch covers</li>
+        <li>Make sure GFCI outlets in the kitchen, bathrooms, and garage are tested and functioning (press the test/reset buttons)</li>
+        <li>If you have a generator transfer switch, leave documentation accessible</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Plumbing</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Fix slow or clogged drains before the inspection</li>
+        <li>Check under all sinks for evidence of active leaks or water staining, and repair any dripping supply lines</li>
+        <li>Ensure the water heater's pressure relief valve is accessible</li>
+        <li>Check that all toilet tanks fill and stop properly</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Exterior</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Clean gutters and downspouts — clogged gutters are a common inspection finding</li>
+        <li>Ensure downspouts extend at least 1.8m (6 feet) from the foundation</li>
+        <li>Check that grading slopes away from the foundation — fill any low spots with soil</li>
+        <li>Trim back any tree branches or shrubs touching the roof or siding</li>
+        <li>Check caulking around windows and doors — replace cracked or missing caulk</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Roof and Attic</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>If you know of missing shingles, address them before the inspection if possible</li>
+        <li>Ensure attic hatch has weatherstripping and can be opened</li>
+        <li>If your attic has bathroom exhaust fans venting into the attic space rather than outside, address this — it's a consistent finding</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Basement and Interior</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Test and replace smoke detector and CO detector batteries — inspectors test these</li>
+        <li>Make sure the carbon monoxide detector is within 5 metres of every sleeping area (Ontario law)</li>
+        <li>Test the sump pump if you have one — fill the pit with water to verify operation</li>
+        <li>Replace or service the furnace filter if overdue</li>
+        <li>Check window operation — windows in bedrooms must open for egress per Ontario Building Code</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What NOT to Do Before an Inspection</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Don't hide deficiencies.</strong> If you paint over water stains without fixing the moisture source, or place rugs over damaged flooring, inspectors will often detect this anyway — and concealment of known defects is actionable in Ontario.</li>
+        <li><strong>Don't over-fix.</strong> You're not required to bring the home to new-build condition. Address safety issues and cosmetic items, but don't spend $20,000 renovating for a $5,000 return before selling.</li>
+        <li><strong>Don't be present during the inspection.</strong> Most real estate agents and inspectors prefer that sellers leave during the buyer's inspection — it allows buyers and their inspector to speak candidly.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Consider a Pre-Listing Inspection</h2>
+      <p class="mb-4">The most effective way to avoid inspection surprises is to get your own inspection before listing. A <a href="/services/pre-listing" class="text-primary underline font-medium">pre-listing home inspection</a> from ASADS gives you:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Full knowledge of your home's condition before buyers see it</li>
+        <li>The ability to make repairs on your schedule and budget</li>
+        <li>A credible, third-party document to share with potential buyers</li>
+        <li>Fewer surprises during negotiations — and faster, more confident offers</li>
+      </ul>
+      <p class="mb-4">Call ASADS at <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book a pre-listing inspection online</a>. We serve all of Ontario.</p>
+    `,
+  },
+  // ─── BATCH 2 (91-95) ───
+  {
+    id: 91,
+    slug: "waiving-home-inspection-ontario-risks",
+    title: "Waiving a Home Inspection in Ontario: Risks, Alternatives & What Buyers Regret",
+    metaTitle: "Waiving Home Inspection in Ontario: Risks & Alternatives",
+    metaDescription: "Should you waive your home inspection condition in Ontario? The real risks of buying without inspection, plus smart alternatives for competitive markets.",
+    excerpt: "Waiving a home inspection condition can win you a house — or saddle you with a money pit. Here's the honest picture for Ontario buyers navigating competitive offers.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Buyers Waive Home Inspections in Ontario</h2>
+      <p class="mb-4">In competitive real estate markets — particularly in Toronto and the GTA — sellers sometimes prefer "clean" offers without conditions. An offer with an inspection condition can be rejected in favour of a competing unconditional offer, even if your price is the same.</p>
+      <p class="mb-4">Between 2020 and 2022, waiving inspection conditions became standard practice in Toronto's frenetic seller's market. While market conditions have moderated significantly since then, multiple-offer situations still occur in desirable neighbourhoods, and the pressure to present a competitive offer remains real.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Happens When You Waive and Then Find Problems?</h2>
+      <p class="mb-4">In Ontario, once a no-condition offer closes, <strong>you own all defects</strong> — disclosed and undisclosed, visible and hidden. Your recourse is extremely limited:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Latent defects:</strong> You can potentially sue a seller who knew of a hidden defect and concealed it. However, this requires proving the seller had knowledge — expensive, slow, and uncertain. Legal action typically costs $30,000–$80,000+ before settlement.</li>
+        <li><strong>Patent defects:</strong> Problems that a reasonable buyer "should have known" about are entirely your responsibility after closing — regardless of whether you actually inspected.</li>
+        <li><strong>Agent liability:</strong> Limited. Agents have a duty to advise clients, but if you signed a waiver acknowledging the inspection condition was removed voluntarily, liability shifts to you.</li>
+        <li><strong>Insurance:</strong> Does not cover pre-existing structural defects, electrical or plumbing failures attributable to age/deferred maintenance, or issues present at the time of purchase.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Real Costs Buyers Have Faced After Waiving in Ontario</h2>
+      <p class="mb-4">Based on calls received by ASADS inspectors after closings (for post-purchase assessments), common discoveries in homes where inspection was waived include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Knob-and-tube wiring that insurance companies refused to cover — $12,000–$18,000 rewiring cost</li>
+        <li>Kitec plumbing requiring full replacement — $5,000–$8,000</li>
+        <li>Active foundation water infiltration hidden beneath fresh paint — $15,000–$40,000 waterproofing</li>
+        <li>Furnaces with cracked heat exchangers (carbon monoxide risk) requiring immediate replacement — $4,500–$7,000</li>
+        <li>Termite damage to floor joists in Hamilton-area homes — $20,000–$60,000 structural remediation</li>
+        <li>Asbestos in attic insulation requiring abatement before renovation — $8,000–$25,000</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Smart Alternatives to Waiving Your Inspection</h2>
+      <p class="mb-4">You don't have to choose between winning the offer and protecting yourself. Ontario buyers increasingly use these strategies:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1. Pre-Offer Inspection</h3>
+      <p class="mb-4">Book a <a href="/services/same-day-home-inspection" class="text-primary underline font-medium">same-day home inspection</a> before the offer deadline. ASADS provides rapid-turnaround bookings. You inspect before submitting your offer, eliminating the need for an inspection condition entirely — while still having the information you need.</p>
+      <p class="mb-4">This approach is increasingly common and accepted by sellers and agents because it makes your offer unconditional without eliminating your due diligence.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">2. Shortened Inspection Condition</h3>
+      <p class="mb-4">Instead of a standard 5-day inspection condition, offer 24–48 hours. This is less threatening to sellers while still giving you a professional assessment. ASADS provides same-day report delivery to support this compressed timeline.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">3. Offer a Higher Price to Compensate for the Condition</h3>
+      <p class="mb-4">In a close multiple-offer situation, increasing your bid by $5,000–$10,000 above a competing clean offer may win the property while preserving your inspection condition. Weigh this against the potential risk you're managing.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">4. Accept the Risk — but Know What You're Accepting</h3>
+      <p class="mb-4">If you choose to waive, at minimum:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Do a thorough visual assessment yourself during your showing — bring a flashlight</li>
+        <li>Pull any available information about the property's permit history at the local municipality</li>
+        <li>Budget a reserve of $20,000–$30,000 for unexpected repairs within the first 2 years</li>
+        <li>Book a <a href="/services/pre-purchase" class="text-primary underline font-medium">post-possession inspection</a> immediately after closing to understand your new home's condition</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Same-Day Inspection Before Your Offer</h2>
+      <p class="mb-4">ASADS specializes in rapid-turnaround inspections for buyers in competitive situations. We can often accommodate 24-hour bookings across the GTA and deliver the full digital report the same day.</p>
+      <p class="mb-4">Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book online now</a>.</p>
+    `,
+  },
+  {
+    id: 92,
+    slug: "home-inspection-worth-it-canada",
+    title: "Is a Home Inspection Worth It in Canada? (The Honest Answer)",
+    metaTitle: "Is a Home Inspection Worth It in Canada? Honest Answer",
+    metaDescription: "Is a home inspection worth the cost in Canada? What buyers actually find, how much inspections save, and when they matter most in Ontario's market.",
+    excerpt: "A $500 home inspection on a $900,000 home sounds obvious — but is it actually worth it? Here's the data on what Canadian buyers find, and when inspections make the biggest difference.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Short Answer: Yes — With Very Few Exceptions</h2>
+      <p class="mb-4">A professional home inspection in Canada typically costs $400–$600. The average Ontario resale home sells for $800,000–$1,100,000 in the GTA, and $450,000–$750,000 in smaller Ontario markets. At those purchase prices, a home inspection represents 0.04–0.13% of the transaction value — and routinely identifies issues worth multiples of its cost.</p>
+      <p class="mb-4">The real question isn't whether an inspection is worth the fee. It's whether the information it provides is worth more than the fee. The answer is almost always yes.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Do Home Inspections Actually Find in Ontario?</h2>
+      <p class="mb-4">According to industry data, approximately <strong>86% of Canadian home inspections identify at least one significant deficiency</strong> requiring professional remediation. Common significant findings in Ontario include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Electrical deficiencies</strong> (knob-and-tube, aluminum wiring, overloaded panels) — found in approximately 30% of pre-1985 Ontario homes inspected</li>
+        <li><strong>Moisture and water management issues</strong> — basement water infiltration, improper grading, failed caulking — found in approximately 40% of inspections</li>
+        <li><strong>Roofing deficiencies</strong> — remaining life under 5 years, flashing failures, improper ventilation — found in approximately 25% of inspections</li>
+        <li><strong>HVAC systems at or near end of life</strong> — furnaces over 20 years, AC units over 15 years — found in approximately 20% of inspections</li>
+        <li><strong>Plumbing material concerns</strong> (Kitec, galvanized, lead service lines) — found in a significant percentage of pre-2000 Ontario homes</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Do Home Inspections Save Buyers?</h2>
+      <p class="mb-4">Industry estimates suggest buyers who receive inspection reports use findings to negotiate an average of <strong>$5,000–$15,000 in price reductions or repair credits</strong> on transactions where significant deficiencies are found. This doesn't account for buyers who walk away from homes with catastrophic issues — avoiding far larger losses.</p>
+      <p class="mb-4">Consider these real-cost scenarios where a home inspection prevented a major financial mistake:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Buyer avoids $35,000 foundation repair in a Hamilton home — inspection found horizontal foundation cracks and active water infiltration</li>
+        <li>Buyer negotiates $18,000 price reduction on Toronto semi-detached with aluminum wiring throughout and an under-sized electrical panel</li>
+        <li>Buyer walks away from a Kitchener property with $45,000 of termite damage concealed beneath updated hardwood flooring</li>
+        <li>Buyer discovers Kitec plumbing and asbestos pipe wrap — negotiates $12,000 repair credit on Mississauga townhouse</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When Is a Home Inspection Most Important?</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Older Homes (Pre-1985)</h3>
+      <p class="mb-4">Inspections are highest-value on older Ontario homes where legacy systems (knob-and-tube wiring, galvanized plumbing, asbestos-containing materials, aging boilers and oil tanks) are common. The older the home, the higher the probability of significant findings.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">After Recent Renovations</h3>
+      <p class="mb-4">Freshly renovated homes can be a buyer's worst nightmare — cosmetic work can easily conceal water damage, mold, structural issues, or unpermitted electrical and plumbing work. A thermal imaging inspection is particularly valuable on recently renovated properties.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Estate Sales and Power-of-Sale Properties</h3>
+      <p class="mb-4">Sellers in these transactions typically cannot provide maintenance history, disclose known defects, or represent the property's condition. The inspection is often the only due diligence available to buyers.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">New Construction</h3>
+      <p class="mb-4">New homes in Ontario are covered by Tarion warranty, but that doesn't mean they're defect-free at possession. A <a href="/services/new-construction" class="text-primary underline font-medium">new construction inspection</a> before your PDI (Pre-Delivery Inspection) walk-through identifies deficiencies the builder is obligated to fix — before you move in.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When Might a Home Inspection Be Less Critical?</h2>
+      <p class="mb-4">There are limited scenarios where the marginal value of an inspection is reduced:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Brand-new construction</strong> with recent Tarion warranty enrollment and full builder inspection history — though a PDI inspection is still recommended</li>
+        <li><strong>Teardown properties</strong> being purchased purely for land value, where existing structures will be demolished — inspection of the structure itself may add little value</li>
+        <li><strong>Experienced investors</strong> with renovation expertise who can accurately self-assess structural and mechanical conditions — though even experienced contractors miss issues outside their specialty</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Bottom Line</h2>
+      <p class="mb-4">A home inspection is worth it for almost every buyer in almost every transaction. The fee is minimal relative to the purchase price. The information is irreplaceable. And the alternative — discovering a $30,000 problem after closing — is both financially and emotionally devastating.</p>
+      <p class="mb-4">Book an ASADS inspection across Ontario. InterNACHI-certified, thermal imaging included, same-day reports. Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book online</a>.</p>
+    `,
+  },
+  {
+    id: 93,
+    slug: "what-happens-after-bad-home-inspection",
+    title: "What to Do After a Bad Home Inspection: Ontario Buyer's Playbook",
+    metaTitle: "Bad Home Inspection? What to Do Next | Ontario Guide",
+    metaDescription: "Your home inspection came back with serious issues. Now what? Step-by-step guide for Ontario buyers on negotiating, walking away, or proceeding with confidence.",
+    excerpt: "A home inspection with serious findings doesn't have to mean the end of the deal — but it does require a clear strategy. Here's exactly what Ontario buyers should do next.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">First: Don't Panic — No House Is Perfect</h2>
+      <p class="mb-4">Every home inspection report looks alarming when you first read it. Even a well-maintained house will have dozens of items — aging caulking, minor electrical upgrades needed, maintenance recommendations, wear-and-tear on systems. This is normal. The goal is to identify issues that are genuinely significant — safety risks, expensive repairs, or conditions that affect the home's insurability or habitability.</p>
+      <p class="mb-4">Before reacting to a long report, sit down with your inspector (ASADS inspectors are available for post-inspection calls) and ask: "What are the two or three things that genuinely concern you on this property?" Focus on those before anything else.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Step 1: Categorize the Findings</h2>
+      <p class="mb-4">Sort inspection findings into four categories:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Safety hazards:</strong> Items that pose an immediate risk — cracked heat exchanger (CO risk), missing smoke detectors, live exposed wiring, unsafe deck or stairs. These require action regardless of who pays.</li>
+        <li><strong>Major defects ($5,000+):</strong> Foundation issues, knob-and-tube wiring, Kitec plumbing, roof nearing end of life, HVAC at end of life, active water infiltration, asbestos requiring abatement. These are the items that should drive your negotiation.</li>
+        <li><strong>Minor defects ($500–$5,000):</strong> Older water heater, single-pane windows, outdated bathroom exhaust, broken window seals, minor plumbing repairs. Important context for your ownership budget, but less likely to justify walking away.</li>
+        <li><strong>Maintenance items:</strong> Caulking, gutter cleaning, filter changes, dryer vent cleaning. Every house has these. Factor them into your first-year ownership budget but don't negotiate over them.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Step 2: Get Specialist Quotes (Before Your Condition Expires)</h2>
+      <p class="mb-4">For major defects, do not rely on the inspector's order-of-magnitude estimate alone. Call licensed contractors for real quotes within your inspection condition period. This gives you:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Actual remediation costs to use in negotiations</li>
+        <li>A timeline for repairs (important if you have a possession date)</li>
+        <li>Documentation to support your position with the seller</li>
+      </ul>
+      <p class="mb-4">For Ontario-specific concerns: foundation issues → structural engineer. Electrical → licensed electrician. Mold → certified industrial hygienist. Asbestos → asbestos consultant. Plumbing → licensed plumber.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Step 3: Choose Your Strategy</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Option A: Negotiate a Price Reduction</h3>
+      <p class="mb-4">Present the seller with documented repair quotes and request a price reduction equivalent to the remediation cost. This is the most common approach and works well when:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>You want the property and the issues are definable and quantifiable</li>
+        <li>The seller is motivated and understands the market</li>
+        <li>Total repair costs represent less than 5–10% of the purchase price</li>
+      </ul>
+      <p class="mb-4">In Ontario, sellers are under no legal obligation to negotiate after an inspection — but most will if findings are well-documented and the alternative is relisting. Be specific: provide the report section and contractor quote, not a general complaint.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Option B: Request Seller Repairs as a Condition</h3>
+      <p class="mb-4">Instead of a price reduction, ask the seller to complete specific repairs (particularly safety items) before closing. This works when the repairs are straightforward and easily verifiable. Risk: contractor quality is the seller's choice — you may not like the work done.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Option C: Request a Repair Credit at Closing</h3>
+      <p class="mb-4">Similar to a price reduction but structured as a credit on closing costs. Functionally equivalent for most buyers, but may have different tax implications depending on how the deal is structured. Discuss with your lawyer.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Option D: Walk Away</h3>
+      <p class="mb-4">If you have an inspection condition and the seller refuses to negotiate on significant findings, walking away is a legitimate option — and sometimes the right one. Grounds for walking away include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Total remediation costs exceeding your financial capacity or risk tolerance</li>
+        <li>Issues that suggest larger hidden defects (e.g., horizontal foundation cracks suggesting ongoing movement)</li>
+        <li>Evidence of concealment (fresh paint over water stains, very recent "cosmetic" renovation over structural areas)</li>
+        <li>Inability to obtain insurance due to wiring, plumbing, or roof conditions</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Step 4: Extend Your Condition If Needed</h2>
+      <p class="mb-4">In Ontario, inspection conditions are typically 3–5 business days. If you need more time to get specialist quotes or consult with advisors, ask your agent to request an extension from the seller. Most sellers will agree to a 1–2 day extension when buyers are clearly engaged and getting quotes. If a seller refuses a reasonable extension request when you're trying to understand significant findings, that itself is a red flag about their intent.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Step 5: Proceed with Eyes Open</h2>
+      <p class="mb-4">If you decide to proceed — whether after a price reduction or accepting the property as-is — make sure you fully understand what you're taking on. Before closing:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Contact your insurance broker about any findings (particularly wiring, plumbing, or roof age) to confirm coverage before removing conditions</li>
+        <li>Line up contractors for urgent repairs so you can move quickly after possession</li>
+        <li>Build a realistic first-year maintenance budget that accounts for known deferred items</li>
+      </ul>
+      <p class="mb-4">ASADS inspectors are available for <strong>follow-up consultations</strong> to help buyers understand which findings are urgent versus which can wait. Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book a post-inspection consultation</a>.</p>
+    `,
+  },
+  {
+    id: 94,
+    slug: "insurance-home-inspection-ontario",
+    title: "Insurance Home Inspection in Ontario: What It Is & When You Need One",
+    metaTitle: "Insurance Home Inspection Ontario | When You Need One",
+    metaDescription: "What is an insurance home inspection in Ontario? When insurers require one, what they look for, and how ASADS can help you satisfy lender and insurer requirements.",
+    excerpt: "Insurance companies in Ontario increasingly require home inspections before issuing or renewing coverage on older homes. Here's what these inspections cover and how to prepare.",
+    category: "Home Maintenance",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is an Insurance Home Inspection?</h2>
+      <p class="mb-4">An insurance home inspection is a property assessment conducted to satisfy a requirement from your home insurer or mortgage lender before coverage is issued, renewed, or maintained. Unlike a standard buyer's home inspection (which is comprehensive and conducted on behalf of the buyer), an insurance inspection focuses specifically on the risk factors that insurance companies care about: conditions that increase the likelihood of an insurable claim.</p>
+      <p class="mb-4">In Ontario, insurance-driven inspections have become increasingly common as insurers tighten underwriting standards for older homes. Some insurers send their own "field representatives" while others accept a certified third-party inspection report.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When Do Ontario Home Insurers Require an Inspection?</h2>
+      <p class="mb-4">You may be asked to provide an insurance inspection in the following situations:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Purchasing coverage on an older home (pre-1980):</strong> Many Ontario insurers require inspection before issuing new policies on homes over 40 years old, particularly if the policy includes full replacement cost coverage.</li>
+        <li><strong>Policy renewal on a home with known risk factors:</strong> Insurers may request inspection if you've disclosed knob-and-tube wiring, an aging roof, or older plumbing at renewal.</li>
+        <li><strong>After a major claim:</strong> Following a water damage or fire claim, insurers sometimes require inspection before reinstating coverage to ensure underlying conditions have been remediated.</li>
+        <li><strong>Switching insurers:</strong> A new insurance company may require inspection before taking on coverage of an older home, particularly if the previous insurer had noted concerns.</li>
+        <li><strong>High-ratio mortgage requirements:</strong> CMHC and some lenders require property condition assessments for certain high-risk properties as part of mortgage approval.</li>
+        <li><strong>Vacant home insurance:</strong> Insuring a vacant or unoccupied home in Ontario often requires a physical inspection due to the elevated risk profile.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Do Ontario Home Insurers Look For?</h2>
+      <p class="mb-4">Insurance inspections in Ontario focus on the systems and conditions most likely to generate claims. The primary concerns are:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Electrical Systems</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Knob-and-tube wiring:</strong> Most Ontario insurers will not cover homes with active K&T wiring, or will charge significant surcharges. Some will insure if K&T is inactive and disconnected.</li>
+        <li><strong>Aluminum branch circuit wiring:</strong> Requires documented remediation (pig-tailing with approved connectors) or insurers may decline or surcharge.</li>
+        <li><strong>Fuses instead of breakers:</strong> Fuse panels (especially 60-amp services) are increasingly uninsurable with major insurers as they indicate undersized electrical service.</li>
+        <li><strong>Panel brands:</strong> Certain electrical panel brands (Federal Pacific Stab-Lok, Zinsco) are flagged by insurers due to documented breaker failure rates.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Plumbing</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Kitec plumbing:</strong> Subject to surcharges or denial by many Ontario insurers due to documented failure and flooding risk.</li>
+        <li><strong>Galvanized steel pipes:</strong> Older galvanized pipes approaching end of service life may be flagged — insurers are concerned about failure and water damage claims.</li>
+        <li><strong>Polybutylene (poly-B):</strong> Grey plastic pipe (1978–1995) may be flagged due to embrittlement and failure risk.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Roof</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Roof age is a primary factor — most Ontario insurers want at least 5–10 years of remaining life</li>
+        <li>Multiple layers of shingles (indicating postponed maintenance) may be flagged</li>
+        <li>Flat roofs are assessed for membrane condition and drainage</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">General Condition</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Evidence of water damage, foundation issues, or active mold</li>
+        <li>Overall state of maintenance and upkeep</li>
+        <li>Presence of functional smoke detectors and CO detectors (Ontario law)</li>
+        <li>Heating system type and condition (wood stoves require WETT inspection; oil furnaces have specific requirements)</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Prepare for an Insurance Home Inspection</h2>
+      <ol class="list-decimal pl-6 mb-4 space-y-2">
+        <li>Gather documentation of any upgrades: electrical panel replacement receipts, plumbing replacement records, roof installation date and materials.</li>
+        <li>Ensure all smoke and CO detectors are installed and functional.</li>
+        <li>Address any obvious deferred maintenance: fix dripping faucets, replace burned-out lights, clear access to the electrical panel and utility areas.</li>
+        <li>If you have a wood stove or fireplace insert, have a current <a href="/services/wett-inspection" class="text-primary underline font-medium">WETT inspection certificate</a> ready — most Ontario insurers require it.</li>
+        <li>If your home has oil heat, ensure the oil tank has been recently inspected and documentation is available.</li>
+      </ol>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Can ASADS Provide an Insurance-Qualifying Inspection?</h2>
+      <p class="mb-4">Yes. ASADS provides comprehensive home condition assessments that satisfy the documentation requirements of most Ontario home insurance companies. Our InterNACHI-certified inspection reports, delivered with thermal imaging and same-day digital delivery, provide the objective third-party assessment insurers require.</p>
+      <p class="mb-4">If you need an inspection to satisfy a specific insurer's requirements, contact us first — we can review the insurer's checklist and ensure our report format and scope addresses their requirements directly.</p>
+      <p class="mb-4">Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book online</a>. Serving all of Ontario.</p>
+    `,
+  },
+  {
+    id: 95,
+    slug: "new-build-home-inspection-checklist-ontario",
+    title: "New Build Home Inspection Checklist: What to Check Before Your PDI in Ontario",
+    metaTitle: "New Build Home Inspection Checklist Ontario | PDI Guide",
+    metaDescription: "New construction home inspection checklist for Ontario buyers. What to check at your PDI, what Tarion covers, and why an independent inspector protects you.",
+    excerpt: "Ontario's Tarion warranty covers new builds — but it doesn't catch everything at possession. This checklist ensures you document every deficiency before you take the keys.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why New Build Homes Still Need Independent Inspection</h2>
+      <p class="mb-4">Many Ontario buyers assume that new construction is defect-free. Municipal building inspections, Tarion warranty coverage, and builder quality assurance should catch everything — right?</p>
+      <p class="mb-4">In practice, that's often not the case. Municipal inspections are code compliance checks, not quality assessments. They occur at specific stages of construction, not at completion. Tarion warranty protects you after possession — but only if deficiencies are properly documented. And builder PDI walkthroughs are conducted by the builder's own representative, not an independent professional.</p>
+      <p class="mb-4">An independent inspection before or during your PDI (Pre-Delivery Inspection) ensures every deficiency is professionally documented, photographed, and submitted to the builder in writing — maximizing your Tarion warranty claims and your negotiating position at possession.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Understanding Your PDI in Ontario</h2>
+      <p class="mb-4">The <strong>Pre-Delivery Inspection (PDI)</strong> is a mandatory walkthrough between the buyer and the builder representative before you take possession of a new home in Ontario. It typically occurs 2–5 days before your closing date.</p>
+      <p class="mb-4">During the PDI, you and the builder walk through the home together. Any deficiencies you identify are recorded on a Tarion PDI form — and this form becomes the foundation of your warranty claims. <strong>Items not documented on the PDI form may be harder to claim under Tarion</strong>, which is why thorough documentation matters so much.</p>
+      <p class="mb-4">You are permitted to bring an independent inspector to your PDI. ASADS strongly recommends this — our inspectors identify issues that buyers unfamiliar with construction standards routinely miss.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Tarion Covers (and What It Doesn't)</h2>
+      <p class="mb-4">Ontario's Tarion New Home Warranty provides three main coverage periods:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>1 Year:</strong> Defects in work and materials; Ontario Building Code violations; unauthorized substitutions</li>
+        <li><strong>2 Years:</strong> Water penetration through the building envelope; defects in HVAC, plumbing, and electrical delivery systems; structural defects</li>
+        <li><strong>7 Years:</strong> Major structural defects</li>
+      </ul>
+      <p class="mb-4">Tarion does not cover: normal wear and tear, cosmetic items beyond the warranty period, damage from owner misuse, or issues arising from owner-installed components. Tarion also requires timely reporting — Year 1 warranty items must be submitted within the first year, typically in the first 30 days after possession and again near the 1-year anniversary.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">New Build Home Inspection Checklist</h2>
+      <p class="mb-4">Use this checklist during your PDI. Check every item and photograph all deficiencies with a timestamp.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Exterior</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Grading — soil slopes away from foundation at least 6 inches over 10 feet</li>
+        <li>Driveway and walkway — cracks, settlement, proper drainage</li>
+        <li>Siding — gaps, damage, missing pieces, improper overlap</li>
+        <li>Brick/stone — cracked mortar, spalling, missing weep holes above grade</li>
+        <li>Windows and doors — all open, close, lock, and seal properly</li>
+        <li>Caulking — complete and continuous around all windows, doors, and penetrations</li>
+        <li>Soffit, fascia, and eavestroughs — properly installed, no gaps</li>
+        <li>Roof — visible shingle condition, flashing at all penetrations</li>
+        <li>Garage door — opens, closes, auto-reverses safety feature working</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Basement and Foundation</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Foundation walls — no significant cracks, no water staining</li>
+        <li>Floor — no cracks wider than 3mm, no unevenness</li>
+        <li>Sump pit and pump — present if required, pump operational</li>
+        <li>Rough-ins — cleanout, floor drain, utility connections per plan</li>
+        <li>Insulation — present on all exterior walls per specification</li>
+        <li>Vapour barrier — intact and continuous</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Electrical</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Panel — amperage per agreement (typically 200A for new builds), all breakers labeled</li>
+        <li>All outlets — test with outlet tester for correct wiring and polarity</li>
+        <li>GFCI protection — all kitchen, bathroom, garage, and exterior outlets</li>
+        <li>AFCI protection — bedroom circuits (required by Ontario Electrical Safety Code)</li>
+        <li>Light fixtures — all installed per plan, all work</li>
+        <li>Smoke detectors — in every sleeping room and on every floor</li>
+        <li>CO detector — within 5 metres of sleeping areas (Ontario law)</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Plumbing</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Water pressure — acceptable at all fixtures</li>
+        <li>All faucets and toilets — functioning, no leaks</li>
+        <li>Water heater — proper size, T&P valve accessible, no leaks</li>
+        <li>Tubs and showers — drain properly, no backup</li>
+        <li>Caulking — complete around all tubs, showers, and sink-to-counter joints</li>
+        <li>Under-sink plumbing — no leaks, properly supported</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">HVAC</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Furnace — brand and efficiency rating matches contract specification</li>
+        <li>HRV (Heat Recovery Ventilator) — installed and operational (required in Ontario new construction)</li>
+        <li>Air conditioning — installed if included, operational</li>
+        <li>Ductwork — all registers present and properly installed, none blocked</li>
+        <li>Thermostat — operational, programmable as spec'd</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Interior Finishes</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Drywall — no cracks, nail pops, or tape joints visible</li>
+        <li>Paint — complete, correct colour per selections, no missed areas</li>
+        <li>Flooring — no squeaks, gaps, or damaged boards; transitions installed</li>
+        <li>Tile — no cracked tiles, grout complete and consistent</li>
+        <li>Cabinetry — all doors and drawers operate smoothly, no damage</li>
+        <li>Countertops — no chips, cracks, or gaps at backsplash</li>
+        <li>Stair handrails — properly secured, compliant height</li>
+        <li>Trim and baseboards — complete, caulked, no gaps at joints</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book an Independent PDI Inspection with ASADS</h2>
+      <p class="mb-4">ASADS provides <a href="/services/new-construction" class="text-primary underline font-medium">new construction home inspections</a> across Ontario — including attendance at your PDI walkthrough. We provide a detailed written report with photographs that supports your Tarion warranty submissions and gives you leverage with your builder.</p>
+      <p class="mb-4">Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book your PDI inspection online</a>.</p>
+    `,
+  },
+
+  // ─── BATCH 3 (96-100) ───
+  {
+    id: 96,
+    slug: "how-to-read-home-inspection-report",
+    title: "How to Read a Home Inspection Report: A Buyer's Complete Guide",
+    metaTitle: "How to Read a Home Inspection Report | Ontario Guide",
+    metaDescription: "Home inspection reports can be overwhelming. This guide explains every section, how to prioritize findings, and what to do with the information in Ontario.",
+    excerpt: "Your home inspection report arrives with 40 pages of findings, photos, and repair recommendations. Here's how to read it, what matters most, and what to do next.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Home Inspection Reports Feel Overwhelming</h2>
+      <p class="mb-4">A comprehensive home inspection report in Ontario typically runs 30–70 pages. It includes photos, deficiency descriptions, maintenance recommendations, and safety warnings. For most buyers, the first read through a report on their potential new home is genuinely alarming — there's a lot there.</p>
+      <p class="mb-4">Understanding the structure of a professional inspection report transforms it from a scary document into a useful decision-making tool. This guide walks you through every section.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Part 1: The Summary Page</h2>
+      <p class="mb-4">Most modern inspection reports begin with an <strong>executive summary</strong> — a condensed list of the most significant findings, often colour-coded or severity-rated. Start here. The summary tells you:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Which items are safety concerns (typically flagged in red or with a safety icon)</li>
+        <li>Which items are significant defects requiring immediate professional attention</li>
+        <li>Which items are maintenance recommendations that can be addressed over time</li>
+      </ul>
+      <p class="mb-4">If your report doesn't have a summary page, ask your inspector to walk you through the five most significant findings verbally. This verbal context is often as valuable as the written report itself.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Part 2: Understanding Severity Ratings</h2>
+      <p class="mb-4">Inspectors use different rating systems, but most Ontario inspection reports use a three or four-tier severity system. Here's how to interpret common rating labels:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Safety Hazard / Safety Concern:</strong> Requires immediate action. Examples: CO detector missing, unsafe electrical conditions, structural instability. Don't close without addressing these.</li>
+        <li><strong>Major Defect / Significant Finding:</strong> A condition that significantly affects the value, habitability, or safety of the property. Examples: foundation cracks showing active movement, knob-and-tube wiring, active basement water infiltration. Use these for negotiation.</li>
+        <li><strong>Repair Recommended / Deficiency:</strong> A condition that should be repaired but isn't immediately dangerous. Examples: failed window seals, damaged soffit, minor plumbing drips. Factor into first-year maintenance budget.</li>
+        <li><strong>Maintenance Item / Monitor:</strong> Normal wear and tear or conditions to watch. Examples: caulking aging around windows, roof at 60% of expected life, water heater approaching replacement age. Budget for eventual replacement.</li>
+        <li><strong>Improvement / Upgrade Recommended:</strong> Items that don't meet current best practices but aren't necessarily defective. Examples: GFCIs not installed in older kitchen (pre-code change), insulation below current R-value targets.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Part 3: The Major Inspection Sections</h2>
+      <p class="mb-4">After the summary, the report divides findings by system or area of the home. Here's what each section means:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Roofing</h3>
+      <p class="mb-4">Reports the estimated remaining life of the roof covering, condition of flashings, ridge, valleys, gutters, and soffit/fascia. Key question: How many years are left, and is there evidence of active leaking or poor flashing that's causing water infiltration right now?</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Structure</h3>
+      <p class="mb-4">Foundation type, condition of visible foundation walls, floor system, and visible structural elements. This is where cracks, settlement, water infiltration, and structural movement are documented. <strong>This section should be read carefully every time</strong> — structural issues are the most expensive category of repair.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Electrical</h3>
+      <p class="mb-4">Panel amperage and condition, wiring type (copper vs. aluminum vs. knob-and-tube), GFCI and AFCI protection, and any visible deficiencies at fixtures and outlets. Wiring type is critical for insurability — confirm what's in the report matches what's acceptable to your insurer before removing conditions.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Plumbing</h3>
+      <p class="mb-4">Pipe materials (copper, PEX, Kitec, galvanized, poly-B), water heater age and condition, supply and drain function, and any evidence of leaks. Pipe material is important for insurance and future repair cost — the report should clearly identify what's present.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Heating and Cooling (HVAC)</h3>
+      <p class="mb-4">Furnace type, age, and condition; AC type, age, and condition; ductwork and ventilation. Inspector can assess operational condition but cannot fully diagnose mechanical failures without specialized HVAC testing. If the report notes limitations in accessing or testing the system, consider a furnace servicing as a purchase condition.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Insulation and Ventilation</h3>
+      <p class="mb-4">Attic insulation depth and type, vapour barrier condition, attic ventilation adequacy. This section also typically notes whether bathroom/kitchen exhausts properly vent to the exterior (a very common deficiency in Ontario older homes).</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Interior</h3>
+      <p class="mb-4">Ceiling, wall, and floor conditions; window and door operation; visible signs of water damage or staining; smoke and CO detector presence. This section documents visible cosmetic and functional items throughout the living spaces.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Exterior</h3>
+      <p class="mb-4">Siding, cladding, windows, doors, deck/porch condition, grading, and drainage. Grading findings — soil sloping toward the foundation — are very common in Ontario and a leading cause of basement water problems.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Part 4: The Limitations Section</h2>
+      <p class="mb-4">Every professional report includes a list of limitations — areas that could not be inspected due to access, weather, or safety constraints. Common limitations include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Areas blocked by storage or personal property</li>
+        <li>Flat roofs not safely walkable</li>
+        <li>Areas beneath insulation or behind finished walls</li>
+        <li>Intermittent systems that weren't operational during the inspection (seasonal AC, wood stoves)</li>
+      </ul>
+      <p class="mb-4">If a significant area was not inspected, consider commissioning a specialist assessment for that component specifically.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Use the Report for Negotiations</h2>
+      <ol class="list-decimal pl-6 mb-4 space-y-2">
+        <li>Highlight all Major Defects and Safety items</li>
+        <li>Get contractor quotes for the most expensive items within your inspection condition period</li>
+        <li>Prepare a written list of items and documented costs to present to the seller's agent</li>
+        <li>Focus negotiations on 2–3 significant items, not every maintenance item on the list</li>
+      </ol>
+      <p class="mb-4">ASADS inspectors are available for follow-up calls to help buyers prioritize findings and prepare for negotiations. Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book your inspection online</a>.</p>
+    `,
+  },
+  {
+    id: 97,
+    slug: "home-inspection-cost-vaughan",
+    title: "Home Inspection Cost in Vaughan, Ontario (2026 Prices)",
+    metaTitle: "Home Inspection Cost Vaughan 2026 | ASADS",
+    metaDescription: "Home inspection prices in Vaughan: condos from $299, semis from $399, detached from $449. Same-day reports, thermal imaging included. Book ASADS online.",
+    excerpt: "Home inspection costs in Vaughan range from $299 for condos to $449–$549+ for larger detached homes. Here's exactly what's included and how to book.",
+    category: "Pricing",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "5 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does a Home Inspection Cost in Vaughan?</h2>
+      <p class="mb-4">Home inspection costs in Vaughan, Ontario typically range from <strong>$299 to $549+</strong> for a standard residential inspection in 2026. Pricing depends primarily on property type and square footage.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">ASADS Home Inspection Prices in Vaughan</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo/Stacked Townhouse:</strong> From $299 — covers unit interior, HVAC, electrical, plumbing</li>
+        <li><strong>Semi-Detached/Townhouse (under 2,000 sq ft):</strong> From $399</li>
+        <li><strong>Detached Home (under 2,500 sq ft):</strong> From $449</li>
+        <li><strong>Larger Detached / Century Home (2,500–3,500 sq ft):</strong> From $499</li>
+        <li><strong>Executive / Luxury Home (3,500+ sq ft):</strong> From $549+</li>
+      </ul>
+      <p class="mb-4">All ASADS inspections include thermal imaging (infrared scan), a same-day digital report with photographs, and post-inspection follow-up. We never charge extra for thermal imaging.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What's Included in a Vaughan Home Inspection</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Structural systems — foundation, framing, roof structure</li>
+        <li>Roofing — shingles, flashings, gutters, downspouts</li>
+        <li>Exterior — siding, windows, doors, grading, drainage</li>
+        <li>Electrical — panel, wiring type, outlets, GFCI/AFCI protection</li>
+        <li>Plumbing — pipe materials, water heater, supply and drain</li>
+        <li>HVAC — furnace, AC, ductwork, HRV/ERV</li>
+        <li>Insulation and ventilation — attic, vapour barrier, exhaust fans</li>
+        <li>Interior — walls, ceilings, floors, windows, stairs</li>
+        <li>Thermal imaging scan throughout — detects moisture and insulation gaps invisible to the naked eye</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Vaughan Housing Stock: What Inspectors Find</h2>
+      <p class="mb-4">Vaughan's housing stock is predominantly post-1985 residential development — Woodbridge, Maple, Thornhill, Kleinburg, and Concord areas. Common inspection findings in Vaughan include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Kitec plumbing</strong> in homes built 1995–2007 (very common in Vaughan's 2000s subdivision housing stock)</li>
+        <li><strong>HVAC systems approaching end of life</strong> in 1990s and early 2000s homes — furnaces and AC units at 20+ years</li>
+        <li><strong>Attic ventilation deficiencies</strong> in production builder homes — bathroom fans venting into attic rather than outside, contributing to moisture and early roof deck degradation</li>
+        <li><strong>Grading issues</strong> in newer subdivisions where original grading has settled toward foundations</li>
+        <li><strong>Basement window well drainage</strong> problems in below-grade bedrooms common to Vaughan townhomes and semis</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Book a Home Inspection in Vaughan</h2>
+      <p class="mb-4">ASADS inspectors serve Vaughan and all of York Region, including Woodbridge, Maple, Thornhill, Concord, and Kleinburg. We offer same-day and next-day appointments and deliver your full report digitally the same day as the inspection.</p>
+      <p class="mb-4">Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book your Vaughan home inspection online</a>. View our full <a href="/pricing" class="text-primary underline font-medium">pricing page</a> for complete fee details.</p>
+    `,
+  },
+  {
+    id: 98,
+    slug: "home-inspection-cost-guelph",
+    title: "Home Inspection Cost in Guelph, Ontario (2026 Prices)",
+    metaTitle: "Home Inspection Cost Guelph 2026 | From $399 | ASADS",
+    metaDescription: "Home inspection prices in Guelph: from $399 for standard homes. Thermal imaging included. Same-day report. InterNACHI certified. Book ASADS online today.",
+    excerpt: "Home inspection costs in Guelph range from $399 for standard detached homes to $499+ for larger properties. Thermal imaging and same-day reports always included.",
+    category: "Pricing",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "5 min read",
+    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does a Home Inspection Cost in Guelph?</h2>
+      <p class="mb-4">Home inspections in Guelph, Ontario cost between <strong>$399 and $549+</strong> for most standard residential properties in 2026. Guelph's housing mix of century homes, mid-century ranchers, and newer subdivision housing means inspection complexity varies significantly by age and property type.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">ASADS Home Inspection Prices in Guelph</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo/Townhouse:</strong> From $299</li>
+        <li><strong>Semi-Detached / Row House:</strong> From $399</li>
+        <li><strong>Standard Detached (under 2,500 sq ft):</strong> From $449</li>
+        <li><strong>Older/Larger Detached (2,500+ sq ft or pre-1970):</strong> From $499–$549+</li>
+      </ul>
+      <p class="mb-4">Thermal imaging is included on every ASADS inspection. We provide a same-day digital report with photographs and findings categorized by priority.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Guelph Housing Stock: Common Inspection Findings</h2>
+      <p class="mb-4">Guelph has one of Ontario's more diverse housing stocks — from pre-1900 limestone and brick homes in the south end to post-2010 subdivisions in the north. Common findings by era:</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Pre-1960 Guelph Homes</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Knob-and-tube wiring still active in some properties — significant insurance concern</li>
+        <li>Galvanized steel plumbing with reduced flow capacity and corrosion</li>
+        <li>Asbestos in pipe insulation, floor tiles, and attic insulation (vermiculite)</li>
+        <li>Foundation movement common in limestone-block foundations</li>
+        <li>Lead paint and lead water service lines in oldest properties</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1960s–1990s Guelph Homes</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Aluminum branch circuit wiring (1965–1978) — requires remediation for most insurers</li>
+        <li>Kitec plumbing in 1995–2007 builds</li>
+        <li>Oil heating tanks — decommissioned tank evidence or active oil systems</li>
+        <li>Asphalt shingles approaching or at end of life</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Post-2000 Guelph Homes</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Kitec plumbing in builds through 2007</li>
+        <li>HVAC systems approaching end-of-life replacement timeframe</li>
+        <li>Attic ventilation deficiencies in production builder homes</li>
+        <li>Grading settlement toward foundations in mature subdivisions</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Home Inspection in Guelph</h2>
+      <p class="mb-4">ASADS serves Guelph and the surrounding Wellington County region, including Fergus, Elora, Rockwood, and Puslinch. Our inspectors are based in the Waterloo Region and typically available for same-day or next-day bookings in Guelph.</p>
+      <p class="mb-4">See our <a href="/locations/home-inspection-guelph" class="text-primary underline font-medium">Guelph home inspection page</a> for more information. Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book online</a>.</p>
+    `,
+  },
+  {
+    id: 99,
+    slug: "condo-vs-house-inspection-ontario",
+    title: "Condo vs. House Inspection in Ontario: Key Differences Buyers Must Know",
+    metaTitle: "Condo vs House Inspection Ontario: Key Differences",
+    metaDescription: "How does a condo inspection differ from a house inspection in Ontario? Scope, cost, time, and what each covers. Essential guide for buyers deciding between property types.",
+    excerpt: "A condo inspection is shorter, less expensive, and covers far less than a full house inspection — but what it does cover is critical. Here's the complete comparison.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Core Difference: What You Own vs. What the Corporation Owns</h2>
+      <p class="mb-4">The fundamental difference between a condo inspection and a house inspection in Ontario comes down to ownership boundaries. In a condominium, you own your unit — typically the space from drywall-to-drywall — while the condominium corporation owns and is responsible for the building's common elements: roof, exterior walls, foundation, elevators, parking structure, shared mechanical rooms, and common area HVAC.</p>
+      <p class="mb-4">A house inspection covers all of these systems because the homeowner is responsible for them. A condo inspection focuses only on what the purchaser will own and be responsible for — the unit itself.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What a Condo Inspection Covers</h2>
+      <p class="mb-4">During a <a href="/services/condo-inspection" class="text-primary underline font-medium">condo inspection</a>, ASADS inspects:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Electrical:</strong> Panel within the unit, all outlets (GFCI where required), light fixtures, switches</li>
+        <li><strong>Plumbing:</strong> Pipe materials visible within the unit, all fixtures (toilets, faucets, showers, tubs), water heater if unit-owned (versus building-supplied), shut-off valves</li>
+        <li><strong>HVAC:</strong> In-unit fan coil unit or heat pump, balcony PTAC unit, in-suite controls, and ventilation within the unit</li>
+        <li><strong>Interior condition:</strong> Ceilings, walls, floors — checking for signs of water infiltration from above-unit leaks or perimeter walls</li>
+        <li><strong>Windows and balcony doors:</strong> Operation, sealing, condition of frame and glazing</li>
+        <li><strong>Balcony or terrace:</strong> Structure visible from the unit, drainage, guardrail condition</li>
+        <li><strong>Appliances:</strong> If included in sale, basic function of dishwasher, range, refrigerator</li>
+        <li><strong>Thermal imaging:</strong> Identifying moisture infiltration through exterior walls and ceiling — especially important in high-rise and mid-rise units</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What a Condo Inspection Does NOT Cover</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Roof (common element — corporation's responsibility)</li>
+        <li>Foundation and building structure</li>
+        <li>Common area HVAC and mechanical rooms</li>
+        <li>Elevators and parking structure</li>
+        <li>Exterior cladding and windows not accessible from within the unit</li>
+        <li>Parking spaces and storage lockers (generally inspected visually only)</li>
+      </ul>
+      <p class="mb-4">This is why the Status Certificate review — assessing the financial health of the condominium corporation, the reserve fund, any special assessments, and management issues — is equally important to the unit inspection. The Status Certificate tells you what the corporation is responsible for and whether they have the resources to maintain it.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Condo vs. House Inspection: Time and Cost Comparison</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo inspection duration:</strong> 1–2 hours for a typical unit</li>
+        <li><strong>House inspection duration:</strong> 2.5–4 hours for a standard detached home</li>
+        <li><strong>Condo inspection cost:</strong> From $299 with ASADS</li>
+        <li><strong>House inspection cost:</strong> From $399–$549 depending on size with ASADS</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What About Townhouses?</h2>
+      <p class="mb-4">Townhouses in Ontario come in two forms: <strong>freehold townhouses</strong> (you own the structure and land, like a detached home) and <strong>condo townhouses</strong> (part of a condominium corporation, common elements shared).</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Freehold townhouse:</strong> Full inspection like a house — you own everything including the roof, exterior walls, and mechanical systems</li>
+        <li><strong>Condo townhouse:</strong> Depends on the condominium declaration — typically a fuller inspection than a high-rise unit (you may own the roof, exterior, and full mechanical systems), but the corporation still handles some common elements</li>
+      </ul>
+      <p class="mb-4">Always confirm what's included in the unit ownership versus common elements with your lawyer and your inspector before booking.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Condo or House Inspection with ASADS</h2>
+      <p class="mb-4">ASADS performs both <a href="/services/condo-inspection" class="text-primary underline font-medium">condo inspections</a> and full <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase home inspections</a> across Ontario. Thermal imaging included on all inspections. Same-day digital reports.</p>
+      <p class="mb-4">Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book online</a>.</p>
+    `,
+  },
+  {
+    id: 100,
+    slug: "home-inspection-checklist-ontario-2026",
+    title: "Ontario Home Inspection Checklist 2026: What Gets Inspected",
+    metaTitle: "Ontario Home Inspection Checklist 2026 | Complete Guide",
+    metaDescription: "Complete home inspection checklist for Ontario 2026. All 9 systems inspectors evaluate, what they look for, and what Ontario-specific items get extra attention.",
+    excerpt: "What exactly does a home inspector check in Ontario? This complete 2026 checklist covers all 9 systems, Ontario-specific concerns, and what buyers and sellers need to know.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1582560475093-ba66accbc095?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a Home Inspection Cover in Ontario?</h2>
+      <p class="mb-4">A professional home inspection in Ontario is a comprehensive, non-invasive visual examination of a property's major systems and structural components. Inspectors assess condition, identify deficiencies, and provide maintenance recommendations — they do not test every outlet, run every tap simultaneously, or open walls. The inspection is visual and based on what's accessible on the day of inspection.</p>
+      <p class="mb-4">Ontario home inspections follow InterNACHI Standards of Practice and should cover the following nine major categories:</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">1. Structural Components</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Foundation walls — type (poured concrete, block, stone, brick), visible cracks, water infiltration evidence, efflorescence</li>
+        <li>Floor structure — visible joists, beams, posts, evidence of sagging, rot, pest damage</li>
+        <li>Wall structure — visible load-bearing walls, any signs of structural movement</li>
+        <li>Roof structure — visible rafters or trusses in attic, ridge, sheathing condition</li>
+        <li>Basement slab — cracks, heaving, evidence of water</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">2. Roofing System</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Roof covering type and estimated remaining life (asphalt shingles, metal, flat membrane)</li>
+        <li>Flashings — chimney, valley, plumbing vent, skylight, and perimeter flashings</li>
+        <li>Gutters and downspouts — attachment, condition, drainage direction</li>
+        <li>Fascia and soffit — condition, evidence of rot or pest entry</li>
+        <li>Chimneys — mortar, cap, flashing, and crown condition</li>
+        <li>Skylights — glazing, flashing, and interior evidence of leaks</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">3. Exterior</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Grading — soil slope direction relative to foundation</li>
+        <li>Siding and cladding — type, condition, penetrations, clearance to grade</li>
+        <li>Windows and exterior doors — condition, operation, caulking, glazing</li>
+        <li>Decks and porches — structural integrity, ledger connection, guardrail height and balusters, stair condition</li>
+        <li>Driveway and walkways — condition, drainage</li>
+        <li>Site drainage — evidence of ponding or water flowing toward structure</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">4. Electrical System</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Service entrance and panel — amperage, condition, labeling, type of breakers</li>
+        <li>Wiring type — copper, aluminum, knob-and-tube (each has different implications for safety and insurability)</li>
+        <li>Circuits — sample testing of outlets throughout the home</li>
+        <li>GFCI protection — required in kitchens, bathrooms, garage, exterior, and crawlspaces</li>
+        <li>AFCI protection — required in bedrooms under current Ontario code</li>
+        <li>Sub-panels — if present, condition and labeling</li>
+        <li>Smoke and CO detectors — presence and basic function</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">5. Plumbing System</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Supply pipe material — copper, PEX, Kitec (orange/blue), galvanized, poly-B</li>
+        <li>Drain pipe material — ABS plastic, cast iron, PVC, clay tile (older homes)</li>
+        <li>Water heater — type (tank vs. tankless), age, venting, T&P valve, condition</li>
+        <li>Water pressure — flow at fixtures, evidence of restriction</li>
+        <li>All fixtures — toilets, sinks, tubs, showers tested for function and leaks</li>
+        <li>Sump pump — if present, operational condition, battery backup</li>
+        <li>Main water shutoff location</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">6. Heating and Cooling (HVAC)</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Furnace — fuel type, age, operational condition, heat exchanger visual (cracking is a CO risk), filter condition</li>
+        <li>Air conditioning — type, age, operational condition (if above 10°C outside)</li>
+        <li>Ductwork — visible distribution, insulation, condition</li>
+        <li>HRV/ERV — Heat Recovery Ventilator presence and operational status</li>
+        <li>Exhaust systems — kitchen and bathroom ventilation</li>
+        <li>Wood stove or fireplace — basic visual (WETT inspection required for full assessment)</li>
+        <li>Boilers and radiators — if present</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">7. Insulation and Ventilation</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Attic insulation — type and estimated R-value (current Ontario minimum is R-60 for most zones)</li>
+        <li>Attic ventilation — soffit and ridge or gable venting, balance of intake/exhaust</li>
+        <li>Vapour barrier — presence and condition in attic and basement</li>
+        <li>Exterior wall insulation — assessed through thermal imaging where possible</li>
+        <li>Bathroom exhaust fans — verified venting to exterior (not just into attic)</li>
+        <li>Dryer vent — type (rigid metal preferred), exterior termination</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">8. Interior</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Ceiling condition — cracks, staining, evidence of water infiltration from above</li>
+        <li>Wall condition — cracks, damage, moisture indicators</li>
+        <li>Floor condition — squeaks, soft spots, surface damage, transition strips</li>
+        <li>Windows — operation, sealing, condensation between panes (failed seal)</li>
+        <li>Doors — operation, latching, weatherstripping</li>
+        <li>Stairs — handrail condition, step dimensions, guardrail height</li>
+        <li>Fireplace — visible damper, firebox, hearth condition (WETT not included in standard)</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">9. Ontario-Specific Items Inspectors Pay Extra Attention To</h2>
+      <p class="mb-4">Ontario's climate and housing stock mean inspectors in this province give special attention to:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Kitec plumbing</strong> — prevalent in 1995–2007 Ontario builds; major insurance and failure risk</li>
+        <li><strong>Aluminum wiring</strong> — common in 1965–1978 Ontario homes; requires remediation for most insurers</li>
+        <li><strong>Knob-and-tube wiring</strong> — pre-1950s Ontario homes; most insurers won't cover active K&T</li>
+        <li><strong>Ice dam damage</strong> — evidence of attic moisture and roof deck damage from Ontario winters</li>
+        <li><strong>Basement moisture</strong> — Ontario's clay soils and freeze-thaw cycles make basement water management critical</li>
+        <li><strong>Asbestos indicators</strong> — pre-1990 homes require awareness of ACMs in insulation, tiles, drywall compound</li>
+        <li><strong>Radon</strong> — not measured in a standard inspection; long-term radon test recommended separately</li>
+        <li><strong>Wood-destroying insects</strong> — termites in Hamilton/Windsor/Toronto areas; carpenter ants province-wide</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Comprehensive Home Inspection in Ontario</h2>
+      <p class="mb-4">ASADS conducts home inspections across Ontario following InterNACHI Standards of Practice. Every inspection includes thermal imaging. Reports are delivered digitally the same day with photos and prioritized findings.</p>
+      <p class="mb-4">Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book your home inspection online</a>. View <a href="/pricing" class="text-primary underline font-medium">inspection pricing</a>.</p>
+    `,
+  },
+
+  // ─── BATCH 4 (101-105) ───
+  {
+    id: 101,
+    slug: "pre-purchase-vs-pre-listing-inspection-ontario",
+    title: "Pre-Purchase vs. Pre-Listing Home Inspection: What's the Difference?",
+    metaTitle: "Pre-Purchase vs Pre-Listing Inspection Ontario | Guide",
+    metaDescription: "Pre-purchase vs. pre-listing home inspection in Ontario: who orders each, what they cover, costs, and how each protects buyers and sellers differently.",
+    excerpt: "Both inspections examine the same house — but for very different purposes. Here's how pre-purchase and pre-listing inspections differ, and when each makes sense in Ontario.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is a Pre-Purchase Home Inspection?</h2>
+      <p class="mb-4">A <strong>pre-purchase home inspection</strong> (also called a buyer's inspection) is commissioned by the buyer during the offer negotiation period. It's conducted as a condition of the Agreement of Purchase and Sale — typically with a 3–5 business day inspection condition period — and gives the buyer an independent, professional assessment of the home's condition before they commit to the purchase.</p>
+      <p class="mb-4">The inspector works exclusively for the buyer. The report is confidential to the buyer and their agent. The buyer uses the findings to decide whether to proceed, negotiate, or exercise their right to walk away under the inspection condition.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is a Pre-Listing Home Inspection?</h2>
+      <p class="mb-4">A <strong>pre-listing home inspection</strong> (also called a seller's inspection) is commissioned by the seller before the property is listed on the market. The seller hires an inspector to assess the home's condition proactively — identifying issues before buyers see the property.</p>
+      <p class="mb-4">Sellers use the pre-listing inspection to:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Identify and fix deficiencies before listing to maximize sale price</li>
+        <li>Price the home accurately based on known condition</li>
+        <li>Provide buyers with a report to build confidence and reduce the likelihood of buyer inspection conditions</li>
+        <li>Avoid last-minute deal collapses when buyers discover problems</li>
+        <li>Support a faster sale with fewer conditions and faster closing</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Key Differences: Pre-Purchase vs. Pre-Listing</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Who orders it:</strong> Pre-purchase = buyer. Pre-listing = seller.</li>
+        <li><strong>When it happens:</strong> Pre-purchase = after offer accepted, during condition period. Pre-listing = before listing, typically 2–4 weeks before going to market.</li>
+        <li><strong>Who sees the report:</strong> Pre-purchase report belongs to buyer only. Pre-listing report is typically shared with all potential buyers.</li>
+        <li><strong>Purpose:</strong> Pre-purchase protects the buyer's interests and informs their negotiation. Pre-listing helps the seller prepare, price, and sell more confidently.</li>
+        <li><strong>Cost:</strong> Both cost the same — typically $400–$550 for a standard detached home in Ontario. The seller pays for pre-listing; the buyer pays for pre-purchase.</li>
+        <li><strong>Scope:</strong> Both inspections are essentially identical in what they examine — the full home.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Should Buyers Trust a Seller's Pre-Listing Inspection?</h2>
+      <p class="mb-4">A pre-listing inspection from a reputable, certified inspector is generally reliable as a starting point. However, Ontario buyers should understand:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>The seller chose the inspector — you don't know the inspector's standards or independence</li>
+        <li>The report may have been produced months ago — conditions change</li>
+        <li>You have no contractual relationship with the inspector — you cannot hold them liable for anything they missed</li>
+        <li>Sellers may choose not to share reports where significant issues were found</li>
+      </ul>
+      <p class="mb-4">Best practice: if a seller provides a pre-listing inspection, review it carefully — but still commission your own independent inspection if significant money is at stake. Alternatively, verify the credentials of the seller's inspector and confirm the report was recently produced.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When to Use Each Type of Inspection</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Use a Pre-Purchase Inspection When:</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>You're buying any home in Ontario — this should be standard practice</li>
+        <li>The home is older (pre-1985) with elevated risk of legacy systems</li>
+        <li>No seller inspection has been provided, or the provided report is from an unknown inspector</li>
+        <li>You want to negotiate based on current, independent findings</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Use a Pre-Listing Inspection When:</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>You're selling a home and want to maximize its sale price</li>
+        <li>You want to control your renovation timeline and budget before listing</li>
+        <li>You're in a slower market where buyer inspection conditions are common</li>
+        <li>The home is older and you suspect there may be issues — better to know before buyers do</li>
+        <li>You want to offer buyers confidence to make clean offers without conditions</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Either Type of Inspection with ASADS</h2>
+      <p class="mb-4">ASADS provides both <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase</a> and <a href="/services/pre-listing" class="text-primary underline font-medium">pre-listing home inspections</a> across Ontario. Same scope, same quality, same-day report delivery. Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book online</a>.</p>
+    `,
+  },
+  {
+    id: 102,
+    slug: "home-inspection-older-homes-ontario",
+    title: "Home Inspection for Older Homes in Ontario: What to Expect (Pre-1980 Guide)",
+    metaTitle: "Home Inspection Older Homes Ontario | Pre-1980 Guide",
+    metaDescription: "Buying a pre-1980 home in Ontario? This guide covers the unique inspection concerns in older homes — from knob-and-tube wiring to asbestos, lead pipes, and foundation types.",
+    excerpt: "Older Ontario homes have charm — and hidden complexity. Pre-1980 properties require extra inspection attention for legacy systems, hazardous materials, and aging infrastructure.",
+    category: "Buying Tips",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Older Homes Require More Thorough Inspections</h2>
+      <p class="mb-4">Ontario's housing stock includes a large percentage of pre-1980 homes — particularly in Toronto, Hamilton, Kitchener, London, Windsor, and smaller cities throughout the province. These older properties often have character features (original hardwood, deep lots, established neighbourhoods) that newer homes lack. But they also contain legacy systems, materials, and construction practices that require specific knowledge to assess accurately.</p>
+      <p class="mb-4">A home built in 1955 or 1965 has fundamentally different inspection concerns than one built in 2005. This guide covers what buyers of pre-1980 Ontario homes need to know.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Electrical: The Biggest Insurance Concern in Older Ontario Homes</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Knob-and-Tube Wiring (Pre-1950s)</h3>
+      <p class="mb-4">Knob-and-tube wiring was standard in Ontario homes built before the late 1940s and remained in some new construction through the early 1950s. The system uses individual uninsulated conductors run through ceramic knobs and tubes — with no ground wire. Active knob-and-tube wiring is:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Uninsurable with most major Ontario home insurers without documented full replacement</li>
+        <li>Incompatible with covered junction boxes (creating fire risk when blanketed by attic insulation)</li>
+        <li>Potentially dangerous when improperly extended with modern wiring</li>
+      </ul>
+      <p class="mb-4">Full K&T replacement in a Toronto or Hamilton semi-detached typically runs $8,000–$15,000+. For buyers, this is a significant negotiating point. For sellers, completing this upgrade before listing often returns more than its cost in sale price and reduced buyer resistance.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Aluminum Branch Circuit Wiring (1965–1978)</h3>
+      <p class="mb-4">Ontario saw extensive use of aluminum wiring during the mid-1960s through late 1970s copper price spike. Aluminum expands and contracts more than copper at connection points, creating loose connections that arc and can ignite. Most Ontario insurers require either full copper replacement or documented remediation (aluminum-rated devices at all connection points — a process called "pig-tailing" or CO/ALR device installation).</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Undersized Electrical Service (60-Amp)</h3>
+      <p class="mb-4">Many Ontario homes built before 1960 have 60-amp electrical service — wholly inadequate by today's standards and increasingly uninsurable. Modern homes require 100-amp minimum (200-amp is standard for new construction). Upgrading from 60 to 200-amp service typically costs $2,500–$5,000.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Plumbing: What's Inside the Walls of Pre-1980 Ontario Homes</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Galvanized Steel Supply Pipes</h3>
+      <p class="mb-4">Pre-1960s Ontario homes often have galvanized steel supply pipes. These corrode from the inside out over decades — progressively restricting flow (you'll notice this at upper-floor fixtures) and eventually failing. Galvanized pipes approaching end of service life warrant complete replacement ($4,000–$10,000 depending on home size).</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Lead Water Service Lines</h3>
+      <p class="mb-4">Homes in Toronto, Hamilton, and many Ontario municipalities built before the mid-1950s may have lead water service lines from the municipal main to the house. Lead leaches into drinking water — particularly in corrosive water conditions and in the morning after water sits overnight. The City of Toronto has a partial replacement program, but full lead service replacement (coordinating both the municipal and private portions) typically costs $3,000–$8,000.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Cast Iron Drain Pipes</h3>
+      <p class="mb-4">Cast iron drains are durable but do corrode over time. In pre-1960s Ontario homes with original cast iron drains, inspection may reveal scale buildup, root intrusion (particularly in clay tile sections underground), or corrosion holes. A sewer scope camera inspection is recommended when cast iron drains are present in homes over 60 years old.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Hazardous Materials: Pre-1990 Ontario Homes</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Asbestos-Containing Materials (ACMs)</h3>
+      <p class="mb-4">Asbestos was widely used in Ontario construction until the late 1980s. Common locations in pre-1990 homes include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Vermiculite attic insulation (Zonolite brand) — may contain tremolite asbestos</li>
+        <li>Pipe and duct insulation — grey, textured wrap on heating pipes</li>
+        <li>Vinyl floor tiles (12×12 inch, especially in basements)</li>
+        <li>Textured ceiling coatings ("popcorn ceilings" — pre-1980)</li>
+        <li>Drywall joint compound (pre-1980)</li>
+        <li>Roof shingles (older fibre-cement types)</li>
+        <li>Exterior stucco (older applications)</li>
+      </ul>
+      <p class="mb-4">A home inspector can identify materials that commonly contain asbestos — but cannot confirm asbestos without laboratory sampling. For pre-1985 homes undergoing renovation, an <a href="/services/asbestos-testing" class="text-primary underline font-medium">asbestos inspection and testing</a> before any demolition work is strongly recommended and required by Ontario regulation.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Lead Paint</h3>
+      <p class="mb-4">Pre-1978 Ontario homes may have lead-based paint, particularly on trim, doors, window frames, and exterior surfaces. Intact lead paint that is not disturbed is generally manageable in place. However, renovation activities — sanding, cutting, or demolition — can create hazardous lead dust. If you plan to renovate a pre-1978 home, have surfaces tested before work begins.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Structural and Foundation Concerns in Older Ontario Homes</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Stone rubble foundations (pre-1930s):</strong> Highly variable — some are sound after 100+ years, others have significant movement and mortar deterioration. Require careful assessment.</li>
+        <li><strong>Poured concrete foundations (1930s–1960s):</strong> Typically sound but older poured concrete can deteriorate. Watch for horizontal cracks and inward bowing.</li>
+        <li><strong>Concrete block foundations (1950s–1980s):</strong> Most common failure mode is horizontal cracking at mid-height from lateral soil pressure — especially serious.</li>
+        <li><strong>Balloon framing (pre-1940s):</strong> Unlike modern platform framing, balloon-framed walls run full-height — creating fire spread pathways that can be addressed with fire stops.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Budget Expectations for Older Ontario Homes</h2>
+      <p class="mb-4">Buyers of pre-1970 Ontario homes should budget for potential capital expenditures within the first 5 years of ownership:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Electrical upgrade (K&T replacement or 60A→200A service): $5,000–$18,000</li>
+        <li>Plumbing update (galvanized replacement): $4,000–$10,000</li>
+        <li>Roof replacement (if near end of life): $8,000–$20,000</li>
+        <li>Foundation waterproofing (if moisture present): $8,000–$35,000</li>
+        <li>Asbestos abatement (if renovation planned): $3,000–$15,000+</li>
+      </ul>
+      <p class="mb-4">This doesn't mean you shouldn't buy an older home — but it means pricing your offer accordingly and going in with full knowledge of what you're taking on.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book an Older Home Inspection with ASADS</h2>
+      <p class="mb-4">ASADS inspectors have extensive experience with pre-1980 Ontario housing stock across Toronto, Hamilton, Kitchener, Guelph, London, and the GTA. Our thermal imaging capability is particularly valuable in older homes where moisture and insulation issues are often concealed within historic construction.</p>
+      <p class="mb-4">Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book your inspection online</a>.</p>
+    `,
+  },
+  {
+    id: 103,
+    slug: "home-inspection-cost-ajax",
+    title: "Home Inspection Cost in Ajax, Ontario (2026 Prices)",
+    metaTitle: "Home Inspection Cost Ajax 2026 | From $399 | ASADS",
+    metaDescription: "Home inspection prices in Ajax, Ontario: from $399 for standard detached homes. Same-day report, thermal imaging included. InterNACHI certified. Book online.",
+    excerpt: "Home inspection costs in Ajax range from $299 for condos to $449–$549 for detached homes. Thermal imaging and same-day digital reports always included with ASADS.",
+    category: "Pricing",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "5 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Prices in Ajax, Ontario (2026)</h2>
+      <p class="mb-4">A home inspection in Ajax, Ontario costs between <strong>$299 and $549+</strong> in 2026, depending on property type and size. Ajax's housing mix includes post-1980 subdivisions, lakefront properties, and some older stock near the historic downtown core.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">ASADS Home Inspection Prices in Ajax</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo / Stacked Townhouse:</strong> From $299</li>
+        <li><strong>Semi-Detached / Townhouse:</strong> From $399</li>
+        <li><strong>Standard Detached (under 2,500 sq ft):</strong> From $449</li>
+        <li><strong>Larger Detached / Older Home:</strong> From $499–$549+</li>
+      </ul>
+      <p class="mb-4">All ASADS inspections include thermal imaging (infrared scan), same-day digital report delivery, and post-inspection follow-up support. No hidden fees — thermal imaging is included at no extra charge.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What's Inspected in an Ajax Home</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Foundation and structure</li>
+        <li>Roofing, gutters, and flashings</li>
+        <li>Exterior cladding, windows, and grading</li>
+        <li>Electrical panel and wiring</li>
+        <li>Plumbing supply and drain systems</li>
+        <li>Heating, cooling, and ventilation</li>
+        <li>Attic insulation and ventilation</li>
+        <li>Interior — walls, floors, ceilings, windows, stairs</li>
+        <li>Thermal imaging scan throughout the inspection</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Ajax Housing: What Inspectors Commonly Find</h2>
+      <p class="mb-4">Ajax's residential development is concentrated in the 1980s–2010s era — subdivision detached homes, townhouses, and condos. Common findings in Ajax inspections include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Kitec plumbing</strong> in 1995–2007 builds — common in Ajax subdivision homes built during this period</li>
+        <li><strong>HVAC systems at end of life</strong> — original 1990s or early 2000s furnaces and AC units in aging developments</li>
+        <li><strong>Attic moisture issues</strong> — bathroom exhaust fans venting into attic space rather than exterior, leading to premature roof deck deterioration</li>
+        <li><strong>Grading settlement</strong> — soil settling toward foundations in mature subdivision lots</li>
+        <li><strong>Window seal failures</strong> — fogging between double-pane windows (common in 1990s–2000s builds)</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Serving Ajax and Durham Region</h2>
+      <p class="mb-4">ASADS serves Ajax and all of Durham Region, including Whitby, Oshawa, Pickering, Clarington, and Uxbridge. We typically have next-day appointment availability and provide same-day digital report delivery.</p>
+      <p class="mb-4">See our <a href="/locations/home-inspection-ajax" class="text-primary underline font-medium">Ajax home inspection page</a> for more details. Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book online</a>.</p>
+    `,
+  },
+  {
+    id: 104,
+    slug: "home-inspection-cost-whitby",
+    title: "Home Inspection Cost in Whitby, Ontario (2026 Prices)",
+    metaTitle: "Home Inspection Cost Whitby 2026 | From $399 | ASADS",
+    metaDescription: "Home inspection prices in Whitby, Ontario 2026: from $399 for detached homes. Thermal imaging included, same-day digital report. Book ASADS online today.",
+    excerpt: "Home inspection costs in Whitby range from $299 for condos to $449–$549 for larger homes. ASADS serves all of Whitby with thermal imaging and same-day reports.",
+    category: "Pricing",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "5 min read",
+    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Cost in Whitby, Ontario</h2>
+      <p class="mb-4">In 2026, a home inspection in Whitby, Ontario typically costs <strong>$299 to $549+</strong> depending on the property type and square footage. Whitby's housing market is predominantly detached subdivision homes, with a growing condo and townhouse sector along major corridors and near the GO station.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">ASADS Pricing for Whitby Inspections</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo / Stacked Townhouse:</strong> From $299</li>
+        <li><strong>Townhouse / Semi-Detached:</strong> From $399</li>
+        <li><strong>Standard Detached (under 2,500 sq ft):</strong> From $449</li>
+        <li><strong>Larger Detached (2,500–3,500 sq ft):</strong> From $499</li>
+        <li><strong>Executive Home (3,500+ sq ft):</strong> From $549+</li>
+      </ul>
+      <p class="mb-4">Thermal imaging is included on every ASADS inspection. Same-day digital report with photographs. No surprise fees.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Common Inspection Findings in Whitby Homes</h2>
+      <p class="mb-4">Whitby's housing stock spans from the 1980s Lynde Creek and Blue Grass developments to the 2010s Pringle Creek and Rolling Acres communities. Inspection findings vary significantly by era:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>1980s–1990s homes:</strong> Aging asphalt shingles, original single-pane windows, aluminum wiring in some late-1970s/early-1980s builds, dated HVAC systems at or past replacement age</li>
+        <li><strong>1995–2007 homes:</strong> Kitec plumbing risk — orange/blue Kitec pipes are present in a significant portion of Whitby homes built during this period</li>
+        <li><strong>Post-2010 homes:</strong> Mostly modern systems in good condition; common findings include attic ventilation deficiencies, grading settlement, and minor finishes</li>
+        <li><strong>Lakefront and waterfront properties:</strong> Additional moisture concerns, foundation assessment important in properties near Lake Ontario</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Home Inspection in Whitby</h2>
+      <p class="mb-4">ASADS serves Whitby and all of Durham Region. Same-day and next-day appointments typically available. Full digital report delivered by end of business day.</p>
+      <p class="mb-4">See our <a href="/locations/home-inspection-whitby" class="text-primary underline font-medium">Whitby home inspection page</a>. Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book online now</a>.</p>
+    `,
+  },
+  {
+    id: 105,
+    slug: "home-inspection-cost-newmarket",
+    title: "Home Inspection Cost in Newmarket, Ontario (2026 Prices)",
+    metaTitle: "Home Inspection Cost Newmarket 2026 | ASADS",
+    metaDescription: "Home inspection prices in Newmarket: from $399 for standard homes. Thermal imaging included. Same-day report. InterNACHI certified inspectors. Book online.",
+    excerpt: "Home inspection costs in Newmarket range from $299 for condos to $449–$549+ for larger detached homes. ASADS serves all of Newmarket and York Region.",
+    category: "Pricing",
+    author: "ASADS Team",
+    date: "2026-04-13",
+    readTime: "5 min read",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Inspection Prices in Newmarket, Ontario</h2>
+      <p class="mb-4">Home inspection costs in Newmarket range from <strong>$299 to $549+</strong> in 2026. Newmarket's housing stock includes mature 1960s–1990s detached homes in established neighbourhoods (Glenway, Woodland Hill, Gorham-College Manor), newer townhouse developments, and condominiums near the Yonge Street corridor.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">ASADS Inspection Prices in Newmarket</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Condo / Stacked Town:</strong> From $299</li>
+        <li><strong>Semi / Townhouse:</strong> From $399</li>
+        <li><strong>Detached under 2,500 sq ft:</strong> From $449</li>
+        <li><strong>Larger Detached / Century Home:</strong> From $499–$549+</li>
+      </ul>
+      <p class="mb-4">All inspections include thermal imaging and same-day digital report delivery.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Common Findings in Newmarket Home Inspections</h2>
+      <p class="mb-4">Newmarket's housing stock age means inspectors frequently find:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Aluminum wiring</strong> in 1965–1978 era homes throughout older Newmarket neighbourhoods</li>
+        <li><strong>Kitec plumbing</strong> in subdivision homes built 1995–2007</li>
+        <li><strong>Original asphalt shingles approaching end of life</strong> in 1980s–1990s stock</li>
+        <li><strong>Aging furnaces and AC units</strong> — Newmarket's 1990s homes have HVAC systems at 25–30 years</li>
+        <li><strong>Attic insulation and ventilation deficiencies</strong> — common in 1970s–1990s builder homes</li>
+        <li><strong>Foundation moisture evidence</strong> in homes near the East Holland River and low-lying areas</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Newmarket Home Inspection with ASADS</h2>
+      <p class="mb-4">ASADS serves Newmarket and all of York Region, including Aurora, Sharon, Holland Landing, and East Gwillimbury. Same-day appointments typically available. Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book your Newmarket home inspection online</a>.</p>
+      <p class="mb-4">See our <a href="/locations/home-inspection-newmarket" class="text-primary underline font-medium">Newmarket home inspection page</a> for more detail.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
