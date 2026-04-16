@@ -7,6 +7,7 @@ import { buildReportHtml } from '@/lib/reportTemplate';
 export default function ReportPortalPage() {
   const { id } = useParams<{ id: string }>();
   const [htmlContent, setHtmlContent] = useState('');
+  const [directUrl, setDirectUrl] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [address, setAddress] = useState('');
@@ -57,9 +58,8 @@ export default function ReportPortalPage() {
           normalized.photoUrls?.[0] ?? ''
         ));
       } else if (rep.storage_url && rep.storage_url !== 'mobile') {
-        // Legacy: fetch HTML from storage URL
-        const res = await fetch(rep.storage_url);
-        setHtmlContent(res.ok ? await res.text() : '');
+        // Load HTML directly via src — avoids null-origin srcDoc blocking external images
+        setDirectUrl(rep.storage_url);
       }
 
       setLoading(false);
@@ -140,13 +140,13 @@ export default function ReportPortalPage() {
         </div>
       </div>
 
-      {/* Report HTML rendered in a sandboxed iframe */}
+      {/* Report HTML — use src for storage-hosted reports (preserves image loading), srcDoc for mobile-generated */}
       <iframe
-        srcDoc={htmlContent}
-        style={{ width: '100%', border: 'none', display: 'block' }}
+        src={directUrl || undefined}
+        srcDoc={directUrl ? undefined : htmlContent}
+        style={{ width: '100%', border: 'none', display: 'block', minHeight: '100vh' }}
         title="Inspection Report"
         onLoad={e => {
-          // Auto-resize iframe to content height
           const iframe = e.target as HTMLIFrameElement;
           try {
             const h = iframe.contentDocument?.body?.scrollHeight;
