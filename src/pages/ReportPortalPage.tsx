@@ -38,6 +38,10 @@ export default function ReportPortalPage() {
         // Manually-authored HTML report stored directly in DB
         setHtmlContent(rep.report_data.rawHtml);
       } else if (rep.storage_url === 'mobile' && rep.report_data) {
+        // rawHtml fallback — catches old cached bundles that skip the rawHtml branch
+        if (rep.report_data.rawHtml) {
+          setHtmlContent(rep.report_data.rawHtml);
+        } else {
         // Mobile-generated report — build HTML from report_data JSON
         const inspectionDate = job?.completed_at
           ? new Date(job.completed_at).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })
@@ -45,6 +49,7 @@ export default function ReportPortalPage() {
         const normalized = {
           ...rep.report_data,
           notInspected: rep.report_data.notInspected ?? [],
+          summary: rep.report_data.summary ?? { p1Count: 0, p2Count: 0, p3Count: 0 },
           sections: (rep.report_data.sections ?? []).map((s: any) => ({
             ...s,
             satisfactory: s.satisfactory ?? [],
@@ -60,6 +65,7 @@ export default function ReportPortalPage() {
           normalized.photoUrls ?? [],
           normalized.photoUrls?.[0] ?? ''
         ));
+        }
       } else if (rep.storage_url && rep.storage_url !== 'mobile') {
         // Fetch HTML from storage and render via srcDoc
         const res = await fetch(rep.storage_url);
