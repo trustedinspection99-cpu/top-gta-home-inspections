@@ -34,7 +34,10 @@ export default function ReportPortalPage() {
 
       if (job) setAddress(`${job.address}, ${job.city}`);
 
-      if (rep.storage_url === 'mobile' && rep.report_data) {
+      if (rep.storage_url === 'mobile' && rep.report_data?.rawHtml) {
+        // Manually-authored HTML report stored directly in DB
+        setHtmlContent(rep.report_data.rawHtml);
+      } else if (rep.storage_url === 'mobile' && rep.report_data) {
         // Mobile-generated report — build HTML from report_data JSON
         const inspectionDate = job?.completed_at
           ? new Date(job.completed_at).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })
@@ -58,8 +61,9 @@ export default function ReportPortalPage() {
           normalized.photoUrls?.[0] ?? ''
         ));
       } else if (rep.storage_url && rep.storage_url !== 'mobile') {
-        // Load HTML directly via src — avoids null-origin srcDoc blocking external images
-        setDirectUrl(rep.storage_url);
+        // Fetch HTML from storage and render via srcDoc
+        const res = await fetch(rep.storage_url);
+        setHtmlContent(res.ok ? await res.text() : '');
       }
 
       setLoading(false);
@@ -140,10 +144,9 @@ export default function ReportPortalPage() {
         </div>
       </div>
 
-      {/* Report HTML — use src for storage-hosted reports (preserves image loading), srcDoc for mobile-generated */}
+      {/* Report HTML rendered via srcDoc */}
       <iframe
-        src={directUrl || undefined}
-        srcDoc={directUrl ? undefined : htmlContent}
+        srcDoc={htmlContent}
         style={{ width: '100%', border: 'none', display: 'block', minHeight: '100vh' }}
         title="Inspection Report"
         onLoad={e => {
