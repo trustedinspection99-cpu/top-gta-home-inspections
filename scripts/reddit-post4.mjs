@@ -74,23 +74,30 @@ Used ASADS (asads.ca) — InterNACHI + OAHI certified, thermal imaging included,
 async function scoutThread(pg, subreddit, searchTerms) {
   console.log(`\n🔍 Scouting ${subreddit}...`);
 
-  // Search Google for recent threads in this subreddit
-  const query = `site:reddit.com/${subreddit} ${searchTerms}`;
-  await pg.goto(`https://www.google.com/search?q=${encodeURIComponent(query)}&num=10`, {
-    waitUntil: 'networkidle2', timeout: 30000
-  });
-  await sleep(2500);
+  // Search directly on Reddit
+  const searchUrl = `https://www.reddit.com/r/${subreddit}/search/?q=${encodeURIComponent(searchTerms)}&restrict_sr=1&sort=new`;
+  await pg.goto(searchUrl, { waitUntil: 'networkidle2', timeout: 30000 });
+  await sleep(3000);
 
-  const links = await pg.evaluate((sub) => {
-    return Array.from(document.querySelectorAll('a[href*="reddit.com"]'))
-      .map(a => ({ href: a.href, text: (a.innerText || '').trim().substring(0, 150) }))
-      .filter(l =>
-        l.href.includes(`/${sub}/`) &&
-        l.href.includes('/comments/') &&
-        l.text.length > 10
-      )
-      .slice(0, 5);
-  }, subreddit);
+  const links = await pg.evaluate(() => {
+    // New Reddit (shreddit) — article elements with links
+    const results = [];
+    const seen = new Set();
+
+    // Try shreddit post links
+    document.querySelectorAll('a[href*="/comments/"]').forEach(a => {
+      const href = a.href.split('?')[0];
+      if (!seen.has(href) && href.includes('/comments/')) {
+        const text = (a.innerText || a.getAttribute('aria-label') || '').trim();
+        if (text.length > 5) {
+          seen.add(href);
+          results.push({ href, text: text.substring(0, 150) });
+        }
+      }
+    });
+
+    return results.slice(0, 5);
+  });
 
   console.log(`Found ${links.length} threads:`);
   links.forEach((l, i) => console.log(`  ${i + 1}. ${l.text}\n     ${l.href}`));
@@ -239,7 +246,8 @@ async function main() {
   await sleep(3000);
   const loggedIn = await pg.evaluate(() =>
     document.body.innerText.includes('Log Out') ||
-    !!document.querySelector('shreddit-async-loader[bundlename="user_drawer"]')
+    !!document.querySelector('shreddit-async-loader[bundlename="user_drawer"]') ||
+    !!document.querySelector('a[href*="/user/"]')
   );
   console.log('Session active:', loggedIn);
   if (!loggedIn) { console.log('❌ Not logged in — open Reddit and log in first'); browser.disconnect(); return; }

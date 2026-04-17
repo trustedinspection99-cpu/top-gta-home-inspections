@@ -1,0 +1,11 @@
+import puppeteer from 'puppeteer';
+import { pathToFileURL } from 'url';
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const browser = await puppeteer.connect({ browserURL: 'http://localhost:9222', protocolTimeout: 30000 });
+const pg = await browser.newPage();
+const url = pathToFileURL('C:/Users/Owner/Downloads/7261 Castlederg Side Rd  (1) (1).pdf').href;
+await pg.goto(url);
+await sleep(4000);
+await pg.screenshot({ path: 'scripts/sample-report-p1.png', fullPage: false, clip: { x: 0, y: 0, width: 1200, height: 900 } });
+console.log('Screenshot saved');
+browser.disconnect();

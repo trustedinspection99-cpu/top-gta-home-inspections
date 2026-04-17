@@ -3,8 +3,8 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import { Link } from "react-router-dom";
 
 export default function MoldInspection() {
-  const pageTitle = "Mold Inspection & Testing Ontario | From $299 | ASADS";
-  const schemaDescription = "Certified mold inspection & testing Ontario from $299. Air sampling, black mold ID, AIHA lab results. Toronto, GTA & Ontario. Independent — not remediation.";
+  const pageTitle = "Mold Inspection Ontario | $299 Visual + Lab Sampling | ASADS";
+  const schemaDescription = "Certified mold inspection Ontario. $299 visual inspection. Air samples $110 each (AIHA lab included). Bundle: inspection + 3 samples from $499. Independent — not remediation.";
 
   return (
     <ServicePageTemplate
@@ -28,7 +28,7 @@ export default function MoldInspection() {
       }
       icon={Microscope}
       price="From $299"
-      duration="2-3 Hours + Lab Analysis"
+      duration="1–2 Hours Visual | +Lab If Needed"
       description={
         <div className="space-y-6">
           <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl mb-2">
@@ -160,11 +160,13 @@ export default function MoldInspection() {
 
           <div>
             <h3 className="font-heading text-xl font-bold text-slate-900 mb-4">Mold Inspection Pricing in Ontario</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
               {[
-                { tier: "Basic Air Test", price: "From $299", detail: "2 air samples + outdoor control, AIHA lab, written report. Ideal for single concern (one room / basement)." },
-                { tier: "Full Home Assessment", price: "From $449", detail: "4–6 air samples + thermal scan + moisture mapping. Covers whole home. Most popular for buyers & sellers." },
-                { tier: "Post-Remediation Clearance", price: "From $249", detail: "Confirms mold removal was successful. Required documentation for real estate closings and insurance." },
+                { tier: "Visual Mold Inspection", price: "$299", detail: "Full on-site visual assessment with thermal camera and moisture meters. Written report included. Air sampling recommended only where concern is identified." },
+                { tier: "Air Sample (per sample)", price: "$110/sample", detail: "Calibrated air cassette sampling with AIHA-accredited lab analysis. Includes outdoor control. Results in 3–5 business days (24-hr rush available)." },
+                { tier: "Surface Swab / Tape-Lift", price: "$75/sample", detail: "Direct sample from visible mold growth. Identifies species and concentration — required for accurate remediation scoping." },
+                { tier: "Full Home Bundle", price: "From $499", detail: "Visual inspection + 3 air samples + outdoor control + written report with remediation scope. Most popular for buyers and sellers." },
+                { tier: "Post-Remediation Clearance", price: "$249", detail: "Air samples confirm mold removal was successful. Required for real estate closings, insurance, and tenant-landlord documentation." },
               ].map((p) => (
                 <div key={p.tier} className="p-4 bg-purple-50 border border-purple-100 rounded-xl">
                   <p className="font-bold text-purple-900">{p.tier}</p>
@@ -173,6 +175,9 @@ export default function MoldInspection() {
                 </div>
               ))}
             </div>
+            <p className="text-sm text-slate-600 bg-slate-50 border border-slate-200 rounded-xl p-3 mt-2">
+              <strong>How it works:</strong> We start with the visual inspection ($299). If areas of concern are found, we recommend targeted air sampling — you only pay for samples where they're actually needed. No unnecessary testing.
+            </p>
           </div>
 
           <div>
@@ -350,7 +355,7 @@ export default function MoldInspection() {
         },
         {
           question: "How much does mold inspection cost in Ontario?",
-          answer: "Professional mold inspection in Ontario starts from $299, which includes air sampling and lab analysis. Prices vary by property size and number of samples required. Emergency and same-day services are available across Toronto, Mississauga, Brampton, Hamilton, Kitchener, and all GTA cities."
+          answer: "A visual mold inspection in Ontario is $299 and includes a full on-site assessment with thermal camera and moisture meters plus a written report. If areas of concern are found during the visual, we recommend targeted air sampling at $110 per sample (AIHA lab analysis included). Surface swabs are $75 per sample. A full home bundle — visual inspection plus 3 air samples — starts from $499. Post-remediation clearance testing is $249. You only pay for sampling where it's actually needed."
         },
         {
           question: "How is mold testing different from a visual mold inspection?",

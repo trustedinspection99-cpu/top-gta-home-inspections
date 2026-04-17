@@ -1,0 +1,10 @@
+import puppeteer from 'puppeteer';
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const browser = await puppeteer.connect({ browserURL: 'http://localhost:9222', protocolTimeout: 30000 });
+const pages = await browser.pages();
+let pg = pages[0];
+await pg.goto('https://education.nachi.org/show.php?course_id=13&element_id=200');
+await sleep(2000);
+const t = await pg.evaluate(() => document.body.innerText);
+console.log(t.substring(0, 5000));
+browser.disconnect();

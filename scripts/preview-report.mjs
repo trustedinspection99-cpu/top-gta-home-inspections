@@ -1,0 +1,10 @@
+import puppeteer from 'puppeteer';
+import { pathToFileURL } from 'url';
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const browser = await puppeteer.connect({ browserURL: 'http://localhost:9222', protocolTimeout: 60000 });
+const pages = await browser.pages();
+let pg = pages[0];
+await pg.goto(pathToFileURL('C:/Users/Owner/Downloads/WETT_Report_Tareq_Kawar_Aurora.html').href, { waitUntil: 'networkidle0' });
+await sleep(1500);
+await pg.screenshot({ path: 'scripts/new-report-preview.png', clip: { x: 0, y: 0, width: 900, height: 1100 } });
+browser.disconnect();

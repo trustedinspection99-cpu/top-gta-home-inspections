@@ -1,0 +1,13 @@
+import puppeteer from 'puppeteer';
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const browser = await puppeteer.connect({ browserURL: 'http://localhost:9222', protocolTimeout: 30000 });
+const pages = await browser.pages();
+const pg = pages.find(p => p.url().includes('education.nachi.org')) || pages[0];
+await sleep(1000);
+const url = pg.url();
+const t = await pg.evaluate(() => document.body.innerText);
+const hasQuiz = await pg.evaluate(() => document.querySelectorAll('input[type=radio]').length);
+console.log('URL:', url);
+console.log('Radio inputs:', hasQuiz);
+console.log(t.substring(0, 1500));
+browser.disconnect();

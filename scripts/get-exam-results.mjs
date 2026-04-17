@@ -1,0 +1,12 @@
+import puppeteer from 'puppeteer';
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const browser = await puppeteer.connect({ browserURL: 'http://localhost:9222', protocolTimeout: 30000 });
+const pages = await browser.pages();
+let pg = pages.find(p => p.url().includes('nachi.org/my/exams'));
+if (!pg) pg = pages[0];
+await pg.goto('https://www.nachi.org/my/exams/how-to-perform-roof-inspections/ES1CK3-1KZ-53WO60/results');
+await sleep(2000);
+const t = await pg.evaluate(() => document.body.innerText);
+console.log(t.substring(0, 2000));
+await pg.screenshot({ path: 'scripts/exam-result.png', fullPage: false });
+browser.disconnect();

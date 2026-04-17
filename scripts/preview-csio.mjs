@@ -1,0 +1,15 @@
+import puppeteer from 'puppeteer';
+import { pathToFileURL } from 'url';
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const browser = await puppeteer.connect({ browserURL: 'http://localhost:9222', protocolTimeout: 120000 });
+const pg = await browser.newPage();
+await pg.setViewport({ width: 1000, height: 900 });
+await pg.goto(pathToFileURL('C:/Users/Owner/Downloads/CSIO_Form_Tareq_Kawar_Filled.pdf').href);
+await sleep(8000);
+await pg.screenshot({ path: 'scripts/csio-p1.png', clip: { x: 155, y: 55, width: 680, height: 780 } });
+await pg.evaluate(() => window.scrollBy(0, 850));
+await sleep(2000);
+await pg.screenshot({ path: 'scripts/csio-p2.png', clip: { x: 155, y: 55, width: 680, height: 780 } });
+await pg.close();
+browser.disconnect();
+console.log('done');

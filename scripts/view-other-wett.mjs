@@ -1,0 +1,10 @@
+import puppeteer from 'puppeteer';
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const browser = await puppeteer.connect({ browserURL: 'http://localhost:9222', protocolTimeout: 60000 });
+const pages = await browser.pages();
+let pg = pages[0];
+await pg.goto("file:///C:/Users/Owner/CrossDevice/Haroon's%20S21%20Ultra/storage/Download/WETT_Inspection_Report_30_Moir_St_Elora.pdf", { waitUntil: 'load', timeout: 15000 });
+await sleep(4000);
+await pg.screenshot({ path: 'scripts/moir-report.png' });
+console.log('done');
+browser.disconnect();
