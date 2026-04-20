@@ -87,6 +87,7 @@ export interface DbOutreach {
   website: string | null;
   status: OutreachStatus;
   sent_at: string | null;
+  opened_at: string | null;
   notes: string | null;
   created_at: string;
 }

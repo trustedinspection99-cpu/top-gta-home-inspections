@@ -17,7 +17,7 @@ serve(async (req) => {
   }
 
   try {
-    const { name, email, city, agency, website, sample_report_url } = await req.json();
+    const { name, email, city, agency, website, sample_report_url, outreach_id } = await req.json();
 
     if (!name || !email) {
       return new Response(JSON.stringify({ error: 'name and email are required' }), {
@@ -103,6 +103,7 @@ https://www.asads.ca`;
       <a href="tel:+16478019311" style="color:#1d4ed8">${ASADS_PHONE}</a> · <a href="https://www.asads.ca" style="color:#1d4ed8">asads.ca</a>
     </p>
   </div>
+  ${outreach_id ? `<img src="https://wjxbojjhyocrxqkfnxmz.supabase.co/functions/v1/track-outreach-open?id=${outreach_id}" width="1" height="1" style="position:absolute;opacity:0;pointer-events:none;" alt="" />` : ''}
 </div>`;
 
     const res = await fetch('https://api.resend.com/emails', {

@@ -91,6 +91,7 @@ export default function OutreachPage() {
     try {
       const { data, error } = await supabase.functions.invoke('send-realtor-outreach', {
         body: {
+          outreach_id: row.id,
           name: row.name,
           email: row.email,
           city: row.city,
@@ -296,6 +297,11 @@ export default function OutreachPage() {
                 {row.sent_at && (
                   <p className="text-xs text-gray-400 mt-0.5">
                     Sent {new Date(row.sent_at).toLocaleDateString('en-CA', { month: 'short', day: 'numeric', year: 'numeric' })}
+                    {row.opened_at && (
+                      <span className="ml-2 text-green-600 font-semibold">
+                        · ✅ Opened {new Date(row.opened_at).toLocaleDateString('en-CA', { month: 'short', day: 'numeric' })} at {new Date(row.opened_at).toLocaleTimeString('en-CA', { hour: 'numeric', minute: '2-digit' })}
+                      </span>
+                    )}
                   </p>
                 )}
                 {sendMsg[row.id] && (
