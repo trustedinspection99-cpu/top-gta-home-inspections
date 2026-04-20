@@ -1,13 +1,13 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase, DbJob, DbReport, DbRealtor } from '@/lib/supabase';
 import PortalLayout from '@/components/PortalLayout';
+import BacklinkWizard from '@/components/BacklinkWizard';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import {
-  Calendar, FileText, Clock, CheckCircle2, AlertCircle, PhoneCall, CreditCard,
-  Star, Copy, RefreshCw, BadgeCheck, ExternalLink,
+  Calendar, FileText, Clock, CheckCircle2, PhoneCall, CreditCard,
+  Star, BadgeCheck, ExternalLink, PlusCircle,
 } from 'lucide-react';
 
 function openChat() { window.dispatchEvent(new Event('open-scout-chat')); }
@@ -16,19 +16,13 @@ interface JobWithReport extends DbJob {
   report?: DbReport;
 }
 
-type VerifyStatus = 'idle' | 'checking' | 'verified' | 'failed';
-
-const BACKLINK_SNIPPET = `<a href="https://www.asads.ca/trusted-realtors">ASADS Home Inspection</a>`;
-
 export default function RealtorDashboard() {
   const { dbUser } = useAuth();
   const [jobs, setJobs] = useState<JobWithReport[]>([]);
   const [realtor, setRealtor] = useState<DbRealtor | null>(null);
   const [loading, setLoading] = useState(true);
   const [domain, setDomain] = useState('');
-  const [verifyStatus, setVerifyStatus] = useState<VerifyStatus>('idle');
-  const [copied, setCopied] = useState(false);
-  const domainRef = useRef('');
+  const [showWizard, setShowWizard] = useState(false);
 
   useEffect(() => {
     if (!dbUser) return;
@@ -42,7 +36,7 @@ export default function RealtorDashboard() {
 
       const r = realtorData as DbRealtor | null;
       setRealtor(r);
-      if (r?.domain) { setDomain(r.domain); domainRef.current = r.domain; }
+      if (r?.domain) setDomain(r.domain);
 
       if (jobData) {
         const withReports = await Promise.all(
@@ -59,30 +53,15 @@ export default function RealtorDashboard() {
     load();
   }, [dbUser]);
 
-  async function checkBacklink(): Promise<boolean> {
-    setVerifyStatus('checking');
-    const d = domain.trim().replace(/^https?:\/\//, '').replace(/\/$/, '');
-    const { data, error } = await supabase.functions.invoke('verify-backlink', { body: { domain: d } });
+  async function checkBacklink(d: string): Promise<boolean> {
+    const clean = d.trim().replace(/^https?:\/\//, '').replace(/\/$/, '');
+    const { data, error } = await supabase.functions.invoke('verify-backlink', { body: { domain: clean } });
     const ok = !error && !!data?.verified;
-    setVerifyStatus(ok ? 'verified' : 'failed');
     if (ok && realtor) {
-      await supabase.from('realtors').update({ backlink_verified: true, domain: d }).eq('id', realtor.id);
-      setRealtor(prev => prev ? { ...prev, backlink_verified: true, domain: d } : prev);
+      await supabase.from('realtors').update({ backlink_verified: true, domain: clean }).eq('id', realtor.id);
+      setRealtor(prev => prev ? { ...prev, backlink_verified: true, domain: clean } : prev);
     }
     return ok;
-  }
-
-  async function saveDomain() {
-    if (!realtor || !domain.trim()) return;
-    const d = domain.trim().replace(/^https?:\/\//, '').replace(/\/$/, '');
-    await supabase.from('realtors').update({ domain: d }).eq('id', realtor.id);
-    setRealtor(prev => prev ? { ...prev, domain: d } : prev);
-  }
-
-  function copySnippet() {
-    navigator.clipboard.writeText(BACKLINK_SNIPPET);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
   }
 
   const activeJob = jobs.find(j => j.status === 'scheduled' || j.status === 'in_progress');
@@ -117,7 +96,7 @@ export default function RealtorDashboard() {
           <div className="flex items-center gap-3">
             <Clock className="h-7 w-7 text-blue-600 shrink-0" />
             <div>
-              <p className="font-semibold text-blue-800">Backlink verified — Pending admin approval</p>
+              <p className="font-semibold text-blue-800">Link verified — Pending admin approval</p>
               <p className="text-sm text-blue-600 mt-0.5">We've been notified and will review your listing shortly.</p>
             </div>
           </div>
@@ -126,65 +105,52 @@ export default function RealtorDashboard() {
     }
 
     return (
-      <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-5">
-        <div className="flex items-center gap-3">
-          <Star className="h-6 w-6 text-amber-500 shrink-0" />
-          <div>
-            <h2 className="font-semibold text-gray-900">Get Listed — Free</h2>
-            <p className="text-sm text-gray-500">Add one backlink to your site and we'll list you in our Trusted Realtors directory</p>
+      <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-6">
+        <div className="flex items-start gap-4">
+          <div className="bg-amber-100 rounded-full p-2.5 shrink-0">
+            <Star className="h-5 w-5 text-amber-600" />
           </div>
-        </div>
-
-        {/* Step 1: Add link */}
-        <div className="space-y-2">
-          <p className="text-sm font-medium text-gray-700">Step 1 — Add this link to your website footer:</p>
-          <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2">
-            <code className="text-xs flex-1 text-gray-700 break-all">{BACKLINK_SNIPPET}</code>
-            <button onClick={copySnippet} className="text-gray-400 hover:text-blue-600 transition-colors shrink-0" title="Copy">
-              {copied ? <CheckCircle2 className="h-4 w-4 text-green-500" /> : <Copy className="h-4 w-4" />}
-            </button>
-          </div>
-        </div>
-
-        {/* Step 2: Enter domain + verify */}
-        <div className="space-y-2">
-          <p className="text-sm font-medium text-gray-700">Step 2 — Enter your website and verify:</p>
-          <div className="flex gap-2">
-            <Input
-              value={domain}
-              onChange={e => setDomain(e.target.value)}
-              placeholder="yoursite.com"
-              className="flex-1"
-            />
+          <div className="flex-1">
+            <h2 className="font-bold text-gray-900 text-base">Get Listed in Our Trusted Realtors Directory — Free</h2>
+            <p className="text-sm text-gray-600 mt-1">
+              Add a simple link to your website footer and we'll list your profile. No coding — takes about 2 minutes.
+            </p>
+            <div className="flex items-center gap-4 mt-3">
+              <div className="flex items-center gap-1.5 text-xs text-gray-500">
+                <CheckCircle2 className="h-3.5 w-3.5 text-green-500" /> Step-by-step guide for your platform
+              </div>
+              <div className="flex items-center gap-1.5 text-xs text-gray-500">
+                <CheckCircle2 className="h-3.5 w-3.5 text-green-500" /> Auto-verified in seconds
+              </div>
+            </div>
             <Button
-              onClick={async () => { await saveDomain(); await checkBacklink(); }}
-              disabled={verifyStatus === 'checking' || !domain.trim()}
-              className="bg-blue-600 hover:bg-blue-700 shrink-0"
+              onClick={() => setShowWizard(true)}
+              className="mt-4 bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
             >
-              {verifyStatus === 'checking'
-                ? <><RefreshCw className="h-4 w-4 mr-2 animate-spin" />Checking…</>
-                : 'Verify'}
+              <PlusCircle className="h-4 w-4" />
+              Add to my website →
             </Button>
           </div>
-
-          {verifyStatus === 'failed' && (
-            <div className="flex items-start gap-2 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2">
-              <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
-              <span>Link not found. Make sure it's in your site footer and publicly visible, then try again.</span>
-            </div>
-          )}
-          {verifyStatus === 'verified' && (
-            <div className="flex items-center gap-2 text-sm text-green-600 bg-green-50 border border-green-200 rounded-lg px-3 py-2">
-              <CheckCircle2 className="h-4 w-4 shrink-0" />
-              Verified! We'll review and activate your listing shortly.
-            </div>
-          )}
         </div>
       </div>
     );
   }
 
   return (
+    <>
+    {showWizard && realtor && (
+      <BacklinkWizard
+        domain={domain}
+        realtorId={realtor.id}
+        onVerified={(d) => {
+          setDomain(d);
+          setShowWizard(false);
+          setRealtor(prev => prev ? { ...prev, backlink_verified: true, domain: d } : prev);
+        }}
+        onClose={() => setShowWizard(false)}
+        checkBacklink={checkBacklink}
+      />
+    )}
     <PortalLayout>
       <h1 className="text-2xl font-bold text-gray-900 mb-2">
         Welcome back{dbUser?.name ? `, ${dbUser.name.split(' ')[0]}` : ''}
@@ -334,5 +300,6 @@ export default function RealtorDashboard() {
         </div>
       )}
     </PortalLayout>
+    </>
   );
 }
