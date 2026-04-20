@@ -135,7 +135,6 @@ export default function AdminDashboard() {
   const [paidReports, setPaidReports] = useState<PaidReport[]>([]);
   const [pendingReports, setPendingReports] = useState<PendingReport[]>([]);
   const [revenueLoaded, setRevenueLoaded] = useState(false);
-  const [priceMap, setPriceMap] = useState<Record<string, string>>({});
 
   // Revenue intelligence
   const [totalConvCount, setTotalConvCount] = useState(0);
