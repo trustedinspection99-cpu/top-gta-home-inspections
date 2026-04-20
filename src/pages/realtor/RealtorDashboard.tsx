@@ -55,7 +55,7 @@ export default function RealtorDashboard() {
 
   async function checkBacklink(d: string): Promise<boolean> {
     const clean = d.trim().replace(/^https?:\/\//, '').replace(/\/$/, '');
-    const { data, error } = await supabase.functions.invoke('verify-backlink', { body: { domain: clean } });
+    const { data, error } = await supabase.functions.invoke('verify-backlink', { body: { domain: clean, realtorName: dbUser?.name ?? 'A realtor' } });
     const ok = !error && !!data?.verified;
     if (ok && realtor) {
       await supabase.from('realtors').update({ backlink_verified: true, domain: clean }).eq('id', realtor.id);

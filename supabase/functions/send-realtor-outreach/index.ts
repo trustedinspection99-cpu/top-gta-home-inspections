@@ -39,7 +39,7 @@ serve(async (req) => {
 
     const text = `Hi ${name},
 
-I hope this finds you well. My name is Asad Amin, founder of ASADS Home Inspection — we're one of the top-ranked home inspection services across the GTA and Ontario.
+I hope this finds you well. My name is Haroon Choudhry, founder of ASADS Home Inspection — we're one of the top-ranked home inspection services across the GTA and Ontario.
 
 I'm reaching out because I'd love to offer you a free, permanent profile on our Trusted Realtors directory at ${DIRECTORY_URL}.${websiteLine}
 
@@ -59,7 +59,7 @@ ${SIGNUP_URL}
 Let me know if you have any questions — I'm happy to hop on a quick call.
 
 Best,
-Asad Amin
+Haroon Choudhry
 ASADS Home Inspection
 ${ASADS_PHONE}
 https://www.asads.ca`;
@@ -71,7 +71,7 @@ https://www.asads.ca`;
   </div>
   <div style="background:#fff;padding:32px;border:1px solid #e2e8f0;border-top:0;border-radius:0 0 12px 12px">
     <p>Hi ${name},</p>
-    <p>My name is <strong>Asad Amin</strong>, founder of <strong>ASADS Home Inspection</strong> — one of the top-ranked home inspection services across the GTA and Ontario.</p>
+    <p>My name is <strong>Haroon Choudhry</strong>, founder of <strong>ASADS Home Inspection</strong> — one of the top-ranked home inspection services across the GTA and Ontario.</p>
     <p>I'm reaching out because I'd love to offer you a <strong>free, permanent profile</strong> on our <a href="${DIRECTORY_URL}" style="color:#1d4ed8">Trusted Realtors directory</a>.${websiteLine ? `<br><br>${websiteLine.trim()}` : ''}</p>
 
     <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:20px 24px;margin:24px 0">
@@ -98,7 +98,7 @@ https://www.asads.ca`;
     <p>Let me know if you have any questions — I'm happy to hop on a quick call.</p>
     <p style="margin-top:28px">
       Best,<br>
-      <strong>Asad Amin</strong><br>
+      <strong>Haroon Choudhry</strong><br>
       ASADS Home Inspection<br>
       <a href="tel:+16478019311" style="color:#1d4ed8">${ASADS_PHONE}</a> · <a href="https://www.asads.ca" style="color:#1d4ed8">asads.ca</a>
     </p>
@@ -113,7 +113,7 @@ https://www.asads.ca`;
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: `Asad Amin — ASADS Home Inspection <${FROM_EMAIL}>`,
+        from: `Haroon Choudhry — ASADS Home Inspection <${FROM_EMAIL}>`,
         to: [email],
         subject,
         text,
