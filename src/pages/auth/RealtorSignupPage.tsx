@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -14,7 +13,6 @@ const GTA_CITIES = [
 ];
 
 export default function RealtorSignupPage() {
-  const { signUp } = useAuth();
   const navigate = useNavigate();
 
   const [name, setName] = useState('');
@@ -39,24 +37,36 @@ export default function RealtorSignupPage() {
     setError('');
     setLoading(true);
 
-    const { error: signUpError } = await signUp(email, password, name, 'realtor', phone);
+    // Call supabase.auth.signUp directly so we get the user ID back
+    // (useAuth().signUp discards the returned user, and getUser() returns null
+    //  when email confirmation is pending — so the realtors insert would never run)
+    const { data, error: signUpError } = await supabase.auth.signUp({
+      email,
+      password,
+      options: { data: { name, role: 'realtor', phone: phone || null } },
+    });
+
     if (signUpError) {
       setError(signUpError.message);
       setLoading(false);
       return;
     }
 
-    const { data: { user } } = await supabase.auth.getUser();
-    if (user) {
-      await supabase.from('realtors').insert({
-        user_id: user.id,
+    const userId = data.user?.id;
+    if (userId) {
+      const { error: insertError } = await supabase.from('realtors').insert({
+        user_id: userId,
         agency,
-        domain: domain.trim(),
+        domain: domain.trim() || null,
         backlink_verified: false,
         listed: false,
-        approved: false,
         cities: selectedCities,
       });
+      if (insertError) {
+        setError('Account created but profile setup failed: ' + insertError.message);
+        setLoading(false);
+        return;
+      }
     }
 
     setLoading(false);
