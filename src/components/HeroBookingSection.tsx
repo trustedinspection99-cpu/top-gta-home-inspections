@@ -56,6 +56,8 @@ export function HeroBookingSection({
     service: defaultService,
     name: "",
     phone: "",
+    email: "",
+    address: "",
     city: city || "",
     preferred_date: "",
   });
@@ -77,6 +79,8 @@ export function HeroBookingSection({
           service: form.service,
           name: form.name,
           phone: form.phone,
+          email: form.email || "",
+          address: form.address || "",
           city: form.city || "",
           preferred_date: form.preferred_date || "Flexible",
         }),
@@ -248,8 +252,32 @@ export function HeroBookingSection({
                   </div>
                 </div>
 
-                {/* City + Preferred Date */}
+                {/* Email */}
+                <div>
+                  <label className="block text-xs font-semibold text-gray-600 mb-1">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="john@email.com"
+                    className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+
+                {/* Address + City */}
                 <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">Property Address</label>
+                    <input
+                      type="text"
+                      name="address"
+                      value={form.address}
+                      onChange={handleChange}
+                      placeholder="123 Main St"
+                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
                   <div>
                     <label className="block text-xs font-semibold text-gray-600 mb-1">
                       City <span className="text-red-500">*</span>
@@ -264,17 +292,19 @@ export function HeroBookingSection({
                       className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Preferred Date</label>
-                    <input
-                      type="date"
-                      name="preferred_date"
-                      value={form.preferred_date}
-                      onChange={handleChange}
-                      min={new Date().toISOString().split("T")[0]}
-                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  </div>
+                </div>
+
+                {/* Preferred Date */}
+                <div>
+                  <label className="block text-xs font-semibold text-gray-600 mb-1">Preferred Date</label>
+                  <input
+                    type="date"
+                    name="preferred_date"
+                    value={form.preferred_date}
+                    onChange={handleChange}
+                    min={new Date().toISOString().split("T")[0]}
+                    className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
                 </div>
 
                 {status === "error" && (
