@@ -26,7 +26,7 @@ Deno.serve(async (req) => {
 
   const { data: jobs, error } = await supabase
     .from('jobs')
-    .select('id, client_name, client_phone, client_email, address, city, inspection_type, scheduled_at, status')
+    .select('id, client_name, client_email, address, city, inspection_type, scheduled_at, status')
     .in('status', ['scheduled', 'in_progress'])
     .not('scheduled_at', 'is', null)
     .order('scheduled_at', { ascending: true });
@@ -56,7 +56,6 @@ Deno.serve(async (req) => {
 
     const descParts: string[] = [];
     if (job.client_name) descParts.push('Client: ' + job.client_name);
-    if (job.client_phone) descParts.push('Phone: ' + job.client_phone);
     if (job.client_email) descParts.push('Email: ' + job.client_email);
     descParts.push('Status: ' + job.status);
     const description = descParts.join(' | ');
