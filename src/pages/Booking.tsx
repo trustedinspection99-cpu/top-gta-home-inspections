@@ -75,17 +75,17 @@ export default function Booking() {
     const inspectionLabel = inspectionTypes.find(t => t.value === formData.inspectionType)?.label || formData.inspectionType;
 
     try {
-      const response = await fetch("https://formspree.io/f/mnjnzzoz", {
+      const response = await fetch("https://wjxbojjhyocrxqkfnxmz.supabase.co/functions/v1/save-booking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           service: inspectionLabel,
           name: `${formData.firstName} ${formData.lastName}`.trim(),
           phone: formData.phone,
-          email: formData.email || "Not provided",
-          city: formData.city || "Not specified",
-          address: formData.address || "Not provided",
-          property_type: formData.propertyType || "Not specified",
+          email: formData.email || "",
+          city: formData.city || "",
+          address: formData.address || "",
+          property_type: formData.propertyType || "",
           preferred_date: date ? format(date, "PPP") : "Flexible",
           preferred_time: formData.timeSlot || "Any time",
           notes: formData.notes || "",

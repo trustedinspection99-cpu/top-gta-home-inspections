@@ -44,14 +44,14 @@ export function InlineBookingForm({ defaultService = "", city }: InlineBookingFo
     if (!form.service || !form.name || !form.phone) return;
     setStatus("sending");
     try {
-      const res = await fetch("https://formspree.io/f/mnjnzzoz", {
+      const res = await fetch("https://wjxbojjhyocrxqkfnxmz.supabase.co/functions/v1/save-booking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           service: form.service,
           name: form.name,
           phone: form.phone,
-          city: form.city || "Not specified",
+          city: form.city || "",
           preferred_date: form.preferred_date || "Flexible",
         }),
       });
