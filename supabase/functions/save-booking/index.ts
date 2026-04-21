@@ -75,6 +75,31 @@ Deno.serve(async (req) => {
       }).catch(() => {});
     }
 
+    // Build .ics calendar invite for Haroon's email
+    const icsAttachment = scheduled_at ? (() => {
+      const start = new Date(scheduled_at);
+      const end = new Date(start.getTime() + 2.5 * 60 * 60 * 1000);
+      const fmt = (d: Date) => d.toISOString().slice(0, 19).replace(/-/g, '').replace(/:/g, '') + 'Z';
+      const uid = (job?.id ?? Date.now()) + '@asads.ca';
+      const ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//ASADS Home Inspection//Calendar//EN',
+        'CALSCALE:GREGORIAN',
+        'METHOD:PUBLISH',
+        'BEGIN:VEVENT',
+        'UID:' + uid,
+        'DTSTART:' + fmt(start),
+        'DTEND:' + fmt(end),
+        'SUMMARY:' + service + ' - ' + (address || city || 'TBD'),
+        'LOCATION:' + (address || '') + ' ' + (city || ''),
+        'DESCRIPTION:Client: ' + name + ' | Phone: ' + (phone || '') + ' | Email: ' + (email || ''),
+        'END:VEVENT',
+        'END:VCALENDAR',
+      ].join('\r\n');
+      return btoa(ics);
+    })() : null;
+
     // Email to Haroon
     fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -96,6 +121,9 @@ Deno.serve(async (req) => {
 <li>Notes: ${notes || '—'}</li>
 ${job?.id ? '<li>Job ID: ' + job.id + '</li>' : ''}
 </ul>`,
+        ...(icsAttachment ? {
+          attachments: [{ filename: 'inspection.ics', content: icsAttachment }],
+        } : {}),
       }),
     }).catch(() => {});
 

@@ -154,16 +154,15 @@ const Index = () => {
     e.preventDefault();
     setFormStatus('sending');
     try {
-      const res = await fetch('https://formspree.io/f/mnjnzzoz', {
+      const res = await fetch('https://wjxbojjhyocrxqkfnxmz.supabase.co/functions/v1/save-booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          type: 'booking',
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
           service: formData.service || 'Not specified',
-          address: formData.city,
+          city: formData.city,
           preferred_date: formData.preferred_date || 'Flexible',
           preferred_time: formData.time_slot,
         }),
