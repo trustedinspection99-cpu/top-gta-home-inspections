@@ -170,7 +170,7 @@ export default function AdminDashboard() {
       supabase.from('jobs').select('*').order('scheduled_at', { ascending: false }).limit(200),
       supabase.from('realtors').select('*', { count: 'exact', head: true }).eq('listed', true),
       supabase.from('realtors').select('*', { count: 'exact', head: true }).eq('backlink_verified', true).eq('approved', false),
-      supabase.from('conversation_logs').select('*').eq('booked', true).order('started_at', { ascending: false }).limit(100),
+      supabase.from('conversation_logs').select('*').not('client_name', 'is', null).order('started_at', { ascending: false }).limit(100),
       supabase.from('conversation_logs').select('*', { count: 'exact', head: true }),
       supabase.from('reports').select('id, generated_at').eq('status', 'sent').lt('generated_at', threeDaysAgo),
       supabase.from('jobs').select('id, address, city, scheduled_at').in('status', ['scheduled']).gte('scheduled_at', now.toISOString()).lte('scheduled_at', in24h),
@@ -904,7 +904,7 @@ export default function AdminDashboard() {
           ) : asadLogs.length === 0 ? (
             <div className="p-10 text-center text-gray-400">
               <MessageCircle className="h-8 w-8 mx-auto mb-3 opacity-30" />
-              <p>No Asad bookings yet.</p>
+              <p>No conversations yet.</p>
             </div>
           ) : (
             <div className="divide-y divide-gray-100">
@@ -915,9 +915,15 @@ export default function AdminDashboard() {
                     onClick={() => setExpandedLogId(expandedLogId === log.id ? null : log.id)}
                   >
                     <div className="flex items-center gap-3 flex-wrap">
-                      <span className="shrink-0 inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700">
-                        <CheckCircle2 className="h-3 w-3" />Booked
-                      </span>
+                      {log.booked ? (
+                        <span className="shrink-0 inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700">
+                          <CheckCircle2 className="h-3 w-3" />Booked
+                        </span>
+                      ) : (
+                        <span className="shrink-0 inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-700">
+                          Lead
+                        </span>
+                      )}
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-medium text-gray-900">
                           {log.client_name ?? 'Unknown'}{log.city ? ` · ${log.city}` : ''}{log.service_type ? ` · ${log.service_type.replace(/-/g, ' ')}` : ''}
