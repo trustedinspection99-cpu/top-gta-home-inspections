@@ -42,7 +42,7 @@ Be warm, professional, and concise. Always confirm availability is subject to sc
 function extractBookingDetails(messages: { role: string; content: string }[]) {
   const fullText = messages.map(m => m.content).join('\n');
   const booked = /BOOKING_READY/i.test(fullText);
-  const get = (key: string) => fullText.match(new RegExp(key + ':\s*([^\n]+)'))?.[1]?.trim() ?? null;
+  const get = (key: string) => fullText.match(new RegExp(key + ':\\s*([^\\n]+)'))?.[1]?.trim() ?? null;
 
   return {
     booked,

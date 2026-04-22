@@ -24,12 +24,12 @@ When you have all the info and the customer confirms, output EXACTLY this block 
 BOOKING_READY
 address: [full address]
 city: [city]
-service: [inspection type]
-date: [preferred date]
-name: [customer name]
-phone: [phone]
-email: [email]
-price: [quoted price]
+inspection_type: [inspection type]
+preferred_date: [preferred date]
+client_name: [customer name]
+client_phone: [phone]
+client_email: [email]
+total_price: [quoted price]
 END_BOOKING
 
 Pricing guide:
@@ -51,17 +51,17 @@ function extractBookingDetails(messages: { role: string; content: string }[]) {
   // Detect if booking was completed
   const booked = /BOOKING_READY/i.test(fullText);
 
-  // Extract fields
+  // Extract fields — key names must match what SiteAssistant.tsx parseBookingReady expects
   const city = fullText.match(/city:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
-  const service = fullText.match(/service:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
+  const inspection_type = fullText.match(/inspection_type:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
   const address = fullText.match(/address:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
-  const name = fullText.match(/name:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
-  const email = fullText.match(/email:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
-  const phone = fullText.match(/phone:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
-  const date = fullText.match(/date:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
-  const price = fullText.match(/price:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
+  const client_name = fullText.match(/client_name:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
+  const client_email = fullText.match(/client_email:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
+  const client_phone = fullText.match(/client_phone:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
+  const preferred_date = fullText.match(/preferred_date:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
+  const total_price = fullText.match(/total_price:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
 
-  return { booked, city, service, address, name, email, phone, inspection_date: date, price };
+  return { booked, city, inspection_type, address, client_name, client_email, client_phone, inspection_date: preferred_date, price: total_price };
 }
 
 // Determine reason not booked from conversation context
@@ -119,12 +119,12 @@ Deno.serve(async (req) => {
         messages: allMessages,
         ended_at: isBookingComplete ? new Date().toISOString() : null,
         booked: details.booked,
-        service_type: details.service,
+        service_type: details.inspection_type,
         city: details.city,
         address: details.address,
-        client_name: details.name,
-        client_email: details.email,
-        client_phone: details.phone,
+        client_name: details.client_name,
+        client_email: details.client_email,
+        client_phone: details.client_phone,
         inspection_date: details.inspection_date,
         price: details.price,
         reason_not_booked: details.booked ? null : guessReasonNotBooked(allMessages),
@@ -136,12 +136,12 @@ Deno.serve(async (req) => {
       started_at: new Date().toISOString(),
       messages: allMessages,
       booked: details.booked,
-      service_type: details.service,
+      service_type: details.inspection_type,
       city: details.city,
       address: details.address,
-      client_name: details.name,
-      client_email: details.email,
-      client_phone: details.phone,
+      client_name: details.client_name,
+      client_email: details.client_email,
+      client_phone: details.client_phone,
       inspection_date: details.inspection_date,
       price: details.price,
       reason_not_booked: details.booked ? null : guessReasonNotBooked(allMessages),
@@ -149,15 +149,15 @@ Deno.serve(async (req) => {
   }
 
   // If booking complete, send confirmation emails
-  if (isBookingComplete && details.email && RESEND_API_KEY) {
+  if (isBookingComplete && details.client_email && RESEND_API_KEY) {
     await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: { 'Authorization': `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
         from: 'bookings@asads.ca',
-        to: details.email,
+        to: details.client_email,
         subject: `Inspection Booking Confirmed — ${details.address ?? 'Your Property'}`,
-        html: `<p>Hi ${details.name ?? 'there'},</p><p>Your inspection is confirmed for <strong>${details.inspection_date}</strong> at <strong>${details.address}</strong>.</p><p>Price: ${details.price}</p><p>We'll be in touch shortly. Call us at (647) 801-9311 with any questions.</p><p>— ASADS Home Inspection</p>`,
+        html: `<p>Hi ${details.client_name ?? 'there'},</p><p>Your inspection is confirmed for <strong>${details.inspection_date}</strong> at <strong>${details.address}</strong>.</p><p>Price: ${details.price}</p><p>We'll be in touch shortly. Call us at (647) 801-9311 with any questions.</p><p>— ASADS Home Inspection</p>`,
       }),
     });
     await fetch('https://api.resend.com/emails', {
@@ -166,8 +166,8 @@ Deno.serve(async (req) => {
       body: JSON.stringify({
         from: 'bookings@asads.ca',
         to: 'haroon4951@hotmail.com',
-        subject: `New Booking: ${details.name} — ${details.address}`,
-        html: `<p><strong>New booking from Asad:</strong></p><ul><li>Name: ${details.name}</li><li>Phone: ${details.phone}</li><li>Email: ${details.email}</li><li>Address: ${details.address}</li><li>City: ${details.city}</li><li>Service: ${details.service}</li><li>Date: ${details.inspection_date}</li><li>Price: ${details.price}</li></ul>`,
+        subject: `New Booking: ${details.client_name} — ${details.address}`,
+        html: `<p><strong>New booking from Asad:</strong></p><ul><li>Name: ${details.client_name}</li><li>Phone: ${details.client_phone}</li><li>Email: ${details.client_email}</li><li>Address: ${details.address}</li><li>City: ${details.city}</li><li>Service: ${details.inspection_type}</li><li>Date: ${details.inspection_date}</li><li>Price: ${details.price}</li></ul>`,
       }),
     });
   }

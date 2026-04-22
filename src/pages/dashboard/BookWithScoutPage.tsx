@@ -91,7 +91,7 @@ export default function BookWithScoutPage() {
 
       if (error) throw error;
 
-      const reply: string = data.content ?? 'Sorry, something went wrong. Please try again.';
+      const reply: string = data.message ?? data.content ?? 'Sorry, something went wrong. Please try again.';
       setMessages(prev => [...prev, { role: 'assistant', content: reply }]);
 
       const parsed = parseBookingReady(reply);
