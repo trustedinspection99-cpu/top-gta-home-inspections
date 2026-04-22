@@ -7,6 +7,7 @@ import {
   PlusCircle, FileText, Clock, CheckCircle2, Calendar, Users, DollarSign,
   Send, ListChecks, BadgeCheck, Link2, BarChart2, MessageCircle, Mail,
   Bell, ChevronDown, ChevronUp, XCircle, Eye, Search, Radio,
+  Phone, RefreshCw, TrendingUp, PhoneCall,
 } from 'lucide-react';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -97,9 +98,12 @@ export default function AdminDashboard() {
   const [tab, setTab] = useState<Tab>('jobs');
   const [jobs, setJobs] = useState<JobRow[]>([]);
   const [asadLogs, setAsadLogs] = useState<DbConversationLog[]>([]);
-  const [stats, setStats] = useState({ total: 0, pending: 0, completed: 0, realtors: 0, asadBooked: 0 });
+  const [stats, setStats] = useState({ total: 0, pending: 0, completed: 0, realtors: 0, asadBooked: 0, leadsTotal: 0 });
   const [pendingRealtors, setPendingRealtors] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
+  const [lastRefreshed, setLastRefreshed] = useState<Date>(new Date());
+  const [changingStatus, setChangingStatus] = useState<string>('');
   const [expandedLogId, setExpandedLogId] = useState<string | null>(null);
   const [markingPaid, setMarkingPaid] = useState<string>('');
   const [populatingChecklist, setPopulatingChecklist] = useState<string>('');
@@ -234,9 +238,12 @@ export default function AdminDashboard() {
       pending: jobList.filter(j => j.status === 'scheduled' || j.status === 'in_progress').length,
       completed: jobList.filter(j => j.status === 'completed').length,
       realtors: realtorCount ?? 0,
-      asadBooked: logs.length,
+      asadBooked: logs.filter(l => l.booked).length,
+      leadsTotal: logs.length,
     });
+    setLastRefreshed(new Date());
     setLoading(false);
+    setRefreshing(false);
     } catch (e: any) {
       setLoadError(`Unexpected error: ${e.message}`);
       setLoading(false);
@@ -515,12 +522,30 @@ export default function AdminDashboard() {
     await load();
   }
 
+  async function changeJobStatus(jobId: string, newStatus: DbJob['status']) {
+    setChangingStatus(jobId);
+    const patch: Record<string, string | null> = { status: newStatus };
+    if (newStatus === 'completed') patch.completed_at = new Date().toISOString();
+    await supabase.from('jobs').update(patch).eq('id', jobId);
+    setJobs(prev => prev.map(j => j.id === jobId ? { ...j, status: newStatus } : j));
+    setChangingStatus('');
+  }
+
   // ── Derived ───────────────────────────────────────────────────────────────
+
+  const todayStr = new Date().toISOString().slice(0, 10);
+  const todayJobs = jobs.filter(j =>
+    j.scheduled_at && j.scheduled_at.slice(0, 10) === todayStr && j.status !== 'cancelled'
+  );
+  const conversionRate = stats.leadsTotal > 0
+    ? Math.round((stats.asadBooked / stats.leadsTotal) * 100)
+    : 0;
 
   const filteredJobs = jobs.filter(j => {
     const q = jobSearch.toLowerCase();
     const matchSearch = !q || j.address?.toLowerCase().includes(q) ||
-      j.client_name?.toLowerCase().includes(q) || j.client_email?.toLowerCase().includes(q);
+      j.client_name?.toLowerCase().includes(q) || j.client_email?.toLowerCase().includes(q) ||
+      j.client_phone?.toLowerCase().includes(q);
     const matchStatus = jobStatusFilter === 'all' || j.status === jobStatusFilter;
     return matchSearch && matchStatus;
   });
@@ -538,7 +563,9 @@ export default function AdminDashboard() {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Admin Dashboard</h1>
-          <p className="text-gray-500 text-sm">ASADS inspection management</p>
+          <p className="text-gray-500 text-sm">
+            ASADS inspection management · refreshed {lastRefreshed.toLocaleTimeString('en-CA', { hour: '2-digit', minute: '2-digit' })}
+          </p>
         </div>
         <div className="flex items-center gap-2">
           <Button asChild variant="outline" className="border-orange-300 text-orange-700">
@@ -567,6 +594,14 @@ export default function AdminDashboard() {
             </Link>
           </Button>
           <button
+            onClick={() => { setRefreshing(true); load(); }}
+            disabled={refreshing}
+            className="p-2 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+            title="Refresh"
+          >
+            <RefreshCw className={`h-5 w-5 text-gray-600 ${refreshing ? 'animate-spin' : ''}`} />
+          </button>
+          <button
             onClick={openNotificationsTab}
             className="relative p-2 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors"
           >
@@ -591,8 +626,8 @@ export default function AdminDashboard() {
           { label: 'Total Jobs', value: stats.total, icon: <FileText className="h-5 w-5 text-blue-600" />, bg: 'bg-blue-50' },
           { label: 'Active', value: stats.pending, icon: <Clock className="h-5 w-5 text-amber-600" />, bg: 'bg-amber-50' },
           { label: 'Completed', value: stats.completed, icon: <CheckCircle2 className="h-5 w-5 text-green-600" />, bg: 'bg-green-50' },
-          { label: 'Asad Bookings', value: stats.asadBooked, icon: <MessageCircle className="h-5 w-5 text-indigo-600" />, bg: 'bg-indigo-50' },
-          { label: 'Live Visitors', value: liveCount, icon: <Eye className="h-5 w-5 text-rose-600" />, bg: 'bg-rose-50' },
+          { label: 'Leads / Booked', value: `${stats.leadsTotal} / ${stats.asadBooked}`, icon: <MessageCircle className="h-5 w-5 text-indigo-600" />, bg: 'bg-indigo-50' },
+          { label: 'Chat Conversion', value: stats.leadsTotal > 0 ? `${conversionRate}%` : '—', icon: <TrendingUp className="h-5 w-5 text-rose-600" />, bg: 'bg-rose-50' },
           { label: 'Listed Realtors', value: stats.realtors, icon: <Users className="h-5 w-5 text-purple-600" />, bg: 'bg-purple-50' },
           {
             label: 'Revenue MTD',
@@ -639,6 +674,38 @@ export default function AdminDashboard() {
               </div>
             );
           })}
+        </div>
+      )}
+
+      {/* Today's Jobs */}
+      {todayJobs.length > 0 && (
+        <div className="mb-4 bg-blue-50 border border-blue-200 rounded-xl overflow-hidden">
+          <div className="px-5 py-3 border-b border-blue-100 flex items-center gap-2">
+            <Calendar className="h-4 w-4 text-blue-600" />
+            <p className="text-sm font-semibold text-blue-800">Today — {new Date().toLocaleDateString('en-CA', { weekday: 'long', month: 'long', day: 'numeric' })}</p>
+            <span className="ml-auto bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">{todayJobs.length} job{todayJobs.length > 1 ? 's' : ''}</span>
+          </div>
+          <div className="divide-y divide-blue-100">
+            {todayJobs.map(job => (
+              <div key={job.id} className="px-5 py-3 flex items-center gap-4 flex-wrap">
+                <div className="flex-1 min-w-0">
+                  <p className="font-semibold text-gray-900 text-sm truncate">{job.address}, {job.city}</p>
+                  <p className="text-xs text-gray-600">{job.client_name} · {job.inspection_type}</p>
+                  <p className="text-xs text-blue-600 font-medium mt-0.5">
+                    {new Date(job.scheduled_at!).toLocaleTimeString('en-CA', { hour: '2-digit', minute: '2-digit' })}
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  {(job.client_phone) && (
+                    <a href={`tel:${job.client_phone}`} className="flex items-center gap-1 px-3 py-1.5 bg-green-600 text-white text-xs font-medium rounded-lg hover:bg-green-700">
+                      <PhoneCall className="h-3 w-3" />{job.client_phone}
+                    </a>
+                  )}
+                  <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium ${JOB_STATUS_COLORS[job.status]}`}>{job.status.replace('_', ' ')}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       )}
 
@@ -740,11 +807,22 @@ export default function AdminDashboard() {
                 <div key={job.id} className="px-5 py-4 hover:bg-gray-50">
                   <div className="flex items-center gap-3 flex-wrap">
                     <div className="flex-1 min-w-0">
-                      <p className="font-medium text-gray-900 truncate">{job.address}</p>
-                      <p className="text-sm text-gray-500">
-                        {job.client_name} · {job.client_email} · {job.city} · {job.inspection_type}
-                      </p>
+                      <p className="font-medium text-gray-900 truncate">{job.address}, {job.city}</p>
+                      <div className="flex items-center gap-3 flex-wrap mt-0.5">
+                        <p className="text-sm text-gray-600 font-medium">{job.client_name}</p>
+                        {job.client_phone && (
+                          <a href={`tel:${job.client_phone}`} className="flex items-center gap-1 text-sm text-green-700 font-semibold hover:underline">
+                            <Phone className="h-3.5 w-3.5" />{job.client_phone}
+                          </a>
+                        )}
+                        {job.client_email && (
+                          <a href={`mailto:${job.client_email}`} className="flex items-center gap-1 text-xs text-blue-600 hover:underline">
+                            <Mail className="h-3 w-3" />{job.client_email}
+                          </a>
+                        )}
+                      </div>
                       <div className="flex items-center gap-3 mt-0.5 flex-wrap">
+                        <p className="text-xs text-gray-500">{job.inspection_type}</p>
                         {job.scheduled_at && (
                           <p className="text-xs text-gray-400 flex items-center gap-1">
                             <Calendar className="h-3 w-3" />
@@ -765,6 +843,26 @@ export default function AdminDashboard() {
                       <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium ${JOB_STATUS_COLORS[job.status]}`}>
                         {job.status.replace('_', ' ')}
                       </span>
+
+                      {/* Quick status change */}
+                      {job.status === 'scheduled' && (
+                        <button
+                          onClick={() => changeJobStatus(job.id, 'in_progress')}
+                          disabled={changingStatus === job.id}
+                          className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-700 hover:bg-amber-200 transition-colors"
+                        >
+                          → In Progress
+                        </button>
+                      )}
+                      {job.status === 'in_progress' && (
+                        <button
+                          onClick={() => changeJobStatus(job.id, 'completed')}
+                          disabled={changingStatus === job.id}
+                          className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700 hover:bg-green-200 transition-colors"
+                        >
+                          ✓ Complete
+                        </button>
+                      )}
 
                       {job.report && (
                         <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium ${REPORT_STATUS_COLORS[job.report.status]}`}>
@@ -928,13 +1026,23 @@ export default function AdminDashboard() {
                         <p className="text-sm font-medium text-gray-900">
                           {log.client_name ?? 'Unknown'}{log.city ? ` · ${log.city}` : ''}{log.service_type ? ` · ${log.service_type.replace(/-/g, ' ')}` : ''}
                         </p>
-                        <p className="text-xs text-gray-400">
-                          {new Date(log.started_at).toLocaleString('en-CA', { dateStyle: 'medium', timeStyle: 'short' })}
-                          {log.client_email ? ` · ${log.client_email}` : ''}
-                          {log.client_phone ? ` · ${log.client_phone}` : ''}
-                          {log.inspection_date ? ` · ${log.inspection_date}` : ''}
-                          {log.price ? ` · ${log.price}` : ''}
-                        </p>
+                        <div className="flex items-center gap-2 flex-wrap mt-0.5">
+                          <span className="text-xs text-gray-400">
+                            {new Date(log.started_at).toLocaleString('en-CA', { dateStyle: 'medium', timeStyle: 'short' })}
+                          </span>
+                          {log.client_phone && (
+                            <a href={`tel:${log.client_phone}`} onClick={e => e.stopPropagation()} className="flex items-center gap-1 px-2 py-0.5 bg-green-100 text-green-700 text-xs font-semibold rounded-full hover:bg-green-200">
+                              <Phone className="h-3 w-3" />{log.client_phone}
+                            </a>
+                          )}
+                          {log.client_email && (
+                            <a href={`mailto:${log.client_email}`} onClick={e => e.stopPropagation()} className="flex items-center gap-1 px-2 py-0.5 bg-blue-100 text-blue-700 text-xs rounded-full hover:bg-blue-200">
+                              <Mail className="h-3 w-3" />{log.client_email}
+                            </a>
+                          )}
+                          {log.price && <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">{log.price}</span>}
+                          {log.inspection_date && <span className="text-xs text-gray-400">📅 {log.inspection_date}</span>}
+                        </div>
                         {log.address && <p className="text-xs text-gray-500 mt-0.5">{log.address}</p>}
                       </div>
                       <span className="text-gray-300 shrink-0">

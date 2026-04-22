@@ -34,12 +34,14 @@ export interface DbJob {
   homeowner_id: string | null;
   client_name: string;
   client_email: string;
+  client_phone: string | null;
   address: string;
   city: string;
   inspection_type: string;
   status: 'scheduled' | 'in_progress' | 'completed' | 'cancelled';
   scheduled_at: string | null;
   completed_at: string | null;
+  created_at?: string | null;
 }
 
 export type ReportStatus = 'saved' | 'sent' | 'paid' | 'visible';

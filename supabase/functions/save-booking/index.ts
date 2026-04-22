@@ -50,6 +50,7 @@ Deno.serve(async (req) => {
       homeowner_id: null,
       client_name: name,
       client_email: email || '',
+      client_phone: phone || null,
       address: address || 'TBD',
       city: city || '',
       inspection_type: service,

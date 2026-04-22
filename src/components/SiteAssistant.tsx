@@ -140,6 +140,7 @@ const SiteAssistant: React.FC = () => {
           homeowner_id: dbUser.id,
           client_name: parsed.client_name || dbUser.name || '',
           client_email: parsed.client_email || dbUser.email || '',
+          client_phone: parsed.client_phone || null,
           address: parsed.address,
           city: parsed.city,
           inspection_type: parsed.inspection_type,

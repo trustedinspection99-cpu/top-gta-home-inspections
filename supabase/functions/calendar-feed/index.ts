@@ -77,8 +77,7 @@ Deno.serve(async (req) => {
   return new Response(ics, {
     headers: {
       'Content-Type': 'text/calendar; charset=utf-8',
-      'Content-Disposition': 'attachment; filename=asads-inspections.ics',
-      'Cache-Control': 'no-cache',
+      'Cache-Control': 'public, max-age=3600',
       'Access-Control-Allow-Origin': '*',
     },
   });
