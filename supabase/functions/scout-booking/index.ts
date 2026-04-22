@@ -1,3 +1,7 @@
+// Updated scout-booking edge function with conversation logging
+// Copy this code into your existing scout-booking function in Supabase Dashboard
+// Supabase → Edge Functions → scout-booking → Edit
+
 import Anthropic from 'npm:@anthropic-ai/sdk';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
@@ -9,7 +13,7 @@ const supabase = createClient(
 
 const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
 
-const SYSTEM_PROMPT = `You are Max, a friendly and professional booking assistant for ASADS Home Inspection in Ontario, Canada.
+const SYSTEM_PROMPT = `You are Asad, a friendly and professional booking assistant for ASADS Home Inspection in Ontario, Canada.
 Your goal is to book home inspection appointments in 4 exchanges:
 1. Ask for their property address and city
 2. Ask for inspection type (pre-purchase, pre-listing, condo, mold, new construction, PDI, etc.) and approximate home size
@@ -36,27 +40,31 @@ Pricing guide:
 - Larger homes: from $549+
 - Mold air sampling add-on: from $299
 - Thermal imaging add-on: from $199
+- Sewer scope: from $299
 
 Be warm, professional, and concise. Always confirm availability is subject to scheduling.`;
 
+// Extract booking details from the conversation
 function extractBookingDetails(messages: { role: string; content: string }[]) {
   const fullText = messages.map(m => m.content).join('\n');
-  const booked = /BOOKING_READY/i.test(fullText);
-  const get = (key: string) => fullText.match(new RegExp(key + ':\\s*([^\\n]+)'))?.[1]?.trim() ?? null;
 
-  return {
-    booked,
-    city: get('city'),
-    service_type: get('inspection_type'),
-    address: get('address'),
-    client_name: get('client_name'),
-    client_email: get('client_email'),
-    client_phone: get('client_phone'),
-    inspection_date: get('preferred_date'),
-    price: get('total_price'),
-  };
+  // Detect if booking was completed
+  const booked = /BOOKING_READY/i.test(fullText);
+
+  // Extract fields — key names must match what SiteAssistant.tsx parseBookingReady expects
+  const city = fullText.match(/city:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
+  const inspection_type = fullText.match(/inspection_type:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
+  const address = fullText.match(/address:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
+  const client_name = fullText.match(/client_name:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
+  const client_email = fullText.match(/client_email:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
+  const client_phone = fullText.match(/client_phone:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
+  const preferred_date = fullText.match(/preferred_date:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
+  const total_price = fullText.match(/total_price:\s*([^\n]+)/i)?.[1]?.trim() ?? null;
+
+  return { booked, city, inspection_type, address, client_name, client_email, client_phone, inspection_date: preferred_date, price: total_price };
 }
 
+// Determine reason not booked from conversation context
 function guessReasonNotBooked(messages: { role: string; content: string }[]): string | null {
   const userMessages = messages.filter(m => m.role === 'user').map(m => m.content.toLowerCase()).join(' ');
   if (userMessages.includes('too expens') || userMessages.includes('price') || userMessages.includes('cost')) return 'Price concern';
@@ -82,6 +90,7 @@ Deno.serve(async (req) => {
     sessionId: string;
   };
 
+  // Call Claude
   const response = await anthropic.messages.create({
     model: 'claude-haiku-4-5-20251001',
     max_tokens: 500,
@@ -92,59 +101,73 @@ Deno.serve(async (req) => {
   const assistantMessage = response.content[0].type === 'text' ? response.content[0].text : '';
   const allMessages = [...messages, { role: 'assistant', content: assistantMessage }];
 
+  // Detect BOOKING_READY in the new assistant message
   const isBookingComplete = /BOOKING_READY/i.test(assistantMessage);
   const details = extractBookingDetails(allMessages);
 
+  // Log / upsert conversation to Supabase
   const { data: existing } = await supabase
     .from('conversation_logs')
     .select('id')
     .eq('session_id', sessionId)
     .maybeSingle();
 
-  const logPayload = {
-    messages: allMessages,
-    ended_at: isBookingComplete ? new Date().toISOString() : null,
-    booked: details.booked,
-    service_type: details.service_type,
-    city: details.city,
-    address: details.address,
-    client_name: details.client_name,
-    client_email: details.client_email,
-    client_phone: details.client_phone,
-    inspection_date: details.inspection_date,
-    price: details.price,
-    reason_not_booked: details.booked ? null : guessReasonNotBooked(allMessages),
-  };
-
   if (existing?.id) {
-    await supabase.from('conversation_logs').update(logPayload).eq('id', existing.id);
+    await supabase
+      .from('conversation_logs')
+      .update({
+        messages: allMessages,
+        ended_at: isBookingComplete ? new Date().toISOString() : null,
+        booked: details.booked,
+        service_type: details.inspection_type,
+        city: details.city,
+        address: details.address,
+        client_name: details.client_name,
+        client_email: details.client_email,
+        client_phone: details.client_phone,
+        inspection_date: details.inspection_date,
+        price: details.price,
+        reason_not_booked: details.booked ? null : guessReasonNotBooked(allMessages),
+      })
+      .eq('id', existing.id);
   } else {
     await supabase.from('conversation_logs').insert({
       session_id: sessionId,
       started_at: new Date().toISOString(),
-      ...logPayload,
+      messages: allMessages,
+      booked: details.booked,
+      service_type: details.inspection_type,
+      city: details.city,
+      address: details.address,
+      client_name: details.client_name,
+      client_email: details.client_email,
+      client_phone: details.client_phone,
+      inspection_date: details.inspection_date,
+      price: details.price,
+      reason_not_booked: details.booked ? null : guessReasonNotBooked(allMessages),
     });
   }
 
+  // If booking complete, send confirmation emails
   if (isBookingComplete && details.client_email && RESEND_API_KEY) {
     await fetch('https://api.resend.com/emails', {
       method: 'POST',
-      headers: { 'Authorization': 'Bearer ' + RESEND_API_KEY, 'Content-Type': 'application/json' },
+      headers: { 'Authorization': `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
         from: 'bookings@asads.ca',
         to: details.client_email,
-        subject: 'Inspection Booking Confirmed — ' + (details.address ?? 'Your Property'),
-        html: '<p>Hi ' + (details.client_name ?? 'there') + ',</p><p>Your inspection is confirmed for <strong>' + details.inspection_date + '</strong> at <strong>' + details.address + '</strong>.</p><p>Price: ' + details.price + '</p><p>We will be in touch shortly. Call us at (647) 801-9311 with any questions.</p><p>— ASADS Home Inspection</p>',
+        subject: `Inspection Booking Confirmed — ${details.address ?? 'Your Property'}`,
+        html: `<p>Hi ${details.client_name ?? 'there'},</p><p>Your inspection is confirmed for <strong>${details.inspection_date}</strong> at <strong>${details.address}</strong>.</p><p>Price: ${details.price}</p><p>We'll be in touch shortly. Call us at (647) 801-9311 with any questions.</p><p>— ASADS Home Inspection</p>`,
       }),
     });
     await fetch('https://api.resend.com/emails', {
       method: 'POST',
-      headers: { 'Authorization': 'Bearer ' + RESEND_API_KEY, 'Content-Type': 'application/json' },
+      headers: { 'Authorization': `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
         from: 'bookings@asads.ca',
         to: 'haroon4951@hotmail.com',
-        subject: 'New Booking: ' + details.client_name + ' — ' + details.address,
-        html: '<p><strong>New booking from Max (AI chat):</strong></p><ul><li>Name: ' + details.client_name + '</li><li>Phone: ' + details.client_phone + '</li><li>Email: ' + details.client_email + '</li><li>Address: ' + details.address + '</li><li>City: ' + details.city + '</li><li>Service: ' + details.service_type + '</li><li>Date: ' + details.inspection_date + '</li><li>Price: ' + details.price + '</li></ul>',
+        subject: `New Booking: ${details.client_name} — ${details.address}`,
+        html: `<p><strong>New booking from Asad:</strong></p><ul><li>Name: ${details.client_name}</li><li>Phone: ${details.client_phone}</li><li>Email: ${details.client_email}</li><li>Address: ${details.address}</li><li>City: ${details.city}</li><li>Service: ${details.inspection_type}</li><li>Date: ${details.inspection_date}</li><li>Price: ${details.price}</li></ul>`,
       }),
     });
   }
