@@ -199,7 +199,7 @@ export function HeroBookingSection({
             {status === "sent" ? (
               <div className="py-6 text-center">
                 <CheckCircle2 className="h-12 w-12 text-green-500 mx-auto mb-3" />
-                <p className="font-bold text-xl text-gray-900 mb-2">Quote Request Received!</p>
+                <p className="font-bold text-xl text-gray-900 mb-2">Booking Request Received!</p>
                 <p className="text-gray-500 text-sm">We'll call you within 30 minutes to confirm your booking.</p>
               </div>
             ) : (
@@ -324,7 +324,7 @@ export function HeroBookingSection({
                   {status === "sending" ? (
                     <><Loader2 className="h-4 w-4 animate-spin" /> Submitting…</>
                   ) : (
-                    "Get a Free Quote →"
+                    "Book My Inspection →"
                   )}
                 </button>
 
