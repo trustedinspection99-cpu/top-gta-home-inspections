@@ -77,7 +77,10 @@ export default function Booking() {
     try {
       const response = await fetch("https://wjxbojjhyocrxqkfnxmz.supabase.co/functions/v1/save-booking", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndqeGJvampoeW9jcnhxa2ZueG16Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQxOTY3NzMsImV4cCI6MjA4OTc3Mjc3M30.-QlS8qmiGs5cqlUOZP5_iMGbBoPyeimXhLOU6lwO-fQ",
+        },
         body: JSON.stringify({
           service: inspectionLabel,
           name: `${formData.firstName} ${formData.lastName}`.trim(),

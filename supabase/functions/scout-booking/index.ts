@@ -79,7 +79,7 @@ Deno.serve(async (req) => {
     return new Response('ok', {
       headers: {
         'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'authorization, content-type',
+        'Access-Control-Allow-Headers': 'authorization, content-type, x-client-info, apikey',
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
       },
     });
@@ -174,6 +174,6 @@ Deno.serve(async (req) => {
 
   return new Response(
     JSON.stringify({ message: assistantMessage }),
-    { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } }
+    { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'authorization, content-type, x-client-info, apikey' } }
   );
 });
