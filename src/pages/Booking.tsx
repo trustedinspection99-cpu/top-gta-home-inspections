@@ -305,22 +305,22 @@ export default function Booking() {
                           </Select>
                         </div>
                         <div className="space-y-2">
-                          <Label>Approx. Square Footage</Label>
-                          <Input placeholder="e.g., 2000" value={formData.squareFootage} onChange={(e) => handleInputChange("squareFootage", e.target.value)} />
+                          <Label htmlFor="booking-sqft">Approx. Square Footage</Label>
+                          <Input id="booking-sqft" name="squareFootage" placeholder="e.g., 2000" value={formData.squareFootage} onChange={(e) => handleInputChange("squareFootage", e.target.value)} />
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <Label>Property Address *</Label>
-                        <Input placeholder="Street address" value={formData.address} onChange={(e) => handleInputChange("address", e.target.value)} />
+                        <Label htmlFor="booking-address">Property Address *</Label>
+                        <Input id="booking-address" name="address" autoComplete="street-address" placeholder="Street address" value={formData.address} onChange={(e) => handleInputChange("address", e.target.value)} />
                       </div>
                       <div className="grid md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <Label>City *</Label>
-                          <Input placeholder="City" value={formData.city} onChange={(e) => handleInputChange("city", e.target.value)} />
+                          <Label htmlFor="booking-city">City *</Label>
+                          <Input id="booking-city" name="city" autoComplete="address-level2" placeholder="City" value={formData.city} onChange={(e) => handleInputChange("city", e.target.value)} />
                         </div>
                         <div className="space-y-2">
-                          <Label>Postal Code</Label>
-                          <Input placeholder="Postal code" value={formData.postalCode} onChange={(e) => handleInputChange("postalCode", e.target.value)} />
+                          <Label htmlFor="booking-postal">Postal Code</Label>
+                          <Input id="booking-postal" name="postalCode" autoComplete="postal-code" placeholder="Postal code" value={formData.postalCode} onChange={(e) => handleInputChange("postalCode", e.target.value)} />
                         </div>
                       </div>
                     </>
@@ -330,27 +330,27 @@ export default function Booking() {
                     <>
                       <div className="grid md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <Label>First Name *</Label>
-                          <Input value={formData.firstName} onChange={(e) => handleInputChange("firstName", e.target.value)} />
+                          <Label htmlFor="booking-first-name">First Name *</Label>
+                          <Input id="booking-first-name" name="firstName" autoComplete="given-name" value={formData.firstName} onChange={(e) => handleInputChange("firstName", e.target.value)} />
                         </div>
                         <div className="space-y-2">
-                          <Label>Last Name *</Label>
-                          <Input value={formData.lastName} onChange={(e) => handleInputChange("lastName", e.target.value)} />
+                          <Label htmlFor="booking-last-name">Last Name *</Label>
+                          <Input id="booking-last-name" name="lastName" autoComplete="family-name" value={formData.lastName} onChange={(e) => handleInputChange("lastName", e.target.value)} />
                         </div>
                       </div>
                       <div className="grid md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <Label>Email *</Label>
-                          <Input type="email" value={formData.email} onChange={(e) => handleInputChange("email", e.target.value)} />
+                          <Label htmlFor="booking-email">Email *</Label>
+                          <Input id="booking-email" name="email" type="email" autoComplete="email" value={formData.email} onChange={(e) => handleInputChange("email", e.target.value)} />
                         </div>
                         <div className="space-y-2">
-                          <Label>Phone *</Label>
-                          <Input type="tel" value={formData.phone} onChange={(e) => handleInputChange("phone", e.target.value)} />
+                          <Label htmlFor="booking-phone">Phone *</Label>
+                          <Input id="booking-phone" name="phone" type="tel" autoComplete="tel" value={formData.phone} onChange={(e) => handleInputChange("phone", e.target.value)} />
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <Label>Additional Notes</Label>
-                        <Textarea placeholder="Any special instructions or questions?" value={formData.notes} onChange={(e) => handleInputChange("notes", e.target.value)} />
+                        <Label htmlFor="booking-notes">Additional Notes</Label>
+                        <Textarea id="booking-notes" name="notes" placeholder="Any special instructions or questions?" value={formData.notes} onChange={(e) => handleInputChange("notes", e.target.value)} />
                       </div>
                     </>
                   )}

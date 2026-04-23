@@ -77,10 +77,11 @@ export function InlineBookingForm({ defaultService = "", city }: InlineBookingFo
   return (
     <form onSubmit={handleSubmit} className="space-y-3">
       <div>
-        <label className="block text-xs font-semibold text-foreground mb-1">
+        <label htmlFor="ibf-service" className="block text-xs font-semibold text-foreground mb-1">
           Inspection Type <span className="text-red-500">*</span>
         </label>
         <select
+          id="ibf-service"
           name="service"
           value={form.service}
           onChange={handleChange}
@@ -96,29 +97,33 @@ export function InlineBookingForm({ defaultService = "", city }: InlineBookingFo
 
       <div className="grid grid-cols-2 gap-2">
         <div>
-          <label className="block text-xs font-semibold text-foreground mb-1">
+          <label htmlFor="ibf-name" className="block text-xs font-semibold text-foreground mb-1">
             Your Name <span className="text-red-500">*</span>
           </label>
           <input
+            id="ibf-name"
             type="text"
             name="name"
             value={form.name}
             onChange={handleChange}
             required
+            autoComplete="name"
             placeholder="John Smith"
             className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
           />
         </div>
         <div>
-          <label className="block text-xs font-semibold text-foreground mb-1">
+          <label htmlFor="ibf-phone" className="block text-xs font-semibold text-foreground mb-1">
             Phone <span className="text-red-500">*</span>
           </label>
           <input
+            id="ibf-phone"
             type="tel"
             name="phone"
             value={form.phone}
             onChange={handleChange}
             required
+            autoComplete="tel"
             placeholder="(647) 555-0100"
             className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
           />
@@ -127,22 +132,25 @@ export function InlineBookingForm({ defaultService = "", city }: InlineBookingFo
 
       <div className="grid grid-cols-2 gap-2">
         <div>
-          <label className="block text-xs font-semibold text-foreground mb-1">
+          <label htmlFor="ibf-city" className="block text-xs font-semibold text-foreground mb-1">
             City <span className="text-red-500">*</span>
           </label>
           <input
+            id="ibf-city"
             type="text"
             name="city"
             value={form.city}
             onChange={handleChange}
             required
+            autoComplete="address-level2"
             placeholder="Toronto"
             className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
           />
         </div>
         <div>
-          <label className="block text-xs font-semibold text-foreground mb-1">Preferred Date</label>
+          <label htmlFor="ibf-date" className="block text-xs font-semibold text-foreground mb-1">Preferred Date</label>
           <input
+            id="ibf-date"
             type="date"
             name="preferred_date"
             value={form.preferred_date}
