@@ -7588,6 +7588,140 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">See our dedicated <a href="/services/wett-inspection" class="text-primary underline font-medium">WETT inspection service page</a> for full details including pricing, service areas, and what to expect on inspection day.</p>
     `,
   },
+  {
+    id: 111,
+    slug: "radon-levels-canada-explained",
+    title: "Radon Levels in Canada: What Your Test Result Means",
+    metaTitle: "Radon Levels in Canada: What Your Result Means | ASADS",
+    metaDescription: "What is a safe radon level in Canada? The 200 Bq/m³ guideline, a levels chart, how soon to act at each level, and short-term vs long-term tests.",
+    excerpt: "Health Canada's radon guideline is 200 Bq/m³. Here is what your number means, how soon to act, and why a two-day reading is not your annual average.",
+    category: "Health & Safety",
+    author: "ASADS Home Inspection",
+    date: "2026-10-31",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <p class="mb-4">Radon is measured in becquerels per cubic metre (Bq/m³). The number on your test report only means something once you know what the guideline is, how long the test ran, and what you are expected to do about the result. Here is how to read it.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is a Safe Radon Level in Canada?</h2>
+      <p class="mb-4">Health Canada's guideline is <strong>200 Bq/m³</strong>, measured as an annual average in the parts of a home people normally use. There is no level of radon with zero risk: lung cancer risk rises with both the concentration and the years of exposure, so lower is always better. The guideline is the point at which Health Canada recommends taking action.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Radon Levels Chart: What Your Result Means</h2>
+      <div class="overflow-x-auto mb-6"><table class="w-full text-sm border-collapse"><thead><tr><th class="text-left p-3 border-b font-semibold">Long-term result</th><th class="text-left p-3 border-b font-semibold">What it means</th><th class="text-left p-3 border-b font-semibold">Health Canada recommendation</th></tr></thead><tbody><tr><td class="p-3 border-b">Below 200 Bq/m³</td><td class="p-3 border-b">Under the Canadian guideline</td><td class="p-3 border-b">No action required. You can still choose to lower it</td></tr><tr><td class="p-3 border-b">200 to 600 Bq/m³</td><td class="p-3 border-b">Above the guideline</td><td class="p-3 border-b">Reduce the level within 2 years</td></tr><tr><td class="p-3 border-b">Above 600 Bq/m³</td><td class="p-3 border-b">Well above the guideline</td><td class="p-3 border-b">Reduce the level within 1 year</td></tr></tbody></table></div>
+      <p class="mb-4">These timelines apply to a long-term result. A high short-term reading is a reason to follow up, not a final answer.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Radon Levels in Other Units and Countries</h2>
+      <p class="mb-4">If you read American articles or use an imported monitor, you may see picocuries per litre (pCi/L). One pCi/L equals 37 Bq/m³.</p>
+      <div class="overflow-x-auto mb-6"><table class="w-full text-sm border-collapse"><thead><tr><th class="text-left p-3 border-b font-semibold">Reference level</th><th class="text-left p-3 border-b font-semibold">Bq/m³</th><th class="text-left p-3 border-b font-semibold">pCi/L</th></tr></thead><tbody><tr><td class="p-3 border-b">Health Canada guideline</td><td class="p-3 border-b">200</td><td class="p-3 border-b">about 5.4</td></tr><tr><td class="p-3 border-b">United States EPA action level</td><td class="p-3 border-b">about 148</td><td class="p-3 border-b">4</td></tr><tr><td class="p-3 border-b">World Health Organization reference level</td><td class="p-3 border-b">100</td><td class="p-3 border-b">about 2.7</td></tr></tbody></table></div>
+      <p class="mb-4">A home that passes in Canada can still be above the American or WHO figures, so check which standard an article or device is using.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Radon Levels Change From Day to Day</h2>
+      <p class="mb-4">Radon levels are not steady. They rise and fall with weather, wind, soil moisture and how the house is being run. They are usually higher in the heating season, when windows are closed and the warm air rising through the house draws soil gas in through the foundation. That is why one or two days of data cannot tell you your annual average.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2"><li><strong>Season:</strong> levels are generally highest from fall through winter</li><li><strong>Floor:</strong> levels are usually highest on the lowest lived-in floor</li><li><strong>House changes:</strong> new windows, air sealing, a new furnace or a finished basement can all change the result</li><li><strong>The neighbours' result:</strong> it tells you little, because two houses side by side can test very differently</li></ul>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Short-Term vs Long-Term Radon Tests</h2>
+      <p class="mb-4">Health Canada recommends a long-term test of at least 3 months, ideally during the heating season, in the lowest part of the home that is regularly used. A longer test gives a better estimate of your annual average.</p>
+      <p class="mb-4">A short-term digital monitor reading is still useful, for example during a home purchase, when you cannot wait three months. It shows you the level and how it swings hour by hour, and it can flag a home that needs a long-term test. Just do not treat a two-day number as your annual average.</p>
+      <p class="mb-4">Our <a href="/services/radon-testing" class="text-primary underline font-medium">radon testing service</a> offers both a 48-hour digital test and a 91-day alpha track test, carried out by C-NRPP certified inspectors.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What to Do If Your Radon Level Is High</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2"><li><strong>Confirm it</strong> with a long-term test if you only have a short-term reading</li><li><strong>Do not panic.</strong> The risk comes from years of exposure, and the timelines above give you time to plan</li><li><strong>Use a C-NRPP certified mitigation professional.</strong> The most common fix is sub-slab depressurization, which vents soil gas outdoors before it enters the house</li><li><strong>Retest after the work</strong> to confirm the level has dropped</li></ul>
+      <p class="mb-4">For more on radon when buying a home, see our <a href="/blog/radon-gas-ontario-buyers-guide" class="text-primary underline font-medium">radon guide for Ontario home buyers</a>.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Radon Levels: Common Questions</h2>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What is a normal radon level in a house?</h3>
+      <p class="mb-4">It varies widely by home and area, even on the same street. The only way to know your level is to test. The Canadian guideline is 200 Bq/m³.</p>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Is 100 Bq/m³ of radon safe?</h3>
+      <p class="mb-4">It is under the Canadian guideline of 200 Bq/m³, so Health Canada does not call for action. It is at the World Health Organization's reference level, and some homeowners choose to lower it. Any reduction lowers long-term risk.</p>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Is 200 Bq/m³ of radon dangerous?</h3>
+      <p class="mb-4">It is the level at which Health Canada recommends action. The risk builds over years of exposure, so it is not an emergency, but a long-term result above 200 should be reduced within 2 years.</p>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Can I live in a house with high radon?</h3>
+      <p class="mb-4">Yes, while you arrange a fix. Radon is a long-term exposure risk. Follow the Health Canada timelines, and spend less time in the basement until it is resolved if that is practical.</p>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Do new homes have radon?</h3>
+      <p class="mb-4">They can. Radon comes from the soil under the house, not from its age. New, well-sealed homes can have high levels too.</p>
+      <p class="mb-4">Want to know your number? <a href="/booking" class="text-primary underline font-medium">Book a radon test</a> or call (647) 801-9311.</p>
+    `,
+  },
+  {
+    id: 112,
+    slug: "asbestos-test-kit-vs-professional-testing",
+    title: "Asbestos Test Kit vs Professional Testing: Which Do You Need?",
+    metaTitle: "Asbestos Test Kit vs Professional Testing | Ontario",
+    metaDescription: "Are asbestos test kits reliable? How mail-in kits work, why one sample is rarely enough, the risk of sampling yourself, and when to use a professional.",
+    excerpt: "A mail-in kit can answer one narrow question. It cannot tell you a renovation is safe. How kits work, where they fall short and when to call a professional.",
+    category: "Asbestos",
+    author: "ASADS Home Inspection",
+    date: "2026-10-31",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <p class="mb-4">Asbestos test kits are cheap and easy to order, so it is fair to ask whether you need a professional at all. A kit can be a reasonable way to answer one narrow question. It cannot tell you whether a renovation is safe, and collecting the sample yourself carries its own risk. Here is how to decide.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Asbestos Test Kits Work</h2>
+      <p class="mb-4">A home asbestos test kit is really a mail-in sampling kit. It gives you bags, instructions and a lab form. You cut a small piece of the material yourself, seal it, and mail it to a lab, which examines it under a microscope and sends the result. There is no reliable instant test you can read at home, because asbestos fibres cannot be identified by eye. Instant strips or sprays sold online should not be trusted.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Asbestos Test Kit vs Professional Testing</h2>
+      <div class="overflow-x-auto mb-6"><table class="w-full text-sm border-collapse"><thead><tr><th class="text-left p-3 border-b font-semibold"></th><th class="text-left p-3 border-b font-semibold">Mail-in test kit</th><th class="text-left p-3 border-b font-semibold">Professional asbestos testing</th></tr></thead><tbody><tr><td class="p-3 border-b">Who takes the sample</td><td class="p-3 border-b">You</td><td class="p-3 border-b">A trained inspector, using wet-sampling methods</td></tr><tr><td class="p-3 border-b">What gets tested</td><td class="p-3 border-b">Usually one or two materials you choose</td><td class="p-3 border-b">Suspect materials identified across the area</td></tr><tr><td class="p-3 border-b">Number of samples</td><td class="p-3 border-b">Usually one per material</td><td class="p-3 border-b">Enough to meet O. Reg. 278/05 for the material and area</td></tr><tr><td class="p-3 border-b">Exposure risk</td><td class="p-3 border-b">You disturb the material without training or containment</td><td class="p-3 border-b">Controlled collection designed to limit fibre release</td></tr><tr><td class="p-3 border-b">Accepted by contractors</td><td class="p-3 border-b">Often not</td><td class="p-3 border-b">A written report contractors can work from</td></tr><tr><td class="p-3 border-b">Best for</td><td class="p-3 border-b">A single small, intact item you are curious about</td><td class="p-3 border-b">Renovation, demolition, damage, buying or selling</td></tr></tbody></table></div>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Problem With a Single Sample</h2>
+      <p class="mb-4">Asbestos is not spread evenly through a material. Texture on one part of a ceiling can test clear while another part, patched years apart with a different product, contains asbestos. That is why one negative kit result does not clear a whole ceiling.</p>
+      <p class="mb-4">Ontario's asbestos regulation, O. Reg. 278/05, recognises this. When a material is sampled to find out whether it contains asbestos, it sets a minimum number of samples based on the area: at least 3 for under 90 m², 5 for 90 to 450 m², and 7 for more than 450 m². In Ontario, a material counts as asbestos-containing at 0.5% or more by dry weight. A material is treated as containing asbestos if any one sample does.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Risk of Taking Your Own Sample</h2>
+      <p class="mb-4">Intact asbestos materials are generally low risk. The fibres become a problem when the material is cut, crumbled or drilled, and taking a sample means doing exactly that. Popcorn ceilings, pipe wrap and vermiculite insulation are especially easy to disturb. See <a href="/blog/friable-vs-non-friable-asbestos" class="text-primary underline font-medium">friable vs non-friable asbestos</a> for why this matters.</p>
+      <p class="mb-4">Do not sample anything that is crumbling, and do not open up vermiculite attic insulation yourself. If you do use a kit, follow its instructions exactly, wet the material, keep people and pets out, and never sand, vacuum or dry-scrape the area.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When You Need Professional Testing</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2"><li><strong>Before renovating or demolishing</strong> in a home built before 1990, because contractors need to know what they are disturbing</li><li><strong>After damage,</strong> such as a flood, a fire or a collapsed ceiling, where materials are already broken</li><li><strong>When buying or selling</strong> an older home and you want a written record</li><li><strong>When you have several suspect materials,</strong> such as ceiling texture, floor tile and pipe wrap</li><li><strong>When anyone other than you is doing the work:</strong> employers and contractors have duties under O. Reg. 278/05</li></ul>
+      <p class="mb-4">Our <a href="/services/asbestos-testing" class="text-primary underline font-medium">asbestos testing service</a> covers inspection, bulk sampling and accredited lab analysis, with a written report. We test and report; we do not do removal, so we have no stake in the result.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What About Asbestos Air Testing?</h2>
+      <p class="mb-4">Air testing answers a different question from bulk testing. A bulk sample tells you whether a material contains asbestos. An air test tells you whether fibres are in the air at that moment, and it is mainly used during and after removal work to confirm that an area is clear. A clean air test does not mean the materials in the room are asbestos-free, so it is not a replacement for sampling the material before a renovation.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Asbestos Testing: Common Questions</h2>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Are home asbestos test kits accurate?</h3>
+      <p class="mb-4">The lab analysis can be accurate for the piece you send. The weak point is the sampling: one small piece may not represent the whole material, so a negative result only tells you about that piece.</p>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Can I test for asbestos myself in Ontario?</h3>
+      <p class="mb-4">Homeowners can buy kits, but taking the sample means disturbing a material that may contain asbestos. For a renovation or anything involving a contractor, use a professional so the sampling and report hold up.</p>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How do I know if a material has asbestos without testing?</h3>
+      <p class="mb-4">You cannot tell by looking at it. If you are not going to test, treat suspect materials in pre-1990 homes as if they contain asbestos and leave them undisturbed.</p>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What should I do if a kit comes back positive?</h3>
+      <p class="mb-4">Leave the material alone, keep it from being disturbed and get professional advice before any work. Removal and repair are subject to Ontario rules, and the right approach depends on the material and its condition.</p>
+      <p class="mb-4">For where it turns up, see <a href="/blog/asbestos-in-ontario-homes-materials" class="text-primary underline font-medium">asbestos materials in Ontario homes</a>. To arrange testing, <a href="/booking" class="text-primary underline font-medium">book online</a> or call (647) 801-9311.</p>
+    `,
+  },
+  {
+    id: 113,
+    slug: "building-condition-assessment-ontario",
+    title: "Building Condition Assessment in Ontario: A Complete Guide",
+    metaTitle: "Building Condition Assessment Ontario: A Guide | ASADS",
+    metaDescription: "What a building condition assessment covers, how it differs from a property condition assessment, what the report includes and who needs one in Ontario.",
+    excerpt: "What a building condition assessment covers, how it differs from a PCA and reserve fund study, what the report should include and who needs one.",
+    category: "Inspection Insights",
+    author: "ASADS Home Inspection",
+    date: "2026-10-31",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <p class="mb-4">A building condition assessment tells you what shape a commercial or multi-unit property is in, what needs money now, and what will need money over the coming years. Buyers, lenders, owners and property managers all use them, and the terms around them are easy to mix up. Here is what the assessment covers in Ontario and how to choose the right one.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is a Building Condition Assessment?</h2>
+      <p class="mb-4">A building condition assessment (BCA) is a professional review of a building's physical condition. An assessor walks the property, reviews the major systems and available records, and reports on their condition, remaining useful life and the likely cost of repairs or replacement.</p>
+      <p class="mb-4">It differs from a home inspection in both scale and purpose. A home inspection helps one buyer understand one house. A BCA supports financial decisions about an asset, so the cost forecast is as important as the list of defects.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Building Condition Assessment vs Property Condition Assessment</h2>
+      <p class="mb-4">The two terms overlap and are often used interchangeably. In practice, a <strong>property condition assessment (PCA)</strong> usually refers to an assessment done for a purchase or financing, commonly following the ASTM E2018 standard. <strong>Building condition assessment</strong> is the broader term, often used by owners and managers planning maintenance and capital budgets. If a lender or investor requires a report, ask which standard they expect before you order one.</p>
+      <div class="overflow-x-auto mb-6"><table class="w-full text-sm border-collapse"><thead><tr><th class="text-left p-3 border-b font-semibold">Report</th><th class="text-left p-3 border-b font-semibold">Main purpose</th><th class="text-left p-3 border-b font-semibold">Typically ordered by</th></tr></thead><tbody><tr><td class="p-3 border-b">Property condition assessment (PCA)</td><td class="p-3 border-b">Due diligence on a purchase or loan</td><td class="p-3 border-b">Buyers, investors, lenders</td></tr><tr><td class="p-3 border-b">Building condition assessment (BCA)</td><td class="p-3 border-b">Understanding condition and planning capital spending</td><td class="p-3 border-b">Owners, property managers</td></tr><tr><td class="p-3 border-b">Reserve fund study</td><td class="p-3 border-b">Funding long-term repairs in a condominium, as required under Ontario's Condominium Act</td><td class="p-3 border-b">Condominium corporations</td></tr><tr><td class="p-3 border-b">Phase 1 environmental site assessment (ESA)</td><td class="p-3 border-b">Identifying potential environmental contamination risks</td><td class="p-3 border-b">Buyers, lenders</td></tr></tbody></table></div>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What a Building Condition Assessment Covers</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2"><li><strong>Site:</strong> paving, drainage, walkways, landscaping and loading areas</li><li><strong>Structure:</strong> foundations, framing, slabs and visible signs of movement</li><li><strong>Building envelope:</strong> roof, walls, windows, doors and sealants</li><li><strong>Mechanical:</strong> heating, cooling, ventilation and plumbing</li><li><strong>Electrical:</strong> service, distribution and visible safety concerns</li><li><strong>Fire and life safety:</strong> visible systems and obvious concerns, usually not a code audit</li><li><strong>Interiors and common areas:</strong> finishes, washrooms, elevators and accessibility observations</li></ul>
+      <p class="mb-4">The assessment is usually non-invasive. If the assessor sees signs of a deeper problem, the report will recommend a specialist, such as a structural engineer or roofing consultant.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What You Get in the Report</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2"><li>The condition of each major system, with photos</li><li>Immediate repairs and safety items</li><li>Estimated remaining useful life of major components</li><li>An opinion of probable cost for short-term repairs</li><li>A capital expenditure (CapEx) forecast over the coming years</li><li>Recommendations for further specialist review</li></ul>
+      <p class="mb-4">That cost forecast is often the most valuable part. It gives a buyer something concrete to negotiate with and gives an owner a basis for budgeting.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Who Needs One, and When</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2"><li><strong>Buyers and investors,</strong> during the conditional period of a purchase</li><li><strong>Lenders,</strong> as a condition of financing or refinancing</li><li><strong>Sellers,</strong> to find and deal with problems before going to market</li><li><strong>Owners and property managers,</strong> to plan capital budgets and avoid surprise failures</li><li><strong>Landlords,</strong> before signing or renewing a long lease that makes them responsible for major repairs</li></ul>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Affects the Cost</h2>
+      <p class="mb-4">Commercial assessments are quoted individually, because no two properties are alike. The price depends on the building's size, age, type and number of systems, how many units need to be sampled, how good the records are, the reporting standard required and how quickly you need the report. Expect to give the assessor the address, floor area, property type and what the report is for.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Choose an Assessor</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2"><li>Ask which standard they follow and whether your lender will accept the report</li><li>Ask for a sample report, and look for a real cost forecast rather than a list of observations</li><li>Check experience with your property type: an industrial warehouse is not an apartment building</li><li>Ask whether the same firm can coordinate a Phase 1 ESA if you need one</li><li>Confirm insurance, and what happens if specialist review is needed</li></ul>
+      <p class="mb-4">Our <a href="/services/commercial" class="text-primary underline font-medium">commercial inspection service</a> provides property condition assessments following ASTM E2018 for retail, office, industrial, multi-family and mixed-use properties across Ontario, including capital cost forecasting, and can be combined with a Phase 1 ESA.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Building Condition Assessment: Common Questions</h2>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How long does a building condition assessment take?</h3>
+      <p class="mb-4">It depends on the size and complexity of the property. A small commercial building may take a few hours on site, while a large or multi-building property can take several days, plus time to write the report.</p>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Is a building condition assessment required in Ontario?</h3>
+      <p class="mb-4">Not by general law for every building, but lenders and investors commonly require one for a deal. Condominium corporations have separate reserve fund study requirements under the Condominium Act.</p>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What is the difference between a BCA and a commercial inspection?</h3>
+      <p class="mb-4">People use the terms loosely. A commercial inspection may simply report on condition, while a BCA or PCA normally adds remaining useful life and cost forecasting. Ask what the report will include. See also our guide to <a href="/blog/commercial-building-inspection-ontario" class="text-primary underline font-medium">commercial building inspections in Ontario</a>.</p>
+      <p class="mb-4">To request a quote, <a href="/services/commercial" class="text-primary underline font-medium">see our commercial services</a> or call (647) 801-9311.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
