@@ -3524,8 +3524,8 @@ export const blogPostsData: BlogPost[] = [
   {
     id: 60,
     slug: "mold-inspection-toronto",
-    title: "Toronto Mold Inspection: Why Independent Testing Beats Removal Companies",
-    metaTitle: "Toronto Mold Inspection: Testing vs Removal Companies",
+    title: "Mold Inspection Toronto: Independent Testing, Not Remediation",
+    metaTitle: "Mold Inspection Toronto | Independent Testing",
     metaDescription: "Toronto mold inspection by an independent inspector — we test and report, never remediate. Unbiased results, same-day air sampling, certified report.",
     excerpt: "When you search for mold inspection in Toronto, most results are mold removal companies with a financial stake in finding problems. ASADS is different — we only test.",
     category: "Mold & Air Quality",
@@ -3593,7 +3593,7 @@ export const blogPostsData: BlogPost[] = [
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Your Toronto Mold Inspection</h2>
       <p class="mb-4">ASADS Home Inspection provides certified mold testing across all Toronto neighbourhoods — Downtown, Midtown, North York, Scarborough, Etobicoke, East York, The Beaches, Leslieville, Roncesvalles, and beyond. Same-day availability, lab results within 48 hours, full written report.</p>
       <p class="mb-4">Call <a href="tel:+16478019311" class="text-primary hover:underline">(647) 801-9311</a> or <a href="/booking" class="text-primary hover:underline">book your mold inspection online</a>.</p>
-      <p class="mb-4">See also: <a href="/services/mold-inspection/toronto" class="text-primary hover:underline">Mold Inspection Toronto Service Page</a> | <a href="/services/mold-inspection" class="text-primary hover:underline">Mold Inspection &amp; Testing in Ontario</a> | <a href="/locations/home-inspection-toronto" class="text-primary hover:underline">Toronto Home Inspection</a> | <a href="/services/air-quality/toronto" class="text-primary hover:underline">Air Quality Testing Toronto</a></p>
+      <p class="mb-4">See also: <a href="/services/mold-inspection/toronto" class="text-primary hover:underline">Mold Inspection Toronto Service Page</a> | <a href="/locations/home-inspection-toronto" class="text-primary hover:underline">Toronto Home Inspection</a> | <a href="/services/air-quality/toronto" class="text-primary hover:underline">Air Quality Testing Toronto</a></p>
     `,
   },
   {
@@ -4063,6 +4063,104 @@ export const blogPostsData: BlogPost[] = [
     `,
   },
   {
+    id: 66,
+    slug: "asbestos-banned-canada",
+    title: "When Was Asbestos Banned in Canada? What Ontario Homeowners Need to Know",
+    metaTitle: "When Was Asbestos Banned in Canada? | ASADS",
+    metaDescription: "Canada fully banned asbestos in 2018, but millions of pre-1990 Ontario homes still contain it. Learn where it hides, health risks, and when to test.",
+    category: "Asbestos & Hazardous Materials",
+    date: "2026-04-12",
+    readTime: "7 min read",
+    author: "ASADS Home Inspection",
+    excerpt: "Canada banned asbestos in 2018, but homes built before 1990 still commonly contain it. Here's what Ontario homeowners need to know.",
+    content: `
+      <p class="mb-4">Canada officially banned asbestos in 2018 — but that ban does not remove asbestos from the millions of homes built before that date. In Ontario, homes constructed before 1990 have a high probability of containing asbestos-containing materials (ACMs) in insulation, flooring, drywall compound, pipe wrapping, and other building materials. Undisturbed, asbestos poses minimal risk. Disturbed during renovations, it becomes a serious health hazard.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When Was Asbestos Banned in Canada?</h2>
+      <p class="mb-4">Canada's relationship with asbestos is complex. Here is the key timeline:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Pre-1970s:</strong> Asbestos was widely used in construction across Canada. Canada was also one of the world's largest producers of chrysotile asbestos, primarily from Quebec's Thetford Mines region.</li>
+        <li><strong>1979:</strong> Health Canada began restricting some applications of asbestos, but widespread use continued in building materials.</li>
+        <li><strong>1986:</strong> Spray-applied asbestos insulation was banned. Many other uses continued.</li>
+        <li><strong>Late 1980s–early 1990s:</strong> Asbestos was phased out of most new construction materials, though it was not yet legally banned. Homes built after approximately 1990 have significantly lower risk.</li>
+        <li><strong>2016:</strong> Canada announced its intention to ban all forms of asbestos.</li>
+        <li><strong>December 30, 2018:</strong> <strong>Canada's full asbestos ban took effect</strong> under the Prohibition of Asbestos and Products Containing Asbestos Regulations. The manufacture, import, sale, and use of asbestos and asbestos-containing products became illegal.</li>
+        <li><strong>2024–present:</strong> Canada continues to phase in additional regulations covering management and disposal of existing asbestos in buildings.</li>
+      </ul>
+      <p class="mb-4">The 2018 ban prevents new asbestos from entering Canada — but it does not retroactively remove asbestos already present in buildings constructed before the ban.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Year Were Ontario Homes Most Likely to Contain Asbestos?</h2>
+      <p class="mb-4">The highest-risk period for asbestos in Ontario residential construction is approximately <strong>1930 to 1990</strong>. Use of asbestos peaked in the 1950s–1970s and declined through the 1980s.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Built before 1945:</strong> High risk. Pipe insulation, boiler insulation, floor tiles.</li>
+        <li><strong>Built 1950–1979:</strong> Very high risk. Peak asbestos use. Found in ceiling tiles, textured coatings, drywall compound, vinyl floor tiles, pipe wrap, duct insulation, and exterior siding (Transite).</li>
+        <li><strong>Built 1980–1990:</strong> Moderate risk. Asbestos was being phased out but still present in some materials, particularly floor tiles, roofing materials, and drywall joint compound.</li>
+        <li><strong>Built after 1990:</strong> Low risk. Asbestos had been largely eliminated from mainstream building materials by this point.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Where Is Asbestos Found in Ontario Homes?</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Insulation</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Vermiculite attic insulation</strong> — Vermiculite mined from Libby, Montana (distributed under the "Zonolite" brand) was heavily contaminated with asbestos. If your attic has grey, pebble-like insulation, assume it may contain asbestos until tested.</li>
+        <li><strong>Pipe and duct insulation</strong> — White, grey, or tan wrapping on heating pipes, especially in older boiler systems and furnace ductwork.</li>
+        <li><strong>Boiler/furnace insulation</strong> — Blanket or cement insulation around old oil or gas boilers.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Flooring</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>9x9 inch vinyl floor tiles</strong> — A strong indicator of asbestos. These small tiles were almost universally made with asbestos binders. Common in basements, kitchens, and utility rooms of 1950s–1970s homes.</li>
+        <li><strong>12x12 inch vinyl tiles (pre-1980)</strong> — High probability of asbestos content.</li>
+        <li><strong>Floor tile adhesive (black mastic)</strong> — Even if tiles have been replaced, the black adhesive beneath may contain asbestos.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Drywall and Plaster</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Drywall joint compound (mud)</strong> — Pre-1980 joint compound frequently contained asbestos. Sanding old drywall seams releases fibres.</li>
+        <li><strong>Textured ceiling coatings ("popcorn ceiling")</strong> — Spray-applied ceiling textures used before 1979 commonly contained asbestos.</li>
+        <li><strong>Plaster walls</strong> — Older plaster mixtures sometimes included asbestos for strength and fire resistance.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Exterior Materials</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Asbestos cement siding ("Transite")</strong> — Flat, rigid grey siding panels or shingles common on mid-century Ontario homes. When intact, minimal risk. When cut or drilled, fibres are released.</li>
+        <li><strong>Roof shingles (asbestos-cement)</strong> — Some older pitched roofs used cement shingles containing asbestos.</li>
+      </ul>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is Asbestos Dangerous If Left Alone?</h2>
+      <p class="mb-4">Asbestos that is <strong>non-friable</strong> (bound in a solid matrix, intact, not crumbling) poses minimal risk in normal living conditions. Fibres cannot become airborne from intact materials. <strong>Friable asbestos</strong> — material that can be crumbled by hand pressure — is an immediate health hazard.</p>
+      <p class="mb-4">The health effects of asbestos exposure are serious: <strong>mesothelioma</strong> (a rare cancer caused almost exclusively by asbestos), <strong>asbestosis</strong> (progressive scarring of lung tissue), and increased risk of lung cancer. Symptoms typically appear 20–40 years after exposure.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Do You Need Asbestos Testing Before Renovating?</h2>
+      <p class="mb-4"><strong>Yes.</strong> Ontario's Occupational Health and Safety Act (OHSA) requires asbestos testing before disturbing any suspect material in a workplace. Best practice for residential renovations is the same. Contractors working on pre-1990 homes should request an asbestos survey before cutting into any walls, ceilings, floors, or pipe insulation.</p>
+      <p class="mb-4">If you are buying a pre-1990 Ontario home, an asbestos inspection adds peace of mind and negotiating leverage. Knowing the location and condition of any ACMs before you purchase allows you to negotiate appropriately, budget for future renovation costs, and plan renovations safely.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book Asbestos Testing in Ontario</h2>
+      <p class="mb-4">ASADS provides certified asbestos testing across Ontario. Our inspection includes visual assessment of suspect materials, collection of bulk samples, submission to an accredited laboratory, and a written report with results and recommendations. Starting from $299 with same-day report delivery.</p>
+      <p class="mb-4"><a href="/services/asbestos-testing" class="text-primary hover:underline">Asbestos Testing Ontario</a> | <a href="/services/asbestos-testing/toronto" class="text-primary hover:underline">Toronto</a> | <a href="/services/asbestos-testing/hamilton" class="text-primary hover:underline">Hamilton</a> | <a href="/services/asbestos-testing/mississauga" class="text-primary hover:underline">Mississauga</a></p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Frequently Asked Questions: Asbestos in Canadian Homes</h2>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">When was asbestos banned in Canada?</h3>
+      <p class="mb-4">Canada fully banned asbestos on December 30, 2018, under the Prohibition of Asbestos and Products Containing Asbestos Regulations. The ban covers manufacture, import, sale, and use of asbestos and asbestos-containing products. However, asbestos already present in existing buildings is not removed by the ban.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What year were homes built with asbestos in Canada?</h3>
+      <p class="mb-4">Canadian homes built between approximately 1930 and 1990 have the highest probability of containing asbestos-containing materials. The peak period was 1950–1979. Homes built after 1990 have very low risk.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How do I know if my house has asbestos?</h3>
+      <p class="mb-4">You cannot tell by looking. Asbestos fibres are microscopic, and many materials containing asbestos look identical to those that don't. The only way to confirm whether a material contains asbestos is through laboratory analysis of a bulk sample collected by a certified inspector.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Is it safe to live in a house with asbestos?</h3>
+      <p class="mb-4">Yes, if the asbestos-containing materials are intact and not being disturbed. Non-friable asbestos does not release fibres in normal living conditions. The risk increases significantly when materials are disturbed during renovation or demolition. Friable (crumbling) asbestos should be addressed promptly by a licensed abatement contractor.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Do I need asbestos testing when buying a house in Ontario?</h3>
+      <p class="mb-4">Testing is not legally required for a home purchase in Ontario, but it is strongly recommended for pre-1990 homes, especially if you plan to renovate. Knowing whether asbestos is present allows you to negotiate appropriately and plan renovation work safely. ASADS asbestos testing starts from $299 with same-day report delivery.</p>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What does asbestos abatement cost in Ontario?</h3>
+      <p class="mb-4">Asbestos abatement costs in Ontario vary widely. Small areas (pipe insulation in one section) may cost $1,500–$3,000. Attic vermiculite removal commonly runs $3,000–$8,000 or more. Full textured ceiling removal in a 2,000 sq ft home can run $4,000–$10,000. Get testing first — non-friable ACMs may be safely encapsulated rather than removed.</p>
+    `,
+  },
+  {
     id: 67,
     slug: "mold-removal-cost-ontario",
     title: "Mold Removal Cost Ontario 2026: What You'll Actually Pay",
@@ -4149,7 +4247,7 @@ export const blogPostsData: BlogPost[] = [
     id: 68,
     slug: "what-is-wett-inspection",
     title: "What Is a WETT Inspection in Ontario? Everything Homeowners Need to Know",
-    metaTitle: "What Is a WETT Inspection? Ontario Insurance Guide",
+    metaTitle: "What Is a WETT Inspection Ontario? | ASADS",
     metaDescription: "A WETT inspection is a certified assessment of wood-burning fireplaces and stoves required by Ontario insurers. Costs from $199. Book same-day with ASADS.",
     category: "Specialty Inspections",
     date: "2026-04-12",
@@ -4321,7 +4419,7 @@ export const blogPostsData: BlogPost[] = [
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mould Inspection vs Mould Testing: What's the Difference?</h2>
       <p class="mb-4">These terms are often confused. A <strong>mould inspection</strong> is a visual and moisture assessment conducted by a certified inspector who examines the property for signs of mould growth, moisture intrusion, and conditions conducive to mould. The inspector uses moisture meters, infrared thermal imaging, and knowledge of building science to identify problem areas — without necessarily taking laboratory samples.</p>
       <p class="mb-4"><strong>Mould testing</strong> (also called mould sampling or air quality testing) involves collecting samples — air samples, surface swab samples, or bulk material samples — that are sent to an accredited laboratory for analysis. Testing identifies the type and concentration of mould spores present and compares them against outdoor baseline levels.</p>
-      <p class="mb-4">A professional <a href="/services/mold-inspection" class="text-primary underline font-medium">mould inspection</a> is the appropriate starting point for most homeowners. Testing is warranted when the source of mould is unclear, when post-remediation verification is needed, or when legal or insurance documentation requires laboratory evidence.</p>
+      <p class="mb-4">A professional mould inspection is the appropriate starting point for most homeowners. Testing is warranted when the source of mould is unclear, when post-remediation verification is needed, or when legal or insurance documentation requires laboratory evidence.</p>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Can You Remove Mould Yourself?</h2>
       <p class="mb-4">Minor surface mould on non-porous surfaces (bathroom tile grout, window frames) can be cleaned with appropriate products. Health Canada recommends that mould covering less than one square metre (about 10 square feet) on non-porous surfaces can be addressed by a healthy adult using proper protective equipment — N95 respirator, safety glasses, and disposable gloves.</p>
@@ -4350,8 +4448,8 @@ export const blogPostsData: BlogPost[] = [
   {
     id: 70,
     slug: "when-was-asbestos-used-in-homes-canada",
-    title: "When Was Asbestos Banned and Used in Canadian Homes? A Complete Timeline",
-    metaTitle: "When Was Asbestos Banned & Used in Canadian Homes?",
+    title: "When Was Asbestos Used in Canadian Homes? A Complete Timeline",
+    metaTitle: "When Was Asbestos Used in Homes in Canada? | ASADS",
     metaDescription: "Asbestos was used in Canadian homes from the 1920s through the late 1980s. Learn which materials contain asbestos, when to test, and what to do if you find it.",
     excerpt: "Canadian homes built before 1990 may contain asbestos in dozens of building materials. This timeline shows when it was used and where to look in your home.",
     category: "Asbestos",
@@ -4519,7 +4617,7 @@ export const blogPostsData: BlogPost[] = [
     id: 72,
     slug: "friable-vs-non-friable-asbestos",
     title: "Friable vs Non-Friable Asbestos: What's the Difference and Why It Matters",
-    metaTitle: "Friable vs Non-Friable Asbestos: Which Needs Testing?",
+    metaTitle: "Friable vs Non-Friable Asbestos: Ontario Guide | ASADS",
     metaDescription: "Friable asbestos crumbles easily and releases fibres — non-friable is bound in material. Learn the key differences, Ontario regulations, and when each requires abatement.",
     excerpt: "Friable asbestos crumbles at hand pressure and releases dangerous fibres easily. Non-friable is bonded in a matrix and is lower risk — until disturbed during renovation.",
     category: "Asbestos",
@@ -4676,8 +4774,8 @@ export const blogPostsData: BlogPost[] = [
     id: 74,
     slug: "what-does-home-inspection-include",
     title: "What Does a Home Inspection Include? Complete Ontario Checklist",
-    metaTitle: "What Does a Home Inspection Include in Ontario?",
-    metaDescription: "What a home inspector checks room by room in Ontario: roof, structure, electrical, plumbing and HVAC, plus what is not included and what to ask.",
+    metaTitle: "What Does a Home Inspection Include? | Ontario",
+    metaDescription: "Full Ontario home inspection checklist: what inspectors check, how long it takes, what to expect, and questions to ask. ASADS certified inspectors.",
     excerpt: "A home inspection covers hundreds of components across every major system of the property. Here's exactly what a certified Ontario inspector examines — and what they don't.",
     category: "Home Inspection",
     author: "ASADS Home Inspection",
@@ -5420,9 +5518,9 @@ export const blogPostsData: BlogPost[] = [
   {
     id: 84,
     slug: "polybutylene-pipes-ontario",
-    title: "Poly B Plumbing in Ontario: What Home Buyers Must Know",
-    metaTitle: "Poly B Plumbing in Ontario: Risks, Insurance, Next Steps",
-    metaDescription: "How to spot poly B (polybutylene) pipes, why Ontario insurers ask about them and what a home inspector checks before you buy.",
+    title: "Polybutylene Pipes Ontario: What Home Buyers Must Know",
+    metaTitle: "Polybutylene Pipes Ontario: What Home Buyers Must Know",
+    metaDescription: "Polybutylene (poly-B) pipes were installed in Ontario homes from the 1970s to 1990s and are prone to failure. Learn what to do if your home has poly-B plumbing.",
     excerpt: "Polybutylene (poly-B) pipes were installed in hundreds of thousands of Ontario homes and are known to fail without warning. Here's what buyers need to know.",
     author: "ASADS Home Inspection",
     date: "2026-04-13",

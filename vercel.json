@@ -16,8 +16,6 @@
   ],
   "redirects": [
     { "source": "/:path+/", "destination": "/:path+", "permanent": true },
-    { "source": "/blog/asbestos-banned-canada", "destination": "/blog/when-was-asbestos-used-in-homes-canada", "permanent": true },
-    { "source": "/blog/asbestos-banned-canada/:city", "destination": "/blog/when-was-asbestos-used-in-homes-canada", "permanent": true },
     {
       "source": "/locations/toronto",
       "destination": "/locations/home-inspection-toronto",
