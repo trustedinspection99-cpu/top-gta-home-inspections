@@ -222,7 +222,7 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-mississauga",
     city: "Mississauga",
     region: "Peel Region",
-    metaTitle: "Home Inspector Mississauga | Book Today | ASADS",
+    metaTitle: "Home Inspection Mississauga | Certified Inspector | ASADS",
     metaDescription: "Certified home inspector Mississauga from $399. Pre-purchase, mold & asbestos testing, thermal imaging, same-day report. Port Credit, Erin Mills & Square One.",
     description: "Mississauga's premier certified inspector for buyer pre-purchase inspections, seller pre-listing services, thermal imaging diagnostics, mold & asbestos testing throughout Peel Region.",
     neighborhoods: [
@@ -2226,7 +2226,7 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-hamilton",
     city: "Hamilton",
     region: "Hamilton-Niagara Region",
-    metaTitle: "Home Inspector Hamilton | Book Today From $399 | ASADS",
+    metaTitle: "Home Inspection Hamilton | Certified Inspector | ASADS",
     metaDescription: "Hamilton home inspector from $399. Pre-purchase, pre-listing & mold testing. Same-day digital report. North End, Westdale, Ancaster & the Mountain.",
     description: "Hamilton's premier certified inspector specializing in escarpment slope stability assessments, century home structural inspections & thermal imaging diagnostics.",
     neighborhoods: ["Stipley", "North End", "Kirkendall", "Westdale", "Durand", "Locke Street", "Ancaster Heights", "Mount Hope", "East Hamilton", "Crown Point", "Binbrook", "Waterdown", "Dundas", "Flamborough", "Stoney Creek Mountain"],
