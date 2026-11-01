@@ -5439,6 +5439,7 @@ export const blogPostsData: BlogPost[] = [
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Mold Inspection Cost in Ontario</h2>
       <p class="mb-4">ASADS mold inspections start at $299 for a residential property in the GTA and surrounding Ontario communities. This includes the full physical inspection with thermal imaging and moisture mapping. Laboratory air sampling is available as an add-on and is recommended when visible mold is found or when health symptoms are present.</p>
       <p class="mb-4">To book a mold inspection — spelled any way you like — call (647) 801-9311 or <a href="/booking" class="text-primary underline">book online</a>. We serve all of the GTA, Hamilton, Kitchener-Waterloo, Guelph, Barrie, and surrounding Ontario communities.</p>
+      <p class="mb-4">Prices, lab sampling and what the report covers are on our <a href="/services/mold-inspection" class="text-primary underline font-medium">mold inspection and testing</a> page.</p>
     `,
   },
   {
@@ -7216,6 +7217,7 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">ASADS Home Inspection serves the GTA and surrounding Ontario. Our inspectors are trained to identify suspected asbestos-containing materials including vermiculite insulation, and we document every finding with photos in your same-day report.</p>
       <p class="mb-4">For asbestos testing and designated substance surveys, we can refer you to licensed Ontario DSS professionals. Call <strong>(647) 801-9311</strong> or <a href="/booking" class="text-primary underline font-medium">book online</a>.</p>
       <p class="mb-4">See our <a href="/services/asbestos-testing" class="text-primary underline font-medium">asbestos testing service page</a> for more information on what ASADS includes and when formal testing is recommended.</p>
+      <p class="mb-4">Planning a renovation or demolition of a commercial or multi-unit building? See our <a href="/services/designated-substance-survey" class="text-primary underline font-medium">designated substance survey</a> page for what Ontario requires before work starts.</p>
     `,
   },
   {
@@ -7676,6 +7678,7 @@ export const blogPostsData: BlogPost[] = [
       <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What should I do if a kit comes back positive?</h3>
       <p class="mb-4">Leave the material alone, keep it from being disturbed and get professional advice before any work. Removal and repair are subject to Ontario rules, and the right approach depends on the material and its condition.</p>
       <p class="mb-4">For where it turns up, see <a href="/blog/asbestos-in-ontario-homes-materials" class="text-primary underline font-medium">asbestos materials in Ontario homes</a>. To arrange testing, <a href="/booking" class="text-primary underline font-medium">book online</a> or call (647) 801-9311.</p>
+      <p class="mb-4">For renovation or demolition work on commercial and multi-unit buildings, see our <a href="/services/designated-substance-survey" class="text-primary underline font-medium">designated substance survey</a> page.</p>
     `,
   },
   {
@@ -7720,6 +7723,7 @@ export const blogPostsData: BlogPost[] = [
       <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What is the difference between a BCA and a commercial inspection?</h3>
       <p class="mb-4">People use the terms loosely. A commercial inspection may simply report on condition, while a BCA or PCA normally adds remaining useful life and cost forecasting. Ask what the report will include. See also our guide to <a href="/blog/commercial-building-inspection-ontario" class="text-primary underline font-medium">commercial building inspections in Ontario</a>.</p>
       <p class="mb-4">To request a quote, <a href="/services/commercial" class="text-primary underline font-medium">see our commercial services</a> or call (647) 801-9311.</p>
+      <p class="mb-4">If the building will be renovated or demolished, Ontario also requires a <a href="/services/designated-substance-survey" class="text-primary underline font-medium">designated substance survey</a> before work begins.</p>
     `,
   },
 ];
