@@ -7726,6 +7726,147 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">If the building will be renovated or demolished, Ontario also requires a <a href="/services/designated-substance-survey" class="text-primary underline font-medium">designated substance survey</a> before work begins.</p>
     `,
   },
+  {
+    id: 114,
+    slug: "coliform-in-well-water-ontario",
+    title: "Coliform in Well Water: What Your Ontario Test Result Means",
+    metaTitle: "Coliform in Well Water: What Your Result Means | ASADS",
+    metaDescription: "Total coliform or E. coli found in your well water? What each result means in Ontario, what to do next, how often to test and what the free test misses.",
+    excerpt: "Coliform or E. coli in a private well test? What each result means, what to do first, how often to test and what the free provincial test does not check.",
+    category: "Health & Safety",
+    author: "ASADS Home Inspection",
+    date: "2026-10-31",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <p class="mb-4">If your private well test came back showing coliform bacteria, the result is telling you something specific: surface water or soil is probably getting into your water supply. It is common, it is usually fixable, and the next steps are well established. This guide explains what the result means, what to do first, and what a standard bacteria test does not check.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Are Coliform Bacteria?</h2>
+      <p class="mb-4">Coliforms are a large group of bacteria found in soil, on plants and in the gut of people and animals. Most are not harmful themselves. Labs test for them because they are an <strong>indicator</strong>: if coliforms are in your well water, there is a pathway for contamination, and harmful bacteria, viruses or parasites could use the same pathway.</p>
+      <p class="mb-4">A typical private well bacteria test reports two things:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Total coliforms:</strong> the whole group. A positive result means something from the surface is reaching the water.</li>
+        <li><strong>E. coli:</strong> one member of the group that comes from human or animal waste. A positive result means faecal contamination.</li>
+      </ul>
+      <p class="mb-4">Ontario's drinking water standard for both is zero per 100 mL. Any detectable count is above the standard.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Total Coliform Found, No E. coli</h2>
+      <p class="mb-4">This is the most common positive result. It usually points to a problem near the top of the well: a cracked or loose well cap, a damaged casing, surface water pooling around the wellhead, or recent work on the well or plumbing. It can also follow heavy rain or snowmelt.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Use boiled or bottled water for drinking, cooking and brushing teeth until a retest is clear.</li>
+        <li>Inspect the wellhead: cap, vent screen, casing height and grading around it.</li>
+        <li>Shock chlorinate the well (or have a licensed well contractor do it), then flush the chlorine out.</li>
+        <li>Retest after the chlorine is gone, and follow your public health unit's advice on how many clear results you need before relying on the water again.</li>
+      </ul>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">E. coli Found</h2>
+      <p class="mb-4">E. coli means the water is contaminated with waste and is <strong>not safe to drink</strong> without treatment. Stop drinking it untreated straight away and contact your local public health unit for advice. Look for nearby sources: a septic system, manure, a pet run or a flooded area. Disinfection alone will not hold if the source is still there, so a well contractor should check the well's construction and location.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Often Should You Test a Private Well?</h2>
+      <p class="mb-4">Public Health Ontario recommends testing private well water for bacteria <strong>three times a year</strong>: in spring, late summer and fall. Test again any time:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>the water changes colour, taste or smell</li>
+        <li>after flooding, a heavy storm or a long dry spell</li>
+        <li>after any repair or work on the well, pump or plumbing</li>
+        <li>someone in the home has an unexplained stomach illness</li>
+        <li>you are buying a home on a well</li>
+      </ul>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What the Free Bacteria Test Does Not Check</h2>
+      <p class="mb-4">Ontario offers free bacteria testing of private well water through Public Health Ontario's laboratory, with sample bottles available from public health units and drop-off locations. That test checks <strong>only total coliforms and E. coli</strong>.</p>
+      <p class="mb-4">It does not test for chemicals. Depending on the area and the well, those can include nitrates (near farmland or septic systems), arsenic, uranium, fluoride, lead (from older plumbing), sodium and hardness. Chemical testing is done by an accredited private laboratory and usually needs to be done less often than bacteria testing, for example when you buy the home and every few years after that.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Buying a Home With a Well</h2>
+      <p class="mb-4">For buyers, a single clear bacteria result is a snapshot. Ask the seller for past results, check when the well was built and last serviced, and consider both a bacteria test and a chemical panel before your conditions expire. A home inspection also looks at the wellhead, the pressure tank and any treatment equipment.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Getting Your Well Tested</h2>
+      <p class="mb-4">ASADS collects well water samples using proper sterile procedure and sends them to an accredited laboratory, including chemical tests such as nitrates and arsenic that the free test does not cover. See our <a href="/services/well-water-testing" class="text-primary underline font-medium">well water testing</a> page for what is included, or call (647) 801-9311. Buying a home? Add it to a <a href="/services/pre-purchase" class="text-primary underline font-medium">pre-purchase home inspection</a>.</p>
+    `,
+  },
+  {
+    id: 115,
+    slug: "mold-test-kit-vs-professional-mold-testing",
+    title: "Mold Test Kit vs Professional Mold Testing: Which Do You Need?",
+    metaTitle: "Mold Test Kit vs Professional Mold Testing | ASADS",
+    metaDescription: "Do home mold test kits work? What a petri-dish kit can and cannot tell you, when professional mold testing is worth it, and what to do if you can see mold.",
+    excerpt: "Do home mold test kits work? What a petri-dish kit can and cannot tell you, and when professional air sampling is worth paying for.",
+    category: "Mold & Air Quality",
+    author: "ASADS Home Inspection",
+    date: "2026-10-31",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <p class="mb-4">A mold test kit from the hardware store is cheap and easy, so it is natural to start there. The trouble is that most kits answer a question nobody needs answered: <em>is there any mold spore in my air?</em> There almost always is. This guide explains what a kit can and cannot tell you, and when professional testing is worth it.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Home Mold Test Kits Work</h2>
+      <p class="mb-4">Most kits are a petri dish of growth medium. You leave it open in a room for a set time, close it, and wait a few days to see if anything grows. Some kits include a swab for a visible spot, and some offer lab identification for an extra fee.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What a Kit Can't Tell You</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Whether you have a problem.</strong> Mold spores are always present in indoor and outdoor air, so a settle plate will grow something in nearly every home. A "positive" result is expected.</li>
+        <li><strong>How much mold is in the air.</strong> A dish catches whatever happens to fall on it. It does not measure a known volume of air, so there is no concentration to compare with anything.</li>
+        <li><strong>How your indoor air compares with outside.</strong> Professional testing compares indoor samples with an outdoor sample taken at the same time. That comparison is what shows an indoor source. A kit has no baseline.</li>
+        <li><strong>Where the mold is.</strong> A dish in the middle of a room can't point to the wall cavity, attic or duct where growth is hiding.</li>
+      </ul>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">If You Can See or Smell Mold</h2>
+      <p class="mb-4">If mold is visible, you usually don't need a test to know you have mold. Health Canada's advice focuses on fixing the moisture problem and cleaning up the growth. Small areas can often be cleaned by a homeowner with the right precautions; larger or recurring growth calls for a professional. Testing is most useful when the question is <em>how far it has spread</em>, <em>whether it is hidden</em>, or <em>whether a cleanup worked</em>.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When Professional Mold Testing Is Worth It</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>A musty smell with no visible mold, suggesting growth inside walls, under floors or in the attic</li>
+        <li>Health symptoms that improve when you are away from the home</li>
+        <li>After a leak or flood, to see whether hidden materials stayed wet</li>
+        <li>Buying or selling a home with signs of past water damage</li>
+        <li>Landlord and tenant situations where written, independent results are needed</li>
+        <li>After remediation, to confirm spore levels are back to normal (clearance testing)</li>
+      </ul>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Professional Testing Involves</h2>
+      <p class="mb-4">A mold inspection starts with a visual check and moisture readings, often with a thermal camera, to find wet areas without opening walls. Where sampling is needed, a calibrated pump draws a measured volume of air through a sampling cassette indoors and outdoors, and surface samples may be taken from suspect spots. An accredited laboratory analyses the samples, and the report explains the results and where the problem is likely to be. Read more on <a href="/blog/mold-testing-vs-mold-inspection" class="text-primary underline font-medium">mold testing vs mold inspection</a>.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Kit vs Professional: Quick Comparison</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Kit:</strong> shows that spores exist; no air volume, no outdoor baseline, no location. Fine for curiosity, not for decisions.</li>
+        <li><strong>Professional:</strong> measured air samples, indoor vs outdoor comparison, moisture mapping and a written report. Suited to health concerns, real estate and documentation.</li>
+      </ul>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Booking a Mold Inspection</h2>
+      <p class="mb-4">ASADS is an independent mold inspection and testing service. We don't do remediation, so we have no interest in finding a problem that isn't there. See our <a href="/services/mold-inspection" class="text-primary underline font-medium">mold inspection and testing</a> page for what is included, or call (647) 801-9311. Concerned about other pollutants as well? See <a href="/services/air-quality" class="text-primary underline font-medium">air quality testing</a>.</p>
+    `,
+  },
+  {
+    id: 116,
+    slug: "how-to-test-air-quality-in-your-home",
+    title: "How to Test Air Quality in Your Home: Monitors vs Lab Testing",
+    metaTitle: "How to Test Air Quality in Your Home | ASADS",
+    metaDescription: "How to test indoor air quality at home: what a home monitor measures, the readings that matter, which problems need their own test, and when to call a pro.",
+    excerpt: "What a home air quality monitor can tell you, the readings that matter, which problems need their own test, and when lab testing makes sense.",
+    category: "Mold & Air Quality",
+    author: "ASADS Home Inspection",
+    date: "2026-10-31",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <p class="mb-4">Stuffy rooms, headaches that fade when you leave the house, condensation on windows or a smell you can't place are all reasons people start asking how to test the air at home. You can learn a lot yourself with the right tools, as long as you know what each tool can and cannot measure.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Step 1: Use a Home Air Quality Monitor</h2>
+      <p class="mb-4">A consumer air quality monitor is the easiest place to start. Most measure some of the following:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Carbon dioxide (CO2):</strong> a good guide to ventilation. Outdoor air is roughly 400 to 450 ppm. Health Canada's residential guideline is a 24-hour average of 1,000 ppm; readings well above that in bedrooms usually mean not enough fresh air.</li>
+        <li><strong>Fine particles (PM2.5):</strong> rise with cooking, candles, wood smoke and wildfire smoke.</li>
+        <li><strong>Total VOCs (TVOC):</strong> a rough signal for chemicals from paint, cleaners, new furniture and flooring. Consumer sensors can't tell you <em>which</em> chemical, so treat the number as a trend, not a diagnosis.</li>
+        <li><strong>Humidity:</strong> high humidity feeds mold and dust mites; very low humidity dries out skin and airways. Watch it room by room, especially in basements.</li>
+      </ul>
+      <p class="mb-4">Leave the monitor in each room for a few days and note when readings spike. Patterns such as CO2 climbing overnight or humidity staying high in the basement point to the fix.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Step 2: Problems That Need Their Own Test</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Carbon monoxide:</strong> a general air monitor is not a substitute for a CO alarm. Ontario requires CO alarms in homes with a fuel-burning appliance, fireplace or attached garage.</li>
+        <li><strong>Radon:</strong> you can't smell or see it, and air quality monitors don't measure it. Health Canada recommends a long-term test of at least three months, ideally in fall and winter. See <a href="/blog/radon-levels-canada-explained" class="text-primary underline font-medium">radon levels explained</a>.</li>
+        <li><strong>Mold:</strong> monitors don't detect mold. Petri-dish kits have limits too; see <a href="/blog/mold-test-kit-vs-professional-mold-testing" class="text-primary underline font-medium">mold test kit vs professional testing</a>.</li>
+        <li><strong>Specific chemicals</strong> such as formaldehyde: these need sampling and laboratory analysis to identify and measure.</li>
+      </ul>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Step 3: Simple Fixes to Try First</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Run bathroom and kitchen exhaust fans, and check they vent outside, not into the attic.</li>
+        <li>Make sure the HRV or ERV, if you have one, is running and its filters are clean.</li>
+        <li>Change furnace filters on schedule.</li>
+        <li>Use a dehumidifier in damp basements.</li>
+        <li>Air out rooms after painting, renovating or bringing in new furniture.</li>
+      </ul>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When to Call a Professional</h2>
+      <p class="mb-4">Professional indoor air quality testing makes sense when symptoms continue after the simple fixes, when you suspect hidden mold, after a flood or major renovation, when buying a home, or when you need written results for a landlord, employer or insurer. A professional assessment combines an inspection of the home's moisture and ventilation with air samples analysed by an accredited laboratory.</p>
+      <p class="mb-4">For what inspectors look for in Ontario homes, see our guide to <a href="/blog/home-indoor-air-quality-ontario" class="text-primary underline font-medium">home indoor air quality in Ontario</a>. To book, see <a href="/services/air-quality" class="text-primary underline font-medium">air quality testing</a> or call (647) 801-9311.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)
