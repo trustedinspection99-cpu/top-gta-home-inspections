@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
-import { SITE_URL, getCanonicalUrl } from "@/lib/seo";
+import { getCanonicalUrl } from "@/lib/seo";
 import { Link } from "react-router-dom";
 import { CheckCircle, Phone, ChevronRight, Bug, AlertTriangle, FileText, Clock, Shield, Eye } from "lucide-react";
 
@@ -72,7 +72,7 @@ const scenarios = [
 
 export default function TermiteInspection() {
   const location = useLocation();
-  const canonical = getCanonicalUrl(SITE_URL, location.pathname);
+  const canonical = getCanonicalUrl(location.pathname);
 
   return (
     <Layout>

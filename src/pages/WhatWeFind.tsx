@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
-import { SITE_URL, getCanonicalUrl } from "@/lib/seo";
+import { getCanonicalUrl } from "@/lib/seo";
 import { Link } from "react-router-dom";
 import { AlertCircle, AlertTriangle, ChevronRight, TrendingUp, Home, Zap, Droplets, Thermometer, Wind } from "lucide-react";
 
@@ -113,7 +113,7 @@ const severityColors = {
 
 export default function WhatWeFind() {
   const location = useLocation();
-  const canonical = getCanonicalUrl(SITE_URL, location.pathname);
+  const canonical = getCanonicalUrl(location.pathname);
 
   return (
     <Layout>

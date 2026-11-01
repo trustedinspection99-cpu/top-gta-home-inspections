@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
-import { SITE_URL, getCanonicalUrl } from "@/lib/seo";
+import { getCanonicalUrl } from "@/lib/seo";
 import { Link } from "react-router-dom";
 import { CheckCircle, Phone, ChevronRight, TrendingUp, Building2, Thermometer, FileText, DollarSign, Layers } from "lucide-react";
 
@@ -10,7 +10,7 @@ const metaDescription = "Real estate investors in Ontario trust ASADS for multi-
 
 export default function ForInvestors() {
   const location = useLocation();
-  const canonical = getCanonicalUrl(SITE_URL, location.pathname);
+  const canonical = getCanonicalUrl(location.pathname);
 
   return (
     <Layout>

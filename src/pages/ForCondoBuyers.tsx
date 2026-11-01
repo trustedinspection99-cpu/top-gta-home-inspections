@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
-import { SITE_URL, getCanonicalUrl } from "@/lib/seo";
+import { getCanonicalUrl } from "@/lib/seo";
 import { Link } from "react-router-dom";
 import { CheckCircle, Phone, ChevronRight, Building2, Thermometer, FileText, AlertTriangle, Clock } from "lucide-react";
 
@@ -26,7 +26,7 @@ const pricing = [
 
 export default function ForCondoBuyers() {
   const location = useLocation();
-  const canonical = getCanonicalUrl(SITE_URL, location.pathname);
+  const canonical = getCanonicalUrl(location.pathname);
 
   return (
     <Layout>
