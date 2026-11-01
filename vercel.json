@@ -687,6 +687,26 @@
       "permanent": true
     },
     {
+      "source": "/services/air-quality-testing",
+      "destination": "/services/air-quality",
+      "permanent": true
+    },
+    {
+      "source": "/services/insurance-home-inspection",
+      "destination": "/services/insurance-inspection",
+      "permanent": true
+    },
+    {
+      "source": "/services/insurance-home-inspection/:city",
+      "destination": "/services/insurance-inspection/:city",
+      "permanent": true
+    },
+    {
+      "source": "/services/home-inspection-mississauga.html",
+      "destination": "/locations/home-inspection-mississauga",
+      "permanent": true
+    },
+    {
       "source": "/book",
       "destination": "/booking",
       "permanent": true

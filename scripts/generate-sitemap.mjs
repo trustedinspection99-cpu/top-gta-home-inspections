@@ -5,7 +5,7 @@
  * Run: node scripts/generate-sitemap.mjs
  */
 
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -13,6 +13,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const BASE_URL = 'https://www.asads.ca';
 const TODAY = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+
+// Real per-page dates from scripts/update-sitemap-lastmod.mjs (falls back to TODAY)
+const LASTMOD_FILE = resolve(__dirname, 'sitemap-lastmod.json');
+const LASTMOD = existsSync(LASTMOD_FILE) ? JSON.parse(readFileSync(LASTMOD_FILE, 'utf8')) : { pages: {}, groups: {} };
+const pageDate = (path) => LASTMOD.pages[path] || TODAY;
 
 // ─── Read source files ────────────────────────────────────────────────────────
 
@@ -34,6 +39,7 @@ const locationFullSlugs = [...locationRaw.matchAll(/slug:\s*"(home-inspection-[^
 const locationSlugs = locationFullSlugs; // keep full for /locations/ pages
 const citySlugs = locationFullSlugs.map(s => s.replace(/^home-inspection-/, ''));
 const blogSlugs     = extractField(blogRaw, 'slug');
+const blogDates     = extractField(blogRaw, 'date');
 
 // Service slugs — hardcoded list matching serviceDefinitions in serviceCityData.ts
 const serviceSlugs = [
@@ -46,7 +52,7 @@ const serviceSlugs = [
 
 // ─── URL builder ──────────────────────────────────────────────────────────────
 
-function url(path, priority = '0.7', changefreq = 'monthly', lastmod = TODAY) {
+function url(path, priority = '0.7', changefreq = 'monthly', lastmod = pageDate(path)) {
   return `  <url><loc>${BASE_URL}${path}</loc><lastmod>${lastmod}</lastmod><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>`;
 }
 
@@ -59,7 +65,7 @@ lines.push(url('/', '1.0', 'weekly'));
 lines.push(url('/about', '0.8'));
 lines.push(url('/services', '0.9'));
 lines.push(url('/locations', '0.9'));
-lines.push(url('/blog', '0.7', 'weekly'));
+lines.push(url('/blog', '0.7', 'weekly', [...blogDates].sort().pop() || TODAY));
 lines.push(url('/testimonials', '0.7'));
 lines.push(url('/faq', '0.6'));
 lines.push(url('/pricing', '0.8'));
@@ -81,17 +87,17 @@ servicePages.forEach(s => lines.push(url(`/services/${s}`, '0.9')));
 lines.push('');
 
 // Location pages
-locationSlugs.forEach(s => lines.push(url(`/locations/${s}`, '0.8')));
+locationSlugs.forEach(s => lines.push(url(`/locations/${s}`, '0.8', 'monthly', LASTMOD.groups.locations || TODAY)));
 lines.push('');
 
 // Blog posts
-blogSlugs.forEach(s => lines.push(url(`/blog/${s}`, '0.7', 'monthly')));
+blogSlugs.forEach((s, i) => lines.push(url(`/blog/${s}`, '0.7', 'monthly', blogDates[i] || TODAY)));
 lines.push('');
 
 // Service × City cross-pages (clean city slug: /services/mold-inspection/brampton)
 serviceSlugs.forEach(svc => {
   citySlugs.forEach(city => {
-    lines.push(url(`/services/${svc}/${city}`, '0.6'));
+    lines.push(url(`/services/${svc}/${city}`, '0.6', 'monthly', LASTMOD.groups.serviceCity || TODAY));
   });
   lines.push('');
 });

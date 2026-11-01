@@ -1,0 +1,35 @@
+{
+  "pages": {
+    "/": "2026-04-20",
+    "/about": "2026-04-13",
+    "/services": "2026-04-13",
+    "/locations": "2026-03-28",
+    "/testimonials": "2026-04-07",
+    "/faq": "2026-03-28",
+    "/pricing": "2026-03-30",
+    "/booking": "2026-04-23",
+    "/contact": "2026-03-30",
+    "/sitemap": "2026-03-28",
+    "/services/pre-purchase": "2026-04-13",
+    "/services/pre-listing": "2026-04-07",
+    "/services/new-construction": "2026-04-07",
+    "/services/pdi-inspection": "2026-03-25",
+    "/services/condo": "2026-03-28",
+    "/services/commercial": "2026-04-07",
+    "/services/radon-testing": "2026-03-28",
+    "/services/mold-inspection": "2026-04-17",
+    "/services/asbestos-testing": "2026-03-28",
+    "/services/thermal-imaging": "2026-03-18",
+    "/services/wett": "2026-03-28",
+    "/services/lead-paint-testing": "2026-03-28",
+    "/services/well-water-testing": "2026-03-28",
+    "/services/air-quality": "2026-03-25",
+    "/services/same-day-home-inspection": "2026-03-28",
+    "/services/designated-substance-survey": "2026-03-28",
+    "/services/insurance-inspection": "2026-04-13"
+  },
+  "groups": {
+    "locations": "2026-04-12",
+    "serviceCity": "2026-04-12"
+  }
+}
