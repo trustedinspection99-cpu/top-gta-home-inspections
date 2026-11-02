@@ -397,9 +397,9 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-richmond-hill",
     city: "Richmond Hill",
     region: "York Region",
-    metaTitle: "Home Inspection Richmond Hill | Certified Inspector | ASADS",
-    metaDescription: "Pre-purchase home inspection Richmond Hill from $399. Infrared imaging, same-day booking & detailed PDF report. Serving Oak Ridges, Jefferson & Bayview Hill.",
-    description: "Richmond Hill's trusted certified inspector specializing in luxury estate buyer inspections, new construction warranty reviews & thermal imaging diagnostics.",
+    metaTitle: "Home Inspection Richmond Hill | Inspector & Testing | ASADS",
+    metaDescription: "Home inspections in Richmond Hill, Oak Ridges, Jefferson and Bayview Hill. Infrared imaging, same-day report, plus asbestos, mold and air quality testing.",
+    description: "Home inspections across Richmond Hill, Oak Ridges, Jefferson and Bayview Hill, with asbestos, mold and air quality testing when you need it.",
     neighborhoods: [
       "Oak Ridges", "Jefferson", "Bayview Hill", "Mill Pond", "Langstaff",
       "Richvale", "Westbrook", "Crosby", "Observatory Hill", "Harding"
@@ -433,7 +433,8 @@ export const locationData: LocationData[] = [
         "Our inspectors understand Richmond Hill's premium real estate market, providing buyers with the detailed assessments needed for confident purchasing decisions in York Region."
       ,
         "Richmond Hill's residential market blends established post-war communities in the historic downtown core with large planned suburban developments in Oak Ridges, Jefferson, and Bayview Hill. Older properties in the Richmond Hill village area may carry original clay drainage tile, cast-iron plumbing stacks, and outdated electrical panels requiring upgrade assessment. Suburban developments from the 1990s and 2000s in Oak Ridges and Bayview Hill fall within the KITEC plumbing installation window and should be specifically investigated during pre-purchase inspection.",
-        "ASADS Home Inspection provides expert inspection services across Richmond Hill's diverse neighbourhoods. From heritage village properties to contemporary suburban builds, our certified inspectors document every material condition that affects property value and buyer risk. Richmond Hill buyers and sellers receive clear written reports with photographic evidence and prioritized repair guidance. Call (647) 801-9311 to book your Richmond Hill inspection with ASADS today."]
+        "ASADS Home Inspection provides expert inspection services across Richmond Hill's diverse neighbourhoods. From heritage village properties to contemporary suburban builds, our certified inspectors document every material condition that affects property value and buyer risk. Richmond Hill buyers and sellers receive clear written reports with photographic evidence and prioritized repair guidance. Call (647) 801-9311 to book your Richmond Hill inspection with ASADS today.",
+        "Many Richmond Hill buyers also ask for testing. ASADS tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces. Testing can be booked with a home inspection or on its own."]
     }
   },
   {
@@ -483,9 +484,9 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-bolton",
     city: "Bolton",
     region: "Peel Region",
-    metaTitle: "Home Inspection Bolton | Licensed & Insured | ASADS",
-    metaDescription: "Pre-purchase home inspection Bolton from $399. Infrared imaging, same-day booking & detailed PDF report. Serving Downtown Bolton, Humber Station & Albion.",
-    description: "Bolton's trusted certified home inspector for rural estate pre-purchase inspections, new construction warranty reviews & thermal imaging diagnostics throughout Caledon.",
+    metaTitle: "Home Inspection Bolton, ON | Caledon Home Inspector | ASADS",
+    metaDescription: "Home inspections in Bolton and across Caledon: Downtown Bolton, Humber Station and Albion. Infrared imaging, same-day report, plus testing on request.",
+    description: "Home inspections in Bolton and across Caledon, including rural properties, with asbestos, mold and air quality testing when you need it.",
     neighborhoods: [
       "Downtown Bolton", "Humber Station", "Albion", "Caledon East", "Palgrave",
       "Sandhill", "Columbia Way", "Whitehill", "King's Crossing"
@@ -519,7 +520,8 @@ export const locationData: LocationData[] = [
         "Our inspectors understand Bolton's unique rural and estate construction patterns, providing buyers with comprehensive assessments for confident purchasing decisions in Caledon."
       ,
         "Bolton's residential market is anchored by a mix of older homes in the historic village core and newer suburban developments that expanded significantly from the 1990s onward. Historic centre properties along Queen Street and King Street North carry typical older-home concerns including aging electrical services, original cast-iron drainage, and masonry chimney deterioration. Newer communities may fall within the KITEC plumbing installation window, and our inspectors assess mechanical rooms and exposed plumbing locations specifically for this material during pre-purchase inspections.",
-        "ASADS Home Inspection serves Bolton and surrounding Caledon communities with thorough, certified residential inspection services. Whether you're purchasing a heritage home in the village core or a newer suburban build on the town's expanding edges, ASADS provides the detailed property condition documentation you need to make an informed purchase. Call (647) 801-9311 to book your Bolton inspection with ASADS today."]
+        "ASADS Home Inspection serves Bolton and surrounding Caledon communities with thorough, certified residential inspection services. Whether you're purchasing a heritage home in the village core or a newer suburban build on the town's expanding edges, ASADS provides the detailed property condition documentation you need to make an informed purchase. Call (647) 801-9311 to book your Bolton inspection with ASADS today.",
+        "Many Bolton buyers also ask for testing. ASADS tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces. Testing can be booked with a home inspection or on its own."]
     }
   },
   {
@@ -1038,9 +1040,9 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-thornhill",
     city: "Thornhill",
     region: "York Region",
-    metaTitle: "Home Inspection Thornhill | Certified Buyer Specialist",
-    metaDescription: "Pre-purchase home inspection Thornhill from $399. Infrared imaging, same-day booking & detailed PDF report. Serving Thornhill Woods & Thornhill Village.",
-    description: "Thornhill's premier certified inspector specializing in luxury estate buyer inspections, condo assessments & thermal imaging diagnostics.",
+    metaTitle: "Home Inspection Thornhill | Vaughan & Markham Side | ASADS",
+    metaDescription: "Home inspections in Thornhill on both the Vaughan and Markham sides. Infrared imaging, same-day report, plus asbestos, mold and air quality testing.",
+    description: "Home inspections across Thornhill, on both the Vaughan and Markham sides, with asbestos, mold and air quality testing when you need it.",
     neighborhoods: [
       "Thornhill Woods", "Thornhill Village", "German Mills", "Royal Orchard",
       "Promenade", "Brownridge", "Glen Shields", "Flemingdon", "Pleasant Ridge"
@@ -1074,7 +1076,8 @@ export const locationData: LocationData[] = [
         "Our inspectors understand Thornhill's diverse construction from heritage homes to modern luxury builds, ensuring buyers receive comprehensive assessments in York Region."
       ,
         "Thornhill's housing market straddles the York Region municipal boundary between Vaughan and Markham, encompassing a wide range of property types from mid-century brick homes in the historic Thornhill village to large executive properties in Uplands and Bayview Glen. Older properties in the village core carry typical post-war concerns, while larger suburban homes built during the 1990s and early 2000s may contain KITEC plumbing and require specific mechanical room and plumbing access point investigation.",
-        "ASADS provides professional home inspections throughout Thornhill, serving both the Vaughan and Markham portions of this community. Our inspectors are experienced with the range of construction eras and property types that define Thornhill's market and deliver comprehensive written reports with clear, actionable findings. Call (647) 801-9311 to schedule your Thornhill inspection with ASADS."]
+        "ASADS provides professional home inspections throughout Thornhill, serving both the Vaughan and Markham portions of this community. Our inspectors are experienced with the range of construction eras and property types that define Thornhill's market and deliver comprehensive written reports with clear, actionable findings. Call (647) 801-9311 to schedule your Thornhill inspection with ASADS.",
+        "Many Thornhill buyers also ask for testing. ASADS tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces. Testing can be booked with a home inspection or on its own."]
     }
   },
   {
@@ -1622,9 +1625,9 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-east-gwillimbury",
     city: "East Gwillimbury",
     region: "York Region",
-    metaTitle: "Home Inspection East Gwillimbury | Licensed & Insured",
-    metaDescription: "Pre-purchase home inspection East Gwillimbury from $399. Infrared imaging, same-day booking & detailed PDF report. Serving Holland Landing & Mount Albert.",
-    description: "East Gwillimbury's certified inspector for rural property pre-purchase inspections & private systems assessment.",
+    metaTitle: "Home Inspection East Gwillimbury & Holland Landing | ASADS",
+    metaDescription: "Home inspections in East Gwillimbury, Holland Landing, Mount Albert, Sharon and Queensville. Infrared imaging, well water testing, same-day report.",
+    description: "Home inspections across East Gwillimbury: Holland Landing, Mount Albert, Sharon and Queensville, including rural homes on private wells.",
     neighborhoods: ["Holland Landing", "Mount Albert", "Sharon", "Queensville", "River Drive Park"],
     phoneNumber: "(647) 801-9311",
     latitude: 44.1053,
@@ -1655,7 +1658,8 @@ export const locationData: LocationData[] = [
         "Our inspectors understand East Gwillimbury's diverse construction patterns in York Region, providing buyers with comprehensive rural and new home assessments."
       ,
         "East Gwillimbury is one of York Region's fastest-growing communities, with large-scale residential development underway in Sharon, Holland Landing, and the expanding Mount Albert area. New construction in East Gwillimbury requires inspection focused on drainage performance, builder-standard system quality, and lot grading — issues that can be challenging to identify during walk-throughs of completed new builds. Older properties in Holland Landing and Sharon carry typical small-town inspection concerns including aging mechanical systems and masonry foundation conditions.",
-        "ASADS Home Inspection serves East Gwillimbury with certified inspection services for both new construction and resale properties. Our inspectors are experienced assessing builder-standard systems in new developments and older housing stock in established East Gwillimbury communities. Buyers and sellers receive clear, comprehensive written reports. Call (647) 801-9311 to book your East Gwillimbury inspection with ASADS."]
+        "ASADS Home Inspection serves East Gwillimbury with certified inspection services for both new construction and resale properties. Our inspectors are experienced assessing builder-standard systems in new developments and older housing stock in established East Gwillimbury communities. Buyers and sellers receive clear, comprehensive written reports. Call (647) 801-9311 to book your East Gwillimbury inspection with ASADS.",
+        "Many East Gwillimbury buyers also ask for testing. ASADS tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces. Testing can be booked with a home inspection or on its own."]
     }
   },
   {
@@ -1702,9 +1706,9 @@ export const locationData: LocationData[] = [
     slug: "home-inspection-kleinburg",
     city: "Kleinburg",
     region: "York Region",
-    metaTitle: "Home Inspection Kleinburg | Estate Specialist",
-    metaDescription: "Pre-purchase home inspection Kleinburg from $399. Infrared imaging, same-day booking & detailed PDF report. Serving Kleinburg Village, Nashville & Elder Mills.",
-    description: "Kleinburg's trusted certified inspector for custom estate pre-purchase inspections & thermal imaging diagnostics.",
+    metaTitle: "Home Inspection Kleinburg, Vaughan | Estate Homes | ASADS",
+    metaDescription: "Home inspections in Kleinburg, Nashville and Elder Mills (Vaughan). Large and custom homes, infrared imaging, same-day report, plus testing on request.",
+    description: "Home inspections in Kleinburg, Nashville and Elder Mills, from village homes to large custom estates, with testing on request.",
     neighborhoods: ["Kleinburg Village", "Nashville", "Elder Mills", "Copper Creek"],
     phoneNumber: "(647) 801-9311",
     latitude: 43.8863,
@@ -1735,7 +1739,8 @@ export const locationData: LocationData[] = [
         "Our inspectors understand Kleinburg's luxury estate construction patterns in Vaughan, ensuring buyers receive comprehensive high-end property assessments."
       ,
         "Kleinburg's residential market is defined by premium estate properties built primarily from the 1990s onward, many of which fall within the KITEC plumbing installation window. Given the size and value of Kleinburg properties, KITEC identification and documentation is a material concern for buyers and their mortgage insurers. Estate properties on larger lots may also be served by private well and septic systems requiring full pre-purchase assessment of water system performance and septic system condition.",
-        "ASADS Home Inspection delivers expert pre-purchase and pre-listing inspection services in Kleinburg and the surrounding Vaughan estate communities. Our certified inspectors are experienced with large luxury properties, complex mechanical systems, and both municipal and private servicing arrangements. Comprehensive written reports are provided following each inspection. Call (647) 801-9311 to book your Kleinburg inspection with ASADS."]
+        "ASADS Home Inspection delivers expert pre-purchase and pre-listing inspection services in Kleinburg and the surrounding Vaughan estate communities. Our certified inspectors are experienced with large luxury properties, complex mechanical systems, and both municipal and private servicing arrangements. Comprehensive written reports are provided following each inspection. Call (647) 801-9311 to book your Kleinburg inspection with ASADS.",
+        "Many Kleinburg buyers also ask for testing. ASADS tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces. Testing can be booked with a home inspection or on its own."]
     }
   },
   {
