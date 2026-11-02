@@ -45,6 +45,29 @@ function extractPairs(content, slugKey, titleKey, descKey) {
 const locations = extractPairs(locationRaw, 'slug', 'metaTitle', 'metaDescription');
 const blogs     = extractPairs(blogRaw,     'slug', 'metaTitle', 'metaDescription');
 
+// Full article HTML for blogs on the allowlist, so crawlers that don't run
+// JavaScript (ChatGPT, Perplexity) can read the article. Same title and content
+// that BlogPost.tsx renders. Protected blogs are added only with the owner's OK.
+const articleAllowlist = new Set(JSON.parse(readFileSync(resolve(__dirname, 'prerender-article-allowlist.json'), 'utf8')).blogs);
+const blogArticles = {};
+{
+  const slugMatches = [...blogRaw.matchAll(/slug:\s*"([^"]+)"/g)];
+  slugMatches.forEach((m, i) => {
+    const chunk = blogRaw.slice(m.index, i + 1 < slugMatches.length ? slugMatches[i + 1].index : blogRaw.length);
+    const title = chunk.match(/\btitle:\s*"([^"]*)"/);
+    const author = chunk.match(/author:\s*"([^"]+)"/);
+    const date = chunk.match(/date:\s*"([^"]+)"/);
+    const content = chunk.match(/content:\s*`([\s\S]*?)`/);
+    if (title && content) {
+      blogArticles[m[1]] = {
+        title: title[1].replace(/\\"/g, '"'),
+        byline: [author && author[1], date && date[1]].filter(Boolean).join(' · '),
+        content: content[1],
+      };
+    }
+  });
+}
+
 // ─── Service pages ────────────────────────────────────────────────────────────
 
 const servicePages = [
@@ -444,7 +467,12 @@ for (const page of pages) {
   html = html.replace(/<link rel="canonical"[^>]*>/, () => `<link rel="canonical" href="${canonical}" />`);
   html = html.replace(/<meta name="description"[^>]*\/?>/g, '');
   html = html.replace('<meta name="robots"', () => `<meta data-rh="true" name="description" content="${d}" />\n    <meta name="robots"`);
-  html = html.replace(/<div id="root">[\s\S]*?<\/div>/, () => `<div id="root"><h1 style="font-size:1.5rem;font-weight:700;padding:1rem">${h1}</h1>${linksHtml}</div>`);
+  const article = parts[0] === 'blog' && parts.length === 2 && articleAllowlist.has(parts[1]) ? blogArticles[parts[1]] : null;
+  if (article) {
+    html = html.replace(/<div id="root">[\s\S]*?<\/div>/, () => `<div id="root"><article style="max-width:48rem;margin:0 auto;padding:1rem"><h1 style="font-size:1.5rem;font-weight:700">${esc(article.title)}</h1><p>${esc(article.byline)}</p>${article.content}</article>${linksHtml}</div>`);
+  } else {
+    html = html.replace(/<div id="root">[\s\S]*?<\/div>/, () => `<div id="root"><h1 style="font-size:1.5rem;font-weight:700;padding:1rem">${h1}</h1>${linksHtml}</div>`);
+  }
 
   // Inject breadcrumb JSON-LD into <head> so Googlebot sees it without JS
   const breadcrumbSchema = buildBreadcrumbSchema(page.path, parts);
