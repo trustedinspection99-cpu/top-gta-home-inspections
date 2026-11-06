@@ -7867,6 +7867,91 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">For what inspectors look for in Ontario homes, see our guide to <a href="/blog/home-indoor-air-quality-ontario" class="text-primary underline font-medium">home indoor air quality in Ontario</a>. To book, see <a href="/services/air-quality" class="text-primary underline font-medium">air quality testing</a> or call (647) 801-9311.</p>
     `,
   },
+  {
+    id: 117,
+    slug: "radon-poisoning-symptoms",
+    title: "Radon Poisoning Symptoms: What to Watch For and How to Test",
+    metaTitle: "Radon Poisoning Symptoms: Signs & How to Test | ASADS",
+    metaDescription: "Radon has no early warning signs. What radon exposure does to the lungs, the symptoms doctors watch for, who is most at risk, and how to test your home.",
+    excerpt: "Radon has no smell and no early symptoms. What long-term exposure does, the lung symptoms to take seriously, and why a radon test is the only way to know.",
+    category: "Health & Safety",
+    author: "ASADS Home Inspection",
+    date: "2026-11-05",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <p class="mb-4">People often search for "radon poisoning symptoms" expecting a list like the flu or carbon monoxide poisoning. Radon does not work that way. It has no smell, no colour and no immediate symptoms. The harm builds slowly over years of breathing it in, and the only way to know whether your home has a problem is to test it.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Are There Early Symptoms of Radon Exposure?</h2>
+      <p class="mb-4">No. Radon does not cause headaches, nausea, rashes or fatigue, and you cannot feel it. Health Canada describes radon as the leading cause of lung cancer in people who have never smoked, and the second leading cause overall after smoking. That risk comes from long-term exposure, usually over many years, not from a short visit to a home with high levels.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Long-Term Exposure Can Lead To</h2>
+      <p class="mb-4">When radon is breathed in, it breaks down into radioactive particles that can damage the cells lining the lungs. Over time that damage can lead to lung cancer. The symptoms people sometimes call "radon poisoning symptoms" are really the symptoms of lung cancer, which can include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>a cough that does not go away or gets worse</li>
+        <li>coughing up blood</li>
+        <li>shortness of breath or wheezing</li>
+        <li>chest pain, especially when breathing deeply or coughing</li>
+        <li>hoarseness, repeated chest infections, or unexplained weight loss and tiredness</li>
+      </ul>
+      <p class="mb-4">These symptoms have many possible causes. Anyone who has them should see a doctor. A doctor cannot test you for radon exposure, so the practical step for your household is to test the home.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Who Is Most at Risk?</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Smokers and former smokers:</strong> smoking and radon together raise lung cancer risk far more than either alone.</li>
+        <li><strong>People who spend a lot of time in the basement or ground floor,</strong> where radon levels are usually highest.</li>
+        <li><strong>Long-term occupants:</strong> the risk depends on the level and on how many years you live with it.</li>
+      </ul>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How to Find Out If Your Home Has Radon</h2>
+      <p class="mb-4">Radon levels vary from house to house, even on the same street, so a neighbour's result does not tell you about yours. Health Canada recommends a long-term test of at least three months, ideally in fall and winter when windows are closed. If the result is above the guideline of 200 becquerels per cubic metre (Bq/m³), the next step is radon mitigation, usually a sub-slab depressurization system installed by a certified professional. See <a href="/blog/radon-levels-canada-explained" class="text-primary underline font-medium">radon levels in Canada explained</a> for what each result means.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Testing Your Home</h2>
+      <p class="mb-4">You can use a long-term test kit yourself, or have the home tested professionally, which is useful when buying a home or when you need a documented result. See our <a href="/services/radon-testing" class="text-primary underline font-medium">radon testing</a> service, or call (647) 801-9311.</p>
+    `,
+  },
+  {
+    id: 118,
+    slug: "how-to-test-for-asbestos-ontario",
+    title: "How to Test for Asbestos in Your Home (Ontario Guide)",
+    metaTitle: "How to Test for Asbestos in Your Home | Ontario | ASADS",
+    metaDescription: "How to test for asbestos in an Ontario home: which materials to check, how samples are taken and analysed, air testing, and what the results mean.",
+    excerpt: "How asbestos testing works in an Ontario home: which materials to suspect, how samples are taken and analysed by a lab, when air testing helps, and what results mean.",
+    category: "Asbestos",
+    author: "ASADS Home Inspection",
+    date: "2026-11-05",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <p class="mb-4">You cannot tell whether a material contains asbestos by looking at it. The only way to know is to have a sample analysed by a laboratory. This guide explains how asbestos testing works in an Ontario home, step by step, so you know what to expect before a renovation or a purchase.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Step 1: Know Which Homes and Materials to Suspect</h2>
+      <p class="mb-4">Asbestos was used in many Canadian building products until it was banned in 2018, and it is most common in homes built or renovated before about 1990. Materials worth checking include:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>popcorn and stipple ceilings, and textured wall finishes</li>
+        <li>vinyl floor tiles (often 9 x 9 inch) and the black adhesive under them</li>
+        <li>drywall joint compound and plaster</li>
+        <li>vermiculite attic insulation</li>
+        <li>pipe and boiler insulation, duct wrap and tape</li>
+        <li>cement siding, roofing and soffits</li>
+      </ul>
+      <p class="mb-4">See <a href="/blog/asbestos-in-ontario-homes-materials" class="text-primary underline font-medium">asbestos materials in Ontario homes</a> for where each one turns up.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Step 2: Do Not Disturb the Material</h2>
+      <p class="mb-4">Asbestos is a health risk when fibres are released into the air, which happens when a material is drilled, sanded, scraped, cut or broken. Until a material has been tested, treat it as if it contains asbestos and leave it alone.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Step 3: Sampling</h2>
+      <p class="mb-4">A small piece of each suspect material is removed with wet methods and protective equipment, sealed in a labelled bag, and the spot is patched so fibres are not released. Each different material, and each layer of a floor or ceiling, is sampled separately because one can contain asbestos when another does not. Taking samples yourself risks releasing fibres; a trained inspector takes them safely and records exactly where each came from.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Step 4: Laboratory Analysis</h2>
+      <p class="mb-4">Samples go to an accredited laboratory, which identifies asbestos fibres under a microscope (polarized light microscopy for bulk materials) and reports whether asbestos is present and roughly how much. Standard results usually take about a week, and faster turnaround is available from most labs at a higher cost.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">When Air Testing Helps</h2>
+      <p class="mb-4">Bulk sampling tells you what the materials contain. Air testing measures fibres in the air, and is mainly useful after damage or a renovation to check whether fibres were released, or after asbestos removal to confirm the area is clean. It does not replace testing the materials themselves.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Home Test Kits</h2>
+      <p class="mb-4">Mail-in kits send a sample you collect to a lab. They can work for a single, easy-to-reach material, but you take on the risk of disturbing it, and a kit does not tell you which other materials need testing. See <a href="/blog/asbestos-test-kit-vs-professional-testing" class="text-primary underline font-medium">asbestos test kit vs professional testing</a>.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What the Results Mean</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Not detected:</strong> the material can be renovated normally.</li>
+        <li><strong>Asbestos detected, material intact:</strong> it can often be left in place or covered, as long as the work will not disturb it.</li>
+        <li><strong>Asbestos detected and the work will disturb it:</strong> it must be removed or controlled by trained workers under Ontario's rules before the work goes ahead.</li>
+      </ul>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Booking Asbestos Testing</h2>
+      <p class="mb-4">ASADS takes samples safely and sends them to an accredited laboratory, with a written report you can give your contractor. See our <a href="/services/asbestos-testing" class="text-primary underline font-medium">asbestos testing</a> service, or call (647) 801-9311.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)

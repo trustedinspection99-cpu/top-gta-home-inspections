@@ -7,6 +7,7 @@ import { HeroBookingSection } from "@/components/HeroBookingSection";
 import { InlineBookingForm } from "@/components/InlineBookingForm";
 import { serviceBySlug } from "@/data/serviceCityData";
 import { locationData } from "@/data/locationData";
+import { serviceCityExtras } from "@/data/serviceCityExtras";
 import { getCanonicalUrl, SITE_URL } from "@/lib/seo";
 import {
   CheckCircle,
@@ -89,6 +90,7 @@ export default function ServiceCityPage() {
   const metaDesc = rawDesc.length > 160 ? rawDesc.slice(0, 157) + "…" : rawDesc;
   const heroTitle = fill(service.heroTitle, city);
   const whyItMatters = fill(service.whyItMatters, city);
+  const extra = serviceCityExtras[`${service.slug}/${citySlug}`];
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -191,6 +193,20 @@ export default function ServiceCityPage() {
                   {service.shortName} in {city}
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">{whyItMatters}</p>
+
+                {extra && (
+                  <div className="mt-8 not-prose">
+                    <h3 className="font-heading text-xl font-bold text-foreground mb-3">{extra.heading}</h3>
+                    {extra.paragraphs.map((p, i) => (
+                      <p key={i} className="text-muted-foreground leading-relaxed mb-3">{p}</p>
+                    ))}
+                    <ul className="flex flex-wrap gap-x-6 gap-y-2 mt-2">
+                      {extra.links.map((l) => (
+                        <li key={l.href}><Link to={l.href} className="text-primary underline font-medium">{l.label}</Link></li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
                 {/* Local insights if available */}
                 {location.localInsights && location.localInsights.length > 0 && (
