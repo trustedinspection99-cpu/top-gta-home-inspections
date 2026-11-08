@@ -44,13 +44,22 @@ const MOLD = ["toronto", "hamilton", "vaughan", "oakville", "markham", "brampton
 const AIR = ["hamilton", "burlington", "vaughan", "oakville", "markham", "mississauga"];
 
 const HUB_CITIES: Record<string, string> = { markham: "Markham", milton: "Milton", whitby: "Whitby", ajax: "Ajax", cambridge: "Cambridge" };
-const hubExtra = (city: string, citySlug: string, kind: string): CityExtra => ({
+const hubExtra = (city: string, citySlug: string, kind: string, hubHref = `/locations/home-inspection-${citySlug}`): CityExtra => ({
   heading: `Home Inspection in ${city}`,
   paragraphs: [
     `This page covers ${kind} in ${city}. For every type of home inspection ASADS offers in ${city}, along with local housing notes, pricing and booking, see the main ${city} home inspection page.`,
   ],
-  links: [{ label: `Home inspection in ${city}`, href: `/locations/home-inspection-${citySlug}` }],
+  links: [{ label: `Home inspection in ${city}`, href: hubHref }],
 });
+// Group 1 (2026-11-08): only pages under the protection threshold get the section.
+const KIND: Record<string, string> = { "pre-purchase": "pre-purchase inspections", "pre-listing": "pre-listing inspections", "new-construction": "new construction inspections" };
+const GROUP1: [string, string, string[], string?][] = [
+  ["hamilton", "Hamilton", ["pre-purchase", "pre-listing"]],
+  ["kitchener", "Kitchener", ["pre-purchase", "pre-listing", "new-construction"]],
+  ["guelph", "Guelph", ["pre-purchase", "new-construction"]],
+  ["oakville", "Oakville", ["pre-listing", "new-construction"], "/services/pre-purchase/oakville"],
+  ["toronto", "Toronto", ["pre-listing", "new-construction"], "/services/pre-purchase/toronto"],
+];
 
 const manualExtras: Record<string, CityExtra> = {
   "condo/toronto": {
@@ -75,5 +84,6 @@ export const serviceCityExtras: Record<string, CityExtra> = Object.fromEntries([
     [`pre-purchase/${c}`, hubExtra(n, c, "pre-purchase inspections")] as const,
     [`new-construction/${c}`, hubExtra(n, c, "new construction inspections")] as const,
   ]),
+  ...GROUP1.flatMap(([c, n, kinds, hub]) => kinds.map((k) => [`${k}/${c}`, hubExtra(n, c, KIND[k], hub)] as const)),
   ...Object.entries(manualExtras),
 ]);
