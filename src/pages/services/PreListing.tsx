@@ -182,7 +182,7 @@ export default function PreListing() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "ASADS Home Inspection - Pre-Listing Audits",
-    "image": `${SITE_URL}/images/1000041112.jpg`,
+    "image": `${SITE_URL}/thermal-inspection.jpg`,
     "priceRange": price,
     "telephone": "+16478019311",
     "url": serviceUrl
@@ -242,19 +242,15 @@ export default function PreListing() {
                   <p>In Ontario's competitive real estate market, a <strong>Pre-Listing Home Inspection</strong> is the ultimate offensive tool. By commissioning a technical audit before your property hits the MLS, you eliminate the "fear of the unknown" that often derails deals during the buyer's conditional period.</p>
                   
                   <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-4">Foundation & Structural Integrity</h3>
-                  <img src="/images/1000041112.jpg" alt="Foundation Inspection" className="rounded-xl shadow-lg my-6 border border-slate-200" />
                   <p>Our audit includes a rigorous evaluation of your foundation's load-bearing capacity. We identify signs of <strong>hydrostatic pressure</strong>, lateral basement wall displacement, and structural settlement. Addressing minor cracks or moisture seepage now prevents a buyer's inspector from characterizing them as catastrophic structural failures later.</p>
 
                   <h4 className="font-heading text-lg font-semibold text-foreground mt-6 mb-3">Electrical Safety & SPIS Compliance</h4>
-                  <img src="/images/1000041111.jpg" alt="Electrical Panel Audit" className="rounded-xl shadow-lg my-6 border border-slate-200" />
                   <p>Electrical issues are the leading cause of failed inspections in Ontario. We audit your service panel for <strong>double-tapped breakers</strong>, undersized wiring, and hazardous brands like Zinsco or Federal Pacific. Knowing these facts allows you to complete your Seller Property Information Statement (SPIS) with 100% accuracy, providing a legal shield against post-sale litigation.</p>
 
                   <h4 className="font-heading text-lg font-semibold text-foreground mt-6 mb-3">Plumbing & Thermal Moisture Scanning</h4>
-                  <img src="/images/1000041110.jpg" alt="Moisture Detection" className="rounded-xl shadow-lg my-6 border border-slate-200" />
                   <p>Hidden leaks are "silent deal killers." We utilize high-sensitivity <strong>Infrared Thermal Imaging</strong> to scan behind finished basement walls and ceilings. This identifies latent moisture issues from aging Polybutylene or Kitec plumbing before they become an expensive negotiation point for the buyer.</p>
 
                   <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-4">The Attic, Roof & Envelope</h3>
-                  <img src="/images/1000041109.jpg" alt="Attic Inspection" className="rounded-xl shadow-lg my-6 border border-slate-200" />
                   <p>We evaluate your roof's remaining service life, identifying damaged flashing and inadequate <strong>attic ventilation</strong> that leads to ice damming and mold growth. Ensuring your building envelope is sound allows you to market your home as "maintenance-free," a high-value selling point in the Ontario market.</p>
                 </div>
               </div>

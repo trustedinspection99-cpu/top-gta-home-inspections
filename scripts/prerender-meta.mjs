@@ -299,6 +299,7 @@ const staticNavLinks = {
   ]),
   '/locations': nav([
     ['All service areas', aLinks(allCitySlugs.map(c => [`/locations/home-inspection-${c}`, allCityNames[c]]))],
+    ['More communities we serve', aLinks(locationSlugs.filter(l => locationOnly.has(l.fullSlug)).map(l => [`/locations/${l.fullSlug}`, l.city]))],
   ]),
   '/blog': nav([
     ['Articles', aLinks(allBlogSlugs.map(s => [`/blog/${s}`, (blogTitles[s] || s).slice(0, 40) + '...']))],

@@ -16,6 +16,7 @@ import { Helmet } from "react-helmet-async";
 import { useState, useMemo } from "react";
 import { OrphanLocationLinks } from "@/components/seo/OrphanLocationLinks";
 import { locationData } from "@/data/locationData";
+import locationOnlySlugs from "@/data/locationOnlySlugs.json";
 import { HeroBookingSection } from "@/components/HeroBookingSection";
 import { InlineBookingForm } from "@/components/InlineBookingForm";
 
@@ -278,6 +279,22 @@ export default function Locations() {
               </p>
             )}
           </div>
+
+          {/* Smaller communities (location pages only) — always visible so they can be found and crawled */}
+          {!searchQuery && (
+            <div className="max-w-6xl mx-auto mt-8">
+              <h2 className="text-lg font-bold text-gray-800 mb-3 text-center">More Communities We Serve</h2>
+              <div className="flex flex-wrap justify-center gap-2">
+                {allLocations
+                  .filter((loc) => (locationOnlySlugs as string[]).includes(loc.slug))
+                  .map((loc) => (
+                    <Link key={loc.slug} to={`/locations/${loc.slug}`} className="px-3 py-1.5 bg-white border border-gray-200 hover:border-blue-300 rounded-lg text-sm text-gray-700 hover:text-blue-700">
+                      {loc.city}
+                    </Link>
+                  ))}
+              </div>
+            </div>
+          )}
 
           {/* City grid — only shown when searching */}
           {searchQuery && filteredCities.length > 0 && (

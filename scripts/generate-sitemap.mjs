@@ -74,6 +74,8 @@ lines.push(url('/pricing', '0.8'));
 lines.push(url('/booking', '0.9'));
 lines.push(url('/contact', '0.8'));
 lines.push(url('/sitemap', '0.4'));
+// Pages that exist and are indexable but were missing (Ahrefs audit 2026-11-08)
+['/what-we-find', '/our-promise', '/sample-report', '/for-first-time-buyers', '/trusted-realtors'].forEach(p => lines.push(url(p, '0.6')));
 // /privacy-policy and /terms are noindex — excluded from sitemap intentionally
 lines.push('');
 
@@ -82,7 +84,7 @@ const servicePages = [
   'pre-purchase', 'pre-listing', 'new-construction', 'pdi-inspection', 'condo', 'commercial',
   'radon-testing', 'mold-inspection', 'asbestos-testing', 'thermal-imaging',
   'wett', 'lead-paint-testing', 'well-water-testing', 'air-quality',
-  'same-day-home-inspection', 'designated-substance-survey', 'insurance-inspection',
+  'same-day-home-inspection', 'designated-substance-survey', 'insurance-inspection', 'contractor-oversight',
   // sewer-scope: not offered — redirects to /services/pre-purchase
 ];
 servicePages.forEach(s => lines.push(url(`/services/${s}`, '0.9')));
