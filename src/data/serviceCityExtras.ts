@@ -43,6 +43,15 @@ const CITIES: Record<string, string> = {
 const MOLD = ["toronto", "hamilton", "vaughan", "oakville", "markham", "brampton"];
 const AIR = ["hamilton", "burlington", "vaughan", "oakville", "markham", "mississauga"];
 
+const HUB_CITIES: Record<string, string> = { markham: "Markham", milton: "Milton", whitby: "Whitby", ajax: "Ajax", cambridge: "Cambridge" };
+const hubExtra = (city: string, citySlug: string, kind: string): CityExtra => ({
+  heading: `Home Inspection in ${city}`,
+  paragraphs: [
+    `This page covers ${kind} in ${city}. For every type of home inspection ASADS offers in ${city}, along with local housing notes, pricing and booking, see the main ${city} home inspection page.`,
+  ],
+  links: [{ label: `Home inspection in ${city}`, href: `/locations/home-inspection-${citySlug}` }],
+});
+
 const manualExtras: Record<string, CityExtra> = {
   "condo/toronto": {
     heading: "Condo Inspection in Toronto: What Is Checked and What It Costs",
@@ -62,5 +71,9 @@ const manualExtras: Record<string, CityExtra> = {
 export const serviceCityExtras: Record<string, CityExtra> = Object.fromEntries([
   ...MOLD.map((c) => [`mold-inspection/${c}`, moldExtra(CITIES[c], c)] as const),
   ...AIR.map((c) => [`air-quality/${c}`, airExtra(CITIES[c], c)] as const),
+  ...Object.entries(HUB_CITIES).flatMap(([c, n]) => [
+    [`pre-purchase/${c}`, hubExtra(n, c, "pre-purchase inspections")] as const,
+    [`new-construction/${c}`, hubExtra(n, c, "new construction inspections")] as const,
+  ]),
   ...Object.entries(manualExtras),
 ]);
