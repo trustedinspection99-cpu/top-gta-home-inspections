@@ -87,3 +87,44 @@ export const serviceCityExtras: Record<string, CityExtra> = Object.fromEntries([
   ...GROUP1.flatMap(([c, n, kinds, hub]) => kinds.map((k) => [`${k}/${c}`, hubExtra(n, c, KIND[k], hub)] as const)),
   ...Object.entries(manualExtras),
 ]);
+
+/**
+ * Every commercial and PDI city page (2026-11-08, owner approved): a short section pointing to the
+ * Ontario hub and the matching guides, so the city pages support the hub instead of competing with it.
+ * Pages still protected by clicks are left out.
+ */
+const SERVICE_WIDE_SKIP = new Set([
+  "commercial/toronto", "commercial/halton-hills",
+  "pdi-inspection/toronto", "pdi-inspection/ancaster", "pdi-inspection/waterloo",
+]);
+const serviceWide: Record<string, (city: string) => CityExtra> = {
+  commercial: (city) => ({
+    heading: `Commercial Building Inspection Across Ontario`,
+    paragraphs: [
+      `ASADS inspects retail, office, industrial and multi-unit buildings in ${city} and across Ontario. A commercial inspection is a property condition assessment (PCA): the roof, structure, building envelope, mechanical, electrical, plumbing and life-safety systems are reviewed, and the written report sets out what needs attention now and what to plan for over the coming years, for buyers, lenders and owners.`,
+    ],
+    links: [
+      { label: "Commercial building inspection in Ontario", href: "/services/commercial" },
+      { label: "Building condition assessment explained", href: "/blog/building-condition-assessment-ontario" },
+      { label: "Commercial property inspection guide", href: "/blog/commercial-property-inspection-ontario" },
+    ],
+  }),
+  "pdi-inspection": (city) => ({
+    heading: `PDI Inspections for New Homes in ${city}`,
+    paragraphs: [
+      `A pre-delivery inspection (PDI) is your walk-through with the builder before you take possession of a new home or condo. An independent inspector checks the home for you and gives you a written list of deficiencies to record on your Tarion PDI form, so they are on record from day one.`,
+    ],
+    links: [
+      { label: "PDI inspection in Ontario", href: "/services/pdi-inspection" },
+      { label: "What is a PDI inspection?", href: "/blog/what-is-a-pdi-inspection-ontario" },
+      { label: "New build inspection checklist", href: "/blog/new-build-home-inspection-checklist-ontario" },
+    ],
+  }),
+};
+
+export function getCityExtra(serviceSlug: string, citySlug: string, city: string): CityExtra | undefined {
+  const key = `${serviceSlug}/${citySlug}`;
+  if (serviceCityExtras[key]) return serviceCityExtras[key];
+  if (SERVICE_WIDE_SKIP.has(key)) return undefined;
+  return serviceWide[serviceSlug]?.(city);
+}

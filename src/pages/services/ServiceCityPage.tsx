@@ -8,7 +8,7 @@ import { InlineBookingForm } from "@/components/InlineBookingForm";
 import { serviceBySlug } from "@/data/serviceCityData";
 import { locationData } from "@/data/locationData";
 import titleOverrides from "@/data/serviceCityTitleOverrides.json";
-import { serviceCityExtras } from "@/data/serviceCityExtras";
+import { getCityExtra } from "@/data/serviceCityExtras";
 import { getCanonicalUrl, SITE_URL } from "@/lib/seo";
 import {
   CheckCircle,
@@ -91,7 +91,7 @@ export default function ServiceCityPage() {
   const metaDesc = rawDesc.length > 160 ? rawDesc.slice(0, 157) + "…" : rawDesc;
   const heroTitle = fill(service.heroTitle, city);
   const whyItMatters = fill(service.whyItMatters, city);
-  const extra = serviceCityExtras[`${service.slug}/${citySlug}`];
+  const extra = getCityExtra(service.slug, citySlug, city);
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",

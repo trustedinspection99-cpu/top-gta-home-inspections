@@ -35,8 +35,8 @@ import { locationData } from "@/data/locationData";
 const featuredLocations = locationData.map(loc => ({ name: loc.city, slug: loc.slug }));
 
 const title = "Commercial Building Inspection";
-const metaTitle = "Commercial Inspection Ontario | Certified PCA | ASADS";
-const metaDescription = "Commercial inspection across Ontario: Cambridge, Guelph, Kitchener, Toronto & GTA. ASTM E2018-15. Retail, office & industrial. CapEx report. Call (647) 801-9311.";
+const metaTitle = "Commercial Building Inspection Ontario | PCA & BCA | ASADS";
+const metaDescription = "Commercial building inspections and property condition assessments (PCA) across Ontario: retail, office, industrial and multi-unit. Call (647) 801-9311.";
 const price = "Quote Based";
 const duration = "Expedited Reporting Available";
 

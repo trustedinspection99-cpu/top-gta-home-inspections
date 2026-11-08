@@ -82,6 +82,25 @@ export default function PreDeliveryInspection() {
           </div>
 
           <div className="mt-8">
+            <h3 className="text-xl font-bold text-slate-800 mb-4">PDI Inspections Across Ontario</h3>
+            <p className="text-slate-700 mb-3">
+              We attend PDI walk-throughs for new homes and condos across the GTA and Ontario, including{" "}
+              <a href="/services/pdi-inspection/toronto" className="text-primary underline">Toronto</a>,{" "}
+              <a href="/services/pdi-inspection/burlington" className="text-primary underline">Burlington</a>,{" "}
+              <a href="/services/pdi-inspection/ancaster" className="text-primary underline">Ancaster</a>,{" "}
+              <a href="/services/pdi-inspection/st-catharines" className="text-primary underline">St. Catharines</a>,{" "}
+              <a href="/services/pdi-inspection/stouffville" className="text-primary underline">Stouffville</a> and{" "}
+              <a href="/services/pdi-inspection/whitby" className="text-primary underline">Whitby</a>.
+            </p>
+            <p className="text-slate-700">
+              New to the process? Read{" "}
+              <a href="/blog/what-is-a-pdi-inspection-ontario" className="text-primary underline">what a PDI inspection is</a>{" "}
+              and use our{" "}
+              <a href="/blog/new-build-home-inspection-checklist-ontario" className="text-primary underline">new build inspection checklist</a>.
+            </p>
+          </div>
+
+          <div className="mt-8">
             <h3 className="text-xl font-bold text-slate-800 mb-4">How Our PDI Inspection Works</h3>
             <ol className="space-y-4">
               {[
