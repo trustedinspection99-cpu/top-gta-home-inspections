@@ -2922,72 +2922,61 @@ export const blogPostsData: BlogPost[] = [
   {
     id: 50,
     slug: "home-inspection-cost-toronto",
-    title: "Home Inspection Cost Toronto 2026 — What Buyers Pay",
-    metaTitle: "Home Inspection Cost Toronto 2026 | ASADS",
-    metaDescription: "How much does a home inspection cost in Toronto? From $299 (condos) to $549+ (detached). Thermal imaging included. Same-day report. ASADS certified inspectors.",
-    excerpt: "Toronto home inspection costs range from $299 for condos to $549+ for larger detached homes. Learn what drives the price, what's included, and how to book.",
+    title: "Home Inspection Cost Toronto (2026): Prices by Home Type",
+    metaTitle: "Home Inspection Cost Toronto 2026: $299-$549+ | ASADS",
+    metaDescription: "Toronto home inspection prices for condos, semis and detached homes, why older Toronto homes need a careful inspection, and what the price includes.",
+    excerpt: "Toronto home inspections cost $299 to $549+ by home type. Prices, what older Toronto homes need checked, what is included and common add-ons.",
     category: "Pricing",
     author: "ASADS Team",
-    date: "2026-03-27",
+    date: "2026-11-08",
     readTime: "7 min read",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
     featured: false,
     content: `
-      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">How Much Does a Home Inspection Cost in Toronto?</h2>
-      <p class="mb-4">A home inspection in Toronto costs between $299 and $599+ depending on property type and size. Condos and small apartments start at $299, townhouses and semis run $349–$399, and detached homes range from $399 for smaller properties to $549 or more for larger houses in neighbourhoods like Forest Hill, Rosedale, or Leaside.</p>
-      <p class="mb-4">ASADS charges the same base rates across all Toronto neighbourhoods — there is no downtown surcharge. The primary cost driver is property size and complexity, not postal code.</p>
+      <p class="mb-4">A home inspection in Toronto with ASADS costs <strong>$299 to $549+</strong>, depending on the type and size of the home. The price is the same in every Toronto neighbourhood, with no downtown surcharge, and includes a thermal (infrared) scan and a written report with photos.</p>
 
-      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Toronto Home Inspection Pricing Breakdown</h2>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Toronto Home Inspection Prices by Home Type</h2>
+      <p class="mb-4">These are ASADS's published prices for a pre-purchase inspection:</p>
       <ul class="list-disc pl-6 mb-4 space-y-2">
-        <li><strong>Condo / apartment (any size):</strong> From $299</li>
-        <li><strong>Townhouse / semi-detached:</strong> From $349</li>
-        <li><strong>Detached under 2,000 sq ft:</strong> From $399</li>
-        <li><strong>Detached 2,000–3,500 sq ft:</strong> From $449</li>
-        <li><strong>Detached 3,500–5,000 sq ft:</strong> From $549</li>
-        <li><strong>Luxury / estate over 5,000 sq ft:</strong> From $599+</li>
+        <li><strong>Condo or apartment:</strong> $349 for a pre-purchase inspection. A condo-only inspection starts at $299 for a studio or one-bedroom ($349 two-bedroom, $399 three-bedroom, $449 townhouse condo).</li>
+        <li><strong>House up to 1,500 sq ft:</strong> $399. This covers most Toronto semis, row houses and bungalows.</li>
+        <li><strong>1,500 to 2,500 sq ft:</strong> $449.</li>
+        <li><strong>2,500 to 3,500 sq ft:</strong> $499.</li>
+        <li><strong>Over 3,500 sq ft:</strong> $549 and up.</li>
       </ul>
-      <p class="mb-4">Thermal imaging is included with every inspection at no additional charge — this is not standard across all Toronto inspectors and represents significant added value for buyers in this market.</p>
+      <p class="mb-4">Selling instead of buying? A pre-listing inspection is $299 to $499+. Full pricing for every service is on the <a href="/pricing" class="text-primary underline font-medium">pricing page</a>.</p>
 
-      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Toronto Homes Can Cost More to Inspect</h2>
-      <p class="mb-4">Toronto's housing stock is among the most diverse in Canada — and also among the most complex to inspect. Neighbourhoods like The Annex, Riverdale, Leslieville, and the Beaches are filled with pre-war homes built between 1890 and 1940. These properties routinely present:</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why Toronto Homes Take Longer to Inspect</h2>
+      <p class="mb-4">Square footage sets the price, but Toronto's older housing stock is why a careful inspection matters here. Much of the city, from the Annex and Leslieville to East York and the Junction, was built before 1950. Common findings in these homes include:</p>
       <ul class="list-disc pl-6 mb-4 space-y-2">
-        <li><strong>Knob-and-tube wiring</strong> — found in homes built before 1950; requires detailed documentation and often flags for insurance</li>
-        <li><strong>Galvanized steel plumbing</strong> — corrodes from the inside out; common in 1940s–1960s Toronto homes</li>
-        <li><strong>Rubble stone foundations</strong> — require specific evaluation for settlement, moisture intrusion, and structural movement</li>
-        <li><strong>Low-slope or flat roof sections</strong> — common on Victorian rowhouses and require separate evaluation methodology</li>
-        <li><strong>Aluminum wiring (1960s–70s builds)</strong> — prevalent in North York, Scarborough, and Etobicoke; thermal imaging reveals overheating connections</li>
+        <li><strong>Knob-and-tube or older wiring</strong>, and panels that were never upgraded, which can affect insurance.</li>
+        <li><strong>Galvanized steel or lead water pipes.</strong> The City of Toronto runs a program for replacing lead water service pipes, and many older homes still have them.</li>
+        <li><strong>Basement water.</strong> Older basements, clay drain pipes and the absence of a backwater valve are common. The City offers a Basement Flooding Protection Subsidy for backwater valves and sump pumps.</li>
+        <li><strong>Asbestos and vermiculite</strong> in homes built or renovated before about 1990.</li>
+        <li><strong>Additions and basement apartments</strong> built without permits, which a buyer should ask about before closing.</li>
       </ul>
-      <p class="mb-4">Inspecting a 100-year-old Annex semi requires more time and documentation than a 2010 Scarborough condo — this is reflected in our pricing tiers.</p>
+      <p class="mb-4">Toronto condos have their own issues: in-suite heating and cooling units, window and balcony door seals, and leaks from the unit above. See the <a href="/services/condo/toronto" class="text-primary underline font-medium">condo inspection Toronto</a> page for what is checked in a unit.</p>
 
-      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What's Included in Every Toronto Home Inspection</h2>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Is Included in the Price</h2>
       <ul class="list-disc pl-6 mb-4 space-y-2">
-        <li>Structural components: foundation, framing, roof, attic</li>
-        <li>Electrical: panel, wiring type, outlets, GFCI/AFCI protection</li>
-        <li>Plumbing: supply lines, drainage, water heater, fixtures</li>
-        <li>HVAC: furnace, boiler, AC, HRV/ERV, ductwork</li>
-        <li>Interior: windows, doors, ceilings, floors, stairs</li>
-        <li>Exterior: cladding, grading, driveway, deck/porch</li>
-        <li>Thermal imaging scan (included, not extra)</li>
-        <li>Same-day digital report with photos and severity ratings</li>
+        <li>A full visual inspection of the structure, roof, exterior, electrical, plumbing, heating and cooling, insulation and interior.</li>
+        <li>A thermal imaging scan to find hidden moisture, missing insulation and electrical hot spots.</li>
+        <li>A written report with photos, delivered the same day.</li>
+        <li>Time on site to walk you through what was found.</li>
       </ul>
 
-      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Add-On Services for Toronto Buyers</h2>
-      <p class="mb-4">Given the age and diversity of Toronto's housing stock, several add-on tests are commonly recommended:</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Add-Ons Toronto Buyers Often Book</h2>
       <ul class="list-disc pl-6 mb-4 space-y-2">
-        <li><strong>Mold inspection and air sampling:</strong> From $149 — important for older homes with water damage history or musty basements</li>
-        <li><strong>Asbestos testing:</strong> From $249 — strongly recommended for pre-1985 homes; vermiculite insulation in attics and floor tiles are the most common sources</li>
-        <li><strong>Radon testing:</strong> From $199 — 48-hour minimum deployment; Etobicoke and North York see elevated readings in some areas</li>
-        <li><strong>Sewer scope inspection:</strong> From $299 — critical for older Toronto homes with clay tile or Orangeburg sewer laterals; sewer replacement in Toronto can cost $8,000–$25,000</li>
-        <li><strong>Lead paint testing:</strong> From $249 — homes built before 1978 may have lead-based paint on trim, windows, and doors</li>
+        <li><a href="/services/wett/toronto" class="text-primary underline font-medium">WETT inspection</a> for a wood-burning fireplace or stove, which many insurers ask for.</li>
+        <li><a href="/services/asbestos-testing/toronto" class="text-primary underline font-medium">Asbestos testing</a> before renovating a pre-1990 home.</li>
+        <li><a href="/services/mold-inspection/toronto" class="text-primary underline font-medium">Mold inspection</a> where there is a musty basement or past water damage.</li>
       </ul>
 
-      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is a Home Inspection Worth It in Toronto's Market?</h2>
-      <p class="mb-4">Yes — categorically. In a market where the average Toronto detached home sells for over $1.2 million, a $399–$549 inspection is the cheapest insurance you can buy. Our inspectors regularly find deficiencies that cost $5,000–$30,000 to repair. Common finds in Toronto include aging electrical panels ($3,000–$6,000 to replace), failing flat roofs ($8,000–$15,000), and failed sewer laterals ($8,000–$20,000).</p>
-      <p class="mb-4">Toronto buyers who waive the inspection condition can still protect themselves with a <a href="/services/same-day-home-inspection" class="text-primary underline font-medium">same-day home inspection</a> before submitting their offer — call us before noon and we can inspect the same afternoon.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is a Home Inspection Worth It in Toronto?</h2>
+      <p class="mb-4">On a Toronto home, the inspection costs a tiny fraction of the purchase price, and a single finding, such as a failing roof, old wiring or a basement leak, can cost many times more to fix. In multiple-offer situations some buyers inspect before the offer date so they can bid without a condition. The <a href="/blog/home-inspection-cost-ontario" class="text-primary underline font-medium">Ontario home inspection cost guide</a> compares prices across the province.</p>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a Toronto Home Inspection</h2>
-      <p class="mb-4">ASADS serves all Toronto neighbourhoods including the downtown core, Etobicoke, North York, East York, Scarborough, and all surrounding GTA communities. We operate 7 days a week, 7am–10pm, with same-day availability on most dates.</p>
-      <p class="mb-4">Visit our <a href="/locations/home-inspection-toronto" class="text-primary underline font-medium">Toronto home inspection page</a> to learn more, view our full <a href="/pricing" class="text-primary underline font-medium">home inspection pricing</a>, or <a href="/booking" class="text-primary underline font-medium">book online now</a>. Questions? Call (647) 801-9311.</p>
+      <p class="mb-4">Book online or call (647) 801-9311. See <a href="/services/pre-purchase/toronto" class="text-primary underline font-medium">pre-purchase home inspection in Toronto</a> for what the inspection covers.</p>
     `,
   },
   {
@@ -7927,6 +7916,56 @@ export const blogPostsData: BlogPost[] = [
       </ul>
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Booking Asbestos Testing</h2>
       <p class="mb-4">ASADS takes samples safely and sends them to an accredited laboratory, with a written report you can give your contractor. See our <a href="/services/asbestos-testing" class="text-primary underline font-medium">asbestos testing</a> service, or call (647) 801-9311.</p>
+    `,
+  },
+  {
+    id: 119,
+    slug: "what-is-a-pdi-inspection-ontario",
+    title: "What Is a PDI Inspection? Ontario New Home Pre-Delivery Guide",
+    metaTitle: "What Is a PDI Inspection? Ontario New Homes | ASADS",
+    metaDescription: "What a pre-delivery inspection (PDI) is, what happens at your Tarion PDI walk-through, what to check, and why to bring your own inspector.",
+    excerpt: "The PDI is your walk-through with the builder before you take possession of a new home. What happens, what to check, and how Tarion warranty forms follow it.",
+    category: "New Construction",
+    author: "ASADS Home Inspection",
+    date: "2026-11-08",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <p class="mb-4">A <strong>PDI (pre-delivery inspection)</strong> is the walk-through you do with your builder before you take possession of a newly built home or condo in Ontario. It is a required step under the Tarion new home warranty. Anything wrong or unfinished is written on the PDI form, which becomes the record of the home's condition on the day you take it over.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Happens at a PDI</h2>
+      <p class="mb-4">The builder's representative walks you through the home, usually in about an hour, shows you how the systems work, and records any damaged, incomplete or missing items on the PDI form. You both sign the form and you keep a copy. You can bring someone with you, or send a designate in your place, and many buyers bring their own inspector.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Why the PDI Form Matters</h2>
+      <p class="mb-4">The PDI form is evidence. If a scratch, chip or crack is not on the form, it can be hard to show later that it was there before you moved in rather than caused during the move. Cosmetic damage in particular needs to be recorded at the PDI.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What to Check at Your PDI</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Finishes:</strong> scratches or chips on floors, counters, cabinets, tubs and fixtures; drywall dents and paint.</li>
+        <li><strong>Doors and windows:</strong> they open, close and lock properly; seals and glass are undamaged.</li>
+        <li><strong>Plumbing:</strong> run every tap and shower, flush every toilet, look for leaks under sinks.</li>
+        <li><strong>Electrical:</strong> outlets, switches and lights work; GFCI outlets in wet areas.</li>
+        <li><strong>Heating and cooling:</strong> the furnace or heat pump, thermostat and air conditioning run.</li>
+        <li><strong>Exterior:</strong> grading slopes away from the house; siding, brick, caulking, driveway and steps.</li>
+        <li><strong>Upgrades:</strong> everything in your purchase agreement and upgrade list is actually installed.</li>
+      </ul>
+      <p class="mb-4">For a full room-by-room list, see the <a href="/blog/new-build-home-inspection-checklist-ontario" class="text-primary underline font-medium">new build home inspection checklist</a>.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Comes After the PDI: Tarion Warranty Forms</h2>
+      <p class="mb-4">The PDI is the start of your warranty, not the end. Tarion's statutory warranty has three parts:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>One-year warranty:</strong> work and materials, and the home being fit to live in.</li>
+        <li><strong>Two-year warranty:</strong> water getting in through the building envelope, electrical, plumbing and heating systems, and Ontario Building Code violations affecting health and safety.</li>
+        <li><strong>Seven-year warranty:</strong> major structural defects.</li>
+      </ul>
+      <p class="mb-4">You report problems using Tarion's forms, including the 30-Day Form in the first 30 days after possession and the Year-End Form in the last 30 days of the first year. Check Tarion's website for the current forms and deadlines, because missing a deadline can affect your coverage.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Should You Bring Your Own Inspector?</h2>
+      <p class="mb-4">The builder's representative is there to record items, not to look for problems on your behalf. An independent inspector checks the home for you, using a thermal camera to find missing insulation, air leaks and moisture that cannot be seen, and gives you a written list to put on the PDI form. Doing it at the PDI means the items are on record from day one.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Book a PDI Inspection</h2>
+      <p class="mb-4">ASADS PDI inspections start from $349, with a same-day report you can bring to your walk-through. See <a href="/services/pdi-inspection/toronto" class="text-primary underline font-medium">PDI inspection in Toronto</a>, or call (647) 801-9311.</p>
     `,
   },
 ];

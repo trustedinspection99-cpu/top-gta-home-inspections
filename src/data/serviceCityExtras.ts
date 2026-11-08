@@ -43,7 +43,24 @@ const CITIES: Record<string, string> = {
 const MOLD = ["toronto", "hamilton", "vaughan", "oakville", "markham", "brampton"];
 const AIR = ["hamilton", "burlington", "vaughan", "oakville", "markham", "mississauga"];
 
+const manualExtras: Record<string, CityExtra> = {
+  "condo/toronto": {
+    heading: "Condo Inspection in Toronto: What Is Checked and What It Costs",
+    paragraphs: [
+      "A Toronto condo inspection covers everything inside your unit: the in-suite heating and cooling (fan coil, heat pump or through-wall unit), plumbing and fixtures, the electrical panel and outlets, appliances, windows and balcony door seals, flooring, and signs of leaks from the unit above or from the building envelope. A thermal camera finds hidden moisture and drafts around windows that cannot be seen in a viewing. Common elements such as the roof, garage and lobby belong to the corporation and are reviewed through the status certificate rather than the inspection.",
+      "ASADS condo inspections cost $299 for a studio or one-bedroom, $349 for a two-bedroom, $399 for three bedrooms or more and $449 for a townhouse condo, with a same-day report. Buying a new condo from a builder? Book a PDI inspection before your pre-delivery walk-through instead.",
+    ],
+    links: [
+      { label: "Condo inspection Toronto: buyer's guide", href: "/blog/condo-inspection-toronto-guide" },
+      { label: "Home inspection cost in Toronto", href: "/blog/home-inspection-cost-toronto" },
+      { label: "PDI inspection in Toronto", href: "/services/pdi-inspection/toronto" },
+      { label: "What is a PDI inspection?", href: "/blog/what-is-a-pdi-inspection-ontario" },
+    ],
+  },
+};
+
 export const serviceCityExtras: Record<string, CityExtra> = Object.fromEntries([
   ...MOLD.map((c) => [`mold-inspection/${c}`, moldExtra(CITIES[c], c)] as const),
   ...AIR.map((c) => [`air-quality/${c}`, airExtra(CITIES[c], c)] as const),
+  ...Object.entries(manualExtras),
 ]);
