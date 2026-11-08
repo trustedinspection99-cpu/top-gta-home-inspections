@@ -696,7 +696,7 @@ const faqCategories = [
       },
       {
         question: "What is a sewer scope inspection and do I need one?",
-        answer: "A sewer scope inspection uses a camera on a flexible cable to inspect the interior of the drain line from the home to the municipal connection. It identifies root intrusion, pipe damage, offset joints, and blockages. For any Toronto home built before 1970 or with mature trees near the drain line, a sewer scope is a worthwhile addition to the standard inspection.",
+        answer: "A sewer scope inspection uses a camera on a flexible cable to inspect the interior of the drain line from the home to the municipal connection. It identifies root intrusion, pipe damage, offset joints, and blockages. For any Toronto home built before 1970 or with mature trees near the drain line, one is worth arranging. ASADS does not offer sewer scopes; a licensed plumber or drain contractor can do one.",
       },
       {
         question: "What is a backwater valve and does my Ontario home need one?",

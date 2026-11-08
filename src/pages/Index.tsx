@@ -334,7 +334,6 @@ const Index = () => {
                       <option>Mold Inspection & Testing — From $299</option>
                       <option>Radon Testing — From $499</option>
                       <option>Thermal Imaging — Included / Standalone Quoted</option>
-                      <option>Sewer Scope — From $299</option>
                       <option>Asbestos Testing — From $299</option>
                       <option>WETT Inspection — From $249</option>
                       <option>Commercial Inspection</option>

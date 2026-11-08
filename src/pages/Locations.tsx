@@ -215,7 +215,7 @@ export default function Locations() {
                 Each city page includes local property insights — neighbourhood-specific building stock issues, common defects in that area's housing era, and proximity to environmental concerns — so your report is relevant to your specific location, not generic boilerplate. Whether you're buying in a 1960s Toronto semi or a 2023 Brampton new-build, our inspectors understand what to look for.
               </p>
               <p>
-                Our <strong>14 specialty services</strong> — including radon testing, mold inspection, asbestos sampling, WETT, thermal imaging, sewer scope, and well water testing — are available in every city we serve, either bundled with a standard inspection or standalone.
+                Our <strong>specialty services</strong> — including radon testing, mold inspection, asbestos sampling, WETT, thermal imaging and well water testing — are available in every city we serve, either bundled with a standard inspection or standalone.
               </p>
             </div>
             <div className="grid sm:grid-cols-3 gap-4 mt-8">

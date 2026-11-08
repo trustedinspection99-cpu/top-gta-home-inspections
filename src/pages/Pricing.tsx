@@ -465,7 +465,7 @@ export default function Pricing() {
                 { factor: "Property size", detail: "Square footage is the primary driver. A 500 sq ft condo costs less than a 4,000 sq ft detached home because the inspector covers more area, systems, and components." },
                 { factor: "Age of the home", detail: "Older homes (pre-1980) take longer to inspect due to complex plumbing, knob-and-tube wiring, and aging systems that require more documentation." },
                 { factor: "Property type", detail: "Condos, townhouses, semi-detached, and detached homes each have different scope. Commercial properties are priced separately based on size and system complexity." },
-                { factor: "Add-on services", detail: "Radon testing ($499+ — 2 visits required), mold inspection ($299+), sewer scope ($299+), and asbestos testing ($299+) extend the inspection scope. Thermal imaging is included free in every inspection." },
+                { factor: "Add-on services", detail: "Radon testing ($499+ — 2 visits required), mold inspection ($299+) and asbestos testing ($299+) extend the inspection scope. Thermal imaging is included free in every inspection." },
                 { factor: "Location", detail: "Travel time to rural properties in Ontario may add a small surcharge. Most Ontario locations are covered at the base rate." },
                 { factor: "Urgency", detail: "Same-day and rush inspections for tight closing deadlines are accommodated at no extra charge when availability allows." },
               ].map(({ factor, detail }) => (

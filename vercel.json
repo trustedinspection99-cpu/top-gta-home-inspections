@@ -682,6 +682,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/sewer-scope-inspection-guide",
+      "destination": "/services/pre-purchase",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sewer-scope-inspection-guide/:city",
+      "destination": "/services/pre-purchase",
+      "permanent": true
+    },
+    {
       "source": "/air-quality-testing",
       "destination": "/services/air-quality",
       "permanent": true

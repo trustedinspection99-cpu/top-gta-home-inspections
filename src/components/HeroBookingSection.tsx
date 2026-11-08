@@ -9,7 +9,6 @@ const INSPECTION_TYPES = [
   { label: "Mold Inspection & Testing — From $299", value: "Mold Inspection & Testing" },
   { label: "Radon Testing — From $499", value: "Radon Testing" },
   { label: "Thermal Imaging — From $199", value: "Thermal Imaging" },
-  { label: "Sewer Scope — From $299", value: "Sewer Scope" },
   { label: "Asbestos Testing", value: "Asbestos Testing" },
   { label: "WETT Inspection", value: "WETT Inspection" },
   { label: "Air Quality Testing — From $299", value: "Air Quality Testing" },
