@@ -54,7 +54,7 @@ const hubExtra = (city: string, citySlug: string, kind: string, hubHref = `/loca
 // Group 1 (2026-11-08): only pages under the protection threshold get the section.
 const KIND: Record<string, string> = { "pre-purchase": "pre-purchase inspections", "pre-listing": "pre-listing inspections", "new-construction": "new construction inspections" };
 const GROUP1: [string, string, string[], string?][] = [
-  ["hamilton", "Hamilton", ["pre-purchase", "pre-listing"]],
+  ["hamilton", "Hamilton", ["pre-purchase", "pre-listing", "new-construction"]],
   ["kitchener", "Kitchener", ["pre-purchase", "pre-listing", "new-construction"]],
   ["guelph", "Guelph", ["pre-purchase", "new-construction"]],
   ["oakville", "Oakville", ["pre-listing", "new-construction"], "/services/pre-purchase/oakville"],

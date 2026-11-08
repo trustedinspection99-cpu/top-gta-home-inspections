@@ -167,6 +167,7 @@ function extractServiceDefs(content) {
 }
 
 const serviceDefs = extractServiceDefs(serviceCityRaw);
+const titleOverrides = JSON.parse(readFileSync(resolve(ROOT, 'src/data/serviceCityTitleOverrides.json'), 'utf8'));
 
 // Extract FAQ arrays per service slug from serviceCityData.ts
 function extractServiceFaqsMap(content) {
@@ -219,7 +220,7 @@ const locationSlugs = extractLocationSlugs(locationRaw);
 serviceDefs.forEach(svc => {
   locationSlugs.forEach(loc => {
     const city = loc.city;
-    const rawTitle = svc.title.replace(/\{city\}/g, city);
+    const rawTitle = titleOverrides[`${svc.slug}/${loc.citySlug}`] ?? svc.title.replace(/\{city\}/g, city);
     const title = rawTitle.length > 60 ? rawTitle.slice(0, 57) + '...' : rawTitle;
     const rawDesc = svc.desc.replace(/\{city\}/g, city);
     const desc  = rawDesc.length > 160 ? rawDesc.slice(0, 157) + '...' : rawDesc;

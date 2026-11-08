@@ -7,6 +7,7 @@ import { HeroBookingSection } from "@/components/HeroBookingSection";
 import { InlineBookingForm } from "@/components/InlineBookingForm";
 import { serviceBySlug } from "@/data/serviceCityData";
 import { locationData } from "@/data/locationData";
+import titleOverrides from "@/data/serviceCityTitleOverrides.json";
 import { serviceCityExtras } from "@/data/serviceCityExtras";
 import { getCanonicalUrl, SITE_URL } from "@/lib/seo";
 import {
@@ -84,7 +85,7 @@ export default function ServiceCityPage() {
 
   const city = location.city;
   const canonical = getCanonicalUrl(`/services/${service.slug}/${citySlug}`);
-  const rawTitle = fill(service.metaTitleTemplate, city);
+  const rawTitle = (titleOverrides as Record<string, string>)[`${service.slug}/${citySlug}`] ?? fill(service.metaTitleTemplate, city);
   const metaTitle = rawTitle.length > 60 ? rawTitle.slice(0, 57) + "…" : rawTitle;
   const rawDesc = fill(service.metaDescTemplate, city);
   const metaDesc = rawDesc.length > 160 ? rawDesc.slice(0, 157) + "…" : rawDesc;
