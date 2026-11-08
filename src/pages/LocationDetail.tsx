@@ -2,6 +2,7 @@ import { buildLocalExpertise } from "@/lib/localExpertise";
 import { useParams, Navigate } from "react-router-dom";
 import { LocationPageTemplate } from "@/components/locations/LocationPageTemplate";
 import { locationData } from "@/data/locationData";
+import { locationAreaLinks } from "@/data/locationAreaLinks";
 
 export default function LocationDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -23,6 +24,7 @@ export default function LocationDetail() {
       phoneNumber={data.phoneNumber}
       neighborhoods={data.neighborhoods}
       localInsights={data.localInsights}
+      areaLinks={locationAreaLinks[data.slug]}
       latitude={data.latitude}
       longitude={data.longitude}
       localExpertise={data.localExpertise || buildLocalExpertise({

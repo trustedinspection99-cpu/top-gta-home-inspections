@@ -1,4 +1,5 @@
 import { buildLocalExpertise } from "@/lib/localExpertise";
+import type { AreaLinks } from "@/data/locationAreaLinks";
 import React, { useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link, useLocation } from "react-router-dom";
@@ -66,6 +67,7 @@ interface LocationPageTemplateProps {
   localExpertise?: LocalExpertise;
   allCities?: string[];
   slug?: string;
+  areaLinks?: AreaLinks;
 }
 
 const featuredServices = [
@@ -126,6 +128,7 @@ export function LocationPageTemplate({
   localExpertise,
   allCities = [],
   slug,
+  areaLinks,
 }: LocationPageTemplateProps) {
   // Use slug from data directly (already has home-inspection- prefix), fallback to derived
   const locationSlug = slug ?? `home-inspection-${city.toLowerCase().replace(/\s+/g, "-")}`;
@@ -349,6 +352,20 @@ export function LocationPageTemplate({
                 <p key={i}>{p}</p>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {areaLinks && (
+        <section className="py-10 bg-background">
+          <div className="container max-w-4xl">
+            <h2 className="font-heading text-2xl font-bold text-foreground mb-4">{areaLinks.heading}</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">{areaLinks.text}</p>
+            <ul className="list-disc pl-6 space-y-1">
+              {areaLinks.links.map((l) => (
+                <li key={l.href}><a href={l.href} className="text-primary underline font-medium">{l.label}</a></li>
+              ))}
+            </ul>
           </div>
         </section>
       )}
