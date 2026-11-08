@@ -5005,6 +5005,689 @@ export const locationData: LocationData[] = [
       ]
     }
   },
+  // ============================================
+  // MORE TOWNS (location page only; see locationOnlySlugs.json)
+  // ============================================
+  {
+        slug: "home-inspection-ballinafad",
+        city: "Ballinafad",
+        region: "Halton Region (Halton Hills)",
+        metaTitle: "Home Inspection Ballinafad | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Ballinafad from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Ballinafad is a rural hamlet in the Town of Halton Hills, near the Erin border and the Niagara Escarpment. ASADS provides certified home inspections across Ballinafad, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Ballinafad", "Terra Cotta", "Glen Williams", "Georgetown", "Erin", "Silver Creek"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 43.69,
+        longitude: -79.95,
+        localInsights: [
+          {
+        title: "Rural Estate Properties",
+        content: "Ballinafad is mostly rural acreages and estate homes. Larger homes call for a careful look at complex roofs, multiple heating systems, finished basements and outbuildings."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      },
+      {
+        title: "Wood Heat",
+        content: "Wood stoves and fireplaces are common in the area, and insurers often ask for a WETT inspection before they will cover them."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Ballinafad",
+          paragraphs: [
+            "Ballinafad is a rural hamlet in the Town of Halton Hills, near the Erin border and the Niagara Escarpment. ASADS provides certified home inspections across Ballinafad, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Ballinafad book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Ballinafad home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-willow-beach",
+        city: "Willow Beach",
+        region: "York Region (Georgina)",
+        metaTitle: "Home Inspection Willow Beach | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Willow Beach from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Willow Beach is a lakeside community in the Town of Georgina on the south shore of Lake Simcoe. ASADS provides certified home inspections across Willow Beach, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Willow Beach", "Jackson's Point", "Keswick", "Sutton", "Roches Point", "Island Grove"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 44.29,
+        longitude: -79.41,
+        localInsights: [
+          {
+        title: "Cottages Converted for Year-Round Living",
+        content: "Many lakeside homes started as seasonal cottages. We check how additions tie into the original structure, whether insulation, heating and plumbing were upgraded for year-round use, and how crawlspaces and foundations handle moisture near the water."
+      },
+      {
+        title: "Drainage and Moisture",
+        content: "High water tables and lake-effect weather put basements, crawlspaces and decks under pressure. We check grading and sump pumps and use thermal imaging to find hidden moisture."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Willow Beach",
+          paragraphs: [
+            "Willow Beach is a lakeside community in the Town of Georgina on the south shore of Lake Simcoe. ASADS provides certified home inspections across Willow Beach, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Willow Beach book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Willow Beach home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-glen-williams",
+        city: "Glen Williams",
+        region: "Halton Region (Halton Hills)",
+        metaTitle: "Home Inspection Glen Williams | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Glen Williams from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Glen Williams is a historic village on the Credit River in the Town of Halton Hills, just north of Georgetown. ASADS provides certified home inspections across Glen Williams, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Glen Williams", "Georgetown", "Terra Cotta", "Norval", "Ballinafad", "Limehouse"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 43.68,
+        longitude: -79.93,
+        localInsights: [
+          {
+        title: "Older Village Homes",
+        content: "Glen Williams has older homes in and around the village core. Some date back to the 1800s, alongside newer custom homes. We check older homes for wiring, plumbing, foundations, roofs and heating, and they may contain asbestos if built or renovated before about 1990."
+      },
+      {
+        title: "Homes Near the Credit River",
+        content: "Properties close to the river and valley slopes are checked for drainage, grading and moisture in basements."
+      },
+      {
+        title: "Wood Heat",
+        content: "Wood stoves and fireplaces are common in the area, and insurers often ask for a WETT inspection before they will cover them."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Glen Williams",
+          paragraphs: [
+            "Glen Williams is a historic village on the Credit River in the Town of Halton Hills, just north of Georgetown. ASADS provides certified home inspections across Glen Williams, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Glen Williams book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Glen Williams home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-jordan-station",
+        city: "Jordan Station",
+        region: "Niagara Region (Lincoln)",
+        metaTitle: "Home Inspection Jordan Station | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Jordan Station from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Jordan Station is a community in the Town of Lincoln, in Niagara's wine country. ASADS provides certified home inspections across Jordan Station, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Jordan Station", "Jordan Village", "Vineland", "Beamsville", "St. Catharines (west)", "Ball's Falls"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 43.15,
+        longitude: -79.37,
+        localInsights: [
+          {
+        title: "Older Village Homes",
+        content: "Jordan Station has older homes in and around the village core. Rural and farm properties surround the community. We check older homes for wiring, plumbing, foundations, roofs and heating, and they may contain asbestos if built or renovated before about 1990."
+      },
+      {
+        title: "Farm and Vineyard Properties",
+        content: "Rural properties can include barns and outbuildings, which we can add to the inspection on request, and may use a private well or cistern."
+      },
+      {
+        title: "New Construction",
+        content: "Newer homes are checked for workmanship and items to report under the Tarion warranty."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Jordan Station",
+          paragraphs: [
+            "Jordan Station is a community in the Town of Lincoln, in Niagara's wine country. ASADS provides certified home inspections across Jordan Station, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Jordan Station book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Jordan Station home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-alton",
+        city: "Alton",
+        region: "Peel Region (Caledon)",
+        metaTitle: "Home Inspection Alton, ON | Certified Home Inspector | ASADS",
+        metaDescription: "Home inspection in Alton from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Alton is a historic mill village in the Town of Caledon, in the Credit River headwaters. ASADS provides certified home inspections across Alton, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Alton", "Inglewood", "Cataract", "Belfountain", "Orangeville (south)", "Erin"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 43.86,
+        longitude: -80.07,
+        localInsights: [
+          {
+        title: "Older Village Homes",
+        content: "Alton has older homes in and around the village core. Many are surrounded by rural acreages. We check older homes for wiring, plumbing, foundations, roofs and heating, and they may contain asbestos if built or renovated before about 1990."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      },
+      {
+        title: "Wood Heat",
+        content: "Wood stoves and fireplaces are common in the area, and insurers often ask for a WETT inspection before they will cover them."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Alton",
+          paragraphs: [
+            "Alton is a historic mill village in the Town of Caledon, in the Credit River headwaters. ASADS provides certified home inspections across Alton, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Alton book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Alton home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-elmvale",
+        city: "Elmvale",
+        region: "Simcoe County (Springwater)",
+        metaTitle: "Home Inspection Elmvale | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Elmvale from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Elmvale is a village in Springwater Township in Simcoe County. ASADS provides certified home inspections across Elmvale, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Elmvale", "Hillsdale", "Phelpston", "Wyevale", "Minesing", "Wasaga Beach"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 44.58,
+        longitude: -79.87,
+        localInsights: [
+          {
+        title: "Older Village Homes",
+        content: "Elmvale has older homes in and around the village core. Farms and rural properties surround the village. We check older homes for wiring, plumbing, foundations, roofs and heating, and they may contain asbestos if built or renovated before about 1990."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      },
+      {
+        title: "Wood Heat",
+        content: "Wood stoves and fireplaces are common in the area, and insurers often ask for a WETT inspection before they will cover them."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Elmvale",
+          paragraphs: [
+            "Elmvale is a village in Springwater Township in Simcoe County. ASADS provides certified home inspections across Elmvale, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Elmvale book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Elmvale home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-crystal-beach",
+        city: "Crystal Beach",
+        region: "Niagara Region (Fort Erie)",
+        metaTitle: "Home Inspection Crystal Beach | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Crystal Beach from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Crystal Beach is a lakeside community in the Town of Fort Erie on the shore of Lake Erie. ASADS provides certified home inspections across Crystal Beach, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Crystal Beach", "Ridgeway", "Point Abino", "Fort Erie", "Stevensville", "Port Colborne"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 42.87,
+        longitude: -79.06,
+        localInsights: [
+          {
+        title: "Cottages Converted for Year-Round Living",
+        content: "Many lakeside homes started as seasonal cottages. We check how additions tie into the original structure, whether insulation, heating and plumbing were upgraded for year-round use, and how crawlspaces and foundations handle moisture near the water."
+      },
+      {
+        title: "Wind and Weather on Lake Erie",
+        content: "Homes near the lake face more wind-driven rain. We look closely at roofs, windows and the building envelope, and use thermal imaging to find leaks."
+      },
+      {
+        title: "Older Homes",
+        content: "Homes built before about 1990 may contain asbestos in materials such as vermiculite insulation, flooring or textured ceilings. We can test suspect materials."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Crystal Beach",
+          paragraphs: [
+            "Crystal Beach is a lakeside community in the Town of Fort Erie on the shore of Lake Erie. ASADS provides certified home inspections across Crystal Beach, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Crystal Beach book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Crystal Beach home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-roches-point",
+        city: "Roches Point",
+        region: "York Region (Georgina)",
+        metaTitle: "Home Inspection Roches Point | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Roches Point from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Roches Point is a lakeside community in the Town of Georgina, east of Keswick on Lake Simcoe. ASADS provides certified home inspections across Roches Point, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Roches Point", "Keswick", "Willow Beach", "Jackson's Point", "Cook's Bay area", "Sutton"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 44.29,
+        longitude: -79.44,
+        localInsights: [
+          {
+        title: "Cottages Converted for Year-Round Living",
+        content: "Many lakeside homes started as seasonal cottages. We check how additions tie into the original structure, whether insulation, heating and plumbing were upgraded for year-round use, and how crawlspaces and foundations handle moisture near the water."
+      },
+      {
+        title: "Drainage and Moisture",
+        content: "Lake-adjacent properties often have high groundwater. We check basements, sump pumps and grading, and use thermal imaging to look for hidden moisture."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Roches Point",
+          paragraphs: [
+            "Roches Point is a lakeside community in the Town of Georgina, east of Keswick on Lake Simcoe. ASADS provides certified home inspections across Roches Point, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Roches Point book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Roches Point home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-sunderland",
+        city: "Sunderland",
+        region: "Durham Region (Brock)",
+        metaTitle: "Home Inspection Sunderland | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Sunderland from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Sunderland is a village in Brock Township in northern Durham Region. ASADS provides certified home inspections across Sunderland, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Sunderland", "Cannington", "Beaverton", "Udora", "Port Perry (north)", "Greenbank"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 44.27,
+        longitude: -79.07,
+        localInsights: [
+          {
+        title: "Older Village Homes",
+        content: "Sunderland has older homes in and around the village core. Farms surround the village. We check older homes for wiring, plumbing, foundations, roofs and heating, and they may contain asbestos if built or renovated before about 1990."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      },
+      {
+        title: "Wood Heat",
+        content: "Wood stoves and fireplaces are common in the area, and insurers often ask for a WETT inspection before they will cover them."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Sunderland",
+          paragraphs: [
+            "Sunderland is a village in Brock Township in northern Durham Region. ASADS provides certified home inspections across Sunderland, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Sunderland book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Sunderland home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-sharon",
+        city: "Sharon",
+        region: "York Region (East Gwillimbury)",
+        metaTitle: "Home Inspection Sharon | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Sharon from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Sharon is a community in the Town of East Gwillimbury, home of the historic Sharon Temple. ASADS provides certified home inspections across Sharon, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Sharon", "Queensville", "Holland Landing", "Mount Albert", "Newmarket (north)", "River Drive Park"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 44.1,
+        longitude: -79.43,
+        localInsights: [
+          {
+        title: "Older and Newer Homes",
+        content: "Sharon has older homes along its main roads as well as newer subdivisions. Older homes are checked for aging systems; newer homes for workmanship and Tarion warranty items."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      },
+      {
+        title: "PDI and New Construction",
+        content: "With ongoing growth in East Gwillimbury, many buyers book a PDI or new construction inspection before taking possession."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Sharon",
+          paragraphs: [
+            "Sharon is a community in the Town of East Gwillimbury, home of the historic Sharon Temple. ASADS provides certified home inspections across Sharon, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Sharon book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Sharon home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-greenbank",
+        city: "Greenbank",
+        region: "Durham Region (Scugog)",
+        metaTitle: "Home Inspection Greenbank | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Greenbank from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Greenbank is a rural hamlet in the Township of Scugog in Durham Region. ASADS provides certified home inspections across Greenbank, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Greenbank", "Port Perry", "Seagrave", "Sunderland", "Uxbridge (east)", "Utica"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 44.13,
+        longitude: -79.03,
+        localInsights: [
+          {
+        title: "Rural and Farm Properties",
+        content: "Greenbank is mostly farmland and rural homes. Barns and outbuildings can be added to the inspection on request."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      },
+      {
+        title: "Wood Heat",
+        content: "Wood stoves and fireplaces are common in the area, and insurers often ask for a WETT inspection before they will cover them."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Greenbank",
+          paragraphs: [
+            "Greenbank is a rural hamlet in the Township of Scugog in Durham Region. ASADS provides certified home inspections across Greenbank, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Greenbank book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Greenbank home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-goodwood",
+        city: "Goodwood",
+        region: "Durham Region (Uxbridge)",
+        metaTitle: "Home Inspection Goodwood | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Goodwood from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Goodwood is a hamlet in the Township of Uxbridge, on the Oak Ridges Moraine. ASADS provides certified home inspections across Goodwood, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Goodwood", "Uxbridge", "Stouffville (east)", "Claremont", "Glasgow", "Brougham"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 44.02,
+        longitude: -79.18,
+        localInsights: [
+          {
+        title: "Rural Homes on the Oak Ridges Moraine",
+        content: "Goodwood has rural homes and acreages. Larger properties are checked for roofs, structure, heating and outbuildings."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      },
+      {
+        title: "Wood Heat",
+        content: "Wood stoves and fireplaces are common in the area, and insurers often ask for a WETT inspection before they will cover them."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Goodwood",
+          paragraphs: [
+            "Goodwood is a hamlet in the Township of Uxbridge, on the Oak Ridges Moraine. ASADS provides certified home inspections across Goodwood, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Goodwood book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Goodwood home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-queensville",
+        city: "Queensville",
+        region: "York Region (East Gwillimbury)",
+        metaTitle: "Home Inspection Queensville | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Queensville from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Queensville is a fast-growing community in the Town of East Gwillimbury, north of Newmarket. ASADS provides certified home inspections across Queensville, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Queensville", "Sharon", "Holland Landing", "Mount Albert", "Keswick (south)", "Newmarket (north)"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 44.13,
+        longitude: -79.42,
+        localInsights: [
+          {
+        title: "New Subdivisions",
+        content: "Much of Queensville is new construction. We check workmanship, grading and items to report under the Tarion warranty, and many buyers book a PDI before taking possession."
+      },
+      {
+        title: "The Original Village",
+        content: "Older homes in the original village are checked for wiring, plumbing, foundations and heating."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Queensville",
+          paragraphs: [
+            "Queensville is a fast-growing community in the Town of East Gwillimbury, north of Newmarket. ASADS provides certified home inspections across Queensville, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Queensville book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Queensville home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-gormley",
+        city: "Gormley",
+        region: "York Region (Whitchurch-Stouffville)",
+        metaTitle: "Home Inspection Gormley | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Gormley from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Gormley is a hamlet in Whitchurch-Stouffville, near the Richmond Hill border. ASADS provides certified home inspections across Gormley, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Gormley", "Stouffville", "Richmond Hill (north)", "Vandorf", "Bethesda", "Oak Ridges"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 43.94,
+        longitude: -79.38,
+        localInsights: [
+          {
+        title: "Estate and Rural Homes",
+        content: "Gormley has estate homes and rural properties. We look carefully at large roofs, multiple heating systems, finished basements and outbuildings."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      },
+      {
+        title: "Thermal Imaging for Large Homes",
+        content: "Our thermal camera helps find missing insulation, air leaks and hidden moisture that are easy to miss in larger homes."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Gormley",
+          paragraphs: [
+            "Gormley is a hamlet in Whitchurch-Stouffville, near the Richmond Hill border. ASADS provides certified home inspections across Gormley, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Gormley book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Gormley home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-inglewood",
+        city: "Inglewood",
+        region: "Peel Region (Caledon)",
+        metaTitle: "Home Inspection Inglewood | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Inglewood from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Inglewood is a village on the Credit River in the Town of Caledon. ASADS provides certified home inspections across Inglewood, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Inglewood", "Cheltenham", "Belfountain", "Terra Cotta", "Alton", "Caledon Village"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 43.8,
+        longitude: -79.93,
+        localInsights: [
+          {
+        title: "Older Village Homes",
+        content: "Inglewood has older homes in and around the village core. Rural acreages surround the village. We check older homes for wiring, plumbing, foundations, roofs and heating, and they may contain asbestos if built or renovated before about 1990."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      },
+      {
+        title: "Wood Heat",
+        content: "Wood stoves and fireplaces are common in the area, and insurers often ask for a WETT inspection before they will cover them."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Inglewood",
+          paragraphs: [
+            "Inglewood is a village on the Credit River in the Town of Caledon. ASADS provides certified home inspections across Inglewood, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Inglewood book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Inglewood home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-coldwater",
+        city: "Coldwater",
+        region: "Simcoe County (Severn)",
+        metaTitle: "Home Inspection Coldwater | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Coldwater from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Coldwater is a village in Severn Township in Simcoe County, west of Orillia. ASADS provides certified home inspections across Coldwater, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Coldwater", "Orillia (west)", "Waubaushene", "Victoria Harbour", "Moonstone", "Washago"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 44.71,
+        longitude: -79.64,
+        localInsights: [
+          {
+        title: "Older Village Homes",
+        content: "Coldwater has older homes in and around the village core. Cottages and rural properties are common nearby. We check older homes for wiring, plumbing, foundations, roofs and heating, and they may contain asbestos if built or renovated before about 1990."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      },
+      {
+        title: "Wood Heat",
+        content: "Wood stoves and fireplaces are common in the area, and insurers often ask for a WETT inspection before they will cover them."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Coldwater",
+          paragraphs: [
+            "Coldwater is a village in Severn Township in Simcoe County, west of Orillia. ASADS provides certified home inspections across Coldwater, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Coldwater book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Coldwater home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-cookstown",
+        city: "Cookstown",
+        region: "Simcoe County (Innisfil)",
+        metaTitle: "Home Inspection Cookstown | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Cookstown from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Cookstown is a historic village in the Town of Innisfil in Simcoe County. ASADS provides certified home inspections across Cookstown, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Cookstown", "Innisfil", "Bradford (west)", "Thornton", "Churchill", "Bond Head"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 44.19,
+        longitude: -79.7,
+        localInsights: [
+          {
+        title: "Older Village Homes",
+        content: "Cookstown has older homes in and around the village core. Newer homes and rural properties are found around it. We check older homes for wiring, plumbing, foundations, roofs and heating, and they may contain asbestos if built or renovated before about 1990."
+      },
+      {
+        title: "Newer Homes",
+        content: "Newer homes are checked for workmanship and items to report under the Tarion warranty."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Cookstown",
+          paragraphs: [
+            "Cookstown is a historic village in the Town of Innisfil in Simcoe County. ASADS provides certified home inspections across Cookstown, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Cookstown book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Cookstown home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-creemore",
+        city: "Creemore",
+        region: "Simcoe County (Clearview)",
+        metaTitle: "Home Inspection Creemore | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Creemore from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Creemore is a historic village in Clearview Township in Simcoe County, at the foot of the Niagara Escarpment. ASADS provides certified home inspections across Creemore, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Creemore", "Stayner", "Glencairn", "Dunedin", "Collingwood (south)", "Mulmur"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 44.33,
+        longitude: -80.11,
+        localInsights: [
+          {
+        title: "Older Village Homes",
+        content: "Creemore has older homes in and around the village core. Farms and rural homes surround the village. We check older homes for wiring, plumbing, foundations, roofs and heating, and they may contain asbestos if built or renovated before about 1990."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      },
+      {
+        title: "Wood Heat",
+        content: "Wood stoves and fireplaces are common in the area, and insurers often ask for a WETT inspection before they will cover them."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Creemore",
+          paragraphs: [
+            "Creemore is a historic village in Clearview Township in Simcoe County, at the foot of the Niagara Escarpment. ASADS provides certified home inspections across Creemore, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Creemore book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Creemore home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-udora",
+        city: "Udora",
+        region: "York Region (Georgina)",
+        metaTitle: "Home Inspection Udora, ON | Certified Home Inspector | ASADS",
+        metaDescription: "Home inspection in Udora from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Udora is a rural hamlet at the eastern edge of the Town of Georgina. ASADS provides certified home inspections across Udora, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Udora", "Pefferlaw", "Sunderland", "Port Bolster", "Virginia", "Uxbridge (north)"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 44.26,
+        longitude: -79.17,
+        localInsights: [
+          {
+        title: "Rural and Farm Properties",
+        content: "Udora is mostly farmland and rural homes. Barns and outbuildings can be added to the inspection on request."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      },
+      {
+        title: "Wood Heat",
+        content: "Wood stoves and fireplaces are common in the area, and insurers often ask for a WETT inspection before they will cover them."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Udora",
+          paragraphs: [
+            "Udora is a rural hamlet at the eastern edge of the Town of Georgina. ASADS provides certified home inspections across Udora, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Udora book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Udora home inspection."
+          ]
+        }
+      },
+  {
+        slug: "home-inspection-schomberg",
+        city: "Schomberg",
+        region: "York Region (King Township)",
+        metaTitle: "Home Inspection Schomberg | Certified Inspector | ASADS",
+        metaDescription: "Home inspection in Schomberg from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+        description: "Schomberg is a historic village in King Township, in northern York Region. ASADS provides certified home inspections across Schomberg, with infrared imaging and a same-day written report.",
+        neighborhoods: ["Schomberg", "Nobleton", "King City", "Kettleby", "Lloydtown", "Tottenham (south)"],
+        phoneNumber: "(647) 801-9311",
+        latitude: 44.0,
+        longitude: -79.68,
+        localInsights: [
+          {
+        title: "Older Village Homes",
+        content: "Schomberg has older homes in and around the village core. Estate homes and horse farms are found in the surrounding countryside. We check older homes for wiring, plumbing, foundations, roofs and heating, and they may contain asbestos if built or renovated before about 1990."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties outside the village core use a private well and septic system. We inspect the visible parts, test the well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      },
+      {
+        title: "Wood Heat",
+        content: "Wood stoves and fireplaces are common in the area, and insurers often ask for a WETT inspection before they will cover them."
+      }
+        ],
+        localExpertise: {
+          title: "Home Inspection in Schomberg",
+          paragraphs: [
+            "Schomberg is a historic village in King Township, in northern York Region. ASADS provides certified home inspections across Schomberg, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Schomberg book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Schomberg home inspection."
+          ]
+        }
+      },
 ];
 
 /**
