@@ -8,6 +8,7 @@ import { InlineBookingForm } from "@/components/InlineBookingForm";
 import { serviceBySlug } from "@/data/serviceCityData";
 import { locationData } from "@/data/locationData";
 import titleOverrides from "@/data/serviceCityTitleOverrides.json";
+import locationOnlySlugs from "@/data/locationOnlySlugs.json";
 import { getCityExtra } from "@/data/serviceCityExtras";
 import { getCanonicalUrl, SITE_URL } from "@/lib/seo";
 import {
@@ -78,6 +79,10 @@ export default function ServiceCityPage() {
   const location = locationData.find(
     (l) => l.slug === `home-inspection-${citySlug}`
   );
+
+  if (location && (locationOnlySlugs as string[]).includes(location.slug)) {
+    return <Navigate to={`/locations/${location.slug}`} replace />;
+  }
 
   if (!service || !location) {
     return <Navigate to="/services" replace />;

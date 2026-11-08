@@ -37,7 +37,9 @@ function extractField(content, key) {
 const locationFullSlugs = [...locationRaw.matchAll(/slug:\s*"(home-inspection-[^"]+)"/g)].map(m => m[1]);
 // Clean slugs for service×city and blog×city URLs (e.g. "brampton" not "home-inspection-brampton")
 const locationSlugs = locationFullSlugs; // keep full for /locations/ pages
-const citySlugs = locationFullSlugs.map(s => s.replace(/^home-inspection-/, ''));
+// Towns that get a location page only (no service x city pages): src/data/locationOnlySlugs.json
+const locationOnly = new Set(JSON.parse(readFileSync(resolve(ROOT, 'src/data/locationOnlySlugs.json'), 'utf8')));
+const citySlugs = locationFullSlugs.filter(s => !locationOnly.has(s)).map(s => s.replace(/^home-inspection-/, ''));
 const blogSlugs     = extractField(blogRaw, 'slug');
 const blogDates     = extractField(blogRaw, 'date');
 

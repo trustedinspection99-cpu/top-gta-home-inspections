@@ -4424,6 +4424,587 @@ export const locationData: LocationData[] = [
       ]
     }
   },
+  // ============================================
+  // TOWNS ADDED 2026-11-08 (location page only; see locationOnlySlugs.json)
+  // ============================================
+  {
+    slug: "home-inspection-jacksons-point",
+    city: "Jackson's Point",
+    region: "York Region (Georgina)",
+    metaTitle: "Home Inspection Jackson's Point, ON | Home Inspector | ASADS",
+    metaDescription: "Home inspection in Jackson's Point from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Jackson's Point is a lakeside community in the Town of Georgina on the south shore of Lake Simcoe. ASADS provides certified home inspections across Jackson's Point, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Jackson's Point", "Sutton", "Keswick", "Willow Beach", "Port Bolster", "Pefferlaw"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 44.3,
+    longitude: -79.37,
+    localInsights: [
+      {
+        title: "Lake Simcoe Cottages and Year-Round Homes",
+        content: "Many homes near the lake started as seasonal cottages and were later winterized or added onto. We check how well additions tie into the original structure, whether insulation, heating and plumbing were upgraded for year-round use, and how the foundation and crawlspace handle moisture this close to the water."
+      },
+      {
+        title: "Waterfront Moisture and Drainage",
+        content: "High water tables and lake-effect weather put basements, crawlspaces and decks under pressure. Our thermal camera helps find hidden moisture in walls and floors, and we look closely at grading, sump pumps and downspouts."
+      },
+      {
+        title: "Wells and Septic Outside Serviced Areas",
+        content: "Some properties around Georgina rely on a private well and septic system. A home inspection covers the visible parts of the system; we can test the well water, and we recommend a septic contractor for a full septic inspection."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Jackson's Point",
+      paragraphs: [
+        "Jackson's Point is a lakeside community in the Town of Georgina on the south shore of Lake Simcoe. ASADS provides certified home inspections across Jackson's Point, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Jackson's Point book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Jackson's Point home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-pefferlaw",
+    city: "Pefferlaw",
+    region: "York Region (Georgina)",
+    metaTitle: "Home Inspection Pefferlaw | Certified Inspector | ASADS",
+    metaDescription: "Home inspection in Pefferlaw from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Pefferlaw is a rural community at the east end of the Town of Georgina, near the Lake Simcoe shore. ASADS provides certified home inspections across Pefferlaw, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Pefferlaw", "Port Bolster", "Udora", "Jackson's Point", "Sutton", "Virginia"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 44.31,
+    longitude: -79.2,
+    localInsights: [
+      {
+        title: "Rural and Riverside Properties",
+        content: "Pefferlaw has a mix of older village homes, riverside and lakeside cottages, and rural acreages. Older and converted homes often need a close look at structure, electrical upgrades and how well they were insulated for year-round living."
+      },
+      {
+        title: "Private Wells and Septic Systems",
+        content: "Most rural properties here use a private well and septic system. We inspect what is visible, test well water for bacteria and other contaminants, and recommend a septic contractor for the tank and bed."
+      },
+      {
+        title: "Wood Heat and Outbuildings",
+        content: "Wood stoves and fireplaces are common in the area, and many insurers ask for a WETT inspection. Detached garages, sheds and barns can be added to the inspection on request."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Pefferlaw",
+      paragraphs: [
+        "Pefferlaw is a rural community at the east end of the Town of Georgina, near the Lake Simcoe shore. ASADS provides certified home inspections across Pefferlaw, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Pefferlaw book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Pefferlaw home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-midhurst",
+    city: "Midhurst",
+    region: "Simcoe County (Springwater)",
+    metaTitle: "Home Inspection Midhurst | Certified Inspector | ASADS",
+    metaDescription: "Home inspection in Midhurst from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Midhurst is a community in Springwater Township, just north of Barrie. ASADS provides certified home inspections across Midhurst, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Midhurst", "Snow Valley", "Minesing", "Anten Mills", "Phelpston", "Barrie (north)"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 44.44,
+    longitude: -79.72,
+    localInsights: [
+      {
+        title: "Estate Homes and New Subdivisions",
+        content: "Midhurst has established estate lots alongside newer subdivisions. Larger custom homes call for a careful look at roofs with complex lines, multiple HVAC systems and finished basements; newer builds are checked for workmanship and Tarion warranty items."
+      },
+      {
+        title: "Grading and Drainage on Larger Lots",
+        content: "Lot grading, window wells and downspout discharge matter on larger properties with mature trees. We check drainage around the foundation and use thermal imaging to look for moisture in finished basements."
+      },
+      {
+        title: "Well Water Where It Applies",
+        content: "Some properties in and around Springwater use private wells. We can test the well water at the same visit as the home inspection."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Midhurst",
+      paragraphs: [
+        "Midhurst is a community in Springwater Township, just north of Barrie. ASADS provides certified home inspections across Midhurst, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Midhurst book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Midhurst home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-newcastle",
+    city: "Newcastle",
+    region: "Durham Region (Clarington)",
+    metaTitle: "Home Inspection Newcastle | Certified Inspector | ASADS",
+    metaDescription: "Home inspection in Newcastle from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Newcastle is a village in the Municipality of Clarington in Durham Region, near the Lake Ontario shore. ASADS provides certified home inspections across Newcastle, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Newcastle Village", "Port of Newcastle", "Bond Head", "Orono", "Bowmanville", "Courtice"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 43.92,
+    longitude: -78.59,
+    localInsights: [
+      {
+        title: "Historic Village Core and New Subdivisions",
+        content: "Newcastle combines older homes around the historic main street with large newer subdivisions. Older homes are checked for wiring, plumbing and foundation condition; newer homes for build quality and items to report under the Tarion warranty."
+      },
+      {
+        title: "Port of Newcastle Waterfront Homes",
+        content: "Homes near the lake face more wind-driven rain and moisture. We look closely at the building envelope, windows and attic ventilation, and use thermal imaging to find hidden leaks."
+      },
+      {
+        title: "New Build and PDI Inspections",
+        content: "With ongoing construction in the area, many buyers book a PDI or new construction inspection before taking possession, so deficiencies are on record from day one."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Newcastle",
+      paragraphs: [
+        "Newcastle is a village in the Municipality of Clarington in Durham Region, near the Lake Ontario shore. ASADS provides certified home inspections across Newcastle, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Newcastle book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Newcastle home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-courtice",
+    city: "Courtice",
+    region: "Durham Region (Clarington)",
+    metaTitle: "Home Inspection Courtice | Certified Inspector | ASADS",
+    metaDescription: "Home inspection in Courtice from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Courtice is a community in the Municipality of Clarington, between Oshawa and Bowmanville. ASADS provides certified home inspections across Courtice, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Courtice North", "Courtice South", "Hancock", "Darlington", "Bowmanville", "Oshawa (east)"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 43.91,
+    longitude: -78.8,
+    localInsights: [
+      {
+        title: "Suburban Homes from the 1970s Onward",
+        content: "Much of Courtice was built from the 1970s through the 2000s, with newer subdivisions still being added. Typical findings include aging roofs and furnaces, older windows, and attic insulation and ventilation that fall short of today's standards."
+      },
+      {
+        title: "Newer Construction",
+        content: "Newer homes are inspected for workmanship, grading and items to report under the Tarion warranty. A PDI inspection before possession makes sure deficiencies are recorded."
+      },
+      {
+        title: "Basements and Drainage",
+        content: "Finished basements are common. We check grading, downspouts and sump pumps, and use thermal imaging to look for moisture behind finished walls."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Courtice",
+      paragraphs: [
+        "Courtice is a community in the Municipality of Clarington, between Oshawa and Bowmanville. ASADS provides certified home inspections across Courtice, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Courtice book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Courtice home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-mount-albert",
+    city: "Mount Albert",
+    region: "York Region (East Gwillimbury)",
+    metaTitle: "Home Inspection Mount Albert | Certified Inspector | ASADS",
+    metaDescription: "Home inspection in Mount Albert from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Mount Albert is a village in the Town of East Gwillimbury, in York Region. ASADS provides certified home inspections across Mount Albert, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Mount Albert", "Ravenshoe", "Holt", "Sharon", "Queensville", "Holland Landing"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 44.13,
+    longitude: -79.31,
+    localInsights: [
+      {
+        title: "Village Homes and New Development",
+        content: "Mount Albert has older village homes as well as newer subdivisions. Older homes are checked for wiring, plumbing and foundation condition, newer ones for workmanship and warranty items."
+      },
+      {
+        title: "Rural Properties Nearby",
+        content: "Properties outside the village often have a private well and septic system. We test well water and recommend a septic contractor for the septic system."
+      },
+      {
+        title: "Wood Heat",
+        content: "Wood stoves and fireplaces are common in rural East Gwillimbury, and insurers often ask for a WETT inspection."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Mount Albert",
+      paragraphs: [
+        "Mount Albert is a village in the Town of East Gwillimbury, in York Region. ASADS provides certified home inspections across Mount Albert, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Mount Albert book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Mount Albert home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-holland-landing",
+    city: "Holland Landing",
+    region: "York Region (East Gwillimbury)",
+    metaTitle: "Home Inspection Holland Landing, ON | Home Inspector | ASADS",
+    metaDescription: "Home inspection in Holland Landing from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Holland Landing is a community in the Town of East Gwillimbury, just north of Newmarket along the Holland River. ASADS provides certified home inspections across Holland Landing, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Holland Landing", "River Drive Park", "Queensville", "Sharon", "Newmarket (north)", "Bradford"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 44.1,
+    longitude: -79.49,
+    localInsights: [
+      {
+        title: "Mix of Older and Newer Homes",
+        content: "Holland Landing includes older homes and cottages near the river as well as newer subdivisions. Older homes may have outdated electrical and plumbing; newer homes are checked for workmanship and warranty items."
+      },
+      {
+        title: "River and Low-Lying Areas",
+        content: "Properties close to the Holland River and low-lying areas can face high groundwater. We check basements, sump pumps and grading, and use thermal imaging to look for hidden moisture."
+      },
+      {
+        title: "Additions and Renovations",
+        content: "Many older homes here have been added onto over the years. We look at how additions connect to the original house, roof lines and foundations."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Holland Landing",
+      paragraphs: [
+        "Holland Landing is a community in the Town of East Gwillimbury, just north of Newmarket along the Holland River. ASADS provides certified home inspections across Holland Landing, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Holland Landing book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Holland Landing home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-tottenham",
+    city: "Tottenham",
+    region: "Simcoe County (New Tecumseth)",
+    metaTitle: "Home Inspection Tottenham | Certified Inspector | ASADS",
+    metaDescription: "Home inspection in Tottenham from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Tottenham is a community in the Town of New Tecumseth, in southern Simcoe County. ASADS provides certified home inspections across Tottenham, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Tottenham", "Beeton", "Alliston", "Schomberg", "Bond Head", "Loretto"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 44.02,
+    longitude: -79.8,
+    localInsights: [
+      {
+        title: "Growing Commuter Town",
+        content: "Tottenham has older homes near the town centre and many newer subdivisions. Newer homes are checked for workmanship and Tarion warranty items; older ones for roof, electrical, plumbing and foundation condition."
+      },
+      {
+        title: "Rural Properties Around Town",
+        content: "Homes outside town often have a private well and septic system. We can test well water at the same visit."
+      },
+      {
+        title: "Finished Basements",
+        content: "We use thermal imaging and moisture readings to check finished basements, and look at grading and sump pumps."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Tottenham",
+      paragraphs: [
+        "Tottenham is a community in the Town of New Tecumseth, in southern Simcoe County. ASADS provides certified home inspections across Tottenham, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Tottenham book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Tottenham home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-angus",
+    city: "Angus",
+    region: "Simcoe County (Essa)",
+    metaTitle: "Home Inspection Angus, ON | Certified Home Inspector | ASADS",
+    metaDescription: "Home inspection in Angus from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Angus is the largest community in Essa Township, near CFB Borden in Simcoe County. ASADS provides certified home inspections across Angus, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Angus", "Baxter", "Thornton", "Utopia", "Ivy", "Base Borden area"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 44.32,
+    longitude: -79.88,
+    localInsights: [
+      {
+        title: "Military Families and Frequent Moves",
+        content: "With CFB Borden nearby, many buyers are relocating on short timelines. We work around closing dates and deliver the report the same day."
+      },
+      {
+        title: "Homes from Several Eras",
+        content: "Angus has older homes as well as newer subdivisions. We check older homes for aging systems and newer homes for workmanship and warranty items."
+      },
+      {
+        title: "Sandy Soils and Drainage",
+        content: "Much of the area sits on sandy soils. We still check grading, downspouts and foundation walls carefully, and use thermal imaging to look for moisture."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Angus",
+      paragraphs: [
+        "Angus is the largest community in Essa Township, near CFB Borden in Simcoe County. ASADS provides certified home inspections across Angus, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Angus book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Angus home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-elora",
+    city: "Elora",
+    region: "Wellington County (Centre Wellington)",
+    metaTitle: "Home Inspection Elora, ON | Certified Home Inspector | ASADS",
+    metaDescription: "Home inspection in Elora from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Elora is a historic village in the Township of Centre Wellington, known for the Elora Gorge. ASADS provides certified home inspections across Elora, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Elora", "Fergus", "Salem", "Belwood", "Alma", "Ariss"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 43.68,
+    longitude: -80.43,
+    localInsights: [
+      {
+        title: "Historic Stone Homes",
+        content: "Elora is known for its 19th-century limestone buildings. Older stone homes need a careful look at mortar, foundations, moisture, wiring and plumbing upgrades, and heating."
+      },
+      {
+        title: "Newer Subdivisions",
+        content: "Newer homes on the edges of Elora and Fergus are checked for workmanship and items to report under the Tarion warranty."
+      },
+      {
+        title: "Rural Wells and Septic",
+        content: "Rural properties in Centre Wellington often use a private well and septic system. We test well water and recommend a septic contractor for the septic system."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Elora",
+      paragraphs: [
+        "Elora is a historic village in the Township of Centre Wellington, known for the Elora Gorge. ASADS provides certified home inspections across Elora, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Elora book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Elora home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-nobleton",
+    city: "Nobleton",
+    region: "York Region (King Township)",
+    metaTitle: "Home Inspection Nobleton | Certified Inspector | ASADS",
+    metaDescription: "Home inspection in Nobleton from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Nobleton is a village in King Township, in northern York Region. ASADS provides certified home inspections across Nobleton, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Nobleton", "King City", "Kettleby", "Schomberg", "Bolton (north)", "Kleinburg"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 43.89,
+    longitude: -79.65,
+    localInsights: [
+      {
+        title: "Estate and Custom Homes",
+        content: "Nobleton has many large custom homes on big lots. These call for a careful look at complex roofs, multiple heating and cooling systems, finished basements and outbuildings."
+      },
+      {
+        title: "Rural Properties Nearby",
+        content: "Properties outside the village may have a private well and septic system. We test well water and recommend a septic contractor for the septic system."
+      },
+      {
+        title: "Thermal Imaging for Large Homes",
+        content: "Our thermal camera helps find missing insulation, air leaks and hidden moisture in large homes where problems are easy to miss."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Nobleton",
+      paragraphs: [
+        "Nobleton is a village in King Township, in northern York Region. ASADS provides certified home inspections across Nobleton, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Nobleton book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Nobleton home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-byron",
+    city: "Byron",
+    region: "London (southwest)",
+    metaTitle: "Home Inspection Byron, ON | Certified Home Inspector | ASADS",
+    metaDescription: "Home inspection in Byron from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Byron is a neighbourhood in southwest London, Ontario. ASADS provides certified home inspections across Byron, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Byron", "Westmount", "Lambeth", "Boler Mountain area", "Oakridge", "Riverbend"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 42.96,
+    longitude: -81.33,
+    localInsights: [
+      {
+        title: "Established Suburban Homes",
+        content: "Byron has many homes built from the 1960s onward. Typical findings include aging roofs and furnaces, older windows, and attic insulation and ventilation that fall short of today's standards."
+      },
+      {
+        title: "Older Materials",
+        content: "Homes built before about 1990 may contain asbestos in materials such as vermiculite insulation, flooring or textured ceilings. We can test suspect materials."
+      },
+      {
+        title: "Basements and Drainage",
+        content: "We check grading, downspouts and sump pumps, and use thermal imaging to look for moisture in finished basements."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Byron",
+      paragraphs: [
+        "Byron is a neighbourhood in southwest London, Ontario. ASADS provides certified home inspections across Byron, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Byron book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Byron home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-listowel",
+    city: "Listowel",
+    region: "Perth County (North Perth)",
+    metaTitle: "Home Inspection Listowel | Certified Inspector | ASADS",
+    metaDescription: "Home inspection in Listowel from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Listowel is the largest community in the Municipality of North Perth, in Perth County. ASADS provides certified home inspections across Listowel, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Listowel", "Atwood", "Gowanstown", "Palmerston", "Harriston", "Milverton"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 43.73,
+    longitude: -80.95,
+    localInsights: [
+      {
+        title: "Older Town Homes",
+        content: "Listowel has many older homes near the town centre. We check wiring, plumbing, foundations, roofs and heating in older homes."
+      },
+      {
+        title: "Rural and Farm Properties",
+        content: "Surrounding farm and rural properties often use a private well and septic system. We test well water and can inspect outbuildings on request."
+      },
+      {
+        title: "Serving Listowel from the GTA",
+        content: "ASADS travels to Listowel and North Perth for home inspections and testing. Call to book a date."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Listowel",
+      paragraphs: [
+        "Listowel is the largest community in the Municipality of North Perth, in Perth County. ASADS provides certified home inspections across Listowel, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Listowel book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Listowel home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-grey-highlands",
+    city: "Grey Highlands",
+    region: "Grey County",
+    metaTitle: "Home Inspection Grey Highlands | Certified Inspector | ASADS",
+    metaDescription: "Home inspection in Grey Highlands from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Grey Highlands is a municipality in Grey County that includes Flesherton, Markdale, Kimberley and the Beaver Valley. ASADS provides certified home inspections across Grey Highlands, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Flesherton", "Markdale", "Kimberley", "Feversham", "Eugenia", "Priceville"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 44.26,
+    longitude: -80.55,
+    localInsights: [
+      {
+        title: "Beaver Valley and Rural Homes",
+        content: "Grey Highlands includes village homes, farmhouses and chalets in the Beaver Valley. Older and rural homes are checked for structure, roofs, electrical and heating, including wood heat."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most rural properties here use a private well and septic system. We test well water and recommend a septic contractor for the septic system."
+      },
+      {
+        title: "Serving Grey Highlands",
+        content: "ASADS travels to Flesherton, Markdale, Kimberley and the rest of Grey Highlands for home inspections and testing. Call to book a date."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Grey Highlands",
+      paragraphs: [
+        "Grey Highlands is a municipality in Grey County that includes Flesherton, Markdale, Kimberley and the Beaver Valley. ASADS provides certified home inspections across Grey Highlands, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Grey Highlands book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Grey Highlands home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-port-hope",
+    city: "Port Hope",
+    region: "Northumberland County",
+    metaTitle: "Home Inspection Port Hope | Certified Inspector | ASADS",
+    metaDescription: "Home inspection in Port Hope from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Port Hope is a historic town on Lake Ontario in Northumberland County. ASADS provides certified home inspections across Port Hope, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Downtown Port Hope", "Penryn Park", "Garden Hill", "Welcome", "Canton", "Cobourg"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 43.95,
+    longitude: -78.29,
+    localInsights: [
+      {
+        title: "Heritage Homes",
+        content: "Port Hope is known for its 19th-century downtown and many heritage homes. Older homes need a careful look at foundations, roofs, wiring, plumbing and heating, and may contain asbestos or lead paint."
+      },
+      {
+        title: "Lakeside and Rural Properties",
+        content: "Homes near the lake and in the surrounding countryside are checked for moisture, drainage and, for rural properties, private wells."
+      },
+      {
+        title: "Serving Port Hope and Cobourg",
+        content: "ASADS travels to Port Hope and nearby Cobourg for home inspections and testing. Call to book a date."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Port Hope",
+      paragraphs: [
+        "Port Hope is a historic town on Lake Ontario in Northumberland County. ASADS provides certified home inspections across Port Hope, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Port Hope book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Port Hope home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-oro-medonte",
+    city: "Oro-Medonte",
+    region: "Simcoe County",
+    metaTitle: "Home Inspection Oro-Medonte | Certified Inspector | ASADS",
+    metaDescription: "Home inspection in Oro-Medonte from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Oro-Medonte is a township in Simcoe County between Barrie and Orillia, including Horseshoe Valley and the Lake Simcoe shore. ASADS provides certified home inspections across Oro-Medonte, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Horseshoe Valley", "Shanty Bay", "Hawkestone", "Moonstone", "Warminster", "Craighurst"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 44.53,
+    longitude: -79.55,
+    localInsights: [
+      {
+        title: "Lakeshore and Valley Homes",
+        content: "Oro-Medonte has lakeshore homes, chalets around Horseshoe Valley and rural properties. Waterfront and converted cottages are checked for moisture, foundations and year-round upgrades."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Most properties use a private well and septic system. We test well water and recommend a septic contractor for the septic system."
+      },
+      {
+        title: "Wood Heat",
+        content: "Wood stoves and fireplaces are common, and insurers often ask for a WETT inspection."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Oro-Medonte",
+      paragraphs: [
+        "Oro-Medonte is a township in Simcoe County between Barrie and Orillia, including Horseshoe Valley and the Lake Simcoe shore. ASADS provides certified home inspections across Oro-Medonte, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Oro-Medonte book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Oro-Medonte home inspection."
+      ]
+    }
+  },
+  {
+    slug: "home-inspection-ramara",
+    city: "Ramara",
+    region: "Simcoe County",
+    metaTitle: "Home Inspection Ramara | Certified Inspector | ASADS",
+    metaDescription: "Home inspection in Ramara from $399. Certified inspector, infrared imaging and a same-day report, plus asbestos, mold, well water and WETT testing.",
+    description: "Ramara is a township in Simcoe County east of Orillia, on Lake Simcoe and Lake Couchiching, including Longford Mills, Brechin and Lagoon City. ASADS provides certified home inspections across Ramara, with infrared imaging and a same-day written report.",
+    neighborhoods: ["Longford Mills", "Brechin", "Lagoon City", "Atherley", "Udney", "Washago"],
+    phoneNumber: "(647) 801-9311",
+    latitude: 44.63,
+    longitude: -79.27,
+    localInsights: [
+      {
+        title: "Waterfront and Canal Homes",
+        content: "Ramara includes lakefront and canal-side homes in Lagoon City and Brechin and cottages around Longford Mills. Waterfront homes are checked for moisture, foundations, decks and docks, and how well cottages were converted for year-round use."
+      },
+      {
+        title: "Wells and Septic",
+        content: "Many properties use a private well and septic system. We test well water and recommend a septic contractor for the septic system."
+      },
+      {
+        title: "Serving Ramara and Orillia",
+        content: "ASADS travels to Ramara and the Orillia area for home inspections and testing. Call to book a date."
+      }
+    ],
+    localExpertise: {
+      title: "Home Inspection in Ramara",
+      paragraphs: [
+        "Ramara is a township in Simcoe County east of Orillia, on Lake Simcoe and Lake Couchiching, including Longford Mills, Brechin and Lagoon City. ASADS provides certified home inspections across Ramara, with infrared imaging and a same-day written report.",
+        "Buyers, sellers and owners in Ramara book pre-purchase, pre-listing and new construction inspections with us. ASADS also tests for asbestos (common in homes built before about 1990), mold and indoor air quality, radon and well water, and does WETT inspections for wood stoves and fireplaces, with a home inspection or on its own.",
+        "Call (647) 801-9311 or book online to schedule your Ramara home inspection."
+      ]
+    }
+  },
 ];
 
 /**

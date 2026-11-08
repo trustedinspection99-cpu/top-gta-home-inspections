@@ -1,5 +1,6 @@
 import { buildLocalExpertise } from "@/lib/localExpertise";
 import type { AreaLinks } from "@/data/locationAreaLinks";
+import locationOnlySlugs from "@/data/locationOnlySlugs.json";
 import React, { useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link, useLocation } from "react-router-dom";
@@ -544,7 +545,7 @@ export function LocationPageTemplate({
                   {featuredServices.map((service) => (
                     <Link
                       key={service.slug}
-                      to={`/services/${service.slug}/${locationSlug.replace(/^home-inspection-/, '')}`}
+                      to={(locationOnlySlugs as string[]).includes(locationSlug) ? `/services/${service.slug}` : `/services/${service.slug}/${locationSlug.replace(/^home-inspection-/, '')}`}
                       className="flex items-center gap-2 p-3 rounded-lg bg-muted/50 hover:bg-primary/10 border border-border/50 hover:border-primary/50 transition-colors text-sm"
                     >
                       <ArrowRight className="h-4 w-4 text-primary flex-shrink-0" aria-hidden="true" />

@@ -215,10 +215,12 @@ function extractLocationSlugs(content) {
   return results;
 }
 
+const locationOnly = new Set(JSON.parse(readFileSync(resolve(ROOT, 'src/data/locationOnlySlugs.json'), 'utf8')));
 const locationSlugs = extractLocationSlugs(locationRaw);
+const serviceCitySlugs = locationSlugs.filter(l => !locationOnly.has(l.fullSlug));
 
 serviceDefs.forEach(svc => {
-  locationSlugs.forEach(loc => {
+  serviceCitySlugs.forEach(loc => {
     const city = loc.city;
     const rawTitle = titleOverrides[`${svc.slug}/${loc.citySlug}`] ?? svc.title.replace(/\{city\}/g, city);
     const title = rawTitle.length > 60 ? rawTitle.slice(0, 57) + '...' : rawTitle;
@@ -271,8 +273,10 @@ if (!baseHtml.includes('<meta name="description"')) {
 // ─── Cross-link data ──────────────────────────────────────────────────────────
 
 // All city slugs (strip "home-inspection-" prefix)
-const allCitySlugs = locationSlugs.map(l => l.citySlug);
+// Location-only towns are left out of the sitewide link lists so existing pages stay unchanged.
+const allCitySlugs = serviceCitySlugs.map(l => l.citySlug);
 const allCityNames = Object.fromEntries(locationSlugs.map(l => [l.citySlug, l.city]));
+const svcCitySlugs = serviceCitySlugs.map(l => l.citySlug);
 
 // Service slugs + names
 const allServiceSlugs = serviceDefs.map(s => s.slug);
@@ -403,8 +407,8 @@ for (const page of pages) {
     const sSlug = parts[1];
     const related = allServiceSlugs.filter(s => s !== sSlug);
     linksHtml = nav([
-      [`${serviceNames[sSlug] || sSlug} — GTA cities`, aLinks(allCitySlugs.slice(0, 30).map(c => [`/services/${sSlug}/${c}`, allCityNames[c]]))],
-      [`${serviceNames[sSlug] || sSlug} — Ontario cities`, aLinks(allCitySlugs.slice(30).map(c => [`/services/${sSlug}/${c}`, allCityNames[c]]))],
+      [`${serviceNames[sSlug] || sSlug} — GTA cities`, aLinks(svcCitySlugs.slice(0, 30).map(c => [`/services/${sSlug}/${c}`, allCityNames[c]]))],
+      [`${serviceNames[sSlug] || sSlug} — Ontario cities`, aLinks(svcCitySlugs.slice(30).map(c => [`/services/${sSlug}/${c}`, allCityNames[c]]))],
       ['Related services', aLinks(related.map(s => [`/services/${s}`, serviceNames[s]]))],
       ['Home', aLinks([['/', 'Home'],['/services','All Services'],['/locations','All Cities']])],
     ]);
@@ -413,12 +417,12 @@ for (const page of pages) {
     // /services/:svc/:city — all cities for this service + all services for this city
     const sSlug = parts[1];
     const cSlug = parts[2];
-    const ci = allCitySlugs.indexOf(cSlug);
+    const ci = svcCitySlugs.indexOf(cSlug);
     // 12 nearby cities (wrap around)
     const nearby = [];
     for (let d = 1; d <= 6; d++) {
-      nearby.push(allCitySlugs[(ci - d + allCitySlugs.length) % allCitySlugs.length]);
-      nearby.push(allCitySlugs[(ci + d) % allCitySlugs.length]);
+      nearby.push(svcCitySlugs[(ci - d + svcCitySlugs.length) % svcCitySlugs.length]);
+      nearby.push(svcCitySlugs[(ci + d) % svcCitySlugs.length]);
     }
     linksHtml = nav([
       [`${serviceNames[sSlug] || sSlug} in nearby cities`, aLinks(nearby.map(c => [`/services/${sSlug}/${c}`, allCityNames[c]]))],

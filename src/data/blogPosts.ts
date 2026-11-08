@@ -7895,6 +7895,42 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">ASADS PDI inspections start from $349, with a same-day report you can bring to your walk-through. See <a href="/services/pdi-inspection/toronto" class="text-primary underline font-medium">PDI inspection in Toronto</a>, or call (647) 801-9311.</p>
     `,
   },
+  {
+    id: 120,
+    slug: "rural-home-inspection-ontario-well-septic",
+    title: "Rural Home Inspection in Ontario: Wells, Septic and What to Check",
+    metaTitle: "Rural Home Inspection Ontario: Well, Septic & More | ASADS",
+    metaDescription: "Buying a rural home in Ontario? What a home inspection covers on a rural property: the well, septic system, wood heat, oil tanks and outbuildings.",
+    excerpt: "What a home inspection covers on a rural Ontario property, and what to arrange separately: well water testing, septic inspection, WETT, oil tanks and outbuildings.",
+    category: "Buying Tips",
+    author: "ASADS Home Inspection",
+    date: "2026-11-08",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=500&fit=crop",
+    featured: false,
+    content: `
+      <p class="mb-4">A rural home comes with systems a city home does not have: a private well instead of municipal water, a septic system instead of a sewer, often wood heat, and sometimes barns and outbuildings. This guide explains what a home inspection covers on a rural Ontario property, and what you should arrange separately before you buy.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What the Home Inspection Covers</h2>
+      <p class="mb-4">A rural home inspection covers the same house systems as any other inspection: roof, structure, foundation, exterior, electrical, plumbing, heating and cooling, insulation and interior. On a rural property the inspector also looks at the visible parts of the well and septic system, the water treatment equipment, and any outbuildings you ask to include.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Well</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Well head:</strong> the cap, casing and the ground around it, so surface water cannot run into the well.</li>
+        <li><strong>Pump, pressure tank and treatment:</strong> softeners, UV systems and filters, and whether they appear maintained.</li>
+        <li><strong>Water quality:</strong> test for bacteria (total coliforms and E. coli) at minimum. Public Health Ontario tests private well water for bacteria at no charge; a full test from an accredited lab also covers nitrates, metals and other chemistry. See <a href="/blog/coliform-in-well-water-ontario" class="text-primary underline font-medium">coliform in well water</a> and our <a href="/services/well-water-testing" class="text-primary underline font-medium">well water testing</a> service.</li>
+        <li><strong>Quantity:</strong> ask the seller for the well record and any flow test, especially for older or shallow wells.</li>
+      </ul>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">The Septic System</h2>
+      <p class="mb-4">A home inspection can note visible signs of trouble such as wet areas, odours or slow drains, but the tank and leaching bed are underground. Arrange a septic inspection by a licensed septic contractor, ideally with the tank pumped so its condition can be seen, and ask the municipality for the original permit and any records. Replacing a failed system is expensive, so this is worth doing before you firm up the offer.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Wood Heat</h2>
+      <p class="mb-4">Wood stoves and fireplaces are common in rural homes, and most insurers ask for a WETT inspection before they will cover them. See our <a href="/services/wett" class="text-primary underline font-medium">WETT inspection</a> service.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Oil and Propane Tanks</h2>
+      <p class="mb-4">Older rural homes may heat with oil or propane. Insurers often ask the age of an oil tank, and an older tank can affect coverage, so find out its age and condition early.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Outbuildings, Barns and Older Wiring</h2>
+      <p class="mb-4">Barns, sheds and detached garages can be added to the inspection on request. Older rural homes and outbuildings sometimes have outdated or amateur wiring, and homes built or renovated before about 1990 may contain asbestos, for example in vermiculite insulation.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Areas We Serve</h2>
+      <p class="mb-4">ASADS inspects rural properties across southern Ontario, including <a href="/locations/home-inspection-flamborough" class="text-primary underline font-medium">Flamborough</a>, <a href="/locations/home-inspection-oro-medonte" class="text-primary underline font-medium">Oro-Medonte</a>, <a href="/locations/home-inspection-grey-highlands" class="text-primary underline font-medium">Grey Highlands</a>, <a href="/locations/home-inspection-ramara" class="text-primary underline font-medium">Ramara</a>, <a href="/locations/home-inspection-listowel" class="text-primary underline font-medium">Listowel</a>, <a href="/locations/home-inspection-pefferlaw" class="text-primary underline font-medium">Pefferlaw</a>, <a href="/locations/home-inspection-caledon" class="text-primary underline font-medium">Caledon</a> and <a href="/locations/home-inspection-king-city" class="text-primary underline font-medium">King</a>. Call (647) 801-9311 to book.</p>
+    `,
+  },
 ];
 
 // Helper function to get blog post metadata (for listing pages)

@@ -10,6 +10,16 @@ export interface AreaLinks {
 }
 
 export const locationAreaLinks: Record<string, AreaLinks> = {
+  "home-inspection-flamborough": {
+    heading: "Flamborough, Waterdown and Rural Hamilton",
+    text: "Flamborough covers Waterdown and the rural north of the City of Hamilton. Many properties here have a private well and septic system, wood heat or outbuildings. Our rural home inspection guide explains what is covered and what to arrange separately, and we also serve neighbouring Burlington and Hamilton.",
+    links: [
+      { label: "Rural home inspection in Ontario: wells, septic and more", href: "/blog/rural-home-inspection-ontario-well-septic" },
+      { label: "Well water testing", href: "/services/well-water-testing" },
+      { label: "Home inspection in Hamilton", href: "/locations/home-inspection-hamilton" },
+      { label: "Home inspection in Burlington", href: "/locations/home-inspection-burlington" },
+    ],
+  },
   "home-inspection-acton": {
     heading: "Acton and the Town of Halton Hills",
     text: "Acton is part of the Town of Halton Hills, along with Georgetown and the surrounding rural area. For home inspections anywhere in Halton Hills, see the Halton Hills page.",
