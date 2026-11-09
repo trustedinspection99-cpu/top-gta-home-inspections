@@ -3983,7 +3983,7 @@ export const blogPostsData: BlogPost[] = [
     slug: "asbestos-banned-canada",
     title: "When Was Asbestos Banned in Canada? What Ontario Homeowners Need to Know",
     metaTitle: "When Was Asbestos Banned in Canada? | ASADS",
-    metaDescription: "Canada banned asbestos on December 30, 2018. What the ban covers, what it doesn't, Ontario's rules for existing asbestos, and when to test an older home.",
+    metaDescription: "Canada fully banned asbestos in 2018, but millions of pre-1990 Ontario homes still contain it. Learn where it hides, health risks, and when to test.",
     category: "Asbestos & Hazardous Materials",
     date: "2026-04-12",
     readTime: "7 min read",
@@ -4005,20 +4005,43 @@ export const blogPostsData: BlogPost[] = [
       </ul>
       <p class="mb-4">The 2018 ban prevents new asbestos from entering Canada — but it does not retroactively remove asbestos already present in buildings constructed before the ban.</p>
 
-      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What the 2018 Ban Covers, and What It Does Not</h2>
-      <p class="mb-4">The <em>Prohibition of Asbestos and Products Containing Asbestos Regulations</em>, made under the Canadian Environmental Protection Act, ban the manufacture, import, sale and use of asbestos and of new products that contain it. A small number of narrow exclusions exist for specialised industrial and military uses; none of them apply to homes.</p>
-      <p class="mb-4">What the ban does <strong>not</strong> do:</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Year Were Ontario Homes Most Likely to Contain Asbestos?</h2>
+      <p class="mb-4">The highest-risk period for asbestos in Ontario residential construction is approximately <strong>1930 to 1990</strong>. Use of asbestos peaked in the 1950s–1970s and declined through the 1980s.</p>
       <ul class="list-disc pl-6 mb-4 space-y-2">
-        <li>It does not require homeowners to remove asbestos that is already in a house.</li>
-        <li>It does not mean a house built before 2018 has been checked or cleared.</li>
-        <li>It does not change the rules for disturbing existing asbestos during renovation or demolition.</li>
+        <li><strong>Built before 1945:</strong> High risk. Pipe insulation, boiler insulation, floor tiles.</li>
+        <li><strong>Built 1950–1979:</strong> Very high risk. Peak asbestos use. Found in ceiling tiles, textured coatings, drywall compound, vinyl floor tiles, pipe wrap, duct insulation, and exterior siding (Transite).</li>
+        <li><strong>Built 1980–1990:</strong> Moderate risk. Asbestos was being phased out but still present in some materials, particularly floor tiles, roofing materials, and drywall joint compound.</li>
+        <li><strong>Built after 1990:</strong> Low risk. Asbestos had been largely eliminated from mainstream building materials by this point.</li>
       </ul>
 
-      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Ontario Rules for Asbestos Already in Buildings</h2>
-      <p class="mb-4">In Ontario, work that disturbs asbestos in buildings is governed by Ontario Regulation 278/05 under the Occupational Health and Safety Act. Contractors must identify suspect materials before work begins and follow set procedures for removal, which is why many contractors ask for asbestos test results before quoting a renovation in an older home.</p>
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Where Is Asbestos Found in Ontario Homes?</h2>
 
-      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Was Your House Built Before the Ban?</h2>
-      <p class="mb-4">Almost every Canadian home was built before 2018, but the ban date matters less than the decade of construction: most asbestos use in houses had ended by about 1990. For the decade-by-decade history and the materials used in each period, see <a href="/blog/when-was-asbestos-used-in-homes-canada" class="text-primary hover:underline">when asbestos was used in Canadian homes: a complete timeline</a>. For where it is usually found, see <a href="/blog/asbestos-in-ontario-homes-materials" class="text-primary hover:underline">asbestos materials in Ontario homes</a>.</p>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Insulation</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Vermiculite attic insulation</strong> — Vermiculite mined from Libby, Montana (distributed under the "Zonolite" brand) was heavily contaminated with asbestos. If your attic has grey, pebble-like insulation, assume it may contain asbestos until tested.</li>
+        <li><strong>Pipe and duct insulation</strong> — White, grey, or tan wrapping on heating pipes, especially in older boiler systems and furnace ductwork.</li>
+        <li><strong>Boiler/furnace insulation</strong> — Blanket or cement insulation around old oil or gas boilers.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Flooring</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>9x9 inch vinyl floor tiles</strong> — A strong indicator of asbestos. These small tiles were almost universally made with asbestos binders. Common in basements, kitchens, and utility rooms of 1950s–1970s homes.</li>
+        <li><strong>12x12 inch vinyl tiles (pre-1980)</strong> — High probability of asbestos content.</li>
+        <li><strong>Floor tile adhesive (black mastic)</strong> — Even if tiles have been replaced, the black adhesive beneath may contain asbestos.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Drywall and Plaster</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Drywall joint compound (mud)</strong> — Pre-1980 joint compound frequently contained asbestos. Sanding old drywall seams releases fibres.</li>
+        <li><strong>Textured ceiling coatings ("popcorn ceiling")</strong> — Spray-applied ceiling textures used before 1979 commonly contained asbestos.</li>
+        <li><strong>Plaster walls</strong> — Older plaster mixtures sometimes included asbestos for strength and fire resistance.</li>
+      </ul>
+
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Exterior Materials</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Asbestos cement siding ("Transite")</strong> — Flat, rigid grey siding panels or shingles common on mid-century Ontario homes. When intact, minimal risk. When cut or drilled, fibres are released.</li>
+        <li><strong>Roof shingles (asbestos-cement)</strong> — Some older pitched roofs used cement shingles containing asbestos.</li>
+      </ul>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Is Asbestos Dangerous If Left Alone?</h2>
       <p class="mb-4">Asbestos that is <strong>non-friable</strong> (bound in a solid matrix, intact, not crumbling) poses minimal risk in normal living conditions. Fibres cannot become airborne from intact materials. <strong>Friable asbestos</strong> — material that can be crumbled by hand pressure — is an immediate health hazard.</p>
@@ -4037,8 +4060,8 @@ export const blogPostsData: BlogPost[] = [
       <h3 class="font-heading text-xl font-semibold mt-6 mb-3">When was asbestos banned in Canada?</h3>
       <p class="mb-4">Canada fully banned asbestos on December 30, 2018, under the Prohibition of Asbestos and Products Containing Asbestos Regulations. The ban covers manufacture, import, sale, and use of asbestos and asbestos-containing products. However, asbestos already present in existing buildings is not removed by the ban.</p>
 
-      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">Does the asbestos ban mean my house is asbestos-free?</h3>
-      <p class="mb-4">No. The 2018 ban stops new asbestos products being made, imported or sold. It does not remove asbestos already in homes, and homes built before about 1990 commonly still contain it in insulation, flooring, drywall compound and siding. Only lab testing of a sample can confirm whether a material contains asbestos.</p>
+      <h3 class="font-heading text-xl font-semibold mt-6 mb-3">What year were homes built with asbestos in Canada?</h3>
+      <p class="mb-4">Canadian homes built between approximately 1930 and 1990 have the highest probability of containing asbestos-containing materials. The peak period was 1950–1979. Homes built after 1990 have very low risk.</p>
 
       <h3 class="font-heading text-xl font-semibold mt-6 mb-3">How do I know if my house has asbestos?</h3>
       <p class="mb-4">You cannot tell by looking. Asbestos fibres are microscopic, and many materials containing asbestos look identical to those that don't. The only way to confirm whether a material contains asbestos is through laboratory analysis of a bulk sample collected by a certified inspector.</p>
@@ -4381,7 +4404,7 @@ export const blogPostsData: BlogPost[] = [
       <p class="mb-4">Through the 1980s, the Canadian construction industry began phasing out asbestos materials as liability concerns grew and alternative products became available. Chrysotile asbestos continued to be used in certain products — notably floor tiles, roofing, and friction materials — until the late 1980s. Homes built up to approximately <strong>1988–1990</strong> should be considered potentially asbestos-containing in certain applications.</p>
 
       <h3 class="font-heading text-xl font-semibold mt-6 mb-3">1990s–2000s: Near-Complete Phase-Out</h3>
-      <p class="mb-4">By the early 1990s, most asbestos-containing construction products had been removed from the Canadian market, though the actual regulations were slow to follow. Canada maintained a position of "controlled use" through the 2000s, primarily because of its chrysotile mining industry (mainly in Quebec). A near-total ban on asbestos was implemented incrementally through the 2010s, with the final regulations under the Canadian Environmental Protection Act coming into effect in 2018. For what the 2018 ban covers and what it means for an older home, see <a href="/blog/asbestos-banned-canada" class="text-primary hover:underline">when asbestos was banned in Canada</a>.</p>
+      <p class="mb-4">By the early 1990s, most asbestos-containing construction products had been removed from the Canadian market, though the actual regulations were slow to follow. Canada maintained a position of "controlled use" through the 2000s, primarily because of its chrysotile mining industry (mainly in Quebec). A near-total ban on asbestos was implemented incrementally through the 2010s, with the final regulations under the Canadian Environmental Protection Act coming into effect in 2018.</p>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Where Is Asbestos Found in Ontario Homes?</h2>
       <p class="mb-4">The following materials commonly contained asbestos in homes built before 1990. The presence of asbestos in any of these materials cannot be confirmed by appearance alone — laboratory testing of a sample is required.</p>
