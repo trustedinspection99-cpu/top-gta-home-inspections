@@ -75,6 +75,21 @@ const manualExtras: Record<string, CityExtra> = {
       { label: "What is a PDI inspection?", href: "/blog/what-is-a-pdi-inspection-ontario" },
     ],
   },
+  // Owner approved 2026-11-09: WETT Mississauga only (Google was showing the Oakville and Woodstock WETT pages for Mississauga searches).
+  "wett/mississauga": {
+    heading: "WETT Inspection in Mississauga: Fireplaces, Wood Stoves and Inserts",
+    paragraphs: [
+      "Mississauga homes need a WETT inspection most often when a buyer's insurer asks for one before closing, when an insurer asks at renewal, or after a wood stove or fireplace insert has been added. Many homes in Port Credit, Lakeview, Cooksville and Malton date from the 1950s and 1960s and still have their original masonry fireplace and chimney, where the flue liner, the chimney crown and clearances to the mantel and framing are the usual concerns. In Erin Mills, Meadowvale, Lorne Park and Churchill Meadows, newer homes more often have factory-built fireplaces, gas conversions or wood inserts installed later, so the inspection also confirms the unit is installed to the manufacturer's instructions and CSA B365.",
+      "Installing a new wood stove, insert or wood-burning fireplace usually needs a building permit, so check with the City of Mississauga's building division before work starts, and book the WETT inspection once the installation is finished so the certificate matches what is in the home. ASADS WETT Level 1 inspections start from $199, and we also inspect in Oakville, Brampton, Etobicoke and Milton.",
+    ],
+    links: [
+      { label: "WETT inspection cost in Ontario", href: "/blog/wett-inspection-cost-ontario" },
+      { label: "What is a WETT inspection?", href: "/blog/what-is-wett-inspection" },
+      { label: "WETT inspection Oakville", href: "/services/wett/oakville" },
+      { label: "WETT inspection Brampton", href: "/services/wett/brampton" },
+      { label: "WETT inspection Etobicoke", href: "/services/wett/etobicoke" },
+    ],
+  },
 };
 
 export const serviceCityExtras: Record<string, CityExtra> = Object.fromEntries([
