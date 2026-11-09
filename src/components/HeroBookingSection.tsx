@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CheckCircle2, Star, Phone, ArrowRight, Loader2 } from "lucide-react";
 
+import { getCameFrom, logBookingSubmit } from "@/lib/leadSource";
 const INSPECTION_TYPES = [
   { label: "Pre-Purchase Home Inspection — From $399", value: "Pre-Purchase Home Inspection" },
   { label: "Pre-Listing Inspection — From $399", value: "Pre-Listing Inspection" },
@@ -85,8 +86,10 @@ export function HeroBookingSection({
           address: form.address || "",
           city: form.city || "",
           preferred_date: form.preferred_date || "Flexible",
+          came_from: getCameFrom("homepage form"),
         }),
       });
+      if (res.ok) logBookingSubmit("homepage form");
       setStatus(res.ok ? "sent" : "error");
     } catch {
       setStatus("error");

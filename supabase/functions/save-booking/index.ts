@@ -30,12 +30,37 @@ function parseScheduledAt(date: string, time: string): string | null {
   }
 }
 
+
+// "Came from" line for the booking email (owner approved 2026-11-09). Sent by the booking forms; optional.
+function esc(v: unknown): string {
+  return String(v ?? '').slice(0, 200).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]!));
+}
+function cameFromText(cf: any): string {
+  if (!cf || typeof cf !== 'object') return '';
+  const labels: Record<string, string> = {
+    organic: 'Google or Bing search',
+    direct: 'Typed the address, a bookmark or an app link',
+    paid: 'Paid ad',
+    social: 'Social media',
+    referral: 'Link from another website',
+  };
+  const parts: string[] = [];
+  const src = labels[cf.source] ?? (cf.source ? String(cf.source) : 'Unknown (visit started before tracking)');
+  parts.push(src + (cf.referrer && cf.source !== 'organic' && cf.source !== 'direct' ? ' (' + cf.referrer + ')' : ''));
+  if (cf.landing) parts.push('first page ' + cf.landing);
+  if (cf.booked_on) parts.push('booked on ' + cf.booked_on + (cf.form ? ' (' + cf.form + ')' : ''));
+  const utm = [cf.utm_source, cf.utm_medium, cf.utm_campaign, cf.utm_term].filter(Boolean).join(' / ');
+  if (utm) parts.push('tags: ' + utm);
+  return esc(parts.join(' → ')).replace(/\u2192/g, '&rarr;');
+}
+
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: cors });
 
   try {
     const body = await req.json();
     const { service, name, phone, email, city, address, preferred_date, preferred_time, property_type, notes } = body;
+    const cameFrom = cameFromText(body.came_from);
 
     if (!name || !phone || !service) {
       return new Response(JSON.stringify({ error: 'Missing required fields' }), {
@@ -120,6 +145,7 @@ Deno.serve(async (req) => {
 <li>Time: ${preferred_time || 'Any time'}</li>
 <li>Property type: ${property_type || '—'}</li>
 <li>Notes: ${notes || '—'}</li>
+${cameFrom ? '<li><strong>Came from:</strong> ' + cameFrom + '</li>' : ''}
 ${job?.id ? '<li>Job ID: ' + job.id + '</li>' : ''}
 </ul>`,
         ...(icsAttachment ? {

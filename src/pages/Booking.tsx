@@ -16,6 +16,7 @@ import { Calendar as CalendarIcon, CheckCircle, Phone, Clock, Shield, FileText }
 import { useToast } from "@/hooks/use-toast";
 
 
+import { getCameFrom, logBookingSubmit } from "@/lib/leadSource";
 const inspectionTypes = [
   { value: "pre-purchase", label: "Pre-Purchase Home Inspection", price: "$399+" },
   { value: "pre-listing", label: "Pre-Listing Inspection", price: "$349+" },
@@ -92,10 +93,12 @@ export default function Booking() {
           preferred_date: date ? format(date, "PPP") : "Flexible",
           preferred_time: formData.timeSlot || "Any time",
           notes: formData.notes || "",
+          came_from: getCameFrom("booking page"),
         }),
       });
 
       if (response.ok) {
+        logBookingSubmit("booking page");
         toast({
           title: "Appointment Confirmed!",
           description: "Should any scheduling changes be required, we will contact you within 24 hours.",

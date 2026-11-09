@@ -6,6 +6,7 @@
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { supabase } from '@/lib/supabase';
+import { rememberVisit } from '@/lib/leadSource';
 
 const SESSION_KEY = 'asads_session';
 
@@ -46,6 +47,17 @@ const Tracker: React.FC = () => {
 
         const params = new URLSearchParams(window.location.search);
         const referrer = document.referrer || '';
+        let refHost = '';
+        try { refHost = referrer ? new URL(referrer).hostname : ''; } catch { refHost = ''; }
+        rememberVisit({
+          source: detectSource(referrer, params),
+          landing: pathname,
+          referrer: refHost,
+          utm_source: params.get('utm_source'),
+          utm_medium: params.get('utm_medium'),
+          utm_campaign: params.get('utm_campaign'),
+          utm_term: params.get('utm_term'),
+        });
 
         supabase.from('visitor_sessions').insert({
           id: sessionId,

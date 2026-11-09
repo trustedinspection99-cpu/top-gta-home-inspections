@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import { getCameFrom, logBookingSubmit } from "@/lib/leadSource";
 const INSPECTION_TYPES = [
   { label: "Pre-Purchase Inspection — from $399", value: "Pre-Purchase Inspection" },
   { label: "Pre-Listing Inspection — from $399", value: "Pre-Listing Inspection" },
@@ -55,9 +56,10 @@ export function InlineBookingForm({ defaultService = "", city }: InlineBookingFo
           phone: form.phone,
           city: form.city || "",
           preferred_date: form.preferred_date || "Flexible",
+          came_from: getCameFrom("inline form"),
         }),
       });
-      if (res.ok) { setStatus("sent"); } else { setStatus("error"); }
+      if (res.ok) { logBookingSubmit("inline form"); setStatus("sent"); } else { setStatus("error"); }
     } catch {
       setStatus("error");
     }
