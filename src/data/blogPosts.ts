@@ -6618,7 +6618,7 @@ export const blogPostsData: BlogPost[] = [
     author: "ASADS Team",
     date: "2026-04-13",
     readTime: "9 min read",
-    image: "https://images.unsplash.com/photo-1582560475093-ba66accbc095?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
     featured: false,
     content: `
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Does a Home Inspection Cover in Ontario?</h2>

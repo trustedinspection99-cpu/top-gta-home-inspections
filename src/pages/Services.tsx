@@ -96,7 +96,7 @@ const specialtyServices = [
   { icon: Zap,           title: "Same-Day Inspection",    description: "Need an inspection today? Call before noon — inspector arrives same day. No rush surcharge. 106 Ontario cities, 7 days a week.",            href: "/services/same-day-home-inspection", price: "From $299", duration: "Same day" },
   { icon: ShieldCheck,   title: "Forensic Renovation Inspection", description: "Protect your renovation from contractor fraud. Licence verification, OBC compliance at every stage, and forensic-grade reports admissible in court.", href: "/services/contractor-oversight",     price: "From $249/Visit", duration: "Per visit" },
   { icon: Bug,           title: "Termite & WDI Inspection", description: "Certified wood-destroying insect inspection. Termites, carpenter ants, wood-boring beetles — all documented in a same-day written report. No pest control affiliation.", href: "/services/termite-inspection", price: "From $199", duration: "1–2 hrs" },
-  { icon: Shield,        title: "Insurance Home Inspection", description: "Insurer requiring a report before issuing or renewing coverage? ASADS provides insurance-compliant inspections for older Ontario homes. Same-day report.", href: "/services/insurance-home-inspection", price: "From $399", duration: "2–3 hrs" },
+  { icon: Shield,        title: "Insurance Home Inspection", description: "Insurer requiring a report before issuing or renewing coverage? ASADS provides insurance-compliant inspections for older Ontario homes. Same-day report.", href: "/services/insurance-inspection", price: "From $399", duration: "2–3 hrs" },
 ];
 
 const trustItems = [

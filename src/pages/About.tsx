@@ -453,7 +453,7 @@ export default function About() {
                 { label: "Asbestos Testing",          href: "/services/asbestos-testing" },
                 { label: "WETT Inspection",           href: "/services/wett" },
                 { label: "Thermal Imaging",           href: "/services/thermal-imaging" },
-                { label: "Air Quality Testing",       href: "/services/air-quality-testing" },
+                { label: "Air Quality Testing",       href: "/services/air-quality" },
                 { label: "Lead Paint Testing",        href: "/services/lead-paint-testing" },
                 { label: "Well Water Testing",        href: "/services/well-water-testing" },
                 { label: "Commercial Inspection",     href: "/services/commercial" },
