@@ -1,8 +1,9 @@
 import { Droplets, TestTube, Beaker, ShieldCheck, Microscope, AlertTriangle } from "lucide-react";
+import { Link } from "react-router-dom";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export default function WellWaterTesting() {
-  const pageTitle = "Well Water Testing Ontario | E.coli, Bacteria & Arsenic | ASADS";
+  const pageTitle = "Private Well Water Testing Ontario | E.coli & Arsenic | ASADS";
   const metaDescription = "MOH-certified well water test for E.coli, bacteria, nitrates & arsenic. Private wells, cottages & rural Ontario. Sterile kit, accredited lab results. From $199.";
 
   return (
@@ -100,6 +101,42 @@ export default function WellWaterTesting() {
                 </li>
               ))}
             </ol>
+          </div>
+
+          <div className="mt-8">
+            <h3 className="text-xl font-bold text-slate-800 mb-4">Private Well Water Testing Near You</h3>
+            <p className="text-slate-700 mb-4">
+              Private wells are most common on rural and edge-of-town properties around the GTA, Simcoe,
+              Durham, Halton and Wellington. We collect the sample on site and deliver it to an accredited lab,
+              so you do not have to handle bottles or meet a drop-off deadline yourself. Buying a rural home?
+              See our <Link to="/blog/rural-home-inspection-ontario-well-septic" className="text-blue-700 underline font-medium">rural home inspection guide for wells and septic systems</Link>.
+            </p>
+            <ul className="flex flex-wrap gap-x-5 gap-y-2">
+              {[
+                { name: "Caledon", slug: "caledon" },
+                { name: "King City", slug: "king-city" },
+                { name: "Uxbridge", slug: "uxbridge" },
+                { name: "Stouffville", slug: "stouffville" },
+                { name: "East Gwillimbury", slug: "east-gwillimbury" },
+                { name: "Georgina", slug: "georgina" },
+                { name: "Halton Hills", slug: "halton-hills" },
+                { name: "Milton", slug: "milton" },
+                { name: "Clarington", slug: "clarington" },
+                { name: "Orillia", slug: "orillia" },
+                { name: "Collingwood", slug: "collingwood" },
+                { name: "Guelph", slug: "guelph" },
+                { name: "Centre Wellington", slug: "centre-wellington" },
+                { name: "Erin", slug: "erin" },
+                { name: "Puslinch", slug: "puslinch" },
+                { name: "Flamborough", slug: "flamborough" },
+              ].map((t) => (
+                <li key={t.slug}>
+                  <Link to={`/services/well-water-testing/${t.slug}`} className="text-blue-700 underline font-medium">
+                    Well water testing {t.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       }
