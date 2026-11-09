@@ -1905,8 +1905,8 @@ export const blogPostsData: BlogPost[] = [
     id: 31,
     slug: "asbestos-insurance-ontario",
     title: "How Insurance Companies Handle Asbestos Discovery in Ontario Homes",
-    metaTitle: "Asbestos & Home Insurance Ontario | What to Disclose | ASADS",
-    metaDescription: "Asbestos affects insurance coverage in Ontario home purchases. Learn what insurers require, what to disclose, and how a certified report protects you.",
+    metaTitle: "Does Home Insurance Cover Asbestos? Ontario Guide | ASADS",
+    metaDescription: "Does home insurance cover asbestos removal in Ontario? Usually not for renovations, sometimes after a fire or flood. What insurers ask and what to disclose.",
     excerpt: "Asbestos discovery during a home purchase or renovation can affect insurance coverage and legal liability in Ontario. Here's what insurers require and how certified testing protects you.",
     category: "Asbestos & Hazardous Materials",
     author: "ASADS Team",
@@ -1917,6 +1917,16 @@ export const blogPostsData: BlogPost[] = [
     content: `
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Asbestos and Home Insurance: The Connection</h2>
       <p class="mb-4">The relationship between asbestos and home insurance in Ontario is nuanced — and misunderstood by many buyers, sellers, and even real estate professionals. The presence of asbestos in a home does not, by itself, typically void homeowner insurance coverage. What matters is the condition of the asbestos-containing materials, how they are managed, and what activities are conducted in the home that might disturb them.</p>
+
+      <h2 class="font-heading text-2xl font-bold mt-8 mb-4">Does Home Insurance Cover Asbestos Removal in Ontario?</h2>
+      <p class="mb-4"><strong>Usually not, when the removal is your choice.</strong> A standard Ontario home insurance policy pays for sudden and accidental damage. It does not pay to remove asbestos that has been in the house since it was built, for example before a renovation, a basement finish or a sale.</p>
+      <p class="mb-4"><strong>Sometimes, when a covered event disturbs the asbestos.</strong> If a fire, a burst pipe or another insured loss damages drywall, plaster, floor tiles or pipe insulation that contain asbestos, the damaged material has to be removed safely before the repair can go ahead. Some insurers pay for that removal as part of the claim. Many policies also have a pollution or contaminant exclusion or a lower limit for this work, so the answer depends on your policy wording.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Call your broker before work starts and ask whether your policy has a pollution or asbestos exclusion.</li>
+        <li>Do not break, sand or remove materials you think contain asbestos until they are tested.</li>
+        <li>After a loss, have the damaged materials tested. A lab report shows the adjuster which materials contain asbestos and which do not, so only the work that is really needed is claimed.</li>
+      </ul>
+      <p class="mb-4">Not sure whether your home has asbestos? See <a href="/blog/when-was-asbestos-used-in-homes-canada" class="text-primary underline font-medium">when asbestos was used in Canadian homes</a> and <a href="/blog/asbestos-banned-canada" class="text-primary underline font-medium">when asbestos was banned in Canada</a>, or book <a href="/services/asbestos-testing" class="text-primary underline font-medium">asbestos testing</a>.</p>
 
       <h2 class="font-heading text-2xl font-bold mt-8 mb-4">What Insurers Actually Ask About</h2>
       <p class="mb-4">Most Ontario home insurance applications include questions about known environmental hazards. The specific questions vary by insurer, but typically include:</p>
