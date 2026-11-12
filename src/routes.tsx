@@ -74,6 +74,7 @@ const BlogCityPage = lazy(() => import('./pages/blog/BlogCityPage'));
 
 // Portal Pages
 const LoginPage = lazy(() => import('./pages/auth/LoginPage'));
+const ResetPasswordPage = lazy(() => import('./pages/auth/ResetPasswordPage'));
 const SignupPage = lazy(() => import('./pages/auth/SignupPage'));
 const RealtorSignupPage = lazy(() => import('./pages/auth/RealtorSignupPage'));
 const HomeownerDashboard = lazy(() => import('./pages/dashboard/HomeownerDashboard'));
@@ -169,6 +170,7 @@ export const routes: RouteObject[] = [
 
       // Portal routes
       { path: 'login', element: <LoginPage /> },
+      { path: 'reset-password', element: <ResetPasswordPage /> },
       { path: 'signup', element: <SignupPage /> },
       { path: 'signup/realtor', element: <RealtorSignupPage /> },
       { path: 'dashboard', element: <ProtectedRoute role="homeowner"><HomeownerDashboard /></ProtectedRoute> },

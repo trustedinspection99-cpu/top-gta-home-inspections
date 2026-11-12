@@ -14,6 +14,16 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [notice, setNotice] = useState('');
+
+  async function handleForgot() {
+    setError('');
+    setNotice('');
+    if (!email) { setError('Type your email address above, then click "Forgot password?" again.'); return; }
+    const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo: `${window.location.origin}/reset-password` });
+    if (error) { setError(error.message); return; }
+    setNotice('If an account exists for that email, a password reset link is on its way. Check your inbox and junk folder.');
+  }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -62,6 +72,10 @@ export default function LoginPage() {
             </div>
           )}
 
+          {notice && (
+            <div className="bg-green-50 border border-green-200 text-green-800 rounded-lg px-4 py-3 mb-5 text-sm">{notice}</div>
+          )}
+
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="space-y-1.5">
               <Label htmlFor="email">Email address</Label>
@@ -87,6 +101,9 @@ export default function LoginPage() {
                 required
                 autoComplete="current-password"
               />
+              <div className="text-right">
+                <button type="button" onClick={handleForgot} className="text-sm text-blue-600 hover:underline">Forgot password?</button>
+              </div>
             </div>
 
             <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={loading}>
