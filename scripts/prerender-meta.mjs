@@ -11,6 +11,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
+const noindexBlogSlugs = new Set(JSON.parse(readFileSync(resolve(ROOT, 'src/data/noindexBlogSlugs.json'), 'utf8')));
 const DIST = resolve(ROOT, 'dist');
 const BASE_URL = 'https://www.asads.ca';
 
@@ -473,6 +474,10 @@ for (const page of pages) {
   html = html.replace(/<link rel="canonical"[^>]*>/, () => `<link rel="canonical" href="${canonical}" />`);
   html = html.replace(/<meta name="description"[^>]*\/?>/g, '');
   html = html.replace('<meta name="robots"', () => `<meta data-rh="true" name="description" content="${d}" />\n    <meta name="robots"`);
+  // Blog posts hidden from Google (src/data/noindexBlogSlugs.json): server HTML says noindex too.
+  if (parts[0] === 'blog' && parts.length === 2 && noindexBlogSlugs.has(parts[1])) {
+    html = html.replace(/<meta name="robots" content="[^"]*"/, () => '<meta name="robots" content="noindex, follow"');
+  }
   const article = parts[0] === 'blog' && parts.length === 2 && articleAllowlist.has(parts[1]) ? blogArticles[parts[1]] : null;
   if (article) {
     html = html.replace(/<div id="root">[\s\S]*?<\/div>/, () => `<div id="root"><article style="max-width:48rem;margin:0 auto;padding:1rem"><h1 style="font-size:1.5rem;font-weight:700">${esc(article.title)}</h1><p>${esc(article.byline)}</p>${article.content}</article>${linksHtml}</div>`);

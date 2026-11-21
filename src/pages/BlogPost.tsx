@@ -16,6 +16,9 @@ import {
   Linkedin
 } from "lucide-react";
 import { blogPostsData } from "@/data/blogPosts";
+// Posts kept on the site but hidden from Google (owner, 2026-11-21: the asbestos how-to guide
+// took "asbestos testing" searches from the asbestos booking pages).
+import noindexBlogSlugs from "@/data/noindexBlogSlugs.json";
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
@@ -112,7 +115,8 @@ export default function BlogPost() {
         <title>{post.metaTitle}</title>
         <meta name="description" content={post.metaDescription} />
         <link rel="canonical" href={`https://www.asads.ca/blog/${post.slug}`} />
-        
+        {(noindexBlogSlugs as string[]).includes(post.slug) && <meta name="robots" content="noindex, follow" />}
+
         {/* Open Graph */}
         <meta property="og:site_name" content="ASADS Home Inspection" />
         <meta property="og:type" content="article" />

@@ -95,7 +95,9 @@ locationSlugs.forEach(s => lines.push(url(`/locations/${s}`, '0.8', 'monthly', L
 lines.push('');
 
 // Blog posts
-blogSlugs.forEach((s, i) => lines.push(url(`/blog/${s}`, '0.7', 'monthly', blogDates[i] || TODAY)));
+// Blog posts hidden from Google (src/data/noindexBlogSlugs.json) stay out of the sitemap.
+const noindexBlogSlugs = new Set(JSON.parse(readFileSync(resolve(ROOT, 'src/data/noindexBlogSlugs.json'), 'utf8')));
+blogSlugs.forEach((s, i) => { if (!noindexBlogSlugs.has(s)) lines.push(url(`/blog/${s}`, '0.7', 'monthly', blogDates[i] || TODAY)); });
 lines.push('');
 
 // Service × City cross-pages (clean city slug: /services/mold-inspection/brampton)
