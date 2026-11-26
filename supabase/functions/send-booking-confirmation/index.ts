@@ -52,7 +52,7 @@ serve(async (req) => {
       <div class="row"><span class="label">Preferred date/time</span><span class="value">${preferred_date}</span></div>
       <div class="row"><span class="label">Phone</span><span class="value">${client_phone}</span></div>
       ${total_price ? `<div class="total"><span class="total-label">Total</span><span class="total-value">${total_price}</span></div>` : ''}
-      ${bookingDetailsHtml(inspection_type)}
+      ${bookingDetailsHtml(inspection_type, preferred_date)}
       <div class="cta"><a href="tel:+16478019311">Questions? Call (647) 801-9311</a></div>
     </div>
     <div class="footer">ASADS Home Inspection · OAHI & InterNACHI Certified · asads.ca</div>

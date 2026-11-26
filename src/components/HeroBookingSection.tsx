@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CheckCircle2, Star, Phone, ArrowRight, Loader2 } from "lucide-react";
 
 import { getCameFrom, logBookingSubmit } from "@/lib/leadSource";
+import { isWithinWeek, SOON_NOTE } from "@/lib/bookingTiming";
 const INSPECTION_TYPES = [
   { label: "Pre-Purchase Home Inspection — From $399", value: "Pre-Purchase Home Inspection" },
   { label: "Pre-Listing Inspection — From $399", value: "Pre-Listing Inspection" },
@@ -203,6 +204,7 @@ export function HeroBookingSection({
                 <CheckCircle2 className="h-12 w-12 text-green-500 mx-auto mb-3" />
                 <p className="font-bold text-xl text-gray-900 mb-2">Booking Request Received!</p>
                 <p className="text-gray-500 text-sm">We'll call you within 30 minutes to confirm your booking.</p>
+                {isWithinWeek(form.preferred_date) && <p className="text-sm font-semibold text-amber-700 bg-amber-50 border border-amber-200 rounded-lg p-2 mt-2">{SOON_NOTE}</p>}
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-3">

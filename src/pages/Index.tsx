@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { TrustBadges } from "@/components/home/TrustBadges";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { SITE_URL } from "@/lib/seo";
+import { isWithinWeek, SOON_NOTE } from "@/lib/bookingTiming";
 import { 
   CheckCircle2, Shield, Clock, MapPin, Search, Calendar,
   Home, Zap, Droplets, Thermometer, Construction, 
@@ -288,6 +289,7 @@ const Index = () => {
                     <CheckCircle2 className="h-6 w-6 text-green-500 shrink-0" />
                     <p className="font-bold text-lg text-gray-900">Booking Request Received</p>
                   </div>
+                  {isWithinWeek(formData.preferred_date) && <p className="text-sm font-semibold text-amber-700 bg-amber-50 border border-amber-200 rounded-lg p-2 mt-2">{SOON_NOTE}</p>}
                   <div className="bg-gray-50 rounded-xl border border-gray-200 divide-y divide-gray-200 text-sm mb-4">
                     {formData.service && (
                       <div className="flex justify-between px-4 py-2.5">

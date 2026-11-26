@@ -146,13 +146,26 @@ export function serviceKey(service: string): string | null {
 const esc = (v: unknown) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]!));
 const list = (items: string[]) => '<ul style="margin:6px 0 16px;padding-left:20px">' + items.map((i) => `<li style="margin:4px 0">${esc(i)}</li>`).join('') + '</ul>';
 
-/** HTML block: not-yet-confirmed notice, then price and what to expect for the booked service. */
-export function bookingDetailsHtml(service: string): string {
+function daysUntil(date: string | null | undefined): number | null {
+  if (!date) return null;
+  const s = /^\d{4}-\d{2}-\d{2}$/.test(date) ? date + 'T12:00:00' : date.replace(/(\d+)(st|nd|rd|th)/i, '$1');
+  const d = new Date(s);
+  return isNaN(d.getTime()) ? null : (d.getTime() - Date.now()) / 86400000;
+}
+
+/** HTML block: not-yet-confirmed notice (owner scheduling rules 2026-11-25), then price and what to expect. */
+export function bookingDetailsHtml(service: string, preferredDate?: string | null): string {
   const key = serviceKey(service);
   const d = key ? TABLE[key] : null;
+  const days = daysUntil(preferredDate);
+  const soon = days !== null && days < 7;
+  const timing = soon
+    ? '<p style="margin:8px 0 0;color:#78350f"><b>Your preferred date is within the next 7 days.</b> Please call us at <a href="tel:+16478019311">(647) 801-9311</a> so we can confirm availability.</p>'
+    : '<p style="margin:8px 0 0;color:#78350f">We will contact you to confirm a date and time. If your preferred date is not available, we will offer the closest one.</p>';
   const notice = `<div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;padding:14px 16px;margin:16px 0">
 <p style="margin:0 0 6px;font-weight:700;color:#92400e">Your appointment is not confirmed yet</p>
-<p style="margin:0;color:#78350f">We schedule inspections by area, on set days for each city. We will call or email you within one business day to confirm a date and time that fits our route for your area. If your preferred date is not available, we will offer the closest one.</p>
+<p style="margin:0;color:#78350f">We work out of Cambridge and schedule inspections by area: cities closer to us are usually booked early in the week, and cities farther away later in the week.</p>
+${timing}
 </div>`;
   if (!d) return notice;
   return notice +

@@ -3,6 +3,7 @@ import { CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import { getCameFrom, logBookingSubmit } from "@/lib/leadSource";
+import { isWithinWeek, SOON_NOTE } from "@/lib/bookingTiming";
 const INSPECTION_TYPES = [
   { label: "Pre-Purchase Inspection — from $399", value: "Pre-Purchase Inspection" },
   { label: "Pre-Listing Inspection — from $399", value: "Pre-Listing Inspection" },
@@ -71,6 +72,7 @@ export function InlineBookingForm({ defaultService = "", city }: InlineBookingFo
         <CheckCircle className="h-10 w-10 text-green-500 mx-auto mb-2" />
         <p className="font-bold text-lg text-foreground mb-1">Quote Request Received!</p>
         <p className="text-muted-foreground text-sm">We'll call you within 30 minutes to confirm.</p>
+        {isWithinWeek(form.preferred_date) && <p className="text-sm font-semibold text-amber-700 bg-amber-50 border border-amber-200 rounded-lg p-2 mt-2">{SOON_NOTE}</p>}
       </div>
     );
   }

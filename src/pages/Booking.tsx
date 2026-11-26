@@ -17,6 +17,7 @@ import { useToast } from "@/hooks/use-toast";
 
 
 import { getCameFrom, logBookingSubmit } from "@/lib/leadSource";
+import { isWithinWeek, SOON_NOTE } from "@/lib/bookingTiming";
 const inspectionTypes = [
   { value: "pre-purchase", label: "Pre-Purchase Home Inspection", price: "$399+" },
   { value: "pre-listing", label: "Pre-Listing Inspection", price: "$349+" },
@@ -101,7 +102,7 @@ export default function Booking() {
         logBookingSubmit("booking page");
         toast({
           title: "Booking Request Received",
-          description: "We will call or email you within one business day to confirm your date and time.",
+          description: isWithinWeek(date) ? SOON_NOTE : "We will call or email you within one business day to confirm your date and time.",
         });
         setStep(4);
       } else {

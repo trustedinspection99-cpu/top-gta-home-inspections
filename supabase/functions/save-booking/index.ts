@@ -188,7 +188,7 @@ ${job?.id ? '<li>Job ID: ' + job.id + '</li>' : ''}
 <li><strong>Preferred time:</strong> ${preferred_time || 'Any time'}</li>
 ${address ? '<li><strong>Address:</strong> ' + address + '</li>' : ''}
 </ul>
-${bookingDetailsHtml(service)}
+${bookingDetailsHtml(service, preferred_date)}
 <p>For urgent bookings or questions, call <a href="tel:+16478019311">(647) 801-9311</a>.</p>
 <p>— Haroon Choudhry<br>ASADS Home Inspection</p>
 </div></div>`,
