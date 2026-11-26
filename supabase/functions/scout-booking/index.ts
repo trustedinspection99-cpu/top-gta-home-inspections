@@ -3,6 +3,7 @@
 // Supabase → Edge Functions → scout-booking → Edit
 
 import Anthropic from 'npm:@anthropic-ai/sdk';
+import { bookingDetailsHtml } from '../_shared/bookingDetails.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
 const anthropic = new Anthropic({ apiKey: Deno.env.get('ANTHROPIC_API_KEY') });
@@ -182,8 +183,8 @@ Deno.serve(async (req) => {
       body: JSON.stringify({
         from: 'bookings@asads.ca',
         to: details.client_email,
-        subject: `Inspection Booking Confirmed — ${details.address ?? 'Your Property'}`,
-        html: `<p>Hi ${details.client_name ?? 'there'},</p><p>Your inspection is confirmed for <strong>${details.inspection_date}</strong> at <strong>${details.address}</strong>.</p><p>Price: ${details.price}</p><p>We'll be in touch shortly. Call us at (647) 801-9311 with any questions.</p><p>— ASADS Home Inspection</p>`,
+        subject: `We received your booking request — ${details.address ?? 'Your Property'} (not confirmed yet)`,
+        html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto"><p>Hi ${details.client_name ?? 'there'},</p><p>Thank you, we have received your booking request. Here is what you asked for:</p><ul><li><strong>Service:</strong> ${details.inspection_type ?? ''}</li><li><strong>Preferred date:</strong> ${details.inspection_date ?? 'Flexible'}</li><li><strong>Address:</strong> ${details.address ?? ''}</li>${details.price ? `<li><strong>Quoted price:</strong> ${details.price}</li>` : ''}</ul>${bookingDetailsHtml(details.inspection_type ?? '', details.inspection_date)}<p>For urgent bookings or questions, call <a href="tel:+16478019311">(647) 801-9311</a>.</p><p>— Haroon Choudhry<br>ASADS Home Inspection</p></div>`,
       }),
     });
     await fetch('https://api.resend.com/emails', {
