@@ -1,5 +1,6 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import { bookingDetailsHtml } from '../_shared/bookingDetails.ts';
+import { addBookingToCalendar } from '../_shared/googleCalendar.ts';
 
 const supabase = createClient(
   Deno.env.get('SUPABASE_URL')!,
@@ -195,6 +196,9 @@ ${bookingDetailsHtml(service, preferred_date)}
         }),
       }).catch(() => {});
     }
+
+    // Owner's Google Calendar: 'CALL TO CONFIRM' event (never blocks the booking)
+    await addBookingToCalendar({ name, phone, email, service, city, address, preferred_date, preferred_time, notes, source: body.came_from?.booked_on || body.came_from?.form || 'website' });
 
     // Formspree backup
     fetch(FORMSPREE_URL, {

@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { bookingDetailsHtml } from "../_shared/bookingDetails.ts";
+import { addBookingToCalendar } from "../_shared/googleCalendar.ts";
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -91,6 +92,9 @@ serve(async (req) => {
         }),
       });
     }
+
+    // Owner's Google Calendar: 'CALL TO CONFIRM' event (never blocks the booking)
+    await addBookingToCalendar({ name: client_name, phone: client_phone, email: client_email, service: inspection_type, city, address, preferred_date, source: 'chat assistant' });
 
     // Notify admin
     await fetch("https://api.resend.com/emails", {
