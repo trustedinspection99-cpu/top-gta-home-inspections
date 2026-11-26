@@ -412,7 +412,7 @@ export default function Booking() {
                   <div className="bg-primary/10 rounded-lg p-4 text-center">
                     <Phone className="h-5 w-5 text-primary mx-auto mb-2" />
                     <p className="text-sm font-medium text-primary">Confirmation Call</p>
-                    <p className="text-xs text-muted-foreground mt-1">Your request is received. We schedule by area, so we will call or email you within one business day to confirm your date and time.</p>
+                    <p className="text-xs text-muted-foreground mt-1">Your request is received. We will call or email you within one business day to confirm your date and time.</p>
                   </div>
                   <div className="bg-primary/10 rounded-lg p-4 text-center">
                     <FileText className="h-5 w-5 text-primary mx-auto mb-2" />

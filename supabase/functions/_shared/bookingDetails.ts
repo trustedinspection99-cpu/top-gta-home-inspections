@@ -2,6 +2,8 @@
 // Prices: owner rate card, confirmed 2026-11-12 (all plus 13% HST). Radon is left unpriced:
 // the website shows two different starting prices, so the price is confirmed on the call.
 // Owner rule (2026-11-25): bookings are REQUESTS until ASADS confirms a date by phone or email.
+// Owner rule (2026-11-25, later): never mention where ASADS is based or that visits are planned by area;
+// clients expect a local inspector.
 
 type Details = { title: string; price: string[]; expect: string[] };
 
@@ -160,11 +162,10 @@ export function bookingDetailsHtml(service: string, preferredDate?: string | nul
   const days = daysUntil(preferredDate);
   const soon = days !== null && days < 7;
   const timing = soon
-    ? '<p style="margin:8px 0 0;color:#78350f"><b>Your preferred date is within the next 7 days.</b> Please call us at <a href="tel:+16478019311">(647) 801-9311</a> so we can confirm availability.</p>'
-    : '<p style="margin:8px 0 0;color:#78350f">We will contact you to confirm a date and time. If your preferred date is not available, we will offer the closest one.</p>';
+    ? '<p style="margin:0;color:#78350f"><b>Your preferred date is within the next 7 days.</b> Please call us at <a href="tel:+16478019311">(647) 801-9311</a> so we can confirm availability.</p>'
+    : '<p style="margin:0;color:#78350f">We will contact you to confirm your date and time. If your preferred date is not available, we will offer the closest one.</p>';
   const notice = `<div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;padding:14px 16px;margin:16px 0">
 <p style="margin:0 0 6px;font-weight:700;color:#92400e">Your appointment is not confirmed yet</p>
-<p style="margin:0;color:#78350f">We work out of Cambridge and schedule inspections by area: cities closer to us are usually booked early in the week, and cities farther away later in the week.</p>
 ${timing}
 </div>`;
   if (!d) return notice;
