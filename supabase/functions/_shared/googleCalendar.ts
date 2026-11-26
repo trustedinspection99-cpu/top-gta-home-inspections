@@ -1,6 +1,6 @@
 // Adds each new ASADS booking REQUEST to the owner's Google Calendar as a "CALL TO CONFIRM" event (owner request 2026-11-25).
 // Setup (once): the owner shares their Google Calendar with the service account (permission: "Make changes to events"),
-// and two Supabase secrets are set: GOOGLE_SA_JSON (service account key JSON) and GOOGLE_CALENDAR_ID (the calendar's address).
+// and two Supabase secrets are set: GOOGLE_SA_JSON_B64 (base64 of the key file) and GOOGLE_CALENDAR_ID (the calendar's address).
 // Never throws and never delays a booking by more than a few seconds: if anything fails, the booking and its emails still go out.
 
 type Req = {
@@ -67,7 +67,9 @@ function addHour(local: string): string {
 
 export async function addBookingToCalendar(r: Req): Promise<void> {
   try {
-    const saRaw = Deno.env.get('GOOGLE_SA_JSON');
+    // GOOGLE_SA_JSON_B64 (base64 of the key file) survives Windows shells; GOOGLE_SA_JSON is the plain-JSON fallback.
+    const b64 = Deno.env.get('GOOGLE_SA_JSON_B64');
+    const saRaw = b64 ? new TextDecoder().decode(Uint8Array.from(atob(b64), (c) => c.charCodeAt(0))) : Deno.env.get('GOOGLE_SA_JSON');
     const calendarId = Deno.env.get('GOOGLE_CALENDAR_ID');
     if (!saRaw || !calendarId) return; // not set up yet
     const sa = JSON.parse(saRaw);
