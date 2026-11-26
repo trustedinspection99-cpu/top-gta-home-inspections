@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { bookingDetailsHtml } from "../_shared/bookingDetails.ts";
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -41,16 +42,17 @@ serve(async (req) => {
 <body>
   <div class="wrap">
     <div class="header">
-      <h1>Inspection Booking Confirmed</h1>
+      <h1>Booking Request Received</h1>
       <p>ASADS Home Inspection · (647) 801-9311</p>
     </div>
     <div class="body">
-      <p style="color:#374151;font-size:15px;margin:0 0 20px">Hi ${client_name}, your inspection has been booked. We'll call to confirm your appointment time shortly.</p>
+      <p style="color:#374151;font-size:15px;margin:0 0 20px">Hi ${client_name}, thank you, we have received your booking request. It is not confirmed yet: we will call or email you to confirm the date and time.</p>
       <div class="row"><span class="label">Property</span><span class="value">${address}, ${city}</span></div>
       <div class="row"><span class="label">Service</span><span class="value">${inspection_type}</span></div>
-      <div class="row"><span class="label">Preferred time</span><span class="value">${preferred_date}</span></div>
+      <div class="row"><span class="label">Preferred date/time</span><span class="value">${preferred_date}</span></div>
       <div class="row"><span class="label">Phone</span><span class="value">${client_phone}</span></div>
       ${total_price ? `<div class="total"><span class="total-label">Total</span><span class="total-value">${total_price}</span></div>` : ''}
+      ${bookingDetailsHtml(inspection_type)}
       <div class="cta"><a href="tel:+16478019311">Questions? Call (647) 801-9311</a></div>
     </div>
     <div class="footer">ASADS Home Inspection · OAHI & InterNACHI Certified · asads.ca</div>
@@ -84,7 +86,7 @@ serve(async (req) => {
         body: JSON.stringify({
           from: "ASADS Home Inspection <bookings@asads.ca>",
           to: [client_email],
-          subject: `Inspection Booked — ${address}, ${city}`,
+          subject: `We received your booking request — ${address}, ${city} (not confirmed yet)`,
           html: clientHtml,
         }),
       });

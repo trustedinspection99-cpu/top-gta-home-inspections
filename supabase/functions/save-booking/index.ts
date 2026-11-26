@@ -1,4 +1,5 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import { bookingDetailsHtml } from '../_shared/bookingDetails.ts';
 
 const supabase = createClient(
   Deno.env.get('SUPABASE_URL')!,
@@ -12,10 +13,19 @@ const cors = {
   'Access-Control-Allow-Headers': 'authorization, content-type, x-client-info, apikey',
 };
 
+// btoa() only accepts Latin-1 and threw on curly apostrophes, dashes and emoji typed by
+// clients (iPhone smart punctuation), which failed the whole booking. Encode as UTF-8 first.
+function utf8Base64(text: string): string {
+  const bytes = new TextEncoder().encode(text);
+  let bin = '';
+  for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  return btoa(bin);
+}
+
 function parseScheduledAt(date: string, time: string): string | null {
   if (!date || date === 'Flexible') return null;
   try {
-    const d = new Date(date);
+    const d = new Date(date.replace(/(\d+)(st|nd|rd|th)/i, '$1'));
     if (isNaN(d.getTime())) return null;
     if (time && time !== 'Any time') {
       const [timePart, ampm] = time.split(' ');
@@ -102,7 +112,8 @@ Deno.serve(async (req) => {
     }
 
     // Build .ics calendar invite for Haroon's email
-    const icsAttachment = scheduled_at ? (() => {
+    let icsAttachment: string | null = null;
+    try { icsAttachment = scheduled_at ? (() => {
       const start = new Date(scheduled_at);
       const end = new Date(start.getTime() + 2.5 * 60 * 60 * 1000);
       const fmt = (d: Date) => d.toISOString().slice(0, 19).replace(/-/g, '').replace(/:/g, '') + 'Z';
@@ -123,8 +134,8 @@ Deno.serve(async (req) => {
         'END:VEVENT',
         'END:VCALENDAR',
       ].join('\r\n');
-      return btoa(ics);
-    })() : null;
+      return utf8Base64(ics);
+    })() : null; } catch (e) { console.error('ICS error:', String(e)); icsAttachment = null; }
 
     // Email to Haroon
     fetch('https://api.resend.com/emails', {
@@ -163,21 +174,22 @@ ${job?.id ? '<li>Job ID: ' + job.id + '</li>' : ''}
         body: JSON.stringify({
           from: 'bookings@asads.ca',
           to: email,
-          subject: 'Your ASADS Inspection Is Confirmed — ' + service,
+          subject: 'We received your booking request — ' + service + ' (not confirmed yet)',
           html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
 <div style="background:#1d4ed8;padding:24px 32px;border-radius:12px 12px 0 0">
 <p style="color:#fff;font-size:20px;font-weight:900;margin:0">ASADS Home Inspection</p>
 </div>
 <div style="background:#fff;padding:32px;border:1px solid #e2e8f0;border-top:0;border-radius:0 0 12px 12px">
 <p>Hi ${firstName},</p>
-<p>Your booking request has been received! Here is a summary:</p>
+<p>Thank you, we have received your booking request. Here is what you asked for:</p>
 <ul>
 <li><strong>Service:</strong> ${service}</li>
-<li><strong>Date:</strong> ${preferred_date || 'Flexible'}</li>
-<li><strong>Time:</strong> ${preferred_time || 'Any time'}</li>
+<li><strong>Preferred date:</strong> ${preferred_date || 'Flexible'}</li>
+<li><strong>Preferred time:</strong> ${preferred_time || 'Any time'}</li>
 ${address ? '<li><strong>Address:</strong> ' + address + '</li>' : ''}
 </ul>
-<p>We will be in touch within 24 hours to confirm. For urgent bookings call <a href="tel:+16478019311">(647) 801-9311</a>.</p>
+${bookingDetailsHtml(service)}
+<p>For urgent bookings or questions, call <a href="tel:+16478019311">(647) 801-9311</a>.</p>
 <p>— Haroon Choudhry<br>ASADS Home Inspection</p>
 </div></div>`,
         }),

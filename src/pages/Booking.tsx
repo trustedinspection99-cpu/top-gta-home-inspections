@@ -100,8 +100,8 @@ export default function Booking() {
       if (response.ok) {
         logBookingSubmit("booking page");
         toast({
-          title: "Appointment Confirmed!",
-          description: "Should any scheduling changes be required, we will contact you within 24 hours.",
+          title: "Booking Request Received",
+          description: "We will call or email you within one business day to confirm your date and time.",
         });
         setStep(4);
       } else {
@@ -411,7 +411,7 @@ export default function Booking() {
                   <div className="bg-primary/10 rounded-lg p-4 text-center">
                     <Phone className="h-5 w-5 text-primary mx-auto mb-2" />
                     <p className="text-sm font-medium text-primary">Confirmation Call</p>
-                    <p className="text-xs text-muted-foreground mt-1">Your appointment is confirmed. Should any scheduling changes be required, we will contact you within 24 hours.</p>
+                    <p className="text-xs text-muted-foreground mt-1">Your request is received. We schedule by area, so we will call or email you within one business day to confirm your date and time.</p>
                   </div>
                   <div className="bg-primary/10 rounded-lg p-4 text-center">
                     <FileText className="h-5 w-5 text-primary mx-auto mb-2" />
