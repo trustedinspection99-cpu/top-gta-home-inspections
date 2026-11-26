@@ -8,8 +8,12 @@ import puppeteer from 'puppeteer';
 const BASE = 'https://www.asads.ca';
 const NAME_FIRST = 'Test', NAME_LAST = 'O’Brien';
 const results = [];
+const REAL = process.env.REAL === '1';               // REAL=1: really submit (no interception)
+const REAL_EMAIL = 'haroon4951@hotmail.com';
+let SERVICE_RE = /listing/i, LABEL = '';
 
 async function setup(page, rec) {
+  if (REAL) { page.on('request', (req) => { const u = req.url(); if (req.method() === 'POST' && (u.includes('/functions/v1/save-booking') || u.includes('formspree.io'))) { let b = req.postData() || ''; try { b = JSON.parse(b); } catch {} rec.sent.push({ to: u.includes('formspree') ? 'formspree' : 'save-booking', body: b }); } }); page.on('response', async (res) => { const u = res.url(); if (u.includes('/functions/v1/save-booking') || u.includes('formspree.io')) rec.status = (rec.status || []).concat(res.status()); }); page.on('pageerror', (e) => rec.errors.push(String(e.message || e).slice(0, 160))); return; }
   await page.setRequestInterception(true);
   page.on('request', (req) => {
     const u = req.url();
@@ -29,7 +33,8 @@ async function setup(page, rec) {
 
 // Fill a plain HTML form (native inputs/selects) the way React expects.
 async function fillNativeForm(page, formHandle) {
-  return page.evaluate((form, first, last) => {
+  return page.evaluate((form, first, last, svcSrc, email) => {
+    const svcRe = new RegExp(svcSrc, 'i');
     const set = (el, v) => {
       const proto = el.tagName === 'SELECT' ? HTMLSelectElement.prototype : el.tagName === 'TEXTAREA' ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
       Object.getOwnPropertyDescriptor(proto, 'value').set.call(el, v);
@@ -42,9 +47,9 @@ async function fillNativeForm(page, formHandle) {
       const key = ((el.name || '') + ' ' + (el.placeholder || '') + ' ' + (el.id || '') + ' ' + (el.getAttribute('aria-label') || '')).toLowerCase();
       if (el.tagName === 'SELECT') {
         const opts = [...el.options].filter((o) => o.value);
-        const pick = opts.find((o) => /listing/i.test(o.text)) || opts.find((o) => /toronto/i.test(o.text)) || opts[0];
+        const pick = opts.find((o) => svcRe.test(o.text)) || opts.find((o) => /toronto/i.test(o.text)) || opts[0];
         if (pick) { set(el, pick.value); filled.push(`${el.name || 'select'}=${pick.value}`); }
-      } else if (el.type === 'email' || key.includes('email')) { set(el, 'test@example.com'); filled.push('email'); }
+      } else if (el.type === 'email' || key.includes('email')) { set(el, email); filled.push('email'); }
       else if (el.type === 'tel' || key.includes('phone')) { set(el, '6478019311'); filled.push('phone'); }
       else if (el.type === 'date' || key.includes('date')) { set(el, process.env.TEST_DATE || '2026-12-03'); filled.push('date'); }
       else if (key.includes('last')) { set(el, last); filled.push('last'); }
@@ -56,7 +61,7 @@ async function fillNativeForm(page, formHandle) {
       else if (el.type === 'text') { set(el, 'Test'); filled.push(el.name || 'text'); }
     }
     return filled;
-  }, formHandle, NAME_FIRST, NAME_LAST);
+  }, formHandle, NAME_FIRST, REAL ? `${NAME_LAST} TEST ${LABEL}` : NAME_LAST, SERVICE_RE.source, REAL ? REAL_EMAIL : 'test@example.com');
 }
 
 async function testNativeForms(browser, path, label) {
@@ -102,7 +107,7 @@ async function testBookingWizard(browser) {
     await triggers[triggerIndex].click(); await new Promise((r) => setTimeout(r, 400));
     return clickText(page, '[role=option]', re);
   };
-  step.push('service:' + await pickSelect(0, /Pre-Listing/i));
+  step.push('service:' + await pickSelect(0, REAL ? /Pre-Purchase/i : /Pre-Listing/i));
   // date: open the calendar popover and pick the first enabled day after today
   await clickText(page, 'button', /pick a date|select date|choose a date/i);
   await new Promise((r) => setTimeout(r, 400));
@@ -128,8 +133,8 @@ async function testBookingWizard(browser) {
   step.push('continue2:' + await clickText(page, 'button', /^\s*Continue/i));
   await new Promise((r) => setTimeout(r, 500));
   step.push('first:' + await fillByPlaceholder(/first/, NAME_FIRST));
-  step.push('last:' + await fillByPlaceholder(/last/, NAME_LAST));
-  step.push('email:' + await fillByPlaceholder(/mail/, 'test@example.com'));
+  step.push('last:' + await fillByPlaceholder(/last/, REAL ? NAME_LAST + ' TEST booking page' : NAME_LAST));
+  step.push('email:' + await fillByPlaceholder(/mail/, REAL ? REAL_EMAIL : 'test@example.com'));
   step.push('phone:' + await fillByPlaceholder(/phone|tel/, '6478019311'));
   step.push('submit:' + await clickText(page, 'button[type=submit]', /.+/));
   await new Promise((r) => setTimeout(r, 3000));
@@ -143,23 +148,20 @@ async function testBookingWizard(browser) {
 const browser = await puppeteer.launch({ headless: true });
 try {
   await testBookingWizard(browser);
-  for (const [path, label] of [
-    ['/', 'Homepage form'],
-    ['/services/pre-listing', 'Pre-listing service page (hero box)'],
-    ['/services/pre-listing/toronto', 'Pre-listing Toronto (hero + inline)'],
-    ['/services/asbestos-testing/mississauga', 'Asbestos Mississauga (hero + inline)'],
-    ['/locations/home-inspection-peterborough', 'Location page Peterborough'],
-    ['/pricing', 'Pricing page (inline)'],
-    ['/faq', 'FAQ page (hero box)'],
-    ['/services/asbestos-testing', 'PROTECTED asbestos hub'],
-    ['/services/asbestos-testing/toronto', 'PROTECTED asbestos Toronto'],
-    ['/services/wett', 'PROTECTED WETT hub'],
-    ['/services/wett/toronto', 'PROTECTED WETT Toronto'],
-    ['/services/mold-inspection/mississauga', 'PROTECTED mould Mississauga'],
-    ['/services/air-quality', 'Air quality hub'],
-    ['/services/pre-purchase', 'Pre-purchase hub'],
-    ['/contact', 'Contact page (Formspree)'],
-  ]) await testNativeForms(browser, path, label);
+  for (const [path, label, svc] of [
+    ['/', 'homepage', /condo/i],
+    ['/services/pre-listing', 'pre-listing hero', /listing/i],
+    ['/services/asbestos-testing/toronto', 'asbestos Toronto', /asbestos/i],
+    ['/services/wett/toronto', 'WETT Toronto', /wett/i],
+    ['/services/mold-inspection/mississauga', 'mould Mississauga', /mold|mould/i],
+    ['/services/air-quality', 'air quality hub', /air quality/i],
+    ['/locations/home-inspection-peterborough', 'location Peterborough', /radon/i],
+    ['/pricing', 'pricing inline', /lead/i],
+    ['/faq', 'FAQ hero', /well|water/i],
+    ['/services/pre-purchase', 'pre-purchase hub', /new construction|pdi/i],
+    ['/services/commercial', 'commercial', /commercial/i],
+    ['/contact', 'contact page', /thermal/i],
+  ]) { SERVICE_RE = svc; LABEL = label; await testNativeForms(browser, path, label); }
 } finally { await browser.close(); }
 
 for (const r of results) {
