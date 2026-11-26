@@ -431,7 +431,7 @@ export default function Booking() {
 
           <div className="grid md:grid-cols-4 gap-6 mt-12">
             {[
-              { icon: Phone, title: "Booking Confirmed", desc: "We'll reach out within 24 hours only if a scheduling change is required" },
+              { icon: Phone, title: "We Confirm Your Time", desc: "We'll call or email you within one business day to confirm your date and time" },
               { icon: Clock, title: "Same-Day Booking", desc: "Appointments often available same day" },
               { icon: FileText, title: "24-Hour Reports", desc: "Digital report within 24 hours" },
               { icon: Shield, title: "Certified Inspectors", desc: "InterNACHI certified professionals" },

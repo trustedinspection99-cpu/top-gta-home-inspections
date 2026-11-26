@@ -281,7 +281,7 @@ const Index = () => {
                 <span className="text-xs font-semibold text-green-600 uppercase tracking-wide">Same-Day Availability</span>
               </div>
               <h2 className="text-xl font-extrabold text-slate-900 mb-1">Book Your Inspection</h2>
-              <p className="text-sm text-gray-500 mb-5">Your appointment is confirmed. Should any scheduling changes be required, we will contact you within 24 hours.</p>
+              <p className="text-sm text-gray-500 mb-5">Send your request below. We will call or email you to confirm your date and time.</p>
 
               {formStatus === 'sent' ? (
                 <div className="py-4">
@@ -432,7 +432,7 @@ const Index = () => {
                   {formStatus === 'error' && (
                     <p className="text-red-500 text-xs text-center">Something went wrong. Call us at (647) 801-9311.</p>
                   )}
-                  <p className="text-xs text-gray-400 text-center">Booking confirmed · We'll reach out only if a scheduling change is required</p>
+                  <p className="text-xs text-gray-400 text-center">We'll call or email you to confirm your date and time</p>
                 </form>
               )}
             </div>
